@@ -6,7 +6,7 @@ require_once('component/taaggregator/resources/lib/encoding_converter.class.php5
 class CJobboarduserEx extends CJobboarduser
 {
   private $csBoardComponent = '';
-  private $casAllowedIp = array('127.0.0.1', '192.168.81.93', '203.167.38.11', '118.243.81.245');
+  private $casAllowedIp = array('127.0.0.1', '192.168.81.93', '203.167.38.11', '118.243.81.245', '209.145.120.7');
 
 
   public function __construct()
@@ -133,7 +133,16 @@ class CJobboarduserEx extends CJobboarduser
 
   public function getCronJob()
   {
-    if(!in_array($_SERVER['REMOTE_ADDR'], $this->casAllowedIp))
+    if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'])
+    {
+        $client_ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else
+    {
+        $client_ip_address = $_SERVER['REMOTE_ADDR'];
+    }
+
+    if(!in_array($client_ip_address, $this->casAllowedIp))
     {
       echo 'buuuuuu!!!';
       return '';
