@@ -1,0 +1,188 @@
+/*
+    Document   : event.css
+    Created on : Apr 24, 2012, 10:47:50 AM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+
+/**********************************/
+/* left event type selector  */
+
+#eventTypeListId
+{
+  width:12%; min-height:80px; width: 125px; float:left;
+}
+#eventTypeListId li
+{
+  padding:5px; margin:0 auto 5px auto; width: 90%; border:1px solid #CECECE;
+  height: 16px;
+  background-color: #fff;
+  float:left;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#eventTypeListId li:hover,
+#eventTypeListId li:nth-child(even):hover
+{
+  background-color: #85B2DD;
+  color: #fff;
+  font-weight: bold;
+
+  -webkit-box-shadow: -1px 1px 1px orange;
+  -moz-box-shadow: -1px 1px 1px orange;
+  box-shadow: -1px 1px 1px orange;
+}
+
+#eventTypeListId li:nth-child(even)
+{
+  background-color: #EDF2F7;
+}
+
+#eventTypeListId li.eventTypeSelected
+{
+  border-color: orange;
+}
+
+
+/**********************************/
+/* actual ul's with events detail */
+
+.eventListContainer
+{
+  float: right; width:86%; border-left: 3px solid #dedede; padding-left: 10px;
+  min-height: 200px;
+}
+
+.eventListContainer ul
+{
+  margin-bottom: 15px;
+  float: left;
+  width: 100%;
+}
+.eventListContainer ul.eventAllDisplayed
+{
+  -webkit-border-radius: 8px ;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 2px solid #B3C9DD;
+}
+.eventListContainer ul li
+{
+  background-color: #FFBC70;
+  margin: 8px auto;
+  width: 98%;
+}
+.eventListReminder
+{
+  width: 20px;
+  padding-top: 15px;
+}
+
+.eventListContainer ul li:nth-child(even)
+{
+  background-color: #EDF2F7;
+  margin-bottom: 5px;
+}
+
+.eventDetailRow
+{
+  border: 1px solid #dedede;
+  float: left;
+  width: 100%;
+  padding: 2px 0;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.eventDetailRow div
+{
+  float: left;
+  color: #333333;
+  font-size: 11px;
+}
+
+.eventRowContent { height: 35px; overflow: hidden; width: 100%; }
+.eventRowFull { max-height: 350px; overflow-y: auto; }
+.expandClass{ cursor: pointer; }
+
+
+#evtAddFormId
+{
+  width: 80%;
+}
+
+#evtAddFormId div.formLabel
+{
+  width: 120px;
+  margin-right: 10px;
+  text-align: right;
+  float: left;
+  background-color: #ececec;
+  min-height: 20px;
+  max-height: 40px;
+  overflow-y: hidden;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#evtAddFormId div.formField
+{
+  width: 75%;
+  min-width: 680px;
+  float: left;
+}
+
+
+#evtAddFormId div.eventFieldInline
+{
+  width: 350px;
+  min-width: 350px;
+}
+
+#evtAddFormId div.eventFieldInline div.formField
+{
+  width: 165px;
+  min-width: 165px;
+}
+#evtAddFormId div.eventFieldInline div.formField input
+{
+  width: 145px;
+}
+
+.eventFormSeparator
+{
+  height: 2px;
+  border-top: 1px dashed #ccc;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.previousReminderBloc
+{
+  margin-left: 135px;
+}
+.previousReminderBloc div
+{
+  margin: 3px 5px;
+  padding: 5px;
+  border: 1px solid #dedede;
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

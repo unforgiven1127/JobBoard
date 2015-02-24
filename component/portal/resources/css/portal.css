@@ -1,0 +1,13 @@
+.portalContainer
+{
+  min-height: 350px;
+  background-color: #fff;
+
+}
+
+.hps_separator_top
+{
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dashed #ddd;
+}

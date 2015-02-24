@@ -1,0 +1,465 @@
+/*
+    Document   : project.css
+    Created on : Nov 9, 2011, 4:31:03 PM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#projectFormDataInnerId table,
+#taskFormDataInnerId table
+{
+  width:65%;
+  margin: 0 auto;
+}
+
+.formLabel
+{
+  width: 125px; float:left;
+}
+
+.formField
+{
+   float:left;
+   vertical-align: top;
+}
+
+.formField input[type=text],
+.formField select,
+.formField textarea
+{
+  width:350px;
+}
+
+.projectTab
+{
+  width: 250px;
+  float:left;
+  font-size: 13px;
+  padding:3px 10px;
+  margin-right: 3px;
+
+  background-color: #E6EFF7;
+
+  -moz-border-radius-topleft:  10px;  /* Firefox up to version 3.6 */
+  -webkit-border-top-left-radius: 10px;  /* Safari, Chrome (before WebKit version 533) */
+  border-top-left-radius: 10px;
+
+  -moz-border-radius-topright:  10px;  /* Firefox up to version 3.6 */
+  -webkit-border-top-right-radius: 10px;  /* Safari, Chrome (before WebKit version 533) */
+  border-top-right-radius: 10px;
+}
+
+.taskTab
+{
+  width: 150px;
+  float:left;
+  font-size: 14px;
+  padding:3px 10px;
+  margin-right: 3px;
+
+  background-color: #E6EFF7;
+
+  -moz-border-radius-topleft:  10px;  /* Firefox up to version 3.6 */
+  -webkit-border-top-left-radius: 10px;  /* Safari, Chrome (before WebKit version 533) */
+  border-top-left-radius: 10px;
+
+  -moz-border-radius-topright:  10px;  /* Firefox up to version 3.6 */
+  -webkit-border-top-right-radius: 10px;  /* Safari, Chrome (before WebKit version 533) */
+  border-top-right-radius: 10px;
+}
+
+.blocProject,
+.bloctask,
+#taskListMyId
+{
+  width:100%;
+  border: none;
+}
+
+.taskList_projectTitle div.title
+{
+  border-bottom: 1px solid #ccc;
+  background-color: #3A85AD;
+  color:#fff;
+  margin-top: 20px;
+
+  -moz-border-radius:  5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.taskList_projectTitle div.title div
+{
+  color:#fff;
+}
+
+.bloctask div.myTaskRow:nth-child(even)
+{
+  background-color: #f6f6f6;
+}
+
+.projectDetails
+{
+  padding:10px;
+  margin: 5px;
+
+  background-color: #fff;
+  border: 1px solid #576293;
+
+  -moz-border-radius:  10px;  /* Firefox up to version 3.6 */
+  -webkit-border-radius: 10px;  /* Safari, Chrome (before WebKit version 533) */
+  border-radius: 10px;
+}
+
+.projectView_taskrow
+{
+  border-bottom: 1px solid #ccc;
+  /*background-color: #EDF2F7;*/
+}
+
+.projectView_taskrow div
+{
+  border-right: 1px solid #fff;
+  padding: 2px 8px;
+}
+
+.taskRowEven
+{
+ background-color: #FFFFFF;
+}
+.taskRowDone
+{
+  display:none;
+}
+.taskRowShortCell
+{
+  float:left;
+  width: 30px;
+}
+.taskRowWhoWhen
+{
+  float:left;
+  width: 150px;
+}
+.taskRowProgress,
+.projectView_taskrow div.taskRowProgress
+{
+  float:left;
+  width: 30px;
+  position: relative;
+}
+
+.sliderContainer,
+.projectView_taskrow div.sliderContainer
+{
+  position:absolute;
+  top: 0;
+  left:45px;
+  padding-top: 5px;
+
+  background-color: #fff;
+  border: 1px solid #dfeffc;
+  -moz-border-radius:  5px;  /* Firefox up to version 3.6 */
+  -webkit-border-radius: 5px;  /* Safari, Chrome (before WebKit version 533) */
+  border-radius: 5px;
+
+  width: 200px;
+  height:14px;
+  padding:5px;
+}
+.sliderInner
+{
+  margin: 0 5px;
+  width: 150px;
+}
+.sliderSave
+{
+  position:absolute;
+  right:0;
+  top:0;
+}
+.sliderContainer div.ui-slider-horizontal
+{
+  height:3px;
+  padding: 0 5px;
+}
+.taskRowDescription
+{
+  float:left;
+  width: 350px;
+}
+.taskRowUsers
+{
+  float:left;
+}
+.taskRowAction
+{
+  float:right;
+  text-align: right;
+  width: 90px;
+}
+
+#oldPrjId,
+#taskListOtherId
+{
+  display:none;
+  border:none;
+}
+
+.project_name
+{
+  font-weight: bold;
+  color:#2C5999;
+  font-size: 16px;
+}
+.project_urgent
+{
+  font-weight: bold;
+  color:red;
+}
+
+.project_close
+{
+  color:orange;
+}
+
+.project_fine
+{
+  color:blue;
+}
+
+.project_past,
+.noTask
+{
+  color:grey;
+}
+
+.task_tab_selected
+{
+  font-weight:bold;
+  font-size:1.2em;
+}
+
+
+#taskFormDataId,
+#projectFormDataId
+{
+  margin: 15px auto;
+  width: 80%;
+}
+
+
+
+.progress_slow
+{
+  color:red;
+}
+
+.progress_low
+{
+  color:orange;
+}
+.progress_average
+{
+  color:blue;
+}
+.progress_high
+{
+  color:green;
+}
+
+#taskAddFormDataId
+{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 1px solid #666;
+  width: 425px;
+}
+
+#taskAddFormDataId select
+{
+  width: 250px;
+}
+
+
+
+
+
+
+.taskWallView
+{
+  background: url('/component/project/resources/pictures/wall-background.png') no-repeat left -20px;
+  padding-top:50px;
+}
+
+.taskWallFilter
+{
+  width: 83%;
+  margin: 0 0 0 30px;
+  padding: 10px 0 25px 0;
+
+  border-bottom: 1px dashed #e9e9e9;
+
+}
+
+.taskWallContainer
+{
+  margin-left:10px;
+  min-height:600px;
+  /*height: 3500px;*/
+  position:relative;
+  float:left;
+  display: block;
+}
+.taskWallPicContainer
+{
+  margin-left:10px;
+  min-height:600px;
+  position:relative;
+  display:none;
+}
+
+.taskWallTask
+{
+  width:190px;
+  height:220px;
+
+  float:left;
+  margin:0 5px 40px 5px;
+
+  /*border:1px solid pink;*/
+  position:relative;  /* Allow footer to be absolute bottom 0*/
+}
+.taskWallTaskContainer
+{
+  margin: 5px;
+  overflow-y: auto;
+  max-height:165px;
+}
+
+.taskWallTaskFooter
+{
+  background: url("/component/project/resources/pictures/draggable.png") no-repeat scroll right top transparent;
+  bottom: 0;
+  height: 20px;
+  margin-left: 30px;
+  position: absolute;
+  text-align: center;
+  width: 160px;
+}
+
+/*.ui-draggable-dragging
+{
+  height: 50px;
+  width: 50px;
+}
+.ui-draggable-dragging div
+{
+  display: none;
+}*/
+
+.attachment_container
+{
+  height:200px;
+  margin:0 auto;
+  float:left;
+  width: 190px;
+
+  /*margin:15px;
+  border:1px solid pink;*/
+  position:relative;  /* Allow footer to be absolute bottom 0*/
+}
+
+.projectWallfilters
+{
+  padding: 3px 8px;
+  margin: 0 8px;
+
+  color: #245C91;
+  background-color: #F4FBFF;
+  border: 1px solid #93C0FF;
+  -moz-border-radius:  5px;  /* Firefox up to version 3.6 */
+  -webkit-border-radius: 5px;  /* Safari, Chrome (before WebKit version 533) */
+  border-radius: 5px;
+}
+
+.wallPicture
+{
+  width: 190px;
+  height:200px;
+}
+
+
+.PictureGalleryText
+{
+  position:relative;
+  right:0;
+  bottom:0;
+}
+.wallDownloadListContainer
+{
+  position:relative;
+  right:0;
+  bottom:0px;
+  background-color: #000;
+  color:#fff;
+  border: 1px solid blue;
+  padding: 3px 0;
+  z-index: 1000;
+}
+
+.wallDownloadListContainer a
+{
+  color:#fff;
+}
+.wallDownloadListContainer a:hover
+{
+  color:orange;
+}
+
+.magazineViewContainer
+{
+  width: 900px;
+  margin: 10px auto;
+  padding: 10px 0;
+
+  background-color: #F4FBFF;
+  border: 1px solid #93C0FF;
+  -moz-border-radius:  5px;  /* Firefox up to version 3.6 */
+  -webkit-border-radius: 5px;  /* Safari, Chrome (before WebKit version 533) */
+  border-radius: 5px;
+}
+
+.magazineViewContainer div
+{
+  margin:0 auto;
+}
+
+.ad-image-wrapper
+{
+  border: 2px solid #666;
+  background-color: #f6f6f6;
+  webkit-box-shadow: 4px 4px 5px #ddd;
+  -moz-box-shadow: 4px 4px 5px #ddd;
+  box-shadow: 4px 4px 5px #ddd;
+}
+
+.myTaskRow
+{
+  padding-bottom:5px; margin-bottom:5px;
+}
+.checkBoxTop{
+  margin-top: 5px;
+}
+
+.projectContainer
+{
+    padding: 0px;
+    
+}

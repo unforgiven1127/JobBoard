@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/bcm/!svn/ver/12/trunk/component/taaggregator/resources
+END
+Agg_FreeXML.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/bcm/!svn/ver/4/trunk/component/taaggregator/resources/Agg_FreeXML.class.php5
+END
+Agg_file.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/bcm/!svn/ver/4/trunk/component/taaggregator/resources/Agg_file.class.php5
+END
+Agg_HTML.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/bcm/!svn/ver/4/trunk/component/taaggregator/resources/Agg_HTML.class.php5
+END
+Agg_XML.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/bcm/!svn/ver/4/trunk/component/taaggregator/resources/Agg_XML.class.php5
+END
+Aggregator.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/bcm/!svn/ver/12/trunk/component/taaggregator/resources/Aggregator.class.php5
+END
+Agg_RSS.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/bcm/!svn/ver/4/trunk/component/taaggregator/resources/Agg_RSS.class.php5
+END
+Agg_remote.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/bcm/!svn/ver/12/trunk/component/taaggregator/resources/Agg_remote.class.php5
+END

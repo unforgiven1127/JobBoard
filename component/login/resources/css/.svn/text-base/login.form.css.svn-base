@@ -1,0 +1,327 @@
+
+/* *************************************************** */
+/* *************************************************** */
+/* Login, and password forms */
+
+.loginWideField
+{
+  width: 275px;
+}
+
+.formLabel
+{
+  float:left;
+  position:relative;
+  color:#333;
+  font-size:1.2em;
+  font-weight:bold;
+  width: 130px;
+
+}
+
+#loginFormDataId .formField
+{
+  width: 275px;
+  margin-left:25px;
+  height: 25px;
+  position:relative;
+}
+
+.formField
+{
+   width: 275px;
+  float:left;
+  margin-left:25px;
+  position:relative;
+ }
+
+
+/* *************************************************** */
+/* *************************************************** */
+/* Contact sheet */
+
+.contactSheet
+{
+  width:500px;
+}
+
+.ContactListHeadRow
+{
+  background-color: #135393;
+  padding: 5px 0;
+
+  border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+
+  border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+
+}
+.ContactListHeadCell,
+.ContactListHeadCell ul li:nth-child(odd) div
+{
+
+  color:#fff;
+  font-weight:bold;
+  float:left;
+  font-size: 13px;
+  margin: 3px 9px;
+  padding: 2px;
+}
+
+.ContactList
+{
+  margin:20px;
+  border: 1px solid #999;
+  padding:10px;
+
+  -webkit-border-radius: 15px ;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.ContactList ul li:nth-child(even),
+.ContactList ul li:nth-child(even) div
+{
+  background-color: #efefef;
+}
+.ContactListRow
+{
+  width:100%;
+}
+
+.ContactListCell
+{
+  float:left;
+  font-size: 13px;
+  margin: 3px 7px;
+  padding: 2px;
+}
+.ContactListName
+{
+  width: 15%;
+}
+
+.ContactListEmail
+{
+  width: 15%;
+}
+
+.ContactListExt
+{
+   width: 10%;
+}
+.ContactListPosition
+{
+  width: 15%;
+}
+
+.ContactListPhone
+{
+  width: 15%;
+
+}
+
+.ab_tabs_container
+{
+  border-bottom: 2px solid #bebebe;
+}
+.ab_tabs_container ul
+{
+  width:100%;
+}
+.ab_tabs_list
+{
+  width: 100%;
+  padding: 2px 5px 0 5px;
+
+}
+
+.ab_tabs_container li
+{
+  margin: 5px 10px;
+  padding: 5px 15px 0;
+
+  border-top:1px solid #bebebe;
+  border-left:1px solid #bebebe;
+  border-right:1px solid #bebebe;
+
+  -webkit-border-top-left-radius: 5px ;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+
+  -webkit-border-top-right-radius: 5px ;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ab_tab_selected
+{
+  font-size:1.15em;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  background-color: #fff;
+
+}
+#userEditFormId div table tr td div div input,
+#userCredentialFormId div table tr td div div input,
+#userCredentialFormId div table tr td div div input
+{
+  width: 400px;
+}
+
+
+.cred_tab_selected
+{
+  font-weight: bold;
+}
+
+.cred_tabs_container
+{
+  border-bottom: 2px solid #BEBEBE;
+  margin-bottom: 10px;
+}
+.cred_tabs_container li {
+    border-left: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+    border-top: 1px solid #BEBEBE;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 5px 10px;
+    padding: 5px 15px 0;
+}
+
+ul.cred_tab_list li a {
+    color: #0D79BC;
+}
+ul.cred_tab_list li a.cred_tab_inactive
+{
+  color: #bbb;
+}
+.cred_tab_list
+{
+    padding: 2px 5px 0;
+    width: 100%;
+}
+
+
+.homepageSection
+{
+  float: left;
+  border: 1px solid #ccc;
+  width: 100%;
+
+  webkit-box-shadow: 1px 2px 2px #bbb;
+  -moz-box-shadow: 1px 2px 2px #bbb;
+  box-shadow: 1px 2px 2px #bbb;
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.homepageSectionTitlte
+{
+  color: #245C91;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0 3px 15px;
+  text-decoration: underline;
+}
+
+.homepageSectionInner
+{
+  margin: 10px;
+}
+
+#homepage_contactactivityId .homepageSectionInner div { width: 45%; }
+
+.homepageSectionRow
+{
+  margin: 5px 0;
+}
+
+.hpsRowDate,
+.hpsRowData{ float: left; }
+
+.hpsRowDate{ width: 110px; }
+.hpsRowData{ min-width: 75%; }
+
+.componentMainContainer div.display_tab
+{
+  border: 0;
+}
+
+.homepageMySpace
+{
+  margin: 5px 0 20px 0;
+  padding: 3px 0;
+  background-color: #4C4C4C;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+
+  border: 1px solid #45A6D3;
+}
+.homepageMySpaceLink
+{
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin: auto;
+}
+
+.homepageMySpaceLink a
+{
+  color: #fff;
+  font-size: 15px;
+}
+.homepageMySpaceLink a:hover
+{
+  color: orange;
+}
+.homepageMySpaceLink img
+{
+  margin-bottom: -5px;
+}
+
+ul.homeCalendarList
+{
+  float: left;
+  margin-bottom: 5px;
+  width: 99%;
+}
+ul.homeCalendarList li
+{
+  display: block;
+  margin-left: 13px;
+  font-size: 11px;
+}
+
+ul.homeCalendarList li.homeCalendarListTitle,
+ul.homeStatList li.homeStatListTitle
+{
+  font-weight: bold;
+  color: #666;
+  margin: 5px 0 3px 5px;
+  border-top: 1px solid #e6e6e6;
+}
+ul.homeCalendarList li.listTitleFirst
+{
+  border-top: 0;
+}
+
+ul.homeStatList
+{
+  border-bottom: 1px solid #d0d0d0;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+ul.homeStatList li
+{
+  width: 100%;
+  display: block;
+  margin-left: 13px;
+}

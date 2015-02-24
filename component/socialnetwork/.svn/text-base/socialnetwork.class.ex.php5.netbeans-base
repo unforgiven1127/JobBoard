@@ -1,0 +1,92 @@
+<?php
+require_once('component/socialnetwork/socialnetwork.class.php5');
+
+class CSocialnetworkEx extends CSocialnetwork
+{
+  private $coFacebook = null;
+  private $coTwitter = null;
+  private $coLinkedIn = null;
+
+  function __contruct()
+  {
+    //TODO: Display and edit js to function based on this uniqId
+    parent::__construct();
+  }
+
+  public function addFacebookWallPost()
+  {
+    require_once('.'.$this->getResourcePath().'facebook/facebook.php');
+
+    $asConfig = array();
+    $asConfig['appId'] = '506245946082477';
+    $asConfig['secret'] = '739ffccf9951c29fec2273186b6fd7dc';
+    $asConfig['fileUpload'] = false; // optional
+    $asConfig['cookie'] = true; // optional
+
+    $oFacebook = new Facebook($asConfig);
+    if(!$oFacebook)
+      return false;
+
+    // Get the url to redirect for login to facebook
+    // and request permission to write on the user's wall.
+    $sLoginUrl = $oFacebook->getLoginUrl(array('scope' => 'publish_stream'));
+
+    // If not authenticated, redirect to the facebook login dialog.
+    // The $login_url will take care of redirecting back to us
+    // after successful login.
+    if (!$oFacebook->getUser())
+    {
+        echo '<script type="text/javascript"> top.location.href = "'.$sLoginUrl.'";</script>; ';
+        exit;
+    }
+
+    // Do the wall post.
+    $oFacebook->api("/me/feed", "post", array(
+        message => "YOUR_MESSAGE",
+        picture => "YOUR_PICTURE_URL",
+        link => "YOUR_LINK",
+        name => "YOUR_LINK_NAME",
+        caption => "YOUR_CAPTION"
+    ));
+
+  }
+
+  /*public function addTwitterPost()
+  {
+    // Set username and password
+    $username='******';
+    $password='******';
+    // The message you want to send
+    $message = 'Nice to c all again. Have a nice day..';
+    // The twitter API address
+    $url='http://twitter.com/statuses/update.xml';
+
+    // Set up and execute the curl process
+    $curl_handle = curl_init();
+    curl_setopt($curl_handle, CURLOPT_URL, $url);
+    curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl_handle, CURLOPT_POST, 1);
+    curl_setopt($curl_handle, CURLOPT_POSTFIELDS, "status=".$message);
+    curl_setopt($curl_handle, CURLOPT_USERPWD, "$username:$password");
+    $bCurlResult = curl_exec($curl_handle);
+    curl_close($curl_handle);
+
+    // check for success or failure
+    if(!$bCurlResult)
+    {
+      echo ' Try again';
+      return false;
+    }
+
+    echo ' success';
+    return true;
+  }*/
+
+
+  public function addLinkedinPost()
+  {
+
+  }
+}
+?>

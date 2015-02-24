@@ -1,0 +1,641 @@
+
+*
+{
+  font-family: Verdana, Arial;
+  font-size: 12px;
+  margin:0px;
+  color:#333;
+}
+
+a
+{
+  text-decoration:none;
+  color: #2A6991;
+}
+a:hover
+{
+  text-decoration:none;
+  color: orange;
+}
+
+ul
+{
+  margin: 0;
+  padding: 0px;
+  display: inline;
+}
+
+ul li
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+
+img
+{
+  border:0;
+}
+
+.floatHack,
+*.floatHack
+{
+  float:none;
+  clear:both;
+}
+
+.alignRight {text-align: right; }
+.alignleft  {text-align: left; }
+.alignCenter  {text-align: center; }
+
+.hidden
+{
+  display:none;
+}
+
+.clickable
+{
+  cursor: pointer;
+}
+a.niceTimeLink
+{
+  text-decoration: none;
+  margin-left: 5px;
+  position:relative;
+  color:#C18243;
+}
+
+a.niceTimePic
+{
+  padding-right: 24px;
+  background: url('/common/pictures/date_16.png') no-repeat top right;
+}
+
+a.niceTimeLink div
+{
+  display: none;
+  /*color: #fff;*/
+  background-color: #333;
+  padding: 3px;
+  -moz-border-radius:  3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+a.niceTimeLink:hover div
+{
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+
+}
+
+/* Make a "div" (span + this css) sticking to its content size */
+.fittingBloc
+{
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
+
+input[type=text], input[type=radio], input[type=checkbox], input[type=password],
+select, textarea
+{
+  border: 1px solid #999999;
+  background-color: #f9f9f9;
+}
+
+
+textarea
+{
+  min-height: 70px;
+  min-width: 300px;
+}
+
+select option:nth-child(even)
+{
+  background-color: #ededed;
+}
+.optionInactive
+{
+  font-style: italic;
+  color: #666;
+}
+
+input[type=button], input[type=submit]
+{
+  border: 1px solid #666;
+  -moz-border-radius:  10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background-color: #427B9B;
+  font-size: 14px;
+  color: #fff;
+  margin: 0 2px;
+  padding:2px 10px;
+
+  -webkit-box-shadow: 4px 4px 5px #bbb;
+  -moz-box-shadow: 4px 4px 5px #bbb;
+  box-shadow: 4px 4px 5px #bbb;
+}
+input[type=button]:hover, input[type=submit]:hover
+{
+  /*border-color: orange;*/
+
+  border: 1px solid #3398F7;
+  background-color: #2C74B7;
+  -webkit-box-shadow: 4px 4px 5px #666;
+  -moz-box-shadow: 4px 4px 5px #666;
+  box-shadow: 4px 4px 5px #666;
+}
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+.title
+{
+  /*font-weight:bold;  */
+  margin: 10px 0;
+}
+.titleToggle
+{
+  cursor: pointer;
+}
+
+.title div a
+{
+  margin-bottom:10px;
+  color:#245C91;
+}
+
+.titleLine
+{
+  margin:10px;
+  background-color: #F4FBFF;
+  border: 1px solid #93C0FF;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5px 10px;
+}
+
+.titleLinePicture,
+.titleLinePicture img
+{
+  float:left;
+  height: 48px;
+  width:48px;
+}
+.titleLineText
+{
+  border-left: 1px solid #666666;
+  margin: 0 0 0 65px;
+  padding-left: 6px;
+}
+.titleLineText div
+{
+  margin: auto 0;
+  vertical-align: top;
+}
+
+.subtitle
+{
+  color: #245C91;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 0 3px 15px;
+}
+
+.h1
+{
+  font-size: 24px;
+  color: #245C91;
+  /*border-bottom: 2px solid #2F95FA;*/
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+.h2
+{
+  /*border-bottom: 2px solid #2F95FA;*/
+  font-size: 16px;
+  color: #077AC1;
+  text-transform: uppercase;
+
+  background-color: #F4FBFF;
+  border: 2px solid #88B1CE;
+  padding: 3px 15px;
+
+  -moz-border-radius:  8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.h3
+{
+  color:#000;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.h4
+{
+  /*border-bottom: 1px dotted #ababab;*/
+
+  color:#000;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.h5
+{
+  color:#555;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+.h5 span
+{
+  background-color:#ffffff;
+  margin:0;
+  padding-right:10px;
+
+}
+
+.bold,
+.strong
+{
+  font-weight:bold;
+}
+strong.seo_keyword
+{
+  font-weight: normal;
+}
+
+.text_normal
+{
+  font-weight: normal;
+  color: #333;
+  font-style: normal;
+}
+
+.text_small
+{
+  font-size: 10px;
+}
+
+.light,
+.light *
+{
+  color: #999;
+}
+
+.italic, .italic *
+{
+  font-style: italic;
+  font-size: 10px;
+}
+
+.shadow
+{
+  -webkit-box-shadow: 4px 4px 5px #ddd;
+  -moz-box-shadow: 4px 4px 5px #ddd;
+  box-shadow: 4px 4px 5px #ddd;
+}
+
+.light_shadow
+{
+  -webkit-box-shadow: 2px 2px 3px #dfdfdf;
+  -moz-box-shadow: 2px 2px 3px #dfdfdf;
+  box-shadow: 2px 2px 3px #dfdfdf;
+}
+
+/* ********************************************************************* */
+/* ********************************************************************* */
+/* ********************************************************************* */
+/* Notifications:  ok, notice, warning, error   and ajax error management*/
+
+.notice
+{
+  border: 1px solid #A3FFBE;
+  background-color: #EEFFDB;
+  margin:5px;
+  padding:5px 10px;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size:1.1em;
+}
+
+.notice1
+{
+  border: 1px solid #93C0FF;
+  background-color: #F4FBFF;
+  margin:5px;
+  padding:5px 10px;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.notice2
+{
+  border: 1px solid #FFDD93;
+  background-color: #FFF4E0;
+  margin:5px;
+  padding:5px 10px;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.notice3
+{
+  border: 1px solid #FC725F;
+  background-color: #FFE2CC;
+  margin:5px;
+  padding:5px 10px;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+
+/* error div message */
+.ajaxErrorBlock
+{
+  display:none;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  width:100%;
+  height:2000px;
+  background:url('/media/picture/inactive-bg.png') repeat top left;
+  z-index:99999;
+}
+#ajaxErrorInnerId
+{
+  /*display:none;*/
+  margin: 100px auto;
+  width: 600px;
+  height:250px;
+}
+
+#ajaxErrorInnerId div
+{
+  font-size: 13px;
+}
+#dumpFormId
+{
+  display:none;
+}
+
+.homepageContainer
+{
+  width:100%;
+  min-height:500px;
+  margin:0 auto;
+  padding-top: 25px;
+}
+
+
+
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+/* Popups */
+
+#loadingScreen
+{
+  position:absolute;
+  z-index:50000;
+  background: url('/media/picture/greyLayer.png') repeat top left;
+  width:0;
+  height:0;
+
+}
+#loadingScreenAnimation
+{
+  width:42px;
+  height:42px;
+  margin: auto;
+  display:none;
+}
+#popupContainer
+{
+  display:none;
+  position: fixed;
+  top:12%;
+  width: 100%;
+  margin:0;
+  z-index: 60000;  /* in front of the loading screen */
+}
+#popupInner
+{
+  background-color: #FFFFFE;
+  vertical-align: top;
+  width:350px;
+  min-height: 150px;
+  margin: 0 auto;
+  position:relative;
+
+  border: 2px solid #666;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  z-index: 65000;
+}
+#popupClose
+{
+  float: right;
+  margin-right: -13px;
+  margin-top: -13px;
+}
+
+#popupInnerContainer
+{
+  margin: 15px 15px 50px;
+  padding: 10px;
+  min-height:50px;
+  max-height: 620px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#popupCloseBottom
+{
+  border-top: 2px solid #666;
+  padding:5px 10px;
+  text-align: center;
+
+  position:absolute;
+  bottom:0;
+  width: -moz-available;
+  width: 96%;
+}
+
+#popupContainer.notifierPopup
+{
+  position:fixed;
+  bottom: 0;
+  right:0;
+  top:auto;
+  width: 350px;
+  height: 75px;
+  padding:5px 5px;
+}
+#popupContainer.notifierPopup div,
+#popupContainer.notifierPopup div div
+{
+  width:250px;
+  white-space: nowrap;
+  padding: 0;
+  background-color: #E5E9FF;
+}
+
+
+#popupContainer.notifierPopup div #popupClose,
+#popupContainer.notifierPopup div #popupCloseBottom
+{
+  display:none;
+}
+
+
+
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+/* Fonts */
+
+.fontBold
+{
+  font-weight: bold;
+}
+
+.fontError
+{
+  font-weight: bold;
+  color: #FC725F;
+}
+
+.fontOk
+{
+  font-weight: bold;
+  color: #1EBF29;
+}
+
+.fontItalic
+{
+  color: #333;
+  font-style: italic;
+}
+
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+/* Forms */
+
+form
+{
+  border: 1px solid #93C0FF;
+  background-color: #faf9fb;
+  padding: 10px;
+
+  -webkit-border-radius: 10px ;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 4px 4px 5px #ddd;
+  -moz-box-shadow: 4px 4px 5px #ddd;
+  box-shadow: 4px 4px 5px #ddd;
+}
+
+.innerForm
+{
+  margin:5px;
+  padding:5px 5px 0px 5px;
+}
+
+.innerForm table tr td
+{
+  padding: 1px 8px;
+}
+
+.spanCenteredCompany
+{
+     width: 30%;  display: block;  text-align: center;
+}
+
+.restrictedAccessBloc
+{
+  border: 2px solid red;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.restrictedAccessBloc div.blocMessage
+{
+  border: none;
+  color: red;
+  font-size: 15px;
+  margin: 0;
+  padding: 25px;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.noticeBloc
+{
+  background: url('/common/pictures/notice_loading.gif') no-repeat top right;
+}
+
+.floatRight
+{
+  float: right;
+}
+
+.floatLeft
+{
+  float: left;
+}
+
+/* user selector, a style to separate and mark teams diffrently to single users */
+.token-input-dropdown-mac ul li.login_team_selector:first-child
+{
+
+}
+.token-input-dropdown-mac ul li.login_team_selector_separator
+{
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px dashed #ccc;
+}
+
+.token-input-dropdown-mac ul li.login_team_selected p
+{
+  color: #105D89;
+}
+
+.hasLegend
+{
+  cursor: help;
+}
+
+.system_redirect_message
+{
+  font-style: italic;
+  color: #999;
+  font-size: 10px;
+}

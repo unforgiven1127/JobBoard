@@ -1,0 +1,38 @@
+div#menuContainerId div#menuNavContainerId,
+div.componentMainContainer div.homepageContainer,
+#pageContainerId #pageMainId
+{
+  width: 100%;
+}
+
+
+#menuNavContainerId ul
+{
+  width: 80%;
+}
+
+
+#menuContainerId #menuNavContainerId ul li
+{
+  width: 125px;
+}
+
+#menuContainerId #menuNavContainerId ul li ul li
+{
+  width: 175px;
+}
+
+
+body #componentContainerId
+{
+  margin: 0 auto;
+  width: 95%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#menuNavContainerId ul li ul li a
+{
+  font-size: 12px;
+}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/bcm/!svn/ver/11/trunk/component/form/resources/js
+END
+fieldControl.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/bcm/!svn/ver/4/trunk/component/form/resources/js/fieldControl.js
+END
+jquery-form.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/bcm/!svn/ver/4/trunk/component/form/resources/js/jquery-form.js
+END
+jquery-ui.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/bcm/!svn/ver/4/trunk/component/form/resources/js/jquery-ui.js
+END
+jquery.tokeninput.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/bcm/!svn/ver/11/trunk/component/form/resources/js/jquery.tokeninput.js
+END
+jquery.bsmselect.sortable.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/bcm/!svn/ver/4/trunk/component/form/resources/js/jquery.bsmselect.sortable.js
+END
+jquery.bsmselect.compatibility.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/bcm/!svn/ver/4/trunk/component/form/resources/js/jquery.bsmselect.compatibility.js
+END
+jquery.bsmselect.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/bcm/!svn/ver/4/trunk/component/form/resources/js/jquery.bsmselect.js
+END

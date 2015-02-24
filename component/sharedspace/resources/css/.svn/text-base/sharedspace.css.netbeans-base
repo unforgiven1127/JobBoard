@@ -1,0 +1,141 @@
+
+#documentFormId
+{
+  width:60%;
+  margin: 20px auto 0 auto;
+  min-width: 400px;
+}
+
+
+#documentFormDataId input[type=text],
+#documentFormDataId input[type=file],
+#documentFormDataId textarea,
+#documentFormDataId select
+{
+  width: 350px;
+}
+
+#documentFormDataId textarea
+{
+  height: 75px;
+}
+
+.sharedListCellHeader
+{
+  float:left; 
+  color:#fff;
+  background-color: #2079A3;
+  border-right: 1px solid #fff;
+  font-weight:bold;
+  height:27px;
+  text-align: center;
+ 
+ }
+
+.sharedListRow
+{
+  /*border-bottom: 1px solid #999;]*/
+  height:30px;
+}
+.sharedManageRow div.sharedListCell
+{
+  height: auto;
+  min-height: 25px;
+}
+
+.sharedListCell
+{
+  float:left; height: 35px; padding:0 5px; margin:0 3px;
+ /* border-right: 1px solid #dedede;*/
+  overflow-y:auto;
+  font-size: 11px;
+}
+.sharedListCell_last
+{
+  border-right: none;
+}
+.dl_link
+{
+  text-decoration: none; color:#666;
+}
+
+.dl_link:hover,
+div.sharedListCell a:hover
+{
+  color: orange;
+}
+.sharedListCell_center
+{
+  border-left: 1px solid #dedede;
+}
+
+.formFieldContainer div.formLabel
+{
+  float:left;
+  width: 100px;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.formFieldContainer div.formField
+{
+  float: left;
+}
+
+.rev_hidden
+{
+  display: none;
+  background-color: #eee;
+  padding:5px;
+  border: 1px hashed #dedede
+}
+
+.listSh_row
+{
+  float:left;
+  width:100%;
+}
+
+.listSh_row_data
+{
+  width:99%;
+  float:left;
+  margin: 0;
+  padding:0 6px;
+
+}
+.listCp_row_data_odd,
+.listCp_row_data div.listCp_row_data_odd
+{
+  background-color: #EDF2F7;
+}
+.listCt_row_data_odd,
+.listCt_row_data div.listCt_row_data_odd
+{
+  background-color: #EDF2F7;
+}
+
+.ablistContainer li.shlistHeader div div {
+    background-color: #0D79BC;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 3px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    color: #FFFFFF;
+}
+
+.sh_list_cell
+{
+  float:left;
+  padding:5px 15px 0 15px;
+  white-space: nowrap;
+  height: 25px;
+  background-color: #fff;
+}
+
+.sh_list_cell a,
+.sh_list_cell div a
+{
+  color: #135393;
+}

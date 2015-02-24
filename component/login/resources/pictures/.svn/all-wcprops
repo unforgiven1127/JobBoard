@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures
+END
+admin_user.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/admin_user.png
+END
+user.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/user.png
+END
+boy.png
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/boy.png
+END
+girl.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/girl.png
+END
+inactive_user.png
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/inactive_user.png
+END
+contact_48.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/contact_48.png
+END
+active_user.png
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/bcm/!svn/ver/4/trunk/component/login/resources/pictures/active_user.png
+END

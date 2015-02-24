@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/bcm/!svn/ver/4/trunk/conf
+END
+main_config.inc.php5
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/bcm/!svn/ver/6/trunk/conf/main_config.inc.php5
+END
+rights.sql
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/bcm/!svn/ver/4/trunk/conf/rights.sql
+END
+update.sql
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/bcm/!svn/ver/4/trunk/conf/update.sql
+END
+talentatlas.sql
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/bcm/!svn/ver/4/trunk/conf/talentatlas.sql
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/bcm/!svn/ver/4/trunk/conf/custom_config/jobboard
+END
+config.inc.php5
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/bcm/!svn/ver/6/trunk/conf/custom_config/jobboard/config.inc.php5
+END
+blacklist.inc.php5
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/bcm/!svn/ver/6/trunk/conf/custom_config/jobboard/blacklist.inc.php5
+END

@@ -1,0 +1,79 @@
+/*
+    var_dump(serialize(
+    array(
+        array('loginfk' => 30, 'courtesy' =>'Ms', 'firstname' => 'Takako', 'lastname' => 'Nakahara'),
+        array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine')
+         )));
+
+    echo '<br />';
+    var_dump(serialize(
+    array(
+        array('loginfk' => 4, 'courtesy' =>'Mr', 'firstname' => 'Nicholas', 'lastname' => 'Adams'),
+        array('loginfk' => 5, 'courtesy' =>'Mr', 'firstname' => 'Stephane', 'lastname' => 'Boudoux'),
+        array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine'),
+        array('loginfk' => 31, 'courtesy' =>'Mr', 'firstname' => 'Paul', 'lastname' => 'Romelot')
+         )));
+
+echo '<br />';
+    var_dump(serialize(
+    array(
+        array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine')
+         )));
+
+echo '<br />';
+    var_dump(serialize(
+    array(
+        array('loginfk' => 19, 'courtesy' =>'Ms', 'firstname' => 'Ayako', 'lastname' => 'Fujiwara'),
+        array('loginfk' => 20, 'courtesy' =>'Mr', 'firstname' => 'Matthew', 'lastname' => 'Hernon'),
+        array('loginfk' => 23, 'courtesy' =>'Mr', 'firstname' => 'Matthew', 'lastname' => 'Holmes'),
+        array('loginfk' => 9, 'courtesy' =>'Mr', 'firstname' => 'Liam', 'lastname' => 'Ramshow'),
+        array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine')
+         )));
+
+echo '<br />';
+    var_dump(serialize(
+    array(
+        array('loginfk' => 29, 'courtesy' =>'Ms', 'firstname' => 'Ingrid', 'lastname' => 'Dubreuil'),
+        array('loginfk' => 26, 'courtesy' =>'Mr', 'firstname' => 'Ohad', 'lastname' => 'Elbaz'),
+        array('loginfk' => 20, 'courtesy' =>'Mr', 'firstname' => 'Matthew', 'lastname' => 'Hernon'),
+        array('loginfk' => 16, 'courtesy' =>'Mr', 'firstname' => 'Bill', 'lastname' => 'Hersey'),
+        array('loginfk' => 22, 'courtesy' =>'Mr', 'firstname' => 'Toda', 'lastname' => 'Kotaro'),
+        array('loginfk' => 28, 'courtesy' =>'Mr', 'firstname' => 'Okamoto', 'lastname' => 'Masaya'),
+        array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine'),
+        array('loginfk' => 12, 'courtesy' =>'Ms', 'firstname' => 'Mary', 'lastname' => 'Rudow')
+         )));
+
+*/
+
+
+
+/*
+
+
+
+var_dump(serialize(
+    array(30,3)));
+
+    echo '<br />';
+    var_dump(serialize(
+    array(4,5,3,31)));
+
+echo '<br />';
+    var_dump(serialize(
+    array(3)));
+
+echo '<br />';
+    var_dump(serialize(
+    array(19,20,23,9,3)));
+
+echo '<br />';
+    var_dump(serialize(
+    array(29,26,20,16,22,28,3,12)));
+
+
+*/
+
+
+    /*$oSettings = CDependency::getComponentByName('settings');
+    dump($oSettings->getManageableList(3));
+    dump($oSettings->getManageableList(0, 'team_users_compact'));*/

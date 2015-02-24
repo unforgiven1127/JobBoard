@@ -1,0 +1,1107 @@
+<?php
+
+require_once('component/talentatlas_user/talentatlas_user.class.php5');
+require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
+
+class CTalentatlas_userEx extends CTalentatlas_user
+{
+  public function __construct()
+  {
+    return true;
+  }
+
+  public function getDefaultType()
+  {
+    return CONST_TYPE_LISTJOB;
+  }
+
+  public function getDefaultAction()
+  {
+    return CONST_ACTION_LIST;
+  }
+
+  public function getPageActions($psAction = '', $psType = '', $pnPk = 0)
+  {
+    $asActions = array();
+    $oPage = CDependency::getComponentByName('page');
+
+    $asActions['ppav'][] = array('title'=>'Job Listing', 'url' => $oPage->getUrl($this->_getUid(),CONST_ACTION_LIST,CONST_TYPE_LISTJOB));
+
+    return $asActions;
+  }
+
+  public function getAjax()
+  {
+    $this->_processUrl();
+
+    switch($this->csType)
+    {
+      case CONST_TYPE_LISTJOB:
+        switch($this->csAction)
+        {
+          case CONST_ACTION_SAVEADD:
+            return json_encode($this->_getSavePosition($this->cnPk));
+            break;
+
+          case CONST_ACTION_DELETE:
+            return json_encode($this->_getRemoveJobs($this->cnPk));
+            break;
+        }
+        break;
+
+       case CONST_LIST_COMPANY:
+
+        switch ($this->csAction)
+        {
+          case CONST_ACTION_LIST:
+            return $this->_getCompanySelector();
+            break;
+        }
+        break;
+      }
+    }
+
+  public function getHtml()
+  {
+    $this->_processUrl();
+
+    switch($this->csType)
+    {
+      case CONST_TYPE_LISTJOB:
+
+       switch($this->csAction)
+       {
+         case CONST_ACTION_LIST:
+           return $this->_getManageJobs();
+           break;
+
+          case CONST_ACTION_ADD:
+          case CONST_ACTION_EDIT:
+            return $this->_getJobEditForm($this->cnPk);
+            break;
+
+          case CONST_ACTION_SEND:
+            $this->_getCompanySend($this->cnPk);
+            break;
+        }
+      }
+   }
+
+  /**
+  * Function to display the home page for the users after logged in
+  * @return string
+  */
+
+  private function _getManageJobs()
+  {
+    $oDB = CDependency::getComponentByName('database');
+    $oHTML = CDependency::getComponentByName('display');
+    $oPage = CDependency::getComponentByName('page');
+    $oPager = CDependency::getComponentByName('pager');
+    $oTalentatlas = CDependency::getComponentByName('talentatlas');
+    $oPager->initPager();
+    $oPage->addCssFile(array($this->getResourcePath().'css/talentatlas_user.css'));
+
+    $sLanguage = getValue('lang');
+    $sAction = getValue('action');
+    $sSort = getValue('sort');
+
+    $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
+    $sHTML.= $oHTML->getBlocStart('',array('class'=>'ta_user_list_container'));
+    $sHTML.= $oHTML->getBlocStart('');
+    $sHTML.= $oHTML->getTitleLine('Manage Positions', $this->getResourcePath().'/pictures/manage_48.png');
+    $sHTML.= $oHTML->getBlocEnd();
+
+    $sHTML.= $oHTML->getBlocStart('',array('style'=>' margin: 10px 20px;'));
+      $sHTML.= $oHTML->getBlocStart('',array('style'=>'float:left;width:200px;'));
+        $sURL = $oPage->getURL('talentatlas_user',CONST_ACTION_ADD, CONST_TYPE_LISTJOB);
+         $sHTML.= $oHTML->getBlocStart('',array('class'=>'imgClass'));
+          $sPic = $oHTML->getPicture($this->getResourcePath().'/pictures/add_32.png','','', array('style' => 'height: 24px;'));
+          $sHTML.= $oHTML->getLink($sPic, $sURL);
+         $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getLink('Add a new position',$sURL,array('style'=>'font-size:14px;'));
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
+       $sURL = $oPage->getURL('talentatlas_user',CONST_ACTION_SEND, CONST_TYPE_LISTJOB);
+       $sHTML.= $oHTML->getLink('Export Company List',$sURL);
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getBlocStart('',array('style'=>'float:right;width:200px;margin-right:10px;'));
+
+        $sHTML.= '<select name="position_sort" onchange=" if($(this).val()){ document.location.href = $(this).val(); } " >';
+          $sHTML.= '<option value="" > - Filter positions - </option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'en','action'=>'exclude')).' '.(($sAction == 'exclude' && $sLanguage =='en')? ' selected="selected" ' : '').' > Missing English description</option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'jp','action'=>'exclude')).' '.(($sAction == 'exclude' && $sLanguage =='jp')? ' selected="selected" ' : '').'> Missing Japanese description</option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'ph','action'=>'exclude')).' '.(($sAction == 'exclude' && $sLanguage =='ph')? ' selected="selected" ' : '').'> Missing Filipino description</option>';
+          $sHTML.= '<option value="" > -- </option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'en','action'=>'include')).' '.(($sAction == 'include' && $sLanguage =='en')? ' selected="selected" ' : '').'> Have English description</option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'jp','action'=>'include')).' '.(($sAction == 'include' && $sLanguage =='jp')? ' selected="selected" ' : '').'> Have Japanese description</option>';
+          $sHTML.= '<option value='.$oPage->getUrl('talentatlas_user', CONST_ACTION_LIST, CONST_TYPE_LISTJOB, 0, array('lang'=>'ph','action'=>'include')).' '.(($sAction == 'include' && $sLanguage =='ph')? ' selected="selected" ' : '').'> Have Filipino description</option>';
+         $sHTML.= '</select>';
+
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getListStart('', array('class' => 'ablistContainer'));
+      $sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
+      $sHTML.= $this->_getJobsRowHeader();
+      $sHTML.= $oHTML->getListItemEnd();
+
+      $sQuery = ' SELECT count( distinct pos.positionpk) as nCount FROM position as pos';
+      $sQuery.= ' LEFT JOIN industry AS ind ON (ind.industrypk = pos.industryfk)';
+      $sQuery.= ' LEFT JOIN company AS cp ON (cp.companypk = pos.companyfk ) ';
+
+      if(isset($sAction) && $sAction == 'include' && !empty($sLanguage))
+        $sQuery.= ' INNER JOIN position as pos1 ON (pos.positionpk = pos1.parentfk AND pos1.lang = "'.$sLanguage.'") ';
+      else
+        $sQuery.= ' LEFT JOIN position as pos1 ON (pos.positionpk = pos1.parentfk)';
+
+      $sQuery.= ' ORDER BY pos.posted_date DESC';
+
+      $oResult = $oDB->ExecuteQuery($sQuery);
+      $bRead = $oResult->readFirst();
+      $nTotal = $oResult->getFieldValue('nCount',0);
+
+      if($nTotal> 0)
+      {
+        $sQuery = ' SELECT pos.*,cp.company_name,ind.name ,GROUP_CONCAT(pos1.lang SEPARATOR ",") as language  FROM position as pos';
+        $sQuery.= ' LEFT JOIN industry AS ind ON (ind.industrypk = pos.industryfk)';
+        $sQuery.= ' LEFT JOIN company AS cp ON (cp.companypk = pos.companyfk) ';
+
+        if(isset($sAction) && $sAction == 'include' && !empty($sLanguage))
+          $sQuery.= ' INNER JOIN position AS pos1 ON (pos.positionpk = pos1.parentfk AND pos1.lang = "'.$sLanguage.'") ';
+        else
+          $sQuery.= ' LEFT JOIN position AS pos1 ON (pos.positionpk = pos1.parentfk)';
+
+        $sQuery.= ' WHERE pos.parentfk = 0 group by pos.positionpk';
+
+        if(isset($sSort) && !empty($sSort))
+          $sQuery.= ' ORDER BY pos.posted_date DESC';
+        else
+          $sQuery.= ' ORDER BY pos.posted_date DESC';
+
+        if(isset($sAction) && $sAction == 'exclude' && !empty($sLanguage))
+          $sQuery = 'SELECT * FROM ('.$sQuery.') AS tbl WHERE ( tbl.language IS NULL OR tbl.language NOT LIKE "%'.$sLanguage.'%")';
+
+        $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+
+        $oResult = $oDB->ExecuteQuery($sQuery);
+        $bRead = $oResult->readFirst();
+
+        $asRecords = array();
+        if($bRead)
+        {
+          while($bRead)
+          {
+            $asRecords[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)] = $oResult->getData();
+            $bRead = $oResult->readNext();
+          }
+        }
+
+      if(isset($asRecords) && !empty($asRecords))
+      {
+        $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, parentfk FROM position as pos1';
+        $sQuery.= ' WHERE pos1.parentfk IN ('.implode(',',array_keys($asRecords)).') AND pos1.parentfk != 0';
+        $sQuery.= ' GROUP BY pos1.positionpk ORDER BY pos1.positionpk DESC ';
+
+        $oResult = $oDB->ExecuteQuery($sQuery);
+        $bRead = $oResult->readFirst();
+        $asChilds = array();
+
+        if($bRead)
+        {
+          while($bRead)
+          {
+            $asChilds[$oResult->getFieldValue('parentfk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
+            $bRead = $oResult->readNext();
+          }
+        }
+      }
+
+      $pnRow = 0;
+
+      if(!empty($asRecords))
+      {
+       foreach($asRecords as $asJobDetail)
+        {
+          if(($pnRow%2) == 0)
+            $sRowClass = '';
+          else
+            $sRowClass = 'list_row_data_odd';
+
+          $sHTML.= $oHTML->getListItemStart('');
+          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '.$sRowClass));
+
+          $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell '.$sRowClass,'style' => ' width:10%;'));
+          $sHTML.= $oHTML->getText('#'.$asJobDetail['positionpk']);
+          $sHTML.= $oHTML->getCarriageReturn();
+          $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell '.$sRowClass,'style' => ' width:15%;'));
+          $sHTML.= $oHTML->getText($asJobDetail['position_title']);
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell '.$sRowClass,'style' => ' width:14%;'));
+          $sHTML.= $oHTML->getText($asJobDetail['company_name']);
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell '.$sRowClass,'style' => ' width:15%;'));
+
+          if(isset($asJobDetail['name']) && !empty($asJobDetail['name']))
+            $sHTML.= $oHTML->getText($oTalentatlas->casText[$asJobDetail['name']]);
+          else
+            $sHTML.= $oHTML->getText($asJobDetail['temp_industry']);
+
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell '.$sRowClass,'style' => ' width:33%;'));
+
+          $sJavascript = "if( jQuery(this).val() != '') ";
+          $sJavascript.= " { ";
+          $sJavascript.= "  $(this).closest('div').find('.add_position').show();";
+          $sJavascript.= " } else {";
+          $sJavascript.= "  $('.add_position').hide();";
+          $sJavascript.= " } ";
+
+          $asLangArray = $this->getMyLanguages($asJobDetail['positionpk']);
+
+          $asLang = array();
+          if(isset($asChilds[$asJobDetail['positionpk']]) && !empty($asChilds[$asJobDetail['positionpk']]))
+            $asLang = $asChilds[$asJobDetail['positionpk']];
+
+          foreach($asLang as $asVirtualLang)
+          {
+            if(in_array($asVirtualLang['lg'],$asLangArray));
+              unset($asLangArray[$asVirtualLang['lg']]);
+          }
+
+          $sHTML.= $oHTML->getBlocStart('',array('style' => 'float:left;width:115px;'));
+          if(sizeof($asLangArray) != 0)
+          {
+            $sHTML.= '<select name="select_lang" onchange="'.$sJavascript.'">';
+            $sHTML.= '<option value="" class=""> Select </option>';
+            foreach($asLangArray as $asSelectLang)
+            {
+              $sHTML.= '<option value = "'.$asSelectLang['value'].'">'.$asSelectLang['label'].'</option>';
+            }
+            $sHTML.= '</select>';
+          }
+          $sJavascript = 'document.location.href = $(this).parent().find(\'select\').val();';
+
+          $sHTML.= $oHTML->getSpace(2);
+          $sPic = $oHTML->getPicture(CONST_PICTURE_ADD, 'Create Position','',array('class'=>'add_position hidden'));
+          $sHTML.= $oHTML->getLink($sPic,'',array('onclick'=>$sJavascript));
+
+          $sHTML.= $oHTML->getBlocEnd();
+
+           // Edit position things
+          $sHTML.= $oHTML->getBlocStart('', array('class' => $sRowClass,'style'=>'float:left;'));
+
+          if(isset($asChilds[$asJobDetail['positionpk']]) && !empty($asChilds[$asJobDetail['positionpk']]))
+          {
+            foreach($asChilds[$asJobDetail['positionpk']] as $asEachLang)
+            {
+              $asMyLang = explode('|',$asEachLang['language']);
+
+              $sHTML.= $oHTML->getBlocStart('',array('class'=>'editLangClass'));
+              $sHTML.= $oHTML->getText($asMyLang[0]);
+
+              //Edit Position
+              $sURL =  $oPage->getUrl('talentatlas_user', CONST_ACTION_EDIT, CONST_TYPE_LISTJOB,(int)$asMyLang[1],array('lang'=>$asMyLang[0],'child'=>1));
+              $sPic =  $oHTML->getPicture(CONST_PICTURE_EDIT, 'Edit Position');
+              $sHTML.= $oHTML->getLink($sPic,$sURL);
+
+              //View Position
+              $sURL =  $oPage->getUrl('talentatlas', CONST_ACTION_VIEW, CONST_TA_TYPE_JOB,(int)$asMyLang[1],array('setLang'=>$asMyLang[0]));
+              $sPic1 =  $oHTML->getPicture($this->getResourcePath().'pictures/view.png', 'Preview Position');
+              $sHTML.= $oHTML->getLink($sPic1,$sURL,array('target'=>'_blank'));
+              $sHTML.= $oHTML->getBlocEnd();
+             }
+           }
+
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('style'=>'float:right;'));
+          $sUrl = $oPage->getAjaxUrl('talentatlas_user', CONST_ACTION_DELETE, CONST_TYPE_LISTJOB,(int)$asJobDetail['positionpk']);
+          $sPic = $oHTML->getPicture($this->getResourcePath().'/pictures/delete_24.png', 'Delete position');
+          $sHTML.= $oHTML->getLink($sPic, $sUrl, array('onclick' => 'if(!window.confirm(\'Are you sure to delete this position ?\')){ return false; }'));
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getListItemEnd();
+          $pnRow ++;
+        }
+      }
+    }
+
+    $sLang = getValue('lang');
+    if(isset($sLang) && !empty($sLang))
+      $_SESSION['lang']= $sLang;
+
+    $sAction = getValue('action');
+    if(isset($sAction) && !empty($sAction))
+      $_SESSION['action']= $sAction;
+
+    $nbResult = getValue('nbResult');
+    if(isset($nbResult) && !empty($nbResult))
+      $_SESSION['myResult']= $nbResult;
+
+    $nPageOffset = getValue('pageoffset');
+    if(isset($nPageOffset) && !empty($nPageOffset))
+      $_SESSION['myoffset']= $nPageOffset;
+
+    $sUrl = $oPage->getUrl('talentatlas_user', CONST_ACTION_LIST,CONST_TYPE_LISTJOB,0,array('lang' => $sLang,'action' => $sAction));
+
+    $sHTML.= $oPager->getDisplay($nTotal, $sUrl);
+    $sHTML.= $oHTML->getFloatHack();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();
+
+    return $sHTML;
+  }
+
+  /**
+   * Function to save created position
+   * @param integer $pnPositionPk
+   * @return array
+   */
+
+  private function _getSavePosition($pnPositionPk)
+  {
+    if(!assert('is_integer($pnPositionPk)'))
+      return 'No position obtained.';
+
+    $oPage = CDependency::getComponentByName('page');
+    $oDB = CDependency::getComponentByName('database');
+
+    $sLangauge      = getValue('job_language');
+    $sPositionTitle = getValue('position_title');
+    $sPositionDesc  = getValue('position_desc');
+    $sRequirements  = getValue('requirements');
+    $sCareerLevel   = getValue('career_level');
+    $nCompany       = getValue('company');
+    $sCompany       = getValue('company_name');
+    $sLocation      = getValue('location');
+    $sPostedDate    = getValue('posted_date');
+    $nJobType       = getValue('job_type');
+    $sSalary        = getValue('salary');
+    $nSalaryLow     = getValue('salary_low');
+    $nSalaryHigh    = getValue('salary_high');
+    $nEnglishLevel  = getValue('english');
+    $nJapaneseLevel = getValue('japanese');
+    $nIndustry      = getValue('industry');
+    $sHolidays      = getValue('holidays');
+    $sStation       = getValue('station');
+    $sWorkHours     = getValue('work_hours');
+    $nVisibility    = getValue('visibility');
+    $nCategory      = getValue('category');
+
+    //Get the page title
+    $sPageTitle     = getValue('page_title');
+    if(!preg_match("/^(talentatlas|talent atlas)/i", $sPageTitle))
+    {
+      $sPageTitle = 'Talent Atlas: '.$sPageTitle;
+    }
+
+    //Get the meta keywords
+    $sMetaKeywords = getValue('meta_keywords');
+    $asMetaKeywords = explode(',', $sMetaKeywords);
+    if(count($asMetaKeywords) > 15)
+      return array('error' => 'Too many keywords.');
+
+    if(count($asMetaKeywords) < 3)
+      return array('error' => 'Not enough keywords.');
+
+    if(!isJapanese($sPositionDesc))
+    {
+      foreach($asMetaKeywords as $sKeyword)
+      {
+        $sKeyword = trim($sKeyword);
+        $nKWLength = strlen($sKeyword);
+        if($nKWLength > 2)
+        {
+          if($nKWLength < 5)
+          {
+            $sPositionDesc = preg_replace('/'.$sKeyword.' /i', '<strong class="seo_keyword">'.$sKeyword.'</strong>', $sPositionDesc);
+          }
+          else
+          {
+            //above 5 words we put strong all composed word: manage => manager, management, managing...
+
+            $asMatches = array();
+            preg_match_all('/[^a-z0-9]('.$sKeyword.'[a-z0-9]{0,6})[^a-z0-9]/i', $sPositionDesc, $asMatches);
+            //dump($asMatches);
+            if(!empty($asMatches[0]))
+            {
+              //echo '['.$sKeyword.'] ===> ';
+              foreach($asMatches[1] as $sMatch)
+              {
+                //echo 'match: '.$sMatch.'<br />';
+                $sPositionDesc = preg_replace('/'.trim($sMatch).'/i', '<strong class="seo_keyword">'.trim($sMatch).'</strong>', $sPositionDesc);
+              }
+            }
+
+            $asMatches = array();
+            preg_match_all('/[^a-z0-9]('.$sKeyword.')[^a-z0-9]/i', $sPositionDesc, $asMatches);
+            //dump($asMatches);
+            if(!empty($asMatches[0]))
+            {
+              //echo '['.$sKeyword.'] ==> ';
+              foreach($asMatches[1] as $sMatch)
+              {
+                //echo 'match: '.$sMatch.'<br />';
+                $sPositionDesc = preg_replace('/'.trim($sMatch).'/i', '<strong class="seo_keyword">'.trim($sMatch).'</strong>', $sPositionDesc);
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+
+    //Get the meta description
+    $sMetaDesc = getValue('meta_desc');
+    if(strlen($sMetaDesc) > 200)
+      $sMetaKeywords = substr($sMetaDesc, 0, 197).'...';
+
+    if(!empty($pnPositionPk))
+    {
+      $sQuery = 'SELECT * FROM position WHERE positionpk = '.$pnPositionPk.' AND parentfk != 0 ';
+      $oDbResult = $oDB->ExecuteQuery($sQuery);
+      $bRead = $oDbResult->readFirst();
+
+      if($bRead)
+      {
+        $sQuery = 'UPDATE position SET visibility = '.$oDB->dbEscapeString($nVisibility).',';
+        $sQuery.= ' category = '.$oDB->dbEscapeString($nCategory).',';
+        $sQuery.= ' career_level = '.$oDB->dbEscapeString($sCareerLevel).',';
+        $sQuery.= ' position_title = '.$oDB->dbEscapeString($sPositionTitle).',';
+        $sQuery.= ' position_desc = '.$oDB->dbEscapeString($sPositionDesc).',';
+        $sQuery.= ' requirements = '.$oDB->dbEscapeString($sRequirements).',';
+        $sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
+        $sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
+        $sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
+        $sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
+        $sQuery.= ' salary_low = '.$oDB->dbEscapeString($nSalaryLow).',';
+        $sQuery.= ' salary_high = '.$oDB->dbEscapeString($nSalaryHigh).',';
+        $sQuery.= ' english = '.$oDB->dbEscapeString($nEnglishLevel).',';
+        $sQuery.= ' japanese = '.$oDB->dbEscapeString($nJapaneseLevel).',';
+        $sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).',';
+        $sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
+        $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
+        $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
+        $sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).',';
+        $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
+        $sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).'';
+        $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
+      }
+      else
+      {
+        $sQuery = 'INSERT INTO `position`(`visibility`, `category`, `career_level`, `position_title`,';
+        $sQuery.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`,';
+        $sQuery.= ' `salary`, `salary_low`, `salary_high`, `english`, `japanese`, `industryfk`, `holidays`, `station`, `work_hours`, ';
+        $sQuery.= ' `lang`, `parentfk`,`page_title`,`meta_keywords`,`meta_desc`) VALUES (';
+        $sQuery.= ''.$oDB->dbEscapeString($nVisibility).','.$oDB->dbEscapeString($nCategory).','.$oDB->dbEscapeString($sCareerLevel).',';
+        $sQuery.= ''.$oDB->dbEscapeString($sPositionTitle).','.$oDB->dbEscapeString($sPositionDesc).','.$oDB->dbEscapeString($sRequirements).',';
+        $sQuery.= ''.$oDB->dbEscapeString($nCompany).','.$oDB->dbEscapeString($sPostedDate).',';
+        $sQuery.= ''.$oDB->dbEscapeString($sLocation).','.$oDB->dbEscapeString($nJobType).','.$oDB->dbEscapeString($sSalary).',';
+        $sQuery.= ''.$oDB->dbEscapeString($nSalaryLow).','.$oDB->dbEscapeString($nSalaryHigh).','.$oDB->dbEscapeString($nEnglishLevel).',';
+        $sQuery.= ''.$oDB->dbEscapeString($nJapaneseLevel).','.$oDB->dbEscapeString($nIndustry).','.$oDB->dbEscapeString($sHolidays).',';
+        $sQuery.= ''.$oDB->dbEscapeString($sStation).','.$oDB->dbEscapeString($sWorkHours).','.$oDB->dbEscapeString($sLangauge).',';
+        $sQuery.= ''.$oDB->dbEscapeString($pnPositionPk).','.$oDB->dbEscapeString($sPageTitle).','.$oDB->dbEscapeString($sMetaKeywords).',';
+        $sQuery.= ''.$oDB->dbEscapeString($sMetaDesc).')';
+       }
+
+       $oDbResult = $oDB->ExecuteQuery($sQuery);
+
+      if(isset($_SESSION['action']) && isset($_SESSION['lang']) && isset($_SESSION['myResult']) && isset($_SESSION['myoffset']))
+        $sURL = $oPage->getUrl('talentatlas_user', CONST_ACTION_LIST,CONST_TYPE_LISTJOB,0,array('lang' => $_SESSION['lang'],'action' => $_SESSION['action'],'nbresult'=> $_SESSION['myResult'],'pageoffset'=> $_SESSION['myoffset']));
+      else
+        $sURL = $oPage->getURL('talentatlas_user',CONST_ACTION_LIST,CONST_TYPE_LISTJOB);
+
+      if($oDbResult)
+        return array('url' => $sURL,'notice'=>'Position modified successfully');
+     }
+    else
+    {
+      if(isset($sCompany) && !empty($sCompany))
+      {
+        $sQuery = 'INSERT INTO company (company_name,status) VALUES ('.$oDB->dbEscapeString($sCompany).',1)';
+        $oDbResult = $oDB->ExecuteQuery($sQuery);
+        $nCompany = $oDbResult->getFieldValue('pk',CONST_PHP_VARTYPE_INT);
+      }
+
+      //Insert first without the language
+
+      $sQuery = 'INSERT INTO `position`(`visibility`, `category`, `career_level`, `position_title`,';
+      $sQuery.= ' `position_desc`, `requirements`, `companyfk`,`posted_date`, `location`, `job_type`, `salary`,';
+      $sQuery.= ' `salary_low`, `salary_high`, `english`, `japanese`, `industryfk`, `holidays`, `station`,';
+      $sQuery.= ' `work_hours`,`page_title`,`meta_keywords`,`meta_desc`) VALUES (';
+      $sQuery.= ''.$oDB->dbEscapeString($nVisibility).','.$oDB->dbEscapeString($nCategory).','.$oDB->dbEscapeString($sCareerLevel).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sPositionTitle).','.$oDB->dbEscapeString($sPositionDesc).','.$oDB->dbEscapeString($sRequirements).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nCompany).','.$oDB->dbEscapeString($sPostedDate).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sLocation).','.$oDB->dbEscapeString($nJobType).','.$oDB->dbEscapeString($sSalary).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nSalaryLow).','.$oDB->dbEscapeString($nSalaryHigh).','.$oDB->dbEscapeString($nEnglishLevel).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nJapaneseLevel).','.$oDB->dbEscapeString($nIndustry).','.$oDB->dbEscapeString($sHolidays).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sStation).','.$oDB->dbEscapeString($sWorkHours).','.$oDB->dbEscapeString($sPageTitle).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sMetaKeywords).','.$oDB->dbEscapeString($sMetaDesc).'';
+      $sQuery.= ')';
+
+      $oDbResult = $oDB->ExecuteQuery($sQuery);
+      $nInsertPk = $oDbResult->getFieldValue('pk', CONST_PHP_VARTYPE_INT);
+
+      //Second time with the language
+
+      $sQuery = 'INSERT INTO `position`(`visibility`, `category`, `career_level`, `position_title`,';
+      $sQuery.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`, `salary`,';
+      $sQuery.= ' `salary_low`, `salary_high`, `english`, `japanese`, `industryfk`, `holidays`, `station`, `work_hours`, ';
+      $sQuery.= ' `lang`, `parentfk`,`page_title`,`meta_keywords`,`meta_desc`) VALUES (';
+      $sQuery.= ''.$oDB->dbEscapeString($nVisibility).','.$oDB->dbEscapeString($nCategory).','.$oDB->dbEscapeString($sCareerLevel).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sPositionTitle).','.$oDB->dbEscapeString($sPositionDesc).','.$oDB->dbEscapeString($sRequirements).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nCompany).','.$oDB->dbEscapeString($sPostedDate).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sLocation).','.$oDB->dbEscapeString($nJobType).','.$oDB->dbEscapeString($sSalary).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nSalaryLow).','.$oDB->dbEscapeString($nSalaryHigh).','.$oDB->dbEscapeString($nEnglishLevel).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nJapaneseLevel).','.$oDB->dbEscapeString($nIndustry).','.$oDB->dbEscapeString($sHolidays).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sStation).','.$oDB->dbEscapeString($sWorkHours).','.$oDB->dbEscapeString($sLangauge).',';
+      $sQuery.= ''.$oDB->dbEscapeString($nInsertPk).','.$oDB->dbEscapeString($sPageTitle).',';
+      $sQuery.= ''.$oDB->dbEscapeString($sMetaKeywords).','.$oDB->dbEscapeString($sMetaDesc).'';
+      $sQuery.= ')';
+
+      $oDbResult = $oDB->ExecuteQuery($sQuery);
+
+      if(isset($_SESSION['action']) && isset($_SESSION['lang']) && isset($_SESSION['myResult']) && isset($_SESSION['myoffset']))
+        $sURL = $oPage->getUrl('talentatlas_user', CONST_ACTION_LIST,CONST_TYPE_LISTJOB,0,array('lang' => $_SESSION['lang'],'action' => $_SESSION['action'],'nbresult'=> $_SESSION['myResult'],'pageoffset'=> $_SESSION['myoffset']));
+      else
+        $sURL = $oPage->getURL('talentatlas_user',CONST_ACTION_LIST,CONST_TYPE_LISTJOB);
+
+      if($oDbResult)
+        return array('url' => $sURL,'notice' => 'Position created successfully');
+
+      }
+    }
+
+  /**
+   * Function to show the job header
+   * @return string
+   */
+
+  public function _getJobsRowHeader()
+  {
+    $oHTML = CDependency::getComponentByName('display');
+
+    $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
+     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
+
+     $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:9%;'));
+       $sHTML.= $oHTML->getText('Position ID');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:11%;'));
+          $sHTML.= $oHTML->getText('Position Title ');
+           $sHTML.= $oHTML->getBlocEnd();
+
+           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:15%;'));
+           $sHTML.= $oHTML->getText('Company');
+           $sHTML.= $oHTML->getBlocEnd();
+
+           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:15%;'));
+           $sHTML.= $oHTML->getText('Industry');
+           $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:30%;'));
+         $sHTML.= $oHTML->getText('Action');
+         $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'floatHack'));
+       $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();
+
+    return $sHTML;
+  }
+
+  /**
+   * Function to create/edit form
+   * @param type $pnPk
+   * @return string
+   */
+
+  private function _getJobEditForm($pnPk)
+  {
+    if(!assert('is_integer($pnPk)'))
+      return 'Wrong data obtained.';
+
+    $oHTML = CDependency::getComponentByName('display');
+    $oDB = CDependency::getComponentByName('database');
+    $oPage = CDependency::getComponentByName('page');
+
+    $sJobLang = getValue('lang');
+    $nChild = getValue('child');
+
+    if(!empty($pnPk))
+    {
+      $sQuery = 'SELECT url FROM website_joburl AS wj INNER JOIN job AS jb ON (jb.weburlfk = wj.website_joburlpk)';
+      $sQuery.= ' INNER JOIN position AS pos ON (pos.jobfk = jb.jobpk) WHERE pos.positionpk = '.$pnPk;
+
+      if($nChild)
+      {
+        $sQuery = 'SELECT url FROM website_joburl AS wj INNER JOIN job AS jb ON (jb.weburlfk = wj.website_joburlpk)';
+        $sQuery.= ' INNER JOIN position AS pos ON (pos.jobfk = jb.jobpk) INNER JOIN position as post ON (post.parentfk = pos.positionpk) WHERE post.positionpk = '.$pnPk;
+       }
+
+      $oResult = $oDB->ExecuteQuery($sQuery);
+      $bRead = $oResult->readFirst();
+
+      if($bRead)
+        $sRealPageUrl = $oResult->getFieldValue('url');
+    }
+
+    $asVisibilityArray = array(0 => 'Draft (hidden)', 1 => 'Published', 2 => 'Top Priority');
+    $asCategoryArray  = array(0=> 'Standard', 1 => 'Featured (homepage)', 2 => 'Highlighted (paid)');
+
+    $oTalentAtlas = CDependency::getComponentByName('talentatlas');
+    $oPage->addCssFile(array($this->getResourcePath().'css/talentatlas_user.css'));
+
+    $sQuery = 'SELECT pos.*,jb.raw_content FROM position as pos LEFT JOIN job as jb ON (pos.jobfk = jb.jobpk) WHERE positionpk = '.$pnPk;
+    $oResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oResult->readFirst();
+
+    if(!$bRead)
+      $asRecord = array('visibility'=>'','category'=>'','position_title'=>'','position_desc'=>'','requirements'=>'','career_level'=>'','companyfk'=>'','location'=>'','posted_date'=>'','job_type'=>'','salary'=>'','salary_low'=>'','salary_high'=>'','status'=>'0','english'=>'','japanese'=>'','industryfk'=>'','holidays'=>'','station'=>'','work_hours'=>'','raw_content'=>'','page_title'=>'','meta_desc'=>'','meta_keywords'=>'','temp_industry'=>'');
+    else
+    {
+      $asRecord = $oResult->getData();
+      if(empty($asRecord['page_title']))
+        $asRecord['page_title'] = cutStringByWords($asRecord['position_title'], 5);
+
+      if(empty($asRecord['meta_desc']))
+        $asRecord['meta_desc'] = cutStringByWords($asRecord['position_desc'], 20);
+
+      if(empty($asRecord['meta_keywords']))
+      {
+        //TODO: return nothing for now, adv function need a dictionnary
+        $asKeywords = $this->_getMetaKeywords($asRecord['position_title'].' '.$asRecord['position_desc']);
+        $asRecord['meta_keywords'] = '';
+      }
+    }
+
+    $sURL = $oPage->getAjaxURL('talentatlas_user', CONST_ACTION_SAVEADD, CONST_TYPE_LISTJOB, $pnPk);
+
+    $sHTML = $oHTML->getBlocStart('', array('class'=>'homepageContainer'));
+    $sHTML.= $oHTML->getBlocStart('', array('style'=>'margin:0 auto;'));
+
+    //Left section
+    $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
+    $oPage->addCssFile(array($this->getResourcePath().'css/talentatlas_user.css'));
+
+    $oForm = $oHTML->initForm('posEditForm');
+    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
+
+    $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position details </strong>'));
+
+    if(!$nChild)
+    {
+      $oForm->addField('select', 'job_language', array('label' => 'Language'));
+      $asLangArray = $this->getMyLanguages();
+
+      foreach($asLangArray as $skey => $avLanguages)
+      {
+        if($skey == $sJobLang)
+          $oForm->addOption('job_language', array('value'=> $skey, 'label' => $avLanguages['label'] ,'selected'=>'selected'));
+        else
+          $oForm->addOption('job_language', array('value'=> $skey, 'label' => $avLanguages['label'] ));
+        }
+     }
+
+    $oForm->addField('select', 'visibility', array('label' => 'Publishing status'));
+    $nVisibilty = $asRecord['visibility'];
+
+    foreach($asVisibilityArray as $nVisibile => $sVisibile)
+    {
+      if($nVisibilty == $nVisibile)
+        $oForm->addOption('visibility', array('value'=> $nVisibile, 'label' => $sVisibile,'selected'=>'selected'));
+      else
+        $oForm->addOption('visibility', array('value'=> $nVisibile, 'label' => $sVisibile));
+    }
+
+    $oForm->addField('select', 'category', array('label' => 'Display option'));
+    $nCategory = $asRecord['category'];
+
+    foreach($asCategoryArray as $nCat => $sCategory)
+    {
+      if($nCategory==$nCat)
+         $oForm->addOption('category', array('value'=> $nCat, 'label' => $sCategory));
+      else
+        $oForm->addOption('category', array('value'=> $nCat, 'label' => $sCategory));
+    }
+
+    $oForm->addField('input', 'position_title', array('label'=>'Position Title', 'class' => '', 'value' => $asRecord['position_title']));
+    $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('textarea', 'position_desc', array('label'=>'Position Description', 'class' => 'description', 'value' => strip_tags($asRecord['position_desc'])));
+    $oForm->setFieldControl('position_desc', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('textarea', 'requirements', array('label'=>'Requirements', 'class' => 'description', 'value' => $asRecord['requirements']));
+    $oForm->setFieldControl('requirements', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('input', 'career_level', array('label'=>'Career Level', 'class' => '', 'value' => $asRecord['career_level']));
+    $oForm->setFieldControl('career_level', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+
+    if(empty($pnPk))
+    {
+      $oForm->addField('selector', 'company', array('label'=> 'Existing Company', 'url' => $oPage->getAjaxURL('talentatlas_user',CONST_ACTION_LIST,CONST_LIST_COMPANY)));
+      $oForm->setFieldControl('company', array('jsFieldTypeIntegerPositive' => ''));
+
+      $oForm->addField('input', 'company_name', array('label'=>' Company (If New)', 'class' => '', 'value' => ''));
+      $oForm->setFieldControl('company_name', array('jsFieldMinSize' => '4', 'jsFieldMaxSize' => 255));
+    }
+    else
+     $oForm->addField('hidden', 'company', array('value' => $asRecord['companyfk']));
+
+    $oForm->addField('input', 'location', array('label'=>'Location', 'class' => '', 'value' => $asRecord['location']));
+    $oForm->setFieldControl('location', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
+    $oForm->setFieldControl('posted_date', array('jsFieldDate' => ''));
+
+    $oForm->addField('select', 'job_type', array('label' => 'Job Type'));
+    $nJobType = $asRecord['job_type'];
+
+    if($nJobType == 1)
+    {
+      $oForm->addOption('job_type', array('value'=> 1, 'label' => 'Full time','selected'=>'selected'));
+      $oForm->addOption('job_type', array('value'=> 0, 'label' => 'Part time'));
+     }
+    else
+    {
+      $oForm->addOption('job_type', array('value'=> 1,'label' => 'Full time'));
+      $oForm->addOption('job_type', array('value'=> 0, 'label' => 'Part time','selected'=>'selected'));
+     }
+
+    $oForm->addField('input', 'salary', array('label'=>'Salary (displayed)', 'class' => '', 'value' => $asRecord['salary']));
+    $oForm->setFieldControl('salary', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('input', 'salary_low', array('label'=>'Lower salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_low']));
+    $oForm->addField('input', 'salary_high', array('label'=>'Higher salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_high']));
+
+    $sSalaryHelp = '<div class="position_form_salary_help" style="top: -105px;">Salary:<br />The displayed salary is a text value where you can write any range of salary and any other information such as "negocialble", or "to be discussed", "starting from"...
+      In those cases where the salary isn\'t a simple value, you have to estimated a low and high values that the search engine will use while searching.<br />Example: "3 Mil. yen + Bonus. Negociable" => lower salary: 3 000 000, higher: 4 000 000  </div><br /> ';
+    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sSalaryHelp));
+
+    $oForm->addField('select', 'english', array('label' => 'English Level'));
+
+    $asLanguage= $oTalentAtlas->getLanguages();
+    $nLanguage = $asRecord['english'];
+
+    foreach($asLanguage as $nValue=>$vType)
+    {
+      if($nLanguage==$nValue)
+        $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
+      else
+        $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType));
+    }
+
+    $oForm->addField('select', 'japanese', array('label' => 'Japanese Level'));
+    $asJapLanguage = $oTalentAtlas->getLanguages();
+    $nLanguage = $asRecord['japanese'];
+
+    foreach($asJapLanguage as $nValue=>$vType)
+    {
+       if($nLanguage == $nValue)
+        $oForm->addOption('japanese', array('value' => $nValue, 'label' => $vType,'selected'=>'selected'));
+       else
+        $oForm->addOption('japanese', array('value' => $nValue, 'label' => $vType));
+     }
+
+    $sIndustryName = $asRecord['temp_industry'];
+    $asIndustries = $oTalentAtlas->getIndustries();
+    $oForm->addField('select', 'industry', array('label' => 'Industry'));
+    $nIndustry = $asRecord['industryfk'];
+
+    $oForm->addOption('industry', array('value'=> '', 'label' => 'Select Industries'));
+    foreach($asIndustries as $nValue => $vType)
+    {
+      if($nIndustry == $vType['industrypk'])
+         $oForm->addOption('industry', array('value' => $vType['industrypk'], 'label' => $oTalentAtlas->casText[$vType['name']],'selected'=>'selected'));
+       else
+         $oForm->addOption('industry', array('value' => $vType['industrypk'], 'label' => $oTalentAtlas->casText[$vType['name']]));
+     }
+
+    $oForm->setFieldControl('industry', array('jsFieldNotEmpty' => ''));
+
+    if(!empty($sIndustryName))
+      $sIndustryTip = 'Industry found by the job aggregator: <i>'.$sIndustryName.'</i>.<br />If you need industries that are not displayed in the current list, please request it by email <a href="mailto:sboudoux@bulbouscell.com">here</a>. ';
+    else
+      $sIndustryTip = 'If you need industries that are not displayed in the current list, please request it by email <a href="mailto:sboudoux@bulbouscell.com">here</a>.';
+
+    $oForm->addField('misc','',array('type' => 'text','text' => '<div class="position_form_salary_help" style="top: -65px;">'.$sIndustryTip.'</div>'));
+
+
+    $oForm->addField('input', 'holidays', array('label' => 'Holidays', 'class' => '', 'value' => $asRecord['holidays']));
+    $oForm->setFieldControl('holidays', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255));
+
+    $oForm->addField('input', 'station', array('label' => 'Nearest Station', 'class' => '', 'value' => $asRecord['station']));
+    $oForm->setFieldControl('station', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255));
+
+    $oForm->addField('input', 'work_hours', array('label' => 'Work Hours', 'class' => '', 'value' => $asRecord['work_hours']));
+
+
+    $sTip = '<div class="position_form_salary_help">Search engine optimization:<br />
+      The 3 last fields are required to make the position appear properly in Google searches.<br />
+      - Page title is referring to the text that appears in the tab of your web browser when looking at the position.<br />
+      - Keywords is a "," separated list of the most important words found in the position description. (3-10 words or groups of words)<br />
+      - Description is a short description of the content of the page. In our case it should most of the time be an extract of the description. (about 20 words)<br />
+      </div><br /> ';
+    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sTip));
+
+    $oForm->addField('input', 'page_title', array('label' => 'Page Title', 'class' => '', 'value' => $asRecord['page_title']));
+    $oForm->setFieldControl('page_title', array('jsFieldNotEmpty' => ''));
+
+    $oForm->addField('input', 'meta_keywords', array('label'=> 'Meta Keywords ', 'class' => '', 'value' => $asRecord['meta_keywords']));
+    $oForm->setFieldControl('meta_keywords', array('jsFieldNotEmpty' => ''));
+
+    $oForm->addField('textarea', 'meta_desc', array('label' => 'Meta Description', 'class' => 'description', 'value' => $asRecord['meta_desc']));
+    $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));
+
+    $sHTML.= $oForm->getDisplay();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getFloatHack();
+
+
+    //Div for controlling Iframe
+    if(isset($sRealPageUrl) && !empty($sRealPageUrl))
+    {
+      $sHTML.= $oHTML->getBlocStart('frame',array('class'=>'iframeBar'));
+
+        $sHTML.= $oHTML->getBlocStart('closeiframe', array('class'=>'hidden','style'=>' cursor: pointer;'));
+        $sHTML.= $oHTML->getText('Close',array('style'=>'font-weight:bold; z-index:1000;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('openiframe', array('style'=>' cursor: pointer;', 'title' => 'View original position'));
+        $sHTML.= $oHTML->getSpace();
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sJavascript = '
+          $(document).ready(function()
+          {
+            $("#openiframe").click(function()
+            {
+              if($("#originalViewFrame").attr("src") != "'.$sRealPageUrl.'")
+                $("#originalViewFrame").attr("src", "'.$sRealPageUrl.'");
+
+              $(".position_form_salary_help").fadeOut(function()
+              {
+                $("link[href=\'/component/talentatlas_user/resources/css/talentatlas_user.css\']").attr({href : "/component/talentatlas_user/resources/css/talentatlas_user_new.css"});
+
+                $("#originalViewFrame").fadeIn();
+                $("#closeiframe").fadeIn();
+              });
+            });
+
+            $("#closeiframe").click(function()
+            {
+              $("#originalViewFrame").fadeOut(function()
+              {
+                $(".position_form_salary_help").fadeIn();
+              });
+
+              $("link[href=\'/component/talentatlas_user/resources/css/talentatlas_user_new.css\']").attr({href : "/component/talentatlas_user/resources/css/talentatlas_user.css"});
+              $("#closeiframe").hide();
+            });
+          }); ';
+
+        $oPage->addCustomJs($sJavascript);
+        $sHTML.= $oHTML->getText('<iframe src="" id="originalViewFrame" height="660" width="780" border="0" style="display:none;"></iframe>');
+
+      $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+    }
+
+    // Close holding divs
+    $sHTML.= $oHTML->getFloatHack();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getFloatHack();
+
+    return $sHTML;
+  }
+
+  /**
+   * Function for the company autocomplete list
+   * @return type
+   */
+
+  private function _getCompanySelector()
+  {
+    $sSearch = getValue('q');
+    if(empty($sSearch))
+      return json_encode(array());
+
+    $oDB = CDependency::getComponentByName('database');
+
+    $sQuery = 'SELECT * FROM company WHERE status = 1 AND lower(company_name) LIKE '.$oDB->dbEscapeString('%'.strtolower($sSearch).'%').' ORDER BY company_name desc';
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oDbResult->readFirst();
+    if(!$bRead)
+      return json_encode(array());
+
+    $asJsonData = array();
+    while($bRead)
+    {
+      $asData['name'] = $oDbResult->getFieldValue('company_name');
+      $asJsonData[] = json_encode($asData);
+      $bRead = $oDbResult->readNext();
+    }
+    echo '['.implode(',', $asJsonData).']';
+  }
+
+  /**
+   * Function to remove the jobs
+   * @param type $pnPositionPk
+   * @return array
+  */
+  private function _getRemoveJobs($pnPositionPk)
+  {
+    if(!assert('is_integer($pnPositionPk) && !empty($pnPositionPk)'))
+      return array('error' => 'No Position Obtained. It may have already been deleted.');
+
+    $oDB = CDependency::getComponentByName('database');
+
+    $sQuery = 'SELECT * FROM position WHERE positionpk = '.$pnPositionPk.' ';
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oDbResult->readFirst();
+    if(!$bRead)
+      return array('error' => __LINE__.' - No position to delete.');
+
+    $sQuery = 'DELETE FROM position WHERE parentfk = '.$pnPositionPk.' ';
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    if(!$oDbResult)
+      return array('error' => __LINE__.' - Couldn\'t delete the position');
+
+    $sQuery = 'DELETE FROM position WHERE positionpk = '.$pnPositionPk.' ';
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    if(!$oDbResult)
+      return array('error' => __LINE__.' - Couldn\'t delete the position');
+
+    return array('notice' => 'Position has been deleted.', 'reload' => 1);
+  }
+
+
+   /**
+    * Function to send the company information
+    */
+   private function _getCompanySend()
+   {
+     $oDB = CDependency::getComponentByName('database');
+
+     $sQuery = 'SELECT cp.company_name AS company_name,count(pos.positionpk) AS nCount FROM company AS cp INNER JOIN position AS pos WHERE cp.companypk = pos.companyfk AND cp.status != 0 and pos.visibility != 0 GROUP BY company_name ORDER BY company_name ASC';
+     $oDbResult = $oDB->ExecuteQuery($sQuery);
+     $bRead = $oDbResult->readFirst();
+
+     if($bRead)
+     {
+       $asCompanyRecords = array();
+       while($bRead)
+       {
+          $asCompanyRecords[] =  $oDbResult->getData();
+          $bRead = $oDbResult->readNext();
+       }
+
+       if(!empty($asCompanyRecords))
+       {
+         $fp = fopen('company.csv', 'w');
+
+          foreach($asCompanyRecords as $skey =>$asCompany)
+          {
+            fputcsv($fp, $asCompany);
+          }
+          fclose($fp);
+
+          $sFileName = 'company.csv';
+
+          if(headers_sent())
+            exit(__LINE__.' Headers already sent');
+
+          // Required for some browsers
+          if(ini_get('zlib.output_compression'))
+            ini_set('zlib.output_compression', 'Off');
+
+          $ext = 'csv';
+
+          // Determine Content Type
+          switch ($ext)
+          {
+            case "pdf":  $ctype="application/pdf"; break;
+            case "exe":  $ctype="application/octet-stream"; break;
+            case "zip":  $ctype="application/zip"; break;
+            case "doc":  $ctype="application/msword"; break;
+            case "docx": $ctype="application/msword"; break;
+            case "csv":  $ctype="application/vnd.ms-excel"; break;
+            case "xls":  $ctype="application/vnd.ms-excel"; break;
+            case "xlsx": $ctype="application/vnd.ms-excel"; break;
+            case "ppt":  $ctype="application/vnd.ms-powerpoint"; break;
+            case "pptx": $ctype="application/vnd.ms-powerpoint"; break;
+            case "gif":  $ctype="image/gif"; break;
+            case "png":  $ctype="image/png"; break;
+            case "jpeg":
+            case "jpg": $ctype="image/jpg"; break;
+            default: $ctype="application/force-download";
+          }
+
+          header("Pragma: public"); // required
+          header("Expires: 0");
+          header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+          header("Cache-Control: private",false); // required for certain browsers
+          header("Content-Type: $ctype");
+          header("Content-Disposition: attachment; filename=\"".basename($sFileName)."\";" );
+          header("Content-Transfer-Encoding: binary");
+
+          ob_clean();
+          flush();
+          readfile($sFileName);
+
+          exit();
+      }
+    }
+   }
+
+   /**
+    * Function to get the languages
+    * @param type $pnPositionPk
+    * @return array
+    */
+   public function getMyLanguages($pnPositionPk = 0 )
+   {
+     $oPage = CDependency::getComponentByName('page');
+     $asLangArray = array();
+
+     $asLangArray = array('en'=> array('label'=>'English','lg'=>'en', 'value' => $oPage->getUrl('talentatlas_user', CONST_ACTION_EDIT, CONST_TYPE_LISTJOB,(int)$pnPositionPk,array('lang'=>'en'))),
+                          'jp'=> array('label'=>'Japanese','lg'=>'jp', 'value' => $oPage->getUrl('talentatlas_user', CONST_ACTION_EDIT, CONST_TYPE_LISTJOB,(int)$pnPositionPk,array('lang'=>'jp'))),
+                          'ph'=> array('label'=>'Filipino','lg'=>'ph', 'value' => $oPage->getUrl('talentatlas_user', CONST_ACTION_EDIT, CONST_TYPE_LISTJOB,(int)$pnPositionPk,array('lang'=>'ph'))));
+
+     return $asLangArray;
+   }
+
+
+  /**
+  *Very basic function that picks up some words from the description
+  * @param type $psString
+  * @param type $pnNumber
+   *
+   * return a comma separated list of words
+  */
+  function _getMetaKeywords($psString, $pnWords = 20)
+  {
+    if(!assert('!empty($psString) && is_integer($pnWords)'))
+      return '';
+
+    return '';
+  }
+}

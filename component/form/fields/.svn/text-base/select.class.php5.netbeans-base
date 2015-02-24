@@ -1,0 +1,139 @@
+<?php
+require_once('component/form/fields/field.class.php5');
+
+class CSelect extends CField
+{
+  private $casOptionData = array();
+
+  public function __construct($psFieldName, $pasFieldParams = array())
+  {
+    parent::__construct($psFieldName, $pasFieldParams);
+  }
+
+  public function addOption($pasFieldParams)
+  {
+    if(!assert('is_array($pasFieldParams)'))
+      return null;
+
+    $this->casOptionData[] = $pasFieldParams;
+    return $this;
+  }
+
+
+  public function getDisplay()
+  {
+    $sHTML = '';
+
+    if(!isset($this->casFieldParams['id']))
+    {
+      $this->casFieldParams['id'] = str_replace('[', '', $this->csFieldName.'Id');
+      $this->casFieldParams['id'] = str_replace(']', '', $this->casFieldParams['id']);
+    }
+
+    //------------------------
+    //add JScontrol classes
+    if(isset($this->casFieldParams['required']) && !empty($this->casFieldParams['required']))
+      $this->casFieldContol['jsFieldNotEmpty'] = '';
+
+    if(!empty($this->casFieldParams['label']) && $this->isVisible())
+      $sHTML.= '<div class="formLabel">'.$this->casFieldParams['label'].'</div>';
+
+    $sHTML.= '<div class="formField">';
+
+    if(isset($this->casFieldParams['allNoneLink']) && !empty($this->casFieldParams['allNoneLink']))
+    {
+      $sHTML.= '<div style="float: right;"> select <a href="javascript:;" onclick="$(\'#'.$this->casFieldParams['id'].'\').children().attr(\'selected\', \'selected\').end().change();">all</a> ';
+      $sHTML.= '/ <a href="javascript:;" onclick="$(\'#'.$this->casFieldParams['id'].'\').children().removeAttr(\'selected\').end().change();">none</a></div>';
+    }
+
+    $sHTML.= '<select name="'.$this->csFieldName.'" ';
+    $sExtraJs = '';
+    $bIsMultiple = false;
+    foreach($this->casFieldParams as $sKey => $vValue)
+    {
+      if($sKey == 'multiple')
+      {
+        $bIsMultiple = true;
+        $oPage = CDependency::getComponentByName('page');
+        $oPage->addRequiredJsFile(array('/component/form/resources/js/jquery.bsmselect.js', '/component/form/resources/js/jquery.bsmselect.sortable.js','/component/form/resources/js/jquery.bsmselect.compatibility.js'));
+        $oPage->addCssFile('/component/form/resources/css/jquery.bsmselect.css');
+        $sExtraJs = "<script> jQuery('#".$this->casFieldParams['id']."').bsmSelect(
+                {
+                  animate: true,
+                  highlight: true,
+                  showEffect: function(jQueryel){ jQueryel.fadeIn(); },
+                  hideEffect: function(jQueryel){ jQueryel.fadeOut(function(){ jQuery(this).remove(); }); },
+                /* plugins: [jQuery.bsmSelect.plugins.sortable()],*/
+                  highlight: 'highlight',
+                  removeLabel: '<strong>X</strong>'
+                }).change(); </script>";
+
+        $sHTML.= ' multiple="multiple" size="10" ';
+      }
+      else
+        $sHTML.= ' '.$sKey.'="'.$vValue.'" ';
+    }
+
+    if(!empty($this->casFieldContol))
+    {
+      $sHTML.= ' jsControl="';
+      foreach($this->casFieldContol as $sKey => $vValue)
+        $sHTML.= $sKey.'@'.$vValue.'|';
+
+      $sHTML.= '" ';
+    }
+
+    $sHTML.= '>';
+
+
+    //add all the options
+    $asOptions = array();
+    foreach($this->casOptionData as $nKey => $asOption)
+    {
+      if(isset($asOption['label']))
+      {
+        $sLabel = $asOption['label'];
+        unset($asOption['label']);
+      }
+      else
+        $sLabel = '';
+
+      if(isset($asOption['group']))
+      {
+        $sGroupOption = $asOption['group'];
+        unset($asOption['group']);
+      }
+      else
+        $sGroupOption = '';
+
+      $sOptionHtml = '<option ';
+
+      foreach($asOption as $sKey => $vValue)
+        $sOptionHtml.= ' '.$sKey.'="'.$vValue.'" ';
+
+      $sOptionHtml.= '>';
+
+      if(!empty($sLabel))
+      $sOptionHtml.=$sLabel;
+
+      $sOptionHtml.= '</option>';
+      $asOptions[$sGroupOption][] =$sOptionHtml;
+    }
+
+    $sCurrentGroup = '';
+    foreach($asOptions as $sGroup => $asOption)
+    {
+      if($sCurrentGroup != $sGroup)
+      {
+        $sHTML.= '<OPTGROUP LABEL="'.$sGroup.'">';
+      }
+
+      $sHTML.= implode('', $asOption);
+    }
+    $sHTML.= '</select>'.$sExtraJs;
+
+    $sHTML.= '</div>';
+    return $sHTML;
+  }
+
+}

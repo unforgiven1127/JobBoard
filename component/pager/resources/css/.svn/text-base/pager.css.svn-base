@@ -1,0 +1,142 @@
+/* ********************************************************************* */
+/* ********************************************************************* */
+/* ********************************************************************* */
+
+.pagerInfo
+{
+  color: #555555;
+  float: left;
+  font-size: 12px;
+  width:12%;
+}
+
+.pagerContainer
+{
+  margin: 15px 0;
+}
+.pagerNavigation
+{
+  float:left;
+  width:100%;
+  text-align:center;
+}
+.pagerNavigationInner
+{
+  /*width: 370px;*/
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+
+  margin:0 auto;
+
+  border: 1px solid #E4EFFD;
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.pagerNavigationNumbers,
+.pagerNavigationBefore,
+.pagerNavigationAfter
+{
+  float:left;
+  /*display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;*/
+}
+
+.pagerNavigationBefore,
+.pagerNavigationAfter
+{
+  width:75px;
+}
+
+.pagerRowSelector
+{
+  float:right;
+  width:100px;
+  width:12%;
+  text-align: right;
+}
+
+.pager_pageLink
+{
+  float:left;
+  line-height: 20px;
+  text-align: center;
+  vertical-align:middle;
+  font-size:12px;
+
+}
+.pager_pageLinkPic
+{
+  margin: 0 2px;
+  width: 20px;
+}
+
+.pager_pageLink a
+{
+  text-decoration: none;
+}
+.pager_pageLink a:hover
+{
+  color:#5DB749;
+}
+.pager_template
+{
+  display: none;
+}
+
+.pagerRowSelector select
+{
+  font-size:12px;
+  margin: 0 auto;
+  width:95px;
+}
+
+.pager_CurrentPage
+{
+  padding: 0 4px;
+
+  /*width:30px;*/
+}
+.pagerSmaller a
+{
+  font-size:10px;
+}
+
+
+.pager_CurrentPage a,
+.pager_CurrentPage a:hover
+{
+  color: #9E1C9E;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: 1px 4px;
+
+  text-decoration:none;
+  cursor:default;
+}
+
+.pagerCompactContainer
+{
+  float:right;
+}
+
+.pagerCompactInfo
+{
+  float:left;
+}
+
+.pagerCompactNavigation
+{
+  float:right;
+}
+
+
+/* ********************************************************************* */
+/* ********************************************************************* */
+/* ********************************************************************* */

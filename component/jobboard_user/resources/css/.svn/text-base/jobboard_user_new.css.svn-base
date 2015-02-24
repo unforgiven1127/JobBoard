@@ -1,0 +1,105 @@
+#posEditFormId
+{
+  background: none;
+  padding: 0;
+
+  border: none;
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#posEditFormId .formLabel
+{
+  float:left;
+  width: 100px;
+  padding-left: 10px;
+
+}
+
+#posEditFormId .formField
+{
+  float:left;
+  margin-right: 5px;
+  width: 110px;
+  text-align: left;
+}
+
+#posEditFormId div .formField input
+{
+  float:left;
+  margin-right: 5px;
+  width: 150px;
+  text-align: left;
+}
+
+textarea
+{
+  height: 100px;
+  width: 314px;
+}
+
+.editLangClass
+{
+  width:80px; float:left;
+}
+
+#spaceDiv
+{
+  width:92px;float:left;
+}
+
+.menuBarItem
+{
+  background-color: #F4FBFF;
+  border: 1px solid #93C0FF;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5px 10px;
+  margin:7px;
+  min-height: 35px;
+}
+
+.ta_user_list_container
+{
+  margin: 0 10px;
+}
+
+.position_form_salary_help
+{
+ display: none;
+ background-color: #EFEFEF;
+}
+
+.jobContainerClass
+{
+  float:left;width:36%;background-color:#FFFFFF;
+}
+
+.description
+{
+  width:314px;height:220px
+}
+
+.homepageContainer
+{
+  width:100%;
+}
+
+.iframeBar
+{
+  position: fixed;
+  top: 125px;
+  right: 5px;
+  min-height:600px;
+  max-height:685px;
+  padding-left:2px;
+  border:1px solid #8FCFF9;
+  background-color:#efefef;
+  border-radius:10px;
+  background-image:url('../pictures/iframe_expand.png');
+  background-repeat:repeat-y;
+}
+#openiframe
+{
+  display: none;
+}

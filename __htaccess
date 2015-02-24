@@ -1,0 +1,18 @@
+RewriteCond %{HTTP_HOST} !^jobs\.slate\.co\.jp [NC]
+RewriteRule (.*) https://jobs.slate.co.jp%{REQUEST_URI} [R=301,L]
+
+AuthUserFile /home/slate/public_html/jobboard/.htpasswd
+AuthType Basic
+AuthName "Slate joab board Test Site"
+Satisfy Any
+order deny,allow
+deny from all
+require valid-user
+allow from 118.243.81.245
+allow from 183.77.226.168
+allow from 118.243.81.248
+allow from 122.135.62.20
+allow from 127.0.0.1
+allow from 203.167.38.11
+allow from 112.199.38.154
+allow from 124.107.166.235

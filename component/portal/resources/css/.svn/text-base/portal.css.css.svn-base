@@ -1,0 +1,6 @@
+.portalContainer
+{
+  min-height: 350px;
+  background-color: #fff;
+  
+}

@@ -1,0 +1,180 @@
+/*
+    Document   : form.css
+    Created on : Nov 14, 2011, 1:05:15 PM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.formErrorMsg
+{
+  position:absolute;
+  z-index:99999;
+  color:orange;
+  padding: 3px;
+
+  border:1px solid #999;
+  background-color: #E3EDF2;
+
+  -moz-border-radius:  5px;  /* Firefox up to version 3.6 */
+  -webkit-border-radius: 5px;  /* Safari, Chrome (before WebKit version 533) */
+  border-radius: 5px;
+}
+
+
+.formErrorArrow
+{
+  border-color: transparent #999 transparent transparent;
+  border-style: solid;
+  border-width: 8px;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  /*position: relative;
+  right: -44px;
+  top: 1px;*/
+  width: 0;
+  float:left;
+  margin-right:8px;
+}
+
+.file_history ul li
+{
+  margin-left: 15px;
+}
+
+
+.fullPageForm
+{
+  width: 60%;
+  margin: 0 auto;
+}
+.fullPageForm input[type=text],
+.fullPageForm input[type=password],
+.fullPageForm textarea
+{
+  width: 90%;
+}
+
+.mceEditor
+{
+  margin: 0;
+}
+
+.autocompleteField
+{
+  min-width: 250px;
+}
+
+.innerForm table tr td.mceIframeContainer
+{
+  padding: 0;
+  margin: 0;
+}
+
+div.formField input,
+div.formField select,
+div.formField textarea
+{
+  border: 1px solid #AAAAAA;
+  border-radius: 3px 3px 3px 3px;
+
+  -webkit-box-shadow: 0 2px 7px #DFDFDF;
+  -moz-box-shadow: 0 2px 7px #DFDFDF;
+  box-shadow: 0 2px 7px #DFDFDF;
+}
+div.formField label.before
+{
+  margin-right: 5px;
+}
+div.formField label
+{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.formFieldContainer
+{
+  margin: 4px 0;
+  min-height: 20px;
+  /*height: 0;*/
+}
+
+.formFieldContainer span hr
+{
+  color: #55A1D8;
+  height: 2px;
+}
+
+div.formLabel
+{
+  padding-right: 5px;
+
+}
+
+div.formFieldWidth1 { float: left; width: 100%; }
+div.formFieldWidth2 { float: left; width: 50%; }
+div.formFieldWidth3 { float: left; width: 33%; }
+div.formFieldWidth4 { float: left; width: 25%; }
+div.formFieldWidth5 { float: left; width: 20%; }
+.formFieldSeparator { float: left; width:100%; height: 15px; clear: both; }
+.formFieldLineBreaker { float: left; width:100%; height: 1px; clear: both;}
+
+
+
+.formFieldHidden { display: none; }
+
+.sliderLegend
+{
+  width: 100%;
+  margin-top: 5px;
+}
+.sliderLegend ul
+{
+  width: 90%;
+  margin: 0 auto;
+}
+.sliderLegend ul li
+{
+  float: left;
+  font-size: 9px;
+  text-align: center;
+}
+.sliderLegend ul li:first-child
+{
+  text-align: left;
+}
+.sliderLegend ul li:last-child
+{
+  float:right;
+  text-align: right;
+}
+.sliderLegend ul li:nth-last-child(2)
+{
+  text-align: right;
+}
+
+.fieldSliderContainer
+{
+  position: relative;
+  padding: 0 3%;
+}
+
+.fieldTree
+{
+  position: relative;
+}
+
+.tree_close_button div
+{
+  width: 18px;
+  height: 18px;
+  background: url('/component/form/resources/pictures/close_tree.png') no-repeat top left;
+  float: right;
+  margin: 0 2px 0 10px;
+}

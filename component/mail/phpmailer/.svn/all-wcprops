@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/bcm/!svn/ver/4/trunk/component/mail/phpmailer
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/bcm/!svn/ver/4/trunk/component/mail/phpmailer/class.phpmailer.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/bcm/!svn/ver/4/trunk/component/mail/phpmailer/class.pop3.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/bcm/!svn/ver/4/trunk/component/mail/phpmailer/class.smtp.php
+END

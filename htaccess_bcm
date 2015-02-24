@@ -1,0 +1,32 @@
+RewriteEngine on
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule (.*) https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /home/BCAdmin/public_html/bc_crm/.htpasswd
+Satisfy Any
+order deny,allow
+deny from all
+require valid-user
+
+#localhost
+allow from 127.0.0.1
+allow from 192.168.215
+allow from 192.168.81
+
+# stef home
+allow from 1.113.56.42
+
+#Slate Akasaka Office
+allow from 118.243.81.245
+
+#Slate Akasaka Office
+allow from 118.243.81.246
+
+#Slate Aoyaoma Office
+allow from 118.243.81.248
+
+#aoyama 3rd floor
+allow from 183.77.226.168

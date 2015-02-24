@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/bcm/!svn/ver/4/trunk/component/database
+END
+database.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/bcm/!svn/ver/4/trunk/component/database/database.class.php5
+END
+dbresult.class.php5
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/bcm/!svn/ver/4/trunk/component/database/dbresult.class.php5
+END
+database.class.ex.php5
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/bcm/!svn/ver/4/trunk/component/database/database.class.ex.php5
+END

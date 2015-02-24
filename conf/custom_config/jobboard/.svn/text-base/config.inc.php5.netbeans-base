@@ -1,0 +1,109 @@
+<?php
+
+  define('CONST_WEBSITE_LOGGEDOUT_LOGO','/media/picture/header.jpg');
+  define('CONST_WEBSITE_MAIN_CSS', '/common/style/jobboard.css');
+  define('CONST_WEBSITE_GOOGLE_ANALYTICS','');
+
+  define('CONST_DISPLAY_SEARCH_MENU', true);
+  define('CONST_DISPLAY_HOMEPAGE_ICON', 'home_48.png');
+  define('CONST_PAGER_NUM', '50');
+  $gasMainMenu = array();
+
+  //specific component constants
+  define('CONST_SUB_HEADER_BAR', 'true');
+  define('CONST_PROFILE_HEADER', 'true');
+  define('CONST_LEFT_MENU', 'true');
+  define('CONST_HOME_ICON_HEADER', 'true');
+  define('CONST_CONTACT_ICON_HEADER', 'true');
+  define('CONST_EMAIL_ICON_HEADER', 'true');
+  define('CONST_HEADER_LOGO','/component/display/resources/jobboard/pictures/top_slate_logo.png');
+  define('CONST_HEADER_FAVICON', '/media/picture/bcm/favicon.ico');
+  define('CONST_LOGIN_MESSAGE','Welcome Slate job boad, please login to access the application. ');
+  define('CONST_TYPE_HOMEPAGE','home');
+
+  define('CONST_WEBSITE_LOADING_PICTURE','/common/pictures/loading_jobboard.gif');
+
+
+  function getCustomWebsiteFooter($pasFooter)
+  {
+    $oPage = CDependency::getComponentByName('page');
+    $oHTML = CDependency::getComponentByName('display');
+
+    $sHTML = $oHTML->getBlocStart('footerContainerId');
+
+    $sHTML.= $oHTML->getBlocStart('footerDiv');
+
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'footerTopContainer footerBlock'));
+
+        $sHTML.= $oHTML->getBlocStart('Language', array('class' => 'footerTopSection footerTopLanguage'));
+          $sHTML.= $oHTML->getText('Language: ');
+          $sHTML.= $oHTML->getLink(' Jap ', '/?setLang=jp');
+          //$sHTML.= $oHTML->getLink(' Chi ', '/?setLang=ch');
+          $sHTML.= $oHTML->getLink(' Eng', '/?setLang=en');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'footerTopSection footerTopAddress'));
+          $sHTML.= $oHTML->getText(' 1-4-2 Minami Aoyama, Minato-ku, Tokyo, Japan 107-0062 ');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'footerTopSection footerTopPhone'));
+          $sHTML.= $oHTML->getText(' +81-3-6890-7711 ');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'footerTopSection footerTopMail'));
+          $sHTML.= $oHTML->getText(' info@slate.co.jp');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getFloatHack();
+
+      $sHTML.= $oHTML->getBlocEnd();
+
+
+
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'footerBottomContainer footerBlock'));
+
+        $sHTML.= $oHTML->getBlocStart('copyright');
+        $sHTML.= $oHTML->getLink('&copy; Copyright 2012 ','');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('aboutus');
+        $sHTML.= $oHTML->getLink('About Us ','');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('terms');
+        $sHTML.= $oHTML->getLink('Terms & Conditions ','');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('privacy');
+        $sHTML.= $oHTML->getLink('Privacy ','');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $oLogin = CDependency::getComponentByName('login');
+        if($oLogin->isLogged())
+        {
+          $sHTML.= $oHTML->getBlocStart('admin');
+          $sHTML.= $oHTML->getLink('Admin Page','/index.php5?uid=654-321&ppa=ppal&ppt=ppaj');
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('logout');
+          $sHTML.= $oHTML->getLink('Logout','/index.php5?uid=579-704&ppa=ppalgt&ppt=&ppk=0&pg=ajx');
+          $sHTML.= $oHTML->getBlocEnd();
+        }
+        else
+        {
+          $sHTML.= $oHTML->getBlocStart('');
+          $sHTML.= $oHTML->getLink('Management','/index.php5?uid=579-704');
+          $sHTML.= $oHTML->getBlocEnd();
+        }
+
+      $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getBlocEnd();
+
+    $sHTML.= $oHTML->getBlocEnd();
+
+    return $sHTML;
+  }
+
+?>

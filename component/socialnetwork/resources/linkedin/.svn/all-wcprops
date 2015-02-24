@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/bcm/!svn/ver/6/trunk/component/socialnetwork/resources/twitter
+END
+job.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/bcm/!svn/ver/13/trunk/component/socialnetwork/resources/twitter/job.xml
+END
+linkedin_simple.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/bcm/!svn/ver/13/trunk/component/socialnetwork/resources/twitter/linkedin_simple.class.php
+END
+OAuth.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/bcm/!svn/ver/13/trunk/component/socialnetwork/resources/twitter/OAuth.class.php
+END
+demo.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/bcm/!svn/ver/13/trunk/component/socialnetwork/resources/twitter/demo.php
+END
+slate_linkedin.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/bcm/!svn/ver/13/trunk/component/socialnetwork/resources/twitter/slate_linkedin.png
+END

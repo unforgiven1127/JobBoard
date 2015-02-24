@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/bcm/!svn/ver/11/trunk/component/form/resources/dynatree
+END
+package.json
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/bcm/!svn/ver/4/trunk/component/form/resources/dynatree/package.json
+END
+grunt.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/bcm/!svn/ver/4/trunk/component/form/resources/dynatree/grunt.js
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/bcm/!svn/ver/4/trunk/component/form/resources/dynatree/index.html
+END

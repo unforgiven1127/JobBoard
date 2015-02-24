@@ -1,0 +1,30 @@
+/*
+    Document   : dev
+    Created on : Feb 6, 2012, 10:42:37 AM
+    Author     : root
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+#loginFormDataId
+{
+  background-color: #FFDD93;
+}
+
+
+.menuNavList {
+    border-bottom: 3px solid orange;
+}
+
+#menuNavContainerId ul li ul {
+
+    border-left: 2px solid orange;
+    border-right: 2px solid orange;
+    border-bottom: 2px solid orange;
+}

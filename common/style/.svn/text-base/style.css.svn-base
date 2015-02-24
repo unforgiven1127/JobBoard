@@ -1,0 +1,55 @@
+.spanCenteredCompany
+{
+     width: 30%;  display: block;  text-align: center;
+}
+
+.restrictedAccessBloc
+{
+  border: 2px solid red;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.restrictedAccessBloc div.blocMessage
+{
+  border: none;
+  color: red;
+  font-size: 15px;
+  margin: 0;
+  padding: 25px;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.noticeBloc
+{
+  background: url('/common/pictures/notice_loading.gif') no-repeat top right;
+}
+
+.floatRight
+{
+  float: right;
+}
+
+.floatLeft
+{
+  float: left;
+}
+
+.display_shortened_text,
+.display_shortened_text:hover,
+.display_shortened_text:active,
+.display_shortened_text:link,
+.display_shortened_text:visited
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.seo_keyword
+{
+  font-weight: normal;
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/bcm/!svn/ver/4/trunk/conf/custom_config/bcm
+END
+config.inc.php5
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/bcm/!svn/ver/4/trunk/conf/custom_config/bcm/config.inc.php5
+END
+blacklist.inc.php5
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/bcm/!svn/ver/4/trunk/conf/custom_config/bcm/blacklist.inc.php5
+END

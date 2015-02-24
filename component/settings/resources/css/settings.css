@@ -1,0 +1,135 @@
+
+
+/**********************************/
+/* left side category  selector  */
+
+#settingListId
+{
+  width:12%; min-height:80px; width: 125px; float:left;
+}
+#settingListId li
+{
+  padding:5px; margin:0 auto 5px auto; width: 90%; border:1px solid #CECECE;
+  height: 16px;
+  background-color: #fff;
+  float:left;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#settingListId li:hover,
+#settingListId li:nth-child(even):hover
+{
+  background-color: #85B2DD;
+  color: #fff;
+  font-weight: bold;
+
+   webkit-box-shadow: -1px 1px 1px orange;
+  -moz-box-shadow: -1px 1px 1px orange;
+  box-shadow: -1px 1px 1px orange;
+}
+
+#settingListId li:nth-child(even)
+{
+  background-color: #EDF2F7;
+}
+
+#settingListId li.stgcatSelected
+{
+  border-color: orange;
+}
+
+.settingContainer
+{
+  float: right;
+  width:86%;
+  border-left: 3px solid #dedede;
+  padding: 10px;
+  margin-right: 10px;
+  min-height: 250px;
+  border: 1px solid #CECECE;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div .formlabel
+{
+    float:left;
+    width:200px;
+}
+
+div .formField
+{
+    float:left;
+    width:670px;
+
+}
+
+div.formField input
+{
+  width:600px;
+}
+
+
+#usrRightFormId div.formField
+{
+  width: 100%;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+#usrRightFormId div.formField input[type=checkbox]
+{
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.rightListRow
+{
+  min-height: 20px;
+  margin: 3px 0 3px 10px;
+  float: left;
+}
+
+
+.rightListLabel
+{
+  float: left;
+  width: 160px;
+  font-weight: bold;
+}
+
+.rightListDescription
+{
+  float: left;
+  width: 690px;
+}
+
+.rightListLink
+{
+  float: right;
+  width: 45px;
+}
+
+.childRightDiv
+{
+  display: none;
+  border: 1px solid orange;
+  padding: 5px;
+  margin: 5px auto;
+  width: 90%;
+  float: right;
+
+  background-color: #EDF2F7;
+  color: #555;
+  font-style: italic;
+  font-size: 11px;
+
+  -webkit-border-radius: 5px ;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

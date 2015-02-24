@@ -1,0 +1,355 @@
+@CHARSET "UTF-8";
+
+#advSearchFormId
+{
+  background: none;
+  padding: 0;
+
+  border: none;
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#advSearchFormId .formLabel
+{
+  float:left;
+  width: 105px;
+  padding-left: 10px;
+
+}
+#advSearchFormId .formField
+{
+  float:left;
+  margin-right: 5px;
+  width: 210px;
+  text-align: left;
+}
+
+#advSearchFormId div .formField input
+{
+  float:left;
+  margin-right: 5px;
+  width: 210px;
+  text-align: left;
+}
+
+#advSearchFormId div .formField input[type=radio]
+{
+  float:left;
+  margin-right: 5px;
+  text-align: left;
+  width: 12px;
+  *width: 10px;
+}
+
+#basicSearchFormId
+{
+  background: none;
+  padding: 0;
+  border: none;
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+#basicSearchFormId .formLabel
+{
+  float:left;
+  width: 80px;
+  padding-left: 10px;
+
+}
+#basicSearchFormId .formField
+{
+  float:left;
+  margin-right: 5px;
+  width: 195px;
+  text-align: left;
+}
+
+#basicSearchFormId div .formField input
+{
+  float:left;
+  margin-right: 5px;
+  width: 510px;
+  text-align: left;
+}
+
+.searchFormContainer
+{
+  background-color:#e3e3e3;
+  padding: 1px;
+}
+
+.searchFormContainer form,
+.searchFormContainer form .innerForm,
+.searchFormContainer form .innerForm td {
+    border: 0 none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.innerForm table
+{
+  width:100%;
+}
+.innerForm table tr td
+{
+  padding-top: 10px;
+}
+
+.submitBtnClass
+{
+   padding-top:10px;
+   text-align: left;
+ }
+
+  input[type="submit"] {
+    background-color: #0166CA;
+    border: 1px solid #666666;
+    box-shadow: 4px 4px 5px #BBBBBB;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0 10px;
+    padding: 2px 10px;
+ }
+
+ input[type="button"] {
+    background-color: #0166CA;
+    border: 1px solid #666666;
+    box-shadow: 4px 4px 5px #BBBBBB;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0 10px;
+    padding: 0px 10px;
+    float: right;
+}
+
+#small_box_holder
+{
+  width:722px;
+  height:200px;
+  margin-top:30px;
+  display: none;
+ }
+
+.small_box
+{
+ width:240px;
+ float:left;
+ font-family:Verdana;
+ height:240px;
+ color:#FFF;
+ font-size:12px;
+ text-align:left;
+ }
+
+.webLinkHome
+ {
+   font-size:12px;
+   color:#16a8e4;
+   cursor: pointer;
+  }
+
+ .webLinkHome a
+ {
+	font-size:12px;
+	color:#16a8e4;
+    cursor: pointer;
+ }
+ .small_box_title
+ {
+    padding-bottom:10px;border-bottom:2px solid #2789BC;width:230px;
+
+ }
+ #basic_search,#advanced_search
+ {
+    cursor: pointer;
+ }
+
+.smallTitleOrange
+ {
+   color: #E7651F;
+   font-size: 12px;
+ }
+
+.industryFeatured
+{
+  padding-top: 3px;
+  width: 218px;
+  height: 16px;
+  /*overflow: hidden;*/
+}
+
+.leftFeaturedName{ width: 195px; overflow:hidden; text-wrap: nowrap; float: left;}
+.leftFeaturedNumber{ float: right; }
+
+#jobApplyFormInnerId div .formField input
+{
+  float:left;
+  margin-right: 5px;
+  width: 230px;
+  text-align: left;
+}
+
+#jobApplyFormInnerId
+{
+  background: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+#jobApplyFormInnerId .formLabel
+{
+  width: 230px;
+
+}
+#jobApplyFormInnerId .formField
+{
+  width: 550px;
+}
+
+#jobApplyFormInnerId div .formField input
+{
+   width: 250px;
+   height: 25px;
+}
+.view_content
+{
+  margin-bottom:5px;
+  text-align:justify;
+  min-height: 40px;
+  margin-top: 8px;
+}
+
+.pagerNavigationAfter
+{
+ margin-top: -5px;
+}
+.pagerCompact
+{
+  width: 200px;
+  float: right;
+  margin-top: -60px;
+}
+
+.jobContainer .innerContainer
+{
+   width:722px;
+}
+
+ #jobList
+ {
+    padding-top:10px;height:20px;
+ }
+
+ #positionTitle
+ {
+    float:left;padding-right:15px;
+ }
+
+ #jobFeatured
+ {
+    float:left;background-color:#faeadb;
+ }
+
+ #companyLogo
+ {
+     float:right;width:110px;padding:5px;
+ }
+
+ .position_desc
+ {
+     text-align:justify;width:586px;
+ }
+
+ #bottomBorder
+ {
+     border-bottom:1px solid #1ba6e7;width:586px;
+ }
+
+ #jobSearchForm
+ {
+     padding-top:10px;border-bottom:5px solid #2789BC;padding-bottom:6px;
+ }
+
+ #jobSearchTitleLeft
+ {
+     width:250px;float:left;text-align: left;
+ }
+
+ #advanced_search
+ {
+    width:120px;float:right;
+ }
+
+ #basic_search
+ {
+    width:97px;float:right;display:none;
+ }
+
+ #recentJobs
+ {
+     padding-top:10px;border-bottom:2px solid #2789BC;padding-bottom:6px;text-align: left;
+ }
+
+#basicSearchFormId .searchButton 
+{
+    width: 100px;
+    float: right;
+}
+
+div.formFieldWidth2 { float: left; *width: 48%; }
+
+#basicSearchFormInnerId div .formFieldContainer
+{
+    *width: 700px;
+    width: 690px;
+ }
+
+#basicSearchFormId .formFieldWidth2  { *width:10% ;}
+
+
+.jobClassFirst
+{
+  padding-top:10px;height:20px;
+}
+
+.jobInnerContainer
+{
+  float:left;padding-right:15px;
+}
+
+.companyLogo
+{
+  float:right;width:110px;padding:5px;
+}
+
+.marginTop5
+{
+  margin-top: 5px;
+}
+.basicInnerDiv
+{
+  width:90px;float:right;display:none;
+}
+.featured_header
+{
+  padding-top:10px;border-bottom:5px solid #2789BC;padding-bottom:6px;
+}
+.marginTop10
+{
+  margin-top:10px;
+}
+.newSearchDiv
+{
+  height:43px; border-bottom:5px solid #48a5f3;
+}
+.borderTop
+{
+  border-top:2px solid #2789BC;
+}

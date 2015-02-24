@@ -1,0 +1,141 @@
+<?php
+require_once ('Aggregator.class.php5');
+
+class Agg_remote extends Aggregator
+{
+  public function __construct()
+  {
+    return true;
+  }
+
+  protected function _checkPosition($pnJobpk)
+  {
+    $oDB = CDependency::getComponentByName('database');
+    
+    if(!assert('!empty($pnJobpk)'))
+       return false;
+       
+    $sQuery = 'SELECT * FROM position WHERE jobfk='.$pnJobpk.'';
+    $oResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oResult->readFirst();
+    
+    if($bRead)
+      return false;
+    else 
+      return true;   
+  } 
+    
+   protected function checkLanguageLevel($psString,$psType)
+   {  
+     switch($psType)
+      {  
+        case 'basic':
+           $asBasic = preg_match('/(basic)/', $psString);
+              break;
+          
+          case 'conversational':
+             $asConversation = preg_match('/(conversational)/', $psString);
+               break;
+          
+           case 'business':
+             $asBusiness = preg_match('/(business)/', $psString);
+                break;
+            
+            case 'fluent':
+              $asFluent = preg_match('/(fluent)/', $psString);
+                break;
+           
+          case 'native':
+            $asNative = preg_match('/(native)/', $psString);
+                break; 
+          
+          default:
+             return '';
+            
+          }
+          
+          if(!empty($asBasic))
+              return 1;
+          if(!empty($asConversation))
+              return 2;
+          if(!empty($asBusiness))
+              return 3;
+          if(!empty($asFluent))
+              return 4;
+          if(!empty($asNative))
+              return 5;
+       }      
+       
+      protected function detectLangLevel($psString)
+      {
+        $psString = strtolower($psString);
+        
+        $nVal =  $this->checkLanguageLevel($psString,'native');
+        if(!isset($nVal) || empty($nVal))
+          $nVal =  $this->checkLanguageLevel($psString,'fluent');
+        if(!isset($nVal) || empty($nVal))
+          $nVal =  $this->checkLanguageLevel($psString,'business');
+        if(!isset($nVal) || empty($nVal))
+          $nVal =  $this->checkLanguageLevel($psString,'conversational');
+        if(!isset($nVal) || empty($nVal))
+          $nVal =  $this->checkLanguageLevel($psString,'basic');
+                
+        return $nVal;
+      }
+      
+      
+      protected function _getcheckIndustry($psIndustryName)
+      {
+        $oDB = CDependency::getComponentByName('database');
+     
+        if(empty($psIndustryName))
+           return 0; 
+        else 
+        {                  
+          $sQuery = 'SELECT * FROM industry WHERE name like "%'.$psIndustryName.'"';
+          $oResult = $oDB->ExecuteQuery($sQuery);
+          $bRead = $oResult->readFirst();
+    
+          if($bRead)
+              return $oResult->getFieldValue('industrypk',CONST_PHP_VARTYPE_INT);
+          else
+          {
+            $sQuery = 'INSERT INTO  industry (`name`) VALUES("'.$psIndustryName.'")';
+            $oResult = $oDB->ExecuteQuery($sQuery);
+             
+            $pnIndustryPk = $oResult->getFieldValue('pk', CONST_PHP_VARTYPE_INT);
+              
+            return $pnIndustryPk;
+            }
+         }
+      }        
+      
+      protected function _getcheckCompany($psCompanyName)
+      {
+        $oDB = CDependency::getComponentByName('database');
+     
+        if(empty($psCompanyName))
+           return 0; 
+        else 
+        {                  
+          $sQuery = 'SELECT * FROM company WHERE company_name = "'.$psCompanyName.'"';
+          $oResult = $oDB->ExecuteQuery($sQuery);
+          $bRead = $oResult->readFirst();
+    
+          if($bRead)
+              return $oResult->getFieldValue('companypk',CONST_PHP_VARTYPE_INT);
+          else
+          {
+            $sQuery = 'INSERT INTO  company (`company_name`,`status`) VALUES("'.$psCompanyName.'",1)';
+            $oResult = $oDB->ExecuteQuery($sQuery);
+             
+            $pnCompanyPk = $oResult->getFieldValue('pk', CONST_PHP_VARTYPE_INT);
+              
+            return $pnCompanyPk;
+            }
+         }
+      } 
+       
+   }
+
+?>

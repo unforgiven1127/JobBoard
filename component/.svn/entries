@@ -1,0 +1,144 @@
+10
+
+dir
+15
+http://usvn.bulbouscell.com:9990/bcm/trunk/component
+http://usvn.bulbouscell.com:9990/bcm
+
+
+
+2013-02-20T08:31:19.288570Z
+14
+sboudoux
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9ef06bf4-1a6f-4f3b-9fdc-f1ae80fef8af
+
+
+
+
+
+
+0
+
+addressbook
+dir
+
+charts
+dir
+
+customfields
+dir
+
+database
+dir
+
+dependency.inc.php5
+file
+
+
+
+
+2013-01-21T06:14:16.000000Z
+70dfe9c1cf45070c0e302e398888fd00
+2013-02-20T08:29:09.359971Z
+12
+sboudoux
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19311
+
+display
+dir
+
+event
+dir
+
+form
+dir
+
+jobboard
+dir
+
+jobboard_user
+dir
+
+login
+dir
+
+mail
+dir
+
+page
+dir
+
+pager
+dir
+
+portal
+dir
+
+project
+dir
+
+querybuilder
+dir
+
+right
+dir
+
+search
+dir
+
+settings
+dir
+
+sharedspace
+dir
+
+socialnetwork
+dir
+
+taaggregator
+dir
+
+talentatlas
+dir
+
+webmail
+dir
+
+zimbra
+dir
+

@@ -1,0 +1,31 @@
+.cp_list_name, .cp_list_name a, .cp_list_name div a, .ct_list_name, .ct_list_name a
+{
+  font-size: 16px;
+}
+
+.listCp_row_data div.cp_list_cell, .listCt_row_data div.ct_list_cell
+{
+  height: 42px;
+  font-size: 16px;
+}
+
+.list_row_data div.list_cell
+{
+  height: 42px;
+  font-size: 16px;
+}
+
+fieldset legend
+{
+  font-size: 24px;
+  font-weight: bold;
+  color: #245C91;
+}
+.list_cell a, .cp_list_cell a, .cp_list_cell div a, .ct_list_cell a, .ct_list_cell div a
+{
+   font-size: 16px;  
+}
+*
+{
+    font-size: 16px;
+}

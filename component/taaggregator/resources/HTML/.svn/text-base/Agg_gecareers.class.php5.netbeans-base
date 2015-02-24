@@ -1,0 +1,521 @@
+<?php
+require_once('component/taaggregator/resources/Agg_HTML.class.php5');
+
+class Agg_gecareers extends Agg_HTML
+{
+  protected $sContainer = 'span[class=jobTitle] a';
+  protected $sPgContainer = '[class="paginationItemSelected"]';
+  protected $nWebsitePk = 3;
+  protected $sJObDetailURL;
+  protected $sFirstElementTag = 'div';
+  protected $sFirstClass  = 'jobTitle';
+    
+  public function __construct()
+  {
+    $poWebsite = $this->_getGEDetails();
+    
+    $this->sGeCareerURL= $poWebsite->getFieldValue('search_url');
+    $this->sGEURL = $poWebsite->getFieldValue('list_url');
+          
+    return true;
+   }
+   
+  public function __destruct()
+  {
+   //Destructor	
+    $asError =  $this->error_get_line();
+     if(!empty($asError))
+       $this->notifyErrorMessage($asError);
+         return true;
+   }
+  
+   /**
+    * Get all the information about GE Career
+    * @return object 
+    */
+  
+  protected function _getGEDetails()
+  {
+    $oDB = CDependency::getComponentByName('database');   
+      
+    $sQuery = 'SELECT * FROM `website` WHERE `websitepk`='.$this->nWebsitePk;  
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oDbResult->readFirst();
+    if(!$bRead)
+      return NULL;
+    else
+      return $oDbResult;
+    }
+   
+  /**
+   * Function to get the Job Postion URL from GE Careers
+   * @return boolean true 
+   */
+  public function saveUrl()
+  {
+    //Get All the job urls for GE Careers
+    $this->_getJobURL($this->sGeCareerURL,$this->sGEURL,$this->sContainer,$this->sPgContainer,$this->nWebsitePk);
+    return true;
+   }
+   
+  /**
+    * Create the Jobs from the GE Careers URLS
+    * @return boolean true
+    */
+    
+   
+   public function getJobs()
+   {
+    $oDB = CDependency::getComponentByName('database');
+    $asJobsArray = $this->getAllJobURLs($this->nWebsitePk,$this->nRecords);
+    
+    if(!empty($asJobsArray))
+    {   
+      $nCount = 0;  
+      foreach($asJobsArray as $sJObURL)
+      {
+        $oContent = $this->checkURL($sJObURL['url']);
+        if($oContent)
+          $oData = $this->_isDesiredPage($sJObURL['url'],$this->sFirstElementTag,$this->sFirstClass,'CLASS');
+        else
+         {
+            $sQuery = 'UPDATE website_joburl SET status = "-1" where website_joburlpk='.$sJObURL['website_joburlpk'].'';
+            $oDbResult = $oDB->ExecuteQuery($sQuery);
+            if(!$oDbResult)
+                return false;           
+         }
+        if($oData)    
+          $nCount+= $this->getGECareerJob($sJObURL['url'],$sJObURL['website_joburlpk']);
+        else
+          {
+           $sQuery = 'UPDATE website_joburl SET status ="-1" where website_joburlpk='.$sJObURL['website_joburlpk'].'';
+           $oDbResult = $oDB->ExecuteQuery($sQuery);
+           if(!$oDbResult)
+                return false;  
+         }
+       
+       //Delay some time
+       sleep($this->nDelay);
+       }
+      echo $nCount.' Jobs has been created successfully on GE Careers <br/><br/>';
+     }
+    else
+     echo 'There are not any new jobs to create at the moment.<br/><br/>';  
+    
+    return true;
+   }
+   
+   /**
+    * Create Job
+    * @param string $sJObDetailURL
+    * @param integer $nPnPk
+    * @param integer $nWebsitefk
+    * @return boolean 
+    */
+   
+    public function getGECareerJob($psJObDetailURL,$pnPnPk)
+    {        
+     $oDB = CDependency::getComponentByName('database');   
+     if(!assert('!empty($psJObDetailURL) && !empty($pnPnPk)'))
+        return false;   
+     //Check if it is already created
+      $bRecords = $this->_checkJobNotExist($pnPnPk,$this->nWebsitePk);   
+      if($bRecords)
+      {
+        $oDomHTML = $this->getHTMLContent($psJObDetailURL);
+        if(!empty($oDomHTML))
+         { 
+            $oElement = $this->getDOMStructureByClass($oDomHTML,$this->sFirstElementTag,$this->sFirstClass); 
+
+            // Position
+            $sPosition = $this->getElementByID($oElement,'h1','job-title');
+            $sPosition = $this->sanitize($sPosition); 
+            
+            if(empty($sPosition))
+                $sPosition = '';
+            
+            // Posted Date
+            $sString = $this->getElementByClass($oDomHTML,'p','jobDate');
+            $sString =  $this->sanitize($sString);
+            $asContent = explode(':', $sString);
+
+            if($asContent[0]=='Date')
+               $sDate =  $this->sanitize($asContent[1]);
+            
+            $sDate = $this->_getFormattedDate($sDate);
+          
+            if(empty($sDate))
+              $sDate = '';            
+            
+             //If the position is two months old, do not create job it.
+         
+            $bOldJob = $this->_checkTwoMonth($sDate,$pnPnPk);
+            if($bOldJob)
+              return true;
+          
+            // Location     
+            $sString= $this->getElementByClass($oDomHTML,'p','jobLocation');
+            $sString =  $this->sanitize($sString);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Location')
+              $sLocation =  $this->sanitize($asContent[1]);
+            
+            if(empty($sLocation))
+              $sLocation = '';
+
+            $oElement = $this->getDOMStructureByClass($oDomHTML,'div','job');
+            //JOB ID
+            if(!empty($oElement))
+            {   
+             $oElement = $this->getDOMStructureByTag($oElement,'table');
+             $oElement = $this->getFirstChild($oElement);
+            }
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+ 
+            if($asContent[0]=='Job Number')
+               $sJOBID =  $this->sanitize($asContent[1]);
+            
+            if(empty($sJOBID))
+               $sJOBID = '';
+
+            //Business 
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Business')
+               $sBusiness =  $this->sanitize($asContent[1]);
+            
+            if(empty($sBusiness))
+               $sBusiness = '';
+            
+            //Business Segment
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Business Segment')
+               $sBusinessSegment =  $this->sanitize($asContent[1]);
+            
+            if(empty($sBusinessSegment))
+               $sBusinessSegment = '';            
+
+            //Company Description
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent = explode(':', $sString);
+
+            if($asContent[0]=='About Us')
+               $sAboutUs =  $this->sanitize($asContent[1]);
+            
+            if(empty($sAboutUs))
+                $sAboutUs = '';
+
+            //Position Title
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            $asContent = explode(':', $sString);
+
+            if($asContent[0]=='Posted Position Title')
+              $sPosition =  $this->sanitize($asContent[1]);
+            
+            if(empty($sPosition))
+              $sPosition = '';
+
+            //Career Level
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Career Level')
+               $sCareerLevel =  $this->sanitize($asContent[1]);
+            
+            if(empty($sCareerLevel))
+               $sCareerLevel = '';
+
+            //Function
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Function')
+               $sFunction =  $this->sanitize($asContent[1]);
+            
+            if(empty($sFunction))
+               $sFunction = '';
+
+            //Function Segment
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Function Segment')
+                $sFunctionSegment =  $this->sanitize($asContent[1]);
+            
+            if(empty($sFunctionSegment))
+                $sFunctionSegment = '';
+
+            //Location , country
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Location')
+                $sCountry =  $this->sanitize($asContent[1]);
+            
+            if(empty($sCountry))
+                $sCountry = '';
+
+            //Location,City 
+
+            $oElement =  $this->getNextSibling($oElement);
+            $oElement =  $this->getNextSibling($oElement);
+            $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+             $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='City')
+                $sCity =  $this->sanitize($asContent[1]);
+            
+            if(empty($sCity))
+                $sCity = '';
+            
+            //Location, Postal Code
+            $oElement =  $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent = explode(':', $sString);
+
+            if($asContent[0]=='Postal Code')
+               $sPostalCode =  $this->sanitize($asContent[1]);
+            
+            if(empty($sPostalCode))
+                $sPostalCode = '';
+            
+            //Role Summary
+           
+            $oElement = $this->getNextSibling($oElement);
+            $oElement = $this->getNextSibling($oElement);
+            
+            if(empty($oElement))
+            $oElement = $this->getNextSibling($oElement);
+            
+             $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+            if($asContent[0]=='Relocation Assistance')
+               $sValue = 'Relocation';
+            else if($asContent[0]=='Role Summary/Purpose')
+               $sRoleSummary =  $this->sanitize($asContent[1]);
+            
+            if(!empty($sValue))
+            {
+             $oElement = $this->getNextSibling($oElement);
+              $sString =  $this->sanitize($oElement);
+              if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+             
+              $sString =  $this->sanitize($oElement);
+              $asContent= explode(':', $sString);
+              
+              if($asContent[0]=='Role Summary/Purpose')
+               $sRoleSummary =  $this->sanitize($asContent[1]);
+             }
+              
+             if(empty($sRoleSummary))
+                $sRoleSummary = '';
+           
+             //Essential Responsibilities
+
+            $oElement = $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Essential Responsibilities')
+                $sResponsibilities =  $this->sanitize($asContent[1]);
+            
+            if(empty($sResponsibilities))
+                $sResponsibilities = '';
+            //Qualifications / Requirements
+
+            $oElement = $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+                $oElement =  $this->getNextSibling($oElement);
+            
+            $sString =  $this->sanitize($oElement);
+            $asContent= explode(':', $sString);
+
+            if($asContent[0]=='Qualifications/Requirements')
+               $sRequirements =  $this->sanitize($asContent[1]);
+            
+            if(empty($sRequirements))
+                $sRequirements = '';
+            
+            //Desired Characteristics
+            $oElement = $this->getNextSibling($oElement);
+            $oElement = $this->getNextSibling($oElement);
+            $sString =  $this->sanitize($oElement);
+            
+            if(empty($sString))
+               $oElement =  $this->getNextSibling($oElement);
+
+            $sString  =  $this->sanitize($oElement);
+            $asContent = explode(':', $sString);
+
+            if($asContent[0] == 'Desired Characteristics')
+                $sCharacteristics =  $this->sanitize($asContent[1]);
+
+            if(empty($sCharacteristics))
+                $sCharacteristics = '';
+           
+            $asData = array('position'       => $this->sanitize($sPosition),						 
+                            'company_name'   => $this->sanitize($sBusiness),
+                            'jobID'          => $sJOBID,
+                            'location'       => $this->sanitize($sLocation),
+                            'post_date'      => $sDate,
+                            'industry'       => $sFunction,
+                            'role'           => $this->sanitize($sRoleSummary),
+                            'responsibility' => $this->sanitize($sResponsibilities),
+                            'requirements'   => $this->sanitize($sRequirements),
+                            'characteristics'=> $this->sanitize($sCharacteristics),
+                            'career_level'   => $this->sanitize($sCareerLevel),
+                            'weburlfk'       => $pnPnPk
+                         );
+        
+         $sData = serialize($asData);
+        
+         if(!empty($sData) && (!empty($sRequirements) || !empty($sRoleSummary)))
+         {
+            $sQuery = 'INSERT INTO job (data,date_create,raw_content,weburlfk,websitefk) VALUES ('.$oDB->dbEscapeString($sData).','.$oDB->dbEscapeString(date('Y-m-d')).','.$oDB->dbEscapeString($oDomHTML->outertext).','.$oDB->dbEscapeString($pnPnPk).','.$this->nWebsitePk.')';
+            $oDbResult = $oDB->ExecuteQuery($sQuery);
+            
+            $sQuery = 'UPDATE website_joburl SET status = 1 where website_joburlpk='.$pnPnPk.'';
+            $oDbResult = $oDB->ExecuteQuery($sQuery);
+            
+            if(!$oDbResult)
+                return false;
+            else
+                return true;
+              }
+            }
+          }
+          else
+            return false;
+       }
+       
+    /**
+      * Create Position from the GE Careers Jobs
+      * @return boolean true
+      */
+     
+     public function getPosition()
+     {
+      $oDB = CDependency::getComponentByName('database');
+      $sTime = date('Y-m-d H:i:s');   
+      $asData = $this->getJObForPosition($this->nWebsitePk);
+      $nCount = 0;
+      $asContent = array();
+      if(!empty($asData))
+      {
+        foreach($asData as $asRecords)
+        {   
+          //Check if the position already exists
+          $sResult = $this->_checkPosition((int)$asRecords['jobpk']);
+          if($sResult)
+          {          
+            $asPositions = unserialize($asRecords['data']);  
+            $nIndustryfk = 0;
+            //$nIndustryfk = $this->_getcheckIndustry($asPositions['industry']);
+            $nCompanyfk = $this->_getcheckCompany($asPositions['company_name']);
+            
+            $sQuery = 'INSERT INTO position (jobfk,visibility,career_level,industryfk,position_title,position_desc,requirements,status,companyfk,location,posted_date,temp_industry)';
+            $sQuery.= 'VALUES ('.$oDB->dbEscapeString($asRecords['jobpk']).',1,'.$oDB->dbEscapeString($this->sanitize($asPositions['career_level'])).',';
+            $sQuery.= ''.$oDB->dbEscapeString($nIndustryfk).','.$oDB->dbEscapeString($this->sanitize($asPositions['position'])).','.$oDB->dbEscapeString($this->sanitize($asPositions['role']).$this->sanitize($asPositions['responsibility']).$this->sanitize($asPositions['characteristics'])).','.$oDB->dbEscapeString($this->sanitize($asPositions['requirements'])).',';
+            $sQuery.= ' 0,'.$oDB->dbEscapeString($nCompanyfk).','.$oDB->dbEscapeString($this->sanitize($asPositions['location'])).','.$oDB->dbEscapeString($asPositions['post_date']).','.$oDB->dbEscapeString($asPositions['industry']);
+            $sQuery.= ')';
+                         
+            $oDbResult = $oDB->ExecuteQuery($sQuery);
+            $this->_logPosition($asPositions['position'],$asRecords['jobpk'],$asPositions['post_date']);
+            $nCount ++;
+            
+            $asContent[] = $asPositions['position'].' position has been created';
+            
+            $sQuery = 'UPDATE job SET status = 1 WHERE jobpk='.$asRecords['jobpk'].'';
+            $oDbResult = $oDB->ExecuteQuery($sQuery);
+            
+            if(!$oDbResult)
+               return false;
+             }
+           }
+        }
+        if($nCount>0)
+        {    
+           $this->_notifyModerator($asContent);
+            echo $nCount.' new positions have been created on GE Careers. <br/><br/>';
+         }
+         else
+           echo 'There are no new positions to create today on GE Careers <br/><br/>';
+         
+           $sQuery = 'UPDATE website SET last_update = "'.$sTime.'", last_update_status= 1 WHERE websitepk = '.$this->nWebsitePk;
+           $oDbResult = $oDB->ExecuteQuery($sQuery); 
+             return true;
+         }
+      }
+
+?>
+
