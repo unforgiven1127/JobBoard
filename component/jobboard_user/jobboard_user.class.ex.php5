@@ -1703,7 +1703,7 @@ class CJobboarduserEx extends CJobboarduser
     $end_time = strtotime('+1 month');
 
     $url = 'https://beta1.slate.co.jp/index.php5?pg=cron&cronSilent=1&hashCron=1&custom_uid=555-005&export_position=1&';
-    $sUrl .= 'cronSilent=1&language='.$language.'&start_time='.$start_time.'&end_time='.$end_time;
+    $url .= 'cronSilent=1&language='.$language.'&start_time='.$start_time.'&end_time='.$end_time;
     // $url .= 'cronSilent=1&language='.$language.'&start_time=1363593824&end_time=1363598000';
 
     echo '<br /><br />Load positions from: '.$url.'   <br />';
