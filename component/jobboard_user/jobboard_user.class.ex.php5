@@ -1702,7 +1702,7 @@ class CJobboarduserEx extends CJobboarduser
     $start_time = strtotime('-2 year');
     $end_time = strtotime('+1 month');
 
-    $url = 'https://beta1.slate.co.jp/index.php5?pg=cron&cronSilent=1&hashCron=1&custom_uid=555-005&export_position=1&';
+    $url = 'https://slistem.slate.co.jp/index.php5?pg=cron&cronSilent=1&hashCron=1&custom_uid=555-005&export_position=1&';
     $url .= 'cronSilent=1&language='.$language.'&start_time='.$start_time.'&end_time='.$end_time;
     // $url .= 'cronSilent=1&language='.$language.'&start_time=1363593824&end_time=1363598000';
 
@@ -1716,9 +1716,9 @@ class CJobboarduserEx extends CJobboarduser
     }
     catch(Exception $exception)
     {
-      assert('false; // can not load xml from talentatlas to import slistem jobs. Error: '.$exception->getMessage());
-      dump('XML received from '.$url.':');
-      dump(file_get_contents($url));
+      echo $exception->getMessage();
+      /*dump('XML received from '.$url.':');
+      dump(file_get_contents($url));*/
       return false;
     }
 
@@ -1756,7 +1756,7 @@ class CJobboarduserEx extends CJobboarduser
         }*/
           //in the other case, we create a new parent  position
           $error = false;
-          echo '<br />Parent doesnt exist: we need to create it';
+          // echo '<br />Parent doesnt exist: we need to create it';
 
           if(!isset($company_list[$position_data['company_id']]))
           {
@@ -1835,8 +1835,8 @@ class CJobboarduserEx extends CJobboarduser
               {
                 assert('false; //'.__LINE__.' - error, could not create position from TA to the joabbord');
               }
-              else
-                echo '<br /> Parent position Created successfully ! ';
+              /*else
+                echo '<br /> Parent position Created successfully ! ';*/
             }
           }
 
