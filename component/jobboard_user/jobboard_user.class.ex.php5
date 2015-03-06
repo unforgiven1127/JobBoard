@@ -1697,99 +1697,95 @@ class CJobboarduserEx extends CJobboarduser
     return $asShares;
   }
 
-  private function _importPositions($psLanguage = 'en')
+  private function _importPositions($language = 'en')
   {
-    $nStart = strtotime('-2 year');
-    $nStop = strtotime('+1 month');
+    $start_time = strtotime('-2 year');
+    $end_time = strtotime('+1 month');
 
-    $sUrl = 'https://www.talentatlas.com/index.php5?custom_uid=100-603&pg=cron&hashCron=1&cronSilent=1&hash=5248746286c66ea42db129ddae88d2e1&sourcepk=5&language='.$psLanguage.'&starttime='.$nStart.'&endtime='.$nStop;
-    //use debug to fetch all jobs
-    //$sUrl = 'http://stef.talentatlas.com//index.php5?custom_uid=100-603&pg=cron&hashCron=1&cronSilent=1&hash=5248746286c66ea42db129ddae88d2e1&debug=1&language='.$psLanguage.'&starttime='.$nStart.'&endtime='.$nStop;
-    echo '<br /><br />Load positions from: '.$sUrl.'   <br />';
+    $url = 'https://beta1.slate.co.jp/index.php5?pg=cron&cronSilent=1&hashCron=1&custom_uid=555-005&export_position=1&';
+    $sUrl .= 'cronSilent=1&language='.$language.'&start_time='.$start_time.'&end_time='.$end_time;
+    // $url .= 'cronSilent=1&language='.$language.'&start_time=1363593824&end_time=1363598000';
+
+    echo '<br /><br />Load positions from: '.$url.'   <br />';
 
     try
     {
-      $oXML = simplexml_load_file($sUrl);
-      if(!$oXML)
+      $xml = simplexml_load_file($url);
+      if(!$xml)
         throw new Exception('Xml is stream empty.');
     }
-    catch(Exception $oException)
+    catch(Exception $exception)
     {
-      assert('false; // can not load xml from talentatlas to import slistem jobs. Error: '.$oException->getMessage());
-      dump('XML received from '.$sUrl.':');
-      dump(file_get_contents($sUrl));
+      assert('false; // can not load xml from talentatlas to import slistem jobs. Error: '.$exception->getMessage());
+      dump('XML received from '.$url.':');
+      dump(file_get_contents($url));
       return false;
     }
 
-    $oDB = CDependency::getComponentByName('database');
-    $oJobboard = CDependency::getComponentByName('jobboard');
-    $asIndustry = $oJobboard->getIndustries(0, false, false, true);
-    $asCompany = $oJobboard->getCompanies();
+    $db_object = CDependency::getComponentByName('database');
+    $jobboard_object = CDependency::getComponentByName('jobboard');
+    $industry_list = $jobboard_object->getIndustries(0, false, false, true);
+    $company_list = $jobboard_object->getCompanies();
 
     $sExpirationDate = date('Y-m-d', strtotime('+3 months'));
 
-    //dump($oXML);
-    foreach($oXML as $oPosition)
-    {
-      $asPositionData = array();
+    $new_position = $xml->new_position;
 
-      foreach($oPosition as $sKey => $oValue)
-        $asPositionData[$sKey] = (string)$oValue;
+    foreach($new_position->position as $position_data)
+    {
+      $position_data = (array)$position_data;
 
       //we store TA positionpk in the external_key field
-      echo '<br />Check if position '.$asPositionData['positionpk'].' exist';
-      $sQuery = 'SELECT positionpk FROM position WHERE external_key = '.$asPositionData['positionpk'].' ';
-      $oDbResult = $oDB->ExecuteQuery($sQuery);
-      $bRead = $oDbResult->readFirst();
-      if(!$bRead)
+      echo '<br />Check if position '.$position_data['position_id'].' exist';
+      $query = 'SELECT positionpk FROM position WHERE external_key = '.$position_data['position_id'].' ';
+      $db_result = $db_object->ExecuteQuery($query);
+      $read = $db_result->readFirst();
+      if(!$read)
       {
         //we made sure the position hasn't been treated yet, we check if the parent is already here
         //check if a sister (other translation) exists using the parentfk
         //in this case, we hget the JB parentpk back
-        echo '<br />Check if position '.$asPositionData['positionpk'].' has a parent ['.$asPositionData['parentfk'].'] already here ';
-        $sQuery = 'SELECT positionpk FROM position WHERE parentfk = 0 AND external_key = '.$asPositionData['parentfk'].' ';
+        /*echo '<br />Check if position '.$position_data['position_id'].' has a parent ['.$position_data['parentfk'].'] already here ';
+        $sQuery = 'SELECT positionpk FROM position WHERE parentfk = 0 AND external_key = '.$position_data['parentfk'].' ';
         $oDbResult = $oDB->ExecuteQuery($sQuery);
         $bRead = $oDbResult->readFirst();
         if($bRead)
         {
           $nParentPK = (int)$oDbResult->getFieldValue('positionpk');
           echo '<br />Parent exist: pk = '.$nParentPK;
-        }
-        else
-        {
+        }*/
           //in the other case, we create a new parent  position
-          $bError = false;
+          $error = false;
           echo '<br />Parent doesnt exist: we need to create it';
-          //dump($asPositionData);
 
-          if(!isset($asCompany[$asPositionData['companyfk']]))
+          if(!isset($company_list[$position_data['company_id']]))
           {
-            echo '<br />need to create a company: '.$asPositionData['companyfk'].' / '.$asPositionData['company_name'];
+            echo '<br />need to create a company: '.$position_data['company_id'].' / '.$position_data['company_name'];
 
-            $nNewCompanyPk = $this->_addCompany( (int)$asPositionData['companyfk'], $asPositionData['company_name']);
-            $asPositionData['companyfk'] = (int)$nNewCompanyPk;
+            $new_company_id = $this->_addCompany( (int)$position_data['company_id'], $position_data['company_name']);
+            $position_data['company_id'] = (int)$new_company_id;
 
-            if(!$nNewCompanyPk)
+            if(!$new_company_id)
             {
-              $bError = true;
+              $error = true;
               assert('false; // need to create a company to sync the jobboaard and TA ');
             }
           }
 
-          if(!isset($asIndustry[$asPositionData['industryfk']]))
+          if(!isset($industry_list[$position_data['industry_id']]))
           {
-            if(empty($asPositionData['indus_parent']))
+            if(empty($position_data['industry_parent']))
             {
-              $bError = true;
+              $error = true;
               assert('false; // Cannot create an "hidden" industry in the jobboard if there\'s no parentfk. ');
             }
             else
             {
               //create a hidden industry (status 2) to match TA DB
-              $bCreated = addIndustry((int)$asPositionData['industryfk'], $asPositionData['indus_code'], 2, $asPositionData['indus_parent']);
-              if($bCreated)
+              $create_industry = addIndustry((int)$position_data['industry_id'], $position_data['industry_name'], 2, $position_data['industry_parent']);
+              if($create_industry)
               {
-                echo '<br />Created a new "hidden" industryto match TA:'.$asPositionData['industryfk'].' - '.$asPositionData['indus_code'].' - '.$asPositionData['indus_parent'];
+                echo '<br />Created a new "hidden" industryto match TA:'.$position_data['industry_id'].' - '.$position_data['industry_name'].' - '.$position_data['industry_parent'];
               }
               else
               {
@@ -1798,44 +1794,44 @@ class CJobboarduserEx extends CJobboarduser
             }
           }
 
-          if(!$bError)
+          if(!$error)
           {
-            $sQuery = 'INSERT INTO `job`(`data`, `date_create`, `websitefk`) VALUES ';
-            $sQuery.= ' ('.$oDB->dbEscapeString($asPositionData['data']).', "'.date('Y-m-d H:i:s').'", 5) ';
+            $query = 'INSERT INTO `job`(`data`, `date_create`, `websitefk`) VALUES ';
+            $query.= ' ('.$db_object->dbEscapeString($position_data['data']).', "'.date('Y-m-d H:i:s').'", 5) ';
 
-            $oDbResult = $oDB->ExecuteQuery($sQuery);
-            $nJobPK = (int)$oDbResult->getFieldValue('pk');
-            if(!$oDbResult || empty($nJobPK))
+            $db_result = $db_object->ExecuteQuery($query);
+            $job_id = (int)$db_result->getFieldValue('pk');
+            if(!$db_result || empty($job_id))
             {
-              echo '<br />'.$sQuery.'<br /><br />';
+              echo '<br />'.$query.'<br /><br />';
               assert('false; //'.__LINE__.' - error, could not create the job from TA to the joabbord');
             }
             else
             {
-              $sQuery = 'INSERT INTO `position`(`jobfk`, `status`, `visibility`, `category`, `career_level`, `position_title`,';
-              $sQuery.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`,';
-              $sQuery.= ' `salary`, `salary_low`, `salary_high`, `english`, `japanese`, `industryfk`, `holidays`, `station`, `work_hours`, ';
-              $sQuery.= ' `lang`, `parentfk`,`page_title`,`meta_keywords`,`meta_desc`, `company_label`, `external_key`) VALUES (';
+              $query = 'INSERT INTO `position`(`jobfk`, `status`, `visibility`, `category`, `career_level`, `position_title`,';
+              $query.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`,';
+              $query.= ' `salary`, `salary_low`, `salary_high`, `english`, `japanese`, `industryfk`, `holidays`, `station`, `work_hours`, ';
+              $query.= ' `lang`, `parentfk`,`page_title`,`meta_keywords`,`meta_desc`, `company_label`, `external_key`) VALUES (';
 
-              $sQuery.= ''.$oDB->dbEscapeString($nJobPK).', 1 ,';
-              $sQuery.= '1,'.$oDB->dbEscapeString($asPositionData['category']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['career_level']).','.$oDB->dbEscapeString($asPositionData['position_title']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['position_desc']).','.$oDB->dbEscapeString($asPositionData['requirements']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['companyfk']).','.$oDB->dbEscapeString($asPositionData['posted_date']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['location']).','.$oDB->dbEscapeString($asPositionData['job_type']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['salary']).','.$oDB->dbEscapeString($asPositionData['salary_low']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['salary_high']).','.$oDB->dbEscapeString($asPositionData['english']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['japanese']).','.$oDB->dbEscapeString($asPositionData['industryfk']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['holidays']).','.$oDB->dbEscapeString($asPositionData['station']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['work_hours']).','.$oDB->dbEscapeString($psLanguage).', ';
-              $sQuery.= ' 0, '.$oDB->dbEscapeString($asPositionData['page_title']).', ';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['meta_keywords']).','.$oDB->dbEscapeString($asPositionData['meta_desc']).',';
-              $sQuery.= ''.$oDB->dbEscapeString($asPositionData['company_label']).', '.$oDB->dbEscapeString($asPositionData['parentfk']).' ';
-              $sQuery.= ')';
+              $query.= ''.$db_object->dbEscapeString($job_id).', 1 ,';
+              $query.= '1,'.$db_object->dbEscapeString($position_data['category']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['career']).','.$db_object->dbEscapeString($position_data['position_title']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['position_desc']).','.$db_object->dbEscapeString($position_data['requirements']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['company_id']).','.$db_object->dbEscapeString($position_data['date_created']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['location']).','.$db_object->dbEscapeString($position_data['job_type']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['salary']).','.$db_object->dbEscapeString($position_data['salary_low']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['salary_high']).','.$db_object->dbEscapeString($position_data['english']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['japanese']).','.$db_object->dbEscapeString($position_data['industry_id']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['holidays']).','.$db_object->dbEscapeString($position_data['station']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['work_hours']).','.$db_object->dbEscapeString($language).', ';
+              $query.= ' 0, '.$db_object->dbEscapeString($position_data['page_title']).', ';
+              $query.= ''.$db_object->dbEscapeString($position_data['meta_keywords']).','.$db_object->dbEscapeString($position_data['meta_desc']).',';
+              $query.= ''.$db_object->dbEscapeString($position_data['company_name']).', '.$db_object->dbEscapeString($position_data['position_id']).' ';
+              $query.= ')';
 
-              $oDbResult = $oDB->ExecuteQuery($sQuery);
-              $nParentPK = (int)$oDbResult->getFieldValue('pk');
-              if(!$oDbResult || empty($nParentPK))
+              $db_result = $db_object->ExecuteQuery($query);
+              $parent_id = (int)$db_result->getFieldValue('pk');
+              if(!$db_result || empty($parent_id))
               {
                 assert('false; //'.__LINE__.' - error, could not create position from TA to the joabbord');
               }
@@ -1843,10 +1839,9 @@ class CJobboarduserEx extends CJobboarduser
                 echo '<br /> Parent position Created successfully ! ';
             }
           }
-        }
 
         //no  matter if it s a new of old parent position, we should have a parentpk here
-        if(!empty($nParentPK))
+        /*if(!empty($nParentPK))
         {
           $sQuery = 'INSERT INTO `position`(`jobfk`, `status`,`visibility`, `category`, `career_level`, `position_title`,';
           $sQuery.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`,';
@@ -1877,11 +1872,11 @@ class CJobboarduserEx extends CJobboarduser
           }
           else
             echo '<br /> Translation Created successfully !<br /> ';
-        }
+        }*/
       }
       else
       {
-        echo '<br />position TA['.$asPositionData['positionpk'].'] already exists JB['.$oDbResult->getFieldValue('positionpk').'] ';
+        echo '<br />position TA['.$position_data['position_id'].'] already exists JB['.$db_result->getFieldValue('positionpk').'] ';
       }
     }
 
