@@ -364,9 +364,9 @@ class CJobboarduserEx extends CJobboarduser
 
       if(!empty($asRecords))
       {
-        $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.parentfk FROM position as pos1';
+        $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
         $sQuery.= ' LEFT JOIN industry as ind ON (ind.industrypk = pos1.industryfk) ';
-        $sQuery.= ' WHERE pos1.parentfk IN ('.implode(',', array_keys($asRecords)).') AND pos1.parentfk != 0';
+        $sQuery.= ' WHERE pos1.positionpk IN ('.implode(',', array_keys($asRecords)).')';
         $sQuery.= ' GROUP BY pos1.positionpk ORDER BY pos1.positionpk DESC ';
 
         $oResult = $oDB->ExecuteQuery($sQuery);
@@ -375,7 +375,7 @@ class CJobboarduserEx extends CJobboarduser
 
         while($bRead)
         {
-          $asChilds[$oResult->getFieldValue('parentfk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
+          $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
       }
