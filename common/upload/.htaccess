@@ -36,4 +36,4 @@ allow from 221.113.50.237
 allow from 112.199.38.154
 
 # canada office
-allow from 209.145.127.108
+allow from 209.145.120.7
