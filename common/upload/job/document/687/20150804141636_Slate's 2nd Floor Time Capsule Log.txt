@@ -1,0 +1,238 @@
+Jul 22 15:59:19	Severity:5	AFP login OK from Y Takagi@192.168.215.31.
+Jul 22 16:00:59	Severity:5	AFP session from Y Takagi@192.168.215.31 closing.
+Jul 22 16:04:00	Severity:5	AFP login OK from Philip Miles@192.168.215.29.
+Jul 22 16:06:53	Severity:5	AFP session from Philip Miles@192.168.215.29 closing.
+Jul 22 16:08:02	Severity:5	AFP login OK from Slate Consulting@192.168.215.24.
+Jul 22 16:08:21	Severity:5	AFP login OK from Tim Eustace@192.168.215.107.
+Jul 22 16:08:45	Severity:5	AFP login OK from James Bradford@192.168.215.18.
+Jul 22 16:09:25	Severity:5	AFP session from Tim Eustace@192.168.215.107 closing.
+Jul 22 16:09:38	Severity:5	AFP session from Slate Consulting@192.168.215.24 closing.
+Jul 22 16:10:35	Severity:5	AFP session from James Bradford@192.168.215.18 closing.
+Jul 22 16:10:42	Severity:3	Request with unrecognized version 2
+Jul 22 16:10:42	Severity:5	Binding added for udp, 118.243.81.248:33121 to 192.168.215.30:5353 with lifetime 7200
+Jul 22 16:10:42	Severity:5	Binding added for udp, 118.243.81.248:33120 to 192.168.215.30:4500 with lifetime 7200
+Jul 22 16:13:12	Severity:5	AFP login OK from Shigeyuki Suzuki@192.168.215.30.
+Jul 22 16:13:18	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 22 16:14:43	Severity:5	AFP session from Shigeyuki Suzuki@192.168.215.30 closing.
+Jul 22 16:22:31	Severity:3	Request with unrecognized version 2
+Jul 22 16:22:31	Severity:5	Binding added for udp, 118.243.81.248:33118 to 192.168.215.107:4500 with lifetime 7200
+Jul 22 16:22:31	Severity:5	Binding added for udp, 118.243.81.248:33119 to 192.168.215.107:5353 with lifetime 7200
+Jul 22 16:23:43	Severity:5	AFP login OK from Mitchill Moir @192.168.215.28.
+Jul 22 16:24:35	Severity:5	AFP session from Mitchill Moir @192.168.215.28 closing.
+Jul 22 16:25:52	Severity:5	Binding added for udp, 118.243.81.248:33115 to 192.168.215.24:4500 with lifetime 7200
+Jul 22 16:26:43	Severity:5	AFP login OK from Nora Sharkasi@192.168.215.113.
+Jul 22 16:27:21	Severity:5	AFP session from Nora Sharkasi@192.168.215.113 closing.
+Jul 22 16:34:49	Severity:5	AFP login OK from Slate Consulting@192.168.215.32.
+Jul 22 16:35:51	Severity:5	AFP session from Slate Consulting@192.168.215.32 closing.
+Jul 22 16:43:33	Severity:5	Binding added for udp, 118.243.81.248:33114 to 192.168.215.26:4500 with lifetime 7200
+Jul 22 16:57:21	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.32:4500 with lifetime 7200
+Jul 22 16:58:37	Severity:5	AFP login OK from Raiki Yago@192.168.215.26.
+Jul 22 16:58:47	Severity:5	Binding added for udp, 118.243.81.248:33117 to 192.168.215.31:4500 with lifetime 7200
+Jul 22 16:59:20	Severity:5	AFP login OK from Y Takagi@192.168.215.31.
+Jul 22 16:59:36	Severity:5	AFP session from Raiki Yago@192.168.215.26 closing.
+Jul 22 17:01:23	Severity:5	AFP session from Y Takagi@192.168.215.31 closing.
+Jul 22 17:09:44	Severity:5	AFP login OK from Tim Eustace@192.168.215.107.
+Jul 22 17:10:39	Severity:5	AFP session from Tim Eustace@192.168.215.107 closing.
+Jul 22 17:10:41	Severity:3	Request with unrecognized version 2
+Jul 22 17:10:41	Severity:5	Binding added for udp, 118.243.81.248:33121 to 192.168.215.30:5353 with lifetime 7200
+Jul 22 17:10:41	Severity:5	Binding added for udp, 118.243.81.248:33120 to 192.168.215.30:4500 with lifetime 7200
+Jul 22 17:13:28	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 22 17:15:28	Severity:5	AFP login OK from Shigeyuki Suzuki@192.168.215.30.
+Jul 22 17:16:37	Severity:5	AFP session from Shigeyuki Suzuki@192.168.215.30 closing.
+Jul 22 17:22:31	Severity:3	Request with unrecognized version 2
+Jul 22 17:22:31	Severity:5	Binding added for udp, 118.243.81.248:33118 to 192.168.215.107:4500 with lifetime 7200
+Jul 22 17:22:31	Severity:5	Binding added for udp, 118.243.81.248:33119 to 192.168.215.107:5353 with lifetime 7200
+Jul 22 17:24:03	Severity:5	AFP login OK from Mitchill Moir @192.168.215.28.
+Jul 22 17:24:58	Severity:5	AFP session from Mitchill Moir @192.168.215.28 closing.
+Jul 22 17:27:57	Severity:5	AFP login OK from Nora Sharkasi@192.168.215.113.
+Jul 22 17:28:46	Severity:5	AFP session from Nora Sharkasi@192.168.215.113 closing.
+Jul 22 17:36:32	Severity:5	AFP login OK from Slate Consulting@192.168.215.32.
+Jul 22 17:37:31	Severity:5	AFP session from Slate Consulting@192.168.215.32 closing.
+Jul 22 17:42:37	Severity:5	AFP login OK from James Bradford@192.168.215.18.
+Jul 22 17:43:33	Severity:5	Binding added for udp, 118.243.81.248:33114 to 192.168.215.26:4500 with lifetime 7200
+Jul 22 17:44:08	Severity:5	AFP session from James Bradford@192.168.215.18 closing.
+Jul 22 17:57:21	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.32:4500 with lifetime 7200
+Jul 22 17:58:47	Severity:5	Binding added for udp, 118.243.81.248:33117 to 192.168.215.31:4500 with lifetime 7200
+Jul 22 18:00:09	Severity:5	AFP login OK from Raiki Yago@192.168.215.26.
+Jul 22 18:00:19	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 18:00:19	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 18:01:06	Severity:5	AFP session from Raiki Yago@192.168.215.26 closing.
+Jul 22 18:01:48	Severity:5	AFP login OK from Y Takagi@192.168.215.31.
+Jul 22 18:03:43	Severity:5	AFP session from Y Takagi@192.168.215.31 closing.
+Jul 22 18:10:41	Severity:3	Request with unrecognized version 2
+Jul 22 18:10:41	Severity:5	Binding added for udp, 118.243.81.248:33121 to 192.168.215.30:5353 with lifetime 7200
+Jul 22 18:10:41	Severity:5	Binding added for udp, 118.243.81.248:33120 to 192.168.215.30:4500 with lifetime 7200
+Jul 22 18:11:11	Severity:5	AFP login OK from Tim Eustace@192.168.215.107.
+Jul 22 18:12:01	Severity:5	AFP session from Tim Eustace@192.168.215.107 closing.
+Jul 22 18:13:28	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 22 18:17:04	Severity:5	AFP login OK from Shigeyuki Suzuki@192.168.215.30.
+Jul 22 18:18:22	Severity:5	AFP session from Shigeyuki Suzuki@192.168.215.30 closing.
+Jul 22 18:22:32	Severity:3	Request with unrecognized version 2
+Jul 22 18:22:32	Severity:5	Binding added for udp, 118.243.81.248:33118 to 192.168.215.107:4500 with lifetime 7200
+Jul 22 18:22:32	Severity:5	Binding added for udp, 118.243.81.248:33119 to 192.168.215.107:5353 with lifetime 7200
+Jul 22 18:25:40	Severity:5	AFP login OK from Mitchill Moir @192.168.215.28.
+Jul 22 18:25:53	Severity:5	Binding expired for udp to 192.168.215.24:4500
+Jul 22 18:26:27	Severity:5	AFP session from Mitchill Moir @192.168.215.28 closing.
+Jul 22 18:29:17	Severity:5	AFP login OK from Nora Sharkasi@192.168.215.113.
+Jul 22 18:30:15	Severity:5	AFP session from Nora Sharkasi@192.168.215.113 closing.
+Jul 22 18:30:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 18:30:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 18:43:34	Severity:5	Binding added for udp, 118.243.81.248:33114 to 192.168.215.26:4500 with lifetime 7200
+Jul 22 18:44:39	Severity:5	AFP login OK from James Bradford@192.168.215.18.
+Jul 22 18:45:51	Severity:5	AFP session from James Bradford@192.168.215.18 closing.
+Jul 22 19:00:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 19:00:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 19:01:53	Severity:5	AFP login OK from Raiki Yago@192.168.215.26.
+Jul 22 19:02:50	Severity:5	AFP session from Raiki Yago@192.168.215.26 closing.
+Jul 22 19:09:36	Severity:5	AFP login OK from Slate Consulting@192.168.215.24.
+Jul 22 19:10:12	Severity:5	AFP login OK from Philip Miles@fe80::aa20:66ff:fe23:16d1.
+Jul 22 19:10:42	Severity:5	AFP session from Slate Consulting@192.168.215.24 closing.
+Jul 22 19:12:13	Severity:5	AFP session from Philip Miles@fe80::aa20:66ff:fe23:16d1 closing.
+Jul 22 19:13:29	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 22 19:27:13	Severity:5	AFP login OK from Mitchill Moir @192.168.215.28.
+Jul 22 19:28:15	Severity:5	AFP session from Mitchill Moir @192.168.215.28 closing.
+Jul 22 19:30:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 19:30:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 19:30:32	Severity:5	AFP login OK from Nora Sharkasi@192.168.215.113.
+Jul 22 19:31:17	Severity:5	AFP session from Nora Sharkasi@192.168.215.113 closing.
+Jul 22 19:43:33	Severity:5	Binding added for udp, 118.243.81.248:33114 to 192.168.215.26:4500 with lifetime 7200
+Jul 22 19:45:12	Severity:5	Binding added for udp, 118.243.81.248:33115 to 192.168.215.24:4500 with lifetime 7200
+Jul 22 19:57:22	Severity:5	Binding expired for udp to 192.168.215.32:4500
+Jul 22 19:58:49	Severity:5	Binding expired for udp to 192.168.215.31:4500
+Jul 22 20:00:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 20:00:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 20:03:19	Severity:5	AFP login OK from Raiki Yago@192.168.215.26.
+Jul 22 20:04:23	Severity:5	AFP session from Raiki Yago@192.168.215.26 closing.
+Jul 22 20:09:56	Severity:5	AFP login OK from Slate Consulting@192.168.215.24.
+Jul 22 20:10:32	Severity:5	AFP login OK from Philip Miles@192.168.215.29.
+Jul 22 20:10:41	Severity:5	Binding expired for udp to 192.168.215.30:4500
+Jul 22 20:10:41	Severity:5	Binding expired for udp to 192.168.215.30:5353
+Jul 22 20:11:16	Severity:5	AFP session from Slate Consulting@192.168.215.24 closing.
+Jul 22 20:13:29	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 22 20:13:53	Severity:5	AFP session from Philip Miles@192.168.215.29 closing.
+Jul 22 20:17:22	Severity:5	AFP login OK from James Bradford@192.168.215.18.
+Jul 22 20:18:56	Severity:5	AFP session from James Bradford@192.168.215.18 closing.
+Jul 22 20:22:33	Severity:5	Binding expired for udp to 192.168.215.107:4500
+Jul 22 20:22:33	Severity:5	Binding expired for udp to 192.168.215.107:5353
+Jul 22 20:28:40	Severity:5	AFP login OK from Mitchill Moir @192.168.215.28.
+Jul 22 20:29:45	Severity:5	AFP session from Mitchill Moir @192.168.215.28 closing.
+Jul 22 20:30:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 20:30:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 20:31:46	Severity:5	AFP login OK from Nora Sharkasi@192.168.215.113.
+Jul 22 20:32:45	Severity:5	AFP session from Nora Sharkasi@192.168.215.113 closing.
+Jul 22 20:34:51	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 22 20:43:34	Severity:5	Binding added for udp, 118.243.81.248:33114 to 192.168.215.26:4500 with lifetime 7200
+Jul 22 20:45:13	Severity:5	Binding added for udp, 118.243.81.248:33115 to 192.168.215.24:4500 with lifetime 7200
+Jul 22 21:00:22	Severity:5	Binding added for udp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 21:00:22	Severity:5	Binding added for tcp, 118.243.81.248:46484 to 192.168.215.28:46484 with lifetime 3600
+Jul 22 21:13:30	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 22 21:14:29	Severity:5	AFP login OK from Philip Miles@192.168.215.29.
+Jul 22 21:17:35	Severity:5	AFP session from Philip Miles@192.168.215.29 closing.
+Jul 22 22:00:23	Severity:5	Binding expired for udp to 192.168.215.28:46484
+Jul 22 22:00:23	Severity:5	Binding expired for tcp to 192.168.215.28:46484
+Jul 22 22:13:30	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 22 22:23:42	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 22 22:43:35	Severity:5	Binding expired for udp to 192.168.215.26:4500
+Jul 22 22:45:14	Severity:5	Binding expired for udp to 192.168.215.24:4500
+Jul 22 23:13:30	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 00:12:34	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 00:13:31	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 23 01:13:32	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -2 seconds).
+Jul 23 02:00:05	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:01:54	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:03:47	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:05:40	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:07:33	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:09:25	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:11:18	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:13:10	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:13:32	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 02:15:04	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:16:58	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:18:50	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:20:42	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:22:35	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:24:29	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:26:21	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:28:15	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:30:08	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:32:01	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:33:54	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:35:46	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:37:44	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:39:32	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:41:25	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:43:18	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:45:11	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:47:03	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:48:56	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:50:49	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:52:42	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:54:34	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:56:27	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 02:58:20	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:00:16	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:02:07	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:04:00	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:06:00	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:07:47	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:09:40	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:11:33	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:13:26	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:13:33	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 03:15:19	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:17:12	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:19:05	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:20:57	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:22:50	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:24:43	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:26:36	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:28:28	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:30:20	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:32:14	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:34:07	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:36:00	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:37:53	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:39:45	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:41:38	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:43:31	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:45:24	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:47:16	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:49:09	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:51:02	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:52:59	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:54:48	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:56:40	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 03:58:32	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:00:24	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:02:17	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:04:10	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:06:03	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:07:55	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:09:48	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:11:41	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:13:33	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 04:13:34	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:15:27	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:17:27	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:19:14	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:21:06	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:22:59	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:24:51	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:26:44	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:28:36	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 04:30:30	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 05:13:34	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 23 06:13:34	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 06:19:20	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 07:13:35	Severity:5	Clock synchronized to network time server time.apple.com (adjusted -1 seconds).
+Jul 23 08:08:11	Severity:5	Binding added for udp, 118.243.81.248:33122 to 192.168.215.31:4500 with lifetime 7200
+Jul 23 08:13:35	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 09:09:45	Severity:5	Connection accepted from [::ffff:192.168.215.27]:49206.
+Jul 23 09:09:45	Severity:5	Connection accepted from [::ffff:192.168.215.27]:49208.
+Jul 23 09:09:45	Severity:5	Connection accepted from [fe80::426c:8fff:fe0b:21b6%bridge0]:49209.
+Jul 23 09:13:35	Severity:5	Clock synchronized to network time server time.apple.com (adjusted +0 seconds).
+Jul 23 09:15:54	Severity:5	Connection accepted from [fe80::21f:f3ff:fe51:6edc%bridge0]:49163.
+Jul 23 09:16:02	Severity:5	Connection accepted from [fe80::21f:f3ff:fe51:6edc%bridge0]:49166.
+Jul 23 09:16:02	Severity:5	Connection accepted from [fe80::21f:f3ff:fe51:6edc%bridge0]:49167.
+Jul 23 09:16:03	Severity:5	Connection accepted from [fe80::21f:f3ff:fe51:6edc%bridge0]:49168.

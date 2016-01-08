@@ -52,3 +52,66 @@ is_integer($pnPk) && !empty($pnPk)
  -> called in /hdd/www/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
  -> called in /hdd/www/jobboard/index.php5 / getPage line 20 
 
+2015-10-27 07:57:39
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-10-29 04:34:43
+Assert spotted in /web/jobboard/component/jobboard_user/jobboard_user.class.ex.php5 line 1771: 
+false; // need to create a company to sync the jobboaard and TA  
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard_user/jobboard_user.class.ex.php5 / assert line 1771 
+ -> called in /web/jobboard/component/jobboard_user/jobboard_user.class.ex.php5 / _importPositions line 155 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getCronJob line 333 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-11-13 18:50:14
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-11-17 03:13:20
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-12-02 02:11:16
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-12-27 18:44:28
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
+2015-12-28 17:20:38
+Assert spotted in /web/jobboard/component/jobboard/jobboard.class.ex.php5 line 1499: 
+is_integer($pnPk) && !empty($pnPk) 
+  -> logAssert 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / assert line 1499 
+ -> called in /web/jobboard/component/jobboard/jobboard.class.ex.php5 / getJobDetail line 135 
+ -> called in /web/jobboard/component/page/page.class.ex.php5 / getHtml line 405 
+ -> called in /web/jobboard/index.php5 / getPage line 20 
+
