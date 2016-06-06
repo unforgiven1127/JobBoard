@@ -406,7 +406,7 @@ $asArray = array();
   array (
     'name' => 'EXPERTISE',
     'link' => 'http://www.slate.co.jp/expertise/',
-    'legend' => 'What We specialise in',
+    'legend' => 'What we specialise in',
     'icon' => '',
     'target' => '',
     'uid' => '',
@@ -719,7 +719,7 @@ $asArray['jp'] = array (
   array (
     'name' => 'EXPERTISE',
     'link' => 'http://www.slate.co.jp/expertise/',
-    'legend' => 'What we specialise in',
+    'legend' => 'What We specialise in',
     'icon' => '',
     'target' => '',
     'uid' => '',
