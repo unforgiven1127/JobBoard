@@ -208,7 +208,7 @@ class CJobboarduserEx extends CJobboarduser
     $sSortField = getValue('sortfield');
     $sSortOrder = getValue('sortorder');
 
-    echo"<br><br><br>";
+    echo"<br><br><br> Log:";
     echo $sSortField;
 
     if(!empty($sSortField))
@@ -870,7 +870,7 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:9%;'));
-      $sSortUrl = $sURL.'&sortfield=positionpk&sortorder=desc';
+      $sSortUrl = $sURL.'&sortfield=external_key&sortorder=desc';
       $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
