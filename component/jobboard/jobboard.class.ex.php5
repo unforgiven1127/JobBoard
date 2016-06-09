@@ -441,14 +441,15 @@ ChromePhp::log($avResult);
 
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
-ChromePhp::log($sQuery);
+
     if(!empty($asFilter['where']))
       $sQuery.= ' AND '.$asFilter['where'];
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
     $nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
-
+ChromePhp::log($sQuery);
+ChromePhp::log($nNbResult);
     if($nNbResult == 0)
        return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
 
