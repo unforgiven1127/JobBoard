@@ -362,6 +362,8 @@ class CJobboarduserEx extends CJobboarduser
         $bRead = $oResult->readNext();
       }
 
+var_dump($asRecords);
+
       if(!empty($asRecords))
       {
         $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
@@ -863,7 +865,7 @@ class CJobboarduserEx extends CJobboarduser
 
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:9%;'));
       $sSortUrl = $sURL.'&sortfield=positionpk&sortorder=desc';
-      $sHTML.= $oHTML->getLink('Position Id', $sSortUrl);
+      $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:11%;'));
