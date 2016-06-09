@@ -360,9 +360,13 @@ class CJobboardEx extends CJobboard
   private function _getAjaxJobSearchResult()
   {
     if(getValue('do_search', 0))
+    {
+      echo 'Here';
       $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB, true);
+    }
     else
     {
+      echo 'Else';
       if(getValue('searchId'))
         $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
       else
