@@ -622,7 +622,7 @@ ChromePhp::log($sQuery);
       {
         $asJobData = $oDbResult->getData();
         $asJobData['position_desc'] = str_replace('\n', "\n", $asJobData['position_desc']);
-
+ChromePhp::log($asJobData);
         if(!empty($sSearchWord))
         {
           $asJobData['position_title'] = preg_replace($asMatch, $asReplacement, $asJobData['position_title']);
@@ -735,6 +735,8 @@ ChromePhp::log($sQuery);
         $sJobData = $pasJobData['raw_data'];
         $asJobData = (array)@unserialize($sJobData);
 
+//var_dump($pasJobData);
+//exit;
 
         if(!isset($asJobData['jobID']) || empty($asJobData['jobID']))
         {
