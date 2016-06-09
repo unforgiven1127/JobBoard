@@ -361,12 +361,12 @@ class CJobboardEx extends CJobboard
   {
     if(getValue('do_search', 0))
     {
-      ChromePhp::log('1');
+      ChromePhp::log('manageSearchHistory');
       $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB, true);
     }
     else
     {
-      ChromePhp::log('2');
+      ChromePhp::log('reloadLastSearch');
       if(getValue('searchId'))
         $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
       else
@@ -499,7 +499,7 @@ class CJobboardEx extends CJobboard
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-
+ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
