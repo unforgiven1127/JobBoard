@@ -379,6 +379,9 @@ class CJobboarduserEx extends CJobboarduser
           $bRead = $oResult->readNext();
         }
       }
+
+      var_dump($asRecords);
+
       if(!empty($asRecords))
       {
         foreach($asRecords as $asJobDetail)
