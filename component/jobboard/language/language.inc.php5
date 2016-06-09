@@ -453,7 +453,7 @@ regarding similar positions',
                'TALENT_LANG_LVL3' => 'Fluent',
                'TALENT_LANG_LVL4' => 'Native',
                'TALENT_SELECT_LANGUAGE' => 'Select language',
-               'TALENT_POSITION_ID' => 'Position Id',
+               'TALENT_POSITION_ID' => 'Position ID',
 
                 'Life Science' => 'Life Science',
                'FIN-Real Estate' => 'Real estate',

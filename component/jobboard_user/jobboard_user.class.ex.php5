@@ -278,7 +278,7 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'ta_user_list_container'));
     $sHTML.= $oHTML->getBlocStart('');
-    $sHTML.= $oHTML->getTitleLine('Manage Positions', $this->getResourcePath().'/pictures/manage_48.png');
+    $sHTML.= $oHTML->getTitleLine('Managee Positions', $this->getResourcePath().'/pictures/manage_48.png');
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getCarriageReturn();
 
