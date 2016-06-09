@@ -843,8 +843,10 @@ ChromePhp::log($sQuery);
       $asSalary = explode('|', $sSalary);
       if(count($asSalary) != 2)
       {
-        $nSalaryHigh = 9999999999;
-        $nSalaryLow = 0;
+        $nSalaryHigh = '';
+        $nSalaryLow = '';
+        //$nSalaryHigh = 9999999999;
+        //$nSalaryLow = 0;
       }
       else
       {
