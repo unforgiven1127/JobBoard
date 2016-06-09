@@ -750,6 +750,12 @@ ChromePhp::log($sQuery);
           $sHTML.= $oHTML->getText($sIdentfier);
         $sHTML.= $oHTML->getListItemEnd();
 
+        $sHTML.= $oHTML->getListItemStart();
+          $sHTML.= $oHTML->getSpanStart();
+          $sHTML.= $oHTML->getText('Industry: ');
+          $sHTML.= $oHTML->getSpanEnd();
+          $sHTML.= $oHTML->getText($sIdentfier);
+        $sHTML.= $oHTML->getListItemEnd();
 
 
       $sHTML.= $oHTML->getListEnd();
