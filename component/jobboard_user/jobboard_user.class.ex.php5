@@ -190,7 +190,7 @@ class CJobboarduserEx extends CJobboarduser
   {
     echo"<br><br><br><br><br><br><br><br><br>";
     echo'_getManageJobs';
-    ChromePhp::log('_getManageJobs');
+    //ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');

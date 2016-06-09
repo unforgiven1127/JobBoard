@@ -6,7 +6,7 @@ require_once('./conf/main_config.inc.php5');
 require_once('./conf/custom_config/'.CONST_WEBSITE.'/config.inc.php5');
 require_once('./common/lib/global_func.inc.php5');
 require_once('./component/dependency.inc.php5');
-require_once('./common/lib/ChromePhp.php');
+require_once './common/lib/ChromePhp.php';
 
 CDependency::initialize();
 
