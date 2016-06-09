@@ -736,6 +736,7 @@ ChromePhp::log($sQuery);
         $asJobData = (array)@unserialize($sJobData);
 
 ChromePhp::log($pasJobData);
+exit;
 
         if(!isset($asJobData['jobID']) || empty($asJobData['jobID']))
         {
