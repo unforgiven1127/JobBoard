@@ -984,6 +984,8 @@ class CJobboardEx extends CJobboard
     if($pbIsAjaxForm)
     {
       $sURL = $oPage->getAjaxUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      echo "<br><br><br>".$sURL;
+      ChromePhp::log($sURL);
       $oForm->setFormParams('', true, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH'],'ajaxTarget' => 'jobListContainer', 'ajaxCallback' => "/*searchFormToggle(false);*/", 'onBeforeSubmit' => "jQuery(body).animate({scrollTop: '0px'}, 600, 'linear'); "));
     }
     else
@@ -1055,7 +1057,7 @@ class CJobboardEx extends CJobboard
     $oForm->setFieldDisplayParams('career', array('fieldid' => 'careerId', 'class' => 'clickable activable'));
     */
 
-    $asSliderLegend = array(1 => '1m', 2 => '4m', 3 => '7m', 4 => '10m', 6 => '+13m');
+    $asSliderLegend = array(1 => '1m', 2 => '4m', 3 => '7m', 4 => '10m', 6 => '+12m');
 
     $asSalary = explode('|', getValue('salary_year'));
     if(count($asSalary) != 2)
