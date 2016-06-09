@@ -362,7 +362,7 @@ class CJobboarduserEx extends CJobboarduser
         $bRead = $oResult->readNext();
       }
 
-var_dump($asRecords);
+//var_dump($asRecords);
 
       if(!empty($asRecords))
       {
@@ -390,7 +390,7 @@ var_dump($asRecords);
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
-            $sHTML.= $oHTML->getText('#'.$asJobDetail['positionpk']);
+            $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
