@@ -208,8 +208,8 @@ class CJobboarduserEx extends CJobboarduser
     $sSortField = getValue('sortfield');
     $sSortOrder = getValue('sortorder');
 
-    echo"<br><br><br> Log:";
-    echo $sSortField;
+    //echo"<br><br><br> Log:";
+    //echo $sSortField;
 
     if(!empty($sSortField))
     {
