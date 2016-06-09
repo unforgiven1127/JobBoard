@@ -380,7 +380,7 @@ class CJobboarduserEx extends CJobboarduser
         }
       }
 
-      var_dump($asRecords);
+      var_dump($asRecords);exit;
 
       if(!empty($asRecords))
       {
