@@ -629,6 +629,7 @@ ChromePhp::log($asJobData);
           $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $asJobData['position_desc']);
           $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $asJobData['company_name']);
           $asJobData['location'] = preg_replace($asMatch, $asReplacement, $asJobData['location']);
+          $asJobData['industryName'] = preg_replace($asMatch, $asReplacement, $asJobData['name']);
         }
 
         $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
@@ -757,7 +758,7 @@ ChromePhp::log($asJobData);
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText('Industry: ');
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($asJobData['name']);
+          $sHTML.= $oHTML->getText($asJobData['industryName']);
         $sHTML.= $oHTML->getListItemEnd();
 
 
