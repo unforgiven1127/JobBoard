@@ -188,6 +188,7 @@ class CJobboarduserEx extends CJobboarduser
   */
   private function _getManageJobs($psType = '')
   {
+    ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
