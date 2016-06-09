@@ -444,11 +444,11 @@ ChromePhp::log($avResult);
 
     if(!empty($asFilter['where']))
       $sQuery.= ' AND '.$asFilter['where'];
-
+ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
     $nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
-ChromePhp::log($sQuery);
+
 ChromePhp::log($nNbResult);
     if($nNbResult == 0)
        return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
