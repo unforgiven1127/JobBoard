@@ -188,8 +188,8 @@ class CJobboarduserEx extends CJobboarduser
   */
   private function _getManageJobs($psType = '')
   {
-    echo"<br><br><br><br><br><br><br><br><br>";
-    echo'_getManageJobs';
+    //echo"<br><br><br>";
+    //echo'_getManageJobs';
     //ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
@@ -207,6 +207,9 @@ class CJobboarduserEx extends CJobboarduser
 
     $sSortField = getValue('sortfield');
     $sSortOrder = getValue('sortorder');
+
+    echo"<br><br><br>";
+    echo $sSortField;
 
     if(!empty($sSortField))
     {
