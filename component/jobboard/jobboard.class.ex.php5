@@ -443,7 +443,13 @@ ChromePhp::log($avResult);
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
 
     if(!empty($asFilter['where']))
+    {
+      $exploded = explode('AND',$asFilter['where']);
       $sQuery.= ' AND '.$asFilter['where'];
+    }
+
+
+ChromePhp::log($exploded);
 ChromePhp::log($asFilter['where']);
 ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
