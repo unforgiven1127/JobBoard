@@ -735,6 +735,8 @@ ChromePhp::log($sQuery);
         $sJobData = $pasJobData['raw_data'];
         $asJobData = (array)@unserialize($sJobData);
 
+ChromePhp::log($pasJobData);
+
         if(!isset($asJobData['jobID']) || empty($asJobData['jobID']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
