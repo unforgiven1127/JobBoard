@@ -984,8 +984,8 @@ class CJobboardEx extends CJobboard
     if($pbIsAjaxForm)
     {
       $sURL = $oPage->getAjaxUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
-      echo "<br><br><br>".$sURL;
-      ChromePhp::log($sURL);
+      //echo "<br><br><br>".$sURL;
+      //ChromePhp::log($sURL);
       $oForm->setFormParams('', true, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH'],'ajaxTarget' => 'jobListContainer', 'ajaxCallback' => "/*searchFormToggle(false);*/", 'onBeforeSubmit' => "jQuery(body).animate({scrollTop: '0px'}, 600, 'linear'); "));
     }
     else
