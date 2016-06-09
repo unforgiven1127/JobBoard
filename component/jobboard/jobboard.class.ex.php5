@@ -909,7 +909,7 @@ ChromePhp::log($sQuery);
       {
         //> 12mil/year ==> we take all
         if($nSalaryHigh >= 1000000)
-          $nSalaryHigh = 9999999999;
+          $nSalaryHigh = 9999999999999999999999999999999999;
 
         if($nSalaryLow < 42000)
           $asWhereSql[] = ' (pos.salary_high = 0 OR pos.salary_high <= "'.$nSalaryHigh.'")';
