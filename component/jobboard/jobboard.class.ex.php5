@@ -843,10 +843,8 @@ ChromePhp::log($sQuery);
       $asSalary = explode('|', $sSalary);
       if(count($asSalary) != 2)
       {
-        $nSalaryHigh = '';
-        $nSalaryLow = '';
-        //$nSalaryHigh = 9999999999;
-        //$nSalaryLow = 0;
+        $nSalaryHigh = 9999999999;
+        $nSalaryLow = 0;
       }
       else
       {
@@ -909,7 +907,7 @@ ChromePhp::log($sQuery);
       {
         //> 12mil/year ==> we take all
         if($nSalaryHigh >= 1000000)
-          $nSalaryHigh = 9999999999999999999999999999999999;
+          $nSalaryHigh = 9999999999;
 
         if($nSalaryLow < 42000)
           $asWhereSql[] = ' (pos.salary_high = 0 OR pos.salary_high <= "'.$nSalaryHigh.'")';
@@ -925,8 +923,8 @@ ChromePhp::log($sQuery);
     }
 
     //system condition, always required
-    $asWhereSql[] = ' pos.parentfk != 0 AND pos.visibility <> 0 ';
-
+    //$asWhereSql[] = ' pos.parentfk != 0 AND pos.visibility <> 0 ';
+    $asWhereSql[] = ' pos.visibility <> 0 ';
 
     $asResult['where'] = implode(' AND ', $asWhereSql);
     return $asResult;
