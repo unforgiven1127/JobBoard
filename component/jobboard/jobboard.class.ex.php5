@@ -361,12 +361,12 @@ class CJobboardEx extends CJobboard
   {
     if(getValue('do_search', 0))
     {
-      echo 'Here';
+      ChromePhp::log('1');
       $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB, true);
     }
     else
     {
-      echo 'Else';
+      ChromePhp::log('2');
       if(getValue('searchId'))
         $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
       else
