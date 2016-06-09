@@ -217,7 +217,7 @@ class CJobboarduserEx extends CJobboarduser
     }
     else
     {
-      $sOrder = ' ORDER BY positionpk DESC';
+      $sOrder = ' ORDER BY external_key DESC';
     }
 
     if($psType == 'share')
