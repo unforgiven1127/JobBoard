@@ -654,7 +654,7 @@ ChromePhp::log($sQuery);
       return '';
 
 
-    $jobDataClear = $asJobData;
+    $jobDataClear = $pasJobData;
     ChromePhp::log($jobDataClear);
 
     $oHTML = CDependency::getComponentByName('display');
