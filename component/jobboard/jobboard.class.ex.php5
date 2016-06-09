@@ -444,6 +444,7 @@ ChromePhp::log($avResult);
 
     if(!empty($asFilter['where']))
       $sQuery.= ' AND '.$asFilter['where'];
+ChromePhp::log($asFilter['where']);
 ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
