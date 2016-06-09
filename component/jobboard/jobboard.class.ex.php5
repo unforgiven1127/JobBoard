@@ -757,7 +757,7 @@ ChromePhp::log($asJobData);
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText('Industry: ');
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($sIdentfier);
+          $sHTML.= $oHTML->getText($asJobData['name']);
         $sHTML.= $oHTML->getListItemEnd();
 
 
