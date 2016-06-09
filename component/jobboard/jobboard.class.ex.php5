@@ -736,7 +736,10 @@ ChromePhp::log($sQuery);
         $asJobData = (array)@unserialize($sJobData);
 
         if(!isset($asJobData['jobID']) || empty($asJobData['jobID']))
-          $sIdentfier = 'JB'.$pasJobData['positionpk'];
+        {
+          //$sIdentfier = 'JB'.$pasJobData['positionpk'];
+          $sIdentfier = $pasJobData['external_key'];
+        }
         else
           $sIdentfier = 'SL'.(int)$asJobData['jobID'];
 
