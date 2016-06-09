@@ -441,7 +441,7 @@ ChromePhp::log($avResult);
 
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
-
+ChromePhp::log($sQuery);
     if(!empty($asFilter['where']))
       $sQuery.= ' AND '.$asFilter['where'];
 
