@@ -429,12 +429,7 @@ class CJobboardEx extends CJobboard
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
 
 ChromePhp::log($slistemQuery);
-    $slistemResult = $slistemDB->ExecuteQuerySlistem($slistemQuery);
-ChromePhp::log($slistemResult);
-    $slistemRead = $slistemResult->ReadFirst();
-ChromePhp::log($slistemRead);
-    $positionData = $slistemResult->getData();
-ChromePhp::log($positionData);
+
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
