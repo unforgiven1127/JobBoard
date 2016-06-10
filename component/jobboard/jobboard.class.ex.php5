@@ -429,9 +429,9 @@ ChromePhp::log($avResult);
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
 
 ChromePhp::log($slistemQuery);
-    $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
+  /*  $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
     $slistemResult = $slistemResult->getAll();
-ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);*/
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
