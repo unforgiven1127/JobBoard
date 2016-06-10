@@ -421,35 +421,52 @@ class CJobboardEx extends CJobboard
   {
 
     $slistemDB = CDependency::getComponentByName('database');
-    $query = "SELECT slp.* FROM sl_position slp
-                     INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
-                     INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
-                     WHERE slp.date_created > '2016-02-29 10:31:39' ";
+    $slistemQuery = "SELECT slp.* FROM sl_position slp
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
 
-    $positionData = $slistemDB->slistemGetAllData($query);
+                     WHERE slpd.is_public = 1 ";
 
-    ChromePhp::log($positionData);
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
     $nCompanyPk = (int)getValue('companypk', 0);
     $nIndustryPk = (int)getValue('industrypk', 0);
+    $sLocation = strtolower(getValue('location'));
 
     $asFilter = $this->_getSqlJobSearch();
+    $filterSlistem = $this->_getSqlJobSearchSlistem();
 
     $sQuery = 'SELECT count(DISTINCT pos.positionpk) as nCount ';
     $sQuery.= ' FROM position as pos ';
 
     if(!empty($nIndustryPk))
+    {
       $sQuery.= ' INNER JOIN industry AS ind ON (ind.industrypk = pos.industryfk AND ind.industrypk = '.$nIndustryPk.') ';
+      $slistemQuery.= " INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk AND ind.sl_industrypk = ".$nIndustryPk;
+    }
     else
+    {
       $sQuery.= ' LEFT JOIN industry AS ind ON (ind.industrypk = pos.industryfk) ';
-
-    if(!empty($nCompanyPk))
-      $sQuery.= ' INNER JOIN company AS cp ON (cp.companypk = pos.companyfk AND cp.companypk = '.$nCompanyPk.') ';
+      $slistemQuery.= " INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk ";
+    }
+    if(!empty($sLocation))
+    {
+      $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND lower(sll.location) LIKE '%".$sLocation."%' ";
+    }
     else
+    {
+      $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location  ";
+    }
+    if(!empty($nCompanyPk))
+    {
+      $sQuery.= ' INNER JOIN company AS cp ON (cp.companypk = pos.companyfk AND cp.companypk = '.$nCompanyPk.') ';
+      $slistemQuery.= " INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk AND cp.sl_companypk = ".$nCompanyPk;
+    }
+    else
+    {
       $sQuery.= ' LEFT JOIN company AS cp ON (cp.companypk = pos.companyfk) ';
+      $slistemQuery.= " INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk ";
+    }
 
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
@@ -459,10 +476,14 @@ class CJobboardEx extends CJobboard
       //$exploded = explode('AND',$asFilter['where']);
       $sQuery.= ' AND '.$asFilter['where'];
     }
+    if(!empty($filterSlistem['where']))
+    {
+      $slistemQuery.= ' AND '.$asFilter['where'];
+    }
 
 
 //ChromePhp::log($exploded);
-ChromePhp::log($asFilter['where']);
+ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
@@ -515,11 +536,16 @@ ChromePhp::log($asFilter['where']);
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
 
+    $slistemQuery = " order by slp.date_created DESC";
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+ChromePhp::log($slistemQuery);
+ChromePhp::log($positionData);
+
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-//ChromePhp::log($sQuery);
+
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
@@ -804,6 +830,142 @@ ChromePhp::log($asFilter['where']);
    * Function to get the different search parameters to query
    * @return array
    */
+
+  private function _getSqlJobSearchSlistem()
+  {
+    $oDb = CDependency::getComponentByName('database');
+
+    $asResult = array();
+    $asWhereSql = array();
+
+    $sKeyWord = strtolower(getValue('keyword'));
+    $bGlobalSearch = (bool)(getValue('global_search', 0));
+
+    //----------------------------------------------------
+    //Control fields and build the sql from it
+    // TODO: Need field controls and escape striing !!!
+
+    $sKeyWord = str_replace(array('\\', '\'', '"', '=', ''), '', $sKeyWord);
+
+    if(!empty($sKeyWord) && strlen($sKeyWord) >= 2)
+    {
+      $asKeywordSql = array();
+
+
+      $sOneKeyword = $oDb->dbEscapeString($sKeyWord);
+      $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
+      $asResult['order'][] = ' exactExpression DESC ';
+
+      $sOneKeyword = $oDb->dbEscapeString('%'.$sKeyWord.'%');
+      $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as fullExpression ';
+      $asResult['order'][] = ' fullExpression DESC ';
+
+      $asKeywords = explode(' ', $sKeyWord);
+      foreach($asKeywords as $sOneKeyword)
+      {
+        if(!empty($sOneKeyword) && strlen($sOneKeyword) > 2)
+        {
+          $sOneKeyword = $oDb->dbEscapeString('%'.$sOneKeyword.'%');
+          $asKeywordSql[] = '( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.') ) ';
+        }
+      }
+
+      $asWhereSql[] = implode(' OR ', $asKeywordSql);
+    }
+
+    //if not a global search (compact form) control the fields from the full form
+    if(!$bGlobalSearch)
+    {
+      $nEnglish = (int)getValue('english', -1);
+      $nJapanese = (int)getValue('japanese', -1);
+      $sOccupation = strtolower(getValue('occupation'));
+      $sCompany = strtolower(getValue('company'));
+      $sIndustry = getValue('industry_tree');
+      $sLocation = strtolower(getValue('location'));
+
+      //field possibly desactivated (value = -1)
+      $nCareer = (int)(getValue('career', -1));
+
+      $asCareer = array(1 => 'Graduate', 2 => 'Mid-Level', 3 => 'Executive', 4 => 'Senior');
+      if(isset($asCareer[$nCareer]))
+        $sCareer = $asCareer[$nCareer];
+      else
+        $sCareer = '';
+
+      $asSalary = array();
+      $sSalary = getValue('salary_year');
+      $asSalary = explode('|', $sSalary);
+      if(count($asSalary) != 2)
+      {
+        $nSalaryHigh = 9999999999;
+        $nSalaryLow = 0;
+      }
+      else
+      {
+        //convert yearly salary to monthly (500 000 because there are 2 steps/mill in the slider)
+        $nSalaryHigh = floor(((int)@$asSalary[1] * 500000)/12);
+        $nSalaryLow = floor(((int)@$asSalary[0] * 500000)/12);
+      }
+
+
+      if(!empty($sOccupation))
+      {
+        $sOccupation = $oDb->dbEscapeString('%'.$sOccupation.'%');
+        $asWhereSql[] = ' lower(slpd.title) LIKE '.$sOccupation.' ';
+      }
+
+      if(!empty($sCompany))
+      {
+        $sCompany = $oDb->dbEscapeString('%'.$sCompany.'%');
+        $asWhereSql[] = ' lower(cp.name) LIKE '.$sCompany.' ';
+      }
+
+      if(!empty($sCareer))
+      {
+        $sCareer = $oDb->dbEscapeString('%'.$sCareer.'%');
+        $asWhereSql[] = ' lower(slpd.career_level) LIKE '.$sCareer.' ';
+      }
+
+      if(($nEnglish >= 0 && $nJapanese >= 0))
+      {
+        $asWhereSql[] = ' (slp.lvl_english  <= "'.$nEnglish.'" OR  slp.lvl_japanese <= "'.$nJapanese.'") ';
+      }
+      else
+      {
+        if($nEnglish >= 0)
+          $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
+
+        if($nJapanese >= 0)
+          $asWhereSql[] = ' slp.lvl_japanese <= "'.$nJapanese.'"';
+      }
+
+      //the salary field minimum value is 41666Y, .
+      if(!empty($nSalaryLow) || !empty($nSalaryHigh))
+      {
+        //> 12mil/year ==> we take all
+        if($nSalaryHigh >= 1000000)
+          $nSalaryHigh = 9999999999;
+
+        if($nSalaryLow < 42000)
+          $asWhereSql[] = ' (slp.salary_to = 0 OR slp.salary_to <= "'.$nSalaryHigh.'")';
+        else
+          $asWhereSql[] = ' ((slp.salary_from = 0 OR slp.salary_from >=  "'.$nSalaryLow.'") AND (slp.salary_to = 0 OR slp.salary_to <= "'.$nSalaryHigh.'"))';
+      }
+
+      if($nJapanese == 0)
+        $asWhereSql[] = ' slpd.language <> "jp" ';
+
+      if($nEnglish == 0)
+        $asWhereSql[] = ' slpd.language <> "en" ';
+    }
+
+    //system condition, always required
+    //$asWhereSql[] = ' pos.parentfk != 0 AND pos.visibility <> 0 ';
+    //$asWhereSql[] = ' pos.visibility <> 0 ';
+
+    $asResult['where'] = implode(' AND ', $asWhereSql);
+    return $asResult;
+  }
 
   private function _getSqlJobSearch()
   {
