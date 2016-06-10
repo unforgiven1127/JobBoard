@@ -1373,7 +1373,7 @@ ChromePhp::log($positionData);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
-        var_dump($avResult);
+        ChromePhp::log($avResult);
         $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
 
 
