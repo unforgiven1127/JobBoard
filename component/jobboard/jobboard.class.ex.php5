@@ -564,8 +564,8 @@ class CJobboardEx extends CJobboard
 
     //$slistemRead = $positionData->readFirst();
 
-    $resultCount = count($positionData);
-ChromePhp::log($resultCount);
+    //$resultCount = count($positionData);
+ChromePhp::log($oDbResult);
     /*if($resultCount < 0)
     {
       assert('false; // no result but count query was ok ');
@@ -573,8 +573,8 @@ ChromePhp::log($resultCount);
     }
     return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);*/
 
-ChromePhp::log($slistemQuery);
-ChromePhp::log($positionData);
+//ChromePhp::log($slistemQuery);
+//ChromePhp::log($positionData);
 
     if(!$bRead)
     {
