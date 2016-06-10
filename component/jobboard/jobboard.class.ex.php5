@@ -429,7 +429,7 @@ ChromePhp::log($avResult);
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
 
 ChromePhp::log($slistemQuery);
-    $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
+    $slistemResult = $slistemDB->ExecuteQuerySlistem($slistemQuery);
 ChromePhp::log($slistemResult);
     $slistemRead = $slistemResult->ReadFirst();
 ChromePhp::log($slistemRead);
