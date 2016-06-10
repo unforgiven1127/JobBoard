@@ -57,11 +57,12 @@ class CDatabaseEx extends CDatabase
       {
         array_push($add[$key],$value);
       }
+      ChromePhp::log($add)
       array_push($result,$add);
       //$result[] = $row;
       $i = $i + 1;
     }
-ChromePhp::log($result);
+//ChromePhp::log($result);
     return $row;
 
   }
