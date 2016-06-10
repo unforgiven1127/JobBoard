@@ -221,17 +221,17 @@ switch(trim($_SERVER['SERVER_NAME']))
   case 'jobs.slate.co.jp':
   case 'job.dev.com':
 
-    define('DB_NAME','slistem');
-    define('DB_SERVER', '127.0.0.1');
-    define('DB_USER', 'slistem');
-    define('DB_PASSWORD', 'smwXN2RTDm6Zz3hR');
+    define('DB_NAME_SLISTEM','slistem');
+    define('DB_SERVER_SLISTEM', '127.0.0.1');
+    define('DB_USER_SLISTEM', 'slistem');
+    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
 
-    //define('DB_NAME', 'jobboard');
-    //define('DB_SERVER', '127.0.0.1');
+    define('DB_NAME', 'jobboard');
+    define('DB_SERVER', '127.0.0.1');
     //define('DB_USER', '');
     //define('DB_PASSWORD', ''); //local
-    //define('DB_USER', 'jobboard');
-   // define('DB_PASSWORD', 'KCd7C56XJ8Nud7uF');  //online
+    define('DB_USER', 'jobboard');
+    define('DB_PASSWORD', 'KCd7C56XJ8Nud7uF');  //online
 
     define('CONST_WEBSITE', 'jobboard');
 
