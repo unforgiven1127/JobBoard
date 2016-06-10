@@ -536,7 +536,7 @@ ChromePhp::log($filterSlistem['where']);
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
 
-    $slistemQuery = " order by slp.date_created DESC";
+    $slistemQuery .= " order by slp.date_created DESC";
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 ChromePhp::log($slistemQuery);
 ChromePhp::log($positionData);
