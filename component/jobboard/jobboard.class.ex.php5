@@ -432,6 +432,7 @@ ChromePhp::log($slistemQuery);
     $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
 ChromePhp::log($slistemResult);
     $slistemRead = $slistemResult->ReadFirst();
+ChromePhp::log($slistemRead);
     $positionData = $slistemResult->getData();
 ChromePhp::log($positionData);
 
