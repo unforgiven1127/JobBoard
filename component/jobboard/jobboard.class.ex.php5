@@ -436,7 +436,7 @@ class CJobboardEx extends CJobboard
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk ";
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
     $nCompanyPk = (int)getValue('companypk', 0);
@@ -495,7 +495,7 @@ class CJobboardEx extends CJobboard
 
 
 //ChromePhp::log($exploded);
-//ChromePhp::log($filterSlistem['where']);
+ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
@@ -557,21 +557,9 @@ class CJobboardEx extends CJobboard
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
-
-
-    //$slistemRead = $positionData->readFirst();
-
-    $resultCount = count($positionData);
-ChromePhp::log($resultCount);
-    /*if($resultCount < 0)
-    {
-      assert('false; // no result but count query was ok ');
-      return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $slistemQuery);
-    }
-    return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);*/
 
     if(!$bRead)
     {
