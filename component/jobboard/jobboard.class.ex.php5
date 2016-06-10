@@ -462,7 +462,7 @@ class CJobboardEx extends CJobboard
 
 
 //ChromePhp::log($exploded);
-//ChromePhp::log($asFilter['where']);
+ChromePhp::log($asFilter['where']);
 //ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
