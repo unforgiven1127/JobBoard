@@ -419,6 +419,20 @@ ChromePhp::log($avResult);
 
   private function _getJobSearchResult($psSearchId = '')
   {
+
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemDB->dbConnnectSlistem();
+
+    $slistemQuery = "SELECT * FROM sl_position slp
+                     INNER JOIN sl_position_detail spld on slpd.positionfk = slp.sl_positionpk
+                     INNER JOIN sl_company cp on cp.sl_companypf = slp.companyfk
+                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
+
+ChromePhp::log($slistemQuery);
+    $slistemResult = $oDb->ExecuteQuery($slistemQuery);
+    $slistemResult = $slistemResult->getAll();
+ChromePhp::log($slistemQuery);
+
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
     $nCompanyPk = (int)getValue('companypk', 0);
@@ -444,12 +458,12 @@ ChromePhp::log($avResult);
 
     if(!empty($asFilter['where']))
     {
-      $exploded = explode('AND',$asFilter['where']);
+      //$exploded = explode('AND',$asFilter['where']);
       $sQuery.= ' AND '.$asFilter['where'];
     }
 
 
-ChromePhp::log($exploded);
+//ChromePhp::log($exploded);
 ChromePhp::log($asFilter['where']);
 ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
