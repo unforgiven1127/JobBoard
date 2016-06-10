@@ -566,20 +566,20 @@ ChromePhp::log($slistemQuery);
 
     $resultCount = count($positionData);
 
-    if(!$slistemRead)
+    /*if(!$slistemRead)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $slistemQuery);
     }
-    return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
+    return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);*/
 
-    /*if(!$bRead)
+    if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
     }
 
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);*/
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
   }
 
   /**
