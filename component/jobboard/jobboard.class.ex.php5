@@ -478,7 +478,7 @@ class CJobboardEx extends CJobboard
     }
     if(!empty($filterSlistem['where']))
     {
-      $slistemQuery.= ' AND '.$asFilter['where'];
+      $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
 
