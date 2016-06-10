@@ -421,7 +421,19 @@ class CJobboardEx extends CJobboard
   {
 
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT slp.* FROM sl_position slp
+    $slistemQuery = "SELECT slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
+                     slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
+                     slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
+                     cp.sl_companypk as companyfk, slp.status as status, slp.date_crated as posted_date, sll.location as location,
+                     slpd.job_type as job_type, CONCAT(slp.salary_from," - ",slp.salary_to) as salary, slp.salary_from as salary_low,
+                     slp.salary_to as salary_high,  CONCAT(slpd.age_from," - ",slpd.age_to) as age, slp.lvl_japanese as japanese,
+                     slp.lvl_english as english, ind.sl_industrypk as industryfk, slpd.holidays as holidays, slpd.work_hours as work_hours,
+                     slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
+                     slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
+                     slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
+                     ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
+                     cp.name as company_name, slpd.raw_data as raw_data
+                     FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk";
 
 
@@ -545,7 +557,7 @@ ChromePhp::log($filterSlistem['where']);
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-ChromePhp::log($sQuery);
+ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
