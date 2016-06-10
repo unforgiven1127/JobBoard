@@ -221,6 +221,11 @@ switch(trim($_SERVER['SERVER_NAME']))
   case 'jobs.slate.co.jp':
   case 'job.dev.com':
 
+    define('DB_NAME_SLISTEM','slistem');
+    define('DB_SERVER_SLISTEM', '127.0.0.1');
+    define('DB_USER_SLISTEM', 'slistem');
+    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
+
     define('DB_NAME', 'jobboard');
     define('DB_SERVER', '127.0.0.1');
     //define('DB_USER', '');
@@ -234,8 +239,8 @@ switch(trim($_SERVER['SERVER_NAME']))
     define('CONST_CRM_DOMAIN', 'http://'.$_SERVER['SERVER_NAME'].'');
     define('CONST_CRM_MAIL_SENDER', 'no-reply@slate.co.jp');
     define('CONST_DEV_SERVER', 1);
-    define('CONST_DEV_EMAIL', 'dcepulis@slate-ghc.com');
-    define('CONST_DEV_EMAIL_2', 'dcepulis@slate-ghc.com');
+    define('CONST_DEV_EMAIL', 'munir@slate-ghc.com');
+    define('CONST_DEV_EMAIL_2', 'munir@slate-ghc.com');
     define('CONST_SHOW_MENU_BAR', 1);
     define('CONST_VERSION', '1');
     define('CONST_DISPLAY_VERSION', 0);

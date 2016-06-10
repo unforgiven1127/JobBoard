@@ -17,6 +17,27 @@ class CDatabaseEx extends CDatabase
     return $this->dbClose();
   }
 
+  function dbConnnectSlistem()
+  {
+    try
+    {
+      $this->coConnection = @mysql_connect(DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM);
+      if(!$this->coConnection)
+        exit('error '.__LINE__.': No database connection available.');
+
+      $slistemConnected = @mysql_select_db(DB_NAME_SLISTEM);
+
+      if(!$slistemConnected)
+        exit('error '.__LINE__.': Can\'t connect to the database.');
+    }
+    catch (Exception $e)
+    {
+      exit('DB connection failure.');
+    }
+
+    return true;
+  }
+
   function dbConnect()
   {
     try
