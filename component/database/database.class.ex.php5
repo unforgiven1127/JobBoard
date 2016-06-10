@@ -17,7 +17,7 @@ class CDatabaseEx extends CDatabase
     return $this->dbClose();
   }
 
-  function dbConnectSlistem()
+  function dbConnnectSlistem()
   {
     try
     {
@@ -75,7 +75,7 @@ class CDatabaseEx extends CDatabase
     $oDbResult = new CDbResult();
 
 
-    if(!$this->dbConnectSlistem())
+    if(!$this->dbConnnectSlistem())
       exit('can\'t connect db in ExecuteQuery line '.__LINE__);
 
     //doesn't accept UNION query for now
