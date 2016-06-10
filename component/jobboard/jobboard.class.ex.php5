@@ -538,14 +538,14 @@ ChromePhp::log($filterSlistem['where']);
 
     $slistemQuery .= " order by slp.date_created DESC";
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-ChromePhp::log($slistemQuery);
-ChromePhp::log($positionData);
+//ChromePhp::log($slistemQuery);
+//ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-
+ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
