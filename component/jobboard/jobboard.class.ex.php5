@@ -420,7 +420,7 @@ class CJobboardEx extends CJobboard
   private function _getJobSearchResult($psSearchId = '')
   {
 
-    $slistemDB = CDependency::getComponentByName('database');
+    /*$slistemDB = CDependency::getComponentByName('database');
     $slistemDB->dbConnnectSlistem();
 
     $slistemQuery = "SELECT slp.* FROM sl_position slp
@@ -434,7 +434,7 @@ ChromePhp::log($slistemResult);
     $slistemRead = $slistemResult->ReadFirst();
 ChromePhp::log($slistemRead);
     $positionData = $slistemResult->getData();
-ChromePhp::log($positionData);
+ChromePhp::log($positionData);*/
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
