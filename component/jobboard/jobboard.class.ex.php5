@@ -556,6 +556,7 @@ class CJobboardEx extends CJobboard
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+    ChromePhp::log('asdada');
     //echo $sQuery;
 //ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($slistemQuery);
@@ -565,7 +566,7 @@ class CJobboardEx extends CJobboard
     //$slistemRead = $positionData->readFirst();
 
     //$resultCount = count($positionData);
-ChromePhp::log('asdada');
+
     /*if($resultCount < 0)
     {
       assert('false; // no result but count query was ok ');
