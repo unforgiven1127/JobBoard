@@ -38,6 +38,22 @@ class CDatabaseEx extends CDatabase
     return true;
   }
 
+  function slistemGetAllData($query)
+  {
+    mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
+    mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
+
+    $slistemQuery = mysql_query($query);
+    //$result = mysql_fetch_assoc($slistemQuery);
+
+    while($row = mysql_fetch_assoc($slistemQuery)){
+         $result[] = $row;
+    }
+
+    return $result;
+
+  }
+
   function dbConnect()
   {
     try

@@ -420,30 +420,13 @@ class CJobboardEx extends CJobboard
   private function _getJobSearchResult($psSearchId = '')
   {
 
-    /*$slistemDB = CDependency::getComponentByName('database');
-    $slistemDB->dbConnnectSlistem();
-
-    $slistemQuery = "SELECT slp.* FROM sl_position slp
+    $slistemDB = CDependency::getComponentByName('database');
+    $query = "SELECT slp.* FROM sl_position slp
                      INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
 
-ChromePhp::log($slistemQuery);
-    $slistemResult = $slistemDB->ExecuteQuerySlistem($slistemQuery);
-ChromePhp::log($slistemResult);
-    $slistemRead = $slistemResult->ReadFirst();
-ChromePhp::log($slistemRead);
-    $positionData = $slistemResult->getData();
-ChromePhp::log($positionData);*/
-
-    mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
-    mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
-
-    $slistemQuery = mysql_query("SELECT slp.* FROM sl_position slp
-                     INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
-                     INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk");
-    $positionData = mysql_fetch_array($slistemQuery);
+    $positionData = $slistemDB->slistemGetAllData($query);
 
     ChromePhp::log($positionData);
 
