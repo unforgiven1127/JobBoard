@@ -422,9 +422,7 @@ class CJobboardEx extends CJobboard
 
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT slp.* FROM sl_position slp
-                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
-
-                     WHERE slpd.is_public = 1 ";
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk";
 
 
     $oDb = CDependency::getComponentByName('database');
@@ -470,6 +468,8 @@ class CJobboardEx extends CJobboard
 
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
+
+    $slistemQuery.=" WHERE slpd.is_public = 1";
 
     if(!empty($asFilter['where']))
     {
