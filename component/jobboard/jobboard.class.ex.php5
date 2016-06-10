@@ -439,13 +439,11 @@ ChromePhp::log($positionData);*/
     mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-    $slistemQuery = "SELECT slp.* FROM sl_position slp
+    $slistemQuery = mysql_query("SELECT slp.* FROM sl_position slp
                      INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
+                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk");
     $positionData = mysql_fetch_assoc($slistemQuery);
-
-ChromePhp::log($positionData);
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
