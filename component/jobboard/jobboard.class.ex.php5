@@ -424,7 +424,8 @@ class CJobboardEx extends CJobboard
     $query = "SELECT slp.* FROM sl_position slp
                      INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
+                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
+                     WHERE date_created > '2016-02-29 10:31:39' ";
 
     $positionData = $slistemDB->slistemGetAllData($query);
 
