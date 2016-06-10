@@ -549,33 +549,29 @@ class CJobboardEx extends CJobboard
     }
 
     $slistemQuery .= " order by slp.date_created DESC";
-    //$positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-    ChromePhp::log('asdada');
     //echo $sQuery;
 //ChromePhp::log($slistemQuery);
-    $oDbResult = $oDb->ExecuteQuery($slistemQuery);
+    $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
 
     //$slistemRead = $positionData->readFirst();
 
-    //$resultCount = count($positionData);
-
+    $resultCount = count($positionData);
+ChromePhp::log($resultCount);
     /*if($resultCount < 0)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $slistemQuery);
     }
     return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);*/
-
-//ChromePhp::log($slistemQuery);
-//ChromePhp::log($positionData);
 
     if(!$bRead)
     {
@@ -597,7 +593,7 @@ class CJobboardEx extends CJobboard
   {
     if(!assert('!empty($pavResult)'))
       return '';
-ChromePhp::log($pavResult);
+
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
