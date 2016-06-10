@@ -361,12 +361,12 @@ class CJobboardEx extends CJobboard
   {
     if(getValue('do_search', 0))
     {
-      ChromePhp::log('manageSearchHistory');
+      //ChromePhp::log('manageSearchHistory');
       $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB, true);
     }
     else
     {
-      ChromePhp::log('reloadLastSearch');
+      //ChromePhp::log('reloadLastSearch');
       if(getValue('searchId'))
         $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
       else
@@ -374,9 +374,9 @@ class CJobboardEx extends CJobboard
     }
 
     //Populate the sidebar things
-ChromePhp::log('before avResult');
+//ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
-ChromePhp::log($avResult);
+//ChromePhp::log($avResult);
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -467,13 +467,13 @@ ChromePhp::log($positionData);
 
 
 //ChromePhp::log($exploded);
-ChromePhp::log($asFilter['where']);
-ChromePhp::log($sQuery);
+//ChromePhp::log($asFilter['where']);
+//ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
     $nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
 
-ChromePhp::log($nNbResult);
+//ChromePhp::log($nNbResult);
     if($nNbResult == 0)
        return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
 
@@ -524,7 +524,7 @@ ChromePhp::log($nNbResult);
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-ChromePhp::log($sQuery);
+//ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 
@@ -672,7 +672,7 @@ ChromePhp::log($sQuery);
 
 
     $jobDataClear = $pasJobData;
-    ChromePhp::log($jobDataClear);
+    //ChromePhp::log($jobDataClear);
 
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
@@ -1030,7 +1030,7 @@ ChromePhp::log($sQuery);
     {
       $sURL = $oPage->getAjaxUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       //echo phpversion();
-      ChromePhp::log($sURL);
+      //ChromePhp::log($sURL);
       $oForm->setFormParams('', true, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH'],'ajaxTarget' => 'jobListContainer', 'ajaxCallback' => "/*searchFormToggle(false);*/", 'onBeforeSubmit' => "jQuery(body).animate({scrollTop: '0px'}, 600, 'linear'); "));
     }
     else
