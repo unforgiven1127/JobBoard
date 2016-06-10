@@ -562,7 +562,7 @@ ChromePhp::log($slistemQuery);
     $bRead= $oDbResult->readFirst();
 
 
-    $slistemRead = $positionData->readFirst();
+    //$slistemRead = $positionData->readFirst();
 
     //$resultCount = count($positionData);
 
