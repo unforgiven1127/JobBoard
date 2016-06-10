@@ -423,7 +423,7 @@ ChromePhp::log($avResult);
     $slistemDB = CDependency::getComponentByName('database');
     $slistemDB->dbConnnectSlistem();
 
-    $slistemQuery = "SELECT * FROM sl_position slp
+    $slistemQuery = "SELECT slp.* FROM sl_position slp
                      INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
