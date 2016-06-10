@@ -56,7 +56,7 @@ class CDatabaseEx extends CDatabase
       $i = $i + 1;
     }
 
-    return $row;
+    return $result;
 
   }
 
