@@ -17,7 +17,7 @@ class CDatabaseEx extends CDatabase
     return $this->dbClose();
   }
 
-  function dbConnect()
+  function dbConnnectSlistem()
   {
     try
     {
@@ -38,7 +38,7 @@ class CDatabaseEx extends CDatabase
     return true;
   }
 
-  function _dbConnect()
+  function dbConnect()
   {
     try
     {
