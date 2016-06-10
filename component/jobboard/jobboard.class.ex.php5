@@ -558,7 +558,7 @@ class CJobboardEx extends CJobboard
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 //ChromePhp::log($slistemQuery);
-    $oDbResult = $oDb->ExecuteQuery($sQuery);
+    $oDbResult = $oDb->ExecuteQuery($slistemQuery);
     $bRead= $oDbResult->readFirst();
 
 
