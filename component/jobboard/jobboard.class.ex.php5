@@ -565,7 +565,7 @@ class CJobboardEx extends CJobboard
     //$slistemRead = $positionData->readFirst();
 
     //$resultCount = count($positionData);
-ChromePhp::log($oDbResult);
+ChromePhp::log('asdada');
     /*if($resultCount < 0)
     {
       assert('false; // no result but count query was ok ');
