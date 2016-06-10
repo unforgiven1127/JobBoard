@@ -445,6 +445,8 @@ ChromePhp::log($positionData);*/
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk");
     $positionData = mysql_fetch_assoc($slistemQuery);
 
+    ChromePhp::log($positionData);
+
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
     $nCompanyPk = (int)getValue('companypk', 0);
