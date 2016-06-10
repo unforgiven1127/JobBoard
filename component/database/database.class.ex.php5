@@ -38,15 +38,15 @@ class CDatabaseEx extends CDatabase
     return true;
   }
 
-  function dbConnect()
+  function dbConnect($server = DB_SERVER,$user = DB_USER, $password = DB_PASSWORD, $name = DB_NAME)
   {
     try
     {
-      $this->coConnection = @mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD);
+      $this->coConnection = @mysql_connect($server, $user, $password);
       if(!$this->coConnection)
         exit('error '.__LINE__.': No database connection available.');
 
-      $bConnected = @mysql_select_db(DB_NAME);
+      $bConnected = @mysql_select_db($name);
 
       if(!$bConnected)
         exit('error '.__LINE__.': Can\'t connect to the database.');
@@ -68,6 +68,7 @@ class CDatabaseEx extends CDatabase
     }
     return true;
   }
+
 
 
   function ExecuteQuery($psQuery)
