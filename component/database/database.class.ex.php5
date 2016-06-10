@@ -48,7 +48,7 @@ class CDatabaseEx extends CDatabase
 
     $result = array();
     $add = array();
-    $i = 0;
+    //$i = 0;
 
     while(mysql_fetch_assoc($slistemQuery))
     {
@@ -57,10 +57,10 @@ class CDatabaseEx extends CDatabase
       //ChromePhp::log($add);
       array_push($result,(array)$row);
       //$result[] = $row;
-      $i = $i + 1;
+      //$i = $i + 1;
     }
-ChromePhp::log($result);
-    return $row;
+//ChromePhp::log($result);
+    return $result;
 
   }
 
