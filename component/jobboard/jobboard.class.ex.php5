@@ -596,7 +596,7 @@ ChromePhp::log($positionData);
   {
     if(!assert('!empty($pavResult)'))
       return '';
-
+ChromePhp::log($pavResult);
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
@@ -1373,7 +1373,6 @@ ChromePhp::log($positionData);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
-        ChromePhp::log($avResult);
         $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
 
 
