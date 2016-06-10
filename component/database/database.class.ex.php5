@@ -52,7 +52,7 @@ class CDatabaseEx extends CDatabase
     while(mysql_fetch_assoc($slistemQuery))
     {
       $row = mysql_fetch_assoc($slistemQuery);
-      array_push($result[$i],$row);
+      array_push($result,(array)$row);
       //$result[] = $row;
       $i = $i + 1;
     }
