@@ -566,20 +566,20 @@ class CJobboardEx extends CJobboard
 
     $resultCount = count($positionData);
 ChromePhp::log($resultCount);
-    if($resultCount < 0)
+    /*if($resultCount < 0)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $slistemQuery);
     }
-    return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
+    return array('nNbResult' => $resultCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);*/
 
-    /*if(!$bRead)
+    if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
     }
 
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);*/
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
   }
 
   /**
