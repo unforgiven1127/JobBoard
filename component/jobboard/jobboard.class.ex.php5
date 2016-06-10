@@ -430,8 +430,9 @@ ChromePhp::log($avResult);
 
 ChromePhp::log($slistemQuery);
     $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
-    //$slistemResult = $slistemResult->getAll();
-ChromePhp::log($slistemQuery);
+    $slistemRead = $slistemResult->ReadFirst();
+    $slistemResult = $slistemResult->getData();
+ChromePhp::log($slistemResult);
 
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
