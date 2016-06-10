@@ -55,8 +55,8 @@ class CDatabaseEx extends CDatabase
       $result[$i] = $row;
       $i = $i + 1;
     }
-
-    return $result;
+ChromePhp::log($result);
+    return $row;
 
   }
 
