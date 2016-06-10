@@ -421,7 +421,7 @@ class CJobboardEx extends CJobboard
   {
 
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemDB->dbConnect(DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM,DB_NAME_SLISTEM);
+    $slistemDB->dbConnectSlistem();
 
     $slistemQuery = "SELECT slp.* FROM sl_position slp
                      INNER JOIN sl_position_detail spld on spld.positionfk = slp.sl_positionpk
@@ -429,7 +429,7 @@ class CJobboardEx extends CJobboard
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk";
 
 ChromePhp::log($slistemQuery);
-    $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
+    $slistemResult = $slistemDB->ExecuteQuerySlistem($slistemQuery);
 ChromePhp::log($slistemResult);
     $slistemRead = $slistemResult->ReadFirst();
 ChromePhp::log($slistemRead);
