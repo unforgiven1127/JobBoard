@@ -564,7 +564,7 @@ ChromePhp::log($slistemQuery);
 
     $slistemRead = $positionData->readFirst();
 
-    $resultCount = count($positionData);
+    //$resultCount = count($positionData);
 
     /*if(!$slistemRead)
     {
