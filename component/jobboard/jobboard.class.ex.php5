@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
 
 ChromePhp::log($slistemQuery);
     $slistemResult = $slistemDB->ExecuteQuery($slistemQuery);
-    $slistemResult = $slistemResult->getAll();
+    //$slistemResult = $slistemResult->getAll();
 ChromePhp::log($slistemQuery);
 
     $oDb = CDependency::getComponentByName('database');
