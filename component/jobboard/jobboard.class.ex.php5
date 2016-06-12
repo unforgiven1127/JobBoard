@@ -560,7 +560,7 @@ ChromePhp::log($positionData);
 //ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
-ChromePhp::log($oDbResult);
+//ChromePhp::log($oDbResult);
     if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
