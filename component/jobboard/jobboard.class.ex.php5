@@ -551,7 +551,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery .= " order by slp.date_created DESC";
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 //ChromePhp::log($slistemQuery);
-ChromePhp::log($positionData);
+//ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
@@ -560,7 +560,7 @@ ChromePhp::log($positionData);
 //ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
-//ChromePhp::log($oDbResult);
+ChromePhp::log($oDbResult);
     if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
