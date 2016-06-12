@@ -550,6 +550,9 @@ class CJobboardEx extends CJobboard
 
     $slistemQuery .= " order by slp.date_created DESC";
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $positionDataCount = $positionData['count'];
+    $positionData = $positionData['result'];
+    
 ChromePhp::log($slistemQuery);
 ChromePhp::log($positionData);
 
