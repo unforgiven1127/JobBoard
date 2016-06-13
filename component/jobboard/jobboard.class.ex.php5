@@ -1248,7 +1248,7 @@ ChromePhp::log($slistemQuery);
 
     //english level
     if($sLang == 'en')
-      $nFieldDefaultValue = 3;
+      $nFieldDefaultValue = 4;
     else
       $nFieldDefaultValue = -1;
 
@@ -1263,7 +1263,7 @@ ChromePhp::log($slistemQuery);
     if($sLang == 'en')
       $nFieldDefaultValue = -1;
     else
-      $nFieldDefaultValue = 3;
+      $nFieldDefaultValue = 4;
 
     $nFieldValue = (int)getValue('japanese', $nFieldDefaultValue);
     $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
