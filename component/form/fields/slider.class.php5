@@ -191,7 +191,7 @@ class CSlider extends CField
         foreach($this->casFieldParams['legends'] as $nVal => $sLabel)
         {
           if($nCount == 0 || $nCount == ($nLabel-1))
-            $sField.= '<li style="width: '.(0.70*$nWidth).'%;">'.$sLabel.'</li>';
+            $sField.= '<li style="width: '.(0.65*$nWidth).'%;">'.$sLabel.'</li>';
           else
             $sField.= '<li style="width: '.((0.95+(($nLabel-2)/$nLabel)/5) * $nWidth).'%;">'.$sLabel.'</li>';
 
