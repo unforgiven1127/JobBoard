@@ -1244,7 +1244,7 @@ ChromePhp::log($slistemQuery);
 
 
     //languages slider legends
-    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL2'], 3 => $this->casText['TALENT_LANG_LVL3'], 4 => $this->casText['TALENT_LANG_LVL4']);
+    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'],1 => $this->casText['TALENT_LANG_LVL0'], 2 => $this->casText['TALENT_LANG_LVL1'], 3 => $this->casText['TALENT_LANG_LVL2'], 4 => $this->casText['TALENT_LANG_LVL3'], 5 => $this->casText['TALENT_LANG_LVL4']);
 
     //english level
     if($sLang == 'en')
@@ -1253,7 +1253,7 @@ ChromePhp::log($slistemQuery);
       $nFieldDefaultValue = -1;
 
     $nFieldValue = (int)getValue('english', $nFieldDefaultValue);
-    $oForm->addField('slider', 'english', array('label' => $this->casText['TALENT_ENGLISH_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 4, 'range' => 'min', 'legend' => $asSliderLegend));
+    $oForm->addField('slider', 'english', array('label' => $this->casText['TALENT_ENGLISH_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
 
     if($nFieldValue > -1)
       $oForm->setFieldDisplayParams('english', array('fieldid' => 'englishId', 'class' => 'clickable activable'));
