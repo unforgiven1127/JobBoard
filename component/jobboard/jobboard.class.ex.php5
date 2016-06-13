@@ -1244,7 +1244,7 @@ ChromePhp::log($slistemQuery);
 
 
     //languages slider legends
-    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL5'], 3 => $this->casText['TALENT_LANG_LVL2'], 4 => $this->casText['TALENT_LANG_LVL3'], 5 => $this->casText['TALENT_LANG_LVL4']);
+    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL2'], 3 => $this->casText['TALENT_LANG_LVL3'], 4 => $this->casText['TALENT_LANG_LVL4']);
 
     //english level
     if($sLang == 'en')
