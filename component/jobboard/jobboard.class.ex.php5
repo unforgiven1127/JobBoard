@@ -552,7 +552,7 @@ class CJobboardEx extends CJobboard
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
     $positionDataCount = $positionData['count'];
     $positionData = $positionData['result'];
-    
+
 ChromePhp::log($slistemQuery);
 ChromePhp::log($positionData);
 
@@ -570,7 +570,8 @@ ChromePhp::log($positionData);
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
     }
 
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
+    return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
+    //return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
   }
 
   /**
