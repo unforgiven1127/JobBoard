@@ -550,6 +550,7 @@ ChromePhp::log($avResult);
     }
 
     $slistemQuery .= " order by slp.date_created DESC";
+    ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
     $positionDataCount = $positionData['count'];
     $positionData = $positionData['result'];
@@ -561,7 +562,7 @@ ChromePhp::log($avResult);
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-ChromePhp::log($slistemQuery);
+
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 //ChromePhp::log($oDbResult);
@@ -952,7 +953,7 @@ ChromePhp::log($slistemQuery);
         if($nEnglish >= 0)
         {
           $eng = ((int)$nEnglish*2);
-          $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
+          $asWhereSql[] = ' slp.lvl_english/2  <= "'.$nEnglish.'"';
         }
 
         if($nJapanese >= 0)
