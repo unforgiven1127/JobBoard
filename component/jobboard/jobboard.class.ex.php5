@@ -894,7 +894,7 @@ ChromePhp::log($avResult);
     //if not a global search (compact form) control the fields from the full form
     if(!$bGlobalSearch)
     {
-      $nEnglish = (int)getValue('english', -1);
+      $nEnglish = 6;
       $nJapanese = (int)getValue('japanese', -1);
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
@@ -953,7 +953,7 @@ ChromePhp::log($avResult);
         if($nEnglish >= 0)
         {
           $eng = ((int)$nEnglish*2);
-          $asWhereSql[] = ' slp.lvl_english/2  <= "'.$nEnglish.'"';
+          $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
         }
 
         if($nJapanese >= 0)
