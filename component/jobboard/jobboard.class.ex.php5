@@ -949,10 +949,7 @@ ChromePhp::log($slistemQuery);
       else
       {
         if($nEnglish >= 0)
-        {
-          $eng = $nEnglish;
           $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
-        }
 
         if($nJapanese >= 0)
           $asWhereSql[] = ' slp.lvl_japanese <= "'.$nJapanese.'"';
