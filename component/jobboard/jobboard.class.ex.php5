@@ -1833,8 +1833,9 @@ ChromePhp::log($slistemQuery);
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
                      WHERE slp.sl_positionpk = ".$pnPk;
 
-    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+var_dump($positionData);
     ChromePhp::log($positionData);
 
     if($bRead)
