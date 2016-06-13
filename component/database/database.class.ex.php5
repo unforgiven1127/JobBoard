@@ -55,7 +55,7 @@ class CDatabaseEx extends CDatabase
       //mysql_fetch_assoc($slistemQuery);
 
       //ChromePhp::log($add);
-      //array_push($result,$row);
+      array_push($result,$row);
       //$result[] = $row;
       //$i = $i + 1;
     }
