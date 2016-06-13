@@ -549,9 +549,7 @@ ChromePhp::log($avResult);
     }
 
     $slistemQuery .= " order by slp.date_created DESC";
-    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-    $positionDataCount = $positionData['count'];
-    $positionData = $positionData['result'];
+
 
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
@@ -559,8 +557,14 @@ ChromePhp::log($avResult);
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+    $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 ChromePhp::log($slistemQuery);
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $positionDataCount = $positionData['count'];
+    $positionData = $positionData['result'];
+
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 //ChromePhp::log($oDbResult);
