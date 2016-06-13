@@ -1934,7 +1934,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sEnglish = $this->_getLanguageLevel((int)$positionData['english']);
+        $sEnglish = $this->_getLanguageLevel((int)$positionData['english']/2);
         $sHTML.= $oHTML->getText($sEnglish);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -1947,7 +1947,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sJapanese = $this->_getLanguageLevel((int)$positionData['japanese']);
+        $sJapanese = $this->_getLanguageLevel((int)$positionData['japanese']/2);
         $sHTML.= $oHTML->getText($sJapanese);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -1957,10 +1957,6 @@ ChromePhp::log($slistemQuery);
       if(isset($positionData['name']))
       {
         $sIndustry = $positionData['name'];
-      }
-      elseif(isset($this->casText[$positionData['parent_industry']]))
-      {
-        $sIndustry = $this->casText[$positionData['parent_industry']];
       }
       else
         $sIndustry = ' - ';
