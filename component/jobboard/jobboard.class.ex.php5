@@ -551,9 +551,9 @@ ChromePhp::log($avResult);
 
     $slistemQuery .= " order by slp.date_created DESC";
     ChromePhp::log($slistemQuery);
-    //$positionData = $slistemDB->slistemGetAllData($slistemQuery);
-    //$positionDataCount = $positionData['count'];
-    //$positionData = $positionData['result'];
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $positionDataCount = $positionData['count'];
+    $positionData = $positionData['result'];
 
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
@@ -573,8 +573,7 @@ ChromePhp::log($avResult);
     }
 
     //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
-    //return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData);
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData);
   }
 
   /**
