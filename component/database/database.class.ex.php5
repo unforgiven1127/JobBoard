@@ -40,15 +40,10 @@ class CDatabaseEx extends CDatabase
 
   function slistemGetAllData($query)
   {
-    mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
+    $link = mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-    $slistemQuery = mysql_query($query);
-    if(!$slistemQuery)
-    {
-      ChromePhp::log(mysql_error());exit;
-      die("Database query failed: " . mysql_error());
-    }
+    $slistemQuery = mysql_query($link,$query);
     //$result = mysql_fetch_assoc($slistemQuery);
 
     $result = array();
