@@ -944,8 +944,8 @@ ChromePhp::log($slistemQuery);
 
       if(($nEnglish >= 0 && $nJapanese >= 0))
       {
-        $eng = (int)$nEnglish*2;
-        $jpn = (int)$nJapanese*2;
+        $eng = (int)$nEnglish+(int)$nEnglish;
+        $jpn = (int)$nJapanese+(int)$nJapanese;
 
         $asWhereSql[] = ' (slp.lvl_english  <= "'.$eng.'" OR  slp.lvl_japanese <= "'.$jpn.'") ';
       }
@@ -953,13 +953,13 @@ ChromePhp::log($slistemQuery);
       {
         if($nEnglish >= 0)
         {
-          $eng = (int)$nEnglish*2;
+          $eng = (int)$nEnglish+(int)$nEnglish;
           $asWhereSql[] = ' slp.lvl_english  <= "'.$eng.'"';
         }
 
         if($nJapanese >= 0)
         {
-          $jpn = (int)$nJapanese*2;
+          $jpn = (int)$nJapanese+(int)$nJapanese;
           $asWhereSql[] = ' slp.lvl_japanese <= "'.$jpn.'"';
         }
       }
