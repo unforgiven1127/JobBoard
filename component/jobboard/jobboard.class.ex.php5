@@ -1769,8 +1769,8 @@ ChromePhp::log($slistemQuery);
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 
-      //$sHTML.= $this->_getJobDetailInformation($pnPk);
-      $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
+      $sHTML.= $this->_getJobDetailInformation("1685"); // test
+      //$sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
       if($oPage->getDeviceType() != CONST_PAGE_DEVICE_TYPE_PHONE)
