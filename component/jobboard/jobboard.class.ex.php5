@@ -372,7 +372,7 @@ class CJobboardEx extends CJobboard
       else
         $sSearchId = reloadLastSearch($this->csUid, CONST_TA_TYPE_JOB);
     }
-ChromePhp::log('before avResult');
+//ChromePhp::log('before avResult');
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
@@ -390,7 +390,15 @@ ChromePhp::log($avResult);
     if(empty($sData) || $sData == 'null' || $sData == null)
        return array('data' => $this->casText['TALENT_SORRY_ERROR'], 'action' => '$(\'.searchTitle\').html(\''.addslashes($sMessage).'\'); searchTitle(\'\', false, false); $(\'body\').scrollTop();');
 
-    $sMessage = $this->_getSearchMessage($avResult['nNbResult'], true);
+     if(isset($avResult['positionDataCount']))
+     {
+        $sMessage = $this->_getSearchMessage($avResult['positionDataCount'], true);
+     }
+     else
+     {
+        $sMessage = $this->_getSearchMessage($avResult['nNbResult'], true);
+     }
+
     $sData =  CEncoding::toUTF8($sData);
 
      return array('data' => $sData, 'action' => '$(\'.searchTitle\').html(\''.addslashes($sMessage).'\'); searchTitle(\'\', false, true); $(\'body\').scrollTop();');
