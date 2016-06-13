@@ -56,7 +56,7 @@ class CDatabaseEx extends CDatabase
                      ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
                      cp.name as company_name, slpd.raw_data as raw_data
                      FROM sl_position slp
-                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk  INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location   INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk  WHERE slpd.is_public = 1 AND  slp.lvl_english  <= '4'  order by slp.date_created DESC");
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk  INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location   INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk  WHERE slpd.is_public = 1 AND  slp.lvl_english/2  <= '4'  order by slp.date_created DESC");
     //$result = mysql_fetch_assoc($slistemQuery);
 
     $result = array();
