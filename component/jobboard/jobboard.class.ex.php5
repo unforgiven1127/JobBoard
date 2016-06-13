@@ -1769,7 +1769,7 @@ ChromePhp::log($slistemQuery);
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 
-      $sHTML.= $this->_getJobDetailInformation("1685"); // test
+      $sHTML.= $this->_getJobDetailInformation(1685); // test
       //$sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
