@@ -42,11 +42,12 @@ class CDatabaseEx extends CDatabase
   {
     mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
-
+ChromePhp::log($query);
     $slistemQuery = mysql_query($query);
+    ChromePhp::log($slistemQuery);
     //$result = mysql_fetch_assoc($slistemQuery);
 
-    $result = array();
+    /*$result = array();
     $return = array();
     $i = 0;
 
@@ -62,7 +63,7 @@ class CDatabaseEx extends CDatabase
 //ChromePhp::log($result);
     $return['count'] = $i;
     $return['result'] = $result;
-    return $return;
+    return $return;*/
 
   }
 
