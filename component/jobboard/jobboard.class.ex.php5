@@ -1817,8 +1817,9 @@ ChromePhp::log($slistemQuery);
 
     if(isset($positionData))
     {
-      var_dump($positionData);
+
       $positionData = $positionData[0];
+      var_dump($positionData);
       /*if($positionData['lang'] == 'jp')
       {
         $asSibling = $this->_getSiblingPosition($pnPk, 'jp');
