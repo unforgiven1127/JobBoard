@@ -563,8 +563,7 @@ ChromePhp::log($avResult);
 //ChromePhp::log($slistemQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
-$testArray = array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
-ChromePhp::log($testArray);
+//ChromePhp::log($oDbResult);
     if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
