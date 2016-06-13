@@ -61,7 +61,7 @@ class CDatabaseEx extends CDatabase
     }
 //ChromePhp::log($result);
     $return['count'] = 0;
-    $return['result'] = null;
+    $return['result'] = $result;
     return $return;
 
   }
