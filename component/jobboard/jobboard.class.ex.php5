@@ -376,9 +376,7 @@ ChromePhp::log('before avResult');
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
-    var_dump($avResult);
-    exit;
-ChromePhp::log($avResult);
+
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
