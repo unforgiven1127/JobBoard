@@ -953,6 +953,9 @@ ChromePhp::log($slistemQuery);
           $eng = ((int)$nEnglish*2);
           ChromePhp::log($eng);
           ChromePhp::log($nEnglish);
+          echo '<br><br>';
+          var_dump($asRecords);
+          var_dump($asRecords);
           $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
         }
 
