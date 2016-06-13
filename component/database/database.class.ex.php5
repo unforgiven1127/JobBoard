@@ -50,7 +50,7 @@ class CDatabaseEx extends CDatabase
     $return = array();
     $i = 0;
 
-    while($row = mysql_fetch_assoc($slistemQuery))
+    /*while($row = mysql_fetch_assoc($slistemQuery))
     {
       //mysql_fetch_assoc($slistemQuery);
 
@@ -58,10 +58,10 @@ class CDatabaseEx extends CDatabase
       array_push($result,$row);
       //$result[] = $row;
       $i = $i + 1;
-    }
+    }*/
 //ChromePhp::log($result);
-    $return['count'] = $i;
-    $return['result'] = $result;
+    $return['count'] = 0;
+    $return['result'] = null;
     return $return;
 
   }
