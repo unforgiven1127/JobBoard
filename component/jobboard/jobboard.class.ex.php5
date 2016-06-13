@@ -950,7 +950,7 @@ ChromePhp::log($slistemQuery);
       {
         if($nEnglish >= 0)
         {
-          $eng = $nEnglish;
+          $eng = 6;
           $asWhereSql[] = ' slp.lvl_english  <= "'.$eng.'"';
         }
 
