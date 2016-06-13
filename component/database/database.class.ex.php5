@@ -40,7 +40,7 @@ class CDatabaseEx extends CDatabase
 
   function slistemGetAllData($query)
   {
-    $link = mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
+    mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
     $slistemQuery = mysql_query($query);
@@ -57,11 +57,11 @@ class CDatabaseEx extends CDatabase
       //ChromePhp::log($add);
       array_push($result,$row);
       //$result[] = $row;
-      //$i = $i + 1;
+      $i = $i + 1;
     }
-ChromePhp::log($result);
-    $return['count'] = 0;
-    $return['result'] = null;
+//ChromePhp::log($result);
+    $return['count'] = $i;
+    $return['result'] = $result;
     return $return;
 
   }
