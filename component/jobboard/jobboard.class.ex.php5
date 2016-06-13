@@ -831,10 +831,10 @@ ChromePhp::log($slistemQuery);
 //var_dump($pasJobData);
 //exit;
 
-        if(!isset($pasJobData['jobfk']) || empty($pasJobData['jobfk']))
+        if(!isset($jobDataClear['jobfk']) || empty($jobDataClear['jobfk']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
-          $sIdentfier = $pasJobData['jobfk'];
+          $sIdentfier = $jobDataClear['jobfk'];
         }
         else
         {
