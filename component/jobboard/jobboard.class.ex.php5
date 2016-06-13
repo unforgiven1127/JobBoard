@@ -944,18 +944,18 @@ ChromePhp::log($slistemQuery);
 
       if(($nEnglish >= 0 && $nJapanese >= 0))
       {
-        $asWhereSql[] = ' (slp.lvl_english  <= "'.$nEnglish.'" OR  slp.lvl_japanese <= "'.$nJapanese.'") ';
+        $asWhereSql[] = ' (slp.lvl_english/2  <= "'.$nEnglish.'" OR  slp.lvl_japanese/2 <= "'.$nJapanese.'") ';
       }
       else
       {
         if($nEnglish >= 0)
         {
           $eng = ((int)$nEnglish*2);
-          $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
+          $asWhereSql[] = ' slp.lvl_english/2  <= "'.$nEnglish.'"';
         }
 
         if($nJapanese >= 0)
-          $asWhereSql[] = ' slp.lvl_japanese <= "'.$nJapanese.'"';
+          $asWhereSql[] = ' slp.lvl_japanese/2 <= "'.$nJapanese.'"';
       }
 
       //the salary field minimum value is 41666Y, .
