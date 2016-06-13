@@ -1954,9 +1954,9 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oHTML->getBlocEnd();
 
       //Industry
-      if(isset($this->casText[$positionData['industry_name']]))
+      if(isset($this->casText[$positionData['name']]))
       {
-        $sIndustry = $this->casText[$positionData['industry_name']];
+        $sIndustry = $this->casText[$positionData['name']];
       }
       elseif(isset($this->casText[$positionData['parent_industry']]))
       {
