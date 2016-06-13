@@ -784,7 +784,7 @@ ChromePhp::log($slistemQuery);
 
 
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobClassFirst'));
-        $sURL =  $oPage->getUrl($this->_getUid(), CONST_ACTION_VIEW, CONST_TA_TYPE_JOB,'999');
+        $sURL =  $oPage->getUrl($this->_getUid(), CONST_ACTION_VIEW, CONST_TA_TYPE_JOB,(int)$pasJobData['positionpk']);
         $sHTML.= $oHTML->getLink($oHTML->getText($sTitle, array('class'=>'subTitle')), $sURL, array('title' => $pasJobData['position_title']));
       $sHTML.= $oHTML->getBlocEnd();
 
