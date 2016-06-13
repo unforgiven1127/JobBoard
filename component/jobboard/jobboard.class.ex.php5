@@ -947,20 +947,20 @@ ChromePhp::log($slistemQuery);
         $eng = (int)$nEnglish+(int)$nEnglish;
         $jpn = (int)$nJapanese+(int)$nJapanese;
 
-        $asWhereSql[] = ' (slp.lvl_english  <= "'.$eng.'" OR  slp.lvl_japanese <= "'.$jpn.'") ';
+        //$asWhereSql[] = ' (slp.lvl_english  <= "'.$eng.'" OR  slp.lvl_japanese <= "'.$jpn.'") ';
       }
       else
       {
         if($nEnglish >= 0)
         {
           $eng = (int)$nEnglish+(int)$nEnglish;
-          $asWhereSql[] = ' slp.lvl_english  <= "'.$eng.'"';
+          //$asWhereSql[] = ' slp.lvl_english  <= "'.$eng.'"';
         }
 
         if($nJapanese >= 0)
         {
           $jpn = (int)$nJapanese+(int)$nJapanese;
-          $asWhereSql[] = ' slp.lvl_japanese <= "'.$jpn.'"';
+          //$asWhereSql[] = ' slp.lvl_japanese <= "'.$jpn.'"';
         }
       }
 
