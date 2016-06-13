@@ -831,7 +831,7 @@ ChromePhp::log($slistemQuery);
 //var_dump($jobDataClear);
 //exit;
 
-        if(!isset($jobDataClear['positionpk']) || empty($jobDataClear['positionpk']))
+        if(isset($jobDataClear['positionpk']) && !empty($jobDataClear['positionpk']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
           $sIdentfier = $jobDataClear['positionpk'];
