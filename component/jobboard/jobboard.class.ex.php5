@@ -831,13 +831,15 @@ ChromePhp::log($slistemQuery);
 //var_dump($pasJobData);
 //exit;
 
-        if(!isset($asJobData['jobID']) || empty($asJobData['jobID']))
+        if(!isset($asJobData['jobfk']) || empty($asJobData['jobfk']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
-          $sIdentfier = $pasJobData['external_key'];
+          $sIdentfier = $pasJobData['jobfk'];
         }
         else
+        {
           $sIdentfier = 'SL'.(int)$asJobData['jobID'];
+        }
 
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
