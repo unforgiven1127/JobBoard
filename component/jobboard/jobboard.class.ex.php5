@@ -1769,7 +1769,8 @@ ChromePhp::log($slistemQuery);
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 
-      $sHTML.= $this->_getJobDetailInformation($pnPk);
+      //$sHTML.= $this->_getJobDetailInformation($pnPk);
+      $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
       if($oPage->getDeviceType() != CONST_PAGE_DEVICE_TYPE_PHONE)
@@ -1886,10 +1887,10 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        if($positionData['company_name'])
-          $sHTML.= $oHTML->getText($positionData['company_name']);
-        else
-          $sHTML.= $oHTML->getText('Company Name not visible');
+        //if($positionData['company_name'])
+          //$sHTML.= $oHTML->getText($positionData['company_name']);
+        //else
+          $sHTML.= $oHTML->getText('Company Name not visible'); // simdilik hepsini not wisible yaptik
 
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -1902,7 +1903,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sHTML.= $oHTML->getText($oDbResult->getFieldValue('location'));
+        $sHTML.= $oHTML->getText($positionData['location']);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
       $sHTML.= $oHTML->getBlocEnd();
@@ -1926,7 +1927,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sEnglish = $this->_getLanguageLevel((int)$oDbResult->getFieldValue('english'));
+        $sEnglish = $this->_getLanguageLevel((int)$positionData['english']);
         $sHTML.= $oHTML->getText($sEnglish);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -1939,20 +1940,20 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sJapanese = $this->_getLanguageLevel((int)$oDbResult->getFieldValue('japanese'));
+        $sJapanese = $this->_getLanguageLevel((int)$positionData['japanese']);
         $sHTML.= $oHTML->getText($sJapanese);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
       $sHTML.= $oHTML->getBlocEnd();
 
       //Industry
-      if(isset($this->casText[$oDbResult->getFieldValue('industry_name')]))
+      if(isset($this->casText[$positionData['industry_name']]))
       {
-        $sIndustry = $this->casText[$oDbResult->getFieldValue('industry_name')];
+        $sIndustry = $this->casText[$positionData['industry_name']];
       }
-      elseif(isset($this->casText[$oDbResult->getFieldValue('parent_industry')]))
+      elseif(isset($this->casText[$positionData['parent_industry']]))
       {
-        $sIndustry = $this->casText[$oDbResult->getFieldValue('parent_industry')];
+        $sIndustry = $this->casText[$positionData['parent_industry']];
       }
       else
         $sIndustry = ' - ';
@@ -1969,7 +1970,7 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oHTML->getBlocEnd();
 
       //Career Level
-      $sCareer = $oDbResult->getFieldValue('career_level');
+      $sCareer = $positionData['career_level'];
       if(!empty($sCareer))
       {
         $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
@@ -1995,7 +1996,7 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oHTML->getBlocEnd();*/
 
       //Train Station Display if exists
-      $sStation = $oDbResult->getFieldValue('station');
+      $sStation = $positionData['station'];
       if(!empty($sStation))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2004,14 +2005,14 @@ ChromePhp::log($slistemQuery);
           $sHTML.= $oHTML->getBlocEnd();
 
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-          $sHTML.= $oHTML->getText($oDbResult->getFieldValue('station'));
+          $sHTML.= $oHTML->getText($positionData['station']);
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
       }
 
       //Holidays Display if exists
-      $sHolidays = $oDbResult->getFieldValue('holidays');
+      $sHolidays = $positionData['holidays'];
       if(!empty($sHolidays))
       {
         $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
@@ -2020,14 +2021,14 @@ ChromePhp::log($slistemQuery);
           $sHTML.= $oHTML->getBlocEnd();
 
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-          $sHTML.= $oHTML->getText($oDbResult->getFieldValue('holidays'));
+          $sHTML.= $oHTML->getText($positionData['holidays']);
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
       }
 
       //Work Hours Display if exists
-      $sWorkHours = $oDbResult->getFieldValue('work_hours');
+      $sWorkHours = $oDbResult->$positionData['work_hours'];
       if(!empty($sWorkHours))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2036,7 +2037,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sHTML.= $oHTML->getText($oDbResult->getFieldValue('work_hours'));
+        $sHTML.= $oHTML->getText($positionData['work_hours']);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'floatHack'));
         $sHTML.= $oHTML->getBlocEnd();
@@ -2044,7 +2045,7 @@ ChromePhp::log($slistemQuery);
       }
 
        //Requirements
-      $sRequirements = $oDbResult->getFieldValue('requirements');
+      $sRequirements = $positionData['requirements'];
       if(!empty($sRequirements))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2056,14 +2057,14 @@ ChromePhp::log($slistemQuery);
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
             $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-            $sHTML.= $oHTML->getText(nl2br($oDbResult->getFieldValue('requirements')));
+            $sHTML.= $oHTML->getText(nl2br($positionData['requirements']));
             $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
       }
 
       //Description
-      $sDescription = $oDbResult->getFieldValue('position_desc');
+      $sDescription = $positionData['position_desc'];
       if(!empty($sDescription))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
