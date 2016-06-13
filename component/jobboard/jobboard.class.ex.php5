@@ -1835,8 +1835,8 @@ ChromePhp::log($slistemQuery);
 
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-var_dump($positionData);
-    ChromePhp::log($positionData);
+//var_dump($positionData);
+    //ChromePhp::log($positionData);
 
     if($bRead)
     {
