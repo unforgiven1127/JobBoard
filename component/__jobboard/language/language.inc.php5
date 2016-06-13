@@ -452,7 +452,6 @@ regarding similar positions',
                'TALENT_LANG_LVL2' => 'Business',
                'TALENT_LANG_LVL3' => 'Fluent',
                'TALENT_LANG_LVL4' => 'Native',
-               'TALENT_LANG_LVL5' => 'Conversational',
                'TALENT_SELECT_LANGUAGE' => 'Select language',
                'TALENT_POSITION_ID' => 'Position ID',
 
