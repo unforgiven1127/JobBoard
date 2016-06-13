@@ -44,9 +44,11 @@ class CDatabaseEx extends CDatabase
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
     $slistemQuery = mysql_query($query);
-    if(!$slistemQuery) {
-    die("Database query failed: " . mysql_error());
-}
+    if(!$slistemQuery)
+    {
+      ChromePhp::log(mysql_error());
+      die("Database query failed: " . mysql_error());
+    }
     //$result = mysql_fetch_assoc($slistemQuery);
 
     $result = array();
