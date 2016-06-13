@@ -43,7 +43,7 @@ class CDatabaseEx extends CDatabase
     $link = mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-    $slistemQuery = mysql_query($link,$query);
+    $slistemQuery = mysql_query($query);
     //$result = mysql_fetch_assoc($slistemQuery);
 
     $result = array();
