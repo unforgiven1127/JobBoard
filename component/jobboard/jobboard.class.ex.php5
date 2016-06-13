@@ -549,9 +549,9 @@ ChromePhp::log($avResult);
     }
 
     $slistemQuery .= " order by slp.date_created DESC";
-    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-    $positionDataCount = $positionData['count'];
-    $positionData = $positionData['result'];
+    //$positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    //$positionDataCount = $positionData['count'];
+    //$positionData = $positionData['result'];
 
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
@@ -571,7 +571,7 @@ ChromePhp::log($slistemQuery);
     }
 
     //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData);
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
   }
 
   /**
@@ -952,7 +952,7 @@ ChromePhp::log($slistemQuery);
         {
           $eng = ($nEnglish*2);
           ChromePhp::log($eng);
-          $asWhereSql[] = " slp.lvl_english  <= 6 ";
+          $asWhereSql[] = " slp.lvl_english  <= $nEnglish ";
         }
 
         if($nJapanese >= 0)
