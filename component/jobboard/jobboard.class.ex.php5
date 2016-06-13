@@ -445,7 +445,6 @@ ChromePhp::log($avResult);
 
     $asFilter = $this->_getSqlJobSearch();
     $filterSlistem = $this->_getSqlJobSearchSlistem();
-    //$filterSlistem = str_replace('slp.lvl_english','slp.lvl_english/2',$filterSlistem);
 
     $sQuery = 'SELECT count(DISTINCT pos.positionpk) as nCount ';
     $sQuery.= ' FROM position as pos ';
@@ -951,7 +950,7 @@ ChromePhp::log($slistemQuery);
       {
         if($nEnglish >= 0)
         {
-          $eng = ((int)$nEnglish*2);
+          //$eng = ((int)$nEnglish*2);
           $asWhereSql[] = ' slp.lvl_english  <= "'.$nEnglish.'"';
         }
 
@@ -1245,16 +1244,16 @@ ChromePhp::log($slistemQuery);
 
 
     //languages slider legends
-    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'],1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL5'], 3 => $this->casText['TALENT_LANG_LVL2'], 4 => $this->casText['TALENT_LANG_LVL3'], 5 => $this->casText['TALENT_LANG_LVL4']);
+    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL2'], 3 => $this->casText['TALENT_LANG_LVL3'], 4 => $this->casText['TALENT_LANG_LVL4']);
 
     //english level
     if($sLang == 'en')
-      $nFieldDefaultValue = 4;
+      $nFieldDefaultValue = 3;
     else
       $nFieldDefaultValue = -1;
 
     $nFieldValue = (int)getValue('english', $nFieldDefaultValue);
-    $oForm->addField('slider', 'english', array('label' => $this->casText['TALENT_ENGLISH_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
+    $oForm->addField('slider', 'english', array('label' => $this->casText['TALENT_ENGLISH_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 4, 'range' => 'min', 'legend' => $asSliderLegend));
 
     if($nFieldValue > -1)
       $oForm->setFieldDisplayParams('english', array('fieldid' => 'englishId', 'class' => 'clickable activable'));
@@ -1264,10 +1263,10 @@ ChromePhp::log($slistemQuery);
     if($sLang == 'en')
       $nFieldDefaultValue = -1;
     else
-      $nFieldDefaultValue = 4;
+      $nFieldDefaultValue = 3;
 
     $nFieldValue = (int)getValue('japanese', $nFieldDefaultValue);
-    $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
+    $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 4, 'range' => 'min', 'legend' => $asSliderLegend));
 
     if($nFieldValue > -1)
       $oForm->setFieldDisplayParams('japanese', array('fieldid' => 'japaneseId', 'class' => 'clickable activable'));
