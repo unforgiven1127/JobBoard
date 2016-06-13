@@ -1834,6 +1834,8 @@ ChromePhp::log($slistemQuery);
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
+    ChromePhp::log($positionData);
+
     if($bRead)
     {
       if($oDbResult->getFieldValue('lang') == 'en')
