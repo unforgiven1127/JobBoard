@@ -1791,6 +1791,11 @@ ChromePhp::log($slistemQuery);
 
   private function _getJobDetailInformationSlistemDB($pnPk)
   {
+    $oHTML = CDependency::getComponentByName('display');
+    $oPage = CDependency::getComponentByName('page');
+
+    $sHTML = $oHTML->getBlocStart('',array('class'=>'jobCentreSection simpleRedBorderTop'));
+
     $slistemDB = CDependency::getComponentByName('database');
 
     $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
@@ -2102,7 +2107,7 @@ ChromePhp::log($slistemQuery);
     {
       $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
     }
-var_dump($sHTML);
+
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
     return $sHTML;
