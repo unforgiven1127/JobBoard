@@ -694,11 +694,11 @@ ChromePhp::log($slistemQuery);
       {
         foreach ($positionData as $key => $value)
         {
-          $asJobData['position_desc'] = str_replace('\n', "\n", $positionData['position_desc']);
-          $asJobData['position_title'] = preg_replace($asMatch, $asReplacement, $positionData['position_title']);
-          $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $positionData['position_desc']);
-          $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $positionData['company_name']);
-          $asJobData['location'] = preg_replace($asMatch, $asReplacement, $positionData['location']);
+          $asJobData['position_desc'] = str_replace('\n', "\n", $value['position_desc']);
+          $asJobData['position_title'] = preg_replace($asMatch, $asReplacement, $value['position_title']);
+          $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $value['position_desc']);
+          $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $value['company_name']);
+          $asJobData['location'] = preg_replace($asMatch, $asReplacement, $value['location']);
 
           $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
         }
