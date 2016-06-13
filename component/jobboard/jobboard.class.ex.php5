@@ -613,11 +613,11 @@ ChromePhp::log($testArray);
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
 
-    if(isset($pavResult['positionData']) && $pavResult['positionData'] != null)
+    /*if(isset($pavResult['positionData']) && $pavResult['positionData'] != null)
     {
       $positionData = $pavResult['positionData'];
       ChromePhp::log($positionData);
-    }
+    }*/
 
     if(!$oDbResult)
       $bRead = false;
