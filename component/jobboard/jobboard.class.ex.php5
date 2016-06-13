@@ -570,8 +570,8 @@ ChromePhp::log('before avResult');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
     }
 
-    return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
-    //return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
+    //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery);
   }
 
   /**
