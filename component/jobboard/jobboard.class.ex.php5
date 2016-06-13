@@ -828,8 +828,8 @@ ChromePhp::log($slistemQuery);
         $sJobData = $pasJobData['raw_data'];
         $asJobData = (array)@unserialize($sJobData);
 
-//var_dump($pasJobData);
-//exit;
+var_dump($pasJobData);
+exit;
 
         if(!isset($asJobData['jobfk']) || empty($asJobData['jobfk']))
         {
