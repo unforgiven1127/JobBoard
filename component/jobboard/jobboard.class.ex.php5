@@ -372,7 +372,7 @@ class CJobboardEx extends CJobboard
       else
         $sSearchId = reloadLastSearch($this->csUid, CONST_TA_TYPE_JOB);
     }
-
+ChromePhp::log('before avResult');
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
