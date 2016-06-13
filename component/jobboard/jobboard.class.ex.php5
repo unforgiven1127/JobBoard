@@ -831,7 +831,7 @@ ChromePhp::log($slistemQuery);
 var_dump($pasJobData);
 exit;
 
-        if(!isset($asJobData['jobfk']) || empty($asJobData['jobfk']))
+        if(!isset($pasJobData['jobfk']) || empty($pasJobData['jobfk']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
           $sIdentfier = $pasJobData['jobfk'];
@@ -852,7 +852,7 @@ exit;
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText('Industry: ');
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($jobDataClear['name']);
+          $sHTML.= $oHTML->getText($pasJobData['name']);
         $sHTML.= $oHTML->getListItemEnd();
 
 
