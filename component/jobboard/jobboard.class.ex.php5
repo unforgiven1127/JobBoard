@@ -895,6 +895,9 @@ ChromePhp::log($avResult);
     if(!$bGlobalSearch)
     {
       $test = getValue('english', -1);
+      ChromePhp::log($test);
+      $test = $test*2;
+      ChromePhp::log($test);
       $nEnglish = (int)$test;
       $nJapanese = (int)getValue('japanese', -1);
       $sOccupation = strtolower(getValue('occupation'));
