@@ -1819,7 +1819,7 @@ ChromePhp::log($slistemQuery);
     {
 
       $positionData = $positionData[0];
-      var_dump($positionData);
+      //var_dump($positionData);
       /*if($positionData['lang'] == 'jp')
       {
         $asSibling = $this->_getSiblingPosition($pnPk, 'jp');
@@ -2102,7 +2102,7 @@ ChromePhp::log($slistemQuery);
     {
       $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
     }
-
+var_dump($sHTML);
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
     return $sHTML;
