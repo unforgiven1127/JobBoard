@@ -45,7 +45,7 @@ class CDatabaseEx extends CDatabase
 ChromePhp::log($query);
     //$slistemQuery = mysql_query($query);
     //ChromePhp::log($slistemQuery);
-    //$result = mysql_fetch_assoc($slistemQuery);
+    $result = mysql_fetch_assoc($query);
 
     /*$result = array();
     $return = array();
