@@ -951,8 +951,6 @@ ChromePhp::log($slistemQuery);
         if($nEnglish >= 0)
         {
           $eng = ((int)$nEnglish*2);
-          ChromePhp::log($eng);
-          ChromePhp::log($nEnglish);
           echo '<br><br>';
           var_dump($nEnglish);
           var_dump($eng);
