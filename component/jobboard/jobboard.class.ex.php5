@@ -699,6 +699,8 @@ ChromePhp::log($slistemQuery);
           $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $positionData['position_desc']);
           $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $positionData['company_name']);
           $asJobData['location'] = preg_replace($asMatch, $asReplacement, $positionData['location']);
+
+          $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
         }
       }
       else
