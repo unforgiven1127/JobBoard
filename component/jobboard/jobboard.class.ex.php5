@@ -700,7 +700,7 @@ ChromePhp::log($slistemQuery);
           $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $value['company_name']);
           $asJobData['location'] = preg_replace($asMatch, $asReplacement, $value['location']);
 
-          $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
+          $sHTML.= $this->_getJobRow($value, false, $sSearchWord);
         }
       }
       else
