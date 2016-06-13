@@ -1817,6 +1817,7 @@ ChromePhp::log($slistemQuery);
 
     if(isset($positionData))
     {
+      var_dump($positionData);
       $positionData = $positionData[0];
       /*if($positionData['lang'] == 'jp')
       {
