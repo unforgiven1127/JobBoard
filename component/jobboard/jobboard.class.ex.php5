@@ -951,11 +951,11 @@ ChromePhp::log($slistemQuery);
         if($nEnglish >= 0)
         {
           //$eng = ((int)$nEnglish*2);
-          $asWhereSql[] = " slp.lvl_english  <= $nEnglish ";
+          $asWhereSql[] = " slp.lvl_english  <= $nEnglish*2 ";
         }
 
         if($nJapanese >= 0)
-          $asWhereSql[] = ' slp.lvl_japanese <= "'.$nJapanese.'"';
+          $asWhereSql[] = " slp.lvl_japanese <= $nJapanese ";
       }
 
       //the salary field minimum value is 41666Y, .
