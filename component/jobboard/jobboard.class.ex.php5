@@ -894,7 +894,7 @@ ChromePhp::log($avResult);
     //if not a global search (compact form) control the fields from the full form
     if(!$bGlobalSearch)
     {
-      $test = '6';
+      $test = getValue('english', -1);
       $nEnglish = (int)$test;
       $nJapanese = (int)getValue('japanese', -1);
       $sOccupation = strtolower(getValue('occupation'));
