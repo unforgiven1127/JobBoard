@@ -896,7 +896,7 @@ ChromePhp::log($avResult);
     {
       $test = getValue('english', -1);
       ChromePhp::log($test);
-      $test = $test*2;
+      $test = (string)($test*2);
       ChromePhp::log($test);
       $nEnglish = (int)$test;
       $nJapanese = (int)getValue('japanese', -1);
