@@ -575,7 +575,7 @@ ChromePhp::log($slistemQuery);
     }
 
     //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
-    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData);
+    return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData, 'positionDataCount' => $positionDataCount);
   }
 
   /**
@@ -615,6 +615,12 @@ ChromePhp::log($slistemQuery);
 
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
+
+    if(isset($pavResult['positionData']))
+    {
+      $positionData = $pavResult['positionData'];
+      $positionDataCount = $pavResult['positionDataCount'];
+    }
 
     if(!$oDbResult)
       $bRead = false;
