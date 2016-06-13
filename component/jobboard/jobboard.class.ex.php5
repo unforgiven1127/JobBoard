@@ -376,7 +376,7 @@ class CJobboardEx extends CJobboard
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
-//ChromePhp::log($avResult);
+ChromePhp::log($avResult);
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -553,8 +553,8 @@ class CJobboardEx extends CJobboard
     $positionDataCount = $positionData['count'];
     $positionData = $positionData['result'];
 
-ChromePhp::log($slistemQuery);
-ChromePhp::log($positionData);
+//ChromePhp::log($slistemQuery);
+//ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
     $oPager->initPager();
