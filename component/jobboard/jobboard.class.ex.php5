@@ -894,11 +894,7 @@ ChromePhp::log($avResult);
     //if not a global search (compact form) control the fields from the full form
     if(!$bGlobalSearch)
     {
-      $test = getValue('english', -1);
-      ChromePhp::log($test);
-      $test = (string)($test*2);
-      ChromePhp::log($test);
-      $nEnglish = (int)$test;
+      $nEnglish = (int)getValue('english', -1);
       $nJapanese = (int)getValue('japanese', -1);
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
@@ -1250,11 +1246,11 @@ ChromePhp::log($avResult);
 
 
     //languages slider legends
-    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'],1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL5'], 3 => $this->casText['TALENT_LANG_LVL2'], 4 => $this->casText['TALENT_LANG_LVL3'], 5 => $this->casText['TALENT_LANG_LVL4']);
+    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'],2 => $this->casText['TALENT_LANG_LVL1'], 4 => $this->casText['TALENT_LANG_LVL5'], 6 => $this->casText['TALENT_LANG_LVL2'], 8 => $this->casText['TALENT_LANG_LVL3'], 10 => $this->casText['TALENT_LANG_LVL4']);
 
     //english level
     if($sLang == 'en')
-      $nFieldDefaultValue = 4;
+      $nFieldDefaultValue = 8;
     else
       $nFieldDefaultValue = -1;
 
@@ -1269,7 +1265,7 @@ ChromePhp::log($avResult);
     if($sLang == 'en')
       $nFieldDefaultValue = -1;
     else
-      $nFieldDefaultValue = 4;
+      $nFieldDefaultValue = 8;
 
     $nFieldValue = (int)getValue('japanese', $nFieldDefaultValue);
     $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
