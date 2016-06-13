@@ -796,7 +796,8 @@ ChromePhp::log($slistemQuery);
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText('<strong>'.$this->casText['TALENT_COMPANY'].'</strong>: ');
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($pasJobData['company_name']);
+          //$sHTML.= $oHTML->getText($pasJobData['company_name']);
+          $sHTML.= $oHTML->getText("Company Name not visible");
         $sHTML.= $oHTML->getListItemEnd();
       }
 
@@ -1786,12 +1787,330 @@ ChromePhp::log($slistemQuery);
   * @param integer $pnPk
   * @return string HTML
   */
+
+  private function _getJobDetailInformationSlistemDB($pnPk)
+  {
+    $slistemDB = CDependency::getComponentByName('database');
+
+    $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
+                 slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
+                 slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
+                 cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
+                 slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
+                 slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
+                 slp.lvl_english as english, ind.sl_industrypk as industryfk, slpd.holidays as holidays, slpd.work_hours as work_hours,
+                 slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
+                 slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
+                 slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
+                 ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
+                 cp.name as company_name, slpd.raw_data as raw_data
+                 FROM sl_position slp
+                 INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
+                 INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
+                 INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
+                 INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
+                 WHERE slp.sl_positionpk = ".$pnPk;
+
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    if(isset($positionData))
+    {
+      $positionData = $positionData[0];
+      /*if($positionData['lang'] == 'jp')
+      {
+        $asSibling = $this->_getSiblingPosition($pnPk, 'jp');
+        //$sPic = '/pictures/lang_japanese.png';
+        $sText = 'in Japanese';
+      }
+      else
+      {
+        $asSibling = $this->_getSiblingPosition($pnPk, 'en');
+        //$sPic = '/pictures/lang_english.png';
+        $sText = 'in English';
+      }
+
+      if(!empty($asSibling))
+      {
+        $asTranslation = current($asSibling);
+        $sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_VIEW, CONST_TA_TYPE_JOB, (int)$asTranslation['positionpk']);
+
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'switchLanguage'));
+        //$sHTML.= $oHTML->getPicture($this->getResourcePath().$sPic, 'View translation', $sUrl);
+        $sHTML.= $oHTML->getLink($sText, $sUrl);
+        $sHTML.= $oHTML->getBlocEnd();
+      }*/
+
+      $sPageTitle    = $positionData['page_title'];
+      $sMetaKeywords = $positionData['meta_keywords'];
+      $sMetaDescription = $positionData['meta_desc'];
+
+      $sJobData = $positionData['raw_data'];
+      $asJobData = (array)@unserialize($sJobData);
+
+      if(empty($asJobData) || !isset($asJobData['jobID']) || empty($asJobData['jobID']))
+        $sIdentfier = $pnPk;
+      else
+        $sIdentfier = 'SL'.(int)$asJobData['jobID'];
+
+      //Set meta keywords and meta description
+      if(!empty($sPageTitle))
+        $oPage->setPageTitle($sPageTitle);
+      if(!empty($sMetaKeywords))
+        $oPage->setPageKeywords($sMetaKeywords);
+      if(!empty($sMetaDescription))
+        $oPage->setPageDescription($sMetaDescription);
+
+      $sHTML.= $oHTML->getBlocStart('position');
+      $sHTML.= $oHTML->getText($positionData['position_title'], array('class'=>'boldTitle'));
+      $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getBlocStart('',array('style'=>'margin-top:10px;'));
+
+      //Position Title
+      $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_POSITION_ID'], array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= $oHTML->getText($sIdentfier);
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      //Company
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_COMPANY'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        if($positionData['company_name'])
+          $sHTML.= $oHTML->getText($positionData['company_name']);
+        else
+          $sHTML.= $oHTML->getText('Company Name not visible');
+
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      //Location
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_LOCATION'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= $oHTML->getText($oDbResult->getFieldValue('location'));
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      /*//Posted Date
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_POST_DATE'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= $oHTML->getText($oDbResult->getFieldValue('posted_date'));
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();*/
+
+      //English Level
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_ENGLISH_ABILITY'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sEnglish = $this->_getLanguageLevel((int)$oDbResult->getFieldValue('english'));
+        $sHTML.= $oHTML->getText($sEnglish);
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      //Japanese Level
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_JAP_ABILITY'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sJapanese = $this->_getLanguageLevel((int)$oDbResult->getFieldValue('japanese'));
+        $sHTML.= $oHTML->getText($sJapanese);
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      //Industry
+      if(isset($this->casText[$oDbResult->getFieldValue('industry_name')]))
+      {
+        $sIndustry = $this->casText[$oDbResult->getFieldValue('industry_name')];
+      }
+      elseif(isset($this->casText[$oDbResult->getFieldValue('parent_industry')]))
+      {
+        $sIndustry = $this->casText[$oDbResult->getFieldValue('parent_industry')];
+      }
+      else
+        $sIndustry = ' - ';
+
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText('<strong>'.$this->casText['TALENT_INDUSTRY'].'</strong>', array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+          $sHTML.= $oHTML->getText($sIndustry);
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();
+
+      //Career Level
+      $sCareer = $oDbResult->getFieldValue('career_level');
+      if(!empty($sCareer))
+      {
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
+          $sHTML.= $oHTML->getText('<strong>'.$this->casText['TALENT_CAREER'].'</strong>',array('style'=>'font-weight:bold;'));
+            $sHTML.= $oHTML->getBlocEnd();
+            $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+            $sHTML.= $oHTML->getText($sCareer);
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+      /*//Salary
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText('<strong>'.$this->casText['TALENT_SALARY'].'</strong>', array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+          $sHTML.= $oHTML->getText($oDbResult->getFieldValue('salary'));
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+      $sHTML.= $oHTML->getBlocEnd();*/
+
+      //Train Station Display if exists
+      $sStation = $oDbResult->getFieldValue('station');
+      if(!empty($sStation))
+      {
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_STAION'],array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+          $sHTML.= $oHTML->getText($oDbResult->getFieldValue('station'));
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+      //Holidays Display if exists
+      $sHolidays = $oDbResult->getFieldValue('holidays');
+      if(!empty($sHolidays))
+      {
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_HOLIDAYS'], array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getBlocEnd();
+
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+          $sHTML.= $oHTML->getText($oDbResult->getFieldValue('holidays'));
+          $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+      //Work Hours Display if exists
+      $sWorkHours = $oDbResult->getFieldValue('work_hours');
+      if(!empty($sWorkHours))
+      {
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText($this->casText['TALENT_WORK_HOUR'],array('style'=>'font-weight:bold;'));
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= $oHTML->getText($oDbResult->getFieldValue('work_hours'));
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'floatHack'));
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+       //Requirements
+      $sRequirements = $oDbResult->getFieldValue('requirements');
+      if(!empty($sRequirements))
+      {
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+            $sHTML.= $oHTML->getText($this->casText['TALENT_REQUIREMENTS'],array('style'=>'font-weight:bold;'));
+            $sHTML.= $oHTML->getBlocEnd();
+           $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+            $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
+            $sHTML.= $oHTML->getText(nl2br($oDbResult->getFieldValue('requirements')));
+            $sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+      //Description
+      $sDescription = $oDbResult->getFieldValue('position_desc');
+      if(!empty($sDescription))
+      {
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
+          $sHTML.= $oHTML->getText(nl2br($sDescription));
+          $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
+      //Apply Button
+      $sURL =  "'".$oPage->getUrl($this->_getUid(), CONST_ACTION_APPLY, CONST_TA_TYPE_JOB, $pnPk)."'";
+        $sHTML.= $oHTML->getBlocStart('',array('style'=>'margin-top:15px;'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+        $sHTML.= $oHTML->getText('&nbsp;');
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= "<input type='button' name='apply' id='apply' value=".$this->casText['TALENT_APPLY_NOW']." onclick = \"document.location.href = ".$sURL."\">";
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'floatHack'));
+        $sHTML.= $oHTML->getBlocEnd();
+      $sHTML.= $oHTML->getBlocEnd();
+    }
+    else
+    {
+      $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
+    }
+
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();
+    return $sHTML;
+
+  }
+
   private function _getJobDetailInformation($pnPk)
   {
     if(!assert('is_integer($pnPk) && !empty($pnPk)'))
       return '';
 
-    $slistemDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oDB = CDependency::getComponentByName('database');
@@ -1814,27 +2133,7 @@ ChromePhp::log($slistemQuery);
     $bRead = $oDbResult->readFirst();
 
 
-    $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
-                     slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
-                     slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
-                     cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
-                     slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
-                     slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
-                     slp.lvl_english as english, ind.sl_industrypk as industryfk, slpd.holidays as holidays, slpd.work_hours as work_hours,
-                     slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
-                     slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
-                     slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
-                     ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
-                     cp.name as company_name, slpd.raw_data as raw_data
-                     FROM sl_position slp
-                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
-                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
-                     INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
-                     INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     WHERE slp.sl_positionpk = ".$pnPk;
 
-
-    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 //var_dump($positionData);
     //ChromePhp::log($positionData);
 
