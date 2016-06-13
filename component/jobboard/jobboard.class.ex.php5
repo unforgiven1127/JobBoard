@@ -958,7 +958,7 @@ ChromePhp::log($slistemQuery);
       }
 
       //the salary field minimum value is 41666Y, .
-      if(!empty($nSalaryLow) || !empty($nSalaryHigh))
+      /*if(!empty($nSalaryLow) || !empty($nSalaryHigh))
       {
         //> 12mil/year ==> we take all
         if($nSalaryHigh >= 1000000)
@@ -968,7 +968,7 @@ ChromePhp::log($slistemQuery);
           $asWhereSql[] = ' (slp.salary_to = 0 OR slp.salary_to <= "'.$nSalaryHigh.'")';
         else
           $asWhereSql[] = ' ((slp.salary_from = 0 OR slp.salary_from >=  "'.$nSalaryLow.'") AND (slp.salary_to = 0 OR slp.salary_to <= "'.$nSalaryHigh.'"))';
-      }
+      }*/
 
       if($nJapanese == 0)
         $asWhereSql[] = ' slpd.language <> "jp" ';
