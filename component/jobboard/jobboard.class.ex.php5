@@ -828,13 +828,13 @@ ChromePhp::log($slistemQuery);
         $sJobData = $pasJobData['raw_data'];
         $asJobData = (array)@unserialize($sJobData);
 
-var_dump($jobDataClear);
-exit;
+//var_dump($jobDataClear);
+//exit;
 
-        if(!isset($jobDataClear['jobfk']) || empty($jobDataClear['jobfk']))
+        if(!isset($jobDataClear['positionpk']) || empty($jobDataClear['positionpk']))
         {
           //$sIdentfier = 'JB'.$pasJobData['positionpk'];
-          $sIdentfier = $jobDataClear['jobfk'];
+          $sIdentfier = $jobDataClear['positionpk'];
         }
         else
         {
