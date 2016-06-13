@@ -445,7 +445,7 @@ ChromePhp::log($avResult);
 
     $asFilter = $this->_getSqlJobSearch();
     $filterSlistem = $this->_getSqlJobSearchSlistem();
-    $filterSlistem = str_replace('slp.lvl_english','slp.lvl_english/2',$filterSlistem);
+    //$filterSlistem = str_replace('slp.lvl_english','slp.lvl_english/2',$filterSlistem);
 
     $sQuery = 'SELECT count(DISTINCT pos.positionpk) as nCount ';
     $sQuery.= ' FROM position as pos ';
