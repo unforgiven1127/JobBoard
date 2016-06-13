@@ -1266,7 +1266,7 @@ ChromePhp::log($slistemQuery);
       $nFieldDefaultValue = 3;
 
     $nFieldValue = (int)getValue('japanese', $nFieldDefaultValue);
-    $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 4, 'range' => 'min', 'legend' => $asSliderLegend));
+    $oForm->addField('slider', 'japanese', array('label' => $this->casText['TALENT_JAP_ABILITY'], 'value' => $nFieldValue, 'min' => 0, 'max' => 5, 'range' => 'min', 'legend' => $asSliderLegend));
 
     if($nFieldValue > -1)
       $oForm->setFieldDisplayParams('japanese', array('fieldid' => 'japaneseId', 'class' => 'clickable activable'));
