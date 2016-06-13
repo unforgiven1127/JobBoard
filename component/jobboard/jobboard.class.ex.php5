@@ -568,7 +568,7 @@ ChromePhp::log($testArray);
     if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
-      return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery, 'positionData' => null);
+      return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
     }
 
     //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
@@ -612,12 +612,6 @@ ChromePhp::log($testArray);
 
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
-
-    /*if(isset($pavResult['positionData']) && $pavResult['positionData'] != null)
-    {
-      $positionData = $pavResult['positionData'];
-      ChromePhp::log($positionData);
-    }*/
 
     if(!$oDbResult)
       $bRead = false;
