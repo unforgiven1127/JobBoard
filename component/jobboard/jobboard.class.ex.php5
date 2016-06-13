@@ -390,9 +390,9 @@ ChromePhp::log($avResult);
     if(empty($sData) || $sData == 'null' || $sData == null)
        return array('data' => $this->casText['TALENT_SORRY_ERROR'], 'action' => '$(\'.searchTitle\').html(\''.addslashes($sMessage).'\'); searchTitle(\'\', false, false); $(\'body\').scrollTop();');
 
-     if(isset($avResult[0]['count']))
+     if(isset($avResult['positionData'][0]['count']))
      {
-        $sMessage = $this->_getSearchMessage($avResult[0]['count'], true);
+        $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
      }
      else
      {
