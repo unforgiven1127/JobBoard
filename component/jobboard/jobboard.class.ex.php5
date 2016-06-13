@@ -652,7 +652,11 @@ ChromePhp::log($slistemQuery);
 
       $sHTML.= $oHTML->getBlocStart('', array('class' =>'searchTitle'));
 
-      if(getValue('do_search'))
+      if(isset($positionDataCount))
+      {
+        $sHTML.= $this->_getSearchMessage($positionDataCount);
+      }
+      else if(getValue('do_search'))
         $sHTML.= $this->_getSearchMessage($nNbResult);
 
       $sHTML.= $oHTML->getSpace();
