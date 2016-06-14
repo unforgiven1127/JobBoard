@@ -385,10 +385,11 @@ class CJobboarduserEx extends CJobboarduser
 
     if(isset($positionDataSlistem))
     {
-      $sHTML.= $oHTML->getListItemStart();
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
       foreach ($positionDataSlistem as $key => $value)
       {
+
+        $sHTML.= $oHTML->getListItemStart();
+        $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
         $sHTML.= "<tr>
                     <td style='padding-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
                     <td>".$value['position_title']."</td>
@@ -397,13 +398,13 @@ class CJobboarduserEx extends CJobboarduser
                     <td>Edit</td>
                     <td>Action</td>
                   </tr>";
-
+        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getListItemEnd();
       }
 
     }
     $sHTML.= "</table>";
-    $sHTML.= $oHTML->getBlocEnd();
-    $sHTML.= $oHTML->getListItemEnd();
+    
     //if($nTotal> 0)
     /*if(isset($positionDataSlistem))
     {
