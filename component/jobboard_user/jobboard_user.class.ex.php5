@@ -442,7 +442,7 @@ class CJobboarduserEx extends CJobboarduser
           }
 
           $sHTML.= $oHTML->getListItemStart('', array('style' => $shadowStyle));
-          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
+          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data ','style' => $shadowStyle));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%; '.$shadowStyle));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
