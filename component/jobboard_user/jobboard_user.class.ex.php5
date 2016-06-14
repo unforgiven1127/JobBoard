@@ -444,11 +444,11 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; margin-left:5px;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
             $sHTML.= $oHTML->getText('Edit');
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; margin-left:55px;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
             $sHTML.= $oHTML->getText('Action');
             $sHTML.= $oHTML->getBlocEnd();
 
