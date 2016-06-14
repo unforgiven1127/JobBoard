@@ -430,23 +430,23 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%;'));
             $sHTML.= $oHTML->getText($asJobDetail['position_title']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:20%;'));
             $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%;'));
             $sHTML.= $oHTML->getText('Edit');
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%;'));
             $sHTML.= $oHTML->getText('Action');
             $sHTML.= $oHTML->getBlocEnd();
 
@@ -911,29 +911,29 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:9%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:10%;'));
       $sSortUrl = $sURL.'&sortfield=external_key&sortorder=desc';
       $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:11%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:30%;'));
       $sHTML.= $oHTML->getText('Position Title ');
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:15%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:30%;'));
       $sSortUrl = $sURL.'&sortfield=company_name&sortorder=asc';
       $sHTML.= $oHTML->getLink('Company', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:15%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:20%;'));
       $sHTML.= $oHTML->getText('Industry');
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:15%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:5%;'));
       $sHTML.= $oHTML->getText('Edit');
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:15%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell','style' => 'width:5%;'));
       $sHTML.= $oHTML->getText('Action');
       $sHTML.= $oHTML->getBlocEnd();
 
