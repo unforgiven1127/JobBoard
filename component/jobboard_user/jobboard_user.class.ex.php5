@@ -390,7 +390,7 @@ class CJobboarduserEx extends CJobboarduser
     {
       //ChromePhp::log($positionDataSlistem);
       //fetch positions
-      /*$oResult = $oDB->ExecuteQuery($sQuery);
+      $oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
       while($bRead)
       {
@@ -416,7 +416,7 @@ class CJobboarduserEx extends CJobboarduser
           $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
-      }*/
+      }
 
       if(!empty($positionDataSlistem))
       {
