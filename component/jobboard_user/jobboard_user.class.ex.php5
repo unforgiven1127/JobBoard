@@ -404,7 +404,7 @@ class CJobboarduserEx extends CJobboarduser
 
     }
     $sHTML.= "</table>";
-    
+
     //if($nTotal> 0)
     /*if(isset($positionDataSlistem))
     {
@@ -515,7 +515,7 @@ class CJobboarduserEx extends CJobboarduser
     if($nTotal > 0)
       $sHTML.= $oPager->getDisplay($nTotal, $sUrl);
 
-    $sHTML.= $oHTML->getFloatHack();
+    //$sHTML.= $oHTML->getFloatHack();
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
 
