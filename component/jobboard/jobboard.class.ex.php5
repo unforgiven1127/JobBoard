@@ -2508,12 +2508,13 @@ ChromePhp::log($slistemQuery);
                  slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
                  slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
                  ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
-                 cp.name as company_name, slpd.raw_data as raw_data
+                 cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name, l.email as cons_email
                  FROM sl_position slp
                  INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
                  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
                  INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
                  INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
+                 INNER JOIN login l on l.loginpk = slp.created_by
                  WHERE slp.sl_positionpk = ".$pnPk;
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
@@ -2685,7 +2686,9 @@ ChromePhp::log($slistemQuery);
     $sAppliedDate = date('Y-m-d');
     $asRawData = array();
 
-    $sQuery = 'SELECT pos.*, cp.company_name, ind.name AS industry_name, ind_parent.name as parent_industry, job.data ';
+    $positionDetail = $this->getPositionDetailSlistem($pnPositionPk);
+
+    /*$sQuery = 'SELECT pos.*, cp.company_name, ind.name AS industry_name, ind_parent.name as parent_industry, job.data ';
     $sQuery.= ' FROM position AS pos  ';
     $sQuery.= ' LEFT JOIN company AS cp ON (cp.companypk = pos.companyfk) ';
     $sQuery.= ' LEFT JOIN industry AS ind ON (pos.industryfk = ind.industrypk) ';
@@ -2697,30 +2700,35 @@ ChromePhp::log($slistemQuery);
     $sQuery.= ' WHERE pos.visibility <> 0 and pos.positionpk = '.$pnPositionPk.'';
 
     $oDbResult = $oDB->ExecuteQuery($sQuery);
-    $bRead = $oDbResult->readFirst();
-    if($bRead)
+    $bRead = $oDbResult->readFirst();*/
+    if(isset($positionDetail))
     {
-      $asData = $oDbResult->getData();
+      $asData = $positionDetail;
 
-      $sCompanyName = $asData['company_label'];
-      if(empty($sCompanyName))
+      //$sCompanyName = $asData['company_label'];
+      //if(empty($sCompanyName))
         $sCompanyName = 'Company name not publicy visible';
 
       $sIndustryName = ' - ';
-      if(isset($this->casText[$asData['industry_name']]))
+      if(isset($asData['name']))
       {
-        $sIndustryName = $this->casText[$asData['industry_name']];
+        $sIndustryName = $asData['name'];
       }
-      elseif(isset($this->casText[$asData['parent_industry']]))
+      /*elseif(isset($this->casText[$asData['parent_industry']]))
       {
         $sIndustryName = $this->casText[$asData['parent_industry']];
-      }
+      }*/
 
-      $asRawData = (array)@unserialize($asData['data']);
+      /*$asRawData = (array)@unserialize($asData['data']);
       if(isset($asRawData['cons_name']) && !empty($asRawData['cons_name']))
       {
         $sConsultantName = $asRawData['cons_name'];
         $sConsultantEmail = $asRawData['cons_email'];
+      }*/
+      if(!empty($asData['cons_name']) && !empty($asData['cons_email']))
+      {
+        $sConsultantName = $asData['cons_name'];
+        $sConsultantEmail = $asData['cons_email'];
       }
       else
       {
@@ -2771,8 +2779,8 @@ ChromePhp::log($slistemQuery);
 
     //if($bResponse)
     {
-      $sQuery = 'INSERT INTO job_application (`positionfk`,`name`,`email`,`coverletter`,`application_date`,`canContact`) VALUES (';
-      $sQuery.=  ''.$oDB->dbEscapeString($pnPositionPk).','.$oDB->dbEscapeString($sName).','.$oDB->dbEscapeString($sEmail).','.$oDB->dbEscapeString($sCoverLetter).','.$oDB->dbEscapeString($sAppliedDate).','.$oDB->dbEscapeString($ncanContact).')';
+      $sQuery = 'INSERT INTO job_application (`positionfk`,`name`,`email`,`coverletter`,`application_date`,`canContact`,`slistemID`) VALUES (';
+      $sQuery.=  ''.$oDB->dbEscapeString($pnPositionPk).','.$oDB->dbEscapeString($sName).','.$oDB->dbEscapeString($sEmail).','.$oDB->dbEscapeString($sCoverLetter).','.$oDB->dbEscapeString($sAppliedDate).','.$oDB->dbEscapeString($ncanContact).','.$oDB->dbEscapeString($pnPositionPk).')';
 
       $oResult = $oDB->ExecuteQuery($sQuery);
       $nJobApplicationPk = (int)$oResult->getFieldValue('pk');
