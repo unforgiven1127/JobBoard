@@ -426,7 +426,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:13%;'));
+            /*$sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:13%;'));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
@@ -450,7 +450,16 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%;'));
             $sHTML.= $oHTML->getText('Action');
-            $sHTML.= $oHTML->getBlocEnd();
+            $sHTML.= $oHTML->getBlocEnd();*/
+
+            $sHTML.= "<tr>
+                    <td style='padding-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
+                    <td>".$value['position_title']."</td>
+                    <td>".$value['company_name']."</td>
+                    <td>".$value['name']."</td>
+                    <td>Edit</td>
+                    <td>Action</td>
+                  </tr>";
 
             /*if((int)$asJobDetail['indus_status'] == 2)
               $sHTML.= $oHTML->getText('<em style="font-size: 0.8em;color:orange;">'.$asJobDetail['name'].' (need Trans.)</em>');
