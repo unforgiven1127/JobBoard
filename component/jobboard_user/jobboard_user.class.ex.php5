@@ -399,10 +399,11 @@ class CJobboarduserEx extends CJobboarduser
                   </tr>";
 
       }
-      $sHTML.= $oHTML->getBlocEnd();
-      $sHTML.= $oHTML->getListItemEnd();
+
     }
     $sHTML.= "</table>";
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getListItemEnd();
     //if($nTotal> 0)
     /*if(isset($positionDataSlistem))
     {
