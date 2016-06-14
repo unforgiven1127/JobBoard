@@ -1514,6 +1514,7 @@ ChromePhp::log($slistemQuery);
     if(!assert('is_integer($pnPk)'))
       return '';
 
+return '';
     $oHTML = CDependency::getComponentByName('display');
     $oDB = CDependency::getComponentByName('database');
     $oPage = CDependency::getComponentByName('page');
