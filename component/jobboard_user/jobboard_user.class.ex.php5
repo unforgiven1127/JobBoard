@@ -418,7 +418,7 @@ class CJobboarduserEx extends CJobboarduser
 
       if(!empty($asRecords))
       {
-        foreach($positionDataSlistem as $asJobDetail)
+        foreach($asRecords as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
