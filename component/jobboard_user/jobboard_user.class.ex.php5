@@ -430,10 +430,13 @@ class CJobboarduserEx extends CJobboarduser
           {
             $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
             $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/delete_24.png', 'Delete position');
+            $onclick = 'if(!window.confirm(\'Are you sure to delete this position ?\')){ return false; }';
           }
           else
           {
-
+            $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
+            $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/add.png', 'Activate position');
+            $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
           }
 
           $sHTML.= $oHTML->getListItemStart();
@@ -462,7 +465,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getBlocEnd();
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
-            $sHTML.= $oHTML->getLink($sPicAction, $sUrlAction, array('onclick' => 'if(!window.confirm(\'Are you sure to delete this position ?\')){ return false; }'));
+            $sHTML.= $oHTML->getLink($sPicAction, $sUrlAction, array('onclick' => $onclick));
             $sHTML.= $oHTML->getBlocEnd();
 
             /*if((int)$asJobDetail['indus_status'] == 2)
