@@ -907,6 +907,20 @@ class CJobboarduserEx extends CJobboarduser
 
     $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
 
+    $sHTML = "
+
+        <table>
+          <tr>
+            <th>Position ID</th>
+            <th>Position Title</th>
+            <th>Company</th>
+            <th>Industry</th>
+            <th>Edit</th>
+            <th>Action</th>
+          </tr>
+        </table>
+
+    ";
 
     $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
