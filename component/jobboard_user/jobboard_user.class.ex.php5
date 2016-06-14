@@ -1414,7 +1414,8 @@ class CJobboarduserEx extends CJobboarduser
                  slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
                  slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
                  ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
-                 cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name, l.email as cons_email
+                 cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name,
+                 l.email as cons_email, slpd.public_flag as public_flag
                  FROM sl_position slp
                  INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
                  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
@@ -1426,6 +1427,27 @@ class CJobboarduserEx extends CJobboarduser
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
     $positionData = $positionData[0];
     ChromePhp::log($positionData);
+
+    if($positionData['public_flag'] == 'a')
+    {
+      $newFlag = 'p';
+    }
+    else
+    {
+      $newFlag = 'a';
+    }
+
+    $slistemQuery = "UPDATE sl_position_detail SET public_flag = '".$newFlag."' WHERE positionfk = '".$pnPositionPk."'";
+    $updateData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    if(!empty($updateData))
+    {
+      return array('notice' => 'Position has been deleted.', 'reload' => 1);
+    }
+    else
+    {
+      return array('error' => __LINE__.' - Couldn\'t delete the position');
+    }
 
     /*$oDB = CDependency::getComponentByName('database');
 
