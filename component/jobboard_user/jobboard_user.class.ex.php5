@@ -233,21 +233,19 @@ class CJobboarduserEx extends CJobboarduser
 
     if(!empty($sSortField))
     {
-      $sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
-      $slistemQuery .= ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      //$sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $slistemQuery = ' ORDER BY '.$sSortField.' '.$sSortOrder;
     }
     else
     {
-      $sOrder = ' ORDER BY external_key DESC';
-      $slistemQuery .= " ORDER BY slp.date_created DESC";
+      //$sOrder = ' ORDER BY external_key DESC';
+      $slistemQuery = " ORDER BY slp.date_created DESC";
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-//ChromePhp::log($slistemQuery);
-//var_dump($slistemQuery);
-//echo "<br><br>";
+
     $positionDataSlistem = $slistemDB->slistemGetAllData($slistemQuery);
-//var_dump($positionDataSlistem);
+
     if($psType == 'share')
     {
       $bDisplayFilter = false;
@@ -385,10 +383,8 @@ class CJobboarduserEx extends CJobboarduser
       $asRecords = array();
 
 
-    //if($nTotal> 0)
-    if(isset($positionDataSlistem) && !empty($positionDataSlistem))
+    if($nTotal> 0)
     {
-      //ChromePhp::log($positionDataSlistem);
       //fetch positions
       $oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
@@ -418,9 +414,9 @@ class CJobboarduserEx extends CJobboarduser
         }
       }
 
-      if(!empty($positionDataSlistem))
+      if(!empty($asRecords))
       {
-        foreach($positionDataSlistem as $asJobDetail)
+        foreach($asRecords as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
