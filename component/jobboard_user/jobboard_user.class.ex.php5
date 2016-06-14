@@ -435,7 +435,7 @@ class CJobboarduserEx extends CJobboarduser
           }
           else
           {
-            $shadowStyle = " background-image:url(http://jobs.slate.co.jp/common/pictures/shade.png) ";
+            $shadowStyle = " background-image:url(http://jobs.slate.co.jp/component/jobboard_user/resources//pictures/shade.png) ";
             $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
             $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/add_24.png', 'Activate position');
             $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
