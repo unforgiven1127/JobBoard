@@ -396,7 +396,7 @@ ChromePhp::log($avResult);
      }
      else
      {
-        $sMessage = $this->_getSearchMessage($avResult['nNbResult'], true);
+        $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
      }
 
     $sData =  CEncoding::toUTF8($sData);
