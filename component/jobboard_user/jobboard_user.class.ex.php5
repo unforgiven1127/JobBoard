@@ -423,6 +423,9 @@ class CJobboarduserEx extends CJobboarduser
       {
         foreach($positionDataSlistem as $asJobDetail)
         {
+          $sURL =  $oPage->getUrl('jobboard_user', CONST_ACTION_EDIT, CONST_TA_TYPE_LIST_JOB, (int)$asJobDetail['external_key']);
+          $sPic =  $oHTML->getPicture(CONST_PICTURE_EDIT, 'Edit Position');
+
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
@@ -445,7 +448,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getBlocEnd();
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
-            $sHTML.= $oHTML->getText('Edit');
+            $sHTML.= $oHTML->getLink($sPic, $sURL);
             $sHTML.= $oHTML->getBlocEnd();
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
