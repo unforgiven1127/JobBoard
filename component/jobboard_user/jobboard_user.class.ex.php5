@@ -233,13 +233,13 @@ class CJobboarduserEx extends CJobboarduser
 
     if(!empty($sSortField))
     {
-      //$sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
-      $slistemQuery = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $slistemQuery .= ' ORDER BY '.$sSortField.' '.$sSortOrder;
     }
     else
     {
-      //$sOrder = ' ORDER BY external_key DESC';
-      $slistemQuery = " ORDER BY slp.date_created DESC";
+      $sOrder = ' ORDER BY external_key DESC';
+      $slistemQuery .= " ORDER BY slp.date_created DESC";
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
