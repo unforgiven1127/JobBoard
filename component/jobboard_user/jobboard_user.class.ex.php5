@@ -399,7 +399,7 @@ class CJobboarduserEx extends CJobboarduser
       }
     }
     $sHTML.= "</table>";
-
+$sHTML.= $oHTML->getListItemEnd();
     //if($nTotal> 0)
     /*if(isset($positionDataSlistem))
     {
