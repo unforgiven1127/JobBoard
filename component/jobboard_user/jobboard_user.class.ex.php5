@@ -386,6 +386,7 @@ class CJobboarduserEx extends CJobboarduser
     //if($nTotal> 0)
     if(isset($positionDataSlistem) && !empty($positionDataSlistem))
     {
+      ChromePhp::log($positionDataSlistem);
       //fetch positions
       /*$oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
