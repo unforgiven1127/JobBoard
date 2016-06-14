@@ -2545,7 +2545,9 @@ ChromePhp::log($slistemQuery);
 
     if(!empty($pnPk))
     {
-      $sHTML.= $oHTML->getText($this->getPositionName($pnPk),array('class'=>'subTitle'));
+      //$sHTML.= $oHTML->getText($this->getPositionName($pnPk),array('class'=>'subTitle'));
+      $positionDetail = $this->getPositionDetailSlistem($pnPk);
+      $sHTML.= $oHTML->getText($positionDetail['position_title'],array('class'=>'subTitle'));
     }
     else
       $sHTML.= $oHTML->getText($this->casText['TALENT_COVER_LETTER'],array('class'=>'boldTitle'));
