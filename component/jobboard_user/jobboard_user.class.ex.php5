@@ -916,7 +916,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:22%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:28%;'));
       $sHTML.= $oHTML->getText('Position Title ');
       $sHTML.= $oHTML->getBlocEnd();
 
