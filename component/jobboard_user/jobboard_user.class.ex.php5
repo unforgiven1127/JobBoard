@@ -444,29 +444,29 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getListItemStart('', array('style' => $shadowStyle));
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%; '.$shadowStyle));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%; text-align: center;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%; text-align: center;'.$shadowStyle));
             $sHTML.= $oHTML->getText($asJobDetail['position_title']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:20%; text-align: center;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:20%; text-align: center;'.$shadowStyle));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%; text-align: center;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:15%; text-align: center;'.$shadowStyle));
             $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
             $sHTML.= $oHTML->getLink($sPic, $sURL);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
             $sHTML.= $oHTML->getLink($sPicAction, $sUrlAction, array('onclick' => $onclick));
             $sHTML.= $oHTML->getBlocEnd();
 
