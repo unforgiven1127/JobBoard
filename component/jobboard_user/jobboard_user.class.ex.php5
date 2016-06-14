@@ -448,6 +448,7 @@ class CJobboarduserEx extends CJobboarduser
 
             //---------------------------------------------------------------------
             //Actions based on the type (nothing: edit, share: social network ....)
+            var_dump($asChilds);
             $sHTML.= $this->_getListActions($psType, $asJobDetail, $asChilds);
 
           $sHTML.= $oHTML->getBlocEnd();
