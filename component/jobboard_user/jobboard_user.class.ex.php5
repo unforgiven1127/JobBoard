@@ -374,7 +374,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
       $sHTML.= "<table style='width:100%;'>";
       $sHTML.= $this->_getJobsRowHeader();
-      //$sHTML.= $oHTML->getListItemEnd();
+      $sHTML.= $oHTML->getListItemEnd();
 
 
       //count positions
@@ -385,6 +385,7 @@ class CJobboarduserEx extends CJobboarduser
 
     if(isset($positionDataSlistem))
     {
+      $sHTML.= $oHTML->getListItemStart();
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
       foreach ($positionDataSlistem as $key => $value)
       {
@@ -399,9 +400,9 @@ class CJobboarduserEx extends CJobboarduser
 
       }
       $sHTML.= $oHTML->getBlocEnd();
+      $sHTML.= $oHTML->getListItemEnd();
     }
     $sHTML.= "</table>";
-$sHTML.= $oHTML->getListItemEnd();
     //if($nTotal> 0)
     /*if(isset($positionDataSlistem))
     {
