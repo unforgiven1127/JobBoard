@@ -489,7 +489,7 @@ ChromePhp::log($avResult);
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
 
-    $slistemQuery.=" WHERE slpd.is_public = 1";
+    $slistemQuery.=" WHERE slpd.is_public = 1 AND slpd.public_flag = a";
 
     if(!empty($asFilter['where']))
     {
@@ -3093,7 +3093,7 @@ ChromePhp::log($slistemQuery);
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     WHERE slpd.is_public = 1  order by slp.date_created DESC LIMIT 0,10";
+                     WHERE slpd.is_public = 1 AND slpd.public_flag = 'a' order by slp.date_created DESC LIMIT 0,10";
 
     $oResult = $oDB->ExecuteQuery($sQuery);
 
