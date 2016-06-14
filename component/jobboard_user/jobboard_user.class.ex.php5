@@ -385,6 +385,7 @@ class CJobboarduserEx extends CJobboarduser
 
     if(isset($positionDataSlistem))
     {
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
       foreach ($positionDataSlistem as $key => $value)
       {
         $sHTML.= "<tr>
@@ -397,6 +398,7 @@ class CJobboarduserEx extends CJobboarduser
                   </tr>";
 
       }
+      $sHTML.= $oHTML->getBlocEnd();
     }
     $sHTML.= "</table>";
 $sHTML.= $oHTML->getListItemEnd();
