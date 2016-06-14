@@ -371,9 +371,9 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getListStart('', array('class' => 'positionList ablistContainer'));
-      $sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
+      //$sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
       $sHTML.= $this->_getJobsRowHeader();
-      $sHTML.= $oHTML->getListItemEnd();
+      //$sHTML.= $oHTML->getListItemEnd();
 
 
       //count positions
