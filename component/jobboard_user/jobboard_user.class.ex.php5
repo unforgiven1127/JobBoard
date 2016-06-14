@@ -421,7 +421,6 @@ class CJobboarduserEx extends CJobboarduser
 
       if(!empty($positionDataSlistem))
       {
-        $sHTML.= "<table>";
         foreach($positionDataSlistem as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
@@ -453,14 +452,14 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText('Action');
             $sHTML.= $oHTML->getBlocEnd();*/
 
-            $sHTML.= "<tr>
-                    <td style='padding-top:10px;'>#".$asJobDetail['external_key']."<br>".$asJobDetail['posted_date']."</td>
-                    <td>".$asJobDetail['position_title']."</td>
-                    <td>".$asJobDetail['company_name']."</td>
-                    <td>".$asJobDetail['name']."</td>
-                    <td>Edit</td>
-                    <td>Action</td>
-                  </tr>";
+            $sHTML.= "
+                    <div style='padding-top:10px;'>#".$asJobDetail['external_key']."<br>".$asJobDetail['posted_date']."</div>
+                    <div>".$asJobDetail['position_title']."</div>
+                    <div>".$asJobDetail['company_name']."</div>
+                    <div>".$asJobDetail['name']."</div>
+                    <div>Edit</div>
+                    <div>Action</div>
+                  ";
 
             /*if((int)$asJobDetail['indus_status'] == 2)
               $sHTML.= $oHTML->getText('<em style="font-size: 0.8em;color:orange;">'.$asJobDetail['name'].' (need Trans.)</em>');
@@ -481,7 +480,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getListItemEnd();
         }
-        $sHTML.= "</table>";
+
       }
     }
 
