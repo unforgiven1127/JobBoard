@@ -371,9 +371,11 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getListStart('', array('class' => 'positionList ablistContainer'));
-      //$sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
+      $sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
+      $sHTML.= "<table style='width:100%;'>";
       $sHTML.= $this->_getJobsRowHeader();
-      //$sHTML.= $oHTML->getListItemEnd();
+      $sHTML.= $oHTML->getListItemEnd();
+      $sHTML.= "</table>";
 
 
       //count positions
@@ -908,8 +910,7 @@ class CJobboarduserEx extends CJobboarduser
     $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
 
     $sHTML = "
-      <div class='ablistHeader'>
-      <table  style='width:100%;'>
+
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%;' >Position ID</th>
             <th style='color:white; width:30%;' >Position Title</th>
@@ -918,9 +919,6 @@ class CJobboarduserEx extends CJobboarduser
             <th style='color:white; width:10%;' >Edit</th>
             <th style='color:white; width:10%;' >Action</th>
           </tr>
-        </table>
-      </div>
-        
 
     ";
 
