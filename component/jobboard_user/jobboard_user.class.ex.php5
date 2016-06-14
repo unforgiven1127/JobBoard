@@ -407,10 +407,12 @@ class CJobboarduserEx extends CJobboarduser
         $bRead = $oResult->readFirst();
         $asChilds = array();
 
-        while($bRead)
+        //while($bRead)
+        foreach ($positionDataSlistem as $key => $value)
         {
-          $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
-          $bRead = $oResult->readNext();
+          $asChilds[$value['positionpk']] = $value;
+          //$asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
+          //$bRead = $oResult->readNext();
         }
       }
 
