@@ -1425,7 +1425,7 @@ class CJobboarduserEx extends CJobboarduser
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
-    var_dump($positionData);
+    ChromePhp::log($positionData);
 
     /*$oDB = CDependency::getComponentByName('database');
 
