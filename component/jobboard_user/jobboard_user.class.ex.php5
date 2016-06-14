@@ -211,16 +211,39 @@ class CJobboarduserEx extends CJobboarduser
     //echo"<br><br><br> Log:";
     //echo $sSortField;
 
+    $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
+                     slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
+                     slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
+                     cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
+                     slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
+                     slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
+                     slp.lvl_english as english, ind.sl_industrypk as industryfk, slpd.holidays as holidays, slpd.work_hours as work_hours,
+                     slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
+                     slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
+                     slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
+                     ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
+                     cp.name as company_name, slpd.raw_data as raw_data
+                     FROM sl_position slp
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
+                     INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
+                     INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
+                     INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
+                     WHERE slpd.is_public = 1 ";
+
     if(!empty($sSortField))
     {
-      $sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      //$sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $slistemQuery = ' ORDER BY '.$sSortField.' '.$sSortOrder;
     }
     else
     {
-      $sOrder = ' ORDER BY external_key DESC';
+      //$sOrder = ' ORDER BY external_key DESC';
+      $slistemQuery = " ORDER BY slp.date_created DESC";
     }
 
-    if($psType == 'share')
+    $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+
+    /*if($psType == 'share')
     {
       $bDisplayFilter = false;
       $sCountQuery = ' SELECT count(distinct pos.positionpk) as nCount FROM position as pos WHERE pos.parentfk IS NOT NULL AND lang = "en" ';
@@ -279,7 +302,7 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $sQuery.= $sOrder;
-    $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+    $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();*/
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'ta_user_list_container'));
@@ -351,13 +374,13 @@ class CJobboarduserEx extends CJobboarduser
 
 
       //count positions
-      $oResult = $oDB->ExecuteQuery($sCountQuery);
+      /*$oResult = $oDB->ExecuteQuery($sCountQuery);
       $bRead = $oResult->readFirst();
       $nTotal = (int)$oResult->getFieldValue('nCount', 0);
-      $asRecords = array();
+      $asRecords = array();*/
 
 
-    if($nTotal> 0)
+    /*if($nTotal> 0)
     {
       //fetch positions
       $oResult = $oDB->ExecuteQuery($sQuery);
@@ -366,11 +389,11 @@ class CJobboarduserEx extends CJobboarduser
       {
         $asRecords[$oResult->getFieldValue('positionpk', CONST_PHP_VARTYPE_INT)] = $oResult->getData();
         $bRead = $oResult->readNext();
-      }
+      }*/
 
 //var_dump($asRecords);
 
-      if(!empty($asRecords))
+      /*if(!empty($asRecords))
       {
         $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
         $sQuery.= ' LEFT JOIN industry as ind ON (ind.industrypk = pos1.industryfk) ';
@@ -386,7 +409,9 @@ class CJobboarduserEx extends CJobboarduser
           $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
-      }
+      }*/
+
+      $asRecords = $slistemDB->slistemGetAllData($slistemQuery);
 
       if(!empty($asRecords))
       {
@@ -396,7 +421,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
-            $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
+            $sHTML.= $oHTML->getText('#'.$asJobDetail['positionpk']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
@@ -407,6 +432,10 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
+            $sHTML.= $oHTML->getCarriageReturn();
+
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
+            $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getCarriageReturn();
 
             if((int)$asJobDetail['indus_status'] == 2)
