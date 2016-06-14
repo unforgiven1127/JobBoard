@@ -374,7 +374,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getListItemStart('', array('class' => 'ablistHeader'));
       $sHTML.= "<table style='width:100%;'>";
       $sHTML.= $this->_getJobsRowHeader();
-      $sHTML.= $oHTML->getListItemEnd();
+      //$sHTML.= $oHTML->getListItemEnd();
 
 
       //count positions
