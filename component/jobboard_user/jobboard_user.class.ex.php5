@@ -233,13 +233,13 @@ class CJobboarduserEx extends CJobboarduser
 
     if(!empty($sSortField))
     {
-      //$sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
-      $slistemQuery = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $slistemQuery .= ' ORDER BY '.$sSortField.' '.$sSortOrder;
     }
     else
     {
-      //$sOrder = ' ORDER BY external_key DESC';
-      $slistemQuery = " ORDER BY slp.date_created DESC";
+      $sOrder = ' ORDER BY external_key DESC';
+      $slistemQuery .= " ORDER BY slp.date_created DESC";
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
@@ -416,7 +416,7 @@ class CJobboarduserEx extends CJobboarduser
 
       if(!empty($asRecords))
       {
-        foreach($asRecords as $asJobDetail)
+        foreach($positionDataSlistem as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
