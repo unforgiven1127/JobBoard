@@ -242,7 +242,8 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-
+var_dump($slistemQuery);
+exit;
     /*if($psType == 'share')
     {
       $bDisplayFilter = false;
