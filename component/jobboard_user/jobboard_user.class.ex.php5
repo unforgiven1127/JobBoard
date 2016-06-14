@@ -1074,7 +1074,7 @@ class CJobboarduserEx extends CJobboarduser
     $oForm = $oHTML->initForm('posEditForm');
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
-    $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position details </strong>'));
+    $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
 
     $asLangArray = $this->getMyLanguages();
