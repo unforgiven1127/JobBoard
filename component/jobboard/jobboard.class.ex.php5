@@ -380,7 +380,7 @@ ChromePhp::log($avResult);
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
-      $sMessage = $this->_getSearchMessage($avResult['nNbResult']);
+      $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
       return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
      }
 
