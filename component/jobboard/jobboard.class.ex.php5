@@ -625,7 +625,7 @@ ChromePhp::log($slistemQuery);
     if(isset($pavResult['positionData']))
     {
       $positionData = $pavResult['positionData'];
-      $positionDataCount = $pavResult['positionDataCount'];
+      $positionDataCount = $pavResult['positionData'][0]['count'];
     }
 
     if(!$oDbResult)
