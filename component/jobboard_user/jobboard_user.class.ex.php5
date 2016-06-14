@@ -441,7 +441,7 @@ class CJobboarduserEx extends CJobboarduser
             $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
           }
 
-          $sHTML.= $oHTML->getListItemStart('passive', array('style' => $shadowStyle));
+          $sHTML.= $oHTML->getListItemStart('', array('style' => $shadowStyle));
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data ','style' => $shadowStyle));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%; '.$shadowStyle));
@@ -1401,7 +1401,9 @@ class CJobboarduserEx extends CJobboarduser
     if(!assert('is_integer($pnPositionPk) && !empty($pnPositionPk)'))
       return array('error' => 'No Position Obtained. It may have already been deleted.');
 
-    return array('error' => __LINE__.' - Here we are.');
+    return array('error' => __LINE__.' $pnPositionPk');
+
+    $slistemDB = CDependency::getComponentByName('database');
 
     /*$oDB = CDependency::getComponentByName('database');
 
