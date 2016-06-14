@@ -243,9 +243,11 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-
+ChromePhp::log($slistemQuery);
+var_dump($slistemQuery);
+echo "<br><br>";
     $positionDataSlistem = $slistemDB->slistemGetAllData($slistemQuery);
-
+var_dump($positionDataSlistem);
     if($psType == 'share')
     {
       $bDisplayFilter = false;
@@ -382,7 +384,7 @@ class CJobboarduserEx extends CJobboarduser
       $nTotal = (int)$oResult->getFieldValue('nCount', 0);
       $asRecords = array();
 
-ChromePhp::log($positionDataSlistem);
+
     //if($nTotal> 0)
     if(isset($positionDataSlistem) && !empty($positionDataSlistem))
     {
