@@ -912,11 +912,11 @@ class CJobboarduserEx extends CJobboarduser
         <table>
           <tr class='list_row' >
             <th class='list_cell' >Position ID</th>
-            <th>Position Title</th>
-            <th>Company</th>
-            <th>Industry</th>
-            <th>Edit</th>
-            <th>Action</th>
+            <th class='list_cell' >Position Title</th>
+            <th class='list_cell' >Company</th>
+            <th class='list_cell' >Industry</th>
+            <th class='list_cell' >Edit</th>
+            <th class='list_cell' >Action</th>
           </tr>
         </table>
 
