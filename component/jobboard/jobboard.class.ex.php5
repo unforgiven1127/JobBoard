@@ -2832,7 +2832,7 @@ ChromePhp::log($slistemQuery);
         else
         {
           $sSubject = CONST_JOBBOARD_MAIL_SITE_NAME.' notifier: application to job #'.$pnPositionPk;
-          $sContent.= 'We\'ve just received an application for the job offer #'.$pnPositionPk.': "'.$asPosition[$pnPositionPk]['position_title'].'".<br />';
+          $sContent.= 'We\'ve just received an application for the job offer #'.$pnPositionPk.': "'.$sPositionName.'".<br />';
           $sContent.= 'Click <strong><a href="'.$sUrl.'">here</a></strong> to view the detail of the offer.<br/> <br/>';
 
           if(isset($asRawData['jobID']))
