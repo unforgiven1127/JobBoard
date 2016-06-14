@@ -400,7 +400,7 @@ class CJobboarduserEx extends CJobboarduser
 
 //var_dump($asRecords);
 
-      /*if(!empty($asRecords))
+      if(!empty($asRecords))
       {
         $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
         $sQuery.= ' LEFT JOIN industry as ind ON (ind.industrypk = pos1.industryfk) ';
@@ -411,20 +411,17 @@ class CJobboarduserEx extends CJobboarduser
         $bRead = $oResult->readFirst();
         $asChilds = array();
 
-        //while($bRead)
-        foreach ($variable as $key => $value)
+        while($bRead)
         {
-          $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $value;
-          //$bRead = $oResult->readNext();
+          $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
+          $bRead = $oResult->readNext();
         }
-      }*/
+      }
 
       if(!empty($positionDataSlistem))
       {
         foreach($positionDataSlistem as $asJobDetail)
         {
-          $asChilds = array();
-          $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $value;
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
