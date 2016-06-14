@@ -910,7 +910,7 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = "
 
         <table style='width:100%;'>
-          <tr class='list_row' >
+          <tr style='width:100%; class='list_row' >
             <th style='color:white; width:20%;' >Position ID</th>
             <th style='color:white; width:20%;' >Position Title</th>
             <th style='color:white; width:20%;' >Company</th>
