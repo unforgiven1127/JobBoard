@@ -426,13 +426,13 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:13%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:25%; text-align: center;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%; text-align: center;'));
             $sHTML.= $oHTML->getText($asJobDetail['position_title']);
             $sHTML.= $oHTML->getBlocEnd();
 
@@ -444,11 +444,11 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
             $sHTML.= $oHTML->getText('Edit');
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
             $sHTML.= $oHTML->getText('Action');
             $sHTML.= $oHTML->getBlocEnd();
 
