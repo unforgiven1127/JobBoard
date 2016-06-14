@@ -908,8 +908,8 @@ class CJobboarduserEx extends CJobboarduser
     $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
 
     $sHTML = "
-
-        <table class='ablistHeader' style='width:100%;'>
+      <div class='ablistHeader'>
+      <table  style='width:100%;'>
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%;' >Position ID</th>
             <th style='color:white; width:30%;' >Position Title</th>
@@ -919,6 +919,8 @@ class CJobboarduserEx extends CJobboarduser
             <th style='color:white; width:10%;' >Action</th>
           </tr>
         </table>
+      </div>
+        
 
     ";
 
