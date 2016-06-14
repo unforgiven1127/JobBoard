@@ -911,18 +911,18 @@ class CJobboarduserEx extends CJobboarduser
 
         <table>
           <tr class='list_row' >
-            <th class='list_row_data' >Position ID</th>
-            <th class='list_row_data' >Position Title</th>
-            <th class='list_row_data' >Company</th>
-            <th class='list_row_data' >Industry</th>
-            <th class='list_row_data' >Edit</th>
-            <th class='list_row_data' >Action</th>
+            <th class='list_cell' >Position ID</th>
+            <th class='list_cell' >Position Title</th>
+            <th class='list_cell' >Company</th>
+            <th class='list_cell' >Industry</th>
+            <th class='list_cell' >Edit</th>
+            <th class='list_cell' >Action</th>
           </tr>
         </table>
 
     ";
 
-    /*$sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
+    $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'float: left; width:4.2%;'));
@@ -955,7 +955,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getBlocEnd();
-    $sHTML.= $oHTML->getBlocEnd();*/
+    $sHTML.= $oHTML->getBlocEnd();
 
     return $sHTML;
   }
