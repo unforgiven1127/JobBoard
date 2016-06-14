@@ -922,7 +922,7 @@ class CJobboarduserEx extends CJobboarduser
 
     ";
 
-    $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
+    /*$sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
       $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'float: left; width:4.2%;'));
@@ -955,7 +955,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getBlocEnd();
-    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();*/
 
     return $sHTML;
   }
