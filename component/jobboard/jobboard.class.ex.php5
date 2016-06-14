@@ -489,7 +489,7 @@ ChromePhp::log($avResult);
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
 
-    $slistemQuery.=" WHERE slpd.is_public = 1 AND slpd.public_flag = a";
+    $slistemQuery.=" WHERE slpd.is_public = 1 AND slpd.public_flag = 'a'";
 
     if(!empty($asFilter['where']))
     {
