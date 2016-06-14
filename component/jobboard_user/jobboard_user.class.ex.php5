@@ -199,7 +199,8 @@ class CJobboarduserEx extends CJobboarduser
     $oJobboard = CDependency::getComponentByName($this->csBoardComponent);
     $oPager->initPager();
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
-
+var_dump('asdasdasd');
+exit;
     $sLanguage = getValue('lang');
     $sAction = getValue('action');
     $bSlistemOnly = (bool)getValue('slistem', 0);
