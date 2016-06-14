@@ -243,11 +243,11 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-ChromePhp::log($slistemQuery);
-var_dump($slistemQuery);
-echo "<br><br>";
+//ChromePhp::log($slistemQuery);
+//var_dump($slistemQuery);
+//echo "<br><br>";
     $positionDataSlistem = $slistemDB->slistemGetAllData($slistemQuery);
-var_dump($positionDataSlistem);
+//var_dump($positionDataSlistem);
     if($psType == 'share')
     {
       $bDisplayFilter = false;
@@ -388,7 +388,7 @@ var_dump($positionDataSlistem);
     //if($nTotal> 0)
     if(isset($positionDataSlistem) && !empty($positionDataSlistem))
     {
-      ChromePhp::log($positionDataSlistem);
+      //ChromePhp::log($positionDataSlistem);
       //fetch positions
       /*$oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
@@ -437,6 +437,10 @@ var_dump($positionDataSlistem);
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
+            $sHTML.= $oHTML->getCarriageReturn();
+
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));//industry
+            $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getCarriageReturn();
 
             if((int)$asJobDetail['indus_status'] == 2)
