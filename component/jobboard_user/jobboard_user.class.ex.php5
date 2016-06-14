@@ -1440,14 +1440,8 @@ class CJobboarduserEx extends CJobboarduser
     $slistemQuery = "UPDATE sl_position_detail SET public_flag = '".$newFlag."' WHERE positionfk = '".$pnPositionPk."'";
     $updateData = $slistemDB->slistemGetAllData($slistemQuery);
 
-    if(!empty($updateData))
-    {
-      return array('notice' => 'Position has been deleted.', 'reload' => 1);
-    }
-    else
-    {
-      return array('error' => __LINE__.' - Couldn\'t delete the position');
-    }
+    return array('notice' => 'Position has been deleted.', 'reload' => 1);
+
 
     /*$oDB = CDependency::getComponentByName('database');
 
