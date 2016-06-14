@@ -388,7 +388,7 @@ class CJobboarduserEx extends CJobboarduser
       foreach ($positionDataSlistem as $key => $value)
       {
         $sHTML.= "<tr>
-                    <td style='margin-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
+                    <td style='padding-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
                     <td>".$value['position_title']."</td>
                     <td>".$value['company_name']."</td>
                     <td>".$value['name']."</td>
