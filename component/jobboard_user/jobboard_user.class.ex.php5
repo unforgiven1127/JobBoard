@@ -383,20 +383,21 @@ class CJobboarduserEx extends CJobboarduser
       $asRecords = array();
 
 
-    if($nTotal> 0)
+    //if($nTotal> 0)
+    if(isset($positionDataSlistem))
     {
       //fetch positions
-      $oResult = $oDB->ExecuteQuery($sQuery);
+      /**$oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
       while($bRead)
       {
         $asRecords[$oResult->getFieldValue('positionpk', CONST_PHP_VARTYPE_INT)] = $oResult->getData();
         $bRead = $oResult->readNext();
-      }
+      }*/
 
 //var_dump($asRecords);
 
-      if(!empty($asRecords))
+      /*if(!empty($asRecords))
       {
         $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
         $sQuery.= ' LEFT JOIN industry as ind ON (ind.industrypk = pos1.industryfk) ';
@@ -414,11 +415,11 @@ class CJobboarduserEx extends CJobboarduser
           $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
-      }
+      }*/
 
-      if(!empty($asRecords))
+      if(!empty($positionDataSlistem))
       {
-        foreach($asRecords as $asJobDetail)
+        foreach($positionDataSlistem as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
@@ -435,9 +436,9 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
-            $sHTML.= $oHTML->getCarriageReturn();
+            $sHTML.= $oHTML->getBlocEnd();
 
-            if((int)$asJobDetail['indus_status'] == 2)
+            /*if((int)$asJobDetail['indus_status'] == 2)
               $sHTML.= $oHTML->getText('<em style="font-size: 0.8em;color:orange;">'.$asJobDetail['name'].' (need Trans.)</em>');
             else
             {
@@ -446,7 +447,7 @@ class CJobboarduserEx extends CJobboarduser
               else
                 $sHTML.= $oHTML->getText($asJobDetail['temp_industry']);
             }
-            $sHTML.= $oHTML->getBlocEnd();
+            $sHTML.= $oHTML->getBlocEnd();*/
 
             //---------------------------------------------------------------------
             //Actions based on the type (nothing: edit, share: social network ....)
