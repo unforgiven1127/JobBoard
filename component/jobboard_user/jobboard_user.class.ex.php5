@@ -915,8 +915,8 @@ class CJobboarduserEx extends CJobboarduser
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%;' >Position ID</th>
             <th style='color:white; width:30%; padding-left:100px;' >Position Title</th>
-            <th style='color:white; width:20%;' >Company</th>
-            <th style='color:white; width:20%;' >Industry</th>
+            <th style='color:white; width:20%; padding-left:100px;' >Company</th>
+            <th style='color:white; width:20%; padding-left:100px;' >Industry</th>
             <th style='color:white; width:10%;' >Edit</th>
             <th style='color:white; width:10%;' >Action</th>
           </tr>
