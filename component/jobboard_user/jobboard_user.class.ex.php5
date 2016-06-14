@@ -192,6 +192,7 @@ class CJobboarduserEx extends CJobboarduser
     //echo'_getManageJobs';
     //ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
@@ -242,6 +243,8 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     if($psType == 'share')
     {
