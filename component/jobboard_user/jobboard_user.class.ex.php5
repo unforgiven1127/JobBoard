@@ -192,15 +192,13 @@ class CJobboarduserEx extends CJobboarduser
     //echo'_getManageJobs';
     //ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
-    $slistemDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
     $oJobboard = CDependency::getComponentByName($this->csBoardComponent);
     $oPager->initPager();
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
-var_dump('asdasdasd');
-exit;
+
     $sLanguage = getValue('lang');
     $sAction = getValue('action');
     $bSlistemOnly = (bool)getValue('slistem', 0);
@@ -244,9 +242,8 @@ exit;
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-var_dump($slistemQuery);
-exit;
-    /*if($psType == 'share')
+
+    if($psType == 'share')
     {
       $bDisplayFilter = false;
       $sCountQuery = ' SELECT count(distinct pos.positionpk) as nCount FROM position as pos WHERE pos.parentfk IS NOT NULL AND lang = "en" ';
@@ -305,7 +302,7 @@ exit;
     }
 
     $sQuery.= $sOrder;
-    $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();*/
+    $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'ta_user_list_container'));
@@ -377,13 +374,13 @@ exit;
 
 
       //count positions
-      /*$oResult = $oDB->ExecuteQuery($sCountQuery);
+      $oResult = $oDB->ExecuteQuery($sCountQuery);
       $bRead = $oResult->readFirst();
       $nTotal = (int)$oResult->getFieldValue('nCount', 0);
-      $asRecords = array();*/
+      $asRecords = array();
 
 
-    /*if($nTotal> 0)
+    if($nTotal> 0)
     {
       //fetch positions
       $oResult = $oDB->ExecuteQuery($sQuery);
@@ -392,11 +389,11 @@ exit;
       {
         $asRecords[$oResult->getFieldValue('positionpk', CONST_PHP_VARTYPE_INT)] = $oResult->getData();
         $bRead = $oResult->readNext();
-      }*/
+      }
 
 //var_dump($asRecords);
 
-      /*if(!empty($asRecords))
+      if(!empty($asRecords))
       {
         $sQuery = ' SELECT group_concat(CONCAT(pos1.lang,"|",pos1.positionpk,"|",pos1.visibility, "|",ind.status) SEPARATOR ",") as language, group_concat(pos1.lang SEPARATOR ",") as lg, pos1.positionpk FROM position as pos1';
         $sQuery.= ' LEFT JOIN industry as ind ON (ind.industrypk = pos1.industryfk) ';
@@ -412,11 +409,8 @@ exit;
           $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
-      }*/
+      }
 
-      $asRecords = $slistemDB->slistemGetAllData($slistemQuery);
-var_dump($asRecords);
-exit;
       if(!empty($asRecords))
       {
         foreach($asRecords as $asJobDetail)
@@ -425,7 +419,7 @@ exit;
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
-            $sHTML.= $oHTML->getText('#'.$asJobDetail['positionpk']);
+            $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
@@ -436,10 +430,6 @@ exit;
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
-            $sHTML.= $oHTML->getCarriageReturn();
-
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
-            $sHTML.= $oHTML->getText($asJobDetail['name']);
             $sHTML.= $oHTML->getCarriageReturn();
 
             if((int)$asJobDetail['indus_status'] == 2)
