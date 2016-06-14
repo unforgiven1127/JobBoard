@@ -428,19 +428,21 @@ class CJobboarduserEx extends CJobboarduser
 
           if($asJobDetail['public_flag'] == 'a')
           {
+            $shadowStyle = " ";
             $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
             $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/delete_24.png', 'Delete position');
             $onclick = 'if(!window.confirm(\'Are you sure to delete this position ?\')){ return false; }';
           }
           else
           {
+            $shadowStyle = " background-color: yellow; ";
             $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
             $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/add_24.png', 'Activate position');
             $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
           }
 
           $sHTML.= $oHTML->getListItemStart();
-          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
+          $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data ' 'style' => $shadowStyle));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
