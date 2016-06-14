@@ -437,7 +437,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
             $sHTML.= $oHTML->getCarriageReturn();
 
-            /*if((int)$asJobDetail['indus_status'] == 2)
+            if((int)$asJobDetail['indus_status'] == 2)
               $sHTML.= $oHTML->getText('<em style="font-size: 0.8em;color:orange;">'.$asJobDetail['name'].' (need Trans.)</em>');
             else
             {
@@ -445,7 +445,7 @@ class CJobboarduserEx extends CJobboarduser
                 $sHTML.= $oHTML->getText($oJobboard->getTranslation($asJobDetail['name']));
               else
                 $sHTML.= $oHTML->getText($asJobDetail['temp_industry']);
-            }*/
+            }
             $sHTML.= $oHTML->getBlocEnd();
 
             //---------------------------------------------------------------------
