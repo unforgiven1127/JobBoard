@@ -918,7 +918,7 @@ class CJobboarduserEx extends CJobboarduser
             <th style='color:white; width:20%; padding-left:140px;' >Company</th>
             <th style='color:white; width:20%; padding-left:110px;' >Industry</th>
             <th style='color:white; width:10%;' >Edit</th>
-            <th style='color:white; width:10%;' text-align: left;>Action</th>
+            <th align='left' style='color:white; width:10%;'>Action</th>
           </tr>
 
     ";
