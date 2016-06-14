@@ -453,10 +453,10 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getBlocEnd();*/
 
             $sHTML.= "<tr>
-                    <td style='padding-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
-                    <td>".$value['position_title']."</td>
-                    <td>".$value['company_name']."</td>
-                    <td>".$value['name']."</td>
+                    <td style='padding-top:10px;'>#".$asJobDetail['external_key']."<br>".$asJobDetail['posted_date']."</td>
+                    <td>".$asJobDetail['position_title']."</td>
+                    <td>".$asJobDetail['company_name']."</td>
+                    <td>".$asJobDetail['name']."</td>
                     <td>Edit</td>
                     <td>Action</td>
                   </tr>";
@@ -480,10 +480,10 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getListItemEnd();
         }
-        $sHTML.= "</table>";
+        
       }
     }
-
+$sHTML.= "</table>";
     $sLang = getValue('lang');
     if(isset($sLang) && !empty($sLang))
       $_SESSION['lang'] = $sLang;
