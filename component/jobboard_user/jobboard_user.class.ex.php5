@@ -244,7 +244,7 @@ class CJobboarduserEx extends CJobboarduser
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
 
-    //$positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $positionDataSlistem = $slistemDB->slistemGetAllData($slistemQuery);
 
     if($psType == 'share')
     {
@@ -383,10 +383,11 @@ class CJobboarduserEx extends CJobboarduser
       $asRecords = array();
 
 
-    if($nTotal> 0)
+    //if($nTotal> 0)
+    if(isset($positionDataSlistem) && !empty($positionDataSlistem))
     {
       //fetch positions
-      $oResult = $oDB->ExecuteQuery($sQuery);
+      /*$oResult = $oDB->ExecuteQuery($sQuery);
       $bRead = $oResult->readFirst();
       while($bRead)
       {
@@ -412,11 +413,11 @@ class CJobboarduserEx extends CJobboarduser
           $asChilds[$oResult->getFieldValue('positionpk',CONST_PHP_VARTYPE_INT)][] = $oResult->getData();
           $bRead = $oResult->readNext();
         }
-      }
+      }*/
 
-      if(!empty($asRecords))
+      if(!empty($positionDataSlistem))
       {
-        foreach($asRecords as $asJobDetail)
+        foreach($positionDataSlistem as $asJobDetail)
         {
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
