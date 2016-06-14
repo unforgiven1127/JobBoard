@@ -911,12 +911,12 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:4.2%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'float: left; width:4.2%;'));
       $sSortUrl = $sURL.'&sortfield=external_key&sortorder=desc';
       $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell left', 'style' => 'width:25%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell left', 'style' => 'float: left; width:25%;'));
       $sHTML.= $oHTML->getText('Position Title ');
       $sHTML.= $oHTML->getBlocEnd();
 
