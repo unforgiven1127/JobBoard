@@ -223,7 +223,7 @@ class CJobboarduserEx extends CJobboarduser
                      slpd.description as meta_desc, slpd.meta_keywords as meta_keywords, slpd.company_label as company_label,
                      slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
                      ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
-                     cp.name as company_name, slpd.raw_data as raw_data
+                     cp.name as company_name, slpd.raw_data as raw_data, slpd.public_flag as public_flag
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
@@ -426,6 +426,16 @@ class CJobboarduserEx extends CJobboarduser
           $sURL =  $oPage->getUrl('jobboard_user', CONST_ACTION_EDIT, CONST_TA_TYPE_LIST_JOB, (int)$asJobDetail['external_key']);
           $sPic =  $oHTML->getPicture(CONST_PICTURE_EDIT, 'Edit Position');
 
+          if($asJobDetail['public_flag'] == 'a')
+          {
+            $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
+            $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/delete_24.png', 'Delete position');
+          }
+          else
+          {
+
+          }
+
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
@@ -452,7 +462,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getBlocEnd();
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '));
-            $sHTML.= $oHTML->getText('Action');
+            $sHTML.= $oHTML->getLink($sPicAction, $sUrlAction, array('onclick' => 'if(!window.confirm(\'Are you sure to delete this position ?\')){ return false; }'));
             $sHTML.= $oHTML->getBlocEnd();
 
             /*if((int)$asJobDetail['indus_status'] == 2)
