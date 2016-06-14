@@ -652,10 +652,10 @@ ChromePhp::log($slistemQuery);
 
       if(isset($positionDataCount))
       {
-        //$sHTML.= $this->_getSearchMessage($positionDataCount);
+        $sHTML.= $this->_getSearchMessage($positionDataCount);
       }
       else if(getValue('do_search'))
-        //$sHTML.= $this->_getSearchMessage($nNbResult);
+        $sHTML.= $this->_getSearchMessage($nNbResult);
 
       $sHTML.= $oHTML->getSpace();
       $sHTML.= $oHTML->getBlocEnd();
@@ -1404,6 +1404,7 @@ ChromePhp::log($slistemQuery);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
+        ChromePhp::log($avResult);
         $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
 
 
