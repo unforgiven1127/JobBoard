@@ -1399,7 +1399,7 @@ class CJobboarduserEx extends CJobboarduser
     if(!assert('is_integer($pnPositionPk) && !empty($pnPositionPk)'))
       return array('error' => 'No Position Obtained. It may have already been deleted.');
 
-    $oDB = CDependency::getComponentByName('database');
+    /*$oDB = CDependency::getComponentByName('database');
 
     $sQuery = 'SELECT * FROM position WHERE positionpk = '.$pnPositionPk.' ';
     $oDbResult = $oDB->ExecuteQuery($sQuery);
@@ -1417,7 +1417,7 @@ class CJobboarduserEx extends CJobboarduser
     if(!$oDbResult)
       return array('error' => __LINE__.' - Couldn\'t delete the position');
 
-    return array('notice' => 'Position has been deleted.', 'reload' => 1);
+    return array('notice' => 'Position has been deleted.', 'reload' => 1);*/
   }
 
 
