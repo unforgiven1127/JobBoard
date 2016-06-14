@@ -441,7 +441,7 @@ class CJobboarduserEx extends CJobboarduser
             $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
           }
 
-          $sHTML.= $oHTML->getListItemStart('', array('style' => $shadowStyle));
+          $sHTML.= $oHTML->getListItemStart('passive', array('style' => $shadowStyle));
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data ','style' => $shadowStyle));
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%; '.$shadowStyle));
