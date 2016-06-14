@@ -435,7 +435,7 @@ class CJobboarduserEx extends CJobboarduser
           else
           {
             $sUrlAction = $oPage->getAjaxUrl('jobboard_user', CONST_ACTION_DELETE, CONST_TA_TYPE_LIST_JOB,(int)$asJobDetail['external_key']);
-            $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/add.png', 'Activate position');
+            $sPicAction = $oHTML->getPicture($this->getResourcePath().'/pictures/add_24.png', 'Activate position');
             $onclick = 'if(!window.confirm(\'Are you sure to activate this position ?\')){ return false; }';
           }
 
