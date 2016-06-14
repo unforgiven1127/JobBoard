@@ -437,11 +437,11 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
-            $sHTML.= $oHTML->getCarriageReturn();
+            $sHTML.= $oHTML->getBlocEnd();
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:18%;'));//industry
             $sHTML.= $oHTML->getText($asJobDetail['name']);
-            $sHTML.= $oHTML->getBlocEnd();
+            $sHTML.= $oHTML->getCarriageReturn();
 
             if((int)$asJobDetail['indus_status'] == 2)
               $sHTML.= $oHTML->getText('<em style="font-size: 0.8em;color:orange;">'.$asJobDetail['name'].' (need Trans.)</em>');
