@@ -452,7 +452,7 @@ class CJobboarduserEx extends CJobboarduser
               else
                 $sHTML.= $oHTML->getText($asJobDetail['temp_industry']);
             }*/
-            $sHTML.= $oHTML->getBlocEnd();
+            //$sHTML.= $oHTML->getBlocEnd();
 
             //---------------------------------------------------------------------
             //Actions based on the type (nothing: edit, share: social network ....)
