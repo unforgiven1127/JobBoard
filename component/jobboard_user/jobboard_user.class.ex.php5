@@ -375,6 +375,7 @@ class CJobboarduserEx extends CJobboarduser
       $sHTML.= "<table style='width:100%;'>";
       $sHTML.= $this->_getJobsRowHeader();
       $sHTML.= $oHTML->getListItemEnd();
+      $sHTML.= "</table>";
 
 
       //count positions
@@ -383,30 +384,9 @@ class CJobboarduserEx extends CJobboarduser
       $nTotal = (int)$oResult->getFieldValue('nCount', 0);
       $asRecords = array();
 
-    if(isset($positionDataSlistem))
-    {
-      foreach ($positionDataSlistem as $key => $value)
-      {
-
-        $sHTML.= $oHTML->getListItemStart();
-        $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
-        $sHTML.= "<tr>
-                    <td style='padding-top:10px;'>#".$value['external_key']."<br>".$value['posted_date']."</td>
-                    <td>".$value['position_title']."</td>
-                    <td>".$value['company_name']."</td>
-                    <td>".$value['name']."</td>
-                    <td>Edit</td>
-                    <td>Action</td>
-                  </tr>";
-        $sHTML.= $oHTML->getBlocEnd();
-        $sHTML.= $oHTML->getListItemEnd();
-      }
-
-    }
-    $sHTML.= "</table>";
 
     //if($nTotal> 0)
-    /*if(isset($positionDataSlistem))
+    if(isset($positionDataSlistem))
     {
       //fetch positions
       /**$oResult = $oDB->ExecuteQuery($sQuery);
@@ -439,7 +419,7 @@ class CJobboarduserEx extends CJobboarduser
         }
       }*/
 
-      /*if(!empty($positionDataSlistem))
+      if(!empty($positionDataSlistem))
       {
         foreach($positionDataSlistem as $asJobDetail)
         {
@@ -488,11 +468,11 @@ class CJobboarduserEx extends CJobboarduser
             //var_dump($asChilds);
             //$sHTML.= $this->_getListActions($psType, $asJobDetail, $asChilds);
 
-          /*$sHTML.= $oHTML->getBlocEnd();
+          $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getListItemEnd();
         }
       }
-    }*/
+    }
 
     $sLang = getValue('lang');
     if(isset($sLang) && !empty($sLang))
@@ -515,7 +495,7 @@ class CJobboarduserEx extends CJobboarduser
     if($nTotal > 0)
       $sHTML.= $oPager->getDisplay($nTotal, $sUrl);
 
-    //$sHTML.= $oHTML->getFloatHack();
+    $sHTML.= $oHTML->getFloatHack();
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
 
