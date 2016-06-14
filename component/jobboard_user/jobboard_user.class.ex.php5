@@ -1399,6 +1399,8 @@ class CJobboarduserEx extends CJobboarduser
     if(!assert('is_integer($pnPositionPk) && !empty($pnPositionPk)'))
       return array('error' => 'No Position Obtained. It may have already been deleted.');
 
+    return array('error' => __LINE__.' - Here we are.');
+
     /*$oDB = CDependency::getComponentByName('database');
 
     $sQuery = 'SELECT * FROM position WHERE positionpk = '.$pnPositionPk.' ';
