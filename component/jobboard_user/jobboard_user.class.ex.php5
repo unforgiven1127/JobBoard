@@ -1424,7 +1424,7 @@ class CJobboarduserEx extends CJobboarduser
                  WHERE slp.sl_positionpk = ".$pnPositionPk;
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-
+    $positionData = $positionData[0];
     ChromePhp::log($positionData);
 
     /*$oDB = CDependency::getComponentByName('database');
