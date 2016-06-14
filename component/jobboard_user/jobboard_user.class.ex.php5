@@ -424,17 +424,17 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:8%;'));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:22%;'));
             $sHTML.= $oHTML->getText($asJobDetail['position_title']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:20%;'));
             $sHTML.= $oHTML->getText($asJobDetail['company_name']);
             $sHTML.= $oHTML->getBlocEnd();
 
@@ -911,16 +911,16 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:10%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:8%;'));
       $sSortUrl = $sURL.'&sortfield=external_key&sortorder=desc';
       $sHTML.= $oHTML->getLink('Position ID', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:30%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:22%;'));
       $sHTML.= $oHTML->getText('Position Title ');
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:30%;'));
+      $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_cell', 'style' => 'width:20%;'));
       $sSortUrl = $sURL.'&sortfield=company_name&sortorder=asc';
       $sHTML.= $oHTML->getLink('Company', $sSortUrl);
       $sHTML.= $oHTML->getBlocEnd();
