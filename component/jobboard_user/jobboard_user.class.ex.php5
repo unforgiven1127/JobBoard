@@ -424,7 +424,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'list_row_data '));
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:10%;'));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:13%;'));
             $sHTML.= $oHTML->getText('#'.$asJobDetail['external_key']);
             $sHTML.= $oHTML->getCarriageReturn();
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
