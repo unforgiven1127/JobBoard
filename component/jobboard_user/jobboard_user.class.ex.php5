@@ -382,7 +382,7 @@ class CJobboarduserEx extends CJobboarduser
       $nTotal = (int)$oResult->getFieldValue('nCount', 0);
       $asRecords = array();
 
-
+ChromePhp::log($positionDataSlistem);
     //if($nTotal> 0)
     if(isset($positionDataSlistem) && !empty($positionDataSlistem))
     {
