@@ -412,7 +412,8 @@ class CJobboarduserEx extends CJobboarduser
       }*/
 
       $asRecords = $slistemDB->slistemGetAllData($slistemQuery);
-
+var_dump($asRecords);
+exit;
       if(!empty($asRecords))
       {
         foreach($asRecords as $asJobDetail)
