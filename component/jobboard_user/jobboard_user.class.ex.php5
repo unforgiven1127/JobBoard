@@ -448,7 +448,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText('Edit');
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:8%; text-align: center; '));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:9%; text-align: center; '));
             $sHTML.= $oHTML->getText('Action');
             $sHTML.= $oHTML->getBlocEnd();
 
