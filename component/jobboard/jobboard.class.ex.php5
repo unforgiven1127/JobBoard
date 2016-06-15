@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
     $sKeyWord = strtolower(getValue('keyword'));
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
-      $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio, ";
+      $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio, levenshtein('$sKeyWord',LOWER(slpd.title)) as levenshtein,";
       $leventOrderFlag = true;
     }
     else
