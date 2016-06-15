@@ -1021,7 +1021,7 @@ class CJobboarduserEx extends CJobboarduser
     //while($bRead)
     foreach ($positionData as $key => $value)
     {
-      $asLocation[$value('sl_locationpk')] = $value('location');
+      $asLocation[$value['sl_locationpk']] = $value['location'];
       //$bRead = $oDbResult->readNext();
     }
 
