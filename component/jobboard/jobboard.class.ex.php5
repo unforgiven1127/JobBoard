@@ -1290,7 +1290,7 @@ ChromePhp::log($leventOrderFlag);
 
     foreach($locations as $nValue => $vType)
     {
-      if($asRecord['location_id'] == $nValue)
+      if($asRecord['location_id'] == '')
         $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
       else
         $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
