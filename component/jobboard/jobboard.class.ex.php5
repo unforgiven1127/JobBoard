@@ -431,13 +431,11 @@ class CJobboardEx extends CJobboard
 
     $leventOrderFlag = false;
     $levent = " ";
-ChromePhp::log($sKeyWord);
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
       $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH('".$sKeyWord."') ) AS ratio";
       $leventOrderFlag = true;
     }
-ChromePhp::log($leventOrderFlag);
     //$leventOrderFlag = false;
 
     $slistemDB = CDependency::getComponentByName('database');
@@ -964,7 +962,7 @@ ChromePhp::log($leventOrderFlag);
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry_tree');
-      $sLocation = strtolower(getValue('location'));
+      //$sLocation = strtolower(getValue('location'));
 //ChromePhp::log($sLocation);
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
@@ -1102,7 +1100,7 @@ ChromePhp::log($leventOrderFlag);
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry_tree');
-      $sLocation = strtolower(getValue('location'));
+      //$sLocation = strtolower(getValue('location'));
 
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
@@ -1152,11 +1150,11 @@ ChromePhp::log($leventOrderFlag);
         $asWhereSql[] = ' (ind.industrypk IN ('.$sIndustry.') OR ind.parentfk IN ('.$sIndustry.')) ';
       }
 
-      if(!empty($sLocation))
+      /*if(!empty($sLocation))
       {
         $sLocation = $oDb->dbEscapeString('%'.$sLocation.'%');
         $asWhereSql[] = ' lower(pos.location) LIKE '.$sLocation.'';
-      }
+      }*/
 
       if(!empty($sCareer))
       {
