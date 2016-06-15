@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
     $sKeyWord = strtolower(getValue('keyword'));
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
-      $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH(".$sKeyWord.") ) AS ratio";
+      $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH('".$sKeyWord."') ) AS ratio";
       $leventOrderFlag = true;
     }
     else
