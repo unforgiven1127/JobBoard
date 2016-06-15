@@ -811,7 +811,7 @@ class CJobboarduserEx extends CJobboarduser
       $slistemDB = CDependency::getComponentByName('database');
       //$slistemQuery = 'SELECT * FROM sl_location ORDER BY location ';
 
-      $sQuery = 'UPDATE sl_position SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
+      $sQuery = 'UPDATE sl_position_detail SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
       $sQuery.= ' category = '.$oDB->dbEscapeString($nCategory).',';
       $sQuery.= ' career_level = '.$oDB->dbEscapeString($sCareerLevel).',';
       //$sQuery.= ' company_label = '.$oDB->dbEscapeString($sCompanyLabel).',';
