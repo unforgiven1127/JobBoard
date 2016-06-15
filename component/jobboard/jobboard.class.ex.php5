@@ -558,6 +558,8 @@ ChromePhp::log($avResult);
 
     $slistemQuery .= " order by slp.date_created DESC";
 
+    $noLimitSql = $slistemQuery;
+    $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery);
 
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
