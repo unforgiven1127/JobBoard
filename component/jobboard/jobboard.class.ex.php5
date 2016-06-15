@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
     $sKeyWord = strtolower(getValue('keyword'));
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
-      $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio,";
+      $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio, ";
       $leventOrderFlag = true;
     }
     else
@@ -442,7 +442,7 @@ ChromePhp::log($avResult);
     $leventOrderFlag = false;
 
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT FOUND_ROWS() as count,
+    $slistemQuery = "SELECT FOUND_ROWS() as count, ".$levent."
                      slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
                      slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
                      slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
