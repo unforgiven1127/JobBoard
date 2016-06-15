@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
     $sKeyWord = strtolower(getValue('keyword'));
 
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT FOUND_ROWS() as count, levenshtein($sKeyWord,LOWER(slpd.title)) as levent,
+    $slistemQuery = "SELECT FOUND_ROWS() as count, levenshtein('$sKeyWord',LOWER(slpd.title)) as levent,
                      slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
                      slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
                      slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
