@@ -483,6 +483,7 @@ ChromePhp::log($avResult);
     }
     if(!empty($sLocation))
     {
+      ChromePhp::log($sLocation);
       $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND lower(sll.location) LIKE '%".$sLocation."%' ";
     }
     else
