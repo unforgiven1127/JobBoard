@@ -831,7 +831,7 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
       $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
       //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
-      $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
+      $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords);
       //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
       //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
       //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
