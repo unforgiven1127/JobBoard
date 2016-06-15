@@ -823,16 +823,16 @@ class CJobboarduserEx extends CJobboarduser
         $sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
         $sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
         $sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
-        $sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
-        $sQuery.= ' salary_low = '.$oDB->dbEscapeString($nSalaryLow).',';
-        $sQuery.= ' salary_high = '.$oDB->dbEscapeString($nSalaryHigh).',';
-        $sQuery.= ' english = '.$oDB->dbEscapeString($nEnglishLevel).',';
-        $sQuery.= ' japanese = '.$oDB->dbEscapeString($nJapaneseLevel).',';
-        $sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).',';
+        //$sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
+        //$sQuery.= ' salary_low = '.$oDB->dbEscapeString($nSalaryLow).','; // sl_position altinda
+        //$sQuery.= ' salary_high = '.$oDB->dbEscapeString($nSalaryHigh).','; // sl_position altinda
+        //$sQuery.= ' english = '.$oDB->dbEscapeString($nEnglishLevel).','; // sl_position altinda
+        //$sQuery.= ' japanese = '.$oDB->dbEscapeString($nJapaneseLevel).','; // sl_position altinda
+        //$sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
         $sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
         $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
         $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
-        $sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).',';
+        //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
         $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
         $sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).',';
         $sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).',';
@@ -1387,7 +1387,7 @@ class CJobboarduserEx extends CJobboarduser
     $oForm->addField('input', 'work_hours', array('label' => 'Work Hours', 'class' => '', 'value' => $asRecord['work_hours']));
 
 
-    $sTip = '<div class="position_form_salary_help">Search engine optimization:<br />
+    /*$sTip = '<div class="position_form_salary_help">Search engine optimization:<br />
       The 3 last fields are required to make the position appear properly in Google searches.<br />
       - Page title is referring to the text that appears in the tab of your web browser when looking at the position.<br />
       - Keywords is a "," separated list of the most important words found in the position description. (3-10 words or groups of words)<br />
@@ -1396,7 +1396,7 @@ class CJobboarduserEx extends CJobboarduser
     $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sTip));
 
     $oForm->addField('input', 'page_title', array('label' => 'Page Title', 'class' => '', 'value' => $asRecord['page_title']));
-    $oForm->setFieldControl('page_title', array('jsFieldNotEmpty' => ''));
+    $oForm->setFieldControl('page_title', array('jsFieldNotEmpty' => ''));*/
 
     $oForm->addField('textarea', 'meta_keywords', array('label'=> 'Meta Keywords ', 'class' => 'description', 'style' => 'max-height: 50px;', 'value' => $asRecord['meta_keywords']));
     $oForm->setFieldControl('meta_keywords', array('jsFieldNotEmpty' => ''));
