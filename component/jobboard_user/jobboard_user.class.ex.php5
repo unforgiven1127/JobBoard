@@ -985,6 +985,40 @@ class CJobboarduserEx extends CJobboarduser
    * @return string
    */
 
+  public function getLocationOption($psValue = '')
+  {
+    $asList = $this->getLocationList();
+
+    $sOption = '<option value=""> - </option>';
+    foreach($asList as $sValue => $sLabel)
+    {
+      if($sValue == $psValue)
+        $sOption.= '<option value="'.$sValue.'" selected="selected">'.$sLabel.'</option>';
+      else
+        $sOption.= '<option value="'.$sValue.'">'.$sLabel.'</option>';
+    }
+
+    return $sOption;
+  }
+
+  public function getLocationList()
+  {
+    $oDb = CDependency::getComponentByName('database');
+    $sQuery = 'SELECT * FROM sl_location ORDER BY location ';
+    $oDbResult = $oDb->executeQuery($sQuery);
+    $bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    while($bRead)
+    {
+      $asLocation[$oDbResult->getFieldValue('sl_locationpk')] = $oDbResult->getFieldValue('location');
+      $bRead = $oDbResult->readNext();
+    }
+
+    $_SESSION['sl_location_list'] = $asLocation;
+    return $asLocation;
+  }
+
   private function _getJobEditForm($pnPk)
   {
     if(!assert('is_integer($pnPk)'))
@@ -1199,8 +1233,11 @@ class CJobboarduserEx extends CJobboarduser
 
 
 
-    $oForm->addField('input', 'location', array('label'=>'Location', 'class' => '', 'value' => $asRecord['location']));
-    $oForm->setFieldControl('location', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+    //$oForm->addField('input', 'location', array('label'=>'Location', 'class' => '', 'value' => $asRecord['location']));
+    //$oForm->setFieldControl('location', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+
+    $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
+    $oForm->addOptionHtml('location', $this->getLocationOption($oDbResult->asRecord('location_id')));
 
     $oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
     $oForm->setFieldControl('posted_date', array('jsFieldDate' => ''));
