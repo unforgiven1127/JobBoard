@@ -835,7 +835,7 @@ class CJobboarduserEx extends CJobboarduser
       //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
       //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
       //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
-      $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
+      $sQuery.= ' WHERE positionfk  = '.$pnPositionPk ;
 
       $positionData = $slistemDB->slistemGetAllData($sQuery);
 
