@@ -1288,7 +1288,7 @@ ChromePhp::log($leventOrderFlag);
     $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
     $locations = $this->getLocationOption();
 
-    $oForm->addOption('location', array('value'=>'', 'label' => 'Select','selected'=>'selected'));
+    $oForm->addOption('location', array('value'=>'', 'label' => 'Select Location','selected'=>'selected'));
     foreach($locations as $nValue => $vType)
     {
       $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
