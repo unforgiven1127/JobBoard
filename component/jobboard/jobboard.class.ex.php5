@@ -571,7 +571,7 @@ ChromePhp::log($slistemQuery);
       default:
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
-
+ChromePhp::log($leventOrderFlag);
     if($leventOrderFlag)
     {
       $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC";
