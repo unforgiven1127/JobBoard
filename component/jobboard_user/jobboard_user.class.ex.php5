@@ -1141,7 +1141,7 @@ class CJobboarduserEx extends CJobboarduser
     if(empty($asRecord['expiration_date']))
       $asRecord['expiration_date'] = date('Y-m-d', strtotime('+3 months'));
 
-    $oForm->addField('input', 'expiration_date', array('type' => 'date', 'label' => 'Expiration date', 'value' => $asRecord['expiration_date'], 'style' => 'width: 280px;'));
+    /*$oForm->addField('input', 'expiration_date', array('type' => 'date', 'label' => 'Expiration date', 'value' => $asRecord['expiration_date'], 'style' => 'width: 280px;'));*/
 
 
     //possibility to push a non slistem position to the job board
