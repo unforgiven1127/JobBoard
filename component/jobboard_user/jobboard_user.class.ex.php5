@@ -829,7 +829,7 @@ class CJobboarduserEx extends CJobboarduser
       //$sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
       $sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
       $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
-      $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
+      $sQuery.= ' work_hours = '.$oDB->dbEscapeString($sWorkHours).',';
       //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
       $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords);
       //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
