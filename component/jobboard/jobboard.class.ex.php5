@@ -428,9 +428,19 @@ ChromePhp::log($avResult);
   private function _getJobSearchResult($psSearchId = '')
   {
     $sKeyWord = strtolower(getValue('keyword'));
+    if(isset($sKeyWord))
+    {
+      $levent = "levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio,";
+      $leventOrderFlag = true;
+    }
+    else
+    {
+      $levent = " ";
+      $leventOrderFlag = false;
+    }
 
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT FOUND_ROWS() as count, levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio,
+    $slistemQuery = "SELECT FOUND_ROWS() as count, $levent
                      slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
                      slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
                      slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
@@ -558,7 +568,15 @@ ChromePhp::log($avResult);
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
 
-    $slistemQuery .= " order by ratio DESC";
+    if($leventOrderFlag)
+    {
+      $slistemQuery .= " order by ratio DESC";
+    }
+    else
+    {
+      $slistemQuery .= " order by slp.sl_positionpk DESC";
+    }
+
 
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince duzeldi....
