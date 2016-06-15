@@ -428,15 +428,14 @@ class CJobboardEx extends CJobboard
   private function _getJobSearchResult($psSearchId = '')
   {
     $sKeyWord = strtolower(getValue('keyword'));
+
+    $leventOrderFlag = false;
+    $levent = " ";
+
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
       $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH('".$sKeyWord."') ) AS ratio";
       $leventOrderFlag = true;
-    }
-    else
-    {
-      $levent = " ";
-      $leventOrderFlag = false;
     }
 
     //$leventOrderFlag = false;
