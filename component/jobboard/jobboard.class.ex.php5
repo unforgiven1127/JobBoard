@@ -913,15 +913,12 @@ ChromePhp::log($slistemQuery);
       $sOneKeyword = $oDb->dbEscapeString($sKeyWord);
       $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
 
-      $asKeywordSql[] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
+      $asKeywordSql[] = " slpd.title = '$allKeyword'";
 
       $asResult['order'][] = ' exactExpression DESC ';
 
       $sOneKeyword = $oDb->dbEscapeString('%'.$sKeyWord.'%');
       $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as fullExpression ';
-
-      $asKeywordSql[] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as fullExpression ';
-
       $asResult['order'][] = ' fullExpression DESC ';
 
       $asKeywords = explode(' ', $sKeyWord);
