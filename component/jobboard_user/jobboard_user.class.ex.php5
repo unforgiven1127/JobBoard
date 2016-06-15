@@ -1282,8 +1282,8 @@ class CJobboarduserEx extends CJobboarduser
 
     $oForm->addOption('location', $this->getLocationOption($asRecord['location_id']));
 
-    $oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
-    $oForm->setFieldControl('posted_date', array('jsFieldDate' => ''));
+    /*$oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
+    $oForm->setFieldControl('posted_date', array('jsFieldDate' => ''));*/
 
     $oForm->addField('select', 'job_type', array('label' => 'Job Type'));
     $nJobType = $asRecord['job_type'];
