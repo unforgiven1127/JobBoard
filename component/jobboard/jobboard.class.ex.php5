@@ -517,6 +517,7 @@ ChromePhp::log($sLocation);
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
+ChromePhp::log($slistemQuery);
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
@@ -581,7 +582,6 @@ ChromePhp::log($sLocation);
     }
 
 
-ChromePhp::log($slistemQuery);
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince duzeldi....
 
@@ -593,7 +593,6 @@ ChromePhp::log($slistemQuery);
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
-ChromePhp::log($slistemQuery);
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
