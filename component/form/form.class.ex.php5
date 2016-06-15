@@ -174,6 +174,26 @@ class CFormEx extends CForm
     return true;
   }
 
+  public function addOptionHtml($psFieldName, $pasFieldParams)
+  {
+    if(!isset($this->caoFormFields[$psFieldName]))
+    {
+      assert('false; // field doesnt exist');
+      return false;
+    }
+
+    return $this->caoFormFields[$psFieldName]->addOptionHtml($pasFieldParams);
+  }
+
+  public function addOptionHtml($psOptions)
+  {
+    if(!assert('!empty($psOptions)'))
+      return null;
+
+    $this->casOptionHtml[] = $psOptions;
+    return $this;
+  }
+
   public function addField($psFieldType, $psFieldName = '', $pasFieldParams = array())
   {
     if(!assert('is_string($psFieldType) && !empty($psFieldType)'))
