@@ -572,7 +572,7 @@ ChromePhp::log($avResult);
 
     if($leventOrderFlag)
     {
-      $slistemQuery .= " order by ratio, slp.sl_positionpk DESC";
+      $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC";
     }
     else
     {
