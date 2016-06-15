@@ -456,7 +456,7 @@ ChromePhp::log($avResult);
                      ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
                      cp.name as company_name, slpd.raw_data as raw_data
                      FROM sl_position slp
-                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk AND slpd.is_public = 1";
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk AND slpd.is_public = '1'";
 
 //ChromePhp::log($slistemQuery);
     $oDb = CDependency::getComponentByName('database');
