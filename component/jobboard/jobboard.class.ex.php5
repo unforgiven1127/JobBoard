@@ -439,7 +439,7 @@ ChromePhp::log($avResult);
       $leventOrderFlag = false;
     }
 
-    $leventOrderFlag = false;
+    //$leventOrderFlag = false;
 
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT FOUND_ROWS() as count, ".$levent."
