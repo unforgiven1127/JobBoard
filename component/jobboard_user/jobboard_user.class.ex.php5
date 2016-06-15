@@ -837,7 +837,7 @@ class CJobboarduserEx extends CJobboarduser
       //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
       $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
 
-      $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+      $positionData = $slistemDB->slistemGetAllData($sQuery);
 
       /*else
       {
