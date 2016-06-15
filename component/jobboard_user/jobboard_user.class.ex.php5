@@ -834,7 +834,7 @@ class CJobboarduserEx extends CJobboarduser
         $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
         //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
         $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
-        $sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).',';
+        //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).',';
         $sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).',';
         $sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).'';
         $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
@@ -1401,9 +1401,9 @@ class CJobboarduserEx extends CJobboarduser
     $oForm->addField('textarea', 'meta_keywords', array('label'=> 'Meta Keywords ', 'class' => 'description', 'style' => 'max-height: 50px;', 'value' => $asRecord['meta_keywords']));
     $oForm->setFieldControl('meta_keywords', array('jsFieldNotEmpty' => ''));
 
-    $sText = str_replace(array('\n', "\r\n","\n", "\r"), ' ', $asRecord['meta_desc']);
+    /*$sText = str_replace(array('\n', "\r\n","\n", "\r"), ' ', $asRecord['meta_desc']);
     $oForm->addField('textarea', 'meta_desc', array('label' => 'Meta Description', 'class' => 'description', 'value' => $sText));
-    $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));
+    $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));*/
 
     $sHTML.= $oForm->getDisplay();
     $sHTML.= $oHTML->getBlocEnd();
