@@ -430,7 +430,7 @@ ChromePhp::log($avResult);
     $sKeyWord = strtolower(getValue('keyword'));
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
-      $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio, levenshtein('$sKeyWord',LOWER(slpd.title)) as levenshtein,";
+      $levent = " , ROUND ( ( LENGTH(title) - LENGTH( REPLACE ( LOWER(title), '".$sKeyWord."', '') ) ) / LENGTH(".$sKeyWord.") ) AS ratio";
       $leventOrderFlag = true;
     }
     else
@@ -456,7 +456,7 @@ ChromePhp::log($avResult);
                      ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
                      cp.name as company_name, slpd.raw_data as raw_data
                      FROM sl_position slp
-                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk ";
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk AND slpd.is_public = 1";
 
 //ChromePhp::log($slistemQuery);
     $oDb = CDependency::getComponentByName('database');
@@ -503,7 +503,7 @@ ChromePhp::log($avResult);
 
     $sQuery.= ' WHERE (expiration_date IS NULL OR expiration_date = "" OR expiration_date > "'.$sToday.'") ';
 
-    $slistemQuery.=" WHERE slpd.is_public = 1 AND slpd.public_flag = 'a'";
+    $slistemQuery.=" WHERE  slpd.public_flag = 'a'";
 
     if(!empty($asFilter['where']))
     {
