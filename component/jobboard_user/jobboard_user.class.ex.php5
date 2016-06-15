@@ -1010,11 +1010,6 @@ exit;
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
-    if(isset($positionData))
-    {
-      $positionData = $positionData[0];
-    }
-
     //$oDbResult = $oDb->executeQuery($sQuery);
     //$bRead = $oDbResult->readFirst();
 
