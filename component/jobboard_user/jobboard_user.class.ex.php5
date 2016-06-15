@@ -1290,7 +1290,7 @@ class CJobboarduserEx extends CJobboarduser
       if((int)$avType['status'] == 2)
       {
         $sLabel = $avType['name'];
-        $sStyle = ' color: red; ';
+        //$sStyle = ' color: red; ';
       }
       else
       {
