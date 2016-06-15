@@ -2077,6 +2077,25 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
       }
 
+      //Description
+      $sDescription = $positionData['position_desc'];
+      if(!empty($sDescription))
+      {
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
+          $sHTML.= $oHTML->getText(nl2br($sDescription));
+          $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getFloatHack();
+        $sHTML.= $oHTML->getBlocEnd();
+      }
+
        //Requirements
       $sRequirements = $positionData['requirements'];
       if(!empty($sRequirements))
@@ -2096,24 +2115,6 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
       }
 
-      //Description
-      $sDescription = $positionData['position_desc'];
-      if(!empty($sDescription))
-      {
-        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
-          $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
-          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array('style'=>'font-weight:bold;'));
-          $sHTML.= $oHTML->getBlocEnd();
-        $sHTML.= $oHTML->getFloatHack();
-        $sHTML.= $oHTML->getBlocEnd();
-
-        $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
-          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-          $sHTML.= $oHTML->getText(nl2br($sDescription));
-          $sHTML.= $oHTML->getBlocEnd();
-        $sHTML.= $oHTML->getFloatHack();
-        $sHTML.= $oHTML->getBlocEnd();
-      }
 
       //Apply Button
       $sURL =  "'".$oPage->getUrl($this->_getUid(), CONST_ACTION_APPLY, CONST_TA_TYPE_JOB, $pnPk)."'";
