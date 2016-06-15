@@ -1145,7 +1145,7 @@ class CJobboarduserEx extends CJobboarduser
 
 
     //possibility to push a non slistem position to the job board
-    if((int)$asRecord['websitefk'] == 5 || (int)$asRecord['to_jobboard'] == 1)
+    /*if((int)$asRecord['websitefk'] == 5 || (int)$asRecord['to_jobboard'] == 1)
     {
       $oForm->addField('input', 'to_jobboard', array('type'=>'hidden', 'value' => 1));
     }
@@ -1154,7 +1154,7 @@ class CJobboarduserEx extends CJobboarduser
       $oForm->addField('select', 'to_jobboard', array('label'=>'Add to Slate Jobboard', 'onchange' => 'if($(this).val() && !$(this).attr(\'alerted\')){ alert(\'Are you sure you want to send this position to Slate jobboard ? \'); }'));
       $oForm->addOption('to_jobboard', array('value'=> 0, 'label' => 'Not a slate position'));
       $oForm->addOption('to_jobboard', array('value'=> 1, 'label' => 'Display on Slate jobboard'));
-    }
+    }*/
 
     $oForm->addField('misc', '', array('type' => 'br'));
 
@@ -1230,7 +1230,19 @@ class CJobboarduserEx extends CJobboarduser
 
     $oForm->addField('select', 'english', array('label' => 'English Level'));
 
-    $asLanguage= $oJobboard->getLanguages();
+    $asLanguage = array(
+      '0'=>'0',
+      '1'=>'1',
+      '2'=>'2',
+      '3'=>'3',
+      '4'=>'4',
+      '5'=>'5',
+      '6'=>'6',
+      '7'=>'7',
+      '8'=>'8',
+      '9'=>'9',
+      );
+    //$asLanguage= $oJobboard->getLanguages();
     $nLanguage = $asRecord['english'];
 
     foreach($asLanguage as $nValue=>$vType)
@@ -1242,7 +1254,19 @@ class CJobboarduserEx extends CJobboarduser
     }
 
     $oForm->addField('select', 'japanese', array('label' => 'Japanese Level'));
-    $asJapLanguage = $oJobboard->getLanguages();
+    $asJapLanguage =  array(
+      '0'=>'0',
+      '1'=>'1',
+      '2'=>'2',
+      '3'=>'3',
+      '4'=>'4',
+      '5'=>'5',
+      '6'=>'6',
+      '7'=>'7',
+      '8'=>'8',
+      '9'=>'9',
+      );
+    //$asJapLanguage = $oJobboard->getLanguages();
     $nLanguage = $asRecord['japanese'];
 
     foreach($asJapLanguage as $nValue=>$vType)
@@ -1265,7 +1289,7 @@ class CJobboarduserEx extends CJobboarduser
     {
       if((int)$avType['status'] == 2)
       {
-        $sLabel = $avType['name'].' (need trans.)';
+        $sLabel = $avType['name'];
         $sStyle = ' color: red; ';
       }
       else
