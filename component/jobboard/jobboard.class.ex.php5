@@ -559,7 +559,7 @@ ChromePhp::log($avResult);
     $slistemQuery .= " order by slp.date_created DESC";
 
     $noLimitSql = $slistemQuery;
-    $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery);
+    $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince duzeldi....
 
 //ChromePhp::log($slistemQuery);
 //ChromePhp::log($positionData);
@@ -908,7 +908,7 @@ ChromePhp::log($slistemQuery);
     if(!empty($sKeyWord) && strlen($sKeyWord) >= 2)
     {
       $asKeywordSql = array();
-
+      ChromePhp::log($sKeyWord);
 
       $sOneKeyword = $oDb->dbEscapeString($sKeyWord);
       $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
