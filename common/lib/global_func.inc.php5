@@ -108,7 +108,7 @@ function dump($var, $label=null, $echo=true)
 
   // var_dump the variable into a buffer and keep the output
   ob_start();
-  var_dump($var);
+  //var_dump($var);
   $output = ob_get_clean();
 
   // neaten the newlines and indents
