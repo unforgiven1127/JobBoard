@@ -1165,8 +1165,8 @@ class CJobboarduserEx extends CJobboarduser
       $oForm->addField('input', 'help_language', array('label' => 'This position is in', 'value' => $asLangArray[$sLanguage]['label'].' (not editable)', 'disabled' => 'disabled', 'style' =>'background-color: #dedede; font-style: italic;'));
     }
 
-    $oForm->addField('select', 'visibility', array('label' => 'Publishing status'));
-    $nVisibilty = $asRecord['visibility'];
+    /*$oForm->addField('select', 'visibility', array('label' => 'Publishing status'));
+    $nVisibilty = $asRecord['visibility'];*/
 
     foreach($asVisibilityArray as $nVisibile => $sVisibile)
     {
