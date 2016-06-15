@@ -1964,7 +1964,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sEnglish = $this->_getLanguageLevel((int)$positionData['english']/2);
+        $sEnglish = $this->_getLanduageLevelSlistem((int)$positionData['english']);
         $sHTML.= $oHTML->getText($sEnglish);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -1977,7 +1977,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sJapanese = $this->_getLanguageLevel((int)$positionData['japanese']/2);
+        $sJapanese = $this->_getLanduageLevelSlistem((int)$positionData['japanese']);
         $sHTML.= $oHTML->getText($sJapanese);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -2467,6 +2467,35 @@ ChromePhp::log($slistemQuery);
   * @param integer $pnPk
   * @return array with language level information
   */
+
+  private function _getLanduageLevelSlistem($level)
+  {
+    if($level == 0)
+    {
+      return $this->casText['TALENT_LANG_NONE'];
+    }
+    else if($level == 1 || $level == 2)
+    {
+      return $this->casText['TALENT_LANG_BASIC'];
+    }
+    else if($level == 3 || $level == 4)
+    {
+      return $this->casText['TALENT_LANG_CONV'];
+    }
+    else if($level == 5 || $level == 6 || $level == 7)
+    {
+      return $this->casText['TALENT_LANG_BUSINESS'];
+    }
+    else if($level == 8)
+    {
+      return $this->casText['TALENT_LANG_FLUENT'];
+    }
+    else if($level == 9)
+    {
+      return $this->casText['TALENT_LANG_NATIVE'];
+    }
+  }
+
   private function _getLanguageLevel($pnPk=0)
   {
     $asLanguage = array('0'=>$this->casText['TALENT_LANG_NONE'], '1'=>$this->casText['TALENT_LANG_BASIC'], '2'=>$this->casText['TALENT_LANG_CONV'], '3'=>$this->casText['TALENT_LANG_BUSINESS'], '4'=>$this->casText['TALENT_LANG_FLUENT'], '5'=>$this->casText['TALENT_LANG_NATIVE']);
