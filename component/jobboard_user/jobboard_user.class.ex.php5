@@ -808,38 +808,38 @@ class CJobboarduserEx extends CJobboarduser
 
     if(!empty($pnPositionPk))
     {
-      $sQuery = 'SELECT * FROM position WHERE positionpk = '.$pnPositionPk.' AND parentfk != 0 ';
-      $oDbResult = $oDB->ExecuteQuery($sQuery);
-      $bRead = $oDbResult->readFirst();
-      if($bRead)
-      {
-        $sQuery = 'UPDATE position SET visibility = '.$oDB->dbEscapeString($nVisibility).',';
-        $sQuery.= ' category = '.$oDB->dbEscapeString($nCategory).',';
-        $sQuery.= ' career_level = '.$oDB->dbEscapeString($sCareerLevel).',';
-        $sQuery.= ' company_label = '.$oDB->dbEscapeString($sCompanyLabel).',';
-        $sQuery.= ' position_title = '.$oDB->dbEscapeString($sPositionTitle).',';
-        $sQuery.= ' position_desc = '.$oDB->dbEscapeString($sPositionDesc).',';
-        $sQuery.= ' requirements = '.$oDB->dbEscapeString($sRequirements).',';
-        $sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
-        $sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
-        $sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
-        //$sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
-        //$sQuery.= ' salary_low = '.$oDB->dbEscapeString($nSalaryLow).','; // sl_position altinda
-        //$sQuery.= ' salary_high = '.$oDB->dbEscapeString($nSalaryHigh).','; // sl_position altinda
-        //$sQuery.= ' english = '.$oDB->dbEscapeString($nEnglishLevel).','; // sl_position altinda
-        //$sQuery.= ' japanese = '.$oDB->dbEscapeString($nJapaneseLevel).','; // sl_position altinda
-        //$sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
-        $sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
-        $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
-        $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
-        //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
-        $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
-        //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).',';
-        $sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).',';
-        $sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).'';
-        $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
-      }
-      else
+      $slistemDB = CDependency::getComponentByName('database');
+      //$slistemQuery = 'SELECT * FROM sl_location ORDER BY location ';
+
+      $sQuery = 'UPDATE sl_position SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
+      $sQuery.= ' category = '.$oDB->dbEscapeString($nCategory).',';
+      $sQuery.= ' career_level = '.$oDB->dbEscapeString($sCareerLevel).',';
+      //$sQuery.= ' company_label = '.$oDB->dbEscapeString($sCompanyLabel).',';
+      $sQuery.= ' title = '.$oDB->dbEscapeString($sPositionTitle).',';
+      $sQuery.= ' description = '.$oDB->dbEscapeString($sPositionDesc).',';
+      $sQuery.= ' requirements = '.$oDB->dbEscapeString($sRequirements).',';
+      $sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
+      $sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
+      $sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
+      //$sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
+      //$sQuery.= ' salary_low = '.$oDB->dbEscapeString($nSalaryLow).','; // sl_position altinda
+      //$sQuery.= ' salary_high = '.$oDB->dbEscapeString($nSalaryHigh).','; // sl_position altinda
+      //$sQuery.= ' english = '.$oDB->dbEscapeString($nEnglishLevel).','; // sl_position altinda
+      //$sQuery.= ' japanese = '.$oDB->dbEscapeString($nJapaneseLevel).','; // sl_position altinda
+      //$sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
+      $sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
+      $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
+      $sQuery.= ' work_hours = '.$oDB->dbEscapeString($nCategory).',';
+      //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
+      $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords).',';
+      //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
+      //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
+      //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
+      $sQuery.= ' WHERE positionpk  = '.$pnPositionPk ;
+
+      $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+      /*else
       {
         $sQuery = 'INSERT INTO `position`(`visibility`, `category`, `career_level`, `company_label`, `position_title`,  ';
         $sQuery.= ' `position_desc`, `requirements`, `companyfk`, `posted_date`, `location`, `job_type`,';
@@ -854,16 +854,16 @@ class CJobboarduserEx extends CJobboarduser
         $sQuery.= ''.$oDB->dbEscapeString($sStation).','.$oDB->dbEscapeString($sWorkHours).','.$oDB->dbEscapeString($sLangauge).',';
         $sQuery.= ''.$oDB->dbEscapeString($pnPositionPk).','.$oDB->dbEscapeString($sPageTitle).','.$oDB->dbEscapeString($sMetaKeywords).',';
         $sQuery.= ''.$oDB->dbEscapeString($sMetaDesc).', '.$oDB->dbEscapeString($nToJobboard).', '.$oDB->dbEscapeString($sExpirationDate).')';
-      }
+      }*/
 
-      $oDbResult = $oDB->ExecuteQuery($sQuery);
+      //$oDbResult = $oDB->ExecuteQuery($sQuery);
 
-      if(isset($_SESSION['action']) && isset($_SESSION['lang']) && isset($_SESSION['myResult']) && isset($_SESSION['myoffset']))
+      /*if(isset($_SESSION['action']) && isset($_SESSION['lang']) && isset($_SESSION['myResult']) && isset($_SESSION['myoffset']))
         $sURL = $oPage->getUrl('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB,0,array('lang' => $_SESSION['lang'], 'action' => $_SESSION['action'],'nbresult'=> $_SESSION['myResult'],'pageoffset'=> $_SESSION['myoffset']));
-      else
+      else*/
         $sURL = $oPage->getURL('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB);
 
-      if($oDbResult)
+      //if($oDbResult)
         return array('url' => $sURL, 'notice'=>'Position edited successfully');
     }
     else
