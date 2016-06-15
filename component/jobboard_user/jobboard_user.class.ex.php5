@@ -1176,7 +1176,7 @@ class CJobboarduserEx extends CJobboarduser
     if(empty($asRecord['company_label']))
       $asRecord['company_label'] = 'Company name not publicy visible';
 
-    $oForm->addField('input', 'company_label', array('label'=> 'Displayed company name','disabled' => 'disabled', 'class' => '', 'value' => $asRecord['company_label']));
+    $oForm->addField('input', 'company_label', array('label'=> 'Displayed company name','disabled' => 'disabled', 'style' =>'background-color: #dedede; font-style: italic;', 'class' => '', 'value' => $asRecord['company_label']));
     $oForm->setFieldControl('company_label', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255));
 
     $sCompanyHelp = '<div class="position_form_salary_help" style="top: -60px;">If the company name is sensitive, please input the text that will be displayed instead on the jobboard. A generic description of the company is recommended. Example: Leading electronic company in Japan, International bank & insurance company ...</div><br /> ';
