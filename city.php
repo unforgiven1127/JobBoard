@@ -231,14 +231,14 @@ $sQuery = "SELECT * from postoffice ORDER BY cityfk ";
 $oRes = mysql_query($sQuery);
 
 
-//var_dump($oRes);
+////var_dump($oRes);
 echo mysql_num_rows($oRes);
 
 $asCreatedCity = array();
 $nCount = 0;
 while($asRes = mysql_fetch_assoc($oRes) )
 {
-  //var_dump($asRes);
+  ////var_dump($asRes);
   /*if(!in_array($asRes["FullCode"], $asCreatedCity))
   {
     $asCreatedCity[$asRes["FullCode"]] = $asRes["FullCode"];*/
@@ -266,7 +266,7 @@ while($asRes = mysql_fetch_assoc($oRes) )
       //$enaddbase=strtr(addjapeng($jcity, $jklocal,$jkcity,'',1) . " "/* . $address*/,$tidy);
 
       $asCity = explode(' ', $enaddbase);
-      //var_dump($asCity); echo '<br />';
+      ////var_dump($asCity); echo '<br />';
 
 
 

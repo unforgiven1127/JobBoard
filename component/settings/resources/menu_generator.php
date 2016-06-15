@@ -306,7 +306,7 @@ $asArray = array();
  echo 'Serialize menu:<br />'.$sString;
 
  echo '<br /><hr><br />Detail:<br /><pre>';
- var_dump($asArray);
+ //var_dump($asArray);
  echo '</pre>';
 
 
@@ -951,7 +951,7 @@ $asArray['jp'] = array (
  echo 'Serialize menu:<br />'.$sString;
 
  echo '<br /><hr><br />Detail:<br /><pre>';
- var_dump($asArray);
+ //var_dump($asArray);
  echo '</pre>';
 
 
@@ -1005,7 +1005,7 @@ $sString = base64_encode(serialize($asArray));
  echo 'Serialize menu:<br />'.$sString;
 
  echo '<br /><hr><br />Detail:<br /><pre>';
- var_dump($asArray);
+ //var_dump($asArray);
  echo '</pre>';
 
 
@@ -1668,7 +1668,7 @@ else
   echo 'ok<br />';
 
  echo '<br /><hr><br />Detail :<br /><pre>';
- var_dump($asArray);
+ //var_dump($asArray);
  echo '</pre>';
 
 

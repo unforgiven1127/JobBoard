@@ -397,7 +397,7 @@ class CJobboarduserEx extends CJobboarduser
         $bRead = $oResult->readNext();
       }*/
 
-//var_dump($asRecords);
+////var_dump($asRecords);
 
       /*if(!empty($asRecords))
       {
@@ -483,7 +483,7 @@ class CJobboarduserEx extends CJobboarduser
 
             //---------------------------------------------------------------------
             //Actions based on the type (nothing: edit, share: social network ....)
-            //var_dump($asChilds);
+            ////var_dump($asChilds);
             //$sHTML.= $this->_getListActions($psType, $asJobDetail, $asChilds);
 
           $sHTML.= $oHTML->getBlocEnd();

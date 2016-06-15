@@ -1859,7 +1859,7 @@ class LinkedIn {
       'oauth_callback' => $this->getCallbackUrl()
     );
     $parameters = array_merge($pasParam, $parameters);
-    var_dump($parameters);
+    //var_dump($parameters);
 
     $response = $this->fetch(self::_METHOD_TOKENS, self::_URL_REQUEST.'?scope=r_basicprofile+r_fullprofile+r_network+rw_nus+w_messages+r_contactinfo+r_emailaddress', NULL, $parameters);
     parse_str($response['linkedin'], $response['linkedin']);

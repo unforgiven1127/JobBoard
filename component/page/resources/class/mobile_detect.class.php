@@ -387,7 +387,7 @@ class Mobile_Detect {
         foreach($this->getRules() as $_regex){
             if(empty($_regex)){ continue; }
             if( $this->match($_regex, $userAgent) ){
-                //var_dump( $_regex );
+                ////var_dump( $_regex );
                 return true;
             }
         }

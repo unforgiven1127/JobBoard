@@ -103,7 +103,7 @@ class CSocialnetworkEx extends CSocialnetwork
       $asParams = null;
       parse_str($sResponse, $asParams);
 
-      //var_dump($asParams);
+      ////var_dump($asParams);
       //array(2) { ["access_token"]=> string(110) "AAAHMbZAHJBK0BAChUoi6kYnNf0i6eOeNTI1WQwu6ypTl59BsQzhy8MsaUNK5rcdcdLEnzV1w3JUuuhmxlOlZA8JVZCaMUclqLJtSpd55QZDZD" ["expires"]=> string(7) "5168861" }
 
       if(isset($asParams['access_token']) && !empty($asParams['access_token']))

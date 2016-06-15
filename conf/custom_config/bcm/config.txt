@@ -1,12 +1,12 @@
 /*
-    var_dump(serialize(
+    //var_dump(serialize(
     array(
         array('loginfk' => 30, 'courtesy' =>'Ms', 'firstname' => 'Takako', 'lastname' => 'Nakahara'),
         array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine')
          )));
 
     echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(
         array('loginfk' => 4, 'courtesy' =>'Mr', 'firstname' => 'Nicholas', 'lastname' => 'Adams'),
         array('loginfk' => 5, 'courtesy' =>'Mr', 'firstname' => 'Stephane', 'lastname' => 'Boudoux'),
@@ -15,13 +15,13 @@
          )));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(
         array('loginfk' => 3, 'courtesy' =>'Mr', 'firstname' => 'Asi', 'lastname' => 'Rinestine')
          )));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(
         array('loginfk' => 19, 'courtesy' =>'Ms', 'firstname' => 'Ayako', 'lastname' => 'Fujiwara'),
         array('loginfk' => 20, 'courtesy' =>'Mr', 'firstname' => 'Matthew', 'lastname' => 'Hernon'),
@@ -31,7 +31,7 @@ echo '<br />';
          )));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(
         array('loginfk' => 29, 'courtesy' =>'Ms', 'firstname' => 'Ingrid', 'lastname' => 'Dubreuil'),
         array('loginfk' => 26, 'courtesy' =>'Mr', 'firstname' => 'Ohad', 'lastname' => 'Elbaz'),
@@ -51,23 +51,23 @@ echo '<br />';
 
 
 
-var_dump(serialize(
+//var_dump(serialize(
     array(30,3)));
 
     echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(4,5,3,31)));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(3)));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(19,20,23,9,3)));
 
 echo '<br />';
-    var_dump(serialize(
+    //var_dump(serialize(
     array(29,26,20,16,22,28,3,12)));
 
 

@@ -855,7 +855,7 @@ ChromePhp::log($slistemQuery);
         $sJobData = $pasJobData['raw_data'];
         $asJobData = (array)@unserialize($sJobData);
 
-//var_dump($jobDataClear);
+////var_dump($jobDataClear);
 //exit;
 
         if(isset($jobDataClear['positionpk']) && !empty($jobDataClear['positionpk']))
@@ -1854,7 +1854,7 @@ ChromePhp::log($slistemQuery);
     {
 
       //$positionData = $positionData[0];
-      //var_dump($positionData);
+      ////var_dump($positionData);
       /*if($positionData['lang'] == 'jp')
       {
         $asSibling = $this->_getSiblingPosition($pnPk, 'jp');
@@ -2168,7 +2168,7 @@ ChromePhp::log($slistemQuery);
 
 
 
-//var_dump($positionData);
+////var_dump($positionData);
     //ChromePhp::log($positionData);
 
     if($bRead)
