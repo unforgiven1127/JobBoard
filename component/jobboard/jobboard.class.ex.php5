@@ -376,7 +376,7 @@ class CJobboardEx extends CJobboard
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
-ChromePhp::log($avResult);
+//ChromePhp::log($avResult);
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -481,9 +481,9 @@ ChromePhp::log($avResult);
       $sQuery.= ' LEFT JOIN industry AS ind ON (ind.industrypk = pos.industryfk) ';
       $slistemQuery.= " INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk ";
     }
+ChromePhp::log($sLocation);
     if(!empty($sLocation))
     {
-      ChromePhp::log($sLocation);
       $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND lower(sll.location) LIKE '%".$sLocation."%' ";
     }
     else
@@ -966,7 +966,7 @@ ChromePhp::log($slistemQuery);
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry_tree');
       $sLocation = strtolower(getValue('location'));
-ChromePhp::log($sLocation);
+//ChromePhp::log($sLocation);
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
 
@@ -1444,7 +1444,7 @@ ChromePhp::log($sLocation);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
-        ChromePhp::log($avResult);
+        //ChromePhp::log($avResult);
         $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
 
 
