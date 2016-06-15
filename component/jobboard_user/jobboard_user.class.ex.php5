@@ -1299,8 +1299,8 @@ class CJobboarduserEx extends CJobboarduser
       $oForm->addOption('job_type', array('value'=> 0, 'label' => 'Part time','selected'=>'selected'));
      }
 
-    $oForm->addField('input', 'salary', array('label'=>'Salary (displayed)', 'class' => '', 'value' => $asRecord['salary']));
-    $oForm->setFieldControl('salary', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
+    /*$oForm->addField('input', 'salary', array('label'=>'Salary (displayed)', 'class' => '', 'value' => $asRecord['salary']));
+    $oForm->setFieldControl('salary', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));*/
 
     $oForm->addField('input', 'salary_low', array('label'=>'Lower salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_low']));
     $oForm->addField('input', 'salary_high', array('label'=>'Higher salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_high']));
