@@ -838,7 +838,35 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' WHERE positionfk  = '.$pnPositionPk ;
 
       $positionData = $slistemDB->slistemGetAllData($sQuery);
-      ChromePhp::log($sQuery);
+
+      $sQuery = 'UPDATE sl_position SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
+      ///$sQuery.= ' category = '.$oDB->dbEscapeString($nCategory).',';
+      ///$sQuery.= ' career_level = '.$oDB->dbEscapeString($sCareerLevel).',';
+      //$sQuery.= ' company_label = '.$oDB->dbEscapeString($sCompanyLabel).',';
+      ///$sQuery.= ' title = '.$oDB->dbEscapeString($sPositionTitle).',';
+      ///$sQuery.= ' description = '.$oDB->dbEscapeString($sPositionDesc).',';
+      ///$sQuery.= ' requirements = '.$oDB->dbEscapeString($sRequirements).',';
+      ///$sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
+      ///$sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
+      ///$sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
+      //$sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
+      $sQuery.= ' salary_from = '.$oDB->dbEscapeString($nSalaryLow).','; // sl_position altinda
+      $sQuery.= ' salary_to = '.$oDB->dbEscapeString($nSalaryHigh).','; // sl_position altinda
+      $sQuery.= ' lvl_english = '.$oDB->dbEscapeString($nEnglishLevel).','; // sl_position altinda
+      $sQuery.= ' lvl_japanese = '.$oDB->dbEscapeString($nJapaneseLevel).','; // sl_position altinda
+      $sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
+      ///$sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
+      ///$sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
+      ///$sQuery.= ' work_hours = '.$oDB->dbEscapeString($sWorkHours).',';
+      //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
+      ///$sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords);
+      //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
+      //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
+      //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
+      $sQuery.= ' WHERE sl_positionpk  = '.$pnPositionPk ;
+
+      $positionData = $slistemDB->slistemGetAllData($sQuery);
+      //ChromePhp::log($sQuery);
 
       /*else
       {
