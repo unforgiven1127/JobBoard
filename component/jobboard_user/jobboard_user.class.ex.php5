@@ -838,8 +838,8 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' WHERE positionfk  = '.$pnPositionPk ;
 
       $positionData = $slistemDB->slistemGetAllData($sQuery);
-var_dump($sQuery);
-exit;
+      ChromePhp::log($sQuery);
+
       /*else
       {
         $sQuery = 'INSERT INTO `position`(`visibility`, `category`, `career_level`, `company_label`, `position_title`,  ';
