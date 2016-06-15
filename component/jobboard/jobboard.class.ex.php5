@@ -484,7 +484,7 @@ class CJobboardEx extends CJobboard
 ChromePhp::log($sLocation);
     if(!empty($sLocation))
     {
-      $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND lower(sll.location) LIKE '%".$sLocation."%' ";
+      $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND sll.sl_locationpk = '".$sLocation."' ";
     }
     else
     {
