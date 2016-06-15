@@ -1286,8 +1286,19 @@ ChromePhp::log($slistemQuery);
     $oForm->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
     $oForm->addField('input', 'occupation', array('label' => $this->casText['TALENT_OCCUPATION'], 'value' => getValue('occupation')));
 
-    $oForm->addField('input', 'location', array('label' => $this->casText['TALENT_LOCATION'], 'value' => getValue('location')));
+    //$oForm->addField('input', 'location', array('label' => $this->casText['TALENT_LOCATION'], 'value' => getValue('location')));
+    $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
+    $locations = $this->getLocationOption();
 
+    foreach($locations as $nValue => $vType)
+    {
+      if($asRecord['location_id'] == $nValue)
+        $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
+      else
+        $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
+    }
+
+    $oForm->addOption('location', $this->getLocationOption());
     //industry tree
     $asIndustries = $this->getIndustries(0, true, true);
     $nIndustry = getValue('industry_tree');
@@ -3685,6 +3696,44 @@ ChromePhp::log($slistemQuery);
     }
 
     return $asResult;
+  }
+
+  public function getLocationOption($psValue = '')
+  {
+    $asList = $this->getLocationList();
+
+    /*$sOption = '<option value=""> - </option>';
+    foreach($asList as $sValue => $sLabel)
+    {
+      if($sValue == $psValue)
+        $sOption.= '<option value="'.$sValue.'" selected="selected">'.$sLabel.'</option>';
+      else
+        $sOption.= '<option value="'.$sValue.'">'.$sLabel.'</option>';
+    }*/
+    return $asList;
+  }
+
+  public function getLocationList()
+  {
+    //$oDb = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = 'SELECT * FROM sl_location ORDER BY location ';
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    //$oDbResult = $oDb->executeQuery($sQuery);
+    //$bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    //while($bRead)
+    foreach ($positionData as $key => $value)
+    {
+      $asLocation[$value['sl_locationpk']] = $value['location'];
+      //$bRead = $oDbResult->readNext();
+    }
+
+    //$_SESSION['sl_location_list'] = $asLocation;
+    return $asLocation;
   }
 
   public function getTranslation($psTextCode)
