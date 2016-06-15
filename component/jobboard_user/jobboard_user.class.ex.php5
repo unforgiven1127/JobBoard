@@ -751,7 +751,7 @@ class CJobboarduserEx extends CJobboarduser
     if(count($asMetaKeywords) > 15)
       return array('error' => 'Too many keywords.');
 
-    if(count($asMetaKeywords) < 3)
+    if(count($asMetaKeywords) < 1)
       return array('error' => 'Not enough keywords.');
 
     //For each keyword found in the description, we add a strong tag to improve SEO
