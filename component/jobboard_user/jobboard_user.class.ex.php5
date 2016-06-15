@@ -988,8 +988,7 @@ class CJobboarduserEx extends CJobboarduser
   public function getLocationOption($psValue = '')
   {
     $asList = $this->getLocationList();
-var_dump($asList);
-exit;
+
     $sOption = '<option value=""> - </option>';
     foreach($asList as $sValue => $sLabel)
     {
@@ -998,7 +997,7 @@ exit;
       else
         $sOption.= '<option value="'.$sValue.'">'.$sLabel.'</option>';
     }
-
+var_dump($sOption);
     return $sOption;
   }
 
