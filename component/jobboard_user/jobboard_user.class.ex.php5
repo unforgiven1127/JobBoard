@@ -818,7 +818,7 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' title = '.$oDB->dbEscapeString($sPositionTitle).',';
       $sQuery.= ' description = '.$oDB->dbEscapeString($sPositionDesc).',';
       $sQuery.= ' requirements = '.$oDB->dbEscapeString($sRequirements).',';
-      $sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
+      //$sQuery.= ' posted_date = '.$oDB->dbEscapeString($sPostedDate).',';
       $sQuery.= ' location = '.$oDB->dbEscapeString($sLocation).',';
       $sQuery.= ' job_type = '.$oDB->dbEscapeString($nJobType).',';
       //$sQuery.= ' salary = '.$oDB->dbEscapeString($sSalary).',';
