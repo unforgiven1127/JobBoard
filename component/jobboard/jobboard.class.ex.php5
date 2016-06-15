@@ -490,7 +490,7 @@ ChromePhp::log($sLocation);
     {
       $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location  ";
     }
-ChromePhp::log($slistemQuery);
+
     if(!empty($nCompanyPk))
     {
       $sQuery.= ' INNER JOIN company AS cp ON (cp.companypk = pos.companyfk AND cp.companypk = '.$nCompanyPk.') ';
@@ -517,7 +517,7 @@ ChromePhp::log($slistemQuery);
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
-
+ChromePhp::log($slistemQuery);
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
