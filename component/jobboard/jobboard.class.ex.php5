@@ -431,7 +431,7 @@ class CJobboardEx extends CJobboard
 
     $leventOrderFlag = false;
     $levent = " ";
-
+ChromePhp::log($sKeyWord);
     if(isset($sKeyWord) && !empty($sKeyWord))
     {
       $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH('".$sKeyWord."') ) AS ratio";
