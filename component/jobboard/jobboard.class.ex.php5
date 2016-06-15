@@ -437,7 +437,7 @@ ChromePhp::log($sKeyWord);
       $levent = " , ROUND ( ( LENGTH(slpd.title) - LENGTH( REPLACE ( LOWER(slpd.title), '".$sKeyWord."', '') ) ) / LENGTH('".$sKeyWord."') ) AS ratio";
       $leventOrderFlag = true;
     }
-
+ChromePhp::log($leventOrderFlag);
     //$leventOrderFlag = false;
 
     $slistemDB = CDependency::getComponentByName('database');
