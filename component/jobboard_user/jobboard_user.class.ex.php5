@@ -727,8 +727,8 @@ class CJobboarduserEx extends CJobboarduser
         return array('error' => 'Sorry an error occured: couldn\'t create a new company.');
     }
 
-    if(empty($sPageTitle) || empty($sMetaDesc) || empty($sMetaKeywords))
-      return array('error' => 'All the meta tags are required. Please input a page title, keywords and meta description.');
+    //if(empty($sPageTitle) || empty($sMetaDesc) || empty($sMetaKeywords))
+      //return array('error' => 'All the meta tags are required. Please input a page title, keywords and meta description.');
 
 
     //Get the page title
