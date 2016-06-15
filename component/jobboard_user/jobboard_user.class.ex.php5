@@ -988,7 +988,7 @@ class CJobboarduserEx extends CJobboarduser
   public function getLocationOption($psValue = '')
   {
     $asList = $this->getLocationList();
-
+ChromePhp::log($asList);
     $sOption = '<option value=""> - </option>';
     foreach($asList as $sValue => $sLabel)
     {
@@ -1247,7 +1247,7 @@ class CJobboarduserEx extends CJobboarduser
     //$oForm->setFieldControl('location', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
 
     $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
-    //$oForm->addOptionHtml('location', $this->getLocationOption($asRecord['location_id']));
+    $oForm->addOptionHtml('location', $this->getLocationOption($asRecord['location_id']));
 
     $oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
     $oForm->setFieldControl('posted_date', array('jsFieldDate' => ''));
