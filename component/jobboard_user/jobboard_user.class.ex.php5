@@ -854,7 +854,7 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' salary_to = '.$oDB->dbEscapeString($nSalaryHigh).','; // sl_position altinda
       $sQuery.= ' lvl_english = '.$oDB->dbEscapeString($nEnglishLevel).','; // sl_position altinda
       $sQuery.= ' lvl_japanese = '.$oDB->dbEscapeString($nJapaneseLevel).','; // sl_position altinda
-      $sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry).','; // sl_position altinda
+      $sQuery.= ' industryfk = '.$oDB->dbEscapeString($nIndustry); // sl_position altinda
       ///$sQuery.= ' holidays = '.$oDB->dbEscapeString($sHolidays).',';
       ///$sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
       ///$sQuery.= ' work_hours = '.$oDB->dbEscapeString($sWorkHours).',';
