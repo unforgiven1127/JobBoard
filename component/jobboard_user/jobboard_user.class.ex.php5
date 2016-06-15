@@ -1087,7 +1087,7 @@ class CJobboarduserEx extends CJobboarduser
                  slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
                  ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
                  cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name
-                 , l.email as cons_email, sll.sl_locationpk as location_id
+                 , l.email as cons_email, sll.sl_locationpk as location_id, slpd.station as station
                  FROM sl_position slp
                  INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
                  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
