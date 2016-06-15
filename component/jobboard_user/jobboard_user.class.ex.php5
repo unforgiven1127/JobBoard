@@ -989,15 +989,15 @@ class CJobboarduserEx extends CJobboarduser
   {
     $asList = $this->getLocationList();
 
-    $sOption = '<option value=""> - </option>';
+    /*$sOption = '<option value=""> - </option>';
     foreach($asList as $sValue => $sLabel)
     {
       if($sValue == $psValue)
         $sOption.= '<option value="'.$sValue.'" selected="selected">'.$sLabel.'</option>';
       else
         $sOption.= '<option value="'.$sValue.'">'.$sLabel.'</option>';
-    }
-    return $sOption;
+    }*/
+    return $asList;
   }
 
   public function getLocationList()
@@ -1241,7 +1241,16 @@ class CJobboarduserEx extends CJobboarduser
     //$oForm->setFieldControl('location', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
 
     $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
-    $test = $this->getLocationOption($asRecord['location_id']);
+    $locations = $this->getLocationOption($asRecord['location_id']);
+
+    foreach($locations as $nValue => $vType)
+    {
+      if($asRecord['location_id'] == $nValue)
+        $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
+      else
+        $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
+    }
+
     $oForm->addOption('location', $this->getLocationOption($asRecord['location_id']));
 
     $oForm->addField('input', 'posted_date', array('type'=>'date', 'label'=>'Posted Date', 'class' => '', 'value' =>  $asRecord['posted_date'],'monthNum'=>1));
