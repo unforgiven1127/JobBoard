@@ -1896,8 +1896,8 @@ ChromePhp::log($slistemQuery);
         $oPage->setPageTitle($sPageTitle);
       if(!empty($sMetaKeywords))
         $oPage->setPageKeywords($sMetaKeywords);
-      if(!empty($sMetaDescription))
-        $oPage->setPageDescription($sMetaDescription);
+      //if(!empty($sMetaDescription))
+        //$oPage->setPageDescription($sMetaDescription);
 
       $sHTML.= $oHTML->getBlocStart('position');
       $sHTML.= $oHTML->getText($positionData['position_title'], array('class'=>'boldTitle'));
