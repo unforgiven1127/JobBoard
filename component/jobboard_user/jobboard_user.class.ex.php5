@@ -1003,19 +1003,29 @@ class CJobboarduserEx extends CJobboarduser
 
   public function getLocationList()
   {
-    $oDb = CDependency::getComponentByName('database');
-    $sQuery = 'SELECT * FROM sl_location ORDER BY location ';
-    $oDbResult = $oDb->executeQuery($sQuery);
-    $bRead = $oDbResult->readFirst();
+    //$oDb = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = 'SELECT * FROM sl_location ORDER BY location ';
 
-    $asLocation = array();
-    while($bRead)
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    if(isset($positionData))
     {
-      $asLocation[$oDbResult->getFieldValue('sl_locationpk')] = $oDbResult->getFieldValue('location');
-      $bRead = $oDbResult->readNext();
+      $positionData = $positionData[0];
     }
 
-    $_SESSION['sl_location_list'] = $asLocation;
+    //$oDbResult = $oDb->executeQuery($sQuery);
+    //$bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    //while($bRead)
+    foreach ($positionData as $key => $value)
+    {
+      $asLocation[$value('sl_locationpk')] = $value('location');
+      //$bRead = $oDbResult->readNext();
+    }
+
+    //$_SESSION['sl_location_list'] = $asLocation;
     return $asLocation;
   }
 
