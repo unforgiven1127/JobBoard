@@ -427,8 +427,12 @@ ChromePhp::log($avResult);
 
   private function _getJobSearchResult($psSearchId = '')
   {
-    $sKeyWord = strtolower(getValue('keyword'));
-    if(isset($sKeyWord))
+    if(isset(getValue('keyword')) && !empty(getValue('keyword')))
+    {
+      $sKeyWord = strtolower(getValue('keyword'));
+    }
+
+    if(isset($sKeyWord) && !empty($sKeyWord))
     {
       $levent = " levenshtein_ratio('$sKeyWord',LOWER(slpd.title)) as ratio,";
       $leventOrderFlag = true;
