@@ -965,7 +965,7 @@ ChromePhp::log($slistemQuery);
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry_tree');
       $sLocation = strtolower(getValue('location'));
-
+ChromePhp::log($sLocation);
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
 
@@ -1299,6 +1299,7 @@ ChromePhp::log($slistemQuery);
     }
 
     $oForm->addOption('location', $this->getLocationOption());
+
     //industry tree
     $asIndustries = $this->getIndustries(0, true, true);
     $nIndustry = getValue('industry_tree');
