@@ -3186,7 +3186,7 @@ ChromePhp::log($sIndustry);
     $sHtml = $oHTML->getBlocStart('', array('class' => 'redBorderTop'));
 
       $sHtml.= $oHTML->getBlocStart('', array('class' => 'sideBarTitle'));
-      $sHtml.= $oHTML->getText('Latest Jobs');
+      $sHtml.= $oHTML->getText('<b>Latest Jobs</b>');
       $sHtml.= $oHTML->getBlocEnd();
 
       $sHtml.= $oHTML->getBlocStart('jobScrollerId');
