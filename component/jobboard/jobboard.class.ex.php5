@@ -1354,7 +1354,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesEng as $nValue => $vType)
     {
-      if($nValue == 5)
+      if($nValue == 6)
       {
         $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
       }
@@ -1373,7 +1373,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $oForm->addOption('japanese', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesJap as $nValue => $vType)
     {
-      if($nValue == 5)
+      if($nValue == 6)
       {
         $oForm->addOption('japanese', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
       }
