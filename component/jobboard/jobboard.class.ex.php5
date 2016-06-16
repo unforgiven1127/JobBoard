@@ -995,7 +995,7 @@ ChromePhp::log($sIndustry);
         $asWhereSql[] = ' lower(slpd.title) LIKE '.$sOccupation.' ';
       }
 
-      if(!empty($sIndustry))
+      if(isset($sIndustry) && !empty($sIndustry))
       {
         $asWhereSql[] = ' slpd.location = '.$sIndustry.' ';
       }
