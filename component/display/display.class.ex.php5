@@ -604,6 +604,7 @@ class CDisplayEx extends CDisplay
     $sHTML.= '<link rel="icon" href="'.CONST_HEADER_FAVICON.'" type="image/x-icon" />';
 
     $sHTML.= '<link rel="stylesheet" href="/common/style/style.css?n='.time().'" type="text/css" media="screen" />';
+    $sHTML.= '<link rel="stylesheet" href="common/lib/font-awesome/css/font-awesome.min.css">';
 
     if($pbIsLogged && !getValue(CONST_PAGE_NO_LOGGEDIN_CSS))
       $sHTML.= '<link rel="stylesheet" href="/common/style/private.css?n='.time().'" type="text/css" media="screen" />';
