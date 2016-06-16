@@ -3811,27 +3811,27 @@ ChromePhp::log($nEnglish);
 
   public function change_language_system($fiveSystem)
   {ChromePhp::log($fiveSystem);
-    if($fiveSystem = 0)
+    if($fiveSystem == 0)
     {
       return 0;
     }
-    else if($fiveSystem = 1)
+    else if($fiveSystem == 1)
     {
       return 2;
     }
-    else if($fiveSystem = 2)
+    else if($fiveSystem == 2)
     {
       return 4;
     }
-    else if($fiveSystem = 3)
+    else if($fiveSystem == 3)
     {
       return 5;
     }
-    else if($fiveSystem = 4)
+    else if($fiveSystem == 4)
     {
       return 7;
     }
-    else if($fiveSystem = 5)
+    else if($fiveSystem == 5)
     {
       return 9;
     }
