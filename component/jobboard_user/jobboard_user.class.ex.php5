@@ -960,6 +960,9 @@ class CJobboarduserEx extends CJobboarduser
     $positionIdDesc = $sURL.'&sortfield=external_key&sortorder=desc';
     $positionIdAsc = $sURL.'&sortfield=external_key&sortorder=asc';
 
+    $positionTitleDesc = $sURL.'&sortfield=position_title&sortorder=desc';
+    $positionTitleAsc = $sURL.'&sortfield=position_title&sortorder=asc';
+
     $sHTML = "
 
           <tr style='width:100%; class='list_row' >
@@ -972,9 +975,13 @@ class CJobboarduserEx extends CJobboarduser
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
               </a>
             <th style='color:white; width:30%; font-size:11pt; padding-left:100px;' >
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <a style='font-size:11pt;' href='$positionTitleDesc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Position Title&nbsp;
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
+              </a>
+              <a style='font-size:11pt;' href='$positionTitleAsc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
+              </a>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:140px;' >
               <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
