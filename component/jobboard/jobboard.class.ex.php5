@@ -3801,7 +3801,7 @@ ChromePhp::log($sIndustry);
     //while($bRead)
     foreach ($positionData as $key => $value)
     {
-      $asLocation[$value['sl_occupationpk']] = $value['label'];
+      $asLocation[$value['label']] = $value['label'];
       //$bRead = $oDbResult->readNext();
     }
 
