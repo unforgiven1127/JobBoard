@@ -980,8 +980,8 @@ ChromePhp::log($sSortOrder);
     $positionIdDesc = $sURL.'&sortfield=external_key&sortorder=desc';
     $positionIdAsc = $sURL.'&sortfield=external_key&sortorder=asc';
 
-    $positionTitleDesc = $sURL.'&sortfield=position_title&sortorder=desc';
-    $positionTitleAsc = $sURL.'&sortfield=position_title&sortorder=asc';
+    $positionTitleDesc = $sURL.'&sortfield=slpd.title&sortorder=desc';
+    $positionTitleAsc = $sURL.'&sortfield=slpd.title&sortorder=asc';
 
     $companyDesc = $sURL.'&sortfield=company_name&sortorder=desc';
     $companyAsc = $sURL.'&sortfield=company_name&sortorder=asc';
