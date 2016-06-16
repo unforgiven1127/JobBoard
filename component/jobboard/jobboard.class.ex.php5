@@ -1291,8 +1291,8 @@ ChromePhp::log($sIndustry);
 
 
 // OCCUPATION
-    //$oForm->addField('input', 'occupation', array('label' => $this->casText['TALENT_OCCUPATION'], 'value' => getValue('occupation')));
-    $oForm->addField('select', 'occupation', array('class' => 'public_important_field', 'label' => 'Occupation'));
+    $oForm->addField('input', 'occupation', array('label' => $this->casText['TALENT_OCCUPATION'], 'value' => getValue('occupation')));
+    /*$oForm->addField('select', 'occupation', array('class' => 'public_important_field', 'label' => 'Occupation'));
     $locations = $this->getOccupationList();
 
     $oForm->addOption('occupation', array('value'=>'', 'label' => 'Select Occupation','selected'=>'selected'));
@@ -1301,7 +1301,7 @@ ChromePhp::log($sIndustry);
       $oForm->addOption('occupation', array('value'=>$nValue, 'label' => $vType));
     }
 
-    $oForm->addOption('occupation', $this->getOccupationList());
+    $oForm->addOption('occupation', $this->getOccupationList());*/
 // OCCUPATION
 
     //$oForm->addField('input', 'location', array('label' => $this->casText['TALENT_LOCATION'], 'value' => getValue('location')));
