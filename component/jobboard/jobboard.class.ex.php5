@@ -957,8 +957,8 @@ ChromePhp::log($slistemQuery);
     //if not a global search (compact form) control the fields from the full form
     if(!$bGlobalSearch)
     {
-      $nEnglish = (int)getValue('english', -1)*2; // slistem da 10 luk sistem burada 5 onedenle *2
-      $nJapanese = (int)getValue('japanese', -1)*2; // slistem da 10 luk sistem burada 5 onedenle *2
+      $nEnglish = change_language_system((int)getValue('english', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
+      $nJapanese = change_language_system((int)getValue('japanese', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry');
@@ -3807,6 +3807,36 @@ ChromePhp::log($sIndustry);
 
     //$_SESSION['sl_location_list'] = $asLocation;
     return $asLocation;
+  }
+
+  public function change_language_system($fiveSystem)
+  {
+    if($fiveSystem = 0)
+    {
+      return 0;
+    }
+    else if($fiveSystem = 1)
+    {
+      return 2;
+    }
+    else if($fiveSystem = 2)
+    {
+      return 4;
+    }
+    else if($fiveSystem = 3)
+    {
+      return 5;
+    }
+    else if($fiveSystem = 4)
+    {
+      return 7;
+    }
+    else if($fiveSystem = 5)
+    {
+      return 9;
+    }
+    else
+      return 0;
   }
 
   public function getTranslation($psTextCode)
