@@ -977,8 +977,8 @@ class CJobboarduserEx extends CJobboarduser
             <th style='color:white; width:30%; font-size:11pt; padding-left:100px;' >
               <a style='font-size:11pt;' href='$positionTitleDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
-              Position Title&nbsp;
               </a>
+              Position Title&nbsp;
               <a style='font-size:11pt;' href='$positionTitleAsc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
               </a>
