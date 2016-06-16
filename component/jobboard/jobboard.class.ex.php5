@@ -1349,7 +1349,29 @@ ChromePhp::log($nEnglish);
 
 
     //languages slider legends
-    $asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL2'], 3 => $this->casText['TALENT_LANG_LVL3'], 4 => $this->casText['TALENT_LANG_LVL4']);
+    $oForm->addField('select', 'english', array('class' => 'public_important_field', 'label' => 'English Ability'));
+    $languagesEng = $this->getLanguageList();
+
+    //$oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
+    foreach($languagesEng as $nValue => $vType)
+    {
+      $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType));
+    }
+
+    //$oForm->addOption('english', $this->getIndustryList());
+
+
+    $oForm->addField('select', 'japanese', array('class' => 'public_important_field', 'label' => 'Japanese Ability'));
+    $languagesJap = $this->getLanguageList();
+
+    //$oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
+    foreach($languagesJap as $nValue => $vType)
+    {
+      $oForm->addOption('japanese', array('value'=>$nValue, 'label' => $vType));
+    }
+
+
+    /*$asSliderLegend = array(0 => $this->casText['TALENT_LANG_LVL0'], 1 => $this->casText['TALENT_LANG_LVL1'], 2 => $this->casText['TALENT_LANG_LVL2'], 3 => $this->casText['TALENT_LANG_LVL3'], 4 => $this->casText['TALENT_LANG_LVL4']);
 
     //english level
     if($sLang == 'en')
@@ -1377,7 +1399,7 @@ ChromePhp::log($nEnglish);
       $oForm->setFieldDisplayParams('japanese', array('fieldid' => 'japaneseId', 'class' => 'clickable activable'));
     else
       $oForm->setFieldDisplayParams('japanese', array('fieldid' => 'japaneseId', 'class' => 'clickable activable fieldInactive'));
-
+*/
     /*$asSliderLegend = array(1 => 'Graduate', 2 => 'Mid-Level', 3 => 'Executive', 4 => 'Senior');
     $oForm->addField('slider', 'career', array('label' => $this->casText['TALENT_CAREER'], 'value' => (int)getValue('career', 2), 'min' => 1, 'max' => 4, 'range' => 'min', 'legend' => $asSliderLegend));
     $oForm->setFieldDisplayParams('career', array('fieldid' => 'careerId', 'class' => 'clickable activable'));
