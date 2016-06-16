@@ -961,9 +961,9 @@ ChromePhp::log($leventOrderFlag);
       $nJapanese = (int)getValue('japanese', -1)*2; // slistem da 10 luk sistem burada 5 onedenle *2
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
-      $sIndustry = getValue('industry_tree');
+      $sIndustry = getValue('industry');
       //$sLocation = strtolower(getValue('location'));
-//ChromePhp::log($sLocation);
+ChromePhp::log($sIndustry);
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
 
@@ -993,6 +993,12 @@ ChromePhp::log($leventOrderFlag);
       {
         $sOccupation = $oDb->dbEscapeString('%'.$sOccupation.'%');
         $asWhereSql[] = ' lower(slpd.title) LIKE '.$sOccupation.' ';
+      }
+
+      if(!empty($sIndustry))
+      {
+        $sIndustry = $oDb->dbEscapeString('%'.$sIndustry.'%');
+        $asWhereSql[] = ' slpd.location = '.$sIndustry.' ';
       }
 
       if(!empty($sCompany))
