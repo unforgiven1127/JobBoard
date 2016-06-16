@@ -980,7 +980,7 @@ class CJobboarduserEx extends CJobboarduser
             <th style='color:white; width:20%; font-size:11pt; padding-left:110px;' >
               <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Industry&nbsp;
-              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
             </th>
             <th style='color:white; width:10%; font-size:11pt;' >Edit</th>
             <th align='left' style='color:white; width:10%; font-size:11pt;'>Action</th>
