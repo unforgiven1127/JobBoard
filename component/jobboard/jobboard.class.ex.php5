@@ -1354,7 +1354,14 @@ ChromePhp::log($nEnglish);
     //$oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesEng as $nValue => $vType)
     {
-      $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType));
+      if($nValue == 5)
+      {
+        $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
+      }
+      else
+      {
+        $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType));
+      }
     }
 
     //$oForm->addOption('english', $this->getIndustryList());
