@@ -965,7 +965,7 @@ class CJobboarduserEx extends CJobboarduser
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%; font-size:11pt;' >Position ID
               <i style='color:white; margin-left: 5px;' class='fa fa-sort-asc' aria-hidden='true'></i>
-              <i style='color:white; margin-left:-13px;' class='fa fa-sort-desc' aria-hidden='true'></i>
+              <i style='color:white; margin-left:-12px;' class='fa fa-sort-desc' aria-hidden='true'></i>
             </th>
             <th style='color:white; width:30%; padding-left:100px;' >Position Title</th>
             <th style='color:white; width:20%; padding-left:140px;' >Company</th>
