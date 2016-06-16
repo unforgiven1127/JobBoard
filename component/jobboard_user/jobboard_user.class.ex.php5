@@ -972,8 +972,16 @@ class CJobboarduserEx extends CJobboarduser
               Position Title&nbsp;
               <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
             </th>
-            <th style='color:white; width:20%; padding-left:140px;' >Company</th>
-            <th style='color:white; width:20%; padding-left:110px;' >Industry</th>
+            <th style='color:white; width:20%; font-size:11pt; padding-left:100px;' >
+              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              Company&nbsp;
+              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
+            </th>
+            <th style='color:white; width:20%; font-size:11pt; padding-left:100px;' >
+              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              Industry&nbsp;
+              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
+            </th>
             <th style='color:white; width:10%;' >Edit</th>
             <th align='left' style='color:white; width:10%;'>Action</th>
           </tr>
