@@ -1850,7 +1850,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
 
-    $this->_getJobSearchResult();
+    $this->_getAjaxJobSearchResult();
 
     return $sHTML;
   }
