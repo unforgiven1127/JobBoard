@@ -1373,7 +1373,14 @@ ChromePhp::log($nEnglish);
     //$oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesJap as $nValue => $vType)
     {
-      $oForm->addOption('japanese', array('value'=>$nValue, 'label' => $vType));
+      if($nValue == 5)
+      {
+        $oForm->addOption('japanese', array('value'=>$nValue, 'label' => $vType,'selected'=>'selected'));
+      }
+      else
+      {
+        $oForm->addOption('japanese', array('value'=>$nValue, 'label' => $vType));
+      }
     }
 
 
