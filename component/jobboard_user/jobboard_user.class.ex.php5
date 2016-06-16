@@ -206,8 +206,8 @@ class CJobboarduserEx extends CJobboarduser
     $sSort = getValue('sort');
     $bDisplayFilter = true;
 
-    $sSortField = getValue('sortfield');
-    $sSortOrder = getValue('sortorder');
+    $sSortField = TRIM(getValue('sortfield'));
+    $sSortOrder = TRIM(getValue('sortorder'));
 ChromePhp::log($sSortField);
 ChromePhp::log($sSortOrder);
 
