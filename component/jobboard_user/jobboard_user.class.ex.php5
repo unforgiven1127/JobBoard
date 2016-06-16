@@ -965,7 +965,7 @@ class CJobboarduserEx extends CJobboarduser
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%; font-size:11pt;' >
               <a style='font-size:11pt;' href='$positionIdDesc'>
-                <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-amount-desc' aria-hidden='true'></i>&nbsp;
               </a>
               Position ID&nbsp;
               <a style='font-size:11pt;' href='$positionIdAsc'>
