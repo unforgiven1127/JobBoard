@@ -253,8 +253,8 @@ ChromePhp::log($sSortOrder);
 
     if(!empty($sSortField))
     {
-      $sOrder = ' ORDER BY '.$sSortField.' '.$sSortOrder;
-      $slistemQuery .= ' ORDER BY '.$sSortField.' '.$sSortOrder;
+      $sOrder = ' ORDER BY TRIM('.$sSortField.') '.$sSortOrder;
+      $slistemQuery .= ' ORDER BY TRIM('.$sSortField.') '.$sSortOrder;
     }
     else
     {
