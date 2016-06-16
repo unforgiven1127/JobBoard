@@ -514,7 +514,7 @@ ChromePhp::log($sLocation);
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
@@ -568,7 +568,7 @@ ChromePhp::log($slistemQuery);
       default:
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
-ChromePhp::log($leventOrderFlag);
+//ChromePhp::log($leventOrderFlag);
     if($leventOrderFlag)
     {
       $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC";
@@ -578,7 +578,7 @@ ChromePhp::log($leventOrderFlag);
       $slistemQuery .= " order by slp.sl_positionpk DESC";
     }
 
-
+ChromePhp::log($slistemQuery);
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince duzeldi....
 
