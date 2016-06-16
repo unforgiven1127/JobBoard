@@ -963,7 +963,7 @@ ChromePhp::log($slistemQuery);
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry');
       //$sLocation = strtolower(getValue('location'));
-ChromePhp::log($sIndustry);
+ChromePhp::log($nEnglish);
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
 
