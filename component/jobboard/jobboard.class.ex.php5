@@ -967,11 +967,11 @@ ChromePhp::log($nEnglish);
 
       if($nEnglish == 0)
       {
-        $nEnglish = 6;
+        $nEnglish = 9;
       }
       if($nJapanese == 0)
       {
-        $nJapanese = 6;
+        $nJapanese = 9;
       }
 
       //field possibly desactivated (value = -1)
