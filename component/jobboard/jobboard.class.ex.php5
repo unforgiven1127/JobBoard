@@ -964,6 +964,16 @@ ChromePhp::log($bGlobalSearch);
       //$sLocation = strtolower(getValue('location'));
 ChromePhp::log((int)getValue('english'));
 ChromePhp::log($nEnglish);
+
+      if($nEnglish == 0)
+      {
+        $nEnglish = 6;
+      }
+      if($nJapanese == 0)
+      {
+        $nJapanese = 6;
+      }
+
       //field possibly desactivated (value = -1)
       $nCareer = (int)(getValue('career', -1));
 
@@ -1351,7 +1361,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $oForm->addField('select', 'english', array('class' => 'public_important_field', 'label' => 'English Ability'));
     $languagesEng = $this->getLanguageList();
 
-    $oForm->addOption('english', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
+    //$oForm->addOption('english', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesEng as $nValue => $vType)
     {
       if($nValue == 6)
@@ -1370,7 +1380,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $oForm->addField('select', 'japanese', array('class' => 'public_important_field', 'label' => 'Japanese Ability'));
     $languagesJap = $this->getLanguageList();
 
-    $oForm->addOption('japanese', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
+    //$oForm->addOption('japanese', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesJap as $nValue => $vType)
     {
       if($nValue == 6)
