@@ -3804,7 +3804,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
   public function getLanguageList()
   {
     $language = array('None','Beginner','Conversational','Business','Fluent','Native');
-    $i = 0;
+    $i = 1;
     $asLocation = array();
 
     foreach ($language as $key => $value)
