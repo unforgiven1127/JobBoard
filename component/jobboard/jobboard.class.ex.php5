@@ -478,7 +478,6 @@ class CJobboardEx extends CJobboard
       $sQuery.= ' LEFT JOIN industry AS ind ON (ind.industrypk = pos.industryfk) ';
       $slistemQuery.= " INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk ";
     }
-ChromePhp::log($sLocation);
     if(!empty($sLocation))
     {
       $slistemQuery.= " INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location AND sll.sl_locationpk = '".$sLocation."' ";
