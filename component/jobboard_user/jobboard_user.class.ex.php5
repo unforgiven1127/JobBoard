@@ -966,6 +966,9 @@ class CJobboarduserEx extends CJobboarduser
     $companyDesc = $sURL.'&sortfield=company_name&sortorder=desc';
     $companyAsc = $sURL.'&sortfield=company_name&sortorder=asc';
 
+    $industryDesc = $sURL.'&sortfield=name&sortorder=desc';
+    $industryAsc = $sURL.'&sortfield=name&sortorder=asc';
+
     $sHTML = "
 
           <tr style='width:100%; class='list_row' >
@@ -996,9 +999,13 @@ class CJobboarduserEx extends CJobboarduser
               </a>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:110px;' >
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <a style='font-size:11pt;' href='$industryDesc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              </a>
               Industry&nbsp;
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
+              <a style='font-size:11pt;' href='$industryAsc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
+              </a>
             </th>
             <th style='color:white; width:10%; font-size:11pt;' >Edit</th>
             <th align='left' style='color:white; width:10%; font-size:11pt;'>Action</th>
