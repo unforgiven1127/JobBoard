@@ -1043,7 +1043,7 @@ ChromePhp::log($nEnglish);
       if($nJapanese == 0)
         $asWhereSql[] = ' slpd.language <> "jp" ';
 
-      if($nEnglish == 0)
+      else if($nEnglish == 0)
         $asWhereSql[] = ' slpd.language <> "en" ';
     }
 
