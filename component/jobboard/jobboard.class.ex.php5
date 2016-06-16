@@ -917,7 +917,7 @@ ChromePhp::log($slistemQuery);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
-
+ChromePhp::log($bGlobalSearch);
     //----------------------------------------------------
     //Control fields and build the sql from it
     // TODO: Need field controls and escape striing !!!
