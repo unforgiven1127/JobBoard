@@ -1297,7 +1297,17 @@ ChromePhp::log($leventOrderFlag);
     $oForm->addOption('location', $this->getLocationOption());
 
     //industry tree
-    $asIndustries = $this->getIndustries(0, true, true);
+    $oForm->addField('select', 'industry', array('class' => 'public_important_field', 'label' => 'Industry'));
+    $industries = $this->getIndustryList();
+
+    $oForm->addOption('industry', array('value'=>'', 'label' => 'Select Industry','selected'=>'selected'));
+    foreach($industries as $nValue => $vType)
+    {
+      $oForm->addOption('industry', array('value'=>$nValue, 'label' => $vType));
+    }
+
+    $oForm->addOption('industry', $this->getIndustryList());
+    /*$asIndustries = $this->getIndustries(0, true, true);
     $nIndustry = getValue('industry_tree');
 
     $asIndustrySelected = explode(',',$nIndustry);
@@ -1314,7 +1324,7 @@ ChromePhp::log($leventOrderFlag);
         $oForm->addOption('industry_tree', array('title' => ''.$this->casText[$asData['name']].'','id' => $asData['industrypk'], 'parent' => $asData['parentfk'],'checked'=>'checked'));
       else
         $oForm->addOption('industry_tree', array('title' => ''.$this->casText[$asData['name']].'','id' => $asData['industrypk'], 'parent' => $asData['parentfk']));
-    }
+    }*/
 
 
     //languages slider legends
@@ -3733,6 +3743,28 @@ ChromePhp::log($leventOrderFlag);
     return $asLocation;
   }
 
+  public function getIndustryList()
+  {
+    //$oDb = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = 'SELECT * FROM sl_industry ORDER BY label ';
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    //$oDbResult = $oDb->executeQuery($sQuery);
+    //$bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    //while($bRead)
+    foreach ($positionData as $key => $value)
+    {
+      $asLocation[$value['sl_industrypk']] = $value['label'];
+      //$bRead = $oDbResult->readNext();
+    }
+
+    //$_SESSION['sl_location_list'] = $asLocation;
+    return $asLocation;
+  }
   public function getTranslation($psTextCode)
   {
     if(!assert('isset($this->casText["'.$psTextCode.'"])'))
