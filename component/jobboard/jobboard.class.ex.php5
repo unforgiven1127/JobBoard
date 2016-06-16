@@ -957,8 +957,8 @@ ChromePhp::log($slistemQuery);
     //if not a global search (compact form) control the fields from the full form
     if(!$bGlobalSearch)
     {
-      $nEnglish = $this->change_language_system((int)getValue('english', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
-      $nJapanese = $this->change_language_system((int)getValue('japanese', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
+      $nEnglish = languageJobBoardToSlistem((int)getValue('english', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
+      $nJapanese = languageJobBoardToSlistem((int)getValue('japanese', -1)); // slistem da 10 luk sistem burada 5 onedenle *2
       $sOccupation = strtolower(getValue('occupation'));
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry');

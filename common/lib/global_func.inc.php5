@@ -1,18 +1,55 @@
 <?php
 
-$sortField = '';
-$sortOrder= '';
-
-function setOrder($field,$order)
+function languageSlistemtoJobBoard($nineSystem)
 {
-  $sortField = $field;
-  $sortOrder = $order;
+  if($nineSystem == 9 || $nineSystem == 8)
+  {
+    return 5;
+  }
+  else if($nineSystem == 7)
+  {
+    return 4;
+  }
+  else if($nineSystem == 6)
+  {
+    return 3;
+  }
+  else if($nineSystem == 5)
+  {
+    return 2;
+  }
+  else if($nineSystem == 4)
+  {
+    return 1;
+  }
+  else
+    return 0;
 }
 
-function getOrder()
+function languageJobBoardToSlistem($fiveSystem)
 {
-  $return = array($sortField,$sortOrder);
-  return $return;
+    if($fiveSystem == 1)
+    {
+      return 4;
+    }
+    else if($fiveSystem == 2)
+    {
+      return 5;
+    }
+    else if($fiveSystem == 3)
+    {
+      return 6;
+    }
+    else if($fiveSystem == 4)
+    {
+      return 7;
+    }
+    else if($fiveSystem == 5)
+    {
+      return 9;
+    }
+    else
+      return 0;
 }
 
 function displayAssert($psFile, $pnLine, $psMessage)
