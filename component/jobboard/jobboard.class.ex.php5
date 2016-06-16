@@ -1314,7 +1314,7 @@ ChromePhp::log($nEnglish);
       $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
     }
 
-    $oForm->addOption('location', $this->getLocationOption());
+    //$oForm->addOption('location', $this->getLocationOption());
 
     //industry tree
     $oForm->addField('select', 'industry', array('class' => 'public_important_field', 'label' => 'Industry'));
@@ -1326,7 +1326,7 @@ ChromePhp::log($nEnglish);
       $oForm->addOption('industry', array('value'=>$nValue, 'label' => $vType));
     }
 
-    $oForm->addOption('industry', $this->getIndustryList());
+    //$oForm->addOption('industry', $this->getIndustryList());
     /*$asIndustries = $this->getIndustries(0, true, true);
     $nIndustry = getValue('industry_tree');
 
