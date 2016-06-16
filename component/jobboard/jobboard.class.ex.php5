@@ -1287,7 +1287,22 @@ ChromePhp::log($sIndustry);
     $oForm->setFormDisplayParams(array('columns' => 2, 'noCancelButton' => '1'));
 
     $oForm->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
-    $oForm->addField('input', 'occupation', array('label' => $this->casText['TALENT_OCCUPATION'], 'value' => getValue('occupation')));
+
+
+
+// OCCUPATION
+    //$oForm->addField('input', 'occupation', array('label' => $this->casText['TALENT_OCCUPATION'], 'value' => getValue('occupation')));
+    $oForm->addField('select', 'occupation', array('class' => 'public_important_field', 'label' => 'Occupation'));
+    $locations = $this->getOccupationList();
+
+    $oForm->addOption('occupation', array('value'=>'', 'label' => 'Select Occupation','selected'=>'selected'));
+    foreach($locations as $nValue => $vType)
+    {
+      $oForm->addOption('occupation', array('value'=>$nValue, 'label' => $vType));
+    }
+
+    $oForm->addOption('occupation', $this->getOccupationList());
+// OCCUPATION
 
     //$oForm->addField('input', 'location', array('label' => $this->casText['TALENT_LOCATION'], 'value' => getValue('location')));
     $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
@@ -3752,7 +3767,7 @@ ChromePhp::log($sIndustry);
   {
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = 'SELECT * FROM sl_industry ORDER BY label ';
+    $slistemQuery = 'SELECT * FROM sl_industry WHERE parentfk > 0 ORDER BY label ';
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
@@ -3770,6 +3785,30 @@ ChromePhp::log($sIndustry);
     //$_SESSION['sl_location_list'] = $asLocation;
     return $asLocation;
   }
+
+  public function getOccupationList()
+  {
+    //$oDb = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = 'SELECT * FROM sl_occupation WHERE parentfk > 0 ORDER BY label ';
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    //$oDbResult = $oDb->executeQuery($sQuery);
+    //$bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    //while($bRead)
+    foreach ($positionData as $key => $value)
+    {
+      $asLocation[$value['sl_occupationpk']] = $value['label'];
+      //$bRead = $oDbResult->readNext();
+    }
+
+    //$_SESSION['sl_location_list'] = $asLocation;
+    return $asLocation;
+  }
+
   public function getTranslation($psTextCode)
   {
     if(!assert('isset($this->casText["'.$psTextCode.'"])'))
