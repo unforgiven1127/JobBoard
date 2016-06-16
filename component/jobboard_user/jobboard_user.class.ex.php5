@@ -263,7 +263,7 @@ ChromePhp::log($sSortOrder);
     }
 
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
-var_dump($slistemQuery);
+//var_dump($slistemQuery);
     $positionDataSlistem = $slistemDB->slistemGetAllData($slistemQuery);
 
     if($psType == 'share')
