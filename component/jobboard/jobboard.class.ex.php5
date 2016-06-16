@@ -1132,11 +1132,11 @@ ChromePhp::log($sIndustry);
       }
 
 
-      if(!empty($sOccupation))
+      /*if(!empty($sOccupation))
       {
         $sOccupation = $oDb->dbEscapeString('%'.$sOccupation.'%');
         $asWhereSql[] = ' lower(pos.position_title) LIKE '.$sOccupation.' ';
-      }
+      }*/
 
       if(!empty($sCompany))
       {
