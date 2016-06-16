@@ -933,7 +933,7 @@ ChromePhp::log($slistemQuery);
       $sOneKeyword = $oDb->dbEscapeString($sKeyWord);
       $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
 
-      $asKeywordSql[] = " slpd.title = '$allKeyword'";
+      //$asKeywordSql[] = " slpd.title = '$allKeyword'";
 
       $asResult['order'][] = ' exactExpression DESC ';
 
