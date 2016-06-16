@@ -1,5 +1,20 @@
 <?php
 
+$sortField = '';
+$sortOrder= '';
+
+function setOrder($field,$order)
+{
+  $sortField = $field;
+  $sortOrder = $order;
+}
+
+function getOrder()
+{
+  $return = array($sortField,$sortOrder);
+  return $return;
+}
+
 function displayAssert($psFile, $pnLine, $psMessage)
 {
   echo '<div style="width:100%;">

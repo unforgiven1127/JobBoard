@@ -210,6 +210,25 @@ class CJobboarduserEx extends CJobboarduser
     $sSortOrder = getValue('sortorder');
 ChromePhp::log($sSortField);
 ChromePhp::log($sSortOrder);
+
+    if(isset($sSortField) && isset($sSortOrder))
+    {
+      $cookie_name = "sortfield";
+      $cookie_value = $sSortField;
+      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+      $cookie_name = "sortorder";
+      $cookie_value = $sSortOrder;
+      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    }
+    else
+    {
+      $sSortField = $_COOKIE['sortfield'];
+      $sSortOrder = $_COOKIE['sortorder'];
+    }
+
+ChromePhp::log($sSortField);
+ChromePhp::log($sSortOrder);
     //echo"<br><br><br> Log:";
     //echo $sSortField;
 
