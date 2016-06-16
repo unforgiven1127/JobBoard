@@ -957,10 +957,13 @@ class CJobboarduserEx extends CJobboarduser
 
     $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
 
+    $positionIdDesc = $sURL.'&sortfield=external_key&sortorder=desc';
+    $positionIdAsc = $sURL.'&sortfield=external_key&sortorder=asc';
+
     $sHTML = "
 
           <tr style='width:100%; class='list_row' >
-            <th style='color:white; width:10%;' ><a href='https://jobs.slate.co.jp/index.php5?uid=654-321&ppa=ppal&ppt=ppaj&ppk=0' style='color:white;'>Position ID</a></th>
+            <th style='color:white; width:10%; font-size:12pt;' >Position ID</th>
             <th style='color:white; width:30%; padding-left:100px;' >Position Title</th>
             <th style='color:white; width:20%; padding-left:140px;' >Company</th>
             <th style='color:white; width:20%; padding-left:110px;' >Industry</th>
