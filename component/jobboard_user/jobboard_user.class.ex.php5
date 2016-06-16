@@ -964,11 +964,11 @@ class CJobboarduserEx extends CJobboarduser
 
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%; font-size:11pt;' >
-              <a href='$positionIdDesc'>
+              <a style='font-size:11pt;' href='$positionIdDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
               </a>
               Position ID&nbsp;
-              <a href='$positionIdAsc'>
+              <a style='font-size:11pt;' href='$positionIdAsc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
               </a>
             <th style='color:white; width:30%; font-size:11pt; padding-left:100px;' >
