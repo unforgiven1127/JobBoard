@@ -964,9 +964,13 @@ class CJobboarduserEx extends CJobboarduser
 
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%; font-size:11pt;' >
-              <i href='$positionIdDesc' style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
+              <a href='$positionIdDesc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
+              </a>
               Position ID&nbsp;
-              <i href='$positionIdAsc' style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
+              <a href='$positionIdAsc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
+              </a>
             <th style='color:white; width:30%; font-size:11pt; padding-left:100px;' >
               <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Position Title&nbsp;
