@@ -997,7 +997,7 @@ ChromePhp::log($sIndustry);
 
       if(isset($sIndustry) && !empty($sIndustry))
       {
-        $asWhereSql[] = ' slpd.location = '.$sIndustry.' ';
+        $asWhereSql[] = ' slp.industryfk = '.$sIndustry.' ';
       }
 
       if(!empty($sCompany))
