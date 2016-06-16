@@ -234,7 +234,7 @@ ChromePhp::log($sSortOrder);
 
     $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
                      slpd.is_public as visibility, slpd.category as category, slpd.career_level as career_level,
-                     slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements,
+                     TRIM(slpd.title) as position_title, slpd.description as position_desc, slpd.requirements as requirements,
                      cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
                      slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
                      slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
