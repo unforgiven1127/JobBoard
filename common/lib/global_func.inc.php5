@@ -4,26 +4,32 @@ function languageSlistemtoJobBoard($nineSystem)
 {
   if($nineSystem == 9 || $nineSystem == 8)
   {
-    return 5;
+    //return 5;
+    return 'Native';
   }
   else if($nineSystem == 7)
   {
-    return 4;
+    //return 4;
+    return 'Fluent';
   }
   else if($nineSystem == 6)
   {
-    return 3;
+    //return 3;
+    return 'Business';
   }
   else if($nineSystem == 5)
   {
-    return 2;
+    //return 2;
+    return 'Conversational';
   }
   else if($nineSystem == 4)
   {
-    return 1;
+    //return 1;
+    return 'Beginner';
   }
   else
-    return 0;
+    return 'None';
+    //return 0;
 }
 
 function languageJobBoardToSlistem($fiveSystem)
