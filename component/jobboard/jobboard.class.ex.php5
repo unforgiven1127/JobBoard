@@ -2024,7 +2024,7 @@ ChromePhp::log($nEnglish);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sEnglish = $this->_getLanduageLevelSlistem((int)$positionData['english']);
+        $sEnglish = languageSlistemtoJobBoard((int)$positionData['english']);
         $sHTML.= $oHTML->getText($sEnglish);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -2037,7 +2037,7 @@ ChromePhp::log($nEnglish);
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sJapanese = $this->_getLanduageLevelSlistem((int)$positionData['japanese']);
+        $sJapanese = languageSlistemtoJobBoard((int)$positionData['japanese']);
         $sHTML.= $oHTML->getText($sJapanese);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
