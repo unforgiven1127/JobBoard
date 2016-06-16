@@ -963,6 +963,9 @@ class CJobboarduserEx extends CJobboarduser
     $positionTitleDesc = $sURL.'&sortfield=position_title&sortorder=desc';
     $positionTitleAsc = $sURL.'&sortfield=position_title&sortorder=asc';
 
+    $companyDesc = $sURL.'&sortfield=company&sortorder=desc';
+    $companyAsc = $sURL.'&sortfield=company&sortorder=asc';
+
     $sHTML = "
 
           <tr style='width:100%; class='list_row' >
@@ -984,9 +987,13 @@ class CJobboarduserEx extends CJobboarduser
               </a>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:140px;' >
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <a style='font-size:11pt;' href='$companyDesc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              </a>
               Company&nbsp;
-              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
+              <a style='font-size:11pt;' href='$companyAsc'>
+                <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
+              </a>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:110px;' >
               <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
