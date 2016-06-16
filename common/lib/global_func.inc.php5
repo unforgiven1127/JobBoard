@@ -34,23 +34,23 @@ function languageSlistemtoJobBoard($nineSystem)
 
 function languageJobBoardToSlistem($fiveSystem)
 {
-    if($fiveSystem == 1)
+    if($fiveSystem == 2)
     {
       return 4;
     }
-    else if($fiveSystem == 2)
+    else if($fiveSystem == 3)
     {
       return 5;
     }
-    else if($fiveSystem == 3)
+    else if($fiveSystem == 4)
     {
       return 6;
     }
-    else if($fiveSystem == 4)
+    else if($fiveSystem == 5)
     {
       return 7;
     }
-    else if($fiveSystem == 5)
+    else if($fiveSystem == 6)
     {
       return 9;
     }
