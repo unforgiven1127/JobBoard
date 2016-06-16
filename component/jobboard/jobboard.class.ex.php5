@@ -997,7 +997,6 @@ ChromePhp::log($sIndustry);
 
       if(!empty($sIndustry))
       {
-        $sIndustry = $oDb->dbEscapeString('%'.$sIndustry.'%');
         $asWhereSql[] = ' slpd.location = '.$sIndustry.' ';
       }
 
