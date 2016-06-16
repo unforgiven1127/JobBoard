@@ -963,8 +963,8 @@ class CJobboarduserEx extends CJobboarduser
     $positionTitleDesc = $sURL.'&sortfield=position_title&sortorder=desc';
     $positionTitleAsc = $sURL.'&sortfield=position_title&sortorder=asc';
 
-    $companyDesc = $sURL.'&sortfield=company&sortorder=desc';
-    $companyAsc = $sURL.'&sortfield=company&sortorder=asc';
+    $companyDesc = $sURL.'&sortfield=company_name&sortorder=desc';
+    $companyAsc = $sURL.'&sortfield=company_name&sortorder=asc';
 
     $sHTML = "
 
