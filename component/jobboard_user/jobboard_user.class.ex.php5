@@ -964,23 +964,23 @@ class CJobboarduserEx extends CJobboarduser
 
           <tr style='width:100%; class='list_row' >
             <th style='color:white; width:10%; font-size:11pt;' >
-              <i style='color:white;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
               Position ID&nbsp;
-              <i style='color:white;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
             <th style='color:white; width:30%; font-size:11pt; padding-left:100px;' >
-              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Position Title&nbsp;
-              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i></th>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:140px;' >
-              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Company&nbsp;
-              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
             </th>
             <th style='color:white; width:20%; font-size:11pt; padding-left:110px;' >
-              <i style='color:white;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               Industry&nbsp;
-              <i style='color:white;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
+              <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
             </th>
             <th style='color:white; width:10%; font-size:11pt;' >Edit</th>
             <th align='left' style='color:white; width:10%; font-size:11pt;'>Action</th>
