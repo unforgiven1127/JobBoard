@@ -1064,7 +1064,7 @@ ChromePhp::log($nEnglish);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
-
+ChromePhp::log('test');
     //----------------------------------------------------
     //Control fields and build the sql from it
     // TODO: Need field controls and escape striing !!!
