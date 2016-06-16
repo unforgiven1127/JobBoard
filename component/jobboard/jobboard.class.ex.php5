@@ -1370,7 +1370,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     $oForm->addField('select', 'japanese', array('class' => 'public_important_field', 'label' => 'Japanese Ability'));
     $languagesJap = $this->getLanguageList();
 
-    $oForm->addOption('english', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
+    $oForm->addOption('japanese', array('value'=>'', 'label' => 'Select Level','selected'=>'selected'));
     foreach($languagesJap as $nValue => $vType)
     {
       if($nValue == 5)
