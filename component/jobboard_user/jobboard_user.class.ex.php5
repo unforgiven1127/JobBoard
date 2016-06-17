@@ -1239,7 +1239,7 @@ ChromePhp::log($sSortOrder);
 
 $sHTML.= "<table>
      <tr>
-       <td>";
+       <td style='width:50%;'>";
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
