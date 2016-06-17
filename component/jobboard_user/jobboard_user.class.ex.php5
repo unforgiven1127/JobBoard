@@ -1497,13 +1497,7 @@ ChromePhp::log($sSortOrder);
     /*$sText = str_replace(array('\n', "\r\n","\n", "\r"), ' ', $asRecord['meta_desc']);
     $oForm->addField('textarea', 'meta_desc', array('label' => 'Meta Description', 'class' => 'description', 'value' => $sText));
     $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));*/
-$sHTML.= "</td>
 
-    <td>
-    Title Japanese
-    </td>
-
-    </tr></table>";
     $sHTML.= $oForm->getDisplay();
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
