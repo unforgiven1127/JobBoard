@@ -380,15 +380,6 @@ class CJobboardEx extends CJobboard
 
     $positionCount = $avResult['positionData'][0]['count'];
 
-    if($positionCount == 0)
-    {
-      $pageCount = 1;
-    }
-    else
-    {
-      $pageCount = ceil($positionCount/50); // round up
-    }
-
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -397,7 +388,7 @@ class CJobboardEx extends CJobboard
      }
 
     //in ajax, the dummy form should always be hidden
-    $sData = $this->_getJobResultList($avResult, $sSearchId, false, $pageCount);
+    $sData = $this->_getJobResultList($avResult, $sSearchId, false, $positionCount);
 
     if(empty($sData) || $sData == 'null' || $sData == null)
        return array('data' => $this->casText['TALENT_SORRY_ERROR'], 'action' => '$(\'.searchTitle\').html(\''.addslashes($sMessage).'\'); searchTitle(\'\', false, false); $(\'body\').scrollTop();');
@@ -643,7 +634,7 @@ ChromePhp::log($slistemQuery);
    * @return string
    */
 
-  private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false, $pageCount = -1)
+  private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false, $positionCount = -1)
   {
     if(!assert('!empty($pavResult)'))
       return '';
@@ -673,14 +664,11 @@ ChromePhp::log($slistemQuery);
 
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
-ChromePhp::log('ilk sayfa sayisi');
-ChromePhp::log($nNbResult);
-    if($pageCount != -1)
+
+    if($positionCount != -1)
     {
-      $nNbResult = $pageCount;
+      $nNbResult = $positionCount;
     }
-ChromePhp::log('sayfa sayisi');
-ChromePhp::log($nNbResult);
 
     if(isset($pavResult['positionData']))
     {
