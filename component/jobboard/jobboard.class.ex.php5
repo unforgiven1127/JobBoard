@@ -673,7 +673,8 @@ ChromePhp::log($slistemQuery);
 
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
-
+ChromePhp::log('ilk sayfa sayisi');
+ChromePhp::log($nNbResult);
     if($pageCount != -1)
     {
       $nNbResult = $pageCount;
