@@ -579,9 +579,11 @@ class CJobboardEx extends CJobboard
 
 ChromePhp::log($slistemQuery);
     $noLimitSql = $slistemQuery;
-    $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince duzeldi....
+    $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince result sayisi duzeldi....
 
-//ChromePhp::log($slistemQuery);
+$pagecount = $noLimitPositionData[0]['count'];
+
+ChromePhp::log($pagecount);
 //ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
