@@ -1542,10 +1542,11 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
-        ChromePhp::log('AV RESULT');
-        ChromePhp::log($avResult);
+
+        $positionCount = $avResult['positionData'][0]['count'];
+
         //ChromePhp::log($avResult);
-        $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
+        $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen,$positionCount);
 
 
         $sHTML.= $oHTML->getBlocEnd();
