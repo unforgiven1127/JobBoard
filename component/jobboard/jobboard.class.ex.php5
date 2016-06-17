@@ -376,7 +376,19 @@ class CJobboardEx extends CJobboard
     //Populate the sidebar things
 //ChromePhp::log('before avResult');
     $avResult = $this->_getJobSearchResult('', $sSearchId);
-ChromePhp::log($avResult);
+//ChromePhp::log($avResult);
+
+    $positionCount = $avResult['positionData'][0]['count'];
+
+    if($positionCount == 0)
+    {
+      $pageCount = 1;
+    }
+    else
+    {
+      $pageCount = ceil($positionCount/50); // round up
+    }
+ChromePhp::log($pageCount);
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -385,7 +397,7 @@ ChromePhp::log($avResult);
      }
 
     //in ajax, the dummy form should always be hidden
-    $sData = $this->_getJobResultList($avResult, $sSearchId, false);
+    $sData = $this->_getJobResultList($avResult, $sSearchId, false, $pageCount);
 
     if(empty($sData) || $sData == 'null' || $sData == null)
        return array('data' => $this->casText['TALENT_SORRY_ERROR'], 'action' => '$(\'.searchTitle\').html(\''.addslashes($sMessage).'\'); searchTitle(\'\', false, false); $(\'body\').scrollTop();');
@@ -599,7 +611,7 @@ ChromePhp::log($avResult);
       $pageCount = ceil($positionCount/50); // round up
     }
 
-ChromePhp::log($pageCount);
+//ChromePhp::log($pageCount);
 //ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
@@ -631,7 +643,7 @@ ChromePhp::log($slistemQuery);
    * @return string
    */
 
-  private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false)
+  private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false, $pageCount = -1)
   {
     if(!assert('!empty($pavResult)'))
       return '';
@@ -661,6 +673,11 @@ ChromePhp::log($slistemQuery);
 
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
+
+    if($pageCount != -1)
+    {
+      $nNbResult = $pageCount;
+    }
 
     if(isset($pavResult['positionData']))
     {
