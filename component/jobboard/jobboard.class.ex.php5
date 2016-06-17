@@ -597,7 +597,7 @@ ChromePhp::log($slistemQuery);
     }
     else
     {
-      $pageCount = $positionCount/50;
+      $pageCount = ceil($positionCount/50); // round up
     }
 
 ChromePhp::log($pageCount);
