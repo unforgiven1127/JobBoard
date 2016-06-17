@@ -51,7 +51,6 @@ class CPagerEx extends CPager
       else
           $nPagerLimit = 25;
     }
-$nPagerLimit = 50;
     //if the user change the Limit, we calculate the new page number
     /*if(isset($_SESSION['pager']) && $nPagerLimit != $_SESSION['pager'])
     {
