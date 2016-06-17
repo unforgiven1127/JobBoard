@@ -678,6 +678,7 @@ ChromePhp::log($slistemQuery);
     {
       $nNbResult = $pageCount;
     }
+ChromePhp::log('sayfa sayisi');
 ChromePhp::log($nNbResult);
 
     if(isset($pavResult['positionData']))
