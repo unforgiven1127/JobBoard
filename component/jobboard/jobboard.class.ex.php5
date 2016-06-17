@@ -585,13 +585,22 @@ ChromePhp::log($slistemQuery);
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince result sayisi duzeldi....
 
-$pagecount = $noLimitPositionData[0]['count'];
-if($pagecount == null)
-{
-  $pagecount = 0;
-}
+    $positionCount = $noLimitPositionData[0]['count'];
+    if($positionCount == null)
+    {
+      $positionCount = 0;
+    }
 
-ChromePhp::log($pagecount);
+    if($positionCount == 0)
+    {
+      $pageCount = 1;
+    }
+    else
+    {
+      $pageCount = $positionCount/50;
+    }
+
+ChromePhp::log($pageCount);
 //ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
