@@ -1551,20 +1551,18 @@ ChromePhp::log($sSortOrder);
       $sHTML.= $oHTML->getFloatHack();
       $sHTML.= $oHTML->getBlocEnd();
     }
-
-    // Close holding divs
-    $sHTML.= $oHTML->getFloatHack();
-    $sHTML.= $oHTML->getBlocEnd();
-    $sHTML.= $oHTML->getBlocEnd();
-    $sHTML.= $oHTML->getFloatHack();
-
-    $sHTML.= "</td>
+$sHTML.= "</td>
 
     <td>
     Title Japanese
     </td>
 
     </tr></table>";
+    // Close holding divs
+    $sHTML.= $oHTML->getFloatHack();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getBlocEnd();
+    $sHTML.= $oHTML->getFloatHack();
 
     return $sHTML;
   }
