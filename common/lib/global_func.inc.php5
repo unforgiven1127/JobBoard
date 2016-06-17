@@ -34,7 +34,11 @@ function languageSlistemtoJobBoard($nineSystem)
 
 function languageJobBoardToSlistem($fiveSystem)
 {
-    if($fiveSystem == 2)
+    if($fiveSystem == 1)
+    {
+      return 3;
+    }
+    else if($fiveSystem == 2)
     {
       return 4;
     }
