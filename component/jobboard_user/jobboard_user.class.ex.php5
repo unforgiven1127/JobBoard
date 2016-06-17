@@ -1507,7 +1507,13 @@ $sHTML.= "</td>
     $sHTML.= $oForm->getDisplay();
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
+$sHTML.= "</td>
 
+    <td>
+    Title Japanese
+    </td>
+
+    </tr></table>";
 
     //Div for controlling Iframe
     if(!empty($sRealPageUrl))
