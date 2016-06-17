@@ -1233,6 +1233,9 @@ ChromePhp::log($sSortOrder);
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
 
     $oForm = $oHTML->initForm('posEditForm');
+
+    $oForm->setFormDisplayParams(array('columns' => 2, 'noCancelButton' => '1'));
+
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
