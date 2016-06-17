@@ -414,7 +414,7 @@ class CJobboardEx extends CJobboard
   {
     if($pnNbResult == null)
     {
-      $pnNbResult = 0
+      $pnNbResult = 0;
     }
     $sMessage = $this->casText['TALENT_RESULTS_MATCHING'];
 
