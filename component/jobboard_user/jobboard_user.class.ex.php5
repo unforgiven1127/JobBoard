@@ -1236,7 +1236,7 @@ ChromePhp::log($sSortOrder);
 
     //$oForm->setFormDisplayParams(array('columns' => 2));
 
-    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => 'test'));
+    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
