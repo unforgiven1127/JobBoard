@@ -662,7 +662,7 @@ ChromePhp::log($slistemQuery);
     $nNbResult = $pavResult['nNbResult'];
     $oDbResult = $pavResult['oData'];
 
-var_dump($pavResult);
+ChromePhp::log($pavResult);
 
     if(isset($pavResult['positionData']))
     {
