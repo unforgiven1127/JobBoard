@@ -3830,7 +3830,11 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
   {
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = 'SELECT * FROM sl_industry WHERE parentfk > 0 ORDER BY label ';
+    $slistemQuery = "SELECT sli.label, sli.sl_industrypk, count(slp.sl_positionpk) as count
+                     FROM sl_position slp
+                     INNER JOIN sl_industry sli on sli.sl_industrypk = slp.industryfk and sli.parentfk > 0
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
+                     GROUP BY slp.industryfk ORDER BY sli.label ";
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
