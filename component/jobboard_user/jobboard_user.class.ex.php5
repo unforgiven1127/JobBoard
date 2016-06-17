@@ -1311,8 +1311,8 @@ ChromePhp::log($sSortOrder);
     $oForm->addField('input', 'company_label', array('label'=> 'Displayed company name','disabled' => 'disabled', 'style' =>'background-color: #dedede; font-style: italic;', 'class' => '', 'value' => $asRecord['company_label']));
     $oForm->setFieldControl('company_label', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255));
 
-    $sCompanyHelp = '<div class="position_form_salary_help" style="top: -60px;">If the company name is sensitive, please input the text that will be displayed instead on the jobboard. A generic description of the company is recommended. Example: Leading electronic company in Japan, International bank & insurance company ...</div><br /> ';
-    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sCompanyHelp));
+    /*$sCompanyHelp = '<div class="position_form_salary_help" style="top: -60px;">If the company name is sensitive, please input the text that will be displayed instead on the jobboard. A generic description of the company is recommended. Example: Leading electronic company in Japan, International bank & insurance company ...</div><br /> ';
+    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sCompanyHelp));*/
 
     $oForm->addField('input', 'position_title', array('label'=>'Position Title', 'class' => '', 'value' => $asRecord['position_title']));
     $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
@@ -1369,9 +1369,9 @@ ChromePhp::log($sSortOrder);
     $oForm->addField('input', 'salary_low', array('label'=>'Lower salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_low']));
     $oForm->addField('input', 'salary_high', array('label'=>'Higher salary (in ¥)', 'class' => '', 'value' => $asRecord['salary_high']));
 
-    $sSalaryHelp = '<div class="position_form_salary_help" style="top: -105px;">Salary:<br />The displayed salary is a text value where you can write any range of salary and any other information such as "negocialble", or "to be discussed", "starting from"...
+    /*$sSalaryHelp = '<div class="position_form_salary_help" style="top: -105px;">Salary:<br />The displayed salary is a text value where you can write any range of salary and any other information such as "negocialble", or "to be discussed", "starting from"...
       In those cases where the salary isn\'t a simple value, you have to estimated a low and high values that the search engine will use while searching.<br />Example: "3 Mil. yen + Bonus. Negociable" => lower salary: 3 000 000, higher: 4 000 000  </div><br /> ';
-    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sSalaryHelp));
+    $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sSalaryHelp));*/
 
     $oForm->addField('select', 'english', array('label' => 'English Level'));
 
@@ -1465,10 +1465,10 @@ ChromePhp::log($sSortOrder);
       $sIndustryTip.= 'If not changed, it needs to be <em style="color: blue;">translated</em> to be displayed on the jobboard. ';
       $sIndustryTip.= 'For the time being it will be displayed as the parent category <strong style="color: green;">'.$oJobboard->getTranslation($asIndustries[$nParentIndus]['name']).'</strong>';
     }
-    else
+    /*else
       $sIndustryTip.= 'If you need industries that are not displayed in the current list, please request it by email <a href="mailto:sboudoux@bulbouscell.com">here</a>.';
 
-    $oForm->addField('misc','',array('type' => 'text','text' => '<div class="position_form_salary_help" style="top: -65px;">'.$sIndustryTip.'</div>'));
+    $oForm->addField('misc','',array('type' => 'text','text' => '<div class="position_form_salary_help" style="top: -65px;">'.$sIndustryTip.'</div>'));*/
 
 
     $oForm->addField('input', 'holidays', array('label' => 'Holidays', 'class' => '', 'value' => $asRecord['holidays']));
@@ -1559,8 +1559,6 @@ ChromePhp::log($sSortOrder);
     $sHTML.= $oHTML->getFloatHack();
 
     $sHTML.= "</td></tr></table>";
-
-    
 
     return $sHTML;
   }
