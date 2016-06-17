@@ -1240,7 +1240,7 @@ ChromePhp::log($sSortOrder);
 $sHTML.= "<table>
      <tr>
        <td>";
-       
+
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
 
@@ -1506,8 +1506,11 @@ $sHTML.= "<table>
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-     </tr>
-  <table>";
+          <td>
+            TEST
+          </td>
+        </tr>
+      <table>";
 
 
     $sHTML.= $oHTML->getBlocEnd();
