@@ -1236,6 +1236,11 @@ ChromePhp::log($sSortOrder);
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
+
+$sHTML.= "<table>
+     <tr>
+       <td>";
+       
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
 
@@ -1499,6 +1504,12 @@ ChromePhp::log($sSortOrder);
     $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));*/
 
     $sHTML.= $oForm->getDisplay();
+
+$sHTML.= "</td>
+     </tr>
+  <table>";
+
+
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
 
