@@ -3792,7 +3792,11 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
   {
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = 'SELECT * FROM sl_location ORDER BY location ';
+    $slistemQuery = "SELECT sll.location, sll.sl_locationpk, count(slp.sl_positionpk) as count
+                     FROM sl_position slp
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
+                     INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
+                     GROUP BY slpd.location ORDER BY sll.location ";
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
