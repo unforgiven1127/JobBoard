@@ -1229,7 +1229,7 @@ ChromePhp::log($sSortOrder);
     $sHTML.= $oHTML->getBlocStart('', array('style'=>'margin:0 auto;'));
 
     //Left section
-    $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
+    //$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
 
     $oForm = $oHTML->initForm('posEditForm');
