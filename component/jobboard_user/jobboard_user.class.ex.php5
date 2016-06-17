@@ -1236,9 +1236,10 @@ ChromePhp::log($sSortOrder);
 
     //$oForm->setFormDisplayParams(array('columns' => 2));
 
-    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
+    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));// buradan bolmemiz gerekiyor
 
-    $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
+    $sHTML.="<table><tr><td>";
+      $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
 
     $asLangArray = $this->getMyLanguages();
@@ -1499,6 +1500,8 @@ ChromePhp::log($sSortOrder);
     /*$sText = str_replace(array('\n', "\r\n","\n", "\r"), ' ', $asRecord['meta_desc']);
     $oForm->addField('textarea', 'meta_desc', array('label' => 'Meta Description', 'class' => 'description', 'value' => $sText));
     $oForm->setFieldControl('meta_desc', array('jsFieldNotEmpty' => ''));*/
+    $sHTML.="</td></tr></table>";
+
 
     $sHTML.= $oForm->getDisplay();
     $sHTML.= $oHTML->getBlocEnd();
