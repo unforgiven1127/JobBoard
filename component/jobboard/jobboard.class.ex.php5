@@ -641,7 +641,7 @@ ChromePhp::log($slistemQuery);
     $oPager = CDependency::getComponentByName('pager');
     $oPage->addRequiredJsFile($this->getResourcePath().'js/jobboard.js');
     $bGlobalSearch = (bool)(getValue('global_search', 0));
-ChromePhp::log($pavResult);
+
     $sSearchWord = getValue('keyword');
     $asSearchWord = explode(' ', $sSearchWord);
 
