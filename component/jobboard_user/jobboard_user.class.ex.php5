@@ -1237,10 +1237,9 @@ ChromePhp::log($sSortOrder);
     //$oForm->setFormDisplayParams(array('columns' => 2));
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));// buradan bolmemiz gerekiyor
+    $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
     $sHTML.="<table><tr><td style='width:50%;'>";
-      $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
-
 
     $asLangArray = $this->getMyLanguages();
     if(!$nChild)
