@@ -1312,7 +1312,7 @@ ChromePhp::log($sSortOrder);
 
     $sCompanyHelp = '<div class="position_form_salary_help" style="top: -60px;">If the company name is sensitive, please input the text that will be displayed instead on the jobboard. A generic description of the company is recommended. Example: Leading electronic company in Japan, International bank & insurance company ...</div><br /> ';
     $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sCompanyHelp));
-    $oForm->addField('input', 'jp_title', array('label'=>'Japanese Title', 'class' => '', 'value' => $asRecord['position_title']));
+    $oForm->addField('input', 'jp_title', array('style'=>'margin-left:200px;','label'=>'Japanese Title', 'class' => '', 'value' => $asRecord['position_title']));
 
     $oForm->addField('input', 'position_title', array('label'=>'Position Title', 'class' => '', 'value' => $asRecord['position_title']));
     $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
