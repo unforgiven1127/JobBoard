@@ -27,7 +27,7 @@ class CPagerEx extends CPager
       $this->casText = $gasLang[CONST_DEFAULT_LANGUAGE];
   }
 
-  function initPager($pnMinResultNb = -1,$pageCount = -1)
+  function initPager($pnMinResultNb = -1)
   {
     //==============================================
     //Pager initialization
@@ -62,11 +62,6 @@ class CPagerEx extends CPager
     $_SESSION['pager'] = $nPagerLimit;
     //Pager initialization End
     //==============================================
-
-    if($pageCount > -1)
-    {
-      $nPagerOffset = $pageCount;
-    }
 
     $this->cnPagerLimit = $nPagerLimit;
     $this->cnPagerOffset = $nPagerOffset;
