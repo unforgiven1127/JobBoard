@@ -667,9 +667,10 @@ ChromePhp::log($slistemQuery);
 
     if($positionCount != -1)
     {
-      $nNbResult = 360;
+      $nNbResult = (int)$positionCount;
     }
-
+ChromePhp::log('COUNT');
+ChromePhp::log($nNbResult);
     if(isset($pavResult['positionData']))
     {
       $positionData = $pavResult['positionData'];
