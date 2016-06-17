@@ -603,7 +603,7 @@ ChromePhp::log($pageCount);
 //ChromePhp::log($positionData);
 
     $oPager = CDependency::getComponentByName('pager');
-    $oPager->initPager($pageCount);
+    $oPager->initPager(-1,$pageCount);
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
