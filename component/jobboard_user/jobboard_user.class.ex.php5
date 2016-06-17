@@ -1558,7 +1558,13 @@ ChromePhp::log($sSortOrder);
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
 
-    $sHTML.= "</td></tr></table>";
+    $sHTML.= "</td>
+
+    <td>
+    Title Japanese
+    </td>
+
+    </tr></table>";
 
     return $sHTML;
   }
