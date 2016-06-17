@@ -388,7 +388,7 @@ class CJobboardEx extends CJobboard
     {
       $pageCount = ceil($positionCount/50); // round up
     }
-ChromePhp::log($pageCount);
+
     if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
     {
       $oHTML = CDependency::getComponentByName('display');
@@ -678,6 +678,7 @@ ChromePhp::log($slistemQuery);
     {
       $nNbResult = $pageCount;
     }
+ChromePhp::log($nNbResult);
 
     if(isset($pavResult['positionData']))
     {
