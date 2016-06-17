@@ -582,6 +582,10 @@ ChromePhp::log($slistemQuery);
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince result sayisi duzeldi....
 
 $pagecount = $noLimitPositionData[0]['count'];
+if($pagecount == null)
+{
+  $pagecount = 0;
+}
 
 ChromePhp::log($pagecount);
 //ChromePhp::log($positionData);
