@@ -669,8 +669,7 @@ ChromePhp::log($slistemQuery);
     {
       $nNbResult = (int)$positionCount;
     }
-ChromePhp::log('COUNT');
-ChromePhp::log($nNbResult);
+
     if(isset($pavResult['positionData']))
     {
       $positionData = $pavResult['positionData'];
@@ -1543,6 +1542,8 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
+        ChromePhp::log('AV RESULT');
+        ChromePhp::log($avResult);
         //ChromePhp::log($avResult);
         $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen);
 
