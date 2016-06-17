@@ -412,6 +412,10 @@ class CJobboardEx extends CJobboard
 
   private function _getSearchMessage($pnNbResult = 0)
   {
+    if($pnNbResult == null)
+    {
+      $pnNbResult = 0
+    }
     $sMessage = $this->casText['TALENT_RESULTS_MATCHING'];
 
     $oHTML = CDependency::getComponentByName('display');
