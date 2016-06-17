@@ -1225,8 +1225,8 @@ ChromePhp::log($sSortOrder);
       $sURL = $oPage->getAjaxURL('jobboard_user', CONST_ACTION_SAVEEDIT, CONST_TA_TYPE_LIST_JOB, $pnPk);
     }
 
-    $sHTML = "<table><tr><td>TEST</td></tr></table>";
-    $sHTML.= $oHTML->getBlocStart('', array('class'=>'homepageContainer'));
+    $sHTML = "<table><tr><td>";
+                $sHTML.= $oHTML->getBlocStart('', array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('', array('style'=>'margin:0 auto;'));
 
     //Left section
@@ -1557,6 +1557,10 @@ ChromePhp::log($sSortOrder);
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
+
+    $sHTML.= "</td></tr></table>";
+
+    
 
     return $sHTML;
   }
