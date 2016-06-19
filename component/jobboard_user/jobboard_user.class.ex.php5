@@ -1506,9 +1506,17 @@ $sHTML.= "<table>
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td>
-            
-          </td>
+          <td>";
+            $oForm->addField('select', 'job_language', array('label' => 'Language'));
+
+            foreach($asLangArray as $skey => $avLanguages)
+            {
+              if($skey == $sJobLang)
+                $oForm->addOption('job_language', array('value'=> $skey, 'label' => $avLanguages['label'] ,'selected'=>'selected'));
+              else
+                $oForm->addOption('job_language', array('value'=> $skey, 'label' => $avLanguages['label'] ));
+            }
+$sHTML.= "</td>
         </tr>
       <table>";
 
