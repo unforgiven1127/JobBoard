@@ -605,6 +605,7 @@ class CDisplayEx extends CDisplay
 
     $sHTML.= '<link rel="stylesheet" href="/common/style/style.css?n='.time().'" type="text/css" media="screen" />';
     $sHTML.= '<link rel="stylesheet" href="common/lib/font-awesome/css/font-awesome.min.css">';
+    $sHTML.= '<link rel="stylesheet" href="common/lib/bootstrap/css/bootstrap.min.css">';
 
     if($pbIsLogged && !getValue(CONST_PAGE_NO_LOGGEDIN_CSS))
       $sHTML.= '<link rel="stylesheet" href="/common/style/private.css?n='.time().'" type="text/css" media="screen" />';
@@ -636,8 +637,6 @@ class CDisplayEx extends CDisplay
     $sHTML.= '<script type="text/javascript" src="/component/form/resources/js/tiny_mce/tiny_mce.js"></script>';
     $sHTML.= '<script type="text/javascript" src="/component/form/resources/js/jquery.tokeninput.js"></script>';
     $sHTML.= '<script type="text/javascript" src="/common/js/common.js"></script>';
-    $sHTML.= "<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>";
-    $sHTML.= "<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>";
 
     $asJsFile = array();
     foreach($pasJsFile as $sFileName)
