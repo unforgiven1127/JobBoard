@@ -1515,11 +1515,8 @@ $sHTML.= "</td>
                 <td>
                   <div class='form-group'>
                     <label for='sel1'>Select list:</label>
-                    <select class='btn btn-mini' id='sel1'>
+                    <select class='btn btn-xs' id='sel1'>
                       <option>Japanese</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
                     </select>
                   </div>
                 </td>
