@@ -2709,6 +2709,13 @@ fieldset[disabled] .checkbox label {
   padding-right: 0;
   padding-left: 0;
 }
+.input-xs {
+    height: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 1.5; //If Placeholder of the input is moved up, rem/modify this.
+    border-radius: 3px;
+    }
 .input-sm {
   height: 30px;
   padding: 5px 10px;
