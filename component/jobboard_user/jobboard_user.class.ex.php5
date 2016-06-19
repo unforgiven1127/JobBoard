@@ -1231,15 +1231,16 @@ ChromePhp::log($sSortOrder);
     //Left section
     //$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
+    $oPage->addCssFile("<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>");
 
     $oForm = $oHTML->initForm('posEditForm');
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-$sHTML.= "  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-            <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
-            <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+$sHTML.= "
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
   <table>
      <tr>
        <td style='width:50%;'>";
