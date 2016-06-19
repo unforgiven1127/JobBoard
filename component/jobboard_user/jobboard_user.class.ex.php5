@@ -1512,10 +1512,10 @@ $sHTML.= "</td>
           <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
-                <td>Language</td>
+                <td>Language </td>
                 <td>
                   <select class='form-control' id='position_language_jp'>
-                    <option value='jp'>Japanese</option>
+                    <option style='font:7pt;' value='jp'>Japanese</option>
                   </select>
                 </td>
               </tr>
