@@ -1506,10 +1506,10 @@ $sHTML.= "<table>
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td valign='top' style='padding-top;50px;'>
+          <td valign='top' >
             <table>
               <tr>
-                <td>Language</td>
+                <td style='padding-top;50px;'>Language</td>
               </tr>
             </table>
           </td>
