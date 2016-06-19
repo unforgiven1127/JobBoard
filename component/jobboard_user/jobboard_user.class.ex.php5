@@ -1506,7 +1506,7 @@ $sHTML.= "<table>
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td>
+          <td valign='top'>
             <table>
               <tr>
                 <td>Language</td>
