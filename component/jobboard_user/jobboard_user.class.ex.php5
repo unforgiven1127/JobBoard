@@ -1238,7 +1238,7 @@ ChromePhp::log($sSortOrder);
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-$sHTML.= ">
+$sHTML.= "
   <table>
      <tr>
        <td style='width:50%;'>";
