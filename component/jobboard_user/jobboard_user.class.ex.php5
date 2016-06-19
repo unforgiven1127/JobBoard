@@ -1231,7 +1231,7 @@ ChromePhp::log($sSortOrder);
     //Left section
     //$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
-    $oPage->addCssFile("<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>");
+    $oPage->addCssFile('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
 
     $oForm = $oHTML->initForm('posEditForm');
 
