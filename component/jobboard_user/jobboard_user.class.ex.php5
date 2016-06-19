@@ -1516,7 +1516,7 @@ $sHTML.= "</td>
                   <div class='form-group'>
                     <label for='sel1'>Select list:</label>
                     <select style='height:20px;' class='form-control' id='sel1'>
-                      <option>1</option>
+                      <option style='font-size:7pt;' >1</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
