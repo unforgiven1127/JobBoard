@@ -1514,7 +1514,7 @@ $sHTML.= "</td>
               <tr>
                 <td>Language </td>
                 <td>
-                  <select class='form-control' id='position_language_jp'>
+                  <select style='font-size:7pt;' class='form-control' id='position_language_jp'>
                     <option style='font-size:7pt;' value='jp'>Japanese</option>
                   </select>
                 </td>
