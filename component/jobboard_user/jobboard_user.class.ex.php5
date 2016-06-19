@@ -1506,10 +1506,15 @@ $sHTML.= "<table>
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td valign='top' style='padding-top:50px;'>
+          <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
                 <td>Language</td>
+                <td>
+                  <select name='job_language_jp'>
+                    <option value='jp'>Japanese</option>
+                  </select>
+                </td>
               </tr>
             </table>
           </td>
