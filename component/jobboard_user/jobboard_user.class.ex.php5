@@ -1237,7 +1237,8 @@ ChromePhp::log($sSortOrder);
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-$sHTML.= "<table>
+$sHTML.= "<link href='http://twitter.github.com/bootstrap/assets/css/bootstrap.css' rel='stylesheet'>
+  <table>
      <tr>
        <td style='width:50%;'>";
 
@@ -1511,7 +1512,7 @@ $sHTML.= "</td>
               <tr>
                 <td>Language</td>
                 <td>
-                  <select name='job_language_jp'>
+                  <select class='form-control' id='position_language_jp'>
                     <option value='jp'>Japanese</option>
                   </select>
                 </td>
