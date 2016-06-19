@@ -1231,13 +1231,14 @@ ChromePhp::log($sSortOrder);
     //Left section
     //$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobContainerClass'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
+    $oPage->addCssFile("<link href='http://twitter.github.com/bootstrap/assets/css/bootstrap.css' rel='stylesheet'>");
 
     $oForm = $oHTML->initForm('posEditForm');
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-$sHTML.= "<link href='http://twitter.github.com/bootstrap/assets/css/bootstrap.css' rel='stylesheet'>
+$sHTML.= "
   <table>
      <tr>
        <td style='width:50%;'>";
