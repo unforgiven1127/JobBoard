@@ -1512,11 +1512,16 @@ $sHTML.= "</td>
           <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
-                <td>Language </td>
                 <td>
-                  <select  class='form-control' id='position_language_jp'>
-                    <option value='jp'>Japanese</option>
-                  </select>
+                  <div class='form-group'>
+                    <label for='sel1'>Select list:</label>
+                    <select class='form-control' id='sel1'>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
                 </td>
               </tr>
             </table>
