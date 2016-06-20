@@ -737,9 +737,8 @@ class CJobboarduserEx extends CJobboarduser
     $workHours_jp = $_POST['workHours_jp'];
     $metaKey_jp = $_POST['metaKey_jp'];
 
-    ChromePhp::log('jpnPositionTitle');
-    ChromePhp::log($jpnPositionTitle);
-
+    //ChromePhp::log('jpnPositionTitle');
+    //ChromePhp::log($jpnPositionTitle);
 
     if(empty($nCompany) && empty($sCompany))
       return array('error' => 'You have to select a company or input a new company name');
@@ -864,6 +863,17 @@ class CJobboarduserEx extends CJobboarduser
       $sQuery.= ' station = '.$oDB->dbEscapeString($sStation).',';
       $sQuery.= ' work_hours = '.$oDB->dbEscapeString($sWorkHours).',';
       //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
+      //
+
+      $sQuery.= ' title_jp = '.$title_jp.',';                  // JAPONCALAR ICIN BOYLE AYRI EKLEMEK ZORUNDA KALDIK
+      $sQuery.= ' position_desc_jp = '.$position_desc_jp.',';  // BU SAATTEN SONRA DB YI AYIRAMAYIZ...
+      $sQuery.= ' req_jp = '.$req_jp.',';
+      $sQuery.= ' career_jp = '.$career_jp.',';
+      $sQuery.= ' holidays_jp = '.$holidays_jp.',';
+      $sQuery.= ' station_jp = '.$station_jp.',';
+      $sQuery.= ' metaKey_jp = '.$metaKey_jp.',';
+
+      //
       $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords);
       //$sQuery.= ' meta_desc = '.$oDB->dbEscapeString($sMetaDesc).','; // boyle birsey yok
       //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
@@ -1192,6 +1202,8 @@ class CJobboarduserEx extends CJobboarduser
                  ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
                  cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name
                  , l.email as cons_email, sll.sl_locationpk as location_id, slpd.station as station, slpd.work_hours as work_hours
+                 ,slpd.title_jp, slpd.position_desc_jp, slpd.req_jp, slpd.career_jp, slpd.holidays_jp, slpd.station_jp
+                 , slpd.workHours_jp, slpd.metaKey_jp
                  FROM sl_position slp
                  INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
                  INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
@@ -1611,7 +1623,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>ポジションタイトル </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
+                <td style='padding-top:10px;'><input value='".$asRecord['title_jp']."' class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
