@@ -1519,8 +1519,8 @@ $sHTML.= "</td>
                     </select>
                 </td>
               </tr>
-              <tr>
-                <td style='padding-top:30px;'><div class='formLabel'>Company name Japanese </div></td>
+              <tr  style='padding-top:30px;'>
+                <td><div class='formLabel'>Company name Japanese </div></td>
                 <td><input class='form-control input-sm' id='inputsm' style='height:16px;' type='text'></td>
               </tr>
             </table>
