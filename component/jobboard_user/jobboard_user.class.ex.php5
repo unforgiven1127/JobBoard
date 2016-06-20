@@ -738,7 +738,13 @@ class CJobboarduserEx extends CJobboarduser
     $metaKey_jp = $_POST['metaKey_jp'];
 
     //ChromePhp::log('jpnPositionTitle');
-    //ChromePhp::log($jpnPositionTitle);
+    ChromePhp::log($title_jp);
+    ChromePhp::log($position_desc_jp);
+    ChromePhp::log($req_jp);
+    ChromePhp::log($career_jp);
+    ChromePhp::log($holidays_jp);
+    ChromePhp::log($station_jp);
+    ChromePhp::log($metaKey_jp);
 
     if(empty($nCompany) && empty($sCompany))
       return array('error' => 'You have to select a company or input a new company name');
