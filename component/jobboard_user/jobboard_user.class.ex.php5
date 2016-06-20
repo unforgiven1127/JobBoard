@@ -1486,6 +1486,20 @@ $sHTML.= "
         $oForm->addOption('industry', array('value' => $avType['industrypk'], 'label' => $sLabel, 'style' => $sStyle));
      }
 
+     $allIndustries = $this->getIndustryList();
+
+     foreach ($allIndustries as $key => $value)
+     {
+       if($nLanguage == $key)
+      {
+        $industrySelect = "<option selected='selected' value='$key'>$value</option>";
+      }
+      else
+      {
+        $industrySelect = "<option value='$key'>$value</option>";
+      }
+     }
+
     $oForm->setFieldControl('industry', array('jsFieldNotEmpty' => ''));
 
     $sIndustryTip = '';
@@ -1631,6 +1645,14 @@ $sHTML.= "</td>
                 <td style='padding-top:10px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
                       ".$jpnSelect."
+                    </select>
+                </td>
+              </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>産業 </div></td>
+                <td style='padding-top:10px;'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
+                      ".$industrySelect."
                     </select>
                 </td>
               </tr>
@@ -2462,6 +2484,33 @@ $sHTML.= "</td>
     }
 
     return true;
+  }
+
+  public function getIndustryList()
+  {
+    //$oDb = CDependency::getComponentByName('database');
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = "SELECT sli.label, sli.sl_industrypk, count(slp.sl_positionpk) as count
+                     FROM sl_position slp
+                     INNER JOIN sl_industry sli on sli.sl_industrypk = slp.industryfk and sli.parentfk > 0
+                     INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
+                     GROUP BY slp.industryfk ORDER BY sli.label ";
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    //$oDbResult = $oDb->executeQuery($sQuery);
+    //$bRead = $oDbResult->readFirst();
+
+    $asLocation = array();
+    //while($bRead)
+    foreach ($positionData as $key => $value)
+    {
+      $asLocation[$value['sl_industrypk']] = $value['label'];
+      //$bRead = $oDbResult->readNext();
+    }
+
+    //$_SESSION['sl_location_list'] = $asLocation;
+    return $asLocation;
   }
 
 }
