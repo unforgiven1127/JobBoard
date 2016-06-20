@@ -997,7 +997,7 @@ class CJobboarduserEx extends CJobboarduser
     $sHTML = "
 
           <tr style='width:100%; class='list_row' >
-            <th style='color:white; width:10%; font-size:11pt;' >
+            <th style='color:white; width:10%; margin-left:20px; font-size:11pt;' >
               <a style='font-size:11pt;' href='$positionIdDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-desc' aria-hidden='true'></i>&nbsp;
               </a>
