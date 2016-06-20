@@ -1704,7 +1704,7 @@ $sHTML.= "</td>
                 <td style='padding-top:9px;'><input value='".$positionData['workHours_jp']."' class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
-                <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
+                <td valign='top' style='padding-top:10px; font-size:12px;'><div class='formLabel'>メタキーワード </div></td>
                 <td style='padding-top:10px;'><textarea style='font-size:11px; width:500px; border: 1px solid grey;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'>".$positionData['metaKey_jp']."</textarea></td>
               </tr>
             </table>
