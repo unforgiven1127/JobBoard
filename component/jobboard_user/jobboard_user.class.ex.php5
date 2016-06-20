@@ -1231,6 +1231,12 @@ class CJobboarduserEx extends CJobboarduser
       $sURL = $oPage->getAjaxURL('jobboard_user', CONST_ACTION_SAVEEDIT, CONST_TA_TYPE_LIST_JOB, $pnPk);
     }
 
+
+$sHTML.= "
+  <table>
+     <tr>
+       <td style='width:50%;'>";
+       
     $sHTML = $oHTML->getBlocStart('', array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('', array('style'=>'margin:0 auto;'));
 
@@ -1244,11 +1250,6 @@ class CJobboarduserEx extends CJobboarduser
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
-
-$sHTML.= "
-  <table>
-     <tr>
-       <td style='width:50%;'>";
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
