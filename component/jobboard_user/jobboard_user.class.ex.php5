@@ -1632,12 +1632,12 @@ $sHTML.= "</td>
                 <td style='padding-top:10px;'><input value='".$positionData['title_jp']."' class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
-                <td valign='top' style='padding-top:5px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
-                <td style='padding-top:5px;'><textarea style='font-size:12px; width:500px; border: 1px solid grey;' class='form-control' rows='12' name='position_desc_jp' id='position_desc_jp'>".$positionData['position_desc_jp']."</textarea></td>
+                <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
+                <td style='padding-top:10px;'><textarea style='font-size:12px; width:500px; border: 1px solid grey;' class='form-control' rows='12' name='position_desc_jp' id='position_desc_jp'>".$positionData['position_desc_jp']."</textarea></td>
               </tr>
               <tr>
-                <td valign='top' style='padding-top:15px; font-size:11px;'><div class='formLabel'>必要条件 </div></td>
-                <td style='padding-top:15px;'><textarea style='font-size:12px; width:500px; border: 1px solid grey;' class='form-control' rows='12' name='req_jp' id='req_jp'>".$positionData['req_jp']."</textarea></td>
+                <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>必要条件 </div></td>
+                <td style='padding-top:10px;'><textarea style='font-size:12px; width:500px; border: 1px solid grey;' class='form-control' rows='12' name='req_jp' id='req_jp'>".$positionData['req_jp']."</textarea></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>キャリアレベル </div></td>
