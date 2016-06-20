@@ -1023,7 +1023,7 @@ class CJobboarduserEx extends CJobboarduser
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
               </a>
             </th>
-            <th style='color:white; width:20%; font-size:11pt; padding-left:110px;' >
+            <th style='color:white; width:20%; font-size:11pt; padding-left:60px;' >
               <a style='font-size:11pt;' href='$industryDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               </a>
