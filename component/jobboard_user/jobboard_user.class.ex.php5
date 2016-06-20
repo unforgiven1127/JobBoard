@@ -1664,12 +1664,12 @@ $sHTML.= "</td>
                 <td style='padding-top:5px;'><input class='form-control input-sm' name='holidays_jp' id='holidays_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:8px; font-size:11px;'><div class='formLabel'>最寄り駅 </div></td>
-                <td style='padding-top:8px;'><input class='form-control input-sm' name='station_jp' id='station_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>最寄り駅 </div></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='station_jp' id='station_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:8px; font-size:11px;'><div class='formLabel'>労働時間 </div></td>
-                <td style='padding-top:8px;'><input class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>労働時間 </div></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:5px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
