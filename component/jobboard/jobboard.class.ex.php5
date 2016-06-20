@@ -3452,8 +3452,8 @@ ChromePhp::log($slistemQuery);
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
 
-      //s$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
-      $sUrl = $oPage->getRequestedUrl();
+      $sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      //$sUrl = $oPage->getRequestedUrl();
       if(strpos($sUrl, '?') === false)
       {
         $sEnUrl = $sUrl.'?setLang=en';
