@@ -1239,16 +1239,17 @@ class CJobboarduserEx extends CJobboarduser
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
     $oPage->addCssFile('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
-$sHTML.= "
-  <table>
-     <tr>
-       <td style='width:50%;'>";
-    $oForm = $oHTML->initForm('posEditForm');
+
+    //$oForm = $oHTML->initForm('posEditForm');
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-
+$sHTML.= "
+<form name='posEditForm' enctype='multipart/form-data' submitajax='1' action='https://jobs.slate.co.jp/index.php5?uid=654-321&amp;ppa=ppase&amp;ppt=ppaj&amp;ppk=8923&amp;pg=ajx' method='POST' onbeforesubmit='' id='posEditFormId' onsubmit=''>
+  <table>
+     <tr>
+       <td style='width:50%;'>";
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
