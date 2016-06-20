@@ -3458,12 +3458,16 @@ ChromePhp::log($slistemQuery);
       {
         $sUrl = str_replace('?setLang=en','',$sUrl);
         $sUrl = str_replace('?setLang=jp','',$sUrl);
+        $sUrl = str_replace('&setLang=en','',$sUrl);
+        $sUrl = str_replace('&setLang=jp','',$sUrl);
 
         $sEnUrl = $sUrl.'?setLang=en';
         $sJpUrl = $sUrl.'?setLang=jp';
       }
       else
       {
+        $sUrl = str_replace('?setLang=en','',$sUrl);
+        $sUrl = str_replace('?setLang=jp','',$sUrl);
         $sUrl = str_replace('&setLang=en','',$sUrl);
         $sUrl = str_replace('&setLang=jp','',$sUrl);
 
