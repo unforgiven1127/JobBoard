@@ -1673,7 +1673,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:15px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
-                <td style='padding-top:15px;'><textarea style='width:500px;' class='form-control' rows='5' name='metaKey_jp' id='metaKey_jp'></textarea></td>
+                <td style='padding-top:15px;'><textarea style='width:500px;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'></textarea></td>
               </tr>
             </table>
           </td>
