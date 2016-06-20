@@ -1548,15 +1548,15 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
-                <td style='padding-top:15px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:15px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>会社名を表示 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='display_cn_jp' id='display_cn_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='display_cn_jp' id='display_cn_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>ポジションタイトル </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
@@ -1568,7 +1568,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>キャリアレベル </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
