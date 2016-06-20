@@ -1586,6 +1586,14 @@ $sHTML.= "</td>
                     </select>
                 </td>
               </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>低い給料 </div></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px;' type='text'></td>
+              </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>より高い給料 </div></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px;' type='text'></td>
+              </tr>
             </table>
           </td>
         </tr>
