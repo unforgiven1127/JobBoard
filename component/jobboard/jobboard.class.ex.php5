@@ -838,7 +838,7 @@ ChromePhp::log($slistemQuery);
       //Some details (company, date...)
       $sHTML.= $oHTML->getListStart('',array('class'=>'list_items'));
 
-      if(!empty($pasJobData['company_name']))
+      /*if(!empty($pasJobData['company_name']))
       {
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
@@ -847,7 +847,7 @@ ChromePhp::log($slistemQuery);
           //$sHTML.= $oHTML->getText($pasJobData['company_name']);
           $sHTML.= $oHTML->getText("Company Name not visible");
         $sHTML.= $oHTML->getListItemEnd();
-      }
+      }*/
 
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
