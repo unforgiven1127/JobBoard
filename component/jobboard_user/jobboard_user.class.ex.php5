@@ -1522,6 +1522,18 @@ $sHTML.= "
       }
     }
 
+    if($nJobType == 1)
+    {
+      $jobType = "<option selected='selected' value='1'>Full time</option>
+                  <option value='0'>Part time</option>";
+    }
+    else
+    {
+      $jobType = "<option value='1'>Full time</option>
+                  <option selected='selected' value='0'>Part time</option>";
+    }
+
+
 $sHTML.= "</td>
           <td valign='top' style='padding-top:15px;'>
           <b>ポジションの詳細を編集します。</b>
@@ -1563,6 +1575,14 @@ $sHTML.= "</td>
                 <td style='padding-top:15px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='location_jp' id='location_jp'>
                       ".$locationsSelect."
+                    </select>
+                </td>
+              </tr>
+              <tr>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>職種 </div></td>
+                <td style='padding-top:15px;'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jobType_jp' id='jobType_jp'>
+                      ".$jobType."
                     </select>
                 </td>
               </tr>
