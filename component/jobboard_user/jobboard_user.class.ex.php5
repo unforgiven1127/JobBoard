@@ -1512,7 +1512,7 @@ $sHTML.= "</td>
           <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
-                <td><div class='formLabel' style='font-size:11px;'>Language </div></td>
+                <td style='font-size:11px;'><div class='formLabel'>Language </div></td>
                 <td>
                     <select style='background-color:white; border: 1px solid lightgrey;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>Japanese</option>
@@ -1520,15 +1520,15 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:30px;'><div class='formLabel' style='font-size:11px;>Company name Japanese </div></td>
+                <td style='padding-top:30px;'><div class='formLabel'>Company name Japanese </div></td>
                 <td style='padding-top:30px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:10px;'><div class='formLabel' style='font-size:11px;>Displayed Company name Japanese </div></td>
+                <td style='padding-top:10px;'><div class='formLabel'>Displayed Company name Japanese </div></td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:10px;'><div class='formLabel' style='font-size:11px;>Position Title Japanese </div></td>
+                <td style='padding-top:10px;'><div class='formLabel'>Position Title Japanese </div></td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
             </table>
