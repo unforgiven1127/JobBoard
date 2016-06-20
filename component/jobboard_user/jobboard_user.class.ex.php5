@@ -1510,6 +1510,7 @@ $sHTML.= "
 
 $sHTML.= "</td>
           <td valign='top' style='padding-top:30px;'>
+          <b>ポジションの詳細を編集します。</b>
             <table>
               <tr>
                 <td style='font-size:11px;'><div class='formLabel'>Language </div></td>
