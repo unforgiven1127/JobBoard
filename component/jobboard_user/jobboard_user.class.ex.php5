@@ -1509,7 +1509,7 @@ $sHTML.= "
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td valign='top' style='padding-top:30px; background-color:lightgrey;>
+          <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
                 <td><div class='formLabel'>Language </div></td>
