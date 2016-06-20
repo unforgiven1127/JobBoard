@@ -1509,7 +1509,7 @@ $sHTML.= "
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td valign='top' style='padding-top:30px;'>
+          <td valign='top' >
           <b>ポジションの詳細を編集します。</b>
             <table>
               <tr>
