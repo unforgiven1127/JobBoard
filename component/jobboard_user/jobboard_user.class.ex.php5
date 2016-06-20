@@ -470,7 +470,7 @@ class CJobboarduserEx extends CJobboarduser
             $sHTML.= $oHTML->getText($asJobDetail['posted_date']);
             $sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:30%; text-align: center;'.$shadowStyle));
+            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:40%; text-align: center;'.$shadowStyle));
             $sHTML.= $oHTML->getText($asJobDetail['position_title']);
             $sHTML.= $oHTML->getBlocEnd();
 
@@ -1005,7 +1005,7 @@ class CJobboarduserEx extends CJobboarduser
               <a style='font-size:11pt;' href='$positionIdAsc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
               </a>
-            <th style='color:white; width:30%; font-size:11pt; padding-left:200px;' >
+            <th style='color:white; width:40%; font-size:11pt; padding-left:200px;' >
               <a style='font-size:11pt;' href='$positionTitleDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               </a>
