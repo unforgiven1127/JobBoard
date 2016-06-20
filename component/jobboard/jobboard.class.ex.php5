@@ -850,7 +850,7 @@ ChromePhp::log($slistemQuery);
       }*/
 
         $sHTML.= $oHTML->getListItemStart();
-          $sHTML.= $oHTML->getSpanStart('',array('style' => 'margin-top: 60px;'));
+          $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<p style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': </strong>'."<i>".$pasJobData['location']."</i>");
           $sHTML.= $oHTML->getSpanEnd();
           $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i>".$pasJobData['name']."</i></p>");
@@ -1343,7 +1343,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
 // OCCUPATION
 
     //$oForm->addField('input', 'location', array('label' => $this->casText['TALENT_LOCATION'], 'value' => getValue('location')));
-    $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => 'Location'));
+    $oForm->addField('select', 'location', array('class' => 'public_important_field', 'label' => $this->casText['TALENT_LOCATION']));
     $locations = $this->getLocationOption();
 
     $oForm->addOption('location', array('value'=>'', 'label' => 'Select Location','selected'=>'selected'));
@@ -1355,7 +1355,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     //$oForm->addOption('location', $this->getLocationOption());
 
     //industry tree
-    $oForm->addField('select', 'industry', array('class' => 'public_important_field', 'label' => 'Industry'));
+    $oForm->addField('select', 'industry', array('class' => 'public_important_field', 'label' => $this->casText['TALENT_INDUSTRY']));
     $industries = $this->getIndustryList();
 
     $oForm->addOption('industry', array('value'=>'', 'label' => 'Select Industry','selected'=>'selected'));
@@ -1386,7 +1386,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
 
 
     //languages slider legends
-    $oForm->addField('select', 'english', array('class' => 'public_important_field', 'label' => 'English Ability'));
+    $oForm->addField('select', 'english', array('class' => 'public_important_field', 'label' => $this->casText['TALENT_ENGLISH_ABILITY']));
     $languagesEng = $this->getLanguageList();
 
     //$oForm->addOption('english', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
@@ -1405,7 +1405,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     //$oForm->addOption('english', $this->getIndustryList());
 
 
-    $oForm->addField('select', 'japanese', array('class' => 'public_important_field', 'label' => 'Japanese Ability'));
+    $oForm->addField('select', 'japanese', array('class' => 'public_important_field', 'label' => $this->casText['TALENT_JAP_ABILITY']));
     $languagesJap = $this->getLanguageList();
 
     //$oForm->addOption('japanese', array('value'=>'5', 'label' => 'Select Level','selected'=>'selected'));
