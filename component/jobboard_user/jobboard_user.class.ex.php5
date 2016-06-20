@@ -728,7 +728,7 @@ class CJobboarduserEx extends CJobboarduser
     $sMetaDesc = getValue('meta_desc');
     $sMetaKeywords = getValue('meta_keywords');
 
-    $jpnPositionTitle = getValue('title_jp');
+    $jpnPositionTitle = $_POST['title_jp'];
 
     ChromePhp::log('jpnPositionTitle');
     ChromePhp::log($jpnPositionTitle);
