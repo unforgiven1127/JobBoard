@@ -1622,7 +1622,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>職種 </div></td>
                 <td style='padding-top:10px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jobType_jp' id='jobType_jp'>
+                    <select disabled='disabled' style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jobType_jp' id='jobType_jp'>
                       ".$jobType."
                     </select>
                 </td>
@@ -1638,7 +1638,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>英語のレベル </div></td>
                 <td style='padding-top:10px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='engLevel_jp' id='engLevel_jp'>
+                    <select disabled='disabled' style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='engLevel_jp' id='engLevel_jp'>
                       ".$engSelect."
                     </select>
                 </td>
@@ -1646,7 +1646,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>日本語レベル </div></td>
                 <td style='padding-top:10px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
+                    <select disabled='disabled' style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
                       ".$jpnSelect."
                     </select>
                 </td>
@@ -1654,7 +1654,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>産業 </div></td>
                 <td style='padding-top:5px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='industry_jp' id='industry_jp'>
+                    <select disabled='disabled' style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='industry_jp' id='industry_jp'>
                       ".$industrySelect."
                     </select>
                 </td>
