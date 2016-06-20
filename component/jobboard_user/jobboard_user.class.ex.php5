@@ -871,13 +871,13 @@ class CJobboarduserEx extends CJobboarduser
       //$sQuery.= ' page_title = '.$oDB->dbEscapeString($sPageTitle).','; // boyle birsey yok
       //
 
-      $sQuery.= ' title_jp = '.$title_jp.',';                  // JAPONCALAR ICIN BOYLE AYRI EKLEMEK ZORUNDA KALDIK
-      $sQuery.= ' position_desc_jp = '.$position_desc_jp.',';  // BU SAATTEN SONRA DB YI AYIRAMAYIZ...
-      $sQuery.= ' req_jp = '.$req_jp.',';
-      $sQuery.= ' career_jp = '.$career_jp.',';
-      $sQuery.= ' holidays_jp = '.$holidays_jp.',';
-      $sQuery.= ' station_jp = '.$station_jp.',';
-      $sQuery.= ' metaKey_jp = '.$metaKey_jp.',';
+      $sQuery.= " title_jp = '".$title_jp."',";                  // JAPONCALAR ICIN BOYLE AYRI EKLEMEK ZORUNDA KALDIK
+      $sQuery.= " position_desc_jp = '".$position_desc_jp."',";  // BU SAATTEN SONRA DB YI AYIRAMAYIZ...
+      $sQuery.= " req_jp = '".$req_jp."',";
+      $sQuery.= " career_jp = '".$career_jp."',";
+      $sQuery.= " holidays_jp = '".$holidays_jp."',";
+      $sQuery.= " station_jp = '".$station_jp."',";
+      $sQuery.= " metaKey_jp = '".$metaKey_jp."',";
 
       //
       $sQuery.= ' meta_keywords = '.$oDB->dbEscapeString($sMetaKeywords);
