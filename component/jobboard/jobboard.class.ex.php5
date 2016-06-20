@@ -3456,6 +3456,9 @@ ChromePhp::log($slistemQuery);
       $sUrl = $oPage->getRequestedUrl();
       if(strpos($sUrl, '?') === false)
       {
+        $sUrl = str_replace('?setLang=en','',$sUrl);
+        $sUrl = str_replace('?setLang=jp','',$sUrl);
+
         $sEnUrl = $sUrl.'?setLang=en';
         $sJpUrl = $sUrl.'?setLang=jp';
       }
