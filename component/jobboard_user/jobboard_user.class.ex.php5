@@ -1684,7 +1684,8 @@ $sHTML.= "</td>
             </table>
           </td>
         </tr>
-      <table>";
+      <table>
+      </form>";
 
 
     $sHTML.= $oHTML->getBlocEnd();
