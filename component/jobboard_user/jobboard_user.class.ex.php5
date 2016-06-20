@@ -1242,7 +1242,7 @@ class CJobboarduserEx extends CJobboarduser
 
     //$oForm = $oHTML->initForm('posEditForm');
 
-    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
+    //$oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
 $sHTML.= "
