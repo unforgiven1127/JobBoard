@@ -914,7 +914,7 @@ ChromePhp::log($slistemQuery);
 
       $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
-          $sHTML.= $oHTML->getText('ID: ');
+          $sHTML.= $oHTML->getText('<b>ID: </b>');
           $sHTML.= $oHTML->getSpanEnd();
           $sHTML.= $oHTML->getText($sIdentfier);
         $sHTML.= $oHTML->getListItemEnd();
