@@ -1661,19 +1661,19 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>休日 </div></td>
-                <td style='padding-top:5px;'><input class='form-control input-sm' name='holidays_jp' id='holidays_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:5px;'><input class='form-control input-sm' name='holidays_jp' id='holidays_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:9px; font-size:11px;'><div class='formLabel'>最寄り駅 </div></td>
-                <td style='padding-top:9px;'><input class='form-control input-sm' name='station_jp' id='station_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:9px;'><input class='form-control input-sm' name='station_jp' id='station_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:9px; font-size:11px;'><div class='formLabel'>労働時間 </div></td>
-                <td style='padding-top:9px;'><input class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:9px;'><input class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
-                <td style='padding-top:10px;'><textarea style='width:500px;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'></textarea></td>
+                <td style='padding-top:10px;'><textarea style='width:500px; border: 1px solid grey;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'></textarea></td>
               </tr>
             </table>
           </td>
