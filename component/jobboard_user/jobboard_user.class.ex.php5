@@ -1629,11 +1629,11 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>低い給料 </div></td>
-                <td style='padding-top:15px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:15px;'><input disabled='disabled' placeholder='".$asRecord['salary_low']."' class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>より高い給料 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:10px;'><input disabled='disabled' placeholder='".$asRecord['salary_high']."' class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>英語のレベル </div></td>
