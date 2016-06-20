@@ -1623,7 +1623,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>ポジションタイトル </div></td>
-                <td style='padding-top:10px;'><input value='".$asRecord['title_jp']."' class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
+                <td style='padding-top:10px;'><input value='".$positionData['title_jp']."' class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
