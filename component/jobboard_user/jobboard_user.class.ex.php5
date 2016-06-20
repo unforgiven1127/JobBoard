@@ -728,7 +728,14 @@ class CJobboarduserEx extends CJobboarduser
     $sMetaDesc = getValue('meta_desc');
     $sMetaKeywords = getValue('meta_keywords');
 
-    $jpnPositionTitle = $_POST['title_jp'];
+    $title_jp = $_POST['title_jp'];
+    $position_desc_jp = $_POST['position_desc_jp'];
+    $req_jp = $_POST['req_jp'];
+    $career_jp = $_POST['career_jp'];
+    $holidays_jp = $_POST['holidays_jp'];
+    $station_jp = $_POST['station_jp'];
+    $workHours_jp = $_POST['workHours_jp'];
+    $metaKey_jp = $_POST['metaKey_jp'];
 
     ChromePhp::log('jpnPositionTitle');
     ChromePhp::log($jpnPositionTitle);
@@ -1247,7 +1254,7 @@ class CJobboarduserEx extends CJobboarduser
 
 $sHTML.= "
 <form name='posEditForm' enctype='multipart/form-data' submitajax='1' action='https://jobs.slate.co.jp/index.php5?uid=654-321&amp;ppa=ppase&amp;ppt=ppaj&amp;ppk=8923&amp;pg=ajx' method='POST' onbeforesubmit='' id='posEditFormId' onsubmit=''>
-  <table>
+  <table style=padding-top:-50px;>
      <tr>
        <td style='width:50%;'>";
 
