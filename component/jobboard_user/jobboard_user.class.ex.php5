@@ -484,6 +484,7 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
             $sHTML.= $oHTML->getLink($sPic, $sURL);
+            $sHTML.= "&nbsp;&nbsp;";
             //$sHTML.= $oHTML->getBlocEnd();
 
             //$sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
