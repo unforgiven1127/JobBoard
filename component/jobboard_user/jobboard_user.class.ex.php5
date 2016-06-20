@@ -1509,11 +1509,11 @@ $sHTML.= "
     $sHTML.= $oForm->getDisplay();
 
 $sHTML.= "</td>
-          <td valign='top' >
+          <td valign='top' style='padding-top:15px;'>
           <b>ポジションの詳細を編集します。</b>
             <table>
               <tr>
-                <td style='font-size:11px;'><div class='formLabel'>Language </div></td>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>Language </div></td>
                 <td>
                     <select style='background-color:white; border: 1px solid lightgrey;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>Japanese</option>
