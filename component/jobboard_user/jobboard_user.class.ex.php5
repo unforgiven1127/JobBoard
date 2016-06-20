@@ -1512,7 +1512,7 @@ $sHTML.= "
 
     foreach ($locations as $key => $value)
     {
-      if($asRecord['location_id'] == $value)
+      if($asRecord['location_id'] == $key)
       {
         $locationsSelect .= "<option selected='selected' value='$key'>$value</option>";
       }
