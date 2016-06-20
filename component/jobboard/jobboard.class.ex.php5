@@ -3465,9 +3465,6 @@ ChromePhp::log($slistemQuery);
         $sJpUrl = $sUrl.'&setLang=jp';
       }
 
-      $sEnUrl = '';
-      $sJpUrl = '';
-
       $sHtml.= $oHTML->getListStart();
 
         $sHtml.= $oHTML->getListItemStart('', array('class' => 'scrollerJobContainer'));
