@@ -1521,8 +1521,8 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:30px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
-                <td style='padding-top:30px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
+                <td style='padding-top:15px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>会社名を表示 </div></td>
