@@ -1614,7 +1614,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
                 <td style='padding-top:5px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='location_jp' id='location_jp'>
+                    <select disabled='disabled' style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='location_jp' id='location_jp'>
                       ".$locationsSelect."
                     </select>
                 </td>
