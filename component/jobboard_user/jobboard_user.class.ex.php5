@@ -1488,15 +1488,16 @@ $sHTML.= "
 
      $allIndustries = $this->getIndustryList();
 
+     $industrySelect = "";
      foreach ($allIndustries as $key => $value)
      {
-       if($nLanguage == $key)
+       if($nIndustry == $key)
       {
-        $industrySelect = "<option selected='selected' value='$key'>$value</option>";
+        $industrySelect .= "<option selected='selected' value='$key'>$value</option>";
       }
       else
       {
-        $industrySelect = "<option value='$key'>$value</option>";
+        $industrySelect .= "<option value='$key'>$value</option>";
       }
      }
 
