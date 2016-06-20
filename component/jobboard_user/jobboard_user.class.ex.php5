@@ -484,9 +484,9 @@ class CJobboarduserEx extends CJobboarduser
 
             $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
             $sHTML.= $oHTML->getLink($sPic, $sURL);
-            $sHTML.= $oHTML->getBlocEnd();
+            //$sHTML.= $oHTML->getBlocEnd();
 
-            $sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
+            //$sHTML.= $oHTML->getBlocStart('',array('class' => 'list_cell ','style' => ' width:5%; text-align: center; '.$shadowStyle));
             $sHTML.= $oHTML->getLink($sPicAction, $sUrlAction, array('onclick' => $onclick));
             $sHTML.= $oHTML->getBlocEnd();
 
@@ -1032,7 +1032,7 @@ class CJobboarduserEx extends CJobboarduser
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
               </a>
             </th>
-            <th style='color:white; width:10%; font-size:11pt; padding-left:-50px;' >Edit / Action</th>
+            <th style='color:white; width:10%; font-size:11pt;' >Edit / Action</th>
 
           </tr>
 
