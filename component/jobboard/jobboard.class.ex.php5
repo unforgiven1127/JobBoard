@@ -853,7 +853,7 @@ ChromePhp::log($slistemQuery);
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<div style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': '.$pasJobData['location']);
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($this->casText['TALENT_INDUSTRY'].': '.$pasJobData['name']."</div>");
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '.$pasJobData['name']."</div>");
         $sHTML.= $oHTML->getListItemEnd();
 
 
@@ -908,8 +908,8 @@ ChromePhp::log($slistemQuery);
       //Description with short and extended versions
       $sLink = ' '.$oHTML->getLink($this->casText['TALENT_MORE_DETAILS'], $sURL);
 
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'position_desc','style'=>'margin-top:-5px;'));
-      $sHTML.= $oHTML->getText("<div style='padding-top:-10px;'>".$pasJobData['position_desc']."</div>", array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'position_desc','style'=>'margin-top:-10px;'));
+      $sHTML.= $oHTML->getText("<div>".$pasJobData['position_desc']."</div>", array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getListItemStart();
