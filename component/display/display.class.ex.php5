@@ -663,12 +663,6 @@ class CDisplayEx extends CDisplay
 
     //For controlling the anchor tag
     $sHTML.= '<script type="text/javascript">';
-
-    $sHtml.= "var elements = document.getElementsByClassName('labelClass');
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.width=('auto');
-    }";
-
     $sHTML.= 'var anchorId = window.location.hash;';
     $sHTML.= 'if(anchorId){';
     $sHTML.= '  $(document).ready( function(){';

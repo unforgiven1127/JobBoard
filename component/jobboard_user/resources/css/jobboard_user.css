@@ -12,7 +12,7 @@
 #posEditFormId .formLabel
 {
   float:left;
-  width: 210px;
+  width: auto;
   padding-left: 10px;
 
 }
