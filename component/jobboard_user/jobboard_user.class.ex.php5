@@ -1254,7 +1254,7 @@ class CJobboarduserEx extends CJobboarduser
 
 $sHTML.= "
 <form name='posEditForm' enctype='multipart/form-data' submitajax='1' action='https://jobs.slate.co.jp/index.php5?uid=654-321&amp;ppa=ppase&amp;ppt=ppaj&amp;ppk=8923&amp;pg=ajx' method='POST' onbeforesubmit='' id='posEditFormId' onsubmit=''>
-  <table style='margin-left:-10px; margin-top:-30px;'>
+  <table style='margin-left:-5px; margin-top:-30px;'>
      <tr>
        <td style='width:50%;'>";
 
