@@ -1406,6 +1406,18 @@ $sHTML.= "
         $oForm->addOption('english', array('value'=>$nValue, 'label' => $vType));
     }
 
+    foreach ($asLanguage as $key => $value)
+    {
+      if($nLanguage == $key)
+      {
+        $engSelect .= "<option selected='selected' value='$key'>$value</option>";
+      }
+      else
+      {
+        $engSelect .= "<option value='$key'>$value</option>";
+      }
+    }
+
     $oForm->addField('select', 'japanese', array('label' => 'Japanese Level'));
     $asJapLanguage =  array(
       '0'=>'0',
@@ -1428,6 +1440,18 @@ $sHTML.= "
         $oForm->addOption('japanese', array('value' => $nValue, 'label' => $vType,'selected'=>'selected'));
       else
         $oForm->addOption('japanese', array('value' => $nValue, 'label' => $vType));
+    }
+
+    foreach ($asJapLanguage as $key => $value)
+    {
+      if($nLanguage == $key)
+      {
+        $jpnSelect .= "<option selected='selected' value='$key'>$value</option>";
+      }
+      else
+      {
+        $jpnSelect .= "<option value='$key'>$value</option>";
+      }
     }
 
     $sIndustryName = $asRecord['temp_industry'];
@@ -1593,6 +1617,22 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>より高い給料 </div></td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
+              </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>英語のレベル </div></td>
+                <td style='padding-top:10px;'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='engLevel_jp' id='engLevel_jp'>
+                      ".$engSelect."
+                    </select>
+                </td>
+              </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>日本語レベル </div></td>
+                <td style='padding-top:10px;'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
+                      ".$jpnSelect."
+                    </select>
+                </td>
               </tr>
             </table>
           </td>
