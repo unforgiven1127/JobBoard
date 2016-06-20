@@ -3452,7 +3452,7 @@ ChromePhp::log($slistemQuery);
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
 
-      //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      //s$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getRequestedUrl();
       if(strpos($sUrl, '?') === false)
       {
@@ -3464,6 +3464,9 @@ ChromePhp::log($slistemQuery);
         $sEnUrl = $sUrl.'&setLang=en';
         $sJpUrl = $sUrl.'&setLang=jp';
       }
+
+      $sEnUrl = '';
+      $sJpUrl = '';
 
       $sHtml.= $oHTML->getListStart();
 
@@ -3773,7 +3776,7 @@ ChromePhp::log($slistemQuery);
       $oNewJob->addChild('industry', htmlspecialchars($sIndustry));
 
       $sUrl = $oPage->geturl('jobboard', CONST_ACTION_VIEW, CONST_TA_TYPE_JOB, (int)$asJobData['positionpk']);
-      //$sUrl.= '&setLang='.$sLanguage;
+      $sUrl.= '&setLang='.$sLanguage;
       $oNewJob->addChild('url', htmlspecialchars($sUrl, ENT_QUOTES, 'UTF-8'));
 
       $sUrl = $this->_getConsultantPictureByIndustry((int)$asJobData['industryfk'], true);
