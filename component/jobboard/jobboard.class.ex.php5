@@ -849,11 +849,11 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getListItemEnd();
       }*/
 
-        $sHTML.= $oHTML->getListItemStart(array('style'=>'margin-top:10px;'));
+        $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
-          $sHTML.= $oHTML->getText($this->casText['TALENT_LOCATION'].': ');
+          $sHTML.= $oHTML->getText($this->casText['TALENT_LOCATION'].': ',array('style'=>'margin-top:10px;'));
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($pasJobData['location']);
+          $sHTML.= $oHTML->getText($pasJobData['location'],array('style'=>'margin-top:10px;'));
         $sHTML.= $oHTML->getListItemEnd();
 
         /*if(trim($pasJobData['salary']) != '0 - 0')
