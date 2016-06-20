@@ -436,8 +436,18 @@ class CJobboardEx extends CJobboard
   {
     $sKeyWord = strtolower(getValue('keyword'));
 
-    $selectedLanguage = $_GET['setLang'];
-    ChromePhp::log($selectedLanguage);
+    $selectedLanguage = $_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
+
+    if(isset($selectedLanguage) && !empty($selectedLanguage))
+    {
+      $languageChange = $selectedLanguage;
+    }
+    else
+    {
+      $languageChange = 'en';
+    }
+
+    ChromePhp::log($languageChange);
 
     $leventOrderFlag = false;
     $levent = " ";
