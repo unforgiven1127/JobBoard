@@ -3454,23 +3454,19 @@ ChromePhp::log($slistemQuery);
 
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getRequestedUrl();
+
+      $sUrl = str_replace('?setLang=en','',$sUrl);
+      $sUrl = str_replace('?setLang=jp','',$sUrl);
+      $sUrl = str_replace('&setLang=en','',$sUrl);
+      $sUrl = str_replace('&setLang=jp','',$sUrl);
+
       if(strpos($sUrl, '?') === false)
       {
-        $sUrl = str_replace('?setLang=en','',$sUrl);
-        $sUrl = str_replace('?setLang=jp','',$sUrl);
-        $sUrl = str_replace('&setLang=en','',$sUrl);
-        $sUrl = str_replace('&setLang=jp','',$sUrl);
-
         $sEnUrl = $sUrl.'?setLang=en';
         $sJpUrl = $sUrl.'?setLang=jp';
       }
       else
       {
-        $sUrl = str_replace('?setLang=en','',$sUrl);
-        $sUrl = str_replace('?setLang=jp','',$sUrl);
-        $sUrl = str_replace('&setLang=en','',$sUrl);
-        $sUrl = str_replace('&setLang=jp','',$sUrl);
-
         $sEnUrl = $sUrl.'&setLang=en';
         $sJpUrl = $sUrl.'&setLang=jp';
       }
