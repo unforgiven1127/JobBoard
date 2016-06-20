@@ -912,15 +912,15 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oHTML->getText($pasJobData['position_desc'], array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
       $sHTML.= $oHTML->getBlocEnd();
 
+     $sHTML.= $oHTML->getBlocEnd();
+
+
       $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText('ID: ');
           $sHTML.= $oHTML->getSpanEnd();
           $sHTML.= $oHTML->getText($sIdentfier);
         $sHTML.= $oHTML->getListItemEnd();
-
-     $sHTML.= $oHTML->getBlocEnd();
-
 
      $sHTML.= $oHTML->getBlocStart('bottomBorder');
      $sHTML.= $oHTML->getSpace(2);
