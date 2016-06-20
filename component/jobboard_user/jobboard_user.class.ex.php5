@@ -208,8 +208,8 @@ class CJobboarduserEx extends CJobboarduser
 
     $sSortField = TRIM(getValue('sortfield'));
     $sSortOrder = TRIM(getValue('sortorder'));
-ChromePhp::log($sSortField);
-ChromePhp::log($sSortOrder);
+//ChromePhp::log($sSortField);
+//ChromePhp::log($sSortOrder);
 
     if(isset($sSortField) && isset($sSortOrder))
     {
@@ -227,8 +227,8 @@ ChromePhp::log($sSortOrder);
       $sSortOrder = $_COOKIE['sortorder'];
     }
 
-ChromePhp::log($sSortField);
-ChromePhp::log($sSortOrder);
+//ChromePhp::log($sSortField);
+//ChromePhp::log($sSortOrder);
     //echo"<br><br><br> Log:";
     //echo $sSortField;
 
@@ -1496,8 +1496,8 @@ $sHTML.= "
      $industrySelect = "";
      foreach ($allIndustries as $key => $value)
      {
-      ChromePhp::log($nIndustry);
-      ChromePhp::log($key);
+      //ChromePhp::log($nIndustry);
+      //ChromePhp::log($key);
       if($nIndustry == $key)
       {
         $industrySelect .= "<option selected='selected' value='$key'>$value</option>";
