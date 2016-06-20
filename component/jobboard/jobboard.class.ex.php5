@@ -850,10 +850,10 @@ ChromePhp::log($slistemQuery);
       }*/
 
         $sHTML.= $oHTML->getListItemStart();
-          $sHTML.= $oHTML->getSpanStart('', array('class' => '', 'style' => 'padding-top:10px;'));
-          $sHTML.= $oHTML->getText($this->casText['TALENT_LOCATION'].': ');
+          $sHTML.= $oHTML->getSpanStart();
+          $sHTML.= $oHTML->getText("<div style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': '."</div>");
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($pasJobData['location']);
+          $sHTML.= $oHTML->getText("<div style='margin-top:10px;'>".$pasJobData['location']."</div>");
         $sHTML.= $oHTML->getListItemEnd();
 
         /*if(trim($pasJobData['salary']) != '0 - 0')
