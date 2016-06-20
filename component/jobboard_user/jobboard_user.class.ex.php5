@@ -1605,11 +1605,11 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td valign='top' style='padding-top:15px; font-size:11px;'><div class='formLabel'>必要条件 </div></td>
-                <td style='padding-top:15px;'><textarea style='width:500px;' class='form-control' rows='10' name='req_jp' id='req_jp'></textarea></td>
+                <td style='padding-top:15px;'><textarea style='width:500px; border: 1px solid grey;' class='form-control' rows='10' name='req_jp' id='req_jp'></textarea></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>キャリアレベル </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px; background-color:white; border: 1px solid grey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
