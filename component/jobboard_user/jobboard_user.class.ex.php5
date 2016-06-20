@@ -1231,12 +1231,6 @@ class CJobboarduserEx extends CJobboarduser
       $sURL = $oPage->getAjaxURL('jobboard_user', CONST_ACTION_SAVEEDIT, CONST_TA_TYPE_LIST_JOB, $pnPk);
     }
 
-
-$sHTML.= "
-  <table>
-     <tr>
-       <td style='width:50%;'>";
-       
     $sHTML = $oHTML->getBlocStart('', array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('', array('style'=>'margin:0 auto;'));
 
@@ -1245,10 +1239,15 @@ $sHTML.= "
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
     $oPage->addCssFile('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
-
+$sHTML.= "
+  <table>
+     <tr>
+       <td style='width:50%;'>";
     $oForm = $oHTML->initForm('posEditForm');
 
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
+
+
 
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
