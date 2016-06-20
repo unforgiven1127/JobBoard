@@ -879,7 +879,7 @@ class CJobboarduserEx extends CJobboarduser
       //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
       //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
       $sQuery.= ' WHERE positionfk  = '.$pnPositionPk ;
-
+ChromePhp::log($sQuery);
       $positionData = $slistemDB->slistemGetAllData($sQuery);
 
       $sQuery = 'UPDATE sl_position SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
