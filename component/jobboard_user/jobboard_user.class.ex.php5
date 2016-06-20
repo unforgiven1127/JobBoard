@@ -1652,8 +1652,8 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>産業 </div></td>
-                <td style='padding-top:10px;'>
+                <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>産業 </div></td>
+                <td style='padding-top:5px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jpnLevel_jp' id='jpnLevel_jp'>
                       ".$industrySelect."
                     </select>
