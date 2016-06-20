@@ -666,7 +666,7 @@ class CDisplayEx extends CDisplay
 
     $sHtml.= "var elements = document.getElementsByClassName('labelClass');
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.width=('100px');
+        elements[i].style.width=('auto');
     }";
 
     $sHTML.= 'var anchorId = window.location.hash;';
