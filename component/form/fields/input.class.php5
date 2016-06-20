@@ -115,7 +115,7 @@ class CInput extends CField
     $sHTML = '';
 
     if(!empty($sLabel) && $this->isVisible())
-      $sHTML.= '<div class="formLabel">'.$sLabel.'</div>';
+      $sHTML.= '<div class="formLabel labelClass">'.$sLabel.'</div>';
      $sHTML.= '<div class="formField"><input type="'.$sFieldType.'" name="'.$this->csFieldName.'" ';
 
     foreach($this->casFieldParams as $sKey => $vValue)
