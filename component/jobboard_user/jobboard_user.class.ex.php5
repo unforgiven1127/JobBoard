@@ -1582,7 +1582,7 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>言語 </div></td>
                 <td style='padding-top:15px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='language_jp' id='language_jp'>
+                    <select style='background-color:white; border: 1px solid grey; width:500px;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>日本語</option>
                     </select>
                 </td>
