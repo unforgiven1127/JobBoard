@@ -28,7 +28,7 @@
 {
   float:left;
   margin-right: 5px;
-  width: 500px;
+  min-width: 500px;
   text-align: left;
 }
 
