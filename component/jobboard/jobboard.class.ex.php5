@@ -436,6 +436,9 @@ class CJobboardEx extends CJobboard
   {
     $sKeyWord = strtolower(getValue('keyword'));
 
+    $selectedLanguage = $_GET['setLang'];
+    ChromePhp::log($selectedLanguage);
+
     $leventOrderFlag = false;
     $levent = " ";
     if(isset($sKeyWord) && !empty($sKeyWord))
