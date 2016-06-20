@@ -1508,6 +1508,13 @@ $sHTML.= "
 
     $sHTML.= $oForm->getDisplay();
 
+    $locationsSelect = "";
+
+    foreach ($locations as $key => $value)
+    {
+      $locationsSelect .= "<option value='$key'>$value</option>";
+    }
+
 $sHTML.= "</td>
           <td valign='top' style='padding-top:15px;'>
           <b>ポジションの詳細を編集します。</b>
@@ -1539,6 +1546,18 @@ $sHTML.= "</td>
               <tr>
                 <td valign='top' style='padding-top:15px; font-size:11px;'><div class='formLabel'>必要条件 </div></td>
                 <td style='padding-top:15px;'><textarea style='width:500px;' class='form-control' rows='10' name='req_jp' id='req_jp'></textarea></td>
+              </tr>
+              <tr>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>キャリアレベル </div></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px;' type='text'></td>
+              </tr>
+              <tr>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
+                <td style='padding-top:15px;'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='location_jp' id='location_jp'>
+                      ".$locationsSelect."
+                    </select>
+                </td>
               </tr>
             </table>
           </td>
