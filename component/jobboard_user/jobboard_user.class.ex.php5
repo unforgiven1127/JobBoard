@@ -1240,9 +1240,9 @@ class CJobboarduserEx extends CJobboarduser
     $oPage->addCssFile(array($this->getResourcePath().'css/jobboard_user.css'));
     $oPage->addCssFile('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
 
-    //$oForm = $oHTML->initForm('posEditForm');
+    $oForm = $oHTML->initForm('posEditForm');
 
-    //$oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
+    $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
 $sHTML.= "
