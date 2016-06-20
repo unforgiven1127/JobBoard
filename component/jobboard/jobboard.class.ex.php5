@@ -892,12 +892,6 @@ ChromePhp::log($slistemQuery);
           $sIdentfier = 'SL'.(int)$asJobData['jobID'];
         }
 
-        $sHTML.= $oHTML->getListItemStart();
-          $sHTML.= $oHTML->getSpanStart();
-          $sHTML.= $oHTML->getText('ID: ');
-          $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText($sIdentfier);
-        $sHTML.= $oHTML->getListItemEnd();
 
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
@@ -917,6 +911,13 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'position_desc'));
       $sHTML.= $oHTML->getText($pasJobData['position_desc'], array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
       $sHTML.= $oHTML->getBlocEnd();
+
+      $sHTML.= $oHTML->getListItemStart();
+          $sHTML.= $oHTML->getSpanStart();
+          $sHTML.= $oHTML->getText('ID: ');
+          $sHTML.= $oHTML->getSpanEnd();
+          $sHTML.= $oHTML->getText($sIdentfier);
+        $sHTML.= $oHTML->getListItemEnd();
 
      $sHTML.= $oHTML->getBlocEnd();
 
