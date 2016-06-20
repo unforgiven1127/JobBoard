@@ -1589,7 +1589,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
-                <td style='padding-top:15px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
+                <td style='padding-top:15px;'><input disabled='disabled' placeholder='".$asRecord['company_label']."' class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>会社名を表示 </div></td>
