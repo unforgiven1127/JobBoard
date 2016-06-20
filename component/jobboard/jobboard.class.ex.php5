@@ -909,7 +909,7 @@ ChromePhp::log($slistemQuery);
       $sLink = ' '.$oHTML->getLink($this->casText['TALENT_MORE_DETAILS'], $sURL);
 
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'position_desc'));
-      $sHTML.= $oHTML->getText($pasJobData['position_desc'], array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
+      $sHTML.= $oHTML->getText("<div>".$pasJobData['position_desc']."</div>", array('extra_open_content' => $sLink, 'open_content_nl2br' => 1), 305);
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getListItemStart();
