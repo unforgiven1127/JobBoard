@@ -1672,8 +1672,8 @@ $sHTML.= "</td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' name='workHours_jp' id='workHours_jp' style='height:19px; width:500px; background-color:white; border: 1px solid lightgrey;' type='text'></td>
               </tr>
               <tr>
-                <td valign='top' style='padding-top:5px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
-                <td style='padding-top:5px;'><textarea style='width:500px;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'></textarea></td>
+                <td valign='top' style='padding-top:10px; font-size:11px;'><div class='formLabel'>メタキーワード </div></td>
+                <td style='padding-top:10px;'><textarea style='width:500px;' class='form-control' rows='3' name='metaKey_jp' id='metaKey_jp'></textarea></td>
               </tr>
             </table>
           </td>
