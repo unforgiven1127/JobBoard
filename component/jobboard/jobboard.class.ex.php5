@@ -849,7 +849,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getListItemEnd();
       }*/
 
-        $sHTML.= $oHTML->getListItemStart();
+        $sHTML.= $oHTML->getListItemStart(array('style'=>'margin-top:10px;'));
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText($this->casText['TALENT_LOCATION'].': ');
           $sHTML.= $oHTML->getSpanEnd();
