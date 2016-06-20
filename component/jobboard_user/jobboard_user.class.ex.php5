@@ -1534,7 +1534,7 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
-                <td style='padding-top:10px;'><textarea style='width:500px;' class='form-control' rows='5' name='position_desc_jp' id='position_desc_jp'></textarea></td>
+                <td style='padding-top:10px;'><textarea style='width:500px;' class='form-control' rows='9' name='position_desc_jp' id='position_desc_jp'></textarea></td>
               </tr>
             </table>
           </td>
