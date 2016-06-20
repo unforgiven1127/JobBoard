@@ -1587,8 +1587,8 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>低い給料 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>低い給料 </div></td>
+                <td style='padding-top:15px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>より高い給料 </div></td>
