@@ -1512,7 +1512,7 @@ $sHTML.= "</td>
           <td valign='top' style='padding-top:30px;'>
             <table>
               <tr>
-                <td><div class='formLabel'>Language </div></td>
+                <td>Language </td>
                 <td>
                   <div class='form-group'>
                     <select class='btn btn-xs' id='sel1'>
