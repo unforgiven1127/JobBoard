@@ -1032,12 +1032,12 @@ class CJobboarduserEx extends CJobboarduser
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-asc' aria-hidden='true'></i>&nbsp;
               </a>
             </th>
-            <th style='color:white; width:10%; font-size:11pt;' >Edit</th>
-            <th align='left' style='color:white; width:10%; font-size:11pt;'>Action</th>
+            <th style='color:white; width:10%; font-size:11pt;' >Edit / Action</th>
+
           </tr>
 
     ";
-
+//<th align='left' style='color:white; width:10%; font-size:11pt;'>Action</th>
     /*$sHTML = $oHTML->getBlocStart('', array('class' =>'list_row '));
     $sHTML.= $oHTML->getBlocStart('', array('class' =>'list_row_data'));
 
