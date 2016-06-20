@@ -1571,16 +1571,16 @@ $sHTML.= "</td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' name='career_jp' id='career_jp' style='height:19px; width:500px;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
-                <td style='padding-top:15px;'>
+                <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>ロケーション </div></td>
+                <td style='padding-top:5px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='location_jp' id='location_jp'>
                       ".$locationsSelect."
                     </select>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>職種 </div></td>
-                <td style='padding-top:15px;'>
+                <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>職種 </div></td>
+                <td style='padding-top:5px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jobType_jp' id='jobType_jp'>
                       ".$jobType."
                     </select>
@@ -1588,11 +1588,11 @@ $sHTML.= "</td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>低い給料 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='lowerSalary_jp' id='lowerSalary_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>より高い給料 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='higherSalary_jp' id='higherSalary_jp' style='height:19px; width:500px; background-color:white;' type='text'></td>
               </tr>
             </table>
           </td>
