@@ -1579,8 +1579,8 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:5px; font-size:11px;'><div class='formLabel'>職種 </div></td>
-                <td style='padding-top:5px;'>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>職種 </div></td>
+                <td style='padding-top:10px;'>
                     <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='jobType_jp' id='jobType_jp'>
                       ".$jobType."
                     </select>
