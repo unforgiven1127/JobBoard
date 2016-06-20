@@ -1513,7 +1513,7 @@ $sHTML.= "</td>
           <b>ポジションの詳細を編集します。</b>
             <table>
               <tr>
-                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>Language </div></td>
+                <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>言語 </div></td>
                 <td style='padding-top:15px;'>
                     <select style='background-color:white; border: 1px solid lightgrey;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>Japanese</option>
@@ -1521,15 +1521,15 @@ $sHTML.= "</td>
                 </td>
               </tr>
               <tr>
-                <td style='padding-top:30px; font-size:11px;'><div class='formLabel'>Company name Japanese </div></td>
+                <td style='padding-top:30px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
                 <td style='padding-top:30px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>Displayed Company name Japanese </div></td>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>会社名を表示 </div></td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
               <tr>
-                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>Position Title Japanese </div></td>
+                <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>ポジションタイトル </div></td>
                 <td style='padding-top:10px;'><input class='form-control input-sm' id='inputsm' style='height:19px;' type='text'></td>
               </tr>
             </table>
