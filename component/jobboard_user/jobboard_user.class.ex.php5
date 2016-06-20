@@ -1517,12 +1517,12 @@ $sHTML.= "</td>
                     <select style='background-color:white; border: 1px solid lightgrey;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>Japanese</option>
                     </select>
+                    <br>
                 </td>
-                <br>
               </tr>
               <tr>
                 <td><div class='formLabel'>Company name Japanese </div></td>
-                <td><input class='form-control input-sm' id='inputsm' type='text'></td>
+                <td><input class='form-control input-sm' id='inputsm' style='height:16px;' type='text'></td>
               </tr>
             </table>
           </td>
