@@ -1491,7 +1491,9 @@ $sHTML.= "
      $industrySelect = "";
      foreach ($allIndustries as $key => $value)
      {
-       if($nIndustry == $key)
+      ChromePhp::log($nIndustry);
+      ChromePhp::log($key);
+      if($nIndustry == $key)
       {
         $industrySelect .= "<option selected='selected' value='$key'>$value</option>";
       }
