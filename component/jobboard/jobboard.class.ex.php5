@@ -361,12 +361,12 @@ class CJobboardEx extends CJobboard
   {
     if(getValue('do_search', 0))
     {
-      ChromePhp::log('manageSearchHistory');
+      //ChromePhp::log('manageSearchHistory');
       $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB, true);
     }
     else
     {
-      ChromePhp::log('reloadLastSearch');
+      //ChromePhp::log('reloadLastSearch');
       if(getValue('searchId'))
         $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
       else
@@ -948,7 +948,7 @@ ChromePhp::log($slistemQuery);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
-ChromePhp::log($bGlobalSearch);
+//ChromePhp::log($bGlobalSearch);
     //----------------------------------------------------
     //Control fields and build the sql from it
     // TODO: Need field controls and escape striing !!!
@@ -993,8 +993,8 @@ ChromePhp::log($bGlobalSearch);
       $sCompany = strtolower(getValue('company'));
       $sIndustry = getValue('industry');
       //$sLocation = strtolower(getValue('location'));
-ChromePhp::log((int)getValue('english'));
-ChromePhp::log($nEnglish);
+//ChromePhp::log((int)getValue('english'));
+//ChromePhp::log($nEnglish);
 
       if($nEnglish == 0)
       {
@@ -1105,7 +1105,7 @@ ChromePhp::log($nEnglish);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
-ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
+//ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     //----------------------------------------------------
     //Control fields and build the sql from it
     // TODO: Need field controls and escape striing !!!
@@ -3915,7 +3915,7 @@ ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
   }
 
   public function change_language_system($fiveSystem)
-  {ChromePhp::log($fiveSystem);
+  {//ChromePhp::log($fiveSystem);
     if($fiveSystem == 0)
     {
       return 0;
