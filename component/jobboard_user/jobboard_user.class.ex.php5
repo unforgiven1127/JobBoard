@@ -1515,26 +1515,26 @@ $sHTML.= "</td>
               <tr>
                 <td style='padding-top:15px; font-size:11px;'><div class='formLabel'>言語 </div></td>
                 <td style='padding-top:15px;'>
-                    <select style='background-color:white; border: 1px solid lightgrey;' class='btn btn-xs' name='language_jp' id='language_jp'>
+                    <select style='background-color:white; border: 1px solid lightgrey; width:500px;' class='btn btn-xs' name='language_jp' id='language_jp'>
                       <option value='jp'>日本語</option>
                     </select>
                 </td>
               </tr>
               <tr>
                 <td style='padding-top:30px; font-size:11px;'><div class='formLabel'>会社名 </div></td>
-                <td style='padding-top:30px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px;' type='text'></td>
+                <td style='padding-top:30px;'><input class='form-control input-sm' name='company_name_jp' id='company_name_jp' style='height:19px; width:500px;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>会社名を表示 </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='display_cn_jp' id='display_cn_jp' style='height:19px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='display_cn_jp' id='display_cn_jp' style='height:19px; width:500px;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>ポジションタイトル </div></td>
-                <td style='padding-top:10px;'><input class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px;' type='text'></td>
+                <td style='padding-top:10px;'><input class='form-control input-sm' name='title_jp' id='title_jp' style='height:19px; width:500px;' type='text'></td>
               </tr>
               <tr>
                 <td style='padding-top:10px; font-size:11px;'><div class='formLabel'>職位記述書 </div></td>
-                <td style='padding-top:10px;'><textarea class='form-control' rows='5' name='position_desc_jp' id='position_desc_jp'></textarea>'></td>
+                <td style='padding-top:10px;'><textarea style='width:500px;' class='form-control' rows='5' name='position_desc_jp' id='position_desc_jp'></textarea></td>
               </tr>
             </table>
           </td>
