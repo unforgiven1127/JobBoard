@@ -727,6 +727,11 @@ ChromePhp::log($sSortOrder);
     $sMetaDesc = getValue('meta_desc');
     $sMetaKeywords = getValue('meta_keywords');
 
+    $jpnPositionTitle = getValue('title_jp');
+
+    ChromePhp::log('jpnPositionTitle');
+    ChromePhp::log($jpnPositionTitle);
+
 
     if(empty($nCompany) && empty($sCompany))
       return array('error' => 'You have to select a company or input a new company name');
