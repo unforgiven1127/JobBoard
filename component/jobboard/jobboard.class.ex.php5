@@ -2164,16 +2164,16 @@ class CJobboardEx extends CJobboard
         {
           if(!empty($positionData['salary_high']) || $positionData['salary_high'] != 0)
           {
-            $salaryRange = " Salary: <i style='font-weight: lighter;'>&yen;".$positionData['salary_low']." - &yen;".$positionData['salary_high']."</i>";
+            $salaryRange = " <b>Salary: </b><i style='font-weight: lighter;'>&yen;".$positionData['salary_low']." - &yen;".$positionData['salary_high']."</i>";
           }
           else
           {
-            $salaryRange = " Salary: <i style='font-weight: lighter;'>".'> &yen;'.$positionData['salary_low']."</i>";
+            $salaryRange = " <b>Salary: </b><i style='font-weight: lighter;'>".'> &yen;'.$positionData['salary_low']."</i>";
           }
         }
         else if(!empty($positionData['salary_high']) || $positionData['salary_high'] != 0)
         {
-          $salaryRange = " Salary: <i style='font-weight: lighter;'>".'< &yen;'.$positionData['salary_high']."</i>";
+          $salaryRange = " <b>Salary: </b><i style='font-weight: lighter;'>".'< &yen;'.$positionData['salary_high']."</i>";
         }
         else
         {
@@ -2189,7 +2189,7 @@ class CJobboardEx extends CJobboard
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<p style='margin-left:5px;'><b>".$this->casText['TALENT_LOCATION'].': '."</b><i style='font-weight: lighter;'>".$positionData['location']."</i>");
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$positionData['name']."</i>&nbsp;&nbsp;&nbsp;".$salaryRange."</p>");
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;<b>".$this->casText['TALENT_INDUSTRY'].': '."</b><i style='font-weight: lighter;'>".$positionData['name']."</i>&nbsp;&nbsp;&nbsp;".$salaryRange."</p>");
         $sHTML.= $oHTML->getBlocEnd();
 
       /*$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
