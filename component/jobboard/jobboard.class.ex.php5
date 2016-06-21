@@ -379,10 +379,9 @@ class CJobboardEx extends CJobboard
 //ChromePhp::log($avResult);
 
     $positionCount = $avResult['positionData'][0]['count'];
-ChromePhp::log($avResult);
-    if(empty($avResult) || empty($avResult['positionData']))
+
+    if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
     {
-      ChromePhp::log('girdi');
       $oHTML = CDependency::getComponentByName('display');
       $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
       return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
@@ -611,8 +610,6 @@ ChromePhp::log($avResult);
     $nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
 
 //ChromePhp::log($nNbResult);
-    if($nNbResult == 0)
-       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
 
     $sQuery = ' SELECT pos.*, ind.*, pos.company_label as company_name, job.data as raw_data ';
 
@@ -693,17 +690,20 @@ ChromePhp::log($avResult);
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    if(!isset($positionData) || empty($positionData))
+       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead= $oDbResult->readFirst();
 //ChromePhp::log($oDbResult);
-    if(!$bRead)
+    /*if(!$bRead)
     {
       assert('false; // no result but count query was ok ');
       return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
-    }
+    }*/
 
     //return array('nNbResult' => $positionDataCount, 'oData' => $positionData, 'sQuery' => $slistemQuery);
     return array('nNbResult' => $nNbResult, 'oData' => $oDbResult, 'sQuery' => $sQuery, 'positionData' => $positionData);
@@ -818,10 +818,10 @@ ChromePhp::log($avResult);
       $sHTML.= $oPager->getCompactDisplay($nNbResult, $sUrl, $asPagerUrlOption);
     }
 
-    //if($nNbResult == 0 || !$bRead)
-    //  $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
-    //else
-    //{
+    if($nNbResult == 0 || !$bRead)
+      $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
+    else
+    {
       if(isset($positionData))
       {
         foreach ($positionData as $key => $value)
@@ -855,8 +855,8 @@ ChromePhp::log($avResult);
         }
       }
 
-    //}
-    //if($nNbResult > 0)
+    }
+    if($nNbResult > 0)
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
     $sHTML.= $oHTML->getBlocEnd();
