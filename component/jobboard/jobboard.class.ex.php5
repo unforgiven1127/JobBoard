@@ -380,12 +380,12 @@ class CJobboardEx extends CJobboard
 
     $positionCount = $avResult['positionData'][0]['count'];
 
-    //if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
-    //{
-    //  $oHTML = CDependency::getComponentByName('display');
-    //  $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
-    //  return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
-   // }
+    if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
+    {
+      $oHTML = CDependency::getComponentByName('display');
+      $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
+      return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
+    }
 
     //in ajax, the dummy form should always be hidden
     $sData = $this->_getJobResultList($avResult, $sSearchId, false, $positionCount);
@@ -817,10 +817,10 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oPager->getCompactDisplay($nNbResult, $sUrl, $asPagerUrlOption);
     }
 
-    if($nNbResult == 0 || !$bRead)
-      $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
-    else
-    {
+    //if($nNbResult == 0 || !$bRead)
+    //  $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
+    //else
+    //{
       if(isset($positionData))
       {
         foreach ($positionData as $key => $value)
@@ -854,8 +854,8 @@ ChromePhp::log($slistemQuery);
         }
       }
 
-    }
-    if($nNbResult > 0)
+    //}
+    //if($nNbResult > 0)
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
     $sHTML.= $oHTML->getBlocEnd();
