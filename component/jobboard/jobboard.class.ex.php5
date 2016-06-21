@@ -837,27 +837,7 @@ ChromePhp::log($slistemQuery);
           $sHTML.= $this->_getJobRow($value, false, $sSearchWord);
         }
       }
-      else
-      {
-        while($bRead)
-        {
-          $asJobData = $oDbResult->getData();
-          $asJobData['position_desc'] = str_replace('\n', "\n", $asJobData['position_desc']);
 
-          if(!empty($sSearchWord))
-          {
-            $asJobData['position_title'] = preg_replace($asMatch, $asReplacement, $asJobData['position_title']);
-            $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $asJobData['position_desc']);
-            $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $asJobData['company_name']);
-            $asJobData['location'] = preg_replace($asMatch, $asReplacement, $asJobData['location']);
-          }
-
-          $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
-          $bRead = $oDbResult->ReadNext();
-        }
-      }
-
-    }
     if($nNbResult > 0)
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
