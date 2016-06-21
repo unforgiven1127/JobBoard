@@ -751,19 +751,24 @@ ChromePhp::log($slistemQuery);
 
     if($positionCount != -1)
     {
-      $nNbResult = count($pavResult['positionData']);
+      $nNbResult = (int)$positionCount;
     }
-ChromePhp::log($nNbResult);
+
     if(isset($pavResult['positionData']))
     {
       $positionData = $pavResult['positionData'];
       $positionDataCount = $pavResult['positionData'][0]['count'];
     }
 
+    if(!$oDbResult)
+      $bRead = false;
+    else
+      $bRead = $oDbResult->readFirst();
+
     $sHTML = '';
     $sHTML.= $oHTML->getBlocStart('jobListContainer');
 
-    if(1)
+    if($nNbResult > 0)
     {
       $sUrl = $oPage->getAjaxUrl('addressbook', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0, array('searchId' => $psSearchId));
       $asPagerUrlOption = array('ajaxTarget' => 'jobListContainer');
@@ -815,7 +820,7 @@ ChromePhp::log($nNbResult);
       $sHTML.= $oPager->getCompactDisplay($nNbResult, $sUrl, $asPagerUrlOption);
     }
 
-    if($nNbResult == 0)
+    if($nNbResult == 0 || !$bRead)
       $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
     else
     {
@@ -830,6 +835,25 @@ ChromePhp::log($nNbResult);
           $asJobData['location'] = preg_replace($asMatch, $asReplacement, $value['location']);
 
           $sHTML.= $this->_getJobRow($value, false, $sSearchWord);
+        }
+      }
+      else
+      {
+        while($bRead)
+        {
+          $asJobData = $oDbResult->getData();
+          $asJobData['position_desc'] = str_replace('\n', "\n", $asJobData['position_desc']);
+
+          if(!empty($sSearchWord))
+          {
+            $asJobData['position_title'] = preg_replace($asMatch, $asReplacement, $asJobData['position_title']);
+            $asJobData['position_desc'] = preg_replace($asMatch, $asReplacement, $asJobData['position_desc']);
+            $asJobData['company_name'] = preg_replace($asMatch, $asReplacement, $asJobData['company_name']);
+            $asJobData['location'] = preg_replace($asMatch, $asReplacement, $asJobData['location']);
+          }
+
+          $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
+          $bRead = $oDbResult->ReadNext();
         }
       }
 
