@@ -438,12 +438,12 @@ class CJobboardEx extends CJobboard
     $sortSelect = getValue('sortfield');
     //ChromePhp::log($sortSelect);
 
-    if(isset($sortSelect))
+    /*if(isset($sortSelect))
     {
       $sortSelect = explode('_',$sortSelect);
       $sortField = $sortSelect[0];
       $sortOrder = $sortSelect[1];
-    }
+    }*/
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
 //ChromePhp::log($urlLanguage);
@@ -701,7 +701,7 @@ class CJobboardEx extends CJobboard
         $slistemQuery .= " order by slp.sl_positionpk DESC ";
       }
     }
-    
+
     ChromePhp::log($sortSelect);
     ChromePhp::log($slistemQuery);
 
