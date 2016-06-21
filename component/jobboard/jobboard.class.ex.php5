@@ -435,8 +435,15 @@ class CJobboardEx extends CJobboard
   private function _getJobSearchResult($psSearchId = '')
   {
     $sKeyWord = strtolower(getValue('keyword'));
-    $sortField = getValue('sortfield');
-    ChromePhp::log($sortField);
+    $sortSelect = getValue('sortfield');
+    //ChromePhp::log($sortSelect);
+
+    if(isset($sortSelect))
+    {
+      $sortSelect = explode('_',$sortSelect);
+      $sortField = $sortSelect[0];
+      $sortOrder = $sortSelect[1];
+    }
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
 //ChromePhp::log($urlLanguage);
@@ -656,13 +663,43 @@ class CJobboardEx extends CJobboard
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
 //ChromePhp::log($leventOrderFlag);
-    if($leventOrderFlag)
+
+    if(isset($sortSelect))
     {
-      $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC";
+      if($sortSelect == 'date_asc')
+      {
+        $slistemQuery .= " order by slp.sl_positionpk ASC ";
+      }
+      else if($sortSelect == 'date_desc')
+      {
+        $slistemQuery .= " order by slp.sl_positionpk DESC ";
+      }
+
+      else if($sortSelect == 'salary_asc')
+      {
+        $slistemQuery .= " order by slp.salary_from ASC ";
+      }
+      else if($sortSelect == 'salary_desc')
+      {
+        $slistemQuery .= " order by slp.salary_from DESC ";
+      }
+
+      else
+      {
+        $slistemQuery .= " order by slp.sl_positionpk DESC ";
+      }
+
     }
     else
     {
-      $slistemQuery .= " order by slp.sl_positionpk DESC";
+      if($leventOrderFlag)
+      {
+        $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC ";
+      }
+      else
+      {
+        $slistemQuery .= " order by slp.sl_positionpk DESC ";
+      }
     }
 
     $noLimitSql = $slistemQuery;
