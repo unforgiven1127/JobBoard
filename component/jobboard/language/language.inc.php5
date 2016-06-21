@@ -61,6 +61,7 @@ $gasLang = array('en'=>
                'TALENT_HOLIDAYS'=>'Holidays',
                'TALENT_WORK_HOUR'=>'Work Hours',
                'TALENT_APPLY_NOW'=>'Apply Now',
+               'TALENT_RETURN_SEARCH' => 'Return to Search',
 
                 'TALENT_YOUR_NAME'=>'Your Name',
                 'TALENT_YOUR_EMAIL'=>'Your Email Address',
