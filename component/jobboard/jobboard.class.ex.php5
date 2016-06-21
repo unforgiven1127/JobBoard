@@ -498,7 +498,7 @@ class CJobboardEx extends CJobboard
                        slpd.work_hours as work_hours,
                        slpd.meta_keywords as meta_keywords,";
 
-      $newSlpdWhere = " ";
+      $newSlpdWhere = " AND slpd.language='en' ";
     }
     else
     {
