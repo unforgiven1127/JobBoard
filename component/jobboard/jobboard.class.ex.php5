@@ -960,11 +960,11 @@ class CJobboardEx extends CJobboard
         {
           if(!empty($pasJobData['salary_high']) || $pasJobData['salary_high'] != 0)
           {
-            $salaryRange = " Salary: ".$pasJobData['salary_low']." - ".$pasJobData['salary_high'];
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>".$pasJobData['salary_low']." - ".$pasJobData['salary_high']."</i>";
           }
           else
           {
-            $salaryRange = " Salary: ".'> '.$pasJobData['salary_low'];
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>".'> '.$pasJobData['salary_low']."</i>";
           }
         }
         else
@@ -976,7 +976,7 @@ class CJobboardEx extends CJobboard
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<p style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': '."<i style='font-weight: lighter;'>".$pasJobData['location']."</i>");
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$pasJobData['name']."</i>".$salaryRange."</p>");
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$pasJobData['name']."</i>&nbsp;&nbsp;&nbsp;".$salaryRange."</p>");
         $sHTML.= $oHTML->getListItemEnd();
 
 
