@@ -1065,14 +1065,14 @@ class CJobboardEx extends CJobboard
       $allKeyword = $sKeyWord;
 
       $sOneKeyword = $oDb->dbEscapeString($sKeyWord);
-      $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
+      $asResult['select'][] = ' if( ( ( lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as exactExpression ';
 
       //$asKeywordSql[] = " slpd.title = '$allKeyword'";
 
       $asResult['order'][] = ' exactExpression DESC ';
 
       $sOneKeyword = $oDb->dbEscapeString('%'.$sKeyWord.'%');
-      $asResult['select'][] = ' if( ( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as fullExpression ';
+      $asResult['select'][] = ' if( ( ( lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.')), 1, 0) as fullExpression ';
       $asResult['order'][] = ' fullExpression DESC ';
 
       $asKeywords = explode(' ', $sKeyWord);
@@ -1081,7 +1081,7 @@ class CJobboardEx extends CJobboard
         if(!empty($sOneKeyword) && strlen($sOneKeyword) > 2)
         {
           $sOneKeyword = $oDb->dbEscapeString('%'.$sOneKeyword.'%');
-          $asKeywordSql[] = '( (lower(cp.name) LIKE '.$sOneKeyword.' OR lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.') ) ';
+          $asKeywordSql[] = '( ( lower(slpd.description) LIKE '.$sOneKeyword.' OR lower(slpd.requirements) LIKE '.$sOneKeyword.' OR lower(slpd.title) LIKE '.$sOneKeyword.') ) ';
         }
       }
 
