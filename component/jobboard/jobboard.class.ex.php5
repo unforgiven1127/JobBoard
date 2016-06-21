@@ -435,6 +435,8 @@ class CJobboardEx extends CJobboard
   private function _getJobSearchResult($psSearchId = '')
   {
     $sKeyWord = strtolower(getValue('keyword'));
+    $sortField = getValue('sortfield');
+    ChromePhp::log($sortField);
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
 //ChromePhp::log($urlLanguage);
@@ -690,7 +692,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     $nNbResult = count($positionData);
@@ -1947,7 +1949,7 @@ ChromePhp::log($slistemQuery);
 
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'floatRight', 'style' => 'margin-top: 5px;'));
           $sPicture = $oHTML->getPicture($this->getResourcePath().'pictures/open_search_form.png', $this->casText['TALENT_CLOSE_FORM'], '', array('style' => 'position: absolute; right: 5px; top: -1px '));
-          $sHTML.= $oHTML->getLink($this->casText['TALENT_OPEN_SEARCH'].' '.$sPicture, 'javascript:;', array('onclick'=> '$(this).closest(\'.jobSearchContainerFolded\').fadeOut(\'fast\', function(){ $(\'.quickSearch\').fadeIn(); });', 'style' => 'color: #555; line-height: 20px; position: relative; padding-right: 25px; display: block;'));
+          $sHTML.= $oHTML->getLink($this->casText['TALENT_OPEN_SEARCH'].' '.$sPicture, 'javascript:;', array('onclick'=> '$(this).closest(\'.jobSearchContainerFolded\').fadeOut(\'fast\', function(){ $(this).closest(\'.jobSearchContainer\').find(\'.jobSearchContainerInner\').fadeIn(); });', 'style' => 'color: #555; line-height: 20px; position: relative; padding-right: 25px; display: block;'));
           $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocEnd();
