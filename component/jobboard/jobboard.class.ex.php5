@@ -760,10 +760,10 @@ ChromePhp::log($slistemQuery);
       $positionDataCount = $pavResult['positionData'][0]['count'];
     }
 
-    if(!$oDbResult)
+    if(!isset($positionData))
       $bRead = false;
     else
-      $bRead = $oDbResult->readFirst();
+      $bRead = true;
 
     $sHTML = '';
     $sHTML.= $oHTML->getBlocStart('jobListContainer');
