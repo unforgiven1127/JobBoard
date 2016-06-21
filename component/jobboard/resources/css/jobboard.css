@@ -378,7 +378,7 @@ color:#16a8e4;
 {
   min-height: 550px;
   padding: 0;
-  width: 400px;
+  width: 270px;
 }
 
 /* here so the size is kept when floating */
@@ -390,7 +390,7 @@ color:#16a8e4;
 
 .jobCentreSection
 {
-  width: 720px;
+  width: 800px;
   margin: 0 0 5px 0;
   overflow: hidden;
   z-index: 5000;
