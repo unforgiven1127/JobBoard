@@ -722,7 +722,7 @@ ChromePhp::log($slistemQuery);
   {
     if(!assert('!empty($pavResult)'))
       return '';
-
+ChromePhp::log($positionCount);
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
