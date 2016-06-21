@@ -763,7 +763,7 @@ ChromePhp::log($nNbResult);
     $sHTML = '';
     $sHTML.= $oHTML->getBlocStart('jobListContainer');
 
-    if($nNbResult > 0)
+    if(1)
     {
       $sUrl = $oPage->getAjaxUrl('addressbook', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0, array('searchId' => $psSearchId));
       $asPagerUrlOption = array('ajaxTarget' => 'jobListContainer');
