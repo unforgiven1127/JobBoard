@@ -437,7 +437,7 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
-//ChromePhp::log($urlLanguage);
+ChromePhp::log($urlLanguage);
     if($urlLanguage == '/')
     {
       $lang = 'en';
