@@ -478,8 +478,8 @@ class CJobboardEx extends CJobboard
     }
 
 
-    ChromePhp::log($languageChange);
-    ChromePhp::log($newSlpdWhere);
+    //ChromePhp::log($languageChange);
+    //ChromePhp::log($newSlpdWhere);
 
     $leventOrderFlag = false;
     $levent = " ";
@@ -3485,7 +3485,24 @@ class CJobboardEx extends CJobboard
 
     $selectedLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
 ChromePhp::log($selectedLanguage);
+      if($selectedLanguage == '/')
+      {
+        $lang = 'en';
+      }
+      else
+      {
+        $selectedLanguage = explode('setLang=',$selectedLanguage);
+        if(isset($selectedLanguage[1]))
+        {
+          $lang = $selectedLanguage[1];
+        }
+        else
+        {
+          $lang = 'en';
+        }
+      }
 
+      ChromePhp::log($lang);
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getRequestedUrl();
 
