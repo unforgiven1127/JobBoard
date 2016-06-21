@@ -380,7 +380,7 @@ class CJobboardEx extends CJobboard
 
     $positionCount = $avResult['positionData'][0]['count'];
 
-    if(empty($avResult) || empty($avResult['nNbResult']) || empty($avResult['oData']))
+    if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
     {
       $oHTML = CDependency::getComponentByName('display');
       $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
