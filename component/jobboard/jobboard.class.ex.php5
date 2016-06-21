@@ -838,6 +838,7 @@ ChromePhp::log($slistemQuery);
         }
       }
 
+    }
     if($nNbResult > 0)
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
