@@ -437,6 +437,7 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
 
     $selectedLanguage =  $_COOKIE['setLang'];
+ChromePhp::log($selectedLanguage);
 
     if(isset($selectedLanguage) && !empty($selectedLanguage))
     {
