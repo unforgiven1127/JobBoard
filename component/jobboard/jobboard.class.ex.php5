@@ -3742,7 +3742,8 @@ class CJobboardEx extends CJobboard
 
     if(empty($this->casConsultantIndustries))
     {
-      $this->casConsultantIndustries = $this->getIndustries(0, false, false, true);
+      //$this->casConsultantIndustries = $this->getIndustries(0, false, false, true);
+      $this->casConsultantIndustries = $this->getAllIndustries();
 
       $this->casConsultantIndustries[0]['picture'] = 'other.png';
       $this->casConsultantIndustries[0]['legend'] = $this->casText['TALENT_GROUP_OTHER_LEGEND'];
@@ -4121,6 +4122,17 @@ class CJobboardEx extends CJobboard
     }
 
     return $asLocation;
+  }
+
+  public function getAllIndustries()
+  {
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = "SELECT sli.label, sli.sl_industrypk
+                     FROM sl_industry sli
+                     ORDER BY sli.label ";
+
+    $industries = $slistemDB->slistemGetAllData($slistemQuery);
+    return $industries;
   }
 
   public function getIndustryList()
