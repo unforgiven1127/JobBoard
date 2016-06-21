@@ -1803,8 +1803,6 @@ class CJobboardEx extends CJobboard
     if($bRead)
       $asData = $oDbResult->getData();
 
-
-
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobSideSection floatLeft jobSharingSection'));
 
 
