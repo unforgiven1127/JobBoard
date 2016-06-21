@@ -463,6 +463,9 @@ ChromePhp::log($urlLanguage);
 ChromePhp::log($lang);
 
     $setLangCookie = $_COOKIE['setLang'];
+
+ChromePhp::log($setLangCookie);
+
     if(isset($setLangCookie))
     {
       $selectedLanguage = $setLangCookie;
@@ -688,7 +691,7 @@ ChromePhp::log($lang);
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
