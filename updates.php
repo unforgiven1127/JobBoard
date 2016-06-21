@@ -1,5 +1,8 @@
 <?php
 
+	require_once('component/jobboard/jobboard.class.php5');
+	require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
+
 	echo "Updates<br><br>";
 
 	$array=array('	1	' => '	アカデミー	',
@@ -124,9 +127,9 @@
 
 		echo $id.$jpTitle."<br><br>";
 
-		//$slistemDB = CDependency::getComponentByName('database');
-	    //$slistemQuery = " UPDATE sl_industry SET label_jp = '".$jpTitle."' WHERE sl_industrypk ='".$id."'";
+		$slistemDB = CDependency::getComponentByName('database');
+	    $slistemQuery = " UPDATE sl_industry SET label_jp = '".$jpTitle."' WHERE sl_industrypk ='".$id."'";
 
-	    //$positionData = $slistemDB->slistemGetAllData($slistemQuery);
+	    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 	}
 
