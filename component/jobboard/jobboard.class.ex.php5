@@ -519,7 +519,7 @@ class CJobboardEx extends CJobboard
                        slpd.holidays_jp as holidays,
                        slpd.station_jp as station,
                        slpd.workHours_jp as work_hours,
-                       ind.jp_label as name,
+                       ind.label_jp as name,
                        slpd.metaKey_jp as meta_keywords,";
 
       $newSlpdWhere = " AND slpd.title_jp <> '' ";
