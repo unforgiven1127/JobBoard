@@ -972,6 +972,8 @@ class CJobboardEx extends CJobboard
           $salaryRange = '';
         }
 
+        $salaryRange = '';
+
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<p style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': '."<i style='font-weight: lighter;'>".$pasJobData['location']."</i>");
@@ -1445,7 +1447,7 @@ class CJobboardEx extends CJobboard
       $oForm->setFormParams('', false, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH']));
     }
 
-    $oForm->setFormDisplayParams(array('columns' => 2));
+    $oForm->setFormDisplayParams(array('columns' => 2, 'noCancelButton' => '1'));
 
     $oForm->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
 
