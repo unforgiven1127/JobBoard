@@ -455,6 +455,8 @@ ChromePhp::log($urlLanguage);
       }
     }
 
+ChromePhp::log($lang);
+
     $cookie_name = "setLang";
     $cookie_value = $lang;
     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
