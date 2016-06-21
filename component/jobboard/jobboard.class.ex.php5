@@ -3483,7 +3483,7 @@ class CJobboardEx extends CJobboard
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
 
-    $selectedLanguage = $_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
+    $selectedLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
 ChromePhp::log($selectedLanguage);
 
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
