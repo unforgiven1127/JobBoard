@@ -753,7 +753,7 @@ ChromePhp::log($slistemQuery);
     {
       $nNbResult = count($pavResult['positionData']);
     }
-
+ChromePhp::log($nNbResult);
     if(isset($pavResult['positionData']))
     {
       $positionData = $pavResult['positionData'];
