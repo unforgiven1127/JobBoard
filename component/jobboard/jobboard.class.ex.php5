@@ -720,9 +720,9 @@ ChromePhp::log($slistemQuery);
 
   private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false, $positionCount = -1)
   {
-    if(!assert('!empty($pavResult)'))
+    /*if(!assert('!empty($pavResult)'))
       return '';
-ChromePhp::log($positionCount);
+
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
     $oPager = CDependency::getComponentByName('pager');
@@ -862,7 +862,7 @@ ChromePhp::log($positionCount);
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
     $sHTML.= $oHTML->getBlocEnd();
-    return $sHTML;
+    return $sHTML;*/
   }
 
   /**
