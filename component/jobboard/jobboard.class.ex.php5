@@ -720,7 +720,7 @@ ChromePhp::log($slistemQuery);
 
   private function _getJobResultList($pavResult, $psSearchId = '', $pbSearchFormOpen = false, $positionCount = -1)
   {
-    /*if(!assert('!empty($pavResult)'))
+    if(!assert('!empty($pavResult)'))
       return '';
 
     $oHTML = CDependency::getComponentByName('display');
@@ -751,7 +751,7 @@ ChromePhp::log($slistemQuery);
 
     if($positionCount != -1)
     {
-      $nNbResult = (int)$positionCount;
+      $nNbResult = count($pavResult['positionData']);
     }
 
     if(isset($pavResult['positionData']))
@@ -759,11 +759,6 @@ ChromePhp::log($slistemQuery);
       $positionData = $pavResult['positionData'];
       $positionDataCount = $pavResult['positionData'][0]['count'];
     }
-
-    if(!$oDbResult)
-      $bRead = false;
-    else
-      $bRead = $oDbResult->readFirst();
 
     $sHTML = '';
     $sHTML.= $oHTML->getBlocStart('jobListContainer');
@@ -820,7 +815,7 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oPager->getCompactDisplay($nNbResult, $sUrl, $asPagerUrlOption);
     }
 
-    if($nNbResult == 0 || !$bRead)
+    if($nNbResult == 0)
       $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
     else
     {
@@ -839,9 +834,9 @@ ChromePhp::log($slistemQuery);
       }
       else
       {
-        while($bRead)
+        foreach ($$positionData as $key => $value)
         {
-          $asJobData = $oDbResult->getData();
+          $asJobData = $value;
           $asJobData['position_desc'] = str_replace('\n', "\n", $asJobData['position_desc']);
 
           if(!empty($sSearchWord))
@@ -853,7 +848,6 @@ ChromePhp::log($slistemQuery);
           }
 
           $sHTML.= $this->_getJobRow($asJobData, false, $sSearchWord);
-          $bRead = $oDbResult->ReadNext();
         }
       }
 
@@ -862,7 +856,7 @@ ChromePhp::log($slistemQuery);
       $sHTML.= $oPager->getDisplay($nNbResult, $sUrl, $asPagerUrlOption);
 
     $sHTML.= $oHTML->getBlocEnd();
-    return $sHTML;*/
+    return $sHTML;
   }
 
   /**
