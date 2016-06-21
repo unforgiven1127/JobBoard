@@ -1029,7 +1029,7 @@ ChromePhp::log($sQuery);
               <a style='font-size:11pt;' href='$positionIdAsc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-numeric-asc' aria-hidden='true'></i></th>
               </a>
-            <th style='color:white; width:40%; font-size:11pt; padding-left:270px;' >
+            <th style='color:white; width:40%; font-size:11pt; padding-left:300px;' >
               <a style='font-size:11pt;' href='$positionTitleDesc'>
                 <i style='color:white;cursor: pointer;' class='fa fa-sort-alpha-desc' aria-hidden='true'></i>&nbsp;
               </a>
