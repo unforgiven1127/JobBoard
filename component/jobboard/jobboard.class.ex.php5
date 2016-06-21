@@ -447,6 +447,8 @@ class CJobboardEx extends CJobboard
       $languageChange = 'en';
     }
 
+
+
     if($languageChange == 'en')
     {
       $selectCommon = "slpd.title as position_title,
@@ -474,7 +476,9 @@ class CJobboardEx extends CJobboard
       $newSlpdWhere = " AND slpd.title_jp <> null AND slpd.position_desc_jp <> null AND slpd.req_jp <> null ";
     }
 
+
     ChromePhp::log($languageChange);
+    ChromePhp::log($newSlpdWhere);
 
     $leventOrderFlag = false;
     $levent = " ";
@@ -559,7 +563,7 @@ class CJobboardEx extends CJobboard
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
