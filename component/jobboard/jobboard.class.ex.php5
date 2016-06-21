@@ -3742,18 +3742,20 @@ class CJobboardEx extends CJobboard
 
     if(empty($this->casConsultantIndustries))
     {
-      //$this->casConsultantIndustries = $this->getIndustries(0, false, false, true);
-      $this->casConsultantIndustries = $this->getAllIndustries();
+      $this->casConsultantIndustries = $this->getIndustries(0, false, false, true);
+      $allIndustries = $this->getAllIndustries();
 
       $this->casConsultantIndustries[0]['picture'] = 'other.png';
       $this->casConsultantIndustries[0]['legend'] = $this->casText['TALENT_GROUP_OTHER_LEGEND'];
       $this->casConsultantIndustries[0]['link'] = 'javascript:;';
 
-      foreach($this->casConsultantIndustries as $asIndustry)
+      //foreach($this->casConsultantIndustries as $asIndustry)
+      foreach($allIndustries as $asIndustry)
       {
         if(!empty($asIndustry['industrypk']))
         {
-          $nIndustryPk = (int)$asIndustry['industrypk'];
+          //$nIndustryPk = (int)$asIndustry['industrypk'];
+          $nIndustryPk = (int)$asIndustry['sl_industrypk'];
           $nParentFk = (int)$asIndustry['parentfk'];
           switch($nParentFk)
           {
