@@ -2409,6 +2409,8 @@ class CJobboardEx extends CJobboard
       }
 
 
+      $backURL = "'".$oPage->getURL('jobboard', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0)."'";
+
       //Apply Button
       $sURL =  "'".$oPage->getUrl($this->_getUid(), CONST_ACTION_APPLY, CONST_TA_TYPE_JOB, $pnPk)."'";
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'margin-top:15px;'));
@@ -2417,16 +2419,14 @@ class CJobboardEx extends CJobboard
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= "<input type='button' name='apply' id='apply' value=".$this->casText['TALENT_RETURN_RESULT']." onclick = \"document.location.href = ".$backURL."\">";
         $sHTML.= "<input type='button' name='apply' id='apply' value=".$this->casText['TALENT_APPLY_NOW']." onclick = \"document.location.href = ".$sURL."\">";
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'floatHack'));
         $sHTML.= $oHTML->getBlocEnd();
       $sHTML.= $oHTML->getBlocEnd();
 
-      $sHTML.= $oHTML->getBlocStart('',array('class' => 'simpleRedBorderTop'));
-          $sURL = "'".$oPage->getURL('jobboard', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0)."'";
-          $sHTML.= $oHTML->getLink($this->casText['TALENT_RETURN_RESULT'],'',array('onclick'=>'document.location.href='.$sURL, 'class' => 'sideBarTitle'));
-        $sHTML.= $oHTML->getBlocEnd();
+
 
     }
     else
