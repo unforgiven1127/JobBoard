@@ -559,7 +559,7 @@ class CJobboardEx extends CJobboard
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
