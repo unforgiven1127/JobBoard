@@ -2187,7 +2187,7 @@ class CJobboardEx extends CJobboard
 
       $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getSpanStart();
-          $sHTML.= $oHTML->getText("<p style='margin-top:10px;'><b>".$this->casText['TALENT_LOCATION'].': '."</b><i style='font-weight: lighter;'>".$positionData['location']."</i>");
+          $sHTML.= $oHTML->getText("<p style='margin-left:10px;'><b>".$this->casText['TALENT_LOCATION'].': '."</b><i style='font-weight: lighter;'>".$positionData['location']."</i>");
           $sHTML.= $oHTML->getSpanEnd();
           $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$positionData['name']."</i>&nbsp;&nbsp;&nbsp;".$salaryRange."</p>");
         $sHTML.= $oHTML->getBlocEnd();
