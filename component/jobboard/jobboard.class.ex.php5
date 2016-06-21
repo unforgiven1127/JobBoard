@@ -607,7 +607,7 @@ class CJobboardEx extends CJobboard
 //ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
-    $nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
+    //$nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
 
 //ChromePhp::log($nNbResult);
 
@@ -692,6 +692,8 @@ class CJobboardEx extends CJobboard
 
 ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    $nNbResult = count($positionData);
 
     if(!isset($positionData) || empty($positionData))
        return array('nNbResult' => 0, 'oData' => null, 'sQuery' => $sQuery);
