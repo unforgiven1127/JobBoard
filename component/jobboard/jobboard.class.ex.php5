@@ -834,7 +834,7 @@ ChromePhp::log($slistemQuery);
       }
       else
       {
-        foreach ($$positionData as $key => $value)
+        foreach ($positionData as $key => $value)
         {
           $asJobData = $value;
           $asJobData['position_desc'] = str_replace('\n', "\n", $asJobData['position_desc']);
