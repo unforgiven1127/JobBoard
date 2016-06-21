@@ -3483,6 +3483,8 @@ ChromePhp::log($selectedLanguage);
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
 
+ChromePhp::log($this->casText['TALENT_SELECT_LANGUAGE']);
+
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getRequestedUrl();
 
