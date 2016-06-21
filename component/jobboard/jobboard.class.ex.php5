@@ -1937,7 +1937,7 @@ ChromePhp::log($slistemQuery);
 
 
       //compact form displayed here
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobSearchContainerFolded '.$sGlobalSearchClass));
+      $sHTML.= $oHTML->getBlocStart('',array('id'=>'jobSearchContainerFolded' ,'class'=>'jobSearchContainerFolded '.$sGlobalSearchClass));
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'newSearchDiv '));
 
