@@ -455,7 +455,9 @@ class CJobboardEx extends CJobboard
       }
     }
 
-//ChromePhp::log($lang);
+ChromePhp::log($lang);
+
+    $setLangCookie = $_COOKIE['setLang'];
 
     $cookie_name = "setLang";
     $cookie_value = $lang;
