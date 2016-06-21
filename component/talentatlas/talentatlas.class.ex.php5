@@ -807,7 +807,7 @@ class CTalentatlasEx extends CTalentatlas
       }
       else
       {
-        $sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
+        //$sHTML.= $oHTML->getBlocMessage($this->casText['TALENT_NO_JOBS_MATCH']);
       }
 
     $sHTML.= $oHTML->getBlocEnd();
