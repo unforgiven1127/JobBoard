@@ -4130,7 +4130,7 @@ class CJobboardEx extends CJobboard
   public function getAllIndustries()
   {
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT sli.label, sli.sl_industrypk
+    $slistemQuery = "SELECT sli.label, sli.sl_industrypk, sli.parentfk
                      FROM sl_industry sli
                      ORDER BY sli.label ";
 
