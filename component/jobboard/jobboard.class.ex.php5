@@ -471,7 +471,7 @@ class CJobboardEx extends CJobboard
                        slpd.workHours_jp as work_hours,
                        slpd.metaKey_jp as meta_keywords,";
 
-      $newSlpdWhere = " AND slpd.title_jp <> null AND slpd.position_desc_jp <> null AND slpd.req_jp <> null ";
+      $newSlpdWhere = " AND slpd.title_jp <> '' AND slpd.position_desc_jp <> '' AND slpd.req_jp <> '' ";
     }
 
 
