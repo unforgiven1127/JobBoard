@@ -701,6 +701,9 @@ class CJobboardEx extends CJobboard
         $slistemQuery .= " order by slp.sl_positionpk DESC ";
       }
     }
+    
+    ChromePhp::log($sortSelect);
+    ChromePhp::log($slistemQuery);
 
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince result sayisi duzeldi....
