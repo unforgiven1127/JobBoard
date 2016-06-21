@@ -2151,19 +2151,53 @@ class CJobboardEx extends CJobboard
       //if(!empty($sMetaDescription))
         //$oPage->setPageDescription($sMetaDescription);
 
+      //Position Title
       $sHTML.= $oHTML->getBlocStart('position');
       $sHTML.= $oHTML->getText($positionData['position_title'], array('class'=>'boldTitle'));
       $sHTML.= $oHTML->getBlocEnd();
 
       $sHTML.= $oHTML->getBlocStart('',array('style'=>'margin-top:10px;'));
 
-      //Position Title
-      $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRowNew'));
-        $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_sectionNew'));
+      if($positionData['display_salary'] == 1)
+      {
+        if(!empty($positionData['salary_low']) || $positionData['salary_low'] != 0)
+        {
+          if(!empty($positionData['salary_high']) || $positionData['salary_high'] != 0)
+          {
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>&yen;".$positionData['salary_low']." - &yen;".$positionData['salary_high']."</i>";
+          }
+          else
+          {
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>".'> &yen;'.$positionData['salary_low']."</i>";
+          }
+        }
+        else if(!empty($positionData['salary_high']) || $positionData['salary_high'] != 0)
+        {
+          $salaryRange = " Salary: <i style='font-weight: lighter;'>".'< &yen;'.$positionData['salary_high']."</i>";
+        }
+        else
+        {
+          $salaryRange = '';
+        }
+      }
+      else
+      {
+        $salaryRange = '';
+      }
+
+      $sHTML.= $oHTML->getListItemStart();
+          $sHTML.= $oHTML->getSpanStart();
+          $sHTML.= $oHTML->getText("<p style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': '."<i style='font-weight: lighter;'>".$positionData['location']."</i>");
+          $sHTML.= $oHTML->getSpanEnd();
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$positionData['name']."</i>&nbsp;&nbsp;&nbsp;".$salaryRange."</p>");
+        $sHTML.= $oHTML->getListItemEnd();
+
+      /*$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
         $sHTML.= $oHTML->getText($this->casText['TALENT_POSITION_ID'], array('style'=>'font-weight:bold;'));
         $sHTML.= $oHTML->getBlocEnd();
 
-        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_sectionNew'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
         $sHTML.= $oHTML->getText($sIdentfier);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -2195,7 +2229,7 @@ class CJobboardEx extends CJobboard
         $sHTML.= $oHTML->getText($positionData['location']);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
-      $sHTML.= $oHTML->getBlocEnd();
+      $sHTML.= $oHTML->getBlocEnd();*/
 
       /*//Posted Date
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2210,7 +2244,7 @@ class CJobboardEx extends CJobboard
       $sHTML.= $oHTML->getBlocEnd();*/
 
       //English Level
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
+      /*$sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
         $sHTML.= $oHTML->getText($this->casText['TALENT_ENGLISH_ABILITY'],array('style'=>'font-weight:bold;'));
         $sHTML.= $oHTML->getBlocEnd();
@@ -2233,10 +2267,10 @@ class CJobboardEx extends CJobboard
         $sHTML.= $oHTML->getText($sJapanese);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
-      $sHTML.= $oHTML->getBlocEnd();
+      $sHTML.= $oHTML->getBlocEnd();*/
 
       //Industry
-      if(isset($positionData['name']))
+      /*if(isset($positionData['name']))
       {
         $sIndustry = $positionData['name'];
       }
@@ -2267,7 +2301,7 @@ class CJobboardEx extends CJobboard
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
-      }
+      }*/
 
       /*//Salary
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
