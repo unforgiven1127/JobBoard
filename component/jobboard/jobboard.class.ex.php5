@@ -437,7 +437,7 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
 
     $selectedLanguage = $_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
-ChromePhp::log($selectedLanguage);
+//ChromePhp::log($selectedLanguage);
 
     if(isset($selectedLanguage) && !empty($selectedLanguage))
     {
@@ -3483,7 +3483,8 @@ ChromePhp::log($selectedLanguage);
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
 
-ChromePhp::log($this->casText['TALENT_SELECT_LANGUAGE']);
+    $selectedLanguage = $_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
+ChromePhp::log($selectedLanguage);
 
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getRequestedUrl();
