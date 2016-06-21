@@ -960,7 +960,7 @@ class CJobboardEx extends CJobboard
           $sHTML.= $oHTML->getSpanStart();
           $sHTML.= $oHTML->getText("<p style='margin-top:10px;'>".$this->casText['TALENT_LOCATION'].': </strong>'."<i style='font-weight: lighter;'>".$pasJobData['location']."</i>");
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i>".$pasJobData['name']."</i></p>");
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;".$this->casText['TALENT_INDUSTRY'].': '."<i style='font-weight: lighter;'>".$pasJobData['name']."</i></p>");
         $sHTML.= $oHTML->getListItemEnd();
 
 
