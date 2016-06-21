@@ -447,6 +447,7 @@ ChromePhp::log($urlLanguage);
       $urlLanguage = explode('setLang=',$urlLanguage);
       if(isset($urlLanguage[1]))
       {
+        unset($_COOKIE['setLang']);
         $lang = $urlLanguage[1];
 ChromePhp::log($lang);
         $cookie_name = "setLang";
