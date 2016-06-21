@@ -960,11 +960,11 @@ class CJobboardEx extends CJobboard
         {
           if(!empty($pasJobData['salary_high']) || $pasJobData['salary_high'] != 0)
           {
-            $salaryRange = " Salary: <i style='font-weight: lighter;'>".$pasJobData['salary_low']." - ".$pasJobData['salary_high']."</i>";
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>&yen;".$pasJobData['salary_low']." - &yen;".$pasJobData['salary_high']."</i>";
           }
           else
           {
-            $salaryRange = " Salary: <i style='font-weight: lighter;'>".'> '.$pasJobData['salary_low']."</i>";
+            $salaryRange = " Salary: <i style='font-weight: lighter;'>".'> &yen;'.$pasJobData['salary_low']."</i>";
           }
         }
         else
