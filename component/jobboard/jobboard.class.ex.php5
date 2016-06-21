@@ -3752,7 +3752,7 @@ class CJobboardEx extends CJobboard
       //foreach($this->casConsultantIndustries as $asIndustry)
       foreach($allIndustries as $asIndustry)
       {
-        if(!empty($asIndustry['industrypk']))
+        if(!empty($asIndustry['sl_industrypk']))
         {
           //$nIndustryPk = (int)$asIndustry['industrypk'];
           $nIndustryPk = (int)$asIndustry['sl_industrypk'];
