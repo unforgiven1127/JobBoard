@@ -380,12 +380,12 @@ class CJobboardEx extends CJobboard
 
     $positionCount = $avResult['positionData'][0]['count'];
 
-    if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
-    {
-      $oHTML = CDependency::getComponentByName('display');
-      $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
-      return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
-    }
+    //if(empty($avResult) || empty($positionCount) || empty($avResult['positionData']))
+    //{
+     // $oHTML = CDependency::getComponentByName('display');
+     // $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
+     // return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
+    //}
 
     //in ajax, the dummy form should always be hidden
     $sData = $this->_getJobResultList($avResult, $sSearchId, false, $positionCount);
