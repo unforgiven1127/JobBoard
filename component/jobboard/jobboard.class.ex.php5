@@ -2159,11 +2159,11 @@ class CJobboardEx extends CJobboard
 
       //Position Title
       $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRowNew'));
-        $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
+        $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_sectionNew'));
         $sHTML.= $oHTML->getText($this->casText['TALENT_POSITION_ID'], array('style'=>'font-weight:bold;'));
         $sHTML.= $oHTML->getBlocEnd();
 
-        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
+        $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_sectionNew'));
         $sHTML.= $oHTML->getText($sIdentfier);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
