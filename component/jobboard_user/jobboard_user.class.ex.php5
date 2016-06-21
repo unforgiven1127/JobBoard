@@ -337,14 +337,14 @@ class CJobboarduserEx extends CJobboarduser
     if($bDisplayFilter)
     {
       $sHTML.= $oHTML->getBlocStart('',array('style'=>' margin: 10px 20px;'));
-        $sHTML.= $oHTML->getBlocStart('',array('style'=>'float:left;width:200px;'));
+        /*$sHTML.= $oHTML->getBlocStart('',array('style'=>'float:left;width:200px;'));
           $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_ADD, CONST_TA_TYPE_LIST_JOB);
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'imgClass'));
             $sPic = $oHTML->getPicture($this->getResourcePath().'/pictures/add_32.png','','', array('style' => 'height: 24px;'));
             $sHTML.= $oHTML->getLink($sPic, $sURL);
           $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getLink('Add a new position',$sURL,array('style'=>'font-size:14px;'));
-        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getBlocEnd();*/
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
         $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_SEND, CONST_TA_TYPE_LIST_JOB);
