@@ -70,7 +70,7 @@ $array=array('	1	 '=> '	東京	',
 '	67	 '=> '	フランス	');
 
 
-	define('DB_NAME_SLISTEM','slistem');
+	/*define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
@@ -89,5 +89,5 @@ $array=array('	1	 '=> '	東京	',
 
     	$slistemQuery = mysql_query($slistemQuery);
 
-	}
+	}*/
 
