@@ -448,7 +448,7 @@ ChromePhp::log($urlLanguage);
       if(isset($urlLanguage[1]))
       {
         $lang = $urlLanguage[1];
-
+ChromePhp::log($lang);
         $cookie_name = "setLang";
         $cookie_value = $lang;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
@@ -475,7 +475,7 @@ ChromePhp::log($setLangCookie);
       $selectedLanguage =  $lang;
     }
 
-//ChromePhp::log($selectedLanguage);
+ChromePhp::log($selectedLanguage);
 
     if(isset($selectedLanguage) && !empty($selectedLanguage))
     {
