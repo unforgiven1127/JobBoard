@@ -1852,10 +1852,10 @@ class CJobboardEx extends CJobboard
       else
         $sHTML.= $oHTML->getBlocStart();
 
-        $sHTML.= $oHTML->getBlocStart('',array('class' => 'simpleRedBorderTop'));
+        /*$sHTML.= $oHTML->getBlocStart('',array('class' => 'simpleRedBorderTop'));
           $sURL = "'".$oPage->getURL('jobboard', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0)."'";
           $sHTML.= $oHTML->getLink($this->casText['TALENT_RETURN_RESULT'],'',array('onclick'=>'document.location.href='.$sURL, 'class' => 'sideBarTitle'));
-        $sHTML.= $oHTML->getBlocEnd();
+        $sHTML.= $oHTML->getBlocEnd();*/
 
       $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getBlocEnd();
