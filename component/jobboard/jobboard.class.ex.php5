@@ -379,9 +379,10 @@ class CJobboardEx extends CJobboard
 //ChromePhp::log($avResult);
 
     $positionCount = $avResult['positionData'][0]['count'];
-
+ChromePhp::log($avResult);
     if(empty($avResult) || empty($avResult['positionData']))
     {
+      ChromePhp::log('girdi');
       $oHTML = CDependency::getComponentByName('display');
       $sMessage = $this->_getSearchMessage($avResult['positionData'][0]['count'], true);
       return array('data' => $oHTML->getBlocMessage($this->casText['TALENT_NO_RESULT']/*.' || '.$avResult['sQuery']*/));
@@ -692,7 +693,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
