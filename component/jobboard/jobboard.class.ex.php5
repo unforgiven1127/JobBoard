@@ -437,7 +437,7 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
-ChromePhp::log($urlLanguage);
+//ChromePhp::log($urlLanguage);
     if($urlLanguage == '/')
     {
       $lang = 'en';
@@ -449,7 +449,7 @@ ChromePhp::log($urlLanguage);
       {
         unset($_COOKIE['setLang']);
         $lang = $urlLanguage[1];
-ChromePhp::log($lang);
+//ChromePhp::log($lang);
         $cookie_name = "setLang";
         $cookie_value = $lang;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
@@ -461,11 +461,11 @@ ChromePhp::log($lang);
       }
     }
 
-ChromePhp::log($lang);
+//ChromePhp::log($lang);
 
     $setLangCookie = $_COOKIE['setLang'];
 
-ChromePhp::log($setLangCookie);
+//ChromePhp::log($setLangCookie);
 
     if(isset($setLangCookie))
     {
@@ -476,7 +476,7 @@ ChromePhp::log($setLangCookie);
       $selectedLanguage =  $lang;
     }
 
-ChromePhp::log($selectedLanguage);
+//ChromePhp::log($selectedLanguage);
 
     if(isset($selectedLanguage) && !empty($selectedLanguage))
     {
@@ -692,7 +692,7 @@ ChromePhp::log($selectedLanguage);
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
