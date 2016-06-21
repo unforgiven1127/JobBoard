@@ -1445,7 +1445,7 @@ class CJobboardEx extends CJobboard
       $oForm->setFormParams('', false, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH']));
     }
 
-    $oForm->setFormDisplayParams(array('columns' => 2, 'noCancelButton' => '1'));
+    $oForm->setFormDisplayParams(array('columns' => 2));
 
     $oForm->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
 
@@ -2935,7 +2935,7 @@ class CJobboardEx extends CJobboard
     $sURL = $oPage->getURL($this->_getUid(),CONST_ACTION_SAVEADD,CONST_TA_TYPE_JOB,$pnPk);
 
     $oForm->setFormParams('', false, array('submitLabel' => $this->casText['TALENT_APPLY_NOW'],'action' => $sURL,'onBeforeSubmit'=>'if(!$(\'#agree_terms_id:checked\').val()){ alert(\'Please accept terms and conditions \'); return false; };'));
-    $oForm->setFormDisplayParams(array( 'columns' => 1));
+    $oForm->setFormDisplayParams(array('noCancelButton' => 1, 'columns' => 1));
 
     $oForm->addField('input', 'name', array('label'=>$this->casText['TALENT_YOUR_NAME'], 'class' => '', 'value' => getValue('name')));
     $oForm->setFieldControl('name', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 255, 'jsFieldNotEmpty' => ''));
