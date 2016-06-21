@@ -561,7 +561,7 @@ class CJobboardEx extends CJobboard
       $slistemQuery.= ' AND '.$filterSlistem['where'];
     }
 
-//ChromePhp::log($slistemQuery);
+
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
 //ChromePhp::log($sQuery);
@@ -652,7 +652,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     $oDbResult = $oDb->ExecuteQuery($sQuery);
