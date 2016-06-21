@@ -120,6 +120,9 @@
 '	130	' => '	ITクラウド	',
 '	131	' => '	CNS-電子工学	');
 
+	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
+    mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
+
 	foreach ($array as $key => $value)
 	{
 		$id = TRIM($key);
@@ -127,9 +130,9 @@
 
 		echo $id.$jpTitle."<br><br>";
 
-		$slistemDB = CDependency::getComponentByName('database');
 	    $slistemQuery = " UPDATE sl_industry SET label_jp = '".$jpTitle."' WHERE sl_industrypk ='".$id."'";
 
-	    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+    	$slistemQuery = mysql_query($slistemQuery);
+
 	}
 
