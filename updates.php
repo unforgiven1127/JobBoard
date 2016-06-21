@@ -120,15 +120,15 @@
 '	130	' => '	ITクラウド	',
 '	131	' => '	CNS-電子工学	');
 
-	define('DB_NAME_SLISTEM','slistem');
+	/*define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
-    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
+    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');*/
 
-	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
-    mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
+	/*mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
+    mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());*/
 
-	foreach ($array as $key => $value)
+	/*foreach ($array as $key => $value)
 	{
 		$id = TRIM($key);
 		$jpTitle = TRIM($value);
@@ -139,5 +139,5 @@
 
     	$slistemQuery = mysql_query($slistemQuery);
 
-	}
+	}*/
 

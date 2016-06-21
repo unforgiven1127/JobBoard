@@ -505,6 +505,7 @@ class CJobboardEx extends CJobboard
                        slpd.holidays as holidays,
                        slpd.station as station,
                        slpd.work_hours as work_hours,
+                       ind.label as name,
                        slpd.meta_keywords as meta_keywords,";
 
       $newSlpdWhere = " AND slpd.language='en' ";
@@ -518,6 +519,7 @@ class CJobboardEx extends CJobboard
                        slpd.holidays_jp as holidays,
                        slpd.station_jp as station,
                        slpd.workHours_jp as work_hours,
+                       ind.jp_label as name,
                        slpd.metaKey_jp as meta_keywords,";
 
       $newSlpdWhere = " AND slpd.title_jp <> '' ";
@@ -547,7 +549,7 @@ class CJobboardEx extends CJobboard
                      slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
                      slpd.description as meta_desc, slpd.company_label as company_label,
                      slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
-                     ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
+                     ind.sl_industrypk as industrypk, slp.status as status, ind.parentfk as parentfk,
                      cp.name as company_name, slpd.raw_data as raw_data
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk AND slpd.is_public = '1' AND slpd.public_flag = 'a'".$newSlpdWhere;
