@@ -538,7 +538,7 @@ class CJobboardEx extends CJobboard
 
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT FOUND_ROWS() as count ".$levent."
-                     ,slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
+                     ,slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk, slpd.display_salary as display_salary,
                      slpd.is_public as visibility, slpd.category as category,".$selectCommon."
                      cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
                      slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
@@ -956,6 +956,8 @@ class CJobboardEx extends CJobboard
         $sHTML.= $oHTML->getListItemEnd();
       }*/
 
+      if($pasJobData['display_salary'] == 1)
+      {
         if(!empty($pasJobData['salary_low']) || $pasJobData['salary_low'] != 0)
         {
           if(!empty($pasJobData['salary_high']) || $pasJobData['salary_high'] != 0)
@@ -971,8 +973,12 @@ class CJobboardEx extends CJobboard
         {
           $salaryRange = '';
         }
-
+      }
+      else
+      {
         $salaryRange = '';
+      }
+
 
         $sHTML.= $oHTML->getListItemStart();
           $sHTML.= $oHTML->getSpanStart();
