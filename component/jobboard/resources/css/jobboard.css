@@ -378,7 +378,7 @@ color:#16a8e4;
 {
   min-height: 550px;
   padding: 0;
-  width: 280px;
+  width: 270px;
 }
 
 /* here so the size is kept when floating */
@@ -402,7 +402,7 @@ color:#16a8e4;
  }
  .jobDetail .jobSharingSection
  {
-   width: 215px;
+   width: 15px;
  }
 
 .jobRightSection
