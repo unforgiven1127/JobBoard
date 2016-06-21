@@ -2158,7 +2158,7 @@ class CJobboardEx extends CJobboard
       $sHTML.= $oHTML->getBlocStart('',array('style'=>'margin-top:10px;'));
 
       //Position Title
-      $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
+      $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRowNew'));
         $sHTML.= $oHTML->getBlocStart('', array('class'=>'left_section'));
         $sHTML.= $oHTML->getText($this->casText['TALENT_POSITION_ID'], array('style'=>'font-weight:bold;'));
         $sHTML.= $oHTML->getBlocEnd();
@@ -2884,7 +2884,7 @@ class CJobboardEx extends CJobboard
     }
 
     $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
-                 slpd.is_public as visibility, slpd.category as category,".$selectCommon."
+                 slpd.display_salary as display_salary,slpd.is_public as visibility, slpd.category as category,".$selectCommon."
                  cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
                  slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
                  slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
