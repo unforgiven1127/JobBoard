@@ -3763,34 +3763,30 @@ class CJobboardEx extends CJobboard
           switch($nParentFk)
           {
             //then parenty industry ones
-            case 501:
-              $this->casConsultantIndustries[$nIndustryPk]['picture'] = 'consumer_goods.png';
-              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_FIN_LEGEND'];
-              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'javascript:;';
-              break;
+
             case 501:
               $this->casConsultantIndustries[$nIndustryPk]['picture'] = 'other.png';
-              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_FIN_LEGEND'];
+              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_OTHER_LEGEND'];
               $this->casConsultantIndustries[$nIndustryPk]['link'] = 'javascript:;';
               break;
 
             case 502:
               $this->casConsultantIndustries[$nIndustryPk]['picture'] = 'finance.png';
-              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_IT_LEGEND'];
-              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=it_services';
+              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_FIN_LEGEND'];
+              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=finance_and_accounting';
               break;
 
             case 503:
               $this->casConsultantIndustries[$nIndustryPk]['picture'] = 'it.png';
-              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_CNS_LEGEND'];
-              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=consumer_goods';
+              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_IT_LEGEND'];
+              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=it_services';
               break;
 
 
             case 504:
               $this->casConsultantIndustries[$nIndustryPk]['picture'] = 'healthcare.png';
-              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_INDUS_LEGEND'];
-              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=industrial';
+              $this->casConsultantIndustries[$nIndustryPk]['legend'] = $this->casText['TALENT_GROUP_LS_LEGEND'];
+              $this->casConsultantIndustries[$nIndustryPk]['link'] = 'http://www.slate.co.jp/expertise?show=life_sciences';
               break;
 
             case 505:
