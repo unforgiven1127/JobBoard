@@ -390,7 +390,7 @@ color:#16a8e4;
 
 .jobCentreSection
 {
-  width: 750px;
+  width: 700px;
   margin: 0 0 5px 0;
   overflow: hidden;
   z-index: 5000;
@@ -398,7 +398,7 @@ color:#16a8e4;
  }
  .jobDetail .jobCentreSection
  {
-   width: 750px;
+   width: 700px;
  }
  .jobDetail .jobSharingSection
  {
