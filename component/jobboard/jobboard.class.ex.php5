@@ -436,6 +436,29 @@ class CJobboardEx extends CJobboard
   {
     $sKeyWord = strtolower(getValue('keyword'));
 
+    $selectedLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
+//ChromePhp::log($selectedLanguage);
+    if($selectedLanguage == '/')
+    {
+      $lang = 'en';
+    }
+    else
+    {
+      $selectedLanguage = explode('setLang=',$selectedLanguage);
+      if(isset($selectedLanguage[1]))
+      {
+        $lang = $selectedLanguage[1];
+      }
+      else
+      {
+        $lang = 'en';
+      }
+    }
+
+    $cookie_name = "setLang";
+    $cookie_value = $lang;
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
     $selectedLanguage =  $_COOKIE['setLang'];
 ChromePhp::log($selectedLanguage);
 
@@ -3480,29 +3503,6 @@ ChromePhp::log($slistemQuery);
       $sHtml.= $oHTML->getBlocStart('', array('class' => 'sideBarTitle'));
       $sHtml.= $oHTML->getText($this->casText['TALENT_SELECT_LANGUAGE']);
       $sHtml.= $oHTML->getBlocEnd();
-
-    $selectedLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
-//ChromePhp::log($selectedLanguage);
-      if($selectedLanguage == '/')
-      {
-        $lang = 'en';
-      }
-      else
-      {
-        $selectedLanguage = explode('setLang=',$selectedLanguage);
-        if(isset($selectedLanguage[1]))
-        {
-          $lang = $selectedLanguage[1];
-        }
-        else
-        {
-          $lang = 'en';
-        }
-      }
-
-      $cookie_name = "setLang";
-      $cookie_value = $lang;
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 
       //ChromePhp::log($lang);
       //$sUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
