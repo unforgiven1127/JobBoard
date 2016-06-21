@@ -2419,7 +2419,7 @@ class CJobboardEx extends CJobboard
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section'));
-        $sHTML.= "<input style='width:300px;' type='button' name='back' id='back' value=".$this->casText['TALENT_RETURN_SEARCH']." onclick = \"document.location.href = ".$backURL."\">";
+        $sHTML.= "<input style='width:300px;' type='button' name='back' id='back' value='".$this->casText['TALENT_RETURN_SEARCH']."' onclick = \"document.location.href = ".$backURL."\">";
         $sHTML.= "<input type='button' name='apply' id='apply' value=".$this->casText['TALENT_APPLY_NOW']." onclick = \"document.location.href = ".$sURL."\">";
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'floatHack'));
