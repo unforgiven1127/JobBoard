@@ -788,20 +788,20 @@ class CDisplayEx extends CDisplay
             {
               $sURL = $oPage->getAjaxUrl($asMenuItems['uid'], $asMenuItems['action'], $asMenuItems['type'], $nLoginPk);
               $sAjax = $this->getAjaxPopupJS($sURL, 'body','','600','800',1);
-              $sHTML.= $this->getLink($this->getPicture($this->getResourcePath().$asMenuItems['icon'],  $asMenuItems['name'], '', array('class' => 'mainMenuPic mobilePic')), 'javascript:;', array('onclick'=>$sAjax));
+              $sHTML.= $this->getLink($this->getPicture($this->getResourcePath().$asMenuItems['icon'],  $asMenuItems['name'], '', array('class' => 'mainMenuPic')), 'javascript:;', array('onclick'=>$sAjax));
             }
             else
             {
               if(!empty($asMenuItems['icon']))
-                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic mobilePic'));
+                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'));
               else
-                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'));
+                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic mobilePic'));
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
               {
                 $sHTML.= $this->getCarriageReturn();
                 $sHTML.= $this->getSpanStart('', array('class' => 'menuNavLegend'));
-                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'));
+                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic mobilePic'));
                 $sHTML.= $this->getSpanEnd();
               }
             }
