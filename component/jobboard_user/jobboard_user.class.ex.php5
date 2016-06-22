@@ -348,7 +348,7 @@ class CJobboarduserEx extends CJobboarduser
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
         $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
-        $sHTML.= $oHTML->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
+        $sHTML.= "<input name='searchIdTitle'></input>";
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
