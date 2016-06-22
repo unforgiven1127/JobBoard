@@ -1995,7 +1995,7 @@ ChromePhp::log($lang);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
 
-    $this->_getAjaxJobSearchResult();
+
         // full Search Form
         $sHTML.= $oHTML->getBlocStart('advanced_search_form', array('class'=>'searchFormContainer'));
         $sHTML.= $this->_getJobSearchForm(true);
@@ -2026,6 +2026,7 @@ ChromePhp::log($lang);
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
 
+    $this->_getAjaxJobSearchResult();
 
     return $sHTML;
   }
