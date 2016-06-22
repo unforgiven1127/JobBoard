@@ -1309,11 +1309,11 @@ ChromePhp::log($sQuery);
     $oForm->setFormParams('', true, array('submitLabel' => 'Save', 'action' => $sURL));
 
 
-/*$sHTML.= "
-<form name='posEditForm' enctype='multipart/form-data' submitajax='1' action='https://jobs.slate.co.jp/index.php5?uid=654-321&amp;ppa=ppase&amp;ppt=ppaj&amp;ppk=8923&amp;pg=ajx' method='POST' onbeforesubmit='' id='posEditFormId' onsubmit=''>
+$sHTML.= "
+<form name='posEditForm' enctype='multipart/form-data' submitajax='1' action='".$sURL."' method='POST' onbeforesubmit='' id='posEditFormId' onsubmit=''>
   <table style='margin-left:-5px; margin-top:-30px;'>
      <tr>
-       <td style='width:50%;'>";*/
+       <td style='width:50%;'>";
 
     $oForm->addField('misc', 'title', array('type'=>'text', 'text'=>'<strong> Edit the Position Details </strong>'));
 
