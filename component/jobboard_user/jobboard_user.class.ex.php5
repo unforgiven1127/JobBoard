@@ -190,7 +190,7 @@ class CJobboarduserEx extends CJobboarduser
   {
     //echo"<br><br><br>";
     //echo'_getManageJobs';
-    ChromePhp::log('_getManageJobs');
+    //ChromePhp::log('_getManageJobs');
     $oDB = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
     $oHTML = CDependency::getComponentByName('display');
@@ -205,6 +205,13 @@ class CJobboarduserEx extends CJobboarduser
     $bSlistemOnly = (bool)getValue('slistem', 0);
     $sSort = getValue('sort');
     $bDisplayFilter = true;
+
+    $searchValue = $_POST['searchIdTitle'];
+    if(isset($searchValue))
+    {
+
+    }
+ChromePhp::log($searchValue);
 
     $sSortField = TRIM(getValue('sortfield'));
     $sSortOrder = TRIM(getValue('sortorder'));
