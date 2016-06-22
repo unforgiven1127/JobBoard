@@ -528,7 +528,7 @@ class CJobboardEx extends CJobboard
     }
 
 
-    ChromePhp::log($selectCommon);
+    //ChromePhp::log($selectCommon);
     //ChromePhp::log($newSlpdWhere);
 
     $leventOrderFlag = false;
@@ -4104,7 +4104,7 @@ class CJobboardEx extends CJobboard
   public function getLocationList()
   {
     $setLangCookie = $_COOKIE['setLang'];
-
+ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
