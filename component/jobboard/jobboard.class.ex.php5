@@ -528,7 +528,7 @@ class CJobboardEx extends CJobboard
     }
 
 
-    //ChromePhp::log($languageChange);
+    ChromePhp::log($selectCommon);
     //ChromePhp::log($newSlpdWhere);
 
     $leventOrderFlag = false;
