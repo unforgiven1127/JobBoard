@@ -493,7 +493,7 @@ form
 
 .menuNavList
 {
-  float: center;
+  float: left;
   height: 32px;
   width: 100%;
   z-index:100;
