@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Slate Consulting</title>
     <link rel="stylesheet" href="common/lib/bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript" src="/common/js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 
 
