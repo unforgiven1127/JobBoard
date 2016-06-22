@@ -1491,8 +1491,6 @@ class CJobboardEx extends CJobboard
       $oForm->addOption('location', array('value'=>$nValue, 'label' => $vType));
     }
 
-    //$oForm->addOption('location', $this->getLocationOption());
-
     //industry tree
     $oForm->addField('select', 'industry', array('class' => 'public_important_field', 'label' => $this->casText['TALENT_INDUSTRY']));
     $industries = $this->getIndustryList();
