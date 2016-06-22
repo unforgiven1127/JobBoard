@@ -1654,6 +1654,8 @@ ChromePhp::log($lang);
                  <table>
                   <tr>
                     <td><input placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'></td>
+                  </tr>
+                  <tr>
                     <td><input placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'></td>
                   </tr>
                  </table>
