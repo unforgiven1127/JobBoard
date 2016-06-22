@@ -347,7 +347,7 @@ ChromePhp::log($searchValue);
     $sQuery.= $sOrder;
     $sQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
 
-    $sHTML = $oHTML->getBlocStart('',array('class'=>'menuNavContainerId','style'=>'text-align: center'));
+    $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'ta_user_list_container'));
     $sHTML.= $oHTML->getBlocStart('');
     $sHTML.= $oHTML->getTitleLine('Manage Positions', $this->getResourcePath().'/pictures/manage_48.png');
