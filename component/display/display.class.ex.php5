@@ -21,6 +21,29 @@ class CDisplayEx extends CDisplay
   //Low level display functions
   //****************************************************************************
   //****************************************************************************
+  public function render($filename, $data = array())
+  {
+    $file = __DIR__.'/resources/html/'.$filename.'.php';
+
+    try
+    {
+      if( !is_readable($file) )
+      {
+          throw new Exception("View $file not found!", 1);
+      }
+
+      ob_start() && extract($data, EXTR_SKIP);
+      include $file;
+      $content = ob_get_clean();
+      ob_flush();
+
+      return $content;
+    }
+    catch (Exception $e)
+    {
+        return $e->getMessage();
+    }
+  }
 
   public function getLink($psLabel, $psUrl='', $pasOptions = array())
   {
