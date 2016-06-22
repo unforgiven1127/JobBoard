@@ -4100,10 +4100,32 @@ ChromePhp::log($lang);
 
   public function getLocationList()
   {
-    $setLangCookie = $_COOKIE['setLang'];
-ChromePhp::log('getLocationList');
-ChromePhp::log($setLangCookie);
-    if(isset($setLangCookie) && !empty($setLangCookie))
+    $urlLanguage = $_SERVER['REQUEST_URI'];
+
+    if($urlLanguage == '/')
+    {
+      $lang = 'en';
+    }
+    else
+    {
+      $urlLanguage = explode('setLang=',$urlLanguage);
+      if(isset($urlLanguage[1]))
+      {
+        unset($_COOKIE['setLang']);
+        $lang = $urlLanguage[1];
+
+        $cookie_name = "setLang";
+        $cookie_value = $lang;
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
+      }
+      else
+      {
+        $lang = 'en';
+      }
+    }
+
+    $setLangCookie = $lang;
     {
       if($setLangCookie == 'jp')
       {
