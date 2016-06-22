@@ -1675,12 +1675,12 @@ ChromePhp::log($lang);
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobCentreSection'));
         $sHTML.= $oHTML->getBlocStart('mainJobContainer', array('class' => 'redBorderTop'));
 
-        //search form
-        $sHTML.= $this->_getJobSearchSection($sSearchId, true);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
 
+        //search form
+        $sHTML.= $this->_getJobSearchSection($sSearchId, true);
         $positionCount = $avResult['positionData'][0]['count'];
 
         //ChromePhp::log($avResult);
