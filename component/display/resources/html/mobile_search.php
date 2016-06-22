@@ -56,8 +56,8 @@
           </td>
         </tr>
         <tr>
-          <td>
-            <center><button type="submit" class="log-btn" >Log in</button></center>
+          <td style='padding-top:15px;'>
+            <center><button style="font-size: 30pt; height: 100px;" type="submit" class="log-btn" >Log in</button></center>
           </td>
         </tr>
        </table>
