@@ -8,9 +8,11 @@ class CJobboardEx extends CJobboard
 
   private $casConsultant = array('pam_thai.png', 'ray_pedersen.png', 'frank_henderson.png', 'ryan_marshall.png');
   private $casConsultantIndustries = array();
+  private $_oDisplay = null;
 
   public function __construct()
   {
+    $this->_oDisplay = CDependency::getCpHtml();
     return true;
   }
 

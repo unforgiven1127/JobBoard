@@ -665,5 +665,13 @@ class CDependency
 
     return $asComponents;
   }
+
+  static public function getCpHtml()
+  {
+    if(isset(self::$asInstancies['display']))
+      return self::$asInstancies['display'];
+
+    return self::getComponentByName('display');
+  }
 }
 ?>
