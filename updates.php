@@ -3,7 +3,7 @@
 	require_once('component/jobboard/jobboard.class.php5');
 	require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
 
-	echo "Updates<br><br>";
+	//echo "Updates<br><br>";
 $array=array('	1	 '=> '	東京	',
 '	2	 '=> '	エドモントン	',
 '	3	 '=> '	バンクーバー	',

@@ -506,6 +506,7 @@ class CJobboardEx extends CJobboard
                        slpd.station as station,
                        slpd.work_hours as work_hours,
                        ind.label as name,
+                       sll.location as location,
                        slpd.meta_keywords as meta_keywords,";
 
       $newSlpdWhere = " AND slpd.language='en' ";
@@ -520,6 +521,7 @@ class CJobboardEx extends CJobboard
                        slpd.station_jp as station,
                        slpd.workHours_jp as work_hours,
                        ind.label_jp as name,
+                       sll.location_jp as location,
                        slpd.metaKey_jp as meta_keywords,";
 
       $newSlpdWhere = " AND slpd.title_jp <> '' ";
@@ -542,7 +544,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery = "SELECT FOUND_ROWS() as count ".$levent."
                      ,slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk, slpd.display_salary as display_salary,
                      slpd.is_public as visibility, slpd.category as category,".$selectCommon."
-                     cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
+                     cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date,
                      slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
                      slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
                      slp.lvl_english as english, ind.sl_industrypk as industryfk,
