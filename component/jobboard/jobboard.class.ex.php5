@@ -461,7 +461,12 @@ ChromePhp::log($urlLanguage);
 ChromePhp::log($lang);
         $cookie_name = "setLang";
         $cookie_value = $lang;
-        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+        setcookie($cookie_name, $cookie_value, time() + 2592000);
+
+        if(!isset($_COOKIE['setLang']))
+        {
+          setcookie($cookie_name, $cookie_value, time() + 2592000);
+        }
 
       }
       else
@@ -2868,7 +2873,7 @@ ChromePhp::log($_COOKIE['setLang']);
 
         $cookie_name = "setLang";
         $cookie_value = $lang;
-        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+        setcookie($cookie_name, $cookie_value, time() + 2592000);
 
       }
       else
