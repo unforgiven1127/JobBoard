@@ -351,7 +351,10 @@ class CJobboarduserEx extends CJobboarduser
         $sHTML.= "<table>
                     <tr>
                       <td>
-                          <b>ID/Position Title: </b><input type='text' class='form-control' name='searchIdTitle'></input>
+                        <b>ID/Position Title: </b>
+                      </td>
+                      <td>
+                          <input type='text' class='form-control' name='searchIdTitle'></input>
                       </td>
                     </tr>
                   </table>";
