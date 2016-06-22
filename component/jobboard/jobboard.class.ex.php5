@@ -2863,6 +2863,7 @@ class CJobboardEx extends CJobboard
     else
     {
       $urlLanguage = explode('setLang=',$urlLanguage);
+ChromePhp::log($urlLanguage);
       if(isset($urlLanguage[1]))
       {
         unset($_COOKIE['setLang']);
