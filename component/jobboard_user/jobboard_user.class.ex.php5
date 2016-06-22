@@ -350,10 +350,10 @@ class CJobboarduserEx extends CJobboarduser
         $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
         $sHTML.= "<table>
                     <tr>
-                      <td>
+                      <td style='font-size:12pt;'>
                         <b>ID/Position Title: </b>
                       </td>
-                      <td>
+                      <td style='margin-left:10px;'>
                           <input type='text' class='form-control' name='searchIdTitle'></input>
                       </td>
                     </tr>
