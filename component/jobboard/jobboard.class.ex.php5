@@ -470,7 +470,7 @@ ChromePhp::log($lang);
       }
     }
 
-//ChromePhp::log($lang);
+ChromePhp::log($_COOKIE['setLang']);
 
     $setLangCookie = $_COOKIE['setLang'];
 
