@@ -8,6 +8,7 @@
 
     var windowWidth = window.innerWidth;
     //alert(windowWidth);
+    windowWidth = windowWidth+'px';
     $('#keyword').width(windowWidth);
 
     </script>
@@ -18,8 +19,8 @@
 
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
        <table style='margin-top:-50px;'>
-        <tr style='width:100%;'>
-          <td style='width:100%;'>
+        <tr >
+          <td class='width'>
             <input placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
           </td>
         </tr>
