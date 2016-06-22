@@ -1651,7 +1651,7 @@ ChromePhp::log($lang);
     {
       $searchUrl = "https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx";
       $html = "<form action='".$searchUrl."' method='post'>
-                 <table>
+                 <table style='padding-top:-50px;'>
                   <tr>
                     <td><input placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'></td>
                   </tr>
