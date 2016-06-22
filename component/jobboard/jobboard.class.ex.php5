@@ -2914,9 +2914,11 @@ class CJobboardEx extends CJobboard
                        slpd.holidays as holidays,
                        slpd.station as station,
                        slpd.work_hours as work_hours,
+                       ind.label as name,
+                       sll.location as location,
                        slpd.meta_keywords as meta_keywords,";
 
-      //$newSlpdWhere = " ";
+      //$newSlpdWhere = " AND slpd.language='en' ";
     }
     else
     {
@@ -2927,6 +2929,8 @@ class CJobboardEx extends CJobboard
                        slpd.holidays_jp as holidays,
                        slpd.station_jp as station,
                        slpd.workHours_jp as work_hours,
+                       ind.label_jp as name,
+                       sll.location_jp as location,
                        slpd.metaKey_jp as meta_keywords,";
 
       //$newSlpdWhere = " AND slpd.title_jp <> '' ";
@@ -2934,14 +2938,14 @@ class CJobboardEx extends CJobboard
 
     $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
                  slpd.display_salary as display_salary,slpd.is_public as visibility, slpd.category as category,".$selectCommon."
-                 cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date, sll.location as location,
+                 cp.sl_companypk as companyfk, slp.status as status, slp.date_created as posted_date,
                  slpd.job_type as job_type, CONCAT(slp.salary_from,' - ',slp.salary_to) as salary, slp.salary_from as salary_low,
                  slp.salary_to as salary_high,  CONCAT(slp.age_from,' - ',slp.age_to) as age, slp.lvl_japanese as japanese,
                  slp.lvl_english as english, ind.sl_industrypk as industryfk,
                  slpd.language as lang, ind.sl_industrypk as temp_industry, slpd.title as page_title,
                  slpd.description as meta_desc, slpd.company_label as company_label,
                  slpd.to_jobboard as to_jobboard, slp.sl_positionpk as external_key, slpd.expiration_date as expiration_date,
-                 ind.sl_industrypk as industrypk, ind.label as name, slp.status as status, ind.parentfk as parentfk,
+                 ind.sl_industrypk as industrypk, slp.status as status, ind.parentfk as parentfk,
                  cp.name as company_name, slpd.raw_data as raw_data, CONCAT(l.firstname,' ',l.lastname) as cons_name, l.email as cons_email
                  FROM sl_position slp
                  INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk
