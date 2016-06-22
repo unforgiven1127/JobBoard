@@ -34,7 +34,7 @@
         <tr>
           <td style='width:100%; padding-top:15px;'>
             <center>
-              <input style="width:90%;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+              <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
             <center>
           </td>
         </tr>
