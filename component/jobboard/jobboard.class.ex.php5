@@ -1653,7 +1653,7 @@ ChromePhp::log($lang);
     {
       $searchUrl = "https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx";
 
-      echo $this->_oDisplay->render('mobile_search');
+      $html = $this->_oDisplay->render('mobile_search');
 
       /*$html = "<form action='".$searchUrl."' method='post'>
                  <table style='margin-top:-50px;'>
