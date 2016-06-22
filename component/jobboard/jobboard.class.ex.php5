@@ -2006,7 +2006,10 @@ ChromePhp::log($lang);
 
         $sHTML.= $oHTML->getFloatHack();
 
-        //compact form displayed here
+      $sHTML.= $oHTML->getBlocEnd();
+
+
+      //compact form displayed here
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'quickSearch jobSearchContainerFolded '.$sGlobalSearchClass));
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'newSearchDiv '));
@@ -2022,10 +2025,6 @@ ChromePhp::log($lang);
 
         $sHTML.= $oHTML->getBlocEnd();
       $sHTML.= $oHTML->getBlocEnd();
-
-      $sHTML.= $oHTML->getBlocEnd();
-
-
 
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
