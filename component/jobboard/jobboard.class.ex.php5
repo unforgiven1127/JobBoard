@@ -1979,7 +1979,7 @@ ChromePhp::log($lang);
     }
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobSearchContainer '.$sClass));
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'detailedSearch jobSearchContainerInner'.$sFullSearchClass));
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'detailedSearch jobSearchContainerInner'));
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'newSearchDiv '));
 
