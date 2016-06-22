@@ -4100,8 +4100,7 @@ ChromePhp::log($lang);
 
   public function getLocationList()
   {
-    $urlLanguage = $_SERVER['REQUEST_URI'];
-
+    $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
     if($urlLanguage == '/')
     {
       $lang = 'en';
@@ -4126,6 +4125,8 @@ ChromePhp::log($lang);
     }
 
     $setLangCookie = $lang;
+
+    if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
       {
