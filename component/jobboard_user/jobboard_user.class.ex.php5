@@ -207,10 +207,22 @@ class CJobboarduserEx extends CJobboarduser
     $bDisplayFilter = true;
 
     $searchValue = $_POST['searchIdTitle'];
-    if(isset($searchValue))
+    if(isset($searchValue) && !empty($searchValue))
     {
-
+      if(is_numeric($searchValue))
+      {
+        $searchString  = " AND slp.sl_positionpk = '".$searchValue."' ";
+      }
+      else
+      {
+        $searchString = " AND slpd.title LIKE '%".$searchValue."%' ";
+      }
     }
+    else
+    {
+      $searchString = " ";
+    }
+
 ChromePhp::log($searchValue);
 
     $sSortField = TRIM(getValue('sortfield'));
@@ -256,7 +268,7 @@ ChromePhp::log($searchValue);
                      INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
                      INNER JOIN sl_company cp on cp.sl_companypk = slp.companyfk
-                     WHERE slpd.is_public = 1 ";
+                     WHERE slpd.is_public = 1 ".$searchString." ";
 
     if(!empty($sSortField))
     {
@@ -366,9 +378,6 @@ ChromePhp::log($searchValue);
                         </td>
                         <td>
                           &nbsp;&nbsp;&nbsp;&nbsp;<button type='submit' class='btn btn-primary btn-sm'>Search</button>
-                        </td>
-                        <td>
-                          &nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary btn-sm'>Search</button>
                         </td>
                       </tr>
                     </table>
