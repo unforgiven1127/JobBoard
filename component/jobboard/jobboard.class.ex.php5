@@ -4123,11 +4123,11 @@ ChromePhp::log($setLangCookie);
     ChromePhp::log($select);
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT ".$select.", sll.sl_locationpk, count(slp.sl_positionpk) as count
+    $slistemQuery = "SELECT ".$select." as location, sll.sl_locationpk, count(slp.sl_positionpk) as count
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
-                     GROUP BY slpd.location ORDER BY sll.location ";
+                     GROUP BY slpd.location ORDER BY ".$select." ";
 ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
