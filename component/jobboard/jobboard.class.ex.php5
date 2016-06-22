@@ -4239,37 +4239,6 @@ ChromePhp::log($setLangCookie);
     return $asLocation;
   }
 
-  public function _languageSlistemtoJobBoard($nineSystem)
-  {
-    if($nineSystem == 9 || $nineSystem == 8)
-    {
-      //return 5;
-      return $this->casText['TALENT_LANG_LVL4'];
-    }
-    else if($nineSystem == 7)
-    {
-      //return 4;
-      return $this->casText['TALENT_LANG_LVL3'];
-    }
-    else if($nineSystem == 6)
-    {
-      //return 3;
-      return $this->casText['TALENT_LANG_LVL2'];
-    }
-    else if($nineSystem == 5)
-    {
-      //return 2;
-      return $this->casText['TALENT_LANG_LVL6'];
-    }
-    else if($nineSystem == 4)
-    {
-      //return 1;
-      return $this->casText['TALENT_LANG_LVL5'];
-    }
-    else
-      return $this->casText['TALENT_LANG_LVL0'];
-      //return 0;
-  }
 
   public function change_language_system($fiveSystem)
   {//ChromePhp::log($fiveSystem);
