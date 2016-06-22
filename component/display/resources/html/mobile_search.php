@@ -26,12 +26,16 @@
        <table style='margin-top:-50px;width:100%;'>
         <tr style="width:100%;">
           <td style="width:100%;" class='width'>
-            <input style="width:90%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+            <center>
+              <input style="width:90%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+            <center>
           </td>
         </tr>
         <tr>
           <td style='width:100%; padding-top:15px;'>
-            <input placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+            <center>
+              <input style="width:90%;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+            <center>
           </td>
         </tr>
        </table>
