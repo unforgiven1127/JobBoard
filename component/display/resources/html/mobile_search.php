@@ -12,10 +12,9 @@
     <script type="text/javascript">
 
     var windowWidth = window.innerWidth;
-    alert($('#keyword').width());
     windowWidth = windowWidth+'px';
-    $('#keyword').width(windowWidth);
-    $("#keyword").val("Dolly Duck");
+    alert(windowWidth);
+    document.getElementById("keyword").style.width = windowWidth;
 
     </script>
 
