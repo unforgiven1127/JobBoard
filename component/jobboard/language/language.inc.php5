@@ -563,6 +563,8 @@ regarding similar positions',
                 'TALENT_COVER_LETTER'=> 'カバーレター',
                 'TALENT_POSITION_TITLE' => 'ポジションタイトル',
                  'TALENT_FOR' =>'宛先',
+                 'TALENT_SELECT_LOCATION'=>'勤務地を選ぶ',
+                 'TALENT_SELECT_INDUSTRY_SELECT'=>'業界を選ぶ',
 
                 'TALENT_CONFIRM_HUMAN' =>'<span style="text-decoration: underline;">Please confirm you\'re human</span>.<br /> What is the result of ',
                 'TALENT_CONFIRM_WHITE' =>'the white background number ',
