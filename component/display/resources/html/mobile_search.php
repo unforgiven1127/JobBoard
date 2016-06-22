@@ -27,7 +27,7 @@
         <tr style="width:100%;">
           <td style="width:100%;" class='width'>
             <center>
-              <input style="width:90%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+              <input style="width:90%; height: 50px; font-size: 15pt;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             <center>
           </td>
         </tr>
