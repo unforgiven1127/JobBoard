@@ -375,14 +375,14 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getSpace(3);
         }
 
-          $sHTML.= '<select name="position_sort2" onchange=" if($(this).val()){ document.location.href = $(this).val(); } " >';
+          /*$sHTML.= '<select name="position_sort2" onchange=" if($(this).val()){ document.location.href = $(this).val(); } " >';
             $sHTML.= '<option value="" > - Slistem specific filters - </option>';
             $sHTML.= '<option value='.$oPage->getUrl('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('lang'=>'en', 'slistem' => 1, 'action'=>'exclude')).' '.(($bSlistemOnly && $bExclude && $bEnglish)? ' selected="selected" ' : '').' > Slistem - Need English description</option>';
             $sHTML.= '<option value='.$oPage->getUrl('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('lang'=>'jp', 'slistem' => 1, 'action'=>'exclude')).' '.(($bSlistemOnly && $bExclude && $bJapanese)? ' selected="selected" ' : '').' > Slistem - Need Japanese description</option>';
             $sHTML.= '<option value="" > -- </option>';
             $sHTML.= '<option value='.$oPage->getUrl('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('lang'=>'en', 'slistem' => 1, 'action'=>'include')).' '.(($bSlistemOnly && $bInclude && $bEnglish)? ' selected="selected" ' : '').'> Slistem - Have English description</option>';
             $sHTML.= '<option value='.$oPage->getUrl('jobboard_user', CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('lang'=>'jp', 'slistem' => 1, 'action'=>'include')).' '.(($bSlistemOnly && $bInclude && $bJapanese)? ' selected="selected" ' : '').'> Slistem - Have Japanese description</option>';
-          $sHTML.= '</select>';
+          $sHTML.= '</select>';*/
 
         $sHTML.= $oHTML->getBlocEnd();
       }
