@@ -2878,7 +2878,7 @@ ChromePhp::log($lang);
       }
     }
 
-        $setLangCookie = $_COOKIE['setLang'];
+    $setLangCookie = $_COOKIE['setLang'];
 
 //ChromePhp::log($setLangCookie);
 
@@ -4173,9 +4173,33 @@ ChromePhp::log($setLangCookie);
   public function getIndustryList()
   {
   //ChromePhp::log('getIndustryList');
-    $setLangCookie = $_COOKIE['setLang'];
-ChromePhp::log('getLocationList');
-ChromePhp::log($setLangCookie);
+
+    $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
+    if($urlLanguage == '/')
+    {
+      $lang = 'en';
+    }
+    else
+    {
+      $urlLanguage = explode('setLang=',$urlLanguage);
+      if(isset($urlLanguage[1]))
+      {
+        unset($_COOKIE['setLang']);
+        $lang = $urlLanguage[1];
+
+        $cookie_name = "setLang";
+        $cookie_value = $lang;
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
+      }
+      else
+      {
+        $lang = 'en';
+      }
+    }
+
+    $setLangCookie = $lang;
+
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
