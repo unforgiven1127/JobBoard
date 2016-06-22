@@ -1,35 +1,34 @@
 <?php
 
-
 function languageSlistemtoJobBoard($nineSystem)
 {
   if($nineSystem == 9 || $nineSystem == 8)
   {
     //return 5;
-    return $this->casText['TALENT_LANG_LVL4'];
+    return 'Native';
   }
   else if($nineSystem == 7)
   {
     //return 4;
-    return $this->casText['TALENT_LANG_LVL3'];
+    return 'Fluent';
   }
   else if($nineSystem == 6)
   {
     //return 3;
-    return $this->casText['TALENT_LANG_LVL2'];
+    return 'Business';
   }
   else if($nineSystem == 5)
   {
     //return 2;
-    return $this->casText['TALENT_LANG_LVL6'];
+    return 'Conversational';
   }
   else if($nineSystem == 4)
   {
     //return 1;
-    return $this->casText['TALENT_LANG_LVL5'];
+    return 'Beginner';
   }
   else
-    return $this->casText['TALENT_LANG_LVL0'];
+    return 'None';
     //return 0;
 }
 
