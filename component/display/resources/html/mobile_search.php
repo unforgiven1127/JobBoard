@@ -27,14 +27,14 @@
         <tr style="width:100%;">
           <td style="width:100%;" class='width'>
             <center>
-              <input style="width:90%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+              <input style="width:90%;" placeholder='Keywords' type='text' class='form-control input-lg' name='keyword' id='keyword'>
             <center>
           </td>
         </tr>
         <tr>
           <td style='width:100%; padding-top:15px;'>
             <center>
-              <input style="width:90%;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+              <input style="width:90%;" placeholder='Occupation' type='text' class='form-control input-lg' name='occupation' id='occupation'>
             <center>
           </td>
         </tr>
