@@ -4120,6 +4120,7 @@ class CJobboardEx extends CJobboard
     {
       $select = " sll.location ";
     }
+    ChromePhp::log($select);
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT ".$select.", sll.sl_locationpk, count(slp.sl_positionpk) as count
@@ -4127,7 +4128,7 @@ class CJobboardEx extends CJobboard
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
                      GROUP BY slpd.location ORDER BY sll.location ";
-
+ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     //$oDbResult = $oDb->executeQuery($sQuery);
