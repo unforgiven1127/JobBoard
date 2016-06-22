@@ -63,6 +63,8 @@ $gasLang = array('en'=>
                'TALENT_APPLY_NOW'=>'Apply Now',
                'TALENT_RETURN_SEARCH' => 'Return to Search',
 
+                'TALENT_SELECT_LOCATION'=>'Select Location',
+                'TALENT_SELECT_INDUSTRY_SELECT'=>'Select Industry'
                 'TALENT_YOUR_NAME'=>'Your Name',
                 'TALENT_YOUR_EMAIL'=>'Your Email Address',
                 'TALENT_YOUR_LETTER'=>'Your Cover Letter',
