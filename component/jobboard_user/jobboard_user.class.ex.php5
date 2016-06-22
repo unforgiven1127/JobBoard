@@ -346,7 +346,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getLink('Add a new position',$sURL,array('style'=>'font-size:14px;'));
         $sHTML.= $oHTML->getBlocEnd();*/
 
-        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
+        $sHTML.= $oHTML->getBlocStart('',array('style'=>'float:left;'));
         $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
         $sHTML.= "<table>
                     <tr>
