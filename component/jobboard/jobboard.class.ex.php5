@@ -1658,7 +1658,7 @@ ChromePhp::log($lang);
                     </td>
                   </tr>
                   <tr>
-                    <td style='width:100%; margin-top:5px;'>
+                    <td style='width:100%; padding-top:15px;'>
                       <input style='width:100%;' placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
                     </td>
                   </tr>
