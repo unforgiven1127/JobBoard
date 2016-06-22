@@ -4103,9 +4103,26 @@ class CJobboardEx extends CJobboard
 
   public function getLocationList()
   {
+    $setLangCookie = $_COOKIE['setLang'];
+
+    if(isset($setLangCookie) && !empty($setLangCookie))
+    {
+      if($setLangCookie == 'en')
+      {
+        $select = " sll.location ";
+      }
+      else
+      {
+        $select = " sll.location_jp ";
+      }
+    }
+    else
+    {
+      $select = " sll.location ";
+    }
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
-    $slistemQuery = "SELECT sll.location, sll.sl_locationpk, count(slp.sl_positionpk) as count
+    $slistemQuery = "SELECT ".$select.", sll.sl_locationpk, count(slp.sl_positionpk) as count
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
@@ -4156,6 +4173,7 @@ class CJobboardEx extends CJobboard
 
   public function getIndustryList()
   {
+    $setLangCookie = $_COOKIE['setLang'];
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT sli.label, sli.sl_industrypk, count(slp.sl_positionpk) as count
