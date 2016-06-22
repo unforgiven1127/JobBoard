@@ -735,7 +735,6 @@ ChromePhp::log($searchValue);
     if(!assert('is_integer($pnPositionPk)'))
       return 'No position obtained.';
 ChromePhp::log($pnPositionPk);
-exit;
     $oPage = CDependency::getComponentByName('page');
     $oDB = CDependency::getComponentByName('database');
 
