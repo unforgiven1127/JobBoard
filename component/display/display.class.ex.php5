@@ -793,7 +793,7 @@ class CDisplayEx extends CDisplay
             else
             {
               if(!empty($asMenuItems['icon']))
-                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'));
+                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic mobilePic'));
               else
                 $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'));
 
