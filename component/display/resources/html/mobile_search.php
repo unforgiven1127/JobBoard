@@ -23,7 +23,7 @@
       {
         background: #892828;
         dispaly: inline-block;
-        width: 100%;
+        width: 50%;
         font-size: 16px;
         height: 50px;
         color: #fff;
@@ -41,15 +41,15 @@
 
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
        <table style='margin-top:-50px;width:100%;'>
-        <tr style="width:100%;">
-          <td style="width:100%;" class='width'>
+        <tr style="">
+          <td style="" class='width'>
             <center>
               <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
           </td>
         </tr>
         <tr>
-          <td style='width:100%; padding-top:15px;'>
+          <td style='padding-top:15px;'>
             <center>
               <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
             </center>
