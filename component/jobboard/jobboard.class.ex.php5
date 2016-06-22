@@ -2196,9 +2196,9 @@ class CJobboardEx extends CJobboard
 
         $sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getSpanStart();
-          $sHTML.= $oHTML->getText("<p style='margin-left:5px;'><b>".$this->casText['TALENT_ENGLISH_ABILITY'].': '."</b><i style='font-weight: lighter;'>".languageSlistemtoJobBoard($positionData['english'])."</i>");
+          $sHTML.= $oHTML->getText("<p style='margin-left:5px;'><b>".$this->casText['TALENT_ENGLISH_ABILITY'].': '."</b><i style='font-weight: lighter;'>".$this->languageSlistemtoJobBoard($positionData['english'])."</i>");
           $sHTML.= $oHTML->getSpanEnd();
-          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;<b>".$this->casText['TALENT_JAP_ABILITY'].': '."</b><i style='font-weight: lighter;'>".languageSlistemtoJobBoard($positionData['japanese'])."</i>&nbsp;&nbsp;&nbsp;<b>".$this->casText['TALENT_POSITION_ID'].': '."</b><i style='font-weight: lighter;'>".$sIdentfier."</p>");
+          $sHTML.= $oHTML->getText("&nbsp;&nbsp;&nbsp;<b>".$this->casText['TALENT_JAP_ABILITY'].': '."</b><i style='font-weight: lighter;'>".$this->languageSlistemtoJobBoard($positionData['japanese'])."</i>&nbsp;&nbsp;&nbsp;<b>".$this->casText['TALENT_POSITION_ID'].': '."</b><i style='font-weight: lighter;'>".$sIdentfier."</p>");
         $sHTML.= $oHTML->getBlocEnd();
 
       /*$sHTML.= $oHTML->getBlocStart('', array('class'=>'jobDetailRow'));
@@ -4237,6 +4237,38 @@ ChromePhp::log($setLangCookie);
 
     //$_SESSION['sl_location_list'] = $asLocation;
     return $asLocation;
+  }
+
+  public function languageSlistemtoJobBoard($nineSystem)
+  {
+    if($nineSystem == 9 || $nineSystem == 8)
+    {
+      //return 5;
+      return $this->casText['TALENT_LANG_LVL4'];
+    }
+    else if($nineSystem == 7)
+    {
+      //return 4;
+      return $this->casText['TALENT_LANG_LVL3'];
+    }
+    else if($nineSystem == 6)
+    {
+      //return 3;
+      return $this->casText['TALENT_LANG_LVL2'];
+    }
+    else if($nineSystem == 5)
+    {
+      //return 2;
+      return $this->casText['TALENT_LANG_LVL6'];
+    }
+    else if($nineSystem == 4)
+    {
+      //return 1;
+      return $this->casText['TALENT_LANG_LVL5'];
+    }
+    else
+      return $this->casText['TALENT_LANG_LVL0'];
+      //return 0;
   }
 
   public function change_language_system($fiveSystem)
