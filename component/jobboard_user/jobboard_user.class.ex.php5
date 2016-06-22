@@ -207,6 +207,7 @@ class CJobboarduserEx extends CJobboarduser
     $bDisplayFilter = true;
 
     $searchValue = $_POST['searchIdTitle'];
+    $searchValue = TRIM($searchValue);
     if(isset($searchValue) && !empty($searchValue))
     {
       if(is_numeric($searchValue))
