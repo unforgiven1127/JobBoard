@@ -4101,7 +4101,8 @@ ChromePhp::log($lang);
   public function getLocationList()
   {
     $setLangCookie = $_COOKIE['setLang'];
-//ChromePhp::log($setLangCookie);
+ChromePhp::log('getLocationList');
+ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
@@ -4173,7 +4174,8 @@ ChromePhp::log($lang);
   {
   //ChromePhp::log('getIndustryList');
     $setLangCookie = $_COOKIE['setLang'];
-  //ChromePhp::log($setLangCookie);
+ChromePhp::log('getIndustryList');
+ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
