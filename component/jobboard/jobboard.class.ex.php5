@@ -1654,7 +1654,7 @@ ChromePhp::log($lang);
                  <table style='margin-top:-50px;'>
                   <tr style='width:100%;'>
                     <td style='width:100%;'>
-                      <input style='width:100%;' placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+                      <input style='width:300px;' placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
                     </td>
                   </tr>
                   <tr>
