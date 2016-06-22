@@ -187,7 +187,7 @@ regarding similar positions',
                'TALENT_BACK_TO_TOP'  => 'Back to top',
                'TALENT_FOLLOW_US'  => 'Follow us',
                'TALENT_LATEST_JOBS'  => 'Latest jobs',
-               'TALENT_FIND_SEARCH'  => 'Find jobs.',
+               'TALENT_FIND_SEARCH'  => "<b style='font-size:15pt;'>Find jobs</b>",
                'TALENT_MORE_DETAILS'  => 'More details here',
 
                'TALENT_GROUP_IT_LEGEND'  => 'IT & Telecom category',
