@@ -18,6 +18,23 @@
 
     </script>
 
+    <style>
+      .log-btn
+      {
+        background: #892828;
+        dispaly: inline-block;
+        width: 100%;
+        font-size: 16px;
+        height: 50px;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -28,14 +45,19 @@
           <td style="width:100%;" class='width'>
             <center>
               <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
-            <center>
+            </center>
           </td>
         </tr>
         <tr>
           <td style='width:100%; padding-top:15px;'>
             <center>
               <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
-            <center>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center><button type="submit" class="log-btn" >Log in</button></center>
           </td>
         </tr>
        </table>
