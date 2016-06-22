@@ -12,7 +12,7 @@
     <script type="text/javascript">
 
     var windowWidth = window.innerWidth;
-    windowWidth = windowWidth+'px';
+    windowWidth = "'"+windowWidth+"px'";
     alert(windowWidth);
     document.getElementById("keyword").style.width = windowWidth;
 
@@ -26,7 +26,7 @@
        <table style='margin-top:-50px;'>
         <tr >
           <td class='width'>
-            <input style="width:900px;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+            <input  placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
           </td>
         </tr>
         <tr>
