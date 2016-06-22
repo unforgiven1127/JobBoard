@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Slate Consulting</title>
 
+    <script type="text/javascript">
+
+    var windowWidth = window.innerWidth;
+    alert(windowWidth);
+
+    </script>
 
   </head>
 
