@@ -1653,10 +1653,14 @@ ChromePhp::log($lang);
       $html = "<form action='".$searchUrl."' method='post'>
                  <table style='margin-top:-50px;'>
                   <tr>
-                    <td><input placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'></td>
+                    <td style='width:100%;'>
+                      <input style='width:100%;' placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+                    </td>
                   </tr>
                   <tr>
-                    <td><input placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'></td>
+                    <td style='width:100%; margin-top:5px;'>
+                      <input style='width:100%;' placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+                    </td>
                   </tr>
                  </table>
                </form>";
