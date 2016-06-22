@@ -1,5 +1,8 @@
 <?php
 
+require_once('component/jobboard/jobboard.class.php5');
+require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
+
 function languageSlistemtoJobBoard($nineSystem)
 {
   if($nineSystem == 9 || $nineSystem == 8)
