@@ -4107,13 +4107,13 @@ class CJobboardEx extends CJobboard
 
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
-      if($setLangCookie == 'en')
+      if($setLangCookie == 'jp')
       {
-        $select = " sll.location ";
+        $select = " sll.location_jp ";
       }
       else
       {
-        $select = " sll.location_jp ";
+        $select = " sll.location ";
       }
     }
     else
