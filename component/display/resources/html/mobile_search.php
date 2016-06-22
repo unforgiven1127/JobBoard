@@ -26,7 +26,7 @@
        <table style='margin-top:-50px;width:100%;'>
         <tr style="width:100%;">
           <td style="width:100%;" class='width'>
-            <input style="width:100%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+            <input style="width:90%;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
           </td>
         </tr>
         <tr>
