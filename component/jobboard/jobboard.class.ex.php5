@@ -4172,9 +4172,9 @@ ChromePhp::log($slistemQuery);
 
   public function getIndustryList()
   {
-    ChromePhp::log('getIndustryList');
+  ChromePhp::log('getIndustryList');
     $setLangCookie = $_COOKIE['setLang'];
-ChromePhp::log($setLangCookie);
+  ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
