@@ -2867,7 +2867,8 @@ class CJobboardEx extends CJobboard
       {
         unset($_COOKIE['setLang']);
         $lang = $urlLanguage[1];
-//ChromePhp::log($lang);
+ChromePhp::log('COOKIE SET EDIYOR');
+ChromePhp::log($lang);
         $cookie_name = "setLang";
         $cookie_value = $lang;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
