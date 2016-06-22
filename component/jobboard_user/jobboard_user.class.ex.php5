@@ -354,10 +354,10 @@ class CJobboarduserEx extends CJobboarduser
                         <h4>ID / Position Title: &nbsp;&nbsp;</h4>
                       </td>
                       <td style='margin-left:10px;'>
-                          <input type='text' class='form-control' name='searchIdTitle'></input>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type='text' class='form-control' name='searchIdTitle'></input>
                       </td>
                       <td>
-                        <button type='button' class='btn btn-primary'>Search</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary'>Search</button>
                       </td>
                     </tr>
                   </table>";
