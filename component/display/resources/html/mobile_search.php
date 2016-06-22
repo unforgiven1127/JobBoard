@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Slate Consulting</title>
+    <link rel="stylesheet" href="common/lib/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="/common/js/jquery.js"></script>
+
+
 
     <script type="text/javascript">
 
