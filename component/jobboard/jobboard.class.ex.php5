@@ -1624,7 +1624,7 @@ ChromePhp::log($lang);
     $oForm->setFormParams('basicSearchForm', true, array('action' => $sURL, 'submitLabel' => $this->casText['TALENT_SEARCH'], 'ajaxTarget' => 'jobListContainer', 'ajaxCallback' => "/*searchFormToggle(false);*/", 'onBeforeSubmit' => "jQuery(body).animate({scrollTop: '0px'}, 600, 'linear'); "));
     $oForm->setFormDisplayParams(array('columns' => 2, 'noButton' => '1'));
 
-    $oForm->addField('input', 'keyword', array('style'=>'font-size:10pt;', 'label' => $this->casText['TALENT_FIND_SEARCH'], 'value' => getValue('keyword')));
+    $oForm->addField('input', 'keyword', array('style'=>'font-size:15pt;', 'label' => $this->casText['TALENT_FIND_SEARCH'], 'value' => getValue('keyword')));
     $oForm->setFieldDisplayParams('keyword',  array('class' => ' basicSearchcustomWidth '));
 
     $oForm->addField('misc', 'searchBtn', array('type' => 'text', 'text' => '<input type="button" value="'.$this->casText['TALENT_SEARCH'].'" onclick="jQuery(this).closest(\'form\').submit();"/>'));
