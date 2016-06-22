@@ -354,8 +354,8 @@ ChromePhp::log($searchValue);
         $sHTML.= $oHTML->getBlocEnd();*/
 
         $sHTML.= $oHTML->getBlocStart();
-        $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0);
-        $sHTML.= "<form action='".$sURL."' method='post'>
+        $searchUrl = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0);
+        $sHTML.= "<form action='".$searchUrl."' method='post'>
                     <table>
                       <tr>
                         <td>
@@ -367,12 +367,15 @@ ChromePhp::log($searchValue);
                         <td>
                           &nbsp;&nbsp;&nbsp;&nbsp;<button type='submit' class='btn btn-primary btn-sm'>Search</button>
                         </td>
+                        <td>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary btn-sm'>Search</button>
+                        </td>
                       </tr>
                     </table>
                   </form>";
-        $sHTML.= $oHTML->getBlocEnd();
+        //$sHTML.= $oHTML->getBlocEnd();
 
-        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
+        //$sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
         $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_SEND, CONST_TA_TYPE_LIST_JOB);
         $sHTML.= $oHTML->getLink('Export Company List',$sURL);
         $sHTML.= $oHTML->getBlocEnd();
