@@ -2010,7 +2010,7 @@ ChromePhp::log($lang);
 
 
       //compact form displayed here
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'quickSearch jobSearchContainerFolded','style'=>'visibility: hidden;'));
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'quickSearch jobSearchContainerFolded','style'=>'display: none;'));
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'newSearchDiv '));
 
