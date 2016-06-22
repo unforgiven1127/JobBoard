@@ -4126,7 +4126,7 @@ class CJobboardEx extends CJobboard
 
   public function getLanguageList()
   {
-    $language = array('None','Beginner','Conversational','Business','Fluent','Native');
+    $language = array($this->casText['TALENT_LANG_LVL0'],$this->casText['TALENT_LANG_LVL5'],$this->casText['TALENT_LANG_LVL6'],$this->casText['TALENT_LANG_LVL2'],$this->casText['TALENT_LANG_LVL3'],$this->casText['TALENT_LANG_LVL4']);
     $i = 1;
     $asLocation = array();
 
