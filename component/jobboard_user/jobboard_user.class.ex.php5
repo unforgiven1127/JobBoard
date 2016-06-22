@@ -347,20 +347,22 @@ class CJobboarduserEx extends CJobboarduser
         $sHTML.= $oHTML->getBlocEnd();*/
 
         $sHTML.= $oHTML->getBlocStart();
-        $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
-        $sHTML.= "<table>
-                    <tr>
-                      <td>
-                        <h6><b>ID / Position Title: </b>&nbsp;&nbsp;</h6>
-                      </td>
-                      <td style='margin-left:10px;'>
-                          <input type='text' class='form-control input-sm' name='searchIdTitle'></input>
-                      </td>
-                      <td>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary btn-sm'>Search</button>
-                      </td>
-                    </tr>
-                  </table>";
+        $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0);
+        $sHTML.= "<form action='".$sURL."' method='post'>
+                    <table>
+                      <tr>
+                        <td>
+                          <h6><b>ID / Position Title: </b>&nbsp;&nbsp;</h6>
+                        </td>
+                        <td style='margin-left:10px;'>
+                            <input type='text' class='form-control input-sm' name='searchIdTitle'></input>
+                        </td>
+                        <td>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<button type='submit' class='btn btn-primary btn-sm'>Search</button>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>";
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
