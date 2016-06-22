@@ -348,7 +348,13 @@ class CJobboarduserEx extends CJobboarduser
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
         $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
-        $sHTML.= "<b>ID/Position Title: </b><input type='text' class='form-control' name='searchIdTitle'></input>";
+        $sHTML.= "<table>
+                    <tr>
+                      <td>
+                          <b>ID/Position Title: </b><input type='text' class='form-control' name='searchIdTitle'></input>
+                      </td>
+                    </tr>
+                  </table>";
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
