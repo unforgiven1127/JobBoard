@@ -375,7 +375,7 @@ ChromePhp::log($searchValue);
                   </form>";
         $sHTML.= $oHTML->getBlocEnd();
 
-        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
+        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;margin-top:5px;'));
         $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_SEND, CONST_TA_TYPE_LIST_JOB);
         $sHTML.= $oHTML->getLink('Export Company List',$sURL);
         $sHTML.= $oHTML->getBlocEnd();
