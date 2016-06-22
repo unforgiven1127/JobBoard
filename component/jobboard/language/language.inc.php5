@@ -182,7 +182,7 @@ $gasLang = array('en'=>
               'TALENT_CONTACT_ANYONE' => 'I accept to be contacted by other companies or specialist recruiters
 regarding similar positions',
 
-               'TALENT_CLOSE_SEARCH'=>'Switch to simple search',
+               'TALENT_CLOSE_SEARCH'=>'<b>Switch to simple search</b>',
                'TALENT_OPEN_SEARCH'=>'Switch to advanced search',
                'TALENT_BACK_TO_TOP'  => 'Back to top',
                'TALENT_FOLLOW_US'  => 'Follow us',
