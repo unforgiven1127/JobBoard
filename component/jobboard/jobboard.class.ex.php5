@@ -4103,7 +4103,7 @@ ChromePhp::log($lang);
   public function getLocationList()
   {
     $setLangCookie = $_COOKIE['setLang'];
-ChromePhp::log($setLangCookie);
+//ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
@@ -4119,7 +4119,7 @@ ChromePhp::log($setLangCookie);
     {
       $select = " sll.location ";
     }
-    ChromePhp::log($select);
+    //ChromePhp::log($select);
     //$oDb = CDependency::getComponentByName('database');
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT ".$select." as location, sll.sl_locationpk, count(slp.sl_positionpk) as count
@@ -4127,7 +4127,7 @@ ChromePhp::log($setLangCookie);
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk and slpd.is_public = '1' AND slpd.public_flag = 'a'
                      INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
                      GROUP BY slpd.location ORDER BY ".$select." ";
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     //$oDbResult = $oDb->executeQuery($sQuery);
@@ -4173,9 +4173,9 @@ ChromePhp::log($slistemQuery);
 
   public function getIndustryList()
   {
-  ChromePhp::log('getIndustryList');
+  //ChromePhp::log('getIndustryList');
     $setLangCookie = $_COOKIE['setLang'];
-  ChromePhp::log($setLangCookie);
+  //ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
       if($setLangCookie == 'jp')
