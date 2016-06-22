@@ -1990,7 +1990,7 @@ ChromePhp::log($lang);
           $sHTML.= $oHTML->getBlocStart('', array('class' => 'floatRight', 'style' => 'margin-top: 5px; width: 150px;'));
           $sPicture = $oHTML->getPicture($this->getResourcePath().'pictures/close_search_form.png', $this->casText['TALENT_CLOSE_FORM'], '', array('style' => 'position: absolute; right: 5px; top: -1px;'));
           $sHTML.= $oHTML->getLink($this->casText['TALENT_CLOSE_SEARCH'].' '.$sPicture, 'javascript:;',
-            array('onclick'=> ' $(\'.quickSearch\').toggle();'
+            array('onclick'=> '$(\'.detailedSearch\').toggle(); $(\'.quickSearch\').toggle();'
 
               , 'style' => 'line-height: 20px; position: relative; padding-right: 25px; color: #555;'));
           $sHTML.= $oHTML->getBlocEnd();
@@ -2010,7 +2010,7 @@ ChromePhp::log($lang);
 
 
       //compact form displayed here
-      $sHTML.= $oHTML->getBlocStart('',array('class'=>'quickSearch  '));
+      $sHTML.= $oHTML->getBlocStart('',array('class'=>'quickSearch jobSearchContainerFolded '.$sGlobalSearchClass));
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'newSearchDiv '));
 
