@@ -7,7 +7,7 @@
     <script type="text/javascript">
 
     var windowWidth = window.innerWidth;
-    //alert(windowWidth);
+    alert($('#keyword').width());
     windowWidth = windowWidth+'px';
     $('#keyword').width(windowWidth);
 
