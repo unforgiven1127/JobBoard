@@ -365,7 +365,7 @@ input[type=button]:hover, input[type=submit]:hover
   min-height:550px;
   margin:0 auto;
   background-color: #FFFFFF;
-  *text-align: center;
+  *text-align: left;
 }
 
 /* ************************************************************** */
@@ -493,7 +493,7 @@ form
 
 .menuNavList
 {
-  float: left;
+  float: center;
   height: 32px;
   width: 100%;
   z-index:100;
