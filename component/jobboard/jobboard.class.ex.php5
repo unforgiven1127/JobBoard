@@ -3765,7 +3765,7 @@ class CJobboardEx extends CJobboard
           //$nIndustryPk = (int)$asIndustry['industrypk'];
           $nIndustryPk = (int)$asIndustry['sl_industrypk'];
           $nParentFk = (int)$asIndustry['parentfk'];
-          ChromePhp::log($nParentFk);
+          //ChromePhp::log($nParentFk);
           switch($nParentFk)
           {
             //then parenty industry ones
