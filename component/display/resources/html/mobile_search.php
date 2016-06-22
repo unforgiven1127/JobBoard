@@ -14,6 +14,7 @@
     alert($('#keyword').width());
     windowWidth = windowWidth+'px';
     $('#keyword').width(windowWidth);
+    $('#keyword').val('asdasdad');
 
     </script>
 
