@@ -1675,12 +1675,12 @@ ChromePhp::log($lang);
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobCentreSection'));
         $sHTML.= $oHTML->getBlocStart('mainJobContainer', array('class' => 'redBorderTop'));
 
-        //search form
-        $sHTML.= $this->_getJobSearchSection($sSearchId, true);
 
         //list of jobs
         $avResult = $this->_getJobSearchResult($sSearchId);
 
+        //search form
+        $sHTML.= $this->_getJobSearchSection($sSearchId, true);
         $positionCount = $avResult['positionData'][0]['count'];
 
         //ChromePhp::log($avResult);
@@ -1995,7 +1995,7 @@ ChromePhp::log($lang);
         $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
 
-
+    $this->_getAjaxJobSearchResult();
         // full Search Form
         $sHTML.= $oHTML->getBlocStart('advanced_search_form', array('class'=>'searchFormContainer'));
         $sHTML.= $this->_getJobSearchForm(true);
@@ -2026,7 +2026,6 @@ ChromePhp::log($lang);
     $sHTML.= $oHTML->getBlocEnd();
     $sHTML.= $oHTML->getFloatHack();
 
-    $this->_getAjaxJobSearchResult();
 
     return $sHTML;
   }
@@ -4174,7 +4173,7 @@ ChromePhp::log($setLangCookie);
   {
   //ChromePhp::log('getIndustryList');
     $setLangCookie = $_COOKIE['setLang'];
-ChromePhp::log('getLocationList');
+ChromePhp::log('getIndustryList');
 ChromePhp::log($setLangCookie);
     if(isset($setLangCookie) && !empty($setLangCookie))
     {
