@@ -346,6 +346,11 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getLink('Add a new position',$sURL,array('style'=>'font-size:14px;'));
         $sHTML.= $oHTML->getBlocEnd();*/
 
+        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
+        $sURL = $oPage->getUrl($this->csUid, CONST_ACTION_LIST, CONST_TA_TYPE_LIST_JOB, 0, array('searchId' => $psSearchId));
+        $sHTML.= $oForm->addField('input', 'keyword', array('label' => $this->casText['TALENT_KEYWORDS'], 'value' => getValue('keyword')));
+        $sHTML.= $oHTML->getBlocEnd();
+
         $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
         $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_SEND, CONST_TA_TYPE_LIST_JOB);
         $sHTML.= $oHTML->getLink('Export Company List',$sURL);
