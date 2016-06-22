@@ -346,7 +346,7 @@ class CJobboarduserEx extends CJobboarduser
           $sHTML.= $oHTML->getLink('Add a new position',$sURL,array('style'=>'font-size:14px;'));
         $sHTML.= $oHTML->getBlocEnd();*/
 
-        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:left;'));
+        $sHTML.= $oHTML->getBlocStart('',array('style'=>'width:200px;float:right;'));
         $sURL = $oPage->getURL('jobboard_user',CONST_ACTION_SEND, CONST_TA_TYPE_LIST_JOB);
         $sHTML.= $oHTML->getLink('Export Company List',$sURL);
         $sHTML.= $oHTML->getBlocEnd();
