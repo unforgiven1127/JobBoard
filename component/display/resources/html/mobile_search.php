@@ -40,9 +40,16 @@
   <body>
 
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
-       <table style='margin-top:-50px;width:100%;'>
-        <tr style="">
-          <td style="" class='width'>
+       <table style='width:100%;'>
+        <tr>
+          <td>
+            <a href="http://www.slate.co.jp">
+              <img src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class='width'>
             <center>
               <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
