@@ -63,21 +63,21 @@
         <tr>
           <td style='padding-top:15px;' class='width'>
             <center>
-              <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+              <input style="width:100%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
           </td>
         </tr>
         <tr>
           <td style='padding-top:15px;'>
             <center>
-              <input style="width:90%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+              <input style="width:100%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
             </center>
           </td>
         </tr>
         <tr>
           <td style='padding-top:15px;'>
             <center>
-              <select style="width:90%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
+              <select style="width:100%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <option value='' >Select Industry</option>
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
