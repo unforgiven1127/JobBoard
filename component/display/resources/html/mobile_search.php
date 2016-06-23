@@ -106,10 +106,10 @@
             $i++;
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 34px;'>".$value['position_title']."</p></b>
-                      <b><p style='font-size: 34px;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 34px;'>".$value['name']."</p></b>
-                      <p style='font-size: 34px;'>- More</p>
+                      <b><p style='font-size: 32px;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 32px;'>".$value['location']."</p></b>
+                      <b><p style='font-size: 32px;'>".$value['name']."</p></b>
+                      <p style='font-size: 32px;'>- More</p>
                     </td>
                   </tr>";
         } ?>
