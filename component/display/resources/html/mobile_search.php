@@ -2,6 +2,9 @@
 <html >
   <head>
     <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
     <title>Slate Consulting</title>
     <link rel="stylesheet" href="common/lib/bootstrap/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
