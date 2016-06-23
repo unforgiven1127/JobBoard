@@ -65,7 +65,7 @@
         <tr>
           <td style='padding-top:15px;'>
             <center>
-              <select style="width:90%; height: 100px; font-size: 40pt;" class="form-control" name="industry" id="industry">
+              <select style="width:90%; height: 100px; font-size: 40pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
                 } ?>
