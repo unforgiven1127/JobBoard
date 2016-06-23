@@ -63,8 +63,8 @@
           </td>
         </tr>
         <tr>
-          <td>
-              <select style="width:90%;" class="form-control" name="industry" id="industry">
+          <td style='padding-top:15px;'>
+              <select style="width:90%; height: 100px; font-size: 40pt;" class="form-control" name="industry" id="industry">
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
                 } ?>
