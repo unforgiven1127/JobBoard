@@ -42,7 +42,7 @@
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
        <table bgcolor="white" style='width:100%; background: url("http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/bg_s.png") no-repeat center center fixed;'>
         <tr>
-          <td>
+          <td style="width:90%;">
             <a href="http://www.slate.co.jp">
               <img style='margin-left:50px; width: 400px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
@@ -50,7 +50,7 @@
               <img align="right" style='width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
             </a>
             <a href="" >
-              <img align="right" style='padding-left:10px; padding-right:50px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+              <img align="right" style='margin-left:10px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
             </a>
           </td>
         </tr>
