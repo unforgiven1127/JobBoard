@@ -65,32 +65,32 @@
         <tr>
           <td >
             <a href="http://www.slate.co.jp">
-              <img style=' width: 120px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+              <img style=' width: 150px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
             <a href="" >
-              <img align="right" style='width: 30px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+              <img align="right" style='width: 50px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
             </a>
             <a href="" >
-              <img align="right" style='margin-left:10px; margin-right:10px; width: 30px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
+              <img align="right" style='margin-left:10px; margin-right:10px; width: 50px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
             </a>
           </td>
         </tr>
         <tr>
-          <td style='padding-top:15px;' class='width'>
+          <td style='padding-top:5px;' class='width'>
             <center>
               <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
           </td>
         </tr>
         <tr>
-          <td style='padding-top:15px;'>
+          <td style='padding-top:5px;'>
             <center>
               <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
             </center>
           </td>
         </tr>
         <tr>
-          <td style='padding-top:15px;'>
+          <td style='padding-top:5px;'>
             <center>
               <select style="width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <option value='' >Select Industry</option>
@@ -102,7 +102,7 @@
           </td>
         </tr>
         <tr>
-          <td style='padding-top:15px; padding-bottom:10px;'>
+          <td style='padding-top:5px; padding-bottom:10px;'>
             <center><button style="font-size: 10pt; height: 25px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
