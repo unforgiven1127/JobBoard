@@ -128,7 +128,7 @@
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                <i><p style='font-size: 8pt;'><b>Description: <br></b>".($value['position_desc'])."</p></i>
+                <i><p style='font-size: 8pt;'>Description: <br>".($value['position_desc'])."</p></i>
                 <i><p style='font-size: 8pt;'><b>Requirements: <br></b>".($value['requirements'])."</p></i>
                 <i><p style='font-size: 8pt;'>- Click for less</p></i>
               </td>
