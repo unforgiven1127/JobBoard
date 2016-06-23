@@ -58,22 +58,22 @@
       ::-webkit-input-placeholder
       {
          padding-left:3px;
-         color:black;
+         color: #d0cdfa;
          font-size: 11pt;
         }
         :-moz-placeholder { /* older Firefox*/
          padding-left:3px;
-         color:black;
+         color: #d0cdfa;
          font-size: 11pt;
         }
         ::-moz-placeholder { /* Firefox 19+ */
          padding-left:3px;
-         color:black;
+         color: #d0cdfa;
          font-size: 11pt;
         }
         :-ms-input-placeholder {
          padding-left:3px;
-         color:black;
+         color: #d0cdfa;
          font-size: 11pt;
         }
 
