@@ -16,6 +16,7 @@
             var id = this.id;
 
             var hidden = "#"+id+"_hidden";
+            alert(hidden);
             $(hidden).toggle();
             //alert(id);
         });
