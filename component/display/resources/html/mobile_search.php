@@ -23,7 +23,7 @@
         $(".less").click(function(){
             var id = this.id;
             //alert(id);
-            var hidden = id+"_hidden";
+            var hidden = id;
             document.getElementById(hidden).style.display = 'none';
 
         });
