@@ -93,8 +93,19 @@
         </tr>
         <br>
         <br>
-        <?php foreach($positions as $key => $value){
-            echo "<tr class='border_bottom' style='width:90% !important; background-color:rgba(138, 40, 40, 0.10)'>
+        <?php
+        $i = 2;
+        foreach($positions as $key => $value)
+        {
+            if($i % 2 == 0)
+            {
+              $color = "background-color:rgba(138, 40, 40, 0.10);";
+            }
+            else
+            {
+              $color = "background-color:rgba(212, 212, 212, 0.4);";
+            }
+            echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;' align='center'>
                       <p style='font-size: 20pt;'>".$value['position_title']."</p>
                       <p style='font-size: 20pt;'>".$value['location']."</p>
