@@ -741,7 +741,7 @@ class CJobboardEx extends CJobboard
 //ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 ChromePhp::log($mobileFlag);
-    if($mobileFlag == true)
+    if($mobileFlag == 'mobile')
     {
       ChromePhp::log('icerde');
       return $positionData;
@@ -1662,7 +1662,7 @@ ChromePhp::log($mobileFlag);
       $industries = $this->getIndustryList();
       $data['industries'] = $industries;
 
-      $positions = $this->_getJobSearchResult($psSearchId = '' , $mobileFlag = true);
+      $positions = $this->_getJobSearchResult($psSearchId = '' , $mobileFlag = 'mobile');
       $data['positions'] = $positions;
 
       $html = $this->_oDisplay->render('mobile_search',$data);
