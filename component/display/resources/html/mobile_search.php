@@ -63,6 +63,15 @@
           </td>
         </tr>
         <tr>
+          <td>
+              <select style="width:90%;" class="form-control" name="industry" id="industry">
+                <?php foreach($industries as $key => $value){
+                  echo "<option value='$key' >$valuey</option>";
+                } ?>
+              </select>
+          </td>
+        </tr>
+        <tr>
           <td style='padding-top:15px;'>
             <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
