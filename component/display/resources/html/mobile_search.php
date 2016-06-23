@@ -80,6 +80,11 @@
          padding-left:3px;
          font-size: 11pt;
         }
+        li{
+          list-style-type: disc;
+          list-style-position: inside;
+          text-indent: -1em;
+        }
 
     </style>
 
@@ -149,9 +154,9 @@
             }
             echo "<tr id='".$i."_move' class='border_bottom' style='width:90% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><li style='list-style: disc outside none; font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</li></b>
-                      <b><li style='list-style: disc outside none; font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['location']."</li></b>
-                      <b><li style='list-style: disc outside none; font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['name']."</li></b>
+                      <b><li style='font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</li></b>
+                      <b><li style='font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['location']."</li></b>
+                      <b><li style='font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['name']."</li></b>
                       <b><p id='".$i."' class='more' style='font-size: 10pt; margin-top: 1em;'>
                         <a style='font-size: 10pt; font-style: oblique;'>+ Click for more</a>
                       </p></b>
