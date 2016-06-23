@@ -23,6 +23,8 @@
       tr.border_bottom td
       {
         border-bottom:1pt solid black;
+        overflow: hidden;
+        width: 90%;
       }
 
       .log-btn
