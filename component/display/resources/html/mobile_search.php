@@ -22,7 +22,7 @@
 
         $(".less").click(function(){
             var id = this.id;
-            alert(id);
+            //alert(id);
             var hidden = id;
             document.getElementById(hidden).style.display = 'none';
 
@@ -118,10 +118,10 @@
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 23pt;'>".$value['position_title']."</p></b>
-                      <b><p style='font-size: 23pt;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 23pt;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 23pt;'>+ Click for more</p></b>
+                      <b><p style='font-size: 22pt;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 22pt;'>".$value['location']."</p></b>
+                      <b><p style='font-size: 22pt;'>".$value['name']."</p></b>
+                      <b><p style='font-size: 22pt;'>+ Click for more</p></b>
                     </td>
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
