@@ -54,6 +54,9 @@
         -webkit-border-radius: 4px;
         border-radius: 4px;
       }
+      select option:first-child{
+        color: green;
+      }
     </style>
 
   </head>
@@ -93,7 +96,7 @@
           <td style='padding-top:5px;'>
             <center>
               <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
-                <option style="color:lightgrey;" value='' ><p style="color:lightgrey;">Select Industry</p></option>
+                <option style="color:lightgrey;" value='' >Select Industry</option>
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
                 } ?>
