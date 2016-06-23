@@ -89,13 +89,11 @@
        <table style="margin-top:10px;" class="table table-striped">
         <?php foreach($positions as $key => $value){
             echo "<tr>
-                    <td><p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p></td>
-                  </tr>
-                  <tr>
-                    <td><p style='width:90%; font-size: 20pt;'>".$value['location']."</p></td>
-                  </tr>
-                  <tr>
-                    <td><p style='width:90%; font-size: 20pt;'>".$value['name']."</p></td>
+                    <td>
+                      <p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p>
+                      <p style='width:90%; font-size: 20pt;'>".$value['location']."</p>
+                      <p style='width:90%; font-size: 20pt;'>".$value['name']."</p>
+                    </td>
                   </tr>";
         } ?>
        </table>
