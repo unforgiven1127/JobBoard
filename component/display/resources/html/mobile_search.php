@@ -46,6 +46,12 @@
             <a href="http://www.slate.co.jp">
               <img style='margin-left:50px; width: 400px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
+            <a href="" align="right">
+              <img style='width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
+            </a>
+            <a href="" align="right">
+              <img style='margin-left:10px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+            </a>
           </td>
         </tr>
         <tr>
