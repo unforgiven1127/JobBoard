@@ -57,16 +57,16 @@
 
       ::-webkit-input-placeholder
       {
-         margin-left:10px;
+         margin-left:15px;
         }
         :-moz-placeholder { /* older Firefox*/
-         margin-left:10px;
+         margin-left:15px;
         }
         ::-moz-placeholder { /* Firefox 19+ */
-         margin-left:10px;
+         margin-left:15px;
         }
         :-ms-input-placeholder {
-         margin-left:10px;
+         margin-left:15px;
         }
 
     </style>
