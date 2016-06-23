@@ -12,10 +12,11 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
-    $(".more").click(function(){
-        alert("The paragraph was clicked.");
+        $(".more").click(function(){
+            var id = this.id;
+            alert(id);
+        });
     });
-});
 
     </script>
 
@@ -106,7 +107,7 @@
             }
             $i++;
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
-                    <td class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+                    <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
                       <b><p style='font-size: 24pt;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 24pt;'>".$value['location']."</p></b>
                       <b><p style='font-size: 24pt;'>".$value['name']."</p></b>
