@@ -109,7 +109,6 @@
                       <b><p style='font-size: 26pt;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 26pt;'>".$value['location']."</p></b>
                       <b><p style='font-size: 26pt;'>".$value['name']."</p></b>
-                      <p>- More</p>
                     </td>
                   </tr>";
         } ?>
