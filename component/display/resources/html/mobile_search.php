@@ -92,8 +92,9 @@
           </td>
         </tr>
         <br>
+        <br>
         <?php foreach($positions as $key => $value){
-            echo "<tr class='border_bottom' style='background-color:rgba(0,0,0,0)'>
+            echo "<tr class='border_bottom' style='width:90%; background-color:rgba(0,0,0,0)'>
                     <td align='center'>
                       <p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p>
                       <p style='width:90%; font-size: 20pt;'>".$value['location']."</p>
