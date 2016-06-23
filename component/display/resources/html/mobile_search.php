@@ -58,22 +58,18 @@
       ::-webkit-input-placeholder
       {
          padding-left:3px;
-         color: #d0cdfa;
          font-size: 11pt;
         }
         :-moz-placeholder { /* older Firefox*/
          padding-left:3px;
-         color: #d0cdfa;
          font-size: 11pt;
         }
         ::-moz-placeholder { /* Firefox 19+ */
          padding-left:3px;
-         color: #d0cdfa;
          font-size: 11pt;
         }
         :-ms-input-placeholder {
          padding-left:3px;
-         color: #d0cdfa;
          font-size: 11pt;
         }
 
@@ -148,7 +144,7 @@
                       <b><p style='font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['location']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 10pt; margin-top: 1em;'>+ Click for more</p></b>
+                      <b><p style='font-size: 10pt; margin-top: 1em;'><a>+ Click for more</a></p></b>
                     </td>
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:100% !important; ".$color." '>
