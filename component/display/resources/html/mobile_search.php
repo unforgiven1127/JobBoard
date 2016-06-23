@@ -13,15 +13,15 @@
 
     <script type="text/javascript">
 
-    var yPosition = 0;
-    var xPosition = 0;
+    //var yPosition = 0;
+    //var xPosition = 0;
 
     $(document).ready(function(){
         $(".more").click(function(e){
             var id = this.id;
-            yPosition = e.clientY;
-            xPosition = e.clientX;
-            alert(yPosition);
+            //yPosition = e.clientY;
+            //xPosition = e.clientX;
+            //alert(yPosition);
             var hidden = id+"_hidden_div";
             document.getElementById(hidden).style.display = 'block';
 
@@ -33,8 +33,8 @@
             var hidden = id;
             var hidden = hidden+"_div";
             document.getElementById(hidden).style.display = 'none';
-            alert(yPosition);
-            window.scrollTo(xPosition, yPosition);
+            //alert(yPosition);
+            //window.scrollTo(xPosition, yPosition);
 
         });
     });
