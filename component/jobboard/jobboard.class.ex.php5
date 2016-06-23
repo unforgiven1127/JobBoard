@@ -448,7 +448,7 @@ class CJobboardEx extends CJobboard
     }*/
 
     $urlLanguage = $_SERVER['REQUEST_URI'];//$_GET['setLang']; // ilk basta null = en japonca secilince jp geliyor. buna gore query degistirirsek isimiz biter
-ChromePhp::log($urlLanguage);
+//ChromePhp::log($urlLanguage);
     if($urlLanguage == '/')
     {
       $lang = 'en';
@@ -460,7 +460,7 @@ ChromePhp::log($urlLanguage);
       {
         unset($_COOKIE['setLang']);
         $lang = $urlLanguage[1];
-ChromePhp::log($lang);
+//ChromePhp::log($lang);
         $cookie_name = "setLang";
         $cookie_value = $lang;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
