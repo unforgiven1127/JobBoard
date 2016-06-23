@@ -88,7 +88,7 @@
        </table>
        <table style="margin-top:10px;" class="table table-striped-slate">
         <?php foreach($positions as $key => $value){
-            echo "<tr style='background-color: rgba(138, 40, 40, 0.4)'>
+            echo "<tr style='background-color: #f9f9f9'>
                     <td align='center'>
                       <p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p>
                       <p style='width:90%; font-size: 20pt;'>".$value['location']."</p>
