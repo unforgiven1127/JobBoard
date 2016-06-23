@@ -15,9 +15,8 @@
         $(".more").click(function(){
             var id = this.id;
 
-            var hidden = "#"+id+"_hidden";
-            alert(hidden);
-            $(hidden).toggle();
+            var hidden = id+"_hidden";
+            document.getElementById(hidden).style.display = 'block';
             //alert(id);
         });
     });
