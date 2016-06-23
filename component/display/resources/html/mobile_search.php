@@ -161,15 +161,15 @@
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'><br>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
-                <table>
+                <table style='width:100%;'>
                   <tr>
-                    <td>
+                    <td style='width:50%;'>
                       <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
                         <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'>- Click for less</a>
                       </p></i>
                     <td>
 
-                    <td align='right'>
+                    <td align='right' style='width:50%;'>
                       <i><p class='less' align='right' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
                         <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'># Apply</a>
                       </p></i>
