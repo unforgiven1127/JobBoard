@@ -110,6 +110,8 @@
         $i = 2;
         foreach($positions as $key => $value)
         {
+            $value['position_desc'] = str_replace('<strong class="seo_keyword">','',$value['position_desc']);
+
             if($i % 2 == 0)
             {
               $color = "background-color:rgba(138, 40, 40, 0.05);";
@@ -128,8 +130,8 @@
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                <i><p style='font-size: 8pt;'>Description: <br>".($value['position_desc'])."</p></i>
-                <i><p style='font-size: 8pt;'><b>Requirements: <br></b>".($value['requirements'])."</p></i>
+                <i><p style='font-size: 8pt;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
+                <i><p style='font-size: 8pt;'><b>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
                 <i><p style='font-size: 8pt;'>- Click for less</p></i>
               </td>
             </tr>";
