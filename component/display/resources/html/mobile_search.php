@@ -164,6 +164,9 @@
                 <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
                   <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'>- Click for less</a>
                 </p></i>
+                <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
+                  <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'>- Click for less</a>
+                </p></i>
               </td>
             </tr>";
             $i++;
