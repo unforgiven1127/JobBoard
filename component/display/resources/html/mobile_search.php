@@ -86,10 +86,10 @@
           </td>
         </tr>
        </table>
-       <table align="center" style="margin-top:10px; width:90%;" class="table table-striped">
+       <table style="margin-top:10px;" class="table table-striped">
         <?php foreach($positions as $key => $value){
             echo "<tr>
-                    <td>
+                    <td align="center">
                       <p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p>
                       <p style='width:90%; font-size: 20pt;'>".$value['location']."</p>
                       <p style='width:90%; font-size: 20pt;'>".$value['name']."</p>
