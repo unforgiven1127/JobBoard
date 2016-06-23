@@ -44,7 +44,7 @@
         <tr>
           <td>
             <a href="http://www.slate.co.jp">
-              <img style='margin-left:50px; width: 500px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+              <img style='margin-left:50px; width: 400px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
           </td>
         </tr>
