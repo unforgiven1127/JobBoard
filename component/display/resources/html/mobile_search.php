@@ -65,13 +65,13 @@
         <tr>
           <td >
             <a href="http://www.slate.co.jp">
-              <img style=' width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+              <img style=' width: 120px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
             <a href="" >
-              <img align="right" style='width: 25px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+              <img align="right" style='width: 30px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
             </a>
             <a href="" >
-              <img align="right" style='margin-left:10px; margin-right:10px; width: 25px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
+              <img align="right" style='margin-left:10px; margin-right:10px; width: 30px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
             </a>
           </td>
         </tr>
