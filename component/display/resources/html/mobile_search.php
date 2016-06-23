@@ -130,7 +130,7 @@
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                <i><p style='font-size: 8pt; margin-top: 5em; margin-bottom: 0em;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
+                <i><p style='font-size: 8pt; margin-top: 5px; margin-bottom: 0em;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'>- Click for less</p></i>
               </td>
