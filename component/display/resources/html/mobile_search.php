@@ -124,8 +124,8 @@
                       <b><p style='font-size: 23pt;'>+ Click for more</p></b>
                     </td>
                   </tr>";
-            echo "<tr id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
-              <td class='less' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+            echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
+              <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
                 <i><p style='font-size: 15pt;'>".$value['position_desc']."</p></i>
                 <i><p style='font-size: 15pt;'>".$value['requirements']."</p></i>
                 <i><p style='font-size: 15pt;'>- Click for less</p></i>
