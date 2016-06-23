@@ -11,9 +11,11 @@
 
     <script type="text/javascript">
 
-    $( ".more" ).click(function() {
-      alert( "MORE" );
+    $(document).ready(function(){
+    $(".more").click(function(){
+        alert("The paragraph was clicked.");
     });
+});
 
     </script>
 
