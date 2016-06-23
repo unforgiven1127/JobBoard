@@ -140,11 +140,11 @@
               $color = "background-color:rgba(212, 212, 212, 0.4);";
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
-                    <td class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+                    <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
                       <b><p style='font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['location']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['name']."</p></b>
-                      <b><p id='".$i."' style='font-size: 10pt; margin-top: 1em;'>
+                      <b><p id='".$i."' class='more' style='font-size: 10pt; margin-top: 1em;'>
                         <a style='font-size: 10pt; font-style: oblique;'>+ Click for more</a>
                       </p></b>
                     </td>
