@@ -54,9 +54,38 @@
         -webkit-border-radius: 4px;
         border-radius: 4px;
       }
-      select option:first-child{
-        color: green;
-      }
+
+      ::-webkit-input-placeholder
+      {
+         font-size: 14px;
+         color: #d0cdfa;
+         text-transform: uppercase;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: bold;
+        }
+        :-moz-placeholder { /* older Firefox*/
+         font-size:14px;
+         color: #d0cdfa;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: bold;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+         font-size: 14px;
+         color: #d0cdfa;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: bold;
+        }
+        :-ms-input-placeholder {
+         font-size: 14px;
+         color: #d0cdfa;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: bold;
+        }
+
     </style>
 
   </head>
@@ -96,7 +125,7 @@
           <td style='padding-top:5px;'>
             <center>
               <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
-                <option value='' disabled selected >Select Industry</option>
+                <option value='' >Select Industry</option>
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
                 } ?>
