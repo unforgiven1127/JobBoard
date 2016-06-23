@@ -85,8 +85,6 @@
             <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
-       </table>
-       <table style="margin-top:10px;" class="table table-striped-slate">
         <?php foreach($positions as $key => $value){
             echo "<tr style='background-color: #f9f9f9'>
                     <td align='center'>
