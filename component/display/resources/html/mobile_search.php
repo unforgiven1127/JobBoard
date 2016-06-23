@@ -105,6 +105,7 @@
             {
               $color = "background-color:rgba(212, 212, 212, 0.4);";
             }
+            $i++;
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;' align='center'>
                       <p style='font-size: 20pt;'>".$value['position_title']."</p>
