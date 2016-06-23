@@ -46,7 +46,7 @@
   <body>
 
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
-       <table bgcolor="white" style='width:100%; background: url("http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/bg_s.png") no-repeat center ;'>
+       <table bgcolor="white" style='width:100%; background: url("http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/bg_s.png") no-repeat center top ;'>
         <tr>
           <td >
             <a href="http://www.slate.co.jp">
