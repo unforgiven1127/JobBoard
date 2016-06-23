@@ -740,10 +740,10 @@ class CJobboardEx extends CJobboard
 
 //ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-ChromePhp::log($mobileFlag);
+//ChromePhp::log($mobileFlag);
     if($mobileFlag == 'mobile')
     {
-      ChromePhp::log('icerde');
+      //ChromePhp::log('icerde');
       return $positionData;
     }
 
