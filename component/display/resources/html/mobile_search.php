@@ -22,7 +22,7 @@
 
         $(".less").click(function(){
             var id = this.id;
-            //alert(id);
+            alert(id);
             var hidden = id;
             document.getElementById(hidden).style.display = 'none';
 
