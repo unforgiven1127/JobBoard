@@ -14,9 +14,10 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
-        $(".more").click(function(){
+        $(".more").click(function(e){
             var id = this.id;
-            //alert(id);
+            var yPosition = e.clientY;
+            alert(yPosition);
             var hidden = id+"_hidden_div";
             document.getElementById(hidden).style.display = 'block';
 
@@ -155,7 +156,7 @@
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
                 <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
-                  <a style='font-size: 10pt; font-style: oblique;'>+ Click for less</a>
+                  <a style='font-size: 10pt; font-style: oblique;'>- Click for less</a>
                 </p></i>
               </td>
             </tr>";
