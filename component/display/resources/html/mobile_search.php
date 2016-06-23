@@ -118,7 +118,7 @@
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 29px;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 30px;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 29px;'>".$value['location']."</p></b>
                       <b><p style='font-size: 29px;'>".$value['name']."</p></b>
                       <b><p style='font-size: 29px;'>+ Click for more</p></b>
