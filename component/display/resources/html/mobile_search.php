@@ -97,7 +97,7 @@
         {
             if($i % 2 == 0)
             {
-              $color = "background-color:rgba(138, 40, 40, 0.10);";
+              $color = "background-color:rgba(138, 40, 40, 0.08);";
             }
             else
             {
