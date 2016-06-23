@@ -42,9 +42,9 @@
     <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
        <table style='width:100%;'>
         <tr>
-          <td style='padding-left:30px;'>
+          <td>
             <a href="http://www.slate.co.jp">
-              <img src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+              <img style='padding-left:30px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
           </td>
         </tr>
