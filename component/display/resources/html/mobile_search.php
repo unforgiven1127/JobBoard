@@ -29,7 +29,7 @@
       {
         background: #892828;
         dispaly: inline-block;
-        width: 90%;
+        width: 100%;
         font-size: 16px;
         height: 50px;
         color: #fff;
