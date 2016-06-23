@@ -66,7 +66,7 @@
           <td>
               <select style="width:90%;" class="form-control" name="industry" id="industry">
                 <?php foreach($industries as $key => $value){
-                  echo "<option value='$key' >$valuey</option>";
+                  echo "<option value='$key' >$value</option>";
                 } ?>
               </select>
           </td>
