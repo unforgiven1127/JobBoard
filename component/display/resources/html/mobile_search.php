@@ -91,8 +91,6 @@
             <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
-        <br>
-        <br>
         <?php
         $i = 2;
         foreach($positions as $key => $value)
