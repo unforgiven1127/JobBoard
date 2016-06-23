@@ -434,7 +434,7 @@ class CJobboardEx extends CJobboard
     * @return array
     */
 
-  private function _getJobSearchResult($psSearchId = '')
+  private function _getJobSearchResult($psSearchId = '' , $mobileFlag = false)
   {
     $sKeyWord = strtolower(getValue('keyword'));
     $sortSelect = getValue('sortfield');
@@ -740,6 +740,11 @@ ChromePhp::log($lang);
 
 //ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    if($mobileFlag)
+    {
+      return $positionData;
+    }
 
     $nNbResult = count($positionData);
 
@@ -1656,29 +1661,11 @@ ChromePhp::log($lang);
       $industries = $this->getIndustryList();
       $data['industries'] = $industries;
 
+      $positions = $this->_getJobSearchResult($psSearchId = '' , $mobileFlag = true);
+      $data['positions'] = $positions;
+
       $html = $this->_oDisplay->render('mobile_search',$data);
 
-      /*$html = "<form action='".$searchUrl."' method='post'>
-                 <table style='margin-top:-50px;'>
-                  <tr style='width:100%;'>
-                    <td style='width:100%;'>
-                      <input style='width:300px;' placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style='width:100%; padding-top:15px;'>
-                      <input style='width:100%;' placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
-                    </td>
-                  </tr>
-                 </table>
-               </form>";*/
-
-
-
-
-      /*<script>
-                $('.mobilePic').hide();
-              </script>*/
       return $html;
       //echo 'MOBILE DEVICE DETECTED !!';
       //header('Location: http://detectmobilebrowser.com/mobile');
