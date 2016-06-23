@@ -108,7 +108,7 @@
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
                       <b><p style='font-size: 25pt;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 25pt;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 25pt;'>".$value['name']."</p></b>
+                      <b><p style='font-size: 25pt;'>".$value['name']."<br>-More</p></b>
                     </td>
                   </tr>";
         } ?>
