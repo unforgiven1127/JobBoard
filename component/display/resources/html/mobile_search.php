@@ -83,6 +83,8 @@
         li{
           list-style-type: disc;
           list-style-position: inside;
+          padding: 10px 0 10px 20px;
+          text-indent: -1em;
         }
 
     </style>
