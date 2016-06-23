@@ -84,7 +84,7 @@
           list-style-type: disc;
           list-style-position: inside;
           padding-left: 10px;
-          text-indent: -6px;
+          text-indent: -10px;
         }
 
     </style>
