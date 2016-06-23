@@ -57,33 +57,16 @@
 
       ::-webkit-input-placeholder
       {
-         font-size: 14px;
-         color: #d0cdfa;
-         text-transform: uppercase;
-         text-transform: uppercase;
-         text-align: center;
-         font-weight: bold;
+         margin-left:10px;
         }
         :-moz-placeholder { /* older Firefox*/
-         font-size:14px;
-         color: #d0cdfa;
-         text-transform: uppercase;
-         text-align: center;
-         font-weight: bold;
+         margin-left:10px;
         }
         ::-moz-placeholder { /* Firefox 19+ */
-         font-size: 14px;
-         color: #d0cdfa;
-         text-transform: uppercase;
-         text-align: center;
-         font-weight: bold;
+         margin-left:10px;
         }
         :-ms-input-placeholder {
-         font-size: 14px;
-         color: #d0cdfa;
-         text-transform: uppercase;
-         text-align: center;
-         font-weight: bold;
+         margin-left:10px;
         }
 
     </style>
