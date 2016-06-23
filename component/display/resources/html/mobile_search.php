@@ -87,7 +87,7 @@
           </td>
         </tr>
         <tr>
-          <td style='padding-top:15px;'>
+          <td style='padding-top:15px; padding-bottom:10px;'>
             <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
