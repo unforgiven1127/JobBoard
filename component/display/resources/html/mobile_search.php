@@ -31,7 +31,7 @@
             var hidden = id;
             var hidden = hidden+"_div";
             document.getElementById(hidden).style.display = 'none';
-            window.scrollTo(yPosition, 0);
+            window.scrollTo(0, yPosition);
 
         });
     });
