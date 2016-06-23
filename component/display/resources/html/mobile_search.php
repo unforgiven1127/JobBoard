@@ -108,9 +108,9 @@
             $i++;
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <p style='font-size: 20pt;'><b>".$value['position_title']."</b></p>
-                      <p style='font-size: 20pt;'><b>".$value['location']."</b></p>
-                      <p style='font-size: 20pt;'><b>".$value['name']."</b></p>
+                      <p style='font-size: 30pt;'><b>".$value['position_title']."</b></p>
+                      <p style='font-size: 30pt;'><b>".$value['location']."</b></p>
+                      <p style='font-size: 30pt;'><b>".$value['name']."</b></p>
                     </td>
                   </tr>";
         } ?>
