@@ -738,7 +738,7 @@ ChromePhp::log($lang);
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     if($mobileFlag)
