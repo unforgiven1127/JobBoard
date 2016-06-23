@@ -89,13 +89,13 @@
        <table class=".table-striped">
         <?php foreach($positions as $key => $value){
             echo "<tr>
-                    <td>$value['position_title']</td>
+                    <td>".$value['position_title']."</td>
                   </tr>
                   <tr>
-                    <td>$value['location']</td>
+                    <td>".$value['location']."</td>
                   </tr>
                   <tr>
-                    <td>$value['name']</td>
+                    <td>".$value['name']."</td>
                   </tr>";
         } ?>
        </table>
