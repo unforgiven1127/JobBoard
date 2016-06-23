@@ -17,7 +17,7 @@
         $(".more").click(function(){
             var id = this.id;
             //alert(id);
-            var hidden = id+"_hidden";
+            var hidden = id+"_hidden_div";
             document.getElementById(hidden).style.display = 'block';
 
         });
