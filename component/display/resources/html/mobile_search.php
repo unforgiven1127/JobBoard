@@ -65,10 +65,10 @@
         <tr>
           <td >
             <a href="http://www.slate.co.jp">
-              <img style=' width: 400px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
+              <img style=' width: 25px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
             <a href="" >
-              <img align="right" style='width: 100px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+              <img align="right" style='width: 25px; ' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
             </a>
             <a href="" >
               <img align="right" style='margin-left:10px; margin-right:10px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
@@ -78,21 +78,21 @@
         <tr>
           <td style='padding-top:15px;' class='width'>
             <center>
-              <input style="width:100%; height: 100px; font-size: 35pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
           </td>
         </tr>
         <tr>
           <td style='padding-top:15px;'>
             <center>
-              <input style="width:100%; height: 100px; font-size: 35pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
             </center>
           </td>
         </tr>
         <tr>
           <td style='padding-top:15px;'>
             <center>
-              <select style="width:100%; height: 100px; font-size: 35pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
+              <select style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <option value='' >Select Industry</option>
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
@@ -103,7 +103,7 @@
         </tr>
         <tr>
           <td style='padding-top:15px; padding-bottom:10px;'>
-            <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
+            <center><button style="font-size: 10pt; height: 25px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
         <?php
@@ -120,17 +120,17 @@
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 24pt;'>".$value['position_title']."</p></b>
-                      <b><p style='font-size: 24pt;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 24pt;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 24pt;'>+ Click for more</p></b>
+                      <b><p style='font-size: 6pt;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 6pt;'>".$value['location']."</p></b>
+                      <b><p style='font-size: 6pt;'>".$value['name']."</p></b>
+                      <b><p style='font-size: 6pt;'>+ Click for more</p></b>
                     </td>
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                <i><p style='font-size: 14pt;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
-                <i><p style='font-size: 14pt;'><b>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
-                <i><p style='font-size: 14pt;'>- Click for less</p></i>
+                <i><p style='font-size: 4pt;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
+                <i><p style='font-size: 4pt;'><b>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
+                <i><p style='font-size: 4pt;'>- Click for less</p></i>
               </td>
             </tr>";
             $i++;
