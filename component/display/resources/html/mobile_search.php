@@ -144,8 +144,8 @@
                       <b><p style='font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['location']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 10pt; margin-top: 1em;'>
-                        <a id='".$i."' style='font-size: 10pt; font-style: oblique;'>+ Click for more</a>
+                      <b><p id='".$i."' style='font-size: 10pt; margin-top: 1em;'>
+                        <a style='font-size: 10pt; font-style: oblique;'>+ Click for more</a>
                       </p></b>
                     </td>
                   </tr>";
