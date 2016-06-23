@@ -47,10 +47,10 @@
               <img style='margin-left:50px; width: 400px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
             <a href="" >
-              <img align="right" style='width: 100px; margin-right:10px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
+              <img align="right" style='width: 100px; margin-right:50px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/eng.png" title="English">
             </a>
             <a href="" >
-              <img align="right" style='margin-left:10px; margin-right:50px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
+              <img align="right" style='margin-left:10px; margin-right:10px; width: 100px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/japan.png" title="日本語">
             </a>
           </td>
         </tr>
