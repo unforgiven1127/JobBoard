@@ -86,7 +86,7 @@
           </td>
         </tr>
        </table>
-       <table align="right" style="margin-top:10px; width:90%;" class="table table-striped">
+       <table align="center" style="margin-top:10px; width:90%;" class="table table-striped">
         <?php foreach($positions as $key => $value){
             echo "<tr>
                     <td>
