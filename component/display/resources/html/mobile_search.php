@@ -105,7 +105,6 @@
             {
               $color = "background-color:rgba(212, 212, 212, 0.4);";
             }
-            $i++;
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
                       <b><p style='font-size: 24pt;'>".$value['position_title']."</p></b>
@@ -114,6 +113,15 @@
                       <b><p style='font-size: 24pt;'>- More</p></b>
                     </td>
                   </tr>";
+            echo "<tr hidden='hidden' class='border_bottom' style='width:90% !important; ".$color." '>
+              <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+                <b><p style='font-size: 24pt;'>".$value['position_title']."</p></b>
+                <b><p style='font-size: 24pt;'>".$value['location']."</p></b>
+                <b><p style='font-size: 24pt;'>".$value['name']."</p></b>
+                <b><p style='font-size: 24pt;'>- More</p></b>
+              </td>
+            </tr>";
+            $i++;
         } ?>
        </table></center>
      </form>
