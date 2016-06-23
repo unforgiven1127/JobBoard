@@ -122,9 +122,9 @@
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 10pt;'>".$value['position_title']."</p></b>
-                      <b><p style='font-size: 10pt;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 10pt;'>".$value['name']."</p></b>
+                      <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['location']."</p></b>
+                      <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['name']."</p></b>
                       <b><p style='font-size: 10pt;'>+ Click for more</p></b>
                     </td>
                   </tr>";
