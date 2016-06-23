@@ -13,10 +13,12 @@
 
     <script type="text/javascript">
 
+    var yPosition = 0;
+
     $(document).ready(function(){
         $(".more").click(function(e){
             var id = this.id;
-            var yPosition = e.clientY;
+            yPosition = e.clientY;
             alert(yPosition);
             var hidden = id+"_hidden_div";
             document.getElementById(hidden).style.display = 'block';
@@ -29,6 +31,7 @@
             var hidden = id;
             var hidden = hidden+"_div";
             document.getElementById(hidden).style.display = 'none';
+            window.scrollTo(yPosition, 0);
 
         });
     });
