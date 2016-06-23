@@ -92,7 +92,7 @@
         <tr>
           <td style='padding-top:5px;'>
             <center>
-              <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 11pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
+              <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <option value='' >Select Industry</option>
                 <?php foreach($industries as $key => $value){
                   echo "<option value='$key' >$value</option>";
@@ -120,17 +120,17 @@
             }
             echo "<tr class='border_bottom' style='width:90% !important; ".$color." '>
                     <td id='".$i."' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <b><p style='font-size: 6pt;'>".$value['position_title']."</p></b>
-                      <b><p style='font-size: 6pt;'>".$value['location']."</p></b>
-                      <b><p style='font-size: 6pt;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 6pt;'>+ Click for more</p></b>
+                      <b><p style='font-size: 10pt;'>".$value['position_title']."</p></b>
+                      <b><p style='font-size: 10pt;'>".$value['location']."</p></b>
+                      <b><p style='font-size: 10pt;'>".$value['name']."</p></b>
+                      <b><p style='font-size: 10pt;'>+ Click for more</p></b>
                     </td>
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
               <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                <i><p style='font-size: 4pt;'><b>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
-                <i><p style='font-size: 4pt;'><b>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
-                <i><p style='font-size: 4pt;'>- Click for less</p></i>
+                <i><p style='font-size: 8pt;'><b style='font-size: 8pt;>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
+                <i><p style='font-size: 8pt;'><b style='font-size: 8pt;>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
+                <i><p style='font-size: 8pt;'>- Click for less</p></i>
               </td>
             </tr>";
             $i++;
