@@ -24,7 +24,7 @@
       {
         border-bottom:1pt solid black;
         overflow: hidden;
-        width: 90%;
+        width: 100px;
       }
 
       .log-btn
