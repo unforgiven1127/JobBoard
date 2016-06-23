@@ -19,6 +19,12 @@
     </script>
 
     <style>
+
+      tr.border_bottom td
+      {
+        border-bottom:1pt solid black;
+      }
+
       .log-btn
       {
         background: #892828;
@@ -85,8 +91,9 @@
             <center><button style="font-size: 40pt; height: 100px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
+        <br>
         <?php foreach($positions as $key => $value){
-            echo "<tr style='background-color: #f9f9f9'>
+            echo "<tr class='border_bottom' style='background-color:rgba(0,0,0,0)'>
                     <td align='center'>
                       <p style='width:90%; font-size: 20pt;'>".$value['position_title']."</p>
                       <p style='width:90%; font-size: 20pt;'>".$value['location']."</p>
