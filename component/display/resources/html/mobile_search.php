@@ -19,6 +19,14 @@
             document.getElementById(hidden).style.display = 'block';
 
         });
+
+        $(".less").click(function(){
+            var id = this.id;
+            //alert(id);
+            var hidden = id+"_hidden";
+            document.getElementById(hidden).style.display = 'none';
+
+        });
     });
 
     </script>
@@ -117,7 +125,7 @@
                     </td>
                   </tr>";
             echo "<tr id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
-              <td class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+              <td class='less' style='padding-left:5%; padding-right:5%; width:90% !important;'>
                 <i><p style='font-size: 15pt;'>".$value['position_desc']."</p></i>
                 <i><p style='font-size: 15pt;'>".$value['requirements']."</p></i>
                 <i><p style='font-size: 15pt;'>- Click for less</p></i>
