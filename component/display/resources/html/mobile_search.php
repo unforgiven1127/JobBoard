@@ -125,7 +125,7 @@
                       <b><p style='font-size: 10pt; margin-top: 1em; margin-bottom: 0em;'>".$value['position_title']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['location']."</p></b>
                       <b><p style='font-size: 10pt; margin-top: 0em; margin-bottom: 0em;'>".$value['name']."</p></b>
-                      <b><p style='font-size: 10pt;'>+ Click for more</p></b>
+                      <b><p style='font-size: 10pt; margin-top: 1em;'>+ Click for more</p></b>
                     </td>
                   </tr>";
             echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
