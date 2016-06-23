@@ -103,7 +103,7 @@
         </tr>
         <tr>
           <td style='padding-top:5px; padding-bottom:10px;'>
-            <center><button style="font-size: 10pt; height: 25px;" type="submit" class="log-btn" >Find Job</button></center>
+            <center><button style="font-size: 15pt; height: 40px;" type="submit" class="log-btn" >Find Job</button></center>
           </td>
         </tr>
         <?php
