@@ -128,7 +128,7 @@
                       <b><p style='font-size: 10pt; margin-top: 1em;'>+ Click for more</p></b>
                     </td>
                   </tr>";
-            echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
+            echo "<tr class='less' id='".$i."_hidden' class='border_bottom' style='display:none; width:100% !important; ".$color." '>
               <td style=' width:90% !important;'>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>Description: <br></b>".nl2br($value['position_desc'])."</p></i>
                 <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>Requirements: <br></b>".nl2br($value['requirements'])."</p></i>
