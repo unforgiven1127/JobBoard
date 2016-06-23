@@ -116,8 +116,8 @@
                       <b><p style='font-size: 24pt;'>- More</p></b>
                     </td>
                   </tr>";
-            echo "<tr class='border_bottom' style='display:none; width:90% !important; ".$color." '>
-              <td id='".$i."_hidden' class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
+            echo "<tr id='".$i."_hidden' class='border_bottom' style='display:none; width:90% !important; ".$color." '>
+              <td class='more' style='padding-left:5%; padding-right:5%; width:90% !important;'>
                 <b><p style='font-size: 24pt;'>".$value['position_desc']."</p></b>
                 <b><p style='font-size: 24pt;'>".$value['requirements']."</p></b>
                 <b><p style='font-size: 24pt;'>- Click for less</p></b>
