@@ -19,7 +19,7 @@
         $(".more").click(function(e){
             var id = this.id;
             yPosition = e.clientY;
-            alert(yPosition);
+            //alert(yPosition);
             var hidden = id+"_hidden_div";
             document.getElementById(hidden).style.display = 'block';
 
