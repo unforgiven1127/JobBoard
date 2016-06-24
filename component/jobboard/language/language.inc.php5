@@ -179,8 +179,7 @@ $gasLang = array('en'=>
               'TALENT_TERMS'  => 'Terms and Conditions',
               'TALENT_EXTRA'  => '',
               'TALENT_POSITION_TITLE' => 'Position Title',
-              'TALENT_CONTACT_ANYONE' => 'I accept to be contacted by other companies or specialist recruiters
-regarding similar positions',
+              'TALENT_CONTACT_ANYONE' => 'I accept to be contacted by other companies or specialist recruiters regarding similar positions',
 
                'TALENT_CLOSE_SEARCH'=>'Switch to simple search',
                'TALENT_OPEN_SEARCH'=>'Switch to advanced search',
