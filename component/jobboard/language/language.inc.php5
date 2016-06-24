@@ -683,7 +683,7 @@ regarding similar positions',
                'TALENT_MORE_DETAILS'  => '詳細',
                'TALENT_MOBILE_SEARCH' => '仕事を探す',
                'TALENT_MOBILE_KEYWORDS' => 'キーワード',
-               'TALENT_MOBILE_OCCUPATION' => '職業'
+               'TALENT_MOBILE_OCCUPATION' => '職業',
 
                'TALENT_GROUP_IT_LEGEND'  => 'IT & テレコム',
                'TALENT_GROUP_CNS_LEGEND'  => '消費材',
