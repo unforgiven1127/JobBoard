@@ -231,7 +231,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td style='padding-top:5px;' class='form-style-8'>
+                          <td style='padding-top:15px;' class='form-style-8'>
                               <input type='text' name='field1' placeholder='Contact Information' />
                           </td>
                         </tr>
