@@ -2905,17 +2905,7 @@ class CJobboardEx extends CJobboard
       $name = $_GET['name'];
       $contact = $_GET['contact'];
 
-      $msg = "
-              <html>
-              <head>
-                <title>HTML email</title>
-              </head>
-                <body>
-                  <br>Mr/Mrs ".$name." has applied the position #".$position_id."
-                  <br>Contact Information: ".$contact.
-                "</body>
-              </html>";
-
+      $msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       mail("munir@slate-ghc.com","New Application",$msg);
 
       header('location: https://jobs.slate.co.jp');
