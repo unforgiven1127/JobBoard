@@ -2908,7 +2908,31 @@ class CJobboardEx extends CJobboard
       $msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       mail("munir@slate-ghc.com","New Application",$msg);
 
-      $this->getJobList();
+      $to = "munir@slate-ghc.com";
+      $subject = "New Mobile Application";
+
+      $message = "
+      <html>
+      <head>
+      <title>New Mobile Application</title>
+      </head>
+      <body>
+        <br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact."
+      </body>
+      </html>
+      ";
+
+      // Always set content-type when sending HTML email
+      $headers = "MIME-Version: 1.0" . "\r\n";
+      $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+      // More headers
+      $headers .= 'From: <mobile@slate-ghc.com>' . "\r\n";
+      $headers .= 'Cc: munir_anameric@hotmail.com' . "\r\n";
+
+      mail($to,$subject,$message,$headers);
+
+      header('https://jobs.slate.co.jp');
       //echo $position_id."<br>".$name."<br>".$contact;
     }
     else
