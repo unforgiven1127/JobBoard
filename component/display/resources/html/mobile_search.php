@@ -178,7 +178,7 @@
                           <td align='right' style='width:50%;'>
                             <i>
                               <p class='less' align='right' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
-                                <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'># Apply</a>
+                                <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'># ".$apply."</a>
                               </p>
                             </i>
                           <td>
