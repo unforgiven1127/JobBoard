@@ -1674,6 +1674,7 @@ class CJobboardEx extends CJobboard
       $data['apply'] = $this->casText['TALENT_MOBILE_APPLY'];
       $data['requirements'] = $this->casText['TALENT_REQUIREMENTS'];
       $data['description'] = $this->casText['TALENT_DESCRIPTION'];
+      $data['quickApplication'] = $this->casText['TALENT_MOBILE_QUICK_APPLICATION'];
 
       if(isset($_POST['keyword']))
       {
