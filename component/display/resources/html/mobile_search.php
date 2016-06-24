@@ -180,8 +180,10 @@
                       </i>
                       <table style='width:100%;'>
                         <tr>
-                          <td style='width:100%; font-size: 8pt;' colspan='2'>".$quickApplication."</td>
+                          <td style='width:100%; font-size: 8pt;' colspan='2'><b>".$quickApplication."</b></td>
                         </tr>
+                      </table>
+                      <table style='width:100%;'>
                         <tr>
                           <td style='width:50%;'>
                             <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
