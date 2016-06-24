@@ -118,7 +118,7 @@
         <tr>
           <td style='padding-top:5px;'>
             <center>
-              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Occupation' type='text' class='form-control' name='occupation' id='occupation'>
+              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='<?php echo $occupation; ?>' type='text' class='form-control' name='occupation' id='occupation'>
             </center>
           </td>
         </tr>
