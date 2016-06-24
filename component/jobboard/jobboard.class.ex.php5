@@ -2904,14 +2904,29 @@ class CJobboardEx extends CJobboard
       $position_id = $_GET['ppk'];
       $name = $_GET['name'];
       $contact = $_GET['contact'];
-
+      $oMail = CDependency::getComponentByName('mail');
       //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       //mail("munir_anameric@hotmail.com","New Application",$msg);
 
       $to = "munir@slate-ghc.com";
       $subject = "New Application";
 
-      $message = "
+      $oMail->creatNewEmail();
+      $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Application');
+
+      $oMail->addRecipient($to, 'Munir ANAMERIC');
+      //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
+      //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
+
+
+      $sContent = 'Dear Munir, <br /><br />';
+      $sContent.= ' of your position(s) are going to expire from the jobboard soon. Please contact the <a href="mailto:info@slate.co.jp">moderator</a> if you want those to be extended. <br/> <br />';
+      $sContent.= ' List of position(s):<br/><br/>';
+
+      $oMail->send('Slate job board: position(s) expiring soon', $sContent);
+
+
+      /*$message = "
       <html>
       <head>
       <title>New Application</title>
@@ -2930,7 +2945,7 @@ class CJobboardEx extends CJobboard
       $headers .= 'From: <application@slate.co.jp>' . "\r\n";
       $headers .= 'Cc: munir_anameric@hotmail.com;rkiyamu@slate.co.jp' . "\r\n";
 
-      mail($to,$subject,$message,$headers);
+      mail($to,$subject,$message,$headers);*/
 
       header("Location:https://jobs.slate.co.jp");
       exit();
