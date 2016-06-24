@@ -207,7 +207,7 @@
                         <tr>
                           <td style='width:50%;'>
                             <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
-                              <a href='".$value['applyUrl']."'  style='font-size: 10pt; font-style: oblique;'
+                              <a href=''  style='font-size: 10pt; font-style: oblique;'
                               onclick='this.href='".$value['applyUrl']."&name='+document.getElementById('fullName').value'&contact='+document.getElementById('contactInfo').value'># ".$apply."</a>
                             </p></i>
                           <td>
