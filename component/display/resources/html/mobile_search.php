@@ -180,7 +180,12 @@
                       </i>
                       <table style='width:100%;'>
                         <tr>
-                          <td style='width:100%; font-size: 8pt; font-weight: bold; padding-top:10px; text-decoration: underline;' colspan='2'>".$quickApplication."
+                          <td style='width:100%; font-size: 9pt; font-weight: bold; padding-top:10px; text-decoration: underline;'>".$quickApplication."
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style='width:100%; font-size: 9pt; font-style: oblique;'>
+                            Please provide your contact details, an agent will contact you shortly.
                           </td>
                         </tr>
                       </table>
