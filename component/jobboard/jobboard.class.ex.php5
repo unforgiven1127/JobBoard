@@ -1677,11 +1677,19 @@ class CJobboardEx extends CJobboard
 
       if(isset($_POST['keyword']))
       {
-        $data['keywords'] = $_POST['keyword'];
+        $key = $_POST['keyword'];
+        if(!empty($key) && $key != "Keywords")
+        {
+          $data['keywords'] = $_POST['keyword'];
+        }
       }
       if(isset($_POST['occupation']))
       {
-        $data['occupation'] = $_POST['occupation'];
+        $occu = $_POST['occupation'];
+        if(!empty($occu) && $occu != "Occupation")
+        {
+          $data['occupation'] = $_POST['occupation'];
+        }
       }
 
       $html = $this->_oDisplay->render('mobile_search',$data);
