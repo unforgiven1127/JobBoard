@@ -48,12 +48,15 @@
             var nameID = position_id+"_name";
             var contactID = position_id+"contact";
 
-            var name =document.getElementById(nameID).value;
+            alert(nameID);
+            alert(contactID);
+
+            /*var name =document.getElementById(nameID).value;
             var contact =document.getElementById(contactID).value;
 
             var finalUrl = url+"&name="+name+"&contact="+contact;
 
-            alert(finalUrl);
+            alert(finalUrl);*/
 
         });
 
