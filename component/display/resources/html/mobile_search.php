@@ -51,10 +51,9 @@
             var name = document.getElementById(nameID).value;
             var contact = document.getElementById(contactID).value;
 
-            //var finalUrl = url+"&name="+name+"&contact="+contact;
+            var finalUrl = url+"&name="+name+"&contact="+contact;
 
-            alert(name);
-            alert(contact);
+            alert(finalUrl);
 
         });
 
