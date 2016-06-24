@@ -2909,12 +2909,12 @@ class CJobboardEx extends CJobboard
       //mail("munir_anameric@hotmail.com","New Application",$msg);
 
       $to = "munir@slate-ghc.com";
-      $subject = "New Mobile Application";
+      $subject = "New Application";
 
       $message = "
       <html>
       <head>
-      <title>New Mobile Application</title>
+      <title>New Application</title>
       </head>
       <body>
         <br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact."
@@ -2927,8 +2927,8 @@ class CJobboardEx extends CJobboard
       $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
       // More headers
-      $headers .= 'From: <mobile@slate.co.jp>' . "\r\n";
-      $headers .= 'Cc: munir_anameric@hotmail.com' . "\r\n";
+      $headers .= 'From: <application@slate.co.jp>' . "\r\n";
+      $headers .= 'Cc: munir_anameric@hotmail.com;rkiyamu@slate.co.jp' . "\r\n";
 
       mail($to,$subject,$message,$headers);
 
