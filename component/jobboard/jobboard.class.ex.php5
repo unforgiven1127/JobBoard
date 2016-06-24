@@ -4423,6 +4423,20 @@ class CJobboardEx extends CJobboard
     return $asLocation;
   }
 
+  function getPositionInformation($position_id)
+  {
+    $oDB = CDependency::getComponentByName('database');
+
+    $sQuery = "SELECT slc.* FROM sl_position slp
+    INNER JOIN sl_company slc on slc.sl_companypk = slp.companyfk
+    WHERE slp.sl_positionpk = ".$position_id;
+
+    $positionData = $slistemDB->slistemGetAllData($slistemQuery);
+
+    //$_SESSION['sl_location_list'] = $asLocation;
+    return $positionData;
+  }
+
   function languageWritten($nineSystem)
 {
   if($nineSystem == 9 || $nineSystem == 8)

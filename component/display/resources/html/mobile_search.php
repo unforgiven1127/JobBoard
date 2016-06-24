@@ -118,7 +118,7 @@
        <center><table bgcolor="white" style='width:90%; '>
         <tr>
           <td >
-            <a href="http://www.slate.co.jp">
+            <a href="https://jobs.slate.co.jp/">
               <img style=' width: 150px;' src="http://jobs.slate.co.jp/component/display/resources/jobboard/pictures/top_slate_logo.png" title="Slate Consulting job board">
             </a>
             <a href="https://jobs.slate.co.jp/?setLang=jp" >
