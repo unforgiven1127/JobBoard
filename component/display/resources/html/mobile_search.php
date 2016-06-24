@@ -74,7 +74,7 @@
 .form-style-8 input[type="url"],
 .form-style-8 input[type="password"],
 .form-style-8 textarea,
-.form-style-8 select 
+.form-style-8 select
 {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -88,32 +88,7 @@
     background: transparent;
     margin-bottom: 10px;
     font: 16px Arial, Helvetica, sans-serif;
-    height: 45px;
-}
-.form-style-8 textarea{
-    resize:none;
-    overflow: hidden;
-}
-.form-style-8 input[type="button"], 
-.form-style-8 input[type="submit"]{
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    background-color: #2CBBBB;
-    border: 1px solid #27A0A0;
-    display: inline-block;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    padding: 8px 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.form-style-8 input[type="button"]:hover, 
-.form-style-8 input[type="submit"]:hover {
-    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-    background-color:#34CACA;
+    height: 30px;
 }
 
 
@@ -258,10 +233,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <div class='form-style-8'>
+                          <td class='form-style-8'>
                               <input type='text' name='field1' placeholder='Full Name' />
-                            </div>
                           </td>
                         </tr>
                         <tr>
