@@ -1672,6 +1672,8 @@ class CJobboardEx extends CJobboard
       $data['more'] = $this->casText['TALENT_MOBILE_CLICK_MORE'];
       $data['less'] = $this->casText['TALENT_MOBILE_CLICK_LESS'];
       $data['apply'] = $this->casText['TALENT_MOBILE_APPLY'];
+      $data['requirements'] = $this->casText['TALENT_REQUIREMENTS'];
+      $data['description'] = $this->casText['TALENT_DESCRIPTION'];
 
       $html = $this->_oDisplay->render('mobile_search',$data);
 
