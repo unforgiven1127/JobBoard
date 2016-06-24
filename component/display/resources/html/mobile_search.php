@@ -46,24 +46,14 @@
       .form-style-8{
     font-family: 'Open Sans Condensed', arial, sans;
     width: 500px;
-    padding: 30px;
-    background: #FFFFFF;
+    background: transparent;
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 
 }
-.form-style-8 h2{
-    background: #4D4D4D;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #797979;
-    font-size: 18px;
-    font-weight: 100;
-    padding: 20px;
-    margin: -30px -30px 30px -30px;
-}
+
 .form-style-8 input[type="text"],
 .form-style-8 input[type="date"],
 .form-style-8 input[type="datetime"],
@@ -82,7 +72,6 @@
     outline: none;
     display: block;
     width: 100%;
-    padding: 7px;
     border: none;
     border-bottom: 1px solid #ddd;
     background: transparent;
