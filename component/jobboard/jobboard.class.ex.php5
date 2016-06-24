@@ -2906,7 +2906,6 @@ class CJobboardEx extends CJobboard
       $contact = $_GET['contact'];
 
       echo $position_id."<br>".$name."<br>".$contact;
-      echo $name."<br>";
     }
     else
     {

@@ -53,7 +53,8 @@
 
             var finalUrl = url+"&name="+name+"&contact="+contact;
 
-            alert(finalUrl);
+            window.open(finalUrl, "_self");
+
 
         });
 
