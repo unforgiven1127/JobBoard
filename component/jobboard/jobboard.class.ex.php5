@@ -2927,7 +2927,7 @@ class CJobboardEx extends CJobboard
       $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
       // More headers
-      $headers .= 'From: <slistem@slate.co.jp>' . "\r\n";
+      $headers .= 'From: <mobile@slate.co.jp>' . "\r\n";
       $headers .= 'Cc: munir_anameric@hotmail.com' . "\r\n";
 
       mail($to,$subject,$message,$headers);
