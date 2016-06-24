@@ -17,7 +17,7 @@
     //var xPosition = 0;
 
     $(document).ready(function(){
-        $(".more").click(function(e){
+        $(".more").click(function(){
             var id = this.id;
             //yPosition = e.clientY;
             //xPosition = e.clientX;
@@ -38,7 +38,24 @@
 
         });
 
-        
+        $(".apply").click(function(){
+            var id = this.id;
+            var id = id.split('_');
+
+            var position_id = id[0];
+            var url = id[1];
+
+            var nameID = position_id+"_name";
+            var contactID = position_id+"contact";
+
+            var name =document.getElementById(nameID).value;
+            var contact =document.getElementById(contactID).value;
+
+            var finalUrl = url+"&name="+name+"&contact="contact;
+
+            alert(finalUrl);
+
+        });
     });
 
     </script>
