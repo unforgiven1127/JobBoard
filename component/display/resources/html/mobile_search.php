@@ -159,7 +159,7 @@
                       <b><li style='font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['location']."</li></b>
                       <b><li style='font-size: 10pt; margin-top: 3px; margin-bottom: 0em;'>".$value['name']."</li></b>
                       <b><p id='".$i."' class='more' style='font-size: 10pt; margin-top: 1em;'>
-                        <a style='font-size: 10pt; font-style: oblique;'>+ <?php echo $more; ?></a>
+                        <a style='font-size: 10pt; font-style: oblique;'>+ ".$more."</a>
                       </p></b>
                     </td>
                   </tr>";
@@ -171,7 +171,7 @@
                         <tr>
                           <td style='width:50%;'>
                             <i><p class='less' id='".$i."_hidden' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
-                              <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'>- Click for less</a>
+                              <a href='#".$i."_move' style='font-size: 10pt; font-style: oblique;'>- ".$less."</a>
                             </p></i>
                           <td>
 
