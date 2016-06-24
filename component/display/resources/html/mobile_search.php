@@ -43,43 +43,6 @@
 
     <style>
 
-      .form-style-8{
-    font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
-    background: transparent;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
-}
-
-.form-style-8 input[type="text"],
-.form-style-8 input[type="date"],
-.form-style-8 input[type="datetime"],
-.form-style-8 input[type="email"],
-.form-style-8 input[type="number"],
-.form-style-8 input[type="search"],
-.form-style-8 input[type="time"],
-.form-style-8 input[type="url"],
-.form-style-8 input[type="password"],
-.form-style-8 textarea,
-.form-style-8 select
-{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    outline: none;
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    background: transparent;
-    margin-bottom: 10px;
-    font: 16px Arial, Helvetica, sans-serif;
-    height: 30px;
-}
-
-
       .border_bottom
       {
         border-bottom:1pt solid black;
@@ -226,13 +189,10 @@
                           </td>
                         </tr>
                         <tr>
-                          <td class='form-style-8'>
-                              <input type='text' name='field1' placeholder='Full Name' />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style='padding-top:15px;' class='form-style-8'>
-                              <input type='text' name='field1' placeholder='Contact Information' />
+                          <td style='padding-top:5px;' class='width'>
+                            <center>
+                              <input style='width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full name' type='text' class='form-control' name='fullName' id='fullName'>
+                            </center>
                           </td>
                         </tr>
                       </table>
