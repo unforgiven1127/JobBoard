@@ -2908,8 +2908,7 @@ class CJobboardEx extends CJobboard
       $msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       mail("munir@slate-ghc.com","New Application",$msg);
 
-      //header('location: https://jobs.slate.co.jp');
-      //exit();
+      $this->getJobList();
       //echo $position_id."<br>".$name."<br>".$contact;
     }
     else
