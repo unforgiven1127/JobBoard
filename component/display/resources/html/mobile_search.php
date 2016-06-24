@@ -47,7 +47,6 @@
     font-family: 'Open Sans Condensed', arial, sans;
     width: 500px;
     background: transparent;
-    margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -232,7 +231,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td class='form-style-8'>
+                          <td style='padding-top:5px;' class='form-style-8'>
                               <input type='text' name='field1' placeholder='Contact Information' />
                           </td>
                         </tr>
