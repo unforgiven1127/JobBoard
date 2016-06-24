@@ -127,8 +127,17 @@
             <center>
               <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
                 <option value='' ><?php echo $selectIndustry; ?></option>
-                <?php foreach($industries as $key => $value){
-                  echo "<option value='$key' >$value</option>";
+                <?php foreach($industries as $key => $value)
+                {
+                  if($key == $industry)
+                  {
+                    $selected = "selected = 'selected'";
+                  }
+                  else
+                  {
+                    $selected = "";
+                  }
+                  echo "<option ".$selected." value='$key' >$value</option>";
                 } ?>
               </select>
             </center>

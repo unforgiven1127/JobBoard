@@ -1683,12 +1683,22 @@ class CJobboardEx extends CJobboard
           $data['keywords'] = $_POST['keyword'];
         }
       }
+
       if(isset($_POST['occupation']))
       {
         $occu = $_POST['occupation'];
         if(!empty($occu) && $occu != "Occupation")
         {
           $data['occupation'] = $_POST['occupation'];
+        }
+      }
+
+      if(isset($_POST['industry']))
+      {
+        $ind = $_POST['industry'];
+        if(!empty($ind) && $ind != "")
+        {
+          $data['industry'] = $_POST['industry'];
         }
       }
 
