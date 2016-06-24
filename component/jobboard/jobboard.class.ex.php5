@@ -2909,10 +2909,10 @@ class CJobboardEx extends CJobboard
       //mail("munir_anameric@hotmail.com","New Application",$msg);
 
       $to = "munir@slate-ghc.com";
-      $subject = "New Application";
+      $subject = "New Mobile Application";
 
       $oMail->creatNewEmail();
-      $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Application');
+      $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Mobile Application');
 
       $oMail->addRecipient($to, 'Munir ANAMERIC');
       //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
@@ -2920,10 +2920,9 @@ class CJobboardEx extends CJobboard
 
 
       $sContent = 'Dear Munir, <br /><br />';
-      $sContent.= ' of your position(s) are going to expire from the jobboard soon. Please contact the <a href="mailto:info@slate.co.jp">moderator</a> if you want those to be extended. <br/> <br />';
-      $sContent.= ' List of position(s):<br/><br/>';
+      $sContent.= "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
 
-      $oMail->send('Slate job board: position(s) expiring soon', $sContent);
+      $oMail->send('New Mobile Application', $sContent);
 
 
       /*$message = "
