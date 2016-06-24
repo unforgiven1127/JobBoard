@@ -1675,9 +1675,9 @@ class CJobboardEx extends CJobboard
       $data['requirements'] = $this->casText['TALENT_REQUIREMENTS'];
       $data['description'] = $this->casText['TALENT_DESCRIPTION'];
 
-      if(isset(getValue('keywords')))
+      if(isset(getValue('keyword')))
       {
-        $data['keywords'] = getValue('keywords');
+        $data['keywords'] = getValue('keyword');
       }
       if(isset(getValue('occupation')))
       {
