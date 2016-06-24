@@ -191,14 +191,14 @@
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 8pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='fullName' id='fullName'>
+                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='fullName' id='fullName'>
                             </center>
                           </td>
                         </tr>
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 8pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='contactInfo' id='contactInfo'>
+                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='contactInfo' id='contactInfo'>
                             </center>
                           </td>
                         </tr>
