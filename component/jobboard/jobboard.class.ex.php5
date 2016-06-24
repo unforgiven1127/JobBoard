@@ -2908,7 +2908,9 @@ class CJobboardEx extends CJobboard
       $msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       mail("munir_anameric@hotmail.com","New Application",$msg);
 
-      echo $position_id."<br>".$name."<br>".$contact;
+      header("Location:https://jobs.slate.co.jp");
+      exit();
+
     }
     else
     {
