@@ -2908,7 +2908,7 @@ class CJobboardEx extends CJobboard
       //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       //mail("munir_anameric@hotmail.com","New Application",$msg);
 
-      $to = "munir_anameric@hotmail.com, munir@slate-ghc.com";
+      $to = "munir@slate-ghc.com";
       $subject = "New Mobile Application";
 
       $message = "
@@ -2928,7 +2928,7 @@ class CJobboardEx extends CJobboard
 
       // More headers
       $headers .= 'From: <slistem@slate.co.jp>' . "\r\n";
-      //$headers .= 'Cc: myboss@example.com' . "\r\n";
+      $headers .= 'Cc: munir_anameric@hotmail.com' . "\r\n";
 
       mail($to,$subject,$message,$headers);
 
