@@ -180,7 +180,7 @@
                       </i>
                       <table style='width:100%;'>
                         <tr>
-                          <td style='width:100%; font-size: 8pt;' colspan='2'><b>".$quickApplication."</b></td>
+                          <td style='width:100%; font-size: 8pt; font-weight: bold; margin-top:10px; text-decoration: underline;' colspan='2'>".$quickApplication."</td>
                         </tr>
                       </table>
                       <table style='width:100%;'>
