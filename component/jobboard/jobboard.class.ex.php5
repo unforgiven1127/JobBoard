@@ -2917,7 +2917,7 @@ class CJobboardEx extends CJobboard
       <title>New Mobile Application</title>
       </head>
       <body>
-        <br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact"
+        <br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact."
       </body>
       </html>
       ";
