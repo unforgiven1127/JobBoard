@@ -93,7 +93,7 @@
 
   <body>
 
-    <form action='https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=ppal&ppt=job&ppk=0&pg=ajx' method='post'>
+    <form action='https://jobs.slate.co.jp/' method='post'>
        <center><table bgcolor="white" style='width:90%; '>
         <tr>
           <td >
