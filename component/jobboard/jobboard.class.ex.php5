@@ -2932,7 +2932,7 @@ class CJobboardEx extends CJobboard
 
       mail($to,$subject,$message,$headers);
 
-      header('https://jobs.slate.co.jp');
+      header('location: https://jobs.slate.co.jp');
       exit();
       //echo $position_id."<br>".$name."<br>".$contact;
     }
