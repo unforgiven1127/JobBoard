@@ -2905,7 +2905,11 @@ class CJobboardEx extends CJobboard
       $name = $_GET['name'];
       $contact = $_GET['contact'];
 
-      echo $position_id."<br>".$name."<br>".$contact;
+      $msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
+      mail("munir@slate-ghc.com","New Application",$msg);
+
+      $this->getJobList();
+      //echo $position_id."<br>".$name."<br>".$contact;
     }
     else
     {
