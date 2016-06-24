@@ -111,7 +111,7 @@
         <tr>
           <td style='padding-top:5px;' class='width'>
             <center>
-              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='Keywords' type='text' class='form-control' name='keyword' id='keyword'>
+              <input style="width:100%; height: 25px; font-size: 12pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" placeholder='<?php echo $keywords; ?>' type='text' class='form-control' name='keyword' id='keyword'>
             </center>
           </td>
         </tr>
