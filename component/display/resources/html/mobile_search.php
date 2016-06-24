@@ -45,8 +45,8 @@
             var position_id = id[0];
             var url = id[1];
 
-            var nameID = position_id+"_name";
-            var contactID = position_id+"_contact";
+            var nameID = position_id+"_fullName";
+            var contactID = position_id+"_contactInfo";
 
             var name = document.getElementById(nameID).value;
             var contact = document.getElementById(contactID).value;
