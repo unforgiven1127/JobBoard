@@ -1675,13 +1675,13 @@ class CJobboardEx extends CJobboard
       $data['requirements'] = $this->casText['TALENT_REQUIREMENTS'];
       $data['description'] = $this->casText['TALENT_DESCRIPTION'];
 
-      if(isset(getValue('keyword')))
+      if(isset($_POST['keyword']))
       {
-        $data['keywords'] = getValue('keyword');
+        $data['keywords'] = $_POST['keyword'];
       }
-      if(isset(getValue('occupation')))
+      if(isset($_POST['occupation']))
       {
-        $data['occupation'] = getValue('occupation');
+        $data['occupation'] = $_POST['occupation'];
       }
 
       $html = $this->_oDisplay->render('mobile_search',$data);
