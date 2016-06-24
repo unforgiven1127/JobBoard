@@ -222,13 +222,18 @@
                           </td>
                         </tr>
                         <tr>
+                          <td style='width:100%; font-size: 9pt; font-style: oblique;'>
+                            Please provide your contact details, an agent will contact you shortly.
+                          </td>
+                        </tr>
+                        <tr>
                           <td class='form-style-8'>
                               <input type='text' name='field1' placeholder='Full Name' />
                           </td>
                         </tr>
                         <tr>
-                          <td style='width:100%; font-size: 9pt; font-style: oblique;'>
-                            Please provide your contact details, an agent will contact you shortly.
+                          <td class='form-style-8'>
+                              <input type='text' name='field1' placeholder='Contact Information' />
                           </td>
                         </tr>
                       </table>
