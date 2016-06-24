@@ -40,7 +40,20 @@
 
         $(".apply").click(function(){
             var id = this.id;
-            alert(id);
+            var id = id.split('_');
+
+            var position_id = id[0];
+            var url = id[1];
+
+            var nameID = position_id+"_name";
+            var contactID = position_id+"contact";
+
+            var name =document.getElementById(nameID).value;
+            var contact =document.getElementById(contactID).value;
+
+            var finalUrl = url+"&name="+name+"&contact="contact;
+
+            alert(finalUrl);
 
         });
     });
@@ -197,14 +210,14 @@
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='fullName' id='fullName'>
+                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='".$i."_fullName' id='".$i."_fullName'>
                             </center>
                           </td>
                         </tr>
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='contactInfo' id='contactInfo'>
+                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='".$i."_contactInfo' id='".$i."_contactInfo'>
                             </center>
                           </td>
                         </tr>
@@ -213,7 +226,7 @@
                         <tr>
                           <td style='width:50%;'>
                             <i>
-                              <p class='apply' id='".$value['applyUrl']."' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
+                              <p class='apply' id='".$i."_".$value['applyUrl']."' style='font-size: 8pt; margin-top: 1em; margin-bottom: 1em;'>
                                 <a style='font-size: 10pt; font-style: oblique;'># ".$apply."</a>
                               </p>
                             </i>
