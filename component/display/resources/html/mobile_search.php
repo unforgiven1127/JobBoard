@@ -43,6 +43,17 @@
 
     <style>
 
+      .style-4 input[type="text"] {
+        padding: 10px;
+        border: none;
+        border-bottom: solid 2px #c9c9c9;
+        transition: border 0.3s;
+      }
+      .style-4 input[type="text"]:focus,
+      .style-4 input[type="text"].focus {
+        border-bottom: solid 2px #969696;
+      }
+
       .border_bottom
       {
         border-bottom:1pt solid black;
@@ -181,6 +192,11 @@
                       <table style='width:100%;'>
                         <tr>
                           <td style='width:100%; font-size: 9pt; font-weight: bold; padding-top:10px; text-decoration: underline;'>".$quickApplication."
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type='text' placeholder=':focus' class='focus style-4'>
                           </td>
                         </tr>
                         <tr>
