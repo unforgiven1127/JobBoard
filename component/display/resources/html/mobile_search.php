@@ -57,7 +57,7 @@
             contact = contact.trim();
             note = note.trim();
 
-            if(name == '' || contact == '' || name.length < 3 || name.length < 5)
+            if(name == '' || contact == '' || name.length < 3 || contact.length < 5)
             {
               alert("Please fill 'Full Name' and 'Contact Information'");
             }

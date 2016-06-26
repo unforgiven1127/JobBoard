@@ -2906,6 +2906,13 @@ class CJobboardEx extends CJobboard
       $contact = $_GET['contact'];
       $note = $_GET['note'];
 
+      $date = date('Y-m-d H:i:s');
+
+      $slistemDB = CDependency::getComponentByName('database');
+      $slistemQuery = "INSERT INTO mobile_applications VALUES( '".$position_id."','".$name."','".$contact."','".$note."','".$date."' )";
+
+      $insert = $slistemDB->slistemGetAllData($slistemQuery);
+
       $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
       $cons_email = $positionDetails['cons_email'];
       $cons_name = $positionDetails['cons_name'];
