@@ -2906,7 +2906,7 @@ class CJobboardEx extends CJobboard
       $contact = $_GET['contact'];
       $note = $_GET['note'];
 
-      $positionDetails = getPositionDetailSlistem($position_id,$postLang = 'en');
+      $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
       $cons_email = $positionDetails['cons_email'];
       $cons_name = $positionDetails['cons_name'];
 
