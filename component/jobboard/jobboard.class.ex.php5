@@ -2909,28 +2909,31 @@ class CJobboardEx extends CJobboard
       $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
       $cons_email = $positionDetails['cons_email'];
       $cons_name = $positionDetails['cons_name'];
+      $position_title = $positionDetails['position_title'];
 
       $oMail = CDependency::getComponentByName('mail');
       //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       //mail("munir_anameric@hotmail.com","New Application",$msg);
 
-      $to = "munir@slate-ghc.com";
+      $to = "munir_anameric@hotmail.com";
+      $bcc = "munir@slate-ghc.com";
       $subject = "New Mobile Application";
 
       $oMail->creatNewEmail();
       $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Mobile Application');
 
-      $oMail->addRecipient($to, 'Munir ANAMERIC');
+      $oMail->addRecipient($to, $cons_name);
+      $oMail->addBCCRecipient($bcc, 'Munir ANAMERIC');
       //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
       //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
 
 
       $sContent = "Dear ".$cons_name.", <br>";
-      $sContent.= "<br>Mr/Mrs ".$name." has applied the position #".$position_id.
+      $sContent.= "<br>Mr/Mrs ".$name." has applied the position ".$position_title." (#".$position_id.")".
       "<br><br>Contact Information: ".$contact.
       "<br><br>Notes: ".$note;
       $sContent.= "<br><br>Best regards,";
-      $sContent.= "<br>Job Board Mobile".$cons_email;
+      $sContent.= "<br>Job Board Mobile";
 
       $oMail->send('New Mobile Application', $sContent);
 
