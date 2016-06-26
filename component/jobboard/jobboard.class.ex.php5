@@ -2925,10 +2925,10 @@ class CJobboardEx extends CJobboard
       //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
 
 
-      $sContent = "Dear ".$cons_name.", <br /><br />";
+      $sContent = "Dear ".$cons_name.", <br>";
       $sContent.= "<br>Mr/Mrs ".$name." has applied the position #".$position_id.
-      "<br>Contact Information: ".$contact.
-      "Notes: ".$note;
+      "<br><br>Contact Information: ".$contact.
+      "<br><br>Notes: ".$note;
       $sContent.= "<br><br>Best regards,";
       $sContent.= "<br>Job Board Mobile".$cons_email;
 
