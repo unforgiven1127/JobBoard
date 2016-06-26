@@ -53,9 +53,21 @@
             var contact = document.getElementById(contactID).value;
             var note = document.getElementById(noteID).value;
 
-            var finalUrl = url+"&name="+name+"&contact="+contact+"&note="+note;
+            name = name.trim();
+            contact = contact.trim();
+            note = note.trim();
 
-            window.open(finalUrl, "_self");
+            if(name == '' || contact == '')
+            {
+              alert("Please fill Name and Contact information");
+            }
+            else
+            {
+              var finalUrl = url+"&name="+name+"&contact="+contact+"&note="+note;
+
+              window.open(finalUrl, "_self");
+            }
+
 
 
         });
