@@ -195,7 +195,7 @@
                   </tr>";
             echo "<tr id='".$i."_hidden_div' class='border_bottom' style='display:none; width:100% !important; ".$color." '>
                     <td style='padding-left:5%; padding-right:5%; width:90% !important;'>
-                      <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'>".$description.": <br></b>".nl2br($value['position_desc'])."</p>
+                      <i><p style='font-size: 8pt; margin-top: 1em; margin-bottom: 0em;'><b style='font-size: 8pt;'>".$description.": <br></b>".nl2br($value['position_desc'])."</p>
                       </i>
                       <i><p style='font-size: 8pt; margin-top: 0em; margin-bottom: 0em;'><b style='font-size: 8pt;'><br>".$requirements.": <br></b>".nl2br($value['requirements'])."</p>
                       </i>
