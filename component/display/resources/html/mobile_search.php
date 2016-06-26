@@ -225,7 +225,7 @@
                         </tr>
                         <tr>
                           <td style='padding-top:5px;' class='width'>
-                            <textarea style='width:100%; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Supplementary information ' class='form-control' rows='5' name='".$i."_note' id='".$i."_note'></textarea>
+                            <textarea style='border: 1px solid black; width:100%; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Supplementary Information ' class='form-control' rows='5' name='".$i."_note' id='".$i."_note'></textarea>
                           </td>
                         </tr>
                       </table>
