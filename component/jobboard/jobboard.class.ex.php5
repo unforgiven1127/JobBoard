@@ -2904,6 +2904,12 @@ class CJobboardEx extends CJobboard
       $position_id = $_GET['ppk'];
       $name = $_GET['name'];
       $contact = $_GET['contact'];
+      $note = $_GET['note'];
+
+      $positionDetails = getPositionDetailSlistem($position_id,$postLang = 'en');
+      $cons_email = $positionDetails['cons_email'];
+      $cons_name = $positionDetails['cons_name'];
+
       $oMail = CDependency::getComponentByName('mail');
       //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
       //mail("munir_anameric@hotmail.com","New Application",$msg);
@@ -2919,10 +2925,12 @@ class CJobboardEx extends CJobboard
       //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
 
 
-      $sContent = 'Dear Consultant, <br /><br />';
-      $sContent.= "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
-      $sContent.= "<br><br>Best regards";
-      $sContent.= "<br>Job Board";
+      $sContent = "Dear ".$cons_name.", <br /><br />";
+      $sContent.= "<br>Mr/Mrs ".$name." has applied the position #".$position_id.
+      "<br>Contact Information: ".$contact.
+      "Notes: ".$note;
+      $sContent.= "<br><br>Best regards,";
+      $sContent.= "<br>Job Board Mobile".$cons_email;
 
       $oMail->send('New Mobile Application', $sContent);
 
@@ -2987,7 +2995,8 @@ class CJobboardEx extends CJobboard
   * @return string
   */
 
-  public function getPositionDetailSlistem($pnPk)
+
+  public function getPositionDetailSlistem($pnPk,$postLang = '')
   {
     $slistemDB = CDependency::getComponentByName('database');
 
@@ -3026,6 +3035,11 @@ class CJobboardEx extends CJobboard
     else
     {
       $selectedLanguage =  $lang;
+    }
+
+    if($postLang != '')
+    {
+      $selectedLanguage =  $postLang;
     }
 
 //ChromePhp::log($selectedLanguage);

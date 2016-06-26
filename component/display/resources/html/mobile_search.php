@@ -47,11 +47,13 @@
 
             var nameID = position_id+"_fullName";
             var contactID = position_id+"_contactInfo";
+            var noteID = position_id+"_note";
 
             var name = document.getElementById(nameID).value;
             var contact = document.getElementById(contactID).value;
+            var note = document.getElementById(noteID).value;
 
-            var finalUrl = url+"&name="+name+"&contact="+contact;
+            var finalUrl = url+"&name="+name+"&contact="+contact+"&note="+note;
 
             window.open(finalUrl, "_self");
 
