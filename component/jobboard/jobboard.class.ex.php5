@@ -2469,18 +2469,18 @@ class CJobboardEx extends CJobboard
       }
 
       //Description
-      $sDescription = $positionData['position_desc'];
+      $sDescription = "<p style:'".$fontStyle."'>".$positionData['position_desc']."</p>";
       if(!empty($sDescription))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
-          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;".$fontStyle));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;"));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
-          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription',"style"=>$fontStyle));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
           $sHTML.= $oHTML->getText(nl2br($sDescription));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
@@ -2488,7 +2488,7 @@ class CJobboardEx extends CJobboard
       }
 
        //Requirements
-      $sRequirements = $positionData['requirements'];
+      $sRequirements = "<p style:'".$fontStyle."'>".$positionData['requirements']."</p>";
       if(!empty($sRequirements))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
