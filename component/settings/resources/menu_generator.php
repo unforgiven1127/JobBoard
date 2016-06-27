@@ -511,7 +511,7 @@ $asArray = array();
   ),
   3 =>
   array (
-    'name' => 'JOB BOARD.',
+    'name' => 'JOB BOARD',
     'legend' => 'Candidate Services',
     'link' => 'http://jobs.slate.co.jp',
     'icon' => '',
@@ -824,7 +824,7 @@ $asArray['jp'] = array (
   ),
   3 =>
   array (
-    'name' => 'JOB BOARD..',
+    'name' => 'JOB BOARD',
     'legend' => 'Candidate Services',
     'link' => 'http://jobs.slate.co.jp',
     'icon' => '',
@@ -1245,7 +1245,7 @@ $sString = base64_encode(serialize($asArray));
   ),
   3 =>
   array (
-    'name' => 'JOB BOARD...',
+    'name' => 'JOB BOARD',
     'legend' => 'Candidate Services',
     'link' => 'http://jobs.slate.co.jp',
     'icon' => '',
