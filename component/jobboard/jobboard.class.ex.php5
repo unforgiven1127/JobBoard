@@ -2472,7 +2472,7 @@ class CJobboardEx extends CJobboard
       }
 
       //Description
-      $sDescription = "<p style:'font-size:20pt;'>".$positionData['position_desc']."</p>";
+      $sDescription = $positionData['position_desc'];
       if(!empty($sDescription))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2484,7 +2484,7 @@ class CJobboardEx extends CJobboard
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-          $sHTML.= $oHTML->getText(nl2br($sDescription));
+          $sHTML.= $oHTML->getText("<p style:'font-size:20pt;'>"nl2br($sDescription)."</p>");
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
