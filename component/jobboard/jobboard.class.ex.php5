@@ -2910,7 +2910,7 @@ class CJobboardEx extends CJobboard
 
       $slistemDB = CDependency::getComponentByName('database');
       $slistemQuery = "INSERT INTO mobile_applications (position_id,  name, contact,notes, application_date),
-                       VALUES( '".$position_id."','".$name."','".$contact."','".$note."','".$date."' )";
+                       VALUES( ".$position_id.",".$name.",".$contact.",".$note.",".$date." )";
 
       $insert = $slistemDB->slistemGetAllData($slistemQuery);
 
