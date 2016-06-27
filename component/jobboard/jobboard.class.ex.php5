@@ -526,7 +526,7 @@ class CJobboardEx extends CJobboard
                        sll.location_jp as location,
                        slpd.metaKey_jp as meta_keywords,";
 
-      $newSlpdWhere = " AND slpd.title_jp <> '' ";
+      $newSlpdWhere = " AND (slpd.title_jp <> '' OR slpd.language = 'jp' )";
     }
 
 
