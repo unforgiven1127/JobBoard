@@ -1687,7 +1687,7 @@ class CJobboardEx extends CJobboard
 
       if(isset($_POST['application']))
       {
-        $application = $_POST['application'];
+        $application = $_GET['application'];
         if($application == 'ok')
         {
           $data['msg'] = "<div class='alert alert-success fade in'>
