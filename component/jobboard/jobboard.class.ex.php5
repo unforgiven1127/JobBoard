@@ -2484,7 +2484,7 @@ class CJobboardEx extends CJobboard
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-          $sHTML.= $oHTML->getText(nl2br($sDescription),array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getText(nl2br($sDescription),array('style'=>'font-size:15px;'));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
