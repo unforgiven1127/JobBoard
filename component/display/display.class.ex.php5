@@ -815,7 +815,10 @@ class CDisplayEx extends CDisplay
                 $sLink = $oPage->getUrl(''.$asMenuItems['uid'].'',''.$asMenuItems['action'].'',''.$asMenuItems['type'].'',$nPnPk);
                 }
                 else
-                  $sLink = 'javascript:;';
+                {
+                  //$sLink = 'javascript:;';
+                  $sLink = 'http://jobs.slate.co.jp';
+                }
             }
 
             $useragent=$_SERVER['HTTP_USER_AGENT'];
@@ -903,8 +906,7 @@ class CDisplayEx extends CDisplay
                       }
                       else
                       {
-                        //$sURL = 'javascript:;';
-                        $sURL = 'http://jobs.slate.co.jp';
+                        $sURL = 'javascript:;';
                       }
                    }
 
