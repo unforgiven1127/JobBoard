@@ -791,7 +791,7 @@ class CDisplayEx extends CDisplay
       $sHTML.= $this->getBlocStart('', array('class' => 'firstMenuContainer'.$newClass));
       $sHTML.= '<ul class="menuNavList">';
 
-      var_dump($asMenuArray);
+      //var_dump($asMenuArray);
 
       if(!empty($asMenuArray))
       {
@@ -845,7 +845,10 @@ class CDisplayEx extends CDisplay
                 $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'.$newClass));
               else
               {
-                $sLink = $asMenuItems['name'];
+                if($asMenuItems['name'] == "ジョブズ")
+                {
+                $sLink = "https://jobs.slate.co.jp/";
+                }
                 $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
               }
 
