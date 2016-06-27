@@ -2912,6 +2912,9 @@ class CJobboardEx extends CJobboard
       $slistemQuery = "INSERT INTO mobile_applications (position_id,  name, contact,notes, application_date),
                        VALUES( ".$position_id.",".$name.",".$contact.",".$note.",".$date." )";
 
+      echo $slistemQuery;
+      exit;
+
       $insert = $slistemDB->slistemGetAllData($slistemQuery);
 
       $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
