@@ -816,8 +816,7 @@ class CDisplayEx extends CDisplay
                 }
                 else
                 {
-                  //$sLink = 'javascript:;';
-                  $sLink = 'http://jobs.slate.co.jp';
+                  $sLink = 'javascript:;';
                 }
             }
 
