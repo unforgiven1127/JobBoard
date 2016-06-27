@@ -2170,7 +2170,10 @@ class CJobboardEx extends CJobboard
     {
       $fontStyle = 'font-size:15pt;';
     }
-    $fontStyle = '';
+    else
+    {
+      $fontStyle = '';
+    }
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobCentreSection simpleRedBorderTop'));
 
