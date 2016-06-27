@@ -3081,16 +3081,16 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      $selectCommon = "slpd.title_jp as position_title,
-                       slpd.position_desc_jp as position_desc,
-                       slpd.req_jp as requirements,
-                       slpd.career_jp as career_level,
-                       slpd.holidays_jp as holidays,
-                       slpd.station_jp as station,
-                       slpd.workHours_jp as work_hours,
-                       ind.label_jp as name,
-                       sll.location_jp as location,
-                       slpd.metaKey_jp as meta_keywords,";
+      $selectCommon = "IFNULL(slpd.title_jp,slpd.title) as position_title,
+                       IFNULL(slpd.position_desc_jp,slpd.description) as position_desc,
+                       IFNULL(slpd.req_jp,slpd.requirements) as requirements,
+                       IFNULL(slpd.career_jp,slpd.career_level) as career_level,
+                       IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
+                       IFNULL(slpd.station_jp,slpd.station) as station,
+                       IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
+                       IFNULL(ind.label_jp,ind.label) as name,
+                       IFNULL(sll.location_jp,sll.location) as location,
+                       IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,";
 
       //$newSlpdWhere = " AND slpd.title_jp <> '' ";
     }
