@@ -1685,6 +1685,17 @@ class CJobboardEx extends CJobboard
       $data['description'] = $this->casText['TALENT_DESCRIPTION'];
       $data['quickApplication'] = $this->casText['TALENT_MOBILE_QUICK_APPLICATION'];
 
+      if(isset($_POST['application']))
+      {
+        $application = $_POST['application'];
+        if($application == 'ok')
+        {
+          $data['msg'] = "<div class='alert alert-success fade in'>
+                              <a href='#' class='close' data-dismiss='alert'>&times;</a>
+                              <strong>Success!</strong> Your message has been sent successfully.
+                          </div>";
+        }
+      }
 
       if(isset($_POST['keyword']))
       {
@@ -2946,29 +2957,7 @@ class CJobboardEx extends CJobboard
 
       $oMail->send('New Mobile Application', $sContent);
 
-
-      /*$message = "
-      <html>
-      <head>
-      <title>New Application</title>
-      </head>
-      <body>
-        <br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact."
-      </body>
-      </html>
-      ";
-
-      // Always set content-type when sending HTML email
-      $headers = "MIME-Version: 1.0" . "\r\n";
-      $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-      // More headers
-      $headers .= 'From: <application@slate.co.jp>' . "\r\n";
-      $headers .= 'Cc: munir_anameric@hotmail.com;rkiyamu@slate.co.jp' . "\r\n";
-
-      mail($to,$subject,$message,$headers);*/
-
-      header("Location:https://jobs.slate.co.jp");
+      header("Location:https://jobs.slate.co.jp/?application=ok");
       exit();
 
     }

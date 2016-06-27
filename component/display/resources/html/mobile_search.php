@@ -184,6 +184,10 @@
           </td>
         </tr>
         <?php
+        if(isset($msg))
+        {
+          echo $msg;
+        }
         $i = 2;
         foreach($positions as $key => $value)
         {
