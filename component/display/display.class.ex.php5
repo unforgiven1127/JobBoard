@@ -847,7 +847,7 @@ class CDisplayEx extends CDisplay
               {
                 if($asMenuItems['name'] == "ジョブズ")
                 {
-                $sLink = "https://jobs.slate.co.jp/";
+                  $sLink = "https://jobs.slate.co.jp/";
                 }
                 $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
               }

@@ -2165,6 +2165,13 @@ class CJobboardEx extends CJobboard
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
 
+    $langFlag = $_GET['setLang'];
+    if($langFlag == 'jp')
+    {
+      $fontStyle = 'font-size:10pt;';
+    }
+    $fontStyle = '';
+
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobCentreSection simpleRedBorderTop'));
 
     $positionData = $this->getPositionDetailSlistem($pnPk);
@@ -2467,13 +2474,13 @@ class CJobboardEx extends CJobboard
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
-          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array('style'=>'font-weight:bold;'));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;".$fontStyle));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
-          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
+          $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription',"style"=>$fontStyle));
           $sHTML.= $oHTML->getText(nl2br($sDescription));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
