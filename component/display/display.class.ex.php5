@@ -840,15 +840,15 @@ class CDisplayEx extends CDisplay
             else
             {
               if(!empty($asMenuItems['icon']))
-                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
+                $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'.$newClass));
               else
-                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'.$newClass));
+                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
               {
                 $sHTML.= $this->getCarriageReturn();
                 $sHTML.= $this->getSpanStart('', array('class' => 'menuNavLegend'));
-                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass));
+                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic test2'.$newClass));
                 $sHTML.= $this->getSpanEnd();
               }
             }
