@@ -816,7 +816,7 @@ class CDisplayEx extends CDisplay
                 }
                 else
                 {
-                  $sLink = 'https://jobs.slate.co.jp';
+                  $sLink = 'javascript:;';
                 }
             }
 
@@ -842,7 +842,10 @@ class CDisplayEx extends CDisplay
               if(!empty($asMenuItems['icon']))
                 $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'.$newClass));
               else
+              {
+                $sLink = "https://jobs.slate.co.jp";
                 $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
+              }
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
               {
