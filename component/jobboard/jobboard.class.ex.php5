@@ -2168,7 +2168,7 @@ class CJobboardEx extends CJobboard
     $langFlag = $_GET['setLang'];
     if($langFlag == 'jp')
     {
-      $fontStyle = 'font-size:15pt;';
+      $fontStyle = 'font-size:20pt;';
     }
     else
     {
