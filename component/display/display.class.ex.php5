@@ -816,7 +816,7 @@ class CDisplayEx extends CDisplay
                 }
                 else
                 {
-                  $sLink = 'javascript:;';
+                  $sLink = 'https://jobs.slate.co.jp';
                 }
             }
 
@@ -848,7 +848,7 @@ class CDisplayEx extends CDisplay
               {
                 $sHTML.= $this->getCarriageReturn();
                 $sHTML.= $this->getSpanStart('', array('class' => 'menuNavLegend'));
-                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic test2'.$newClass));
+                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass));
                 $sHTML.= $this->getSpanEnd();
               }
             }
