@@ -843,7 +843,7 @@ class CDisplayEx extends CDisplay
                 $sHTML.= $this->getPicture($this->getResourcePath().$asMenuItems['icon'], $asMenuItems['name'], $sLink, array('class' => 'mainMenuPic'.$newClass));
               else
               {
-                $sLink = "https://jobs.slate.co.jp";
+                $sLink = $asMenuItems['name'];
                 $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
               }
 
