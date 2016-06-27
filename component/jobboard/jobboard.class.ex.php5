@@ -519,7 +519,7 @@ class CJobboardEx extends CJobboard
                        IFNULL(slpd.position_desc_jp,slpd.description) as position_desc,
                        IFNULL(slpd.req_jp,slpd.requirements) as requirements,
                        IFNULL(slpd.career_jp,slpd.career_level) as career_level,
-                       IFNULL(IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
+                       IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
                        IFNULL(slpd.station_jp,slpd.station) as station,
                        IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
                        IFNULL(ind.label_jp,ind.label) as name,
