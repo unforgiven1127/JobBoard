@@ -186,7 +186,9 @@
         <?php
         if(isset($msg))
         {
+          echo "<tr><td>";
           echo $msg;
+          echo "</tr></td>";
         }
         $i = 2;
         foreach($positions as $key => $value)
