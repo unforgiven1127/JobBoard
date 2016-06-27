@@ -833,7 +833,7 @@ class CDisplayEx extends CDisplay
             {
               $sURL = $oPage->getAjaxUrl($asMenuItems['uid'], $asMenuItems['action'], $asMenuItems['type'], $nLoginPk);
               $sAjax = $this->getAjaxPopupJS($sURL, 'body','','600','800',1);
-              $sHTML.= $this->getLink($this->getPicture($this->getResourcePath().$asMenuItems['icon'],  $asMenuItems['name'], '', array('class' => 'mainMenuPic'.$newClass)), 'http://jobs.slate.co.jp', array('onclick'=>$sAjax));
+              $sHTML.= $this->getLink($this->getPicture($this->getResourcePath().$asMenuItems['icon'],  $asMenuItems['name'], '', array('class' => 'mainMenuPic'.$newClass)), 'javascript:;', array('onclick'=>$sAjax));
             }
             else
             {
@@ -902,7 +902,10 @@ class CDisplayEx extends CDisplay
                         $sURL = $oPage->getUrl(''.$asChildren['uid'].'',''.$asChildren['action'].'',''.$asChildren['type'].'',$nPnPk);
                       }
                       else
-                        $sURL = 'javascript:;';
+                      {
+                        //$sURL = 'javascript:;';
+                        $sURL = 'http://jobs.slate.co.jp';
+                      }
                    }
 
                     if(isset($asChildren['ajaxpopup']) && !empty($asChildren['ajaxpopup']))
