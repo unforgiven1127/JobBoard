@@ -1692,7 +1692,7 @@ class CJobboardEx extends CJobboard
         {
           $data['msg'] = "<div class='alert alert-success fade in'>
                               <a href='#' class='close' data-dismiss='alert'>&times;</a>
-                              <strong>Success!</strong> Your message has been sent successfully.
+                              Success! Your application has been sent successfully.
                           </div>";
         }
       }
