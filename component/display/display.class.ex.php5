@@ -913,7 +913,7 @@ class CDisplayEx extends CDisplay
                     {
                       $sURL = $oPage->getAjaxUrl($asChildren['uid'], $asChildren['action'], $asChildren['type'], $nLoginPk);
                       $sAjax = $this->getAjaxPopupJS($sURL, 'body','','600','800',1);
-                      $sHTML.= '<li>'.$this->getLink($asChildren['icon'].$asChildren['name'], 'javascript:;', array('onclick'=>$sAjax.' '.$asChildren['onclick'], 'target'=>$asChildren['target'])).'</li>';
+                      $sHTML.= '<li>'.$this->getLink($asChildren['icon'].$asChildren['name'], '#', array('onclick'=>$sAjax.' '.$asChildren['onclick'], 'target'=>$asChildren['target'])).'</li>';
                     }
                     else
                       $sHTML.= '<li>'.$this->getLink($asChildren['icon'].$asChildren['name'], $sURL, array('onclick' => '/*setCoverScreen(true, true);*/ '.$asChildren['onclick'], 'target'=>$asChildren['target'])).'</li>';

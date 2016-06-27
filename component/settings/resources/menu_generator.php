@@ -539,7 +539,7 @@ $asArray = array();
      ),
      1 => array
       (
-      'name' => 'Employment Opportunities.',
+      'name' => 'Employment Opportunities',
       'legend' => '',
       'link' => 'http://jobs.slate.co.jp',
       'icon' => '',
@@ -852,7 +852,7 @@ $asArray['jp'] = array (
      ),
      1 => array
       (
-      'name' => 'Employment Opportunities..',
+      'name' => 'Employment Opportunities',
       'legend' => '',
       'link' => 'http://jobs.slate.co.jp',
       'icon' => '',
@@ -1273,7 +1273,7 @@ $sString = base64_encode(serialize($asArray));
      ),
      1 => array
       (
-      'name' => 'Employment Opportunities...',
+      'name' => 'Employment Opportunities',
       'legend' => '',
       'link' => 'http://jobs.slate.co.jp',
       'icon' => '',
