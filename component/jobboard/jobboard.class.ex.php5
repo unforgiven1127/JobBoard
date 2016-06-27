@@ -2488,7 +2488,7 @@ class CJobboardEx extends CJobboard
       }
 
        //Requirements
-      $sRequirements = "<p style:'".$fontStyle."'>".$positionData['requirements']."</p>";
+      $sRequirements = "<p style='".$fontStyle."'>".$positionData['requirements']."</p>";
       if(!empty($sRequirements))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
