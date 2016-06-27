@@ -2168,7 +2168,7 @@ class CJobboardEx extends CJobboard
     $langFlag = $_GET['setLang'];
     if($langFlag == 'jp')
     {
-      $fontStyle = 'font-size:20pt;';
+      $fontStyle = "font-size:14px;";
     }
     else
     {
@@ -2477,14 +2477,14 @@ class CJobboardEx extends CJobboard
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
-          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;"));
+          $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;".$fontStyle));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-          $sHTML.= $oHTML->getText(nl2br($sDescription),array('style'=>'font-size:15px;'));
+          $sHTML.= $oHTML->getText(nl2br($sDescription),array("style"=>$fontStyle));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
@@ -2496,14 +2496,14 @@ class CJobboardEx extends CJobboard
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
-            $sHTML.= $oHTML->getText($this->casText['TALENT_REQUIREMENTS'],array('style'=>'font-weight:bold;'));
+            $sHTML.= $oHTML->getText($this->casText['TALENT_REQUIREMENTS'],array('style'=>'font-weight:bold;'.$fontStyle));
             $sHTML.= $oHTML->getBlocEnd();
            $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
             $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-            $sHTML.= $oHTML->getText(nl2br($positionData['requirements']));
+            $sHTML.= $oHTML->getText(nl2br($positionData['requirements']),array("style"=>$fontStyle));
             $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
