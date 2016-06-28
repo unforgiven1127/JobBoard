@@ -288,10 +288,11 @@ foreach ($array as $key => $value)
     	$slistemQuery = "SELECT * FROM positions p WHERE p.external_key = '".$value."'";
 
     	$positionData = mysql_query($slistemQuery);
-
+var_dump($positionData);
+echo'<br><br>';
     	array_push($positionArrayJB,$positionData);
     }
-
+echo "<br><br><br><br>";
     var_dump($positionArrayJB);
 
 	/*define('DB_NAME_SLISTEM','slistem');
