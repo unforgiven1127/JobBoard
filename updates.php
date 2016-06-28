@@ -303,7 +303,7 @@ foreach ($array as $key => $value)
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
     foreach ($positionArrayJB as $key => $value)
    	{
-    	$slistemQuery = "UPDATE sl_position_detail SET description = '".$value['position_desc']."' WHERE positionfk = '".$value['external_key']."'";
+    	$slistemQuery = "UPDATE sl_position_detail SET requirements = '".$value['requirements']."' WHERE positionfk = '".$value['external_key']."'";
 
     	$slistemQuery = mysql_query($slistemQuery);
     	$positionData = mysql_fetch_assoc($slistemQuery);
