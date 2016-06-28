@@ -263,22 +263,22 @@ foreach ($array as $key => $value)
 	//echo $array[$key]."<br>";
 }
 
-	/*JOBBOARD CONNECTION INFO*/
+	/*JOBBOARD CONNECTION INFO
 	define('DB_NAME', 'jobboard');
     define('DB_SERVER', '127.0.0.1');
     define('DB_USER', 'jobboard');
     define('DB_PASSWORD', 'KCd7C56XJ8Nud7uF');
-    /*JOBBOARD CONNECTION INFO*/
+    /*JOBBOARD CONNECTION INFO
 
-    /*SLISTEM CONNECTION INFO*/
+    /*SLISTEM CONNECTION INFO
 	define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
-    /*SLISTEM CONNECTION INFO*/
+    SLISTEM CONNECTION INFO*/
 
     /*JOBBOARD ISLEMLERI ICIN*/
-    mysql_connect( DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
+    /*mysql_connect( DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
     mysql_select_db(DB_NAME) or die(mysql_error());
 
     $positionArrayJB = array();
@@ -307,7 +307,7 @@ foreach ($array as $key => $value)
 
     	$slistemQuery = mysql_query($slistemQuery);
     	$positionData = mysql_fetch_assoc($slistemQuery);
-    }
+    }*/
 
 	/*define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
