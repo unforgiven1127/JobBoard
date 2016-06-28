@@ -287,7 +287,8 @@ foreach ($array as $key => $value)
     {
     	$slistemQuery = "SELECT * FROM position p WHERE p.external_key = '".$value."'";
 
-    	$positionData = mysql_query($slistemQuery);
+    	$slistemQuery = mysql_query($slistemQuery);
+    	$positionData = mysql_fetch_assoc($slistemQuery);
 var_dump($positionData);
 echo'<br><br>';
     	array_push($positionArrayJB,$positionData);
