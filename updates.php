@@ -289,12 +289,25 @@ foreach ($array as $key => $value)
 
     	$slistemQuery = mysql_query($slistemQuery);
     	$positionData = mysql_fetch_assoc($slistemQuery);
-var_dump($positionData);
-echo'<br><br>';
+//var_dump($positionData);
+//echo'<br><br>';
     	array_push($positionArrayJB,$positionData);
     }
-echo "<br><br><br><br>";
-    var_dump($positionArrayJB);
+//echo "<br><br><br><br>";
+//var_dump($positionArrayJB);
+//
+
+	define('DB_NAME_SLISTEM','slistem');
+    define('DB_SERVER_SLISTEM', '127.0.0.1');
+    define('DB_USER_SLISTEM', 'slistem');
+    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
+    foreach ($positionArrayJB as $key => $value)
+   	{
+    	$slistemQuery = "UPDATE sl_position_detail SET description = '".$value['position_desc']."' WHERE positionfk = '".$value['external_key']."'";
+
+    	$slistemQuery = mysql_query($slistemQuery);
+    	$positionData = mysql_fetch_assoc($slistemQuery);
+    }
 
 	/*define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
