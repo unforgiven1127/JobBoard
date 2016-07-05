@@ -97,21 +97,21 @@ array_push($arrayMulti,$array8);
 
 	foreach ($arrayMulti as $key => $array)
 	{
-		$date_created = $array[0];
-		$created_by = $array[1];
-		$candidatefk = $array[2];
-		$attendeefk = $array[3];
-		$type = $array[4];
-		$date_meeting = $array[5];
-		$description = $array[6];
-		$meeting_done = $array[7];
-		$date_met = $array[8];
+		$date_created = TRIM($array[0]);
+		$created_by = TRIM($array[1]);
+		$candidatefk = TRIM($array[2]);
+		$attendeefk = TRIM($array[3]);
+		$type = TRIM($array[4]);
+		$date_meeting = TRIM($array[5]);
+		$description = TRIM($array[6]);
+		$meeting_done = TRIM($array[7]);
+		$date_met = TRIM($array[8]);
 
 		$slistemQuery = " INSERT INTO sl_meeting (date_created,created_by,candidatefk,attendeefk,type,date_meeting,description,meeting_done,date_met) VALUES('".$date_created."','".$created_by."','".$candidatefk."','".$attendeefk."','".$type."','".$date_meeting."','".$description."','".$meeting_done."','".$date_met."')";
 
 		echo $slistemQuery."<br><br>";
 
-    	$slistemQuery = mysql_query($slistemQuery);
+    	//$slistemQuery = mysql_query($slistemQuery);
 	}
 
 	/*foreach ($array as $key => $value)
