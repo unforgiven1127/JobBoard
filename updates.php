@@ -28,7 +28,7 @@ array_push($arrayMulti,$array8);
 
 
 
-foreach ($arrayMulti as $key => $array)
+/*foreach ($arrayMulti as $key => $array)
 {
 	foreach ($array as $key => $value)
 	{
@@ -36,7 +36,7 @@ foreach ($arrayMulti as $key => $array)
 		echo $array[$key]." - ";
 	}
 	echo "<br><br>";
-}
+}*/
 
 	/*JOBBOARD CONNECTION INFO
 	define('DB_NAME', 'jobboard');
@@ -108,6 +108,8 @@ foreach ($arrayMulti as $key => $array)
 		$date_met = $array[8];
 
 		$slistemQuery = " INSERT INTO sl_meeting (date_created,created_by,candidatefk,attendeefk,type,date_meeting,description,meeting_done,date_met) VALUES('".$date_created."','".$created_by."','".$candidatefk."','".$attendeefk."','".$type."','".$date_meeting."','".$description."','".$meeting_done."','".$date_met."')";
+
+		echo $slistemQuery."<br><br>";
 
     	$slistemQuery = mysql_query($slistemQuery);
 	}
