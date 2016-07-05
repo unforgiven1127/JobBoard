@@ -8,25 +8,36 @@ $arrayMulti = array();
 
 
 
-$array1=array( '	03-07-2012 17:39	','	354	','	279387	','	354	','	1	','	03-07-2012 17:39	','	Assessed in person	','	1	','	03-07-2012 17:39	');
-$array2=array( '	01-02-2010 19:46	','	354	','	272772	','	354	','	1	','	01-02-2010 19:46	','	Assessed in person	','	1	','	01-02-2010 19:46	');
-$array3=array( '	26-09-2008 13:03	','	354	','	262416	','	354	','	1	','	26-09-2008 13:03	','	Assessed in person	','	1	','	26-09-2008 13:03	');
-$array4=array( '	16-09-2008 20:26	','	354	','	259143	','	354	','	1	','	16-09-2008 20:26	','	Assessed in person	','	1	','	16-09-2008 20:26	');
-$array5=array( '	11-09-2008 12:22	','	363	','	257856	','	363	','	1	','	11-09-2008 12:22	','	Assessed in person	','	1	','	11-09-2008 12:22	');
-$array6=array( '	18-09-2008 17:23	','	333	','	257422	','	333	','	1	','	18-09-2008 17:23	','	Assessed in person	','	1	','	18-09-2008 17:23	');
-$array7=array( '	24-09-2008 12:25	','	270	','	254697	','	270	','	1	','	24-09-2008 12:25	','	Assessed in person	','	1	','	24-09-2008 12:25	');
-$array8=array( '	28-02-2013 17:27	','	155	','	252792	','	360	','	1	','	28-02-2013 17:27	','	Assessed in person	','	1	','	28-02-2013 17:27	');
+$array=array( '	2012-07-03 17:39	','	354	','	279387	','	354	','	1	','	2012-07-03 17:39	','	Assessed in person	','	1	','	2012-07-03 17:39	',
+'	2010-02-01 19:46	','	354	','	272772	','	354	','	1	','	2010-02-01 19:46	','	Assessed in person	','	1	','	2010-02-01 19:46	',
+'	2008-09-26 13:03	','	354	','	262416	','	354	','	1	','	2008-09-26 13:03	','	Assessed in person	','	1	','	2008-09-26 13:03	',
+'	2008-09-16 20:26	','	354	','	259143	','	354	','	1	','	2008-09-16 20:26	','	Assessed in person	','	1	','	2008-09-16 20:26	',
+'	2008-09-11 12:22	','	363	','	257856	','	363	','	1	','	2008-09-11 12:22	','	Assessed in person	','	1	','	2008-09-11 12:22	',
+'	2008-09-18 17:23	','	333	','	257422	','	333	','	1	','	2008-09-18 17:23	','	Assessed in person	','	1	','	2008-09-18 17:23	',
+'	2008-09-24 12:25	','	270	','	254697	','	270	','	1	','	2008-09-24 12:25	','	Assessed in person	','	1	','	2008-09-24 12:25	',
+'	2013-02-28 17:27	','	155	','	252792	','	360	','	1	','	2013-02-28 17:27	','	Assessed in person	','	1	','	2013-02-28 17:27	');
 
-array_push($arrayMulti,$array1);
-array_push($arrayMulti,$array2);
-array_push($arrayMulti,$array3);
-array_push($arrayMulti,$array4);
-array_push($arrayMulti,$array5);
-array_push($arrayMulti,$array6);
-array_push($arrayMulti,$array7);
-array_push($arrayMulti,$array8);
+$addArray = array();
+$multiArray = array();
 
+$i = 0;
+foreach($array as $key => $value)
+{
 
+	$addArray[$i] = TRIM($value);
+	$i++;
+	if($i == 9)
+	{
+		array_push($multiArray,$addArray);
+		$i = 0;
+	}
+}
+
+foreach($multiArray as $key => $value)
+{
+	var_dump($value);
+	echo "<br><br>";
+}
 
 /*foreach ($arrayMulti as $key => $array)
 {
@@ -95,7 +106,7 @@ array_push($arrayMulti,$array8);
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
 
-	foreach ($arrayMulti as $key => $array)
+	/*foreach ($arrayMulti as $key => $array)
 	{
 		$date_created = TRIM($array[0]);
 		$created_by = TRIM($array[1]);
@@ -112,7 +123,7 @@ array_push($arrayMulti,$array8);
 		echo $slistemQuery."<br><br>";
 
     	$slistemQuery = mysql_query($slistemQuery);
-	}
+	}*/
 
 	/*foreach ($array as $key => $value)
 	{
