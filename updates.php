@@ -43,14 +43,16 @@ foreach ($arrayMulti as $key => $array)
     define('DB_SERVER', '127.0.0.1');
     define('DB_USER', 'jobboard');
     define('DB_PASSWORD', 'KCd7C56XJ8Nud7uF');
-    /*JOBBOARD CONNECTION INFO
+    JOBBOARD CONNECTION INFO*/
 
-    /*SLISTEM CONNECTION INFO
+    //SLISTEM CONNECTION INFO
 	define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
-    SLISTEM CONNECTION INFO*/
+    //SLISTEM CONNECTION INFO
+
+
 
     /*JOBBOARD ISLEMLERI ICIN*/
     /*mysql_connect( DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
@@ -84,7 +86,7 @@ foreach ($arrayMulti as $key => $array)
     	$positionData = mysql_fetch_assoc($slistemQuery);
     }*/
 
-	/*define('DB_NAME_SLISTEM','slistem');
+	define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
@@ -92,7 +94,25 @@ foreach ($arrayMulti as $key => $array)
 	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-	foreach ($array as $key => $value)
+
+	foreach ($arrayMulti as $key => $array)
+	{
+		$date_created = $array[0];
+		$created_by = $array[1];
+		$candidatefk = $array[2];
+		$attendeefk = $array[3];
+		$type = $array[4];
+		$date_meeting = $array[5];
+		$description = $array[6];
+		$meeting_done = $array[7];
+		$date_met = $array[8];
+
+		$slistemQuery = " INSERT INTO sl_meeting (date_created,created_by,candidatefk,attendeefk,type,date_meeting,description,meeting_done,date_met) VALUES('".$date_created."','".$created_by."','".$candidatefk."','".$attendeefk."','".$type."','".$date_meeting."','".$description."','".$meeting_done."','".$date_met."')";
+
+    	$slistemQuery = mysql_query($slistemQuery);
+	}
+
+	/*foreach ($array as $key => $value)
 	{
 		$id = TRIM($key);
 		$jpTitle = TRIM($value);
