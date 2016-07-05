@@ -122,7 +122,7 @@ foreach($array as $key => $value)
 
 		echo $slistemQuery."<br><br>";
 
-    	$slistemQuery = mysql_query($slistemQuery);
+    	//$slistemQuery = mysql_query($slistemQuery);
 	}
 
 	/*foreach ($array as $key => $value)
