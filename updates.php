@@ -33,11 +33,11 @@ foreach($array as $key => $value)
 	}
 }
 
-foreach($multiArray as $key => $value)
+/*foreach($multiArray as $key => $value)
 {
 	var_dump($value);
 	echo "<br><br>";
-}
+}*/
 
 /*foreach ($arrayMulti as $key => $array)
 {
@@ -106,7 +106,7 @@ foreach($multiArray as $key => $value)
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
 
-	/*foreach ($arrayMulti as $key => $array)
+	foreach ($multiArray as $key => $array)
 	{
 		$date_created = TRIM($array[0]);
 		$created_by = TRIM($array[1]);
@@ -123,7 +123,7 @@ foreach($multiArray as $key => $value)
 		echo $slistemQuery."<br><br>";
 
     	$slistemQuery = mysql_query($slistemQuery);
-	}*/
+	}
 
 	/*foreach ($array as $key => $value)
 	{
