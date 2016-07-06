@@ -33,15 +33,6 @@ foreach($worksheetNames as $key => $sheetName)
 //show the final array
 
 
-foreach ($return as $key => $array)
-{
-	foreach ($array as $key => $value)
-	{
-		echo $value['A']." - ".$value['B'];
-		echo "<br><br>";
-	}
-}
-
 	//echo "Updates<br><br>";
 /*$arrayMulti = array();
 
@@ -144,6 +135,25 @@ foreach($array as $key => $value)
 	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
+    foreach ($return as $key => $array)
+	{
+		foreach ($array as $key => $value)
+		{
+			$candidate_id = $value['A'];
+			$keyword = $value['B'];
+
+			$slistemQuery = "SELECT * FROM sl_candidate_profile WHERE candidatefk = '".$candidate_id."'";
+
+			$slistemQuery = mysql_query($slistemQuery);
+
+			$candidateData = mysql_fetch_assoc($slistemQuery);
+
+			$newKeyword = $candidateData['keyword']." , ".$keyword;
+
+			echo $value['A']." - ".$value['B']." - ".$newKeyword;
+			echo "<br><br>";
+		}
+	}
 
 	/*foreach ($multiArray as $key => $array)
 	{
