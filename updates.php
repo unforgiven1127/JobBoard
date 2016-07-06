@@ -154,9 +154,9 @@ foreach($array as $key => $value)
 			$newKeywordArray = array();
 			foreach ($exploded as $key => $value)
 			{
-				if(!in_array($value,$newKeywordArray))
+				if(!in_array(TRIM($value),$newKeywordArray))
 				{
-					array_push($newKeywordArray,$value);
+					array_push($newKeywordArray,TRIM($value));
 				}
 			}
 
