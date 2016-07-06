@@ -2,9 +2,38 @@
 
 	require_once('component/jobboard/jobboard.class.php5');
 	require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
+	require_once('common/lib/phpExcel/Classes/PHPExcel.php');
+
+$fileName = "oldKeys.xlsx";
+$excelReader = PHPExcel_IOFactory::createReaderForFile($fileName);
+
+$excelReader->setReadDataOnly();
+
+//load only certain sheets from the file
+$loadSheets = array('keywords');
+$excelReader->setLoadSheetsOnly($loadSheets);
+
+//the default behavior is to load all sheets
+$excelReader->setLoadAllSheets();
+
+$excelObj = $excelReader->load($fileName);
+
+$excelObj->getActiveSheet()->toArray(null, true,true,true);
+
+$worksheetNames = $excelObj->getSheetNames($fileName);
+$return = array();
+foreach($worksheetNames as $key => $sheetName)
+{
+	//set the current active worksheet by name
+	$excelObj->setActiveSheetIndexByName($sheetName);
+	//create an assoc array with the sheet name as key and the sheet contents array as value
+	$return[$sheetName] = $excelObj->getActiveSheet()->toArray(null, true,true,true);
+}
+//show the final array
+var_dump($return);
 
 	//echo "Updates<br><br>";
-$arrayMulti = array();
+/*$arrayMulti = array();
 
 
 
@@ -106,7 +135,7 @@ foreach($array as $key => $value)
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
 
-	foreach ($multiArray as $key => $array)
+	/*foreach ($multiArray as $key => $array)
 	{
 		$date_created = TRIM($array[0]);
 		$created_by = TRIM($array[1]);
@@ -123,7 +152,7 @@ foreach($array as $key => $value)
 		echo $slistemQuery."<br><br>";
 
     	//$slistemQuery = mysql_query($slistemQuery);
-	}
+	}*/
 
 	/*foreach ($array as $key => $value)
 	{
