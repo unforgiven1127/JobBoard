@@ -33,10 +33,13 @@ foreach($worksheetNames as $key => $sheetName)
 //show the final array
 
 
-foreach ($return as $key => $value)
+foreach ($return as $key => $array)
 {
-	var_dump($value);
-	echo "<br><br>";
+	foreach ($array as $key => $value)
+	{
+		var_dump($value);
+		echo "<br><br>";
+	}
 }
 
 	//echo "Updates<br><br>";
