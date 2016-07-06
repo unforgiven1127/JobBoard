@@ -10,11 +10,11 @@ $excelReader = PHPExcel_IOFactory::createReaderForFile($fileName);
 $excelReader->setReadDataOnly();
 
 //load only certain sheets from the file
-$loadSheets = array('keywords');
-$excelReader->setLoadSheetsOnly($loadSheets);
+//$loadSheets = array('keywords');
+//$excelReader->setLoadSheetsOnly($loadSheets);
 
 //the default behavior is to load all sheets
-$excelReader->setLoadAllSheets();
+//$excelReader->setLoadAllSheets();
 
 $excelObj = $excelReader->load($fileName);
 
@@ -28,9 +28,12 @@ foreach($worksheetNames as $key => $sheetName)
 	$excelObj->setActiveSheetIndexByName($sheetName);
 	//create an assoc array with the sheet name as key and the sheet contents array as value
 	$return[$sheetName] = $excelObj->getActiveSheet()->toArray(null, true,true,true);
+
+	var_dump($excelObj->getActiveSheet()->toArray(null, true,true,true));
+	echo "<br><br>";
 }
 //show the final array
-var_dump($return);
+//var_dump($return);
 
 	//echo "Updates<br><br>";
 /*$arrayMulti = array();
