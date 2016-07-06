@@ -150,11 +150,23 @@ foreach($array as $key => $value)
 			$keyword = $candidateData['keyword'];
 			$exploded = explode(',',$keyword);
 
+
+			$newKeywordArray = array();
+			foreach ($exploded as $key => $value)
+			{
+				if(!in_array(TRIM($value),$newKeywordArray))
+				{
+					array_push($newKeywordArray,$value);
+				}
+			}
+
+			$newKeyword = implode(',',$newKeywordArray);
+
 			//$newKeyword = $candidateData['keyword']." , ".$keyword;
 
 			$slistemQuery = "UPDATE sl_candidate_profile SET keyword ='".$newKeyword."' WHERE candidatefk = '".$candidate_id."'";
 			//$slistemQuery = mysql_query($slistemQuery);
-			var_dump($exploded);
+			var_dump($newKeyword);
 			echo "<br><br>";
 			$i++;
 			//echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
