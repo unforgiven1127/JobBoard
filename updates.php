@@ -150,7 +150,7 @@ foreach($array as $key => $value)
 
 			$newKeyword = $candidateData['keyword']." , ".$keyword;
 
-			echo $value['A']." - ".$value['B']." - ".$newKeyword;
+			echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
 			echo "<br><br>";
 		}
 	}
