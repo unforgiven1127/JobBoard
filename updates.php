@@ -165,9 +165,9 @@ foreach($array as $key => $value)
 			//$newKeyword = $candidateData['keyword']." , ".$keyword;
 
 			$slistemQuery = "UPDATE sl_candidate_profile SET keyword ='".$newKeyword."' WHERE candidatefk = '".$candidate_id."'";
-			//$slistemQuery = mysql_query($slistemQuery);
-			var_dump($newKeyword);
-			echo "<br><br>";
+			$slistemQuery = mysql_query($slistemQuery);
+			//var_dump($newKeyword);
+			//echo "<br><br>";
 			$i++;
 			//echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
 			//echo "<br><br>";
