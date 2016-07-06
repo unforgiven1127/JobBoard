@@ -147,11 +147,15 @@ foreach($array as $key => $value)
 			$slistemQuery = mysql_query($slistemQuery);
 			$candidateData = mysql_fetch_assoc($slistemQuery);
 
-			$newKeyword = $candidateData['keyword']." , ".$keyword;
+			$keyword = $candidateData['keyword'];
+			$exploded = explode(',',$keyword);
+
+			//$newKeyword = $candidateData['keyword']." , ".$keyword;
 
 			$slistemQuery = "UPDATE sl_candidate_profile SET keyword ='".$newKeyword."' WHERE candidatefk = '".$candidate_id."'";
 			//$slistemQuery = mysql_query($slistemQuery);
-			echo $slistemQuery."<br><br>";
+			var_dump($exploded);
+			echo "<br><br>";
 			$i++;
 			//echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
 			//echo "<br><br>";
