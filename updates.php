@@ -135,6 +135,7 @@ foreach($array as $key => $value)
 	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
+    $i = 0;
     foreach ($return as $key => $array)
 	{
 		foreach ($array as $key => $value)
@@ -143,18 +144,20 @@ foreach($array as $key => $value)
 			$keyword = $value['B'];
 
 			$slistemQuery = "SELECT * FROM sl_candidate_profile WHERE candidatefk = '".$candidate_id."'";
-
 			$slistemQuery = mysql_query($slistemQuery);
-
 			$candidateData = mysql_fetch_assoc($slistemQuery);
 
 			$newKeyword = $candidateData['keyword']." , ".$keyword;
 
-			echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
-			echo "<br><br>";
+			$slistemQuery = "UPDATE sl_candidate_profile set keyword ='".$newKeyword."' WHERE candidatefk = '".$candidate_id."'";
+			$slistemQuery = mysql_query($slistemQuery);
+
+			$i++;
+			//echo $candidateData['keyword']." ------ ".$value['A']." - ".$value['B']." - ".$newKeyword;
+			//echo "<br><br>";
 		}
 	}
-
+	echo $i." data updated";
 	/*foreach ($multiArray as $key => $array)
 	{
 		$date_created = TRIM($array[0]);
