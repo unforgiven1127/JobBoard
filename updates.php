@@ -37,7 +37,7 @@ foreach ($return as $key => $array)
 {
 	foreach ($array as $key => $value)
 	{
-		var_dump($value);
+		echo $value[0]." - "$value[1];
 		echo "<br><br>";
 	}
 }
