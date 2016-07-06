@@ -165,7 +165,7 @@ foreach($array as $key => $value)
 			//$newKeyword = $candidateData['keyword']." , ".$keyword;
 
 			$slistemQuery = "UPDATE sl_candidate_profile SET keyword ='".$newKeyword."' WHERE candidatefk = '".$candidate_id."'";
-			$slistemQuery = mysql_query($slistemQuery);
+			//$slistemQuery = mysql_query($slistemQuery);
 			//var_dump($newKeyword);
 			//echo "<br><br>";
 			$i++;
