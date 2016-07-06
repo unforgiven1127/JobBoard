@@ -29,11 +29,15 @@ foreach($worksheetNames as $key => $sheetName)
 	//create an assoc array with the sheet name as key and the sheet contents array as value
 	$return[$sheetName] = $excelObj->getActiveSheet()->toArray(null, true,true,true);
 
-	var_dump($excelObj->getActiveSheet()->toArray(null, true,true,true));
-	echo "<br><br>";
 }
 //show the final array
-//var_dump($return);
+
+
+foreach ($return as $key => $value)
+{
+	var_dump($value);
+	echo "<br><br>";
+}
 
 	//echo "Updates<br><br>";
 /*$arrayMulti = array();
