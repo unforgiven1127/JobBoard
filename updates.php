@@ -16,7 +16,7 @@ $excelReader->setReadDataOnly();
 //the default behavior is to load all sheets
 //$excelReader->setLoadAllSheets();
 
-$excelObj = $excelReader->load($fileName);
+/*$excelObj = $excelReader->load($fileName);
 
 $excelObj->getActiveSheet()->toArray(null, true,true,true);
 
@@ -29,7 +29,7 @@ foreach($worksheetNames as $key => $sheetName)
 	//create an assoc array with the sheet name as key and the sheet contents array as value
 	$return[$sheetName] = $excelObj->getActiveSheet()->toArray(null, true,true,true);
 
-}
+}*/
 //show the final array
 
 
@@ -135,8 +135,21 @@ foreach($array as $key => $value)
 	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-    $i = 0;
-    foreach ($return as $key => $array)
+    $slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
+    $slistemQuery = mysql_query($slistemQuery);
+
+	while($userData = mysql_fetch_assoc($slistemQuery))
+	{
+		$pass = $userData['password'];
+		$user_id = $userData['loginpk'];
+		$pass_encrypted = sha1($pass);
+
+		echo $user_id." - ".$pass_encrypted;
+		echo "<br><br>";
+	}
+
+    //$i = 0;
+    /*foreach ($return as $key => $array)
 	{
 		foreach ($array as $key => $value)
 		{
@@ -173,7 +186,7 @@ foreach($array as $key => $value)
 			//echo "<br><br>";
 		}
 	}
-	echo $i." data updated";
+	echo $i." data updated";*/
 	/*foreach ($multiArray as $key => $array)
 	{
 		$date_created = TRIM($array[0]);
