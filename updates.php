@@ -144,6 +144,9 @@ foreach($array as $key => $value)
 		$user_id = $userData['loginpk'];
 		$pass_encrypted = sha1($pass);
 
+		$slistemQueryUpdate = "UPDATE login SET password_crypted = '".$pass_encrypted."' WHERE loginpk = '".$user_id."'";
+		$slistemQueryUpdate = mysql_query($slistemQueryUpdate);
+
 		echo $user_id." - ".$pass_encrypted;
 		echo "<br><br>";
 	}
