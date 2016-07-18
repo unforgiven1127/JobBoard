@@ -2165,10 +2165,11 @@ ChromePhp::log('test');
     $oPage = CDependency::getComponentByName('page');
 
 
-      if($pnPk < 7000)
-      {
-        $pnPk = $this->_getSlistemId($pnPk);
-      }
+    if($pnPk < 7000)
+    {
+      ChromePhp::log('test 2');
+      $pnPk = $this->_getSlistemId($pnPk);
+    }
 
     $langFlag = $_GET['setLang'];
     if($langFlag == 'jp')
