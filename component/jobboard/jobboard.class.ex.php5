@@ -2143,7 +2143,7 @@ class CJobboardEx extends CJobboard
       if($pnPk < 7000)
       {
         //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
-        $pnPk = _getSlistemId($pnPk);
+        $pnPk = $this->_getSlistemId($pnPk);
       }
 
       $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
