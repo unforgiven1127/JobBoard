@@ -2538,6 +2538,7 @@ ChromePhp::log($positionData);
     }
     else
     {
+      ChromePhp::log('HERE');
       $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
     }
 
