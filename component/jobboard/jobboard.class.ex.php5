@@ -2140,12 +2140,6 @@ class CJobboardEx extends CJobboard
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 
-      if($pnPk < 7000)
-      {
-        //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
-        $pnPk = $this->_getSlistemId($pnPk);
-      }
-ChromePhp::log($pnPk);
       $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
@@ -2169,6 +2163,14 @@ ChromePhp::log($pnPk);
   {
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
+
+ChromePhp::log($pnPk);
+      if($pnPk < 7000)
+      {
+        //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
+        $pnPk = $this->_getSlistemId($pnPk);
+      }
+ChromePhp::log($pnPk);
 
     $langFlag = $_GET['setLang'];
     if($langFlag == 'jp')
