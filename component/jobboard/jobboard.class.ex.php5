@@ -2171,6 +2171,7 @@ ChromePhp::log('test');
       ChromePhp::log('test 2');
       ChromePhp::log($newPk);
       $pnPk = $this->_getSlistemId($newPk);
+      ChromePhp::log($pnPk);
     }
 
     $langFlag = $_GET['setLang'];
@@ -2556,6 +2557,7 @@ ChromePhp::log($positionData);
 
     $sQuery = "SELECT * FROM position p WHERE p.positionpk = '".$pnPk."'";
     $oDbResult = $oDB->ExecuteQuery($sQuery);
+    $bRead = $oDbResult->readFirst();
     $slistemId = $oDbResult->getFieldValue('external_key');
 
     return $slistemId;
