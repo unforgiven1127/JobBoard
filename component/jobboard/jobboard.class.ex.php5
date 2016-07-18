@@ -3701,7 +3701,7 @@ ChromePhp::log($positionData);
 
     $sHtml = $oHTML->getBlocStart('', array('class' => 'redBorderTop'));
 
-      $sHtml.= $oHTML->getBlocStart('', array('class' => 'sideBarTitle'));
+      $sHtml.= $oHTML->getBlocStart('', array('class' => 'sideBarTitle test'));
       $sHtml.= $oHTML->getText('<b>'.$this->casText['TALENT_LATEST_JOBS'].'</b>');
       $sHtml.= $oHTML->getBlocEnd();
 
