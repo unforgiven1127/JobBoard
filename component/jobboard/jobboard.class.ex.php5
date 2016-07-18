@@ -2202,7 +2202,7 @@ class CJobboardEx extends CJobboard
 
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);*/
-
+ChromePhp::log($positionData);
     if(isset($positionData) && $positionData != null)
     {
 
