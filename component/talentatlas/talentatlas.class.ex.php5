@@ -1889,7 +1889,7 @@ class CTalentatlasEx extends CTalentatlas
         $sHTML.= $oHTML->getBlocEnd('');
        }
        else
-       {
+       {ChromePhp::log('HERE 7');
          $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
        }
 

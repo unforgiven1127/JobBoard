@@ -1826,7 +1826,7 @@ class CJobboardEx extends CJobboard
       $sHTML.= $oHTML->getBlocEnd();
     }
     else
-    {
+    {ChromePhp::log('HERE 4');
       $sHTML.= $oHTML->getBlocMessage('Position may have been deleted or expired');
     }
 
