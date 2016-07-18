@@ -2140,8 +2140,14 @@ class CJobboardEx extends CJobboard
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 
-      //$sHTML.= $this->_getJobDetailInformation($pnPk);
-      $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
+      if($pnPk < 7000)
+      {
+        $sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
+      }
+      else
+      {
+        $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
+      }
 
       //right section
       if($oPage->getDeviceType() != CONST_PAGE_DEVICE_TYPE_PHONE)
