@@ -2176,7 +2176,7 @@ class CJobboardEx extends CJobboard
     }
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobCentreSection simpleRedBorderTop'));
-ChromePhp::log($pnPk);
+
     $positionData = $this->getPositionDetailSlistem($pnPk);
 
     /*$slistemDB = CDependency::getComponentByName('database');
