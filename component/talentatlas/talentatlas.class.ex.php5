@@ -790,7 +790,7 @@ class CTalentatlasEx extends CTalentatlas
       //Section to display the icons
 
       $sHTML.= $oHTML->getBlocStart('recentJobs');
-      $sHTML.= $oHTML->getText($this->casText['TALENT_RECENT_JOBS'],array('class'=>'boldTitle'));
+      $sHTML.= $oHTML->getText($this->casText['TALENT_RECENT_JOBS'],array('class'=>'boldTitle test'));
       $sHTML.= $oHTML->getBlocEnd();
 
       $sQuery = 'SELECT pos.*,cp.*  FROM position as pos LEFT JOIN company as cp on pos.companyfk = cp.companypk where pos.parentfk != 0 AND pos.visibility <> 0 AND pos.lang = "'.$sLang.'" ORDER BY positionpk DESC LIMIT 10 ';
