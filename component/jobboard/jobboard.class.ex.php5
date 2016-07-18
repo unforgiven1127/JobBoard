@@ -2139,7 +2139,7 @@ class CJobboardEx extends CJobboard
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetail'));
 
       $sHTML.= $this->_getSideSectionJobList($pnPk);
-
+//$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
       $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
@@ -2164,10 +2164,10 @@ class CJobboardEx extends CJobboard
     $oHTML = CDependency::getComponentByName('display');
     $oPage = CDependency::getComponentByName('page');
 
+ChromePhp::log('test');
 ChromePhp::log($pnPk);
       if($pnPk < 7000)
       {
-        //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
         $pnPk = $this->_getSlistemId($pnPk);
       }
 ChromePhp::log($pnPk);
