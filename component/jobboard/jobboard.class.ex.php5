@@ -2145,7 +2145,7 @@ class CJobboardEx extends CJobboard
         //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
         $pnPk = $this->_getSlistemId($pnPk);
       }
-
+ChromePhp::log($pnPk);
       $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
