@@ -2165,12 +2165,11 @@ class CJobboardEx extends CJobboard
     $oPage = CDependency::getComponentByName('page');
 
 ChromePhp::log('test');
-ChromePhp::log($pnPk);
+
       if($pnPk < 7000)
       {
         $pnPk = $this->_getSlistemId($pnPk);
       }
-ChromePhp::log($pnPk);
 
     $langFlag = $_GET['setLang'];
     if($langFlag == 'jp')
