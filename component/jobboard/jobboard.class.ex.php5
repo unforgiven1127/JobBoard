@@ -2167,8 +2167,10 @@ ChromePhp::log('test');
 
     if($pnPk < 7000)
     {
+      $newPk = $_GET['ppk'];
       ChromePhp::log('test 2');
-      $pnPk = $this->_getSlistemId($pnPk);
+      ChromePhp::log($newPk);
+      $pnPk = $this->_getSlistemId($newPk);
     }
 
     $langFlag = $_GET['setLang'];
