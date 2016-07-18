@@ -2569,7 +2569,7 @@ ChromePhp::log($positionData);
 
 
 
-////var_dump($positionData);
+var_dump($positionData);
     //ChromePhp::log($positionData);
 
     if($bRead)
