@@ -2142,12 +2142,11 @@ class CJobboardEx extends CJobboard
 
       if($pnPk < 7000)
       {
-        $sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
+        //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
+        $pnPk = _getSlistemId($pnPk);
       }
-      else
-      {
-        $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
-      }
+
+      $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
 
       //right section
       if($oPage->getDeviceType() != CONST_PAGE_DEVICE_TYPE_PHONE)
@@ -2545,6 +2544,17 @@ ChromePhp::log($positionData);
     $sHTML.= $oHTML->getBlocEnd();
     return $sHTML;
 
+  }
+
+  private function _getSlistemId($pnPk)
+  {
+    $oDB = CDependency::getComponentByName('database');
+
+    $sQuery = "SELECT * FROM position p WHERE p.positionpk = '".$pnPk."'";
+    $oDbResult = $oDB->ExecuteQuery($sQuery);
+    $slistemId = $oDbResult->getFieldValue('external_key');
+
+    return $slistemId;
   }
 
   private function _getJobDetailInformation($pnPk)
