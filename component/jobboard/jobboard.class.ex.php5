@@ -4141,6 +4141,7 @@ ChromePhp::log($positionData);
 
     $oDB = CDependency::getComponentByName('database');
     $oPage = CDependency::getComponentByName('page');
+    $slistemDB = CDependency::getComponentByName('database');
 
     $sQuery = 'SELECT pos.*, ind.name, parent_ind.name as parent_industry FROM position as pos ';
     $sQuery.= ' INNER JOIN industry as ind on (ind.industrypk = pos.industryfk) ';
@@ -4195,18 +4196,20 @@ ChromePhp::log($positionData);
 
     //$oXml->addChild('query', mb_convert_encoding(($sQuery), 'utf8'));
 ChromePhp::log($sQuery);
+$positionData = $slistemDB->slistemGetAllData($slistemQuery);
     $oDbResult = $oDB->ExecuteQuery($sQuery);
-    $bRead = $oDbResult->readFirst();
+    /*$bRead = $oDbResult->readFirst();
     if(!$bRead)
     {
       $oXml->addChild('no_result', 'no result');
       return $oXml->asXML();
-    }
+    }*/
 
     // TODO: should use ENT_DISALLOWED or ENT_XML1, but only available after php 5.4
-    while($bRead)
+    //while($bRead)
+    foreach ($positionData as $key => $asJobData)
     {
-      $asJobData = $oDbResult->getData();
+      //$asJobData = $oDbResult->getData();
       $sDescription = strip_tags($asJobData['position_desc']);
       if(strlen($sDescription) < 40)
         $sDescription.= ' '.strip_tags($asJobData['requirements']);
@@ -4244,7 +4247,7 @@ ChromePhp::log($sQuery);
       $sUrl = $this->_getConsultantPictureByIndustry((int)$asJobData['industryfk'], true);
       $oNewJob->addChild('picture', htmlspecialchars($sUrl, ENT_QUOTES, 'UTF-8'));
 
-      $bRead = $oDbResult->readNext();
+      //$bRead = $oDbResult->readNext();
     }
 
     //https://job.slate.co.jp/index.php5?uid=153-160&ppa=ppav&ppt=jrss&pg=ajx
