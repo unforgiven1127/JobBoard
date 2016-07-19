@@ -4194,7 +4194,7 @@ ChromePhp::log($positionData);
       $sQuery.= ' LIMIT 10 ';
 
     //$oXml->addChild('query', mb_convert_encoding(($sQuery), 'utf8'));
-
+ChromePhp::log($sQuery);
     $oDbResult = $oDB->ExecuteQuery($sQuery);
     $bRead = $oDbResult->readFirst();
     if(!$bRead)
