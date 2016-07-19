@@ -4143,9 +4143,9 @@ ChromePhp::log($positionData);
     $oPage = CDependency::getComponentByName('page');
     $slistemDB = CDependency::getComponentByName('database');
 
-    $sQuery = 'SELECT pos.*, ind.name, parent_ind.name as parent_industry FROM position as pos ';
-    $sQuery.= ' INNER JOIN industry as ind on (ind.industrypk = pos.industryfk) ';
-    $sQuery.= ' LEFT JOIN industry as parent_ind on (parent_ind.industrypk = ind.parentfk) ';
+    //$sQuery = 'SELECT pos.*, ind.name, parent_ind.name as parent_industry FROM position as pos ';
+    //$sQuery.= ' INNER JOIN industry as ind on (ind.industrypk = pos.industryfk) ';
+    //$sQuery.= ' LEFT JOIN industry as parent_ind on (parent_ind.industrypk = ind.parentfk) ';
     $sQuery = "SELECT slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk, slpd.is_public as visibility, slpd.category as category
             , slpd.display_age as display_age, slpd.display_salary as display_salary, slpd.display_date as display_date, slpd.career_level as career_level
             , slpd.title as position_title, slpd.description as position_desc, slpd.requirements as requirements, slp.companyfk as companyfk, slp.status as status
