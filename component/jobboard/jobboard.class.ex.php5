@@ -1894,7 +1894,7 @@ class CJobboardEx extends CJobboard
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobSideSection floatLeft jobSharingSection'));
 
 
-    if(!empty($asData))
+    /*if(!empty($asData))
     {
       $sHTML.= $oHTML->getBlocStart('',array('class'=>'simpleRedBorderTop', 'style' => 'margin-right: 10px;'));
 
@@ -1913,7 +1913,7 @@ class CJobboardEx extends CJobboard
           $sFbPageUrl = 'http://www.facebook.com/share.php?u='.$sPageURL.'&t='.$sTitle.'';
           $sLinkedInUrl = 'http://www.linkedin.com/shareArticle?mini=true&url='.$sPageURL.'&title='.$sTitle.'';
 
-/*          $sHTML.= $oHTML->getPicture($this->getResourcePath().'pictures/facebook.png','Post on facebook');
+          $sHTML.= $oHTML->getPicture($this->getResourcePath().'pictures/facebook.png','Post on facebook');
           $sHTML.= $oHTML->getSpace(2);
           $sHTML.= $oHTML->getLink($this->casText['TALENT_POST_FB'], $sFbPageUrl, array('rel'=>"nofollow" ,'onclick'=> "return fbs_click()",'target'=>'_blank'));
           $sHTML.= $oHTML->getBlocEnd();
@@ -1931,11 +1931,11 @@ class CJobboardEx extends CJobboard
           $sHTML.= $oHTML->getPicture($this->getResourcePath().'pictures/email.png','Email to friend');
           $sHTML.= $oHTML->getSpace(2);
           $sHTML.= $oHTML->getLink($this->casText['TALENT_EMAIL_FRIEND'],'javascript:;', array('onclick'=>$sAjax));
-          $sHTML.= $oHTML->getBlocEnd();*/
+          $sHTML.= $oHTML->getBlocEnd();
 
         $sHTML.= $oHTML->getBlocEnd();
       }
-      else
+      else*/
         $sHTML.= $oHTML->getBlocStart();
 
         /*$sHTML.= $oHTML->getBlocStart('',array('class' => 'simpleRedBorderTop'));
