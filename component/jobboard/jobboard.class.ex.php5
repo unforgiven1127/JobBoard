@@ -4160,39 +4160,9 @@ ChromePhp::log($positionData);
             INNER JOIN sl_location sll on sll.sl_locationpk = slpd.location
             INNER JOIN sl_industry ind on ind.sl_industrypk = slp.industryfk
             WHERE slpd.is_public = '1'";
-    $sQuery.= ' AND lang = "'.$sLanguage.'" ';
-
-    if(!empty($nIndustryId))
-      $sQuery.= ' AND industryfk = '.$nIndustryId;
-
-    if(!empty($nSalaryLow))
-      $sQuery.= ' AND salary_low >= '.$nSalaryLow;
-
-    if(!empty($nSalaryHigh))
-      $sQuery.= ' AND salary_high <= '.$nSalaryHigh;
-
-    if($sSortField == 'pos.salary')
-    {
-      if($sSortOrder == 'ASC')
-        $sQuery.= ' ORDER BY pos.salary_low, pos.salary_high ';
-      else
-        $sQuery.= ' ORDER BY pos.salary_high DESC, pos.salary_low DESC ';
-    }
-    else
-    {
-      if(!empty($sSortField))
-        $sQuery.= ' ORDER BY '.$sSortField.' ';
-      else
-        $sQuery.= ' ORDER BY pos.posted_date ';
-
-      if(!empty($sSortOrder))
-        $sQuery.= ' '.$sSortOrder.' ';
-    }
-
-    if(!empty($nLimit))
-      $sQuery.= ' LIMIT '.$nLimit.' ';
-    else
-      $sQuery.= ' LIMIT 10 ';
+    $sQuery.= ' AND slpd.language = "'.$sLanguage.'" ';
+    $sQuery.= ' ORDER BY slp.sl_positionpk DESC ';
+    $sQuery.= ' LIMIT 10 ';
 
     //$oXml->addChild('query', mb_convert_encoding(($sQuery), 'utf8'));
 ChromePhp::log($sQuery);
