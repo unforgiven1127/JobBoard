@@ -4197,7 +4197,8 @@ ChromePhp::log($positionData);
     //$oXml->addChild('query', mb_convert_encoding(($sQuery), 'utf8'));
 ChromePhp::log($sQuery);
 $positionData = $slistemDB->slistemGetAllData($slistemQuery);
-    $oDbResult = $oDB->ExecuteQuery($sQuery);
+ChromePhp::log($positionData);
+    //$oDbResult = $oDB->ExecuteQuery($sQuery);
     /*$bRead = $oDbResult->readFirst();
     if(!$bRead)
     {
