@@ -135,7 +135,57 @@ foreach($array as $key => $value)
 	mysql_connect( DB_SERVER_SLISTEM, DB_USER_SLISTEM, DB_PASSWORD_SLISTEM) or die(mysql_error());
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
-    $slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
+    $array = array('	2016-01-01	','	Friday	','	New Years day	','	National holiday	',
+'	2016-01-02	','	Saturday	','	January 2 Bank Holiday	','	Bank holiday	',
+'	2016-01-03	','	Sunday	','	January 3 Bank Holiday	','	Bank holiday	',
+'	2016-01-11	','	Monday	','	Coming of Age Day	','	National holiday	',
+'	2016-02-11	','	Thursday	','	National Foundation Day	','	National holiday	',
+'	2016-03-03	','	Thursday	','	Dolls Festival/Girls Festival	','	Observance	',
+'	2016-03-20	','	Sunday	','	March equinox	','	Season	',
+'	2016-03-20	','	Sunday	','	Spring Equinox	','	National holiday	',
+'	2016-03-21	','	Monday	','	Spring Equinox observed	','	National holiday	',
+'	2016-04-29	','	Friday	','	Showa Day	','	National holiday	',
+'	2016-05-03	','	Tuesday	','	Constitution Memorial Day	','	National holiday	',
+'	2016-05-04	','	Wednesday	','	Greenery Day	','	National holiday	',
+'	2016-05-05	','	Thursday	','	Childrens Day	','	National holiday	',
+'	2016-06-20	','	Monday	','	June Solstice	','	Season	',
+'	2016-07-07	','	Thursday	','	Star Festival	','	Observance	',
+'	2016-07-18	','	Monday	','	Sea Day	','	National holiday	',
+'	2016-08-11	','	Thursday	','	Mountain Day	','	National holiday	',
+'	2016-09-19	','	Monday	','	Respect for the Aged Day	','	National holiday	',
+'	2016-09-22	','	Thursday	','	September equinox	','	Season	',
+'	2016-09-22	','	Thursday	','	Autumn Equinox	','	National holiday	',
+'	2016-10-10	','	Monday	','	Sports Day	','	National holiday	',
+'	2016-11-03	','	Thursday	','	Culture Day	','	National holiday	',
+'	2016-11-15	','	Tuesday	','	7-5-3 Day	','	Observance	',
+'	2016-11-23	','	Wednesday	','	Labor Thanksgiving Day	','	National holiday	',
+'	2016-12-21	','	Wednesday	','	December Solstice	','	Season	',
+'	2016-12-23	','	Friday	','	Emperors Birthday	','	National holiday	',
+'	2016-12-25	','	Sunday	','	Christmas	','	Observance	',
+'	2016-12-31	','	Saturday	','	December 31 Bank Holiday	','	Bank holiday	');
+
+$addArray = array();
+$multiArray = array();
+
+$i = 0;
+foreach($array as $key => $value)
+{
+
+	$addArray[$i] = TRIM($value);
+	$i++;
+	if($i == 3)
+	{
+		array_push($multiArray,$addArray);
+		$i = 0;
+	}
+}
+
+foreach($multiArray as $key => $value)
+{
+	var_dump($value);
+	echo '<br><br>';
+}
+    /*$slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
     $slistemQuery = mysql_query($slistemQuery);
 
 	while($userData = mysql_fetch_assoc($slistemQuery))
@@ -149,7 +199,7 @@ foreach($array as $key => $value)
 
 		echo $user_id." - ".$pass_encrypted;
 		echo "<br><br>";
-	}
+	}*/
 
     //$i = 0;
     /*foreach ($return as $key => $array)
