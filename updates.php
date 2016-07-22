@@ -173,7 +173,7 @@ foreach($array as $key => $value)
 
 	$addArray[$i] = TRIM($value);
 	$i++;
-	if($i == 3)
+	if($i == 4)
 	{
 		array_push($multiArray,$addArray);
 		$i = 0;
