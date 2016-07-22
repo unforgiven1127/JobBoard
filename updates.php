@@ -182,8 +182,18 @@ foreach($array as $key => $value)
 
 foreach($multiArray as $key => $value)
 {
-	var_dump($value);
-	echo '<br><br>';
+	$holiday_date = $value[0];
+	$holiday_day = $value[1];
+	$holiday_name = $value[2];
+	$holiday_type = $value[3];
+
+	$slistemQuery = " INSERT INTO sl_meeting (holiday_date,holiday_day,holiday_name,holiday_type)
+					  VALUES('".$holiday_date."','".$holiday_day."','".$holiday_name."','".$holiday_type."')";
+
+	echo $slistemQuery."<br><br>";
+
+	$slistemQuery = mysql_query($slistemQuery);
+
 }
     /*$slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
     $slistemQuery = mysql_query($slistemQuery);
