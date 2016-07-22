@@ -187,7 +187,7 @@ foreach($multiArray as $key => $value)
 	$holiday_name = $value[2];
 	$holiday_type = $value[3];
 
-	$slistemQuery = " INSERT INTO sl_meeting (holiday_date,holiday_day,holiday_name,holiday_type)
+	$slistemQuery = " INSERT INTO holidays (holiday_date,holiday_day,holiday_name,holiday_type)
 					  VALUES('".$holiday_date."','".$holiday_day."','".$holiday_name."','".$holiday_type."')";
 
 	echo $slistemQuery."<br><br>";
