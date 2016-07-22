@@ -136,36 +136,36 @@ foreach($array as $key => $value)
     mysql_select_db(DB_NAME_SLISTEM) or die(mysql_error());
 
 $array = array('	2016-01-01	','	Monday	','	New Years Day	','	National holiday	',
-'	2016-01-02	','	Tuesday	','	January 2 Bank Holiday	','	Bank holiday	',
-'	2016-01-03	','	Wednesday	','	January 3 Bank Holiday	','	Bank holiday	',
-'	2016-01-08	','	Monday	','	Coming of Age Day	','	National holiday	',
-'	2016-02-11	','	Sunday	','	National Foundation Day	','	National holiday	',
-'	2016-02-12	','	Monday	','	National Foundation Day observed	','	National holiday	',
-'	2016-03-03	','	Saturday	','	Dolls Festival/Girls Festival	','	Observance	',
-'	2016-03-20	','	Tuesday	','	March equinox	','	Season	',
-'	2016-03-21	','	Wednesday	','	Spring Equinox	','	National holiday	',
-'	2016-04-29	','	Sunday	','	Shōwa Day	','	National holiday	',
-'	2016-04-30	','	Monday	','	Shōwa Day observed	','	National holiday	',
-'	2016-05-03	','	Thursday	','	Constitution Memorial Day	','	National holiday	',
-'	2016-05-04	','	Friday	','	Greenery Day	','	National holiday	',
-'	2016-05-05	','	Saturday	','	Childrens Day	','	National holiday	',
-'	2016-06-21	','	Thursday	','	June Solstice	','	Season	',
-'	2016-07-07	','	Saturday	','	Star Festival	','	Observance	',
-'	2016-07-16	','	Monday	','	Sea Day	','	National holiday	',
-'	2016-08-11	','	Saturday	','	Mountain Day	','	National holiday	',
-'	2016-09-17	','	Monday	','	Respect for the Aged Day	','	National holiday	',
-'	2016-09-23	','	Sunday	','	September equinox	','	Season	',
-'	2016-09-23	','	Sunday	','	Autumn Equinox	','	National holiday	',
-'	2016-09-24	','	Monday	','	Autumn Equinox observed	','	National holiday	',
-'	2016-10-08	','	Monday	','	Sports Day	','	National holiday	',
-'	2016-11-03	','	Saturday	','	Culture Day	','	National holiday	',
-'	2016-11-15	','	Thursday	','	7-5-3 Day	','	Observance	',
-'	2016-11-23	','	Friday	','	Labor Thanksgiving Day	','	National holiday	',
-'	2016-12-21	','	Friday	','	December Solstice	','	Season	',
-'	2016-12-23	','	Sunday	','	Emperors Birthday	','	National holiday	',
-'	2016-12-24	','	Monday	','	Emperors Birthday observed	','	National holiday	',
-'	2016-12-25	','	Tuesday	','	Christmas	','	Observance	',
-'	2016-12-31	','	Monday	','	December 31 Bank Holiday	','	Bank holiday'	);
+'	2018-01-02	','	Tuesday	','	January 2 Bank Holiday	','	Bank holiday	',
+'	2018-01-03	','	Wednesday	','	January 3 Bank Holiday	','	Bank holiday	',
+'	2018-01-08	','	Monday	','	Coming of Age Day	','	National holiday	',
+'	2018-02-11	','	Sunday	','	National Foundation Day	','	National holiday	',
+'	2018-02-12	','	Monday	','	National Foundation Day observed	','	National holiday	',
+'	2018-03-03	','	Saturday	','	Dolls Festival/Girls Festival	','	Observance	',
+'	2018-03-20	','	Tuesday	','	March equinox	','	Season	',
+'	2018-03-21	','	Wednesday	','	Spring Equinox	','	National holiday	',
+'	2018-04-29	','	Sunday	','	Shōwa Day	','	National holiday	',
+'	2018-04-30	','	Monday	','	Shōwa Day observed	','	National holiday	',
+'	2018-05-03	','	Thursday	','	Constitution Memorial Day	','	National holiday	',
+'	2018-05-04	','	Friday	','	Greenery Day	','	National holiday	',
+'	2018-05-05	','	Saturday	','	Childrens Day	','	National holiday	',
+'	2018-06-21	','	Thursday	','	June Solstice	','	Season	',
+'	2018-07-07	','	Saturday	','	Star Festival	','	Observance	',
+'	2018-07-16	','	Monday	','	Sea Day	','	National holiday	',
+'	2018-08-11	','	Saturday	','	Mountain Day	','	National holiday	',
+'	2018-09-17	','	Monday	','	Respect for the Aged Day	','	National holiday	',
+'	2018-09-23	','	Sunday	','	September equinox	','	Season	',
+'	2018-09-23	','	Sunday	','	Autumn Equinox	','	National holiday	',
+'	2018-09-24	','	Monday	','	Autumn Equinox observed	','	National holiday	',
+'	2018-10-08	','	Monday	','	Sports Day	','	National holiday	',
+'	2018-11-03	','	Saturday	','	Culture Day	','	National holiday	',
+'	2018-11-15	','	Thursday	','	7-5-3 Day	','	Observance	',
+'	2018-11-23	','	Friday	','	Labor Thanksgiving Day	','	National holiday	',
+'	2018-12-21	','	Friday	','	December Solstice	','	Season	',
+'	2018-12-23	','	Sunday	','	Emperors Birthday	','	National holiday	',
+'	2018-12-24	','	Monday	','	Emperors Birthday observed	','	National holiday	',
+'	2018-12-25	','	Tuesday	','	Christmas	','	Observance	',
+'	2018-12-31	','	Monday	','	December 31 Bank Holiday	','	Bank holiday'	);
 
 
 
@@ -197,7 +197,7 @@ foreach($multiArray as $key => $value)
 
 	echo $slistemQuery."<br><br>";
 
-	//$slistemQuery = mysql_query($slistemQuery);
+	$slistemQuery = mysql_query($slistemQuery);
 
 }
     /*$slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
