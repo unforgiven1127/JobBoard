@@ -193,7 +193,7 @@ foreach($multiArray as $key => $value)
 
 	echo $slistemQuery."<br><br>";
 
-	$slistemQuery = mysql_query($slistemQuery);
+	//$slistemQuery = mysql_query($slistemQuery);
 
 }
     /*$slistemQuery = " SELECT * FROM login l WHERE l.status = '1'";
