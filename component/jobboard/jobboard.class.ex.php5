@@ -1813,7 +1813,7 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      clientLoginPage();
+      $this->clientLoginPage();
     }
   }
 
