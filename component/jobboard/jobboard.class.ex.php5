@@ -133,6 +133,9 @@ class CJobboardEx extends CJobboard
             return $this->getJobList();
             break;
 
+          case CLIENT_LOGIN_PAGE:
+            return $this->clientLoginPage();
+
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
             break;
@@ -1768,7 +1771,8 @@ class CJobboardEx extends CJobboard
 
           $positionCount = $avResult['positionData'][0]['count'];
 
-          //ChromePhp::log($avResult);
+          $test = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
+          ChromePhp::log($test);
           $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen,$positionCount);
 
 
@@ -1793,6 +1797,15 @@ class CJobboardEx extends CJobboard
    * @param boolean $pbSearchFormOpen
    * @return string
    */
+
+  public function clientLoginPage()
+  {
+    //$html = $this->_oDisplay->render('client_login');
+    $html = "TEST";
+    $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
+
+    return $html;
+  }
 
   private function _getJobListSideSection($psSearchId, $pbSearchFormOpen)
   {

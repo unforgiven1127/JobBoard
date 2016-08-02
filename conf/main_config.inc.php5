@@ -282,6 +282,8 @@ define('CONST_URL_PARAM_PAGE_NORMAL', 'pn');
 define('CONST_URL_PARAM_PAGE_EMBED', 'emb');
 define('CONST_URL_PARAM_PAGE_CRON', 'cron');
 
+define('CLIENT_LOGIN_PAGE', 'clp');
+
 define('CONST_TALENT_HOME_PAGE','ppah');
 define('CONST_TA_TYPE_LIST_JOB','ppaj');
 define('CONST_LIST_COMPANY','cmpl');
