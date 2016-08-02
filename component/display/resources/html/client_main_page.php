@@ -73,7 +73,7 @@
         <table>
       </td>
       <td>
-        <table>
+        <table border=1 >
           <tr>
             <td valign="top" class="middleSide">
               <?php echo $innerPage; ?>
