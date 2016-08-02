@@ -1822,13 +1822,10 @@ class CJobboardEx extends CJobboard
   {
     $oPage = CDependency::getComponentByName('page');
 
+    $data = array();
     if($msg != '')
     {
       $data['msg'] = $msg;
-    }
-    else
-    {
-      $data['msg'] = '';
     }
 
     $html = $this->_oDisplay->render('client_login',$data);
