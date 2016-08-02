@@ -863,7 +863,7 @@ class CDisplayEx extends CDisplay
                 {
                   $sLink = "https://jobs.slate.co.jp/";
                 }
-                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass , 'style' => 'style="font-size:5px;"'));
+                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass , 'style' => 'font-size:5px;'));
               }
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
