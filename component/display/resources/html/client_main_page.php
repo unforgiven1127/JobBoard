@@ -57,9 +57,9 @@
 
   <body>
 
-  <table border=1 align="center">
+  <table align="center">
     <tr>
-      <td>
+      <td style='margin-left: 20px;'>
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
@@ -72,7 +72,7 @@
           </tr>
         </table>
       </td>
-      <td>
+      <td style='margin-left: 20px;'>
         <table>
           <tr>
             <td>
