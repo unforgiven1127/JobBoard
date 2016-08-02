@@ -780,11 +780,14 @@ class CDisplayEx extends CDisplay
     $add[] = $newMenuElement;
 
     if(isset($asSetting['menu'][$sLanguage]))
-      $add[] = $asSetting['menu'][$sLanguage];
+      $add2 = $asSetting['menu'][$sLanguage];
     else
-      $add[] = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
+      $add2 = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
 
-    
+    foreach ($add2 as $key => $value)
+    {
+      $add[] = $value;
+    }
 
     $asMenuArray = $add;
 
