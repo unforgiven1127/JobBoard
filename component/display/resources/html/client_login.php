@@ -130,7 +130,7 @@ function openExtra(open)
 
   <body>
 
-  <table style="width: 100%; height:75%; margin-left: -10px;">
+  <table style="width: 100%; margin-left: -10px;">
     <tr>
       <td valign="middle" align="middle" class="half" style=" width: 50%;">
         <div class="login-form">
