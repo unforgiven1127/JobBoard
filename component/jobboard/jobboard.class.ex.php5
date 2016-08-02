@@ -135,10 +135,8 @@ class CJobboardEx extends CJobboard
 
           case CLIENT_LOGIN_PAGE:
             return $this->clientLoginPage();
-            break;
           case CLIENT_LOGIN:
             return $this->clientLogin();
-            break;
 
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
@@ -1815,24 +1813,15 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      $msg = "Username or password incorrect";
-      $this->clientLoginPage($msg);
+      return $this->clientLoginPage();
     }
   }
 
-  public function clientLoginPage($msg = '')
+  public function clientLoginPage()
   {
     $oPage = CDependency::getComponentByName('page');
 
-    if($msg != '')
-    {
-      $data['msg'] = $msg;
-    }
-    else
-    {
-      $data['msg'] = '';
-    }
-    $html = $this->_oDisplay->render('client_login',$data);
+    $html = $this->_oDisplay->render('client_login');
     //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
 //ChromePhp::log($sUrl);
     return $html;
