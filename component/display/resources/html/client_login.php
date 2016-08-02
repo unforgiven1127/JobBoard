@@ -143,9 +143,9 @@ function openExtra(open)
            <input style='width: 300px;' type="password" name="password" class="form-control" placeholder="Password" id="Passwod">
          </div>
          <div style="width: 300px;">
-            <span  id='msg' class="alert">Invalid Credentials
-              <div><?php echo $msg ?></div>
-            </span>
+            <div class="alert alert-danger" role="alert">
+              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </div>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
             <button type="submit" class="log-btn" >Log in</button>
          </div>
