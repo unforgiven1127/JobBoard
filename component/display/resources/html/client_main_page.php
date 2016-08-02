@@ -31,6 +31,10 @@
     font-family: 'Merriweather', serif;
 }
 
+.leftSide li {
+    width:200px;
+}
+
 .leftSide li a.active {
     background-color: #892828;
     color: white;
