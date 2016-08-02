@@ -765,11 +765,6 @@ class CDisplayEx extends CDisplay
     $asSetting = $oSettings->getSettings('menu');
     $sLanguage = $oPage->getLanguage();
 
-    if(isset($asSetting['menu'][$sLanguage]))
-      $asMenuArray = $asSetting['menu'][$sLanguage];
-    else
-      $asMenuArray = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
-
     $newMenuElement = array();
     $newMenuElement['name'] = "CLIENT";
     $newMenuElement['legend'] = "Login";
@@ -782,7 +777,16 @@ class CDisplayEx extends CDisplay
     $newMenuElement['pk'] = 0;
     $newMenuElement['right'] = array("*");
 
-    $asMenuArray[6] = $newMenuElement;
+    $add[] = $newMenuElement;
+
+    if(isset($asSetting['menu'][$sLanguage]))
+      $add[] = $asSetting['menu'][$sLanguage];
+    else
+      $add[] = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
+
+    
+
+    $asMenuArray = $add;
 
     $nLoginPk = $oLogin->getUserPk();
 
