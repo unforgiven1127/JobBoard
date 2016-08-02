@@ -62,7 +62,7 @@
       <td valign="middle" align="middle" class="half" style=" width: 50%;">
         <table class='leftSideTable'>
           <tr>
-            <td class="leftSide">
+            <td valign="top" class="leftSide">
               <ul>
                 <li><a class="active" href="#home">My Candidates</a></li>
                 <li><a href="#news">My Positions</a></li>
