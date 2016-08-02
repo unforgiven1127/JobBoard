@@ -40,6 +40,12 @@
     background-color: #555;
     color: white;
 }
+
+.leftSideTable{
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
 </style>
 
   </head>
@@ -50,7 +56,7 @@
   <table style="width: 100%; margin-left: -10px;">
     <tr>
       <td valign="middle" align="middle" class="half" style=" width: 50%;">
-        <table>
+        <table class='leftSideTable'>
           <tr>
             <td class="leftSide">
               <ul>
