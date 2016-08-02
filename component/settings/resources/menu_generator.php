@@ -891,7 +891,7 @@ $asArray['jp'] = array (
     'right' => array('*')
   ),
   5 => array (
-    'name' => 'CONTACT',
+    'name' => 'CLIENT',
     'legend' => 'Find out more',
     'link' => 'http://slate.co.jp/about',
     'icon' => '',
