@@ -765,6 +765,11 @@ class CDisplayEx extends CDisplay
     $asSetting = $oSettings->getSettings('menu');
     $sLanguage = $oPage->getLanguage();
 
+    if(isset($asSetting['menu'][$sLanguage]))
+      $asMenuArray = $asSetting['menu'][$sLanguage];
+    else
+      $asMenuArray = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
+
     $newMenuElement = array();
     $newMenuElement['name'] = "CLIENT";
     $newMenuElement['legend'] = "Login";
@@ -777,19 +782,7 @@ class CDisplayEx extends CDisplay
     $newMenuElement['pk'] = 0;
     $newMenuElement['right'] = array("*");
 
-    $add[] = $newMenuElement;
-
-    if(isset($asSetting['menu'][$sLanguage]))
-      $add2 = $asSetting['menu'][$sLanguage];
-    else
-      $add2 = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
-
-    foreach ($add2 as $key => $value)
-    {
-      $add[] = $value;
-    }
-
-    $asMenuArray = $add;
+    $asMenuArray[] = $newMenuElement;
 
     $nLoginPk = $oLogin->getUserPk();
 
@@ -810,7 +803,7 @@ class CDisplayEx extends CDisplay
     //if(!empty($gasMainMenu))
     {
       $sHTML.= $this->getBlocStart('', array('class' => 'firstMenuContainer'.$newClass));
-      $sHTML.= '<ul class="menuNavList">';
+      $sHTML.= '<ul class="menuNavList1">';
 
       //var_dump($asMenuArray);
 
