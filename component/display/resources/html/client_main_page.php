@@ -76,41 +76,13 @@
         <table>
           <tr>
             <td>
-              TETETEETET
+              <?php echo $innerPage; ?>
             </td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
-
-  <table border=1 style="width: 100%;">
-    <tr>
-      <td valign="middle" align="middle" class="half" >
-        <table class='leftSideTable'>
-          <tr>
-            <td valign="top" class="leftSide">
-              <ul>
-                <li><a class="active" href="#home">My Candidates</a></li>
-                <li><a href="#news">My Positions</a></li>
-                <li><a href="#contact">My Meetings</a></li>
-              </ul>
-            </td>
-          </tr>
-        <table>
-      </td>
-      <td>
-        <table border=1 >
-          <tr>
-            <td valign="top" class="middleSide">
-              <?php echo $innerPage; ?>
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
-  </table>
-
 
   </body>
 
