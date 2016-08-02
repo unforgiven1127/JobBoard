@@ -31,6 +31,10 @@
     font-family: 'Merriweather', serif;
 }
 
+.leftSide {
+    width:200px;
+}
+
 .leftSide ul {
     width:200px;
 }
