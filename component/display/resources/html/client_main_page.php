@@ -59,7 +59,7 @@
 
   <table style="width: 100%;">
     <tr>
-      <td >
+      <td valign="middle" align="middle" class="half" >
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
@@ -72,15 +72,11 @@
           </tr>
         <table>
       </td>
-      <td >
-        <table class='leftSideTable'>
+      <td>
+        <table>
           <tr>
-            <td valign="top" class="leftSide">
-              <ul>
-                <li><a class="active" href="#home">My Candidates</a></li>
-                <li><a href="#news">My Positions</a></li>
-                <li><a href="#contact">My Meetings</a></li>
-              </ul>
+            <td valign="top" class="middleSide">
+              <?php echo $innerPage; ?>
             </td>
           </tr>
         <table>
