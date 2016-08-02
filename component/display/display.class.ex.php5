@@ -863,14 +863,14 @@ class CDisplayEx extends CDisplay
                 {
                   $sLink = "https://jobs.slate.co.jp/";
                 }
-                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass , 'style' => 'font-size:5px;'));
+                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
               }
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
               {
                 $sHTML.= $this->getCarriageReturn();
                 $sHTML.= $this->getSpanStart('', array('class' => 'menuNavLegend'));
-                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass, 'style' => 'font-size:5px;'));
+                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass));
                 $sHTML.= $this->getSpanEnd();
               }
             }
