@@ -54,10 +54,9 @@
           <tr>
             <td class="leftSide">
               <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a class="active" href="#home">My Candidates</a></li>
+                <li><a href="#news">My Positions</a></li>
+                <li><a href="#contact">My Meetings</a></li>
               </ul>
             </td>
           </tr>
