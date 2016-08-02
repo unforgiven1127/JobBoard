@@ -782,7 +782,7 @@ class CDisplayEx extends CDisplay
     $newMenuElement['pk'] = 0;
     $newMenuElement['right'] = array("*");
 
-    $asMenuArray[6] = $newMenuElement;
+    $asMenuArray[5] = $newMenuElement;
 
     $nLoginPk = $oLogin->getUserPk();
 
