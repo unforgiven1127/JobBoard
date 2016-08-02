@@ -366,7 +366,7 @@ class CSettingsEx extends CSettings
 
      $asRecord = array();
 
-     if(is_array($pvString) && !empty($pvString))
+     /*if(is_array($pvString) && !empty($pvString))
      {
        foreach ($pvString as $sValue)
        {
@@ -380,7 +380,9 @@ class CSettingsEx extends CSettings
      {
        if(isset($_SESSION['settings'][$pvString]) && !empty($_SESSION['settings'][$pvString]))
          $asRecord[$pvString] = $_SESSION['settings'][$pvString];
-     }
+     }*/
+
+     $asRecord[$pvString] = $_SESSION['settings'][$pvString];
 
      return $asRecord;
    }
