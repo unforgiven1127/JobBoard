@@ -59,7 +59,7 @@
 
   <table align="center">
     <tr>
-      <td style='padding-left: 20px;'>
+      <td valign="top" style='padding-left: 20px;'>
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
@@ -72,7 +72,7 @@
           </tr>
         </table>
       </td>
-      <td style='padding-left: 20px;'>
+      <td valign="top" style='padding-left: 20px;'>
         <table>
           <tr>
             <td valign="top">
