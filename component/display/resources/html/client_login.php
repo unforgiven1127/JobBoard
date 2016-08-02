@@ -133,7 +133,7 @@ function openExtra(open)
     <tr>
       <td valign="middle" align="middle" class="half" style=" width: 50%;">
         <div class="login-form">
-        <form name="loginFormData" enctype="multipart/form-data" submitajax="1" action="" method="POST" id="loginFormDataId" onbeforesubmit onsubmit>
+        <form name="loginFormData" enctype="multipart/form-data" submitajax="1" action="https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=cla&ppt=job&ppk=0" method="POST" id="loginFormDataId" onbeforesubmit onsubmit>
           <div style="width: 300px;"><center><img style="text-align: center; width: 300px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
          <div style="width: 300px;" class="form-group ">
            <input type="text" name="login" class="form-control" placeholder="Username " id="UserName">
