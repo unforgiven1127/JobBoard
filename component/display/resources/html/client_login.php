@@ -143,7 +143,7 @@ function openExtra(open)
            <input style='width: 300px;' type="password" name="password" class="form-control" placeholder="Password" id="Passwod">
          </div>
          <div style="width: 300px;">
-            <span <?php if($msg == ''){echo "style='display: none;'"}else{echo "style='display: block;'"} ?> id='msg' class="alert">Invalid Credentials
+            <span  id='msg' class="alert">Invalid Credentials
               <div><?php echo $msg ?></div>
             </span>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
