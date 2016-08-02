@@ -47,7 +47,7 @@
 
 .leftSideTable{
     border-collapse: collapse;
-    border: 1px solid grey;
+    border: 1px solid #C6C6C6;
 }
 
 </style>
