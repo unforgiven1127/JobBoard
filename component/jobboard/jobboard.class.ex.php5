@@ -1804,6 +1804,7 @@ class CJobboardEx extends CJobboard
     ChromePhp::log('ICERIDE');
     //echo "asdasd";
     $html = $this->_oDisplay->render('mobile_search');
+    var_dump($html);
     $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
 
     return $html;
