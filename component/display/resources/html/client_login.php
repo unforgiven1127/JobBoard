@@ -85,6 +85,10 @@ function openExtra(open)
 </script>
 <style>
 
+    #footerDiv{
+      position: absolute;
+    }
+
     .jobs{
         overflow-y: auto;    /* Trigger vertical scroll    */
         overflow-x: hidden;  /* Hide the horizontal scroll */

@@ -1341,7 +1341,7 @@ background:#EFEFEF;
 {
   background: #555 url('/component/display/resources/jobboard/pictures/footer_bg.png') repeat-x top left;
   height: 98px;
-  position: absolute;
+
   width:100%;
   bottom: 0;
 }
