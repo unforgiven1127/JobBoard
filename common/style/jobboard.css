@@ -435,13 +435,11 @@ form
 #pageContainerId
 {
   background: transparent url('/component/display/resources/jobboard/pictures/top_black_border.png') repeat-x top left;
-  width:100% !important;
 }
 #pageMainId
 {
   margin: 0 auto;
-  /*width: 1000px;*/
-  width:100% !important;
+  width: 1000px;
 }
 #componentContainerId
 {
@@ -497,7 +495,7 @@ form
 {
   float: left;
   height: 32px;
-  width: 100% !important;
+  width: 100%;
   z-index:100;
 }
 #menuNavContainerId ul li div
@@ -514,10 +512,10 @@ form
 #menuNavContainerId ul li div a,
 #menuNavContainerId ul li div a img
 {
-  /*position:relative;
+  position:relative;
   z-index:102;
   font-family: 'Rokkitt', serif;
-  font-size: 15px;*/
+  font-size: 15px;
 }
 #menuNavContainerId ul li div span.menuNavLegend a
 {
