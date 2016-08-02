@@ -1808,7 +1808,9 @@ class CJobboardEx extends CJobboard
 
     if($username == 'munir' && $password == '123456')
     {
-      $html = $this->_oDisplay->render('client_main_page');
+      $myCandidates = $this->_oDisplay->render('client_candi_page');
+      $data['innerPage'] = $myCandidates;
+      $html = $this->_oDisplay->render('client_main_page',$data);
       return $html;
     }
     else

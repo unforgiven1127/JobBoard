@@ -57,7 +57,7 @@
 
   <body>
 
-  <table style="width: 100%; margin-left: -10px;">
+  <table style="width: 100%;">
     <tr>
       <td valign="middle" align="middle" class="half" >
         <table class='leftSideTable'>
@@ -74,6 +74,7 @@
         <table>
           <tr>
             <td>
+              <?php echo $innerPage; ?>
             </td>
           </tr>
         <table>
