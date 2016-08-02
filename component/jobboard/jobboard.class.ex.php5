@@ -74,6 +74,10 @@ class CJobboardEx extends CJobboard
               return json_encode($this->_getAjaxJobSearchResult());
                 break;
 
+            case CLIENT_LOGIN:
+            return $this->clientLogin();
+            break;
+
              case CONST_ACTION_EMAIL:
                return json_encode($this->_getMailFriendForm());
                 break;
@@ -135,8 +139,6 @@ class CJobboardEx extends CJobboard
 
           case CLIENT_LOGIN_PAGE:
             return $this->clientLoginPage();
-          case CLIENT_LOGIN:
-            return $this->clientLogin();
 
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
