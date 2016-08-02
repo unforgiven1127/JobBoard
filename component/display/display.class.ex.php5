@@ -782,6 +782,8 @@ class CDisplayEx extends CDisplay
     $newMenuElement['pk'] = 0;
     $newMenuElement['right'] = array("*");
 
+    $asMenuArray[] = $newMenuElement;
+
     $nLoginPk = $oLogin->getUserPk();
 
     global $gasMainMenu;
