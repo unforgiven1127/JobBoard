@@ -771,8 +771,8 @@ class CDisplayEx extends CDisplay
       $asMenuArray = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
 
     $newMenuElement = array();
-    $newMenuElement['name'] = "CLIENT";
-    $newMenuElement['legend'] = "Login";
+    $newMenuElement['name'] = "Client Login";
+    $newMenuElement['legend'] = "";
     $newMenuElement['link'] = "https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=clp&ppt=job&ppk=0";
     $newMenuElement['icon'] = "";
     $newMenuElement['target'] = "";
@@ -782,6 +782,7 @@ class CDisplayEx extends CDisplay
     $newMenuElement['pk'] = 0;
     $newMenuElement['right'] = array("*");
 
+    $asMenuArray[3]['child'][] = $newMenuElement;
     //$asMenuArray[] = $newMenuElement;
 
     $nLoginPk = $oLogin->getUserPk();
