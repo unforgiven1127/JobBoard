@@ -144,7 +144,7 @@ function openExtra(open)
          </div>
          <div style="width: 300px;">
             <div class="alert alert-danger" role="alert">
-              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+              <strong>Username or password incorrect</strong>
             </div>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
             <button type="submit" class="log-btn" >Log in</button>
