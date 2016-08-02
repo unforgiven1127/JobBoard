@@ -135,6 +135,8 @@ class CJobboardEx extends CJobboard
 
           case CLIENT_LOGIN_PAGE:
             return $this->clientLoginPage();
+          case CLIENT_LOGIN:
+            return $this->clientLogin();
 
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
@@ -1798,13 +1800,18 @@ class CJobboardEx extends CJobboard
    * @return string
    */
 
+  public function clientLogin()
+  {
+    echo 'clientLogin';
+  }
+
   public function clientLoginPage()
   {
     $oPage = CDependency::getComponentByName('page');
 
     $html = $this->_oDisplay->render('client_login');
-    $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
-
+    $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
+ChromePhp::log($sUrl);
     return $html;
   }
 
