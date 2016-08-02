@@ -1802,6 +1802,7 @@ class CJobboardEx extends CJobboard
 
   public function clientLogin()
   {
+    $oPage = CDependency::getComponentByName('page');
     $username = $_POST['login'];
     $password = $_POST['password'];
 
