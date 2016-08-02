@@ -35,14 +35,6 @@
     width:200px;
 }
 
-.leftSide ul {
-    width:200px;
-}
-
-.leftSide ul li {
-    width:200px;
-}
-
 .leftSide li a.active {
     background-color: #892828;
     color: white;
