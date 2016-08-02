@@ -27,7 +27,8 @@
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
-    font-size: 15pt;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
 }
 
 .leftSide li a.active {
