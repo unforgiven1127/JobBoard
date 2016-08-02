@@ -554,7 +554,7 @@ $asArray = array();
   ),
   4 =>
   array (
-    'name' => 'TESTIMONIALS',
+    'name' => 'TESTIMONIALS.',
     'legend' => 'Why people chose us',
     'link' => 'http://slate.co.jp/about',
     'icon' => '',
@@ -879,7 +879,7 @@ $asArray['jp'] = array (
   ),
   4 =>
   array (
-    'name' => 'TESTIMONIALS',
+    'name' => 'TESTIMONIALS..',
     'legend' => 'Why people chose us',
     'link' => 'http://slate.co.jp/about',
     'icon' => '',
@@ -891,7 +891,7 @@ $asArray['jp'] = array (
     'right' => array('*')
   ),
   5 => array (
-    'name' => 'CLIENT',
+    'name' => 'CONTACT',
     'legend' => 'Find out more',
     'link' => 'http://slate.co.jp/about',
     'icon' => '',
@@ -1312,7 +1312,7 @@ $sString = base64_encode(serialize($asArray));
   ),
   4 =>
   array (
-    'name' => 'TESTIMONIALS',
+    'name' => 'TESTIMONIALS...',
     'legend' => 'Why people chose us',
     'link' => 'http://slate.co.jp/about',
     'icon' => '',
