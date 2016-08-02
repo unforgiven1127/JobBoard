@@ -59,7 +59,7 @@
 
   <table style="width: 100%;">
     <tr>
-      <td valign="middle" align="middle" class="half" >
+      <td valign="middle" align="middle" >
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
@@ -72,7 +72,7 @@
           </tr>
         <table>
       </td>
-      <td>
+      <td valign="middle" align="middle">
         asdasasd
       </td>
     </tr>
