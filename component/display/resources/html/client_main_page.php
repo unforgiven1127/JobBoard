@@ -76,7 +76,8 @@
         <table>
           <tr>
             <td>
-              <?php echo $innerPage; ?>
+            adasd
+              
             </td>
           </tr>
         <table>
