@@ -435,6 +435,7 @@ form
 #pageContainerId
 {
   background: transparent url('/component/display/resources/jobboard/pictures/top_black_border.png') repeat-x top left;
+  width:100%;
 }
 #pageMainId
 {

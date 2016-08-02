@@ -802,8 +802,8 @@ class CDisplayEx extends CDisplay
 
     //if(!empty($gasMainMenu))
     {
-      $sHTML.= $this->getBlocStart('', array('class' => 'firstMenuContainer1'.$newClass));
-      $sHTML.= '<ul class="menuNavList1">';
+      $sHTML.= $this->getBlocStart('', array('class' => 'firstMenuContainer'.$newClass));
+      $sHTML.= '<ul class="menuNavList">';
 
       //var_dump($asMenuArray);
 
