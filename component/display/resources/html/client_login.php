@@ -136,12 +136,10 @@ function openExtra(open)
         <form name="loginFormData" enctype="multipart/form-data" submitajax="1" action=<?php echo "'".$login."'"; ?> method="POST" id="loginFormDataId" onbeforesubmit onsubmit>
           <div style="width: 300px;"><center><img style="text-align: center; width: 300px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
          <div style="width: 300px;" class="form-group ">
-           <input type="text" name="login" class="form-control" placeholder="Username " id="UserName">
-           <i class="fa fa-user"></i>
+           <input type="text" name="login" class="form-control" placeholder="<i class="fa fa-user"></i> Username " id="UserName">
          </div>
          <div style="width: 300px;" class="form-group log-status">
-           <input type="password" name="password" class="form-control" placeholder="Password" id="Passwod">
-           <i class="fa fa-lock"></i>
+           <input type="password" name="password" class="form-control" placeholder="<i class="fa fa-lock"></i> Password" id="Passwod">
          </div>
          <div style="width: 300px;">
             <span class="alert">Invalid Credentials</span>
