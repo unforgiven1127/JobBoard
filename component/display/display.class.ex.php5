@@ -870,7 +870,7 @@ class CDisplayEx extends CDisplay
               {
                 $sHTML.= $this->getCarriageReturn();
                 $sHTML.= $this->getSpanStart('', array('class' => 'menuNavLegend'));
-                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass));
+                $sHTML.= $this->getLink($asMenuItems['legend'], $sLink, array('class' => 'mainMenuPic'.$newClass, 'style' => 'font-size:5px;'));
                 $sHTML.= $this->getSpanEnd();
               }
             }
