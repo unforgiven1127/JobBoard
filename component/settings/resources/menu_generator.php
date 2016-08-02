@@ -631,6 +631,18 @@ $asArray = array();
       'right' => array ('logged')
      )
     )
+  ),
+  7 => array (
+    'name' => 'CLIENT',
+    'legend' => 'Login',
+    'link' => 'https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=clp&ppt=job&ppk=0',
+    'icon' => '',
+    'target' => '',
+    'uid' => '',
+    'type' => '',
+    'action' => '',
+    'pk' => 0,
+    'right' => array('*')
   )
 );
 
@@ -944,6 +956,18 @@ $asArray['jp'] = array (
       'right' => array ('logged')
      )
     )
+  ),
+  7 => array (
+    'name' => 'CLIENT',
+    'legend' => 'Login',
+    'link' => 'https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=clp&ppt=job&ppk=0',
+    'icon' => '',
+    'target' => '',
+    'uid' => '',
+    'type' => '',
+    'action' => '',
+    'pk' => 0,
+    'right' => array('*')
   )
 );
 
@@ -1365,6 +1389,18 @@ $sString = base64_encode(serialize($asArray));
       'right' => array ('logged')
      )
     )
+  ),
+  7 => array (
+    'name' => 'CLIENT',
+    'legend' => 'Login',
+    'link' => 'https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=clp&ppt=job&ppk=0',
+    'icon' => '',
+    'target' => '',
+    'uid' => '',
+    'type' => '',
+    'action' => '',
+    'pk' => 0,
+    'right' => array('*')
   )
 );
 
