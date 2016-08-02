@@ -25,7 +25,7 @@
 
   <table >
     <tr>
-      <td >
+      <td valign="top" >
         MY CANDIDATES
       </td>
     </tr>
