@@ -1233,7 +1233,7 @@ class CDisplayEx extends CDisplay
     //Display only to the administrator
     $sSettingURL = $oPage->getUrl('settings', CONST_ACTION_ADD, CONST_TYPE_SETTINGS);
     if($oLogin->isAdmin())
-      $sHTML.= $this->getLink('Settings ',$sSettingURL,array('style' => 'color:#fff;'));
+      //$sHTML.= $this->getLink('Settings ',$sSettingURL,array('style' => 'color:#fff;'));
 
     $sHTML.= $this->getBlocEnd();
 
