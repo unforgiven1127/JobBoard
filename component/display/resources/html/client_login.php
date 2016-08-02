@@ -144,7 +144,7 @@ function openExtra(open)
          </div>
          <div style="width: 300px;">
             <?php if(isset($msg)){ ?>
-              <div style=" font-size:15px; width: 300px; color:grey" class="alert alert-danger" role="alert">
+              <div style=" font-size:15px; width: 300px; color:DarkGrey" class="alert alert-danger" role="alert">
                 Incorrect username or password
               </div>
             <?php } ?>
