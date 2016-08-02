@@ -75,7 +75,7 @@
       <td style='padding-left: 20px;'>
         <table>
           <tr>
-            <td>
+            <td valign="top">
               <?php echo $innerPage; ?>
             </td>
           </tr>
