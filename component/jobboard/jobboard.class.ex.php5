@@ -1802,7 +1802,18 @@ class CJobboardEx extends CJobboard
 
   public function clientLogin()
   {
-    echo 'clientLogin';
+    $username = $_POST['login'];
+    $password = $_POST['password'];
+
+    if($username == 'munir' && $password == '123456')
+    {
+      $html = $this->_oDisplay->render('client_login');
+      return $html;
+    }
+    else
+    {
+      clientLoginPage();
+    }
   }
 
   public function clientLoginPage()
@@ -1810,8 +1821,8 @@ class CJobboardEx extends CJobboard
     $oPage = CDependency::getComponentByName('page');
 
     $html = $this->_oDisplay->render('client_login');
-    $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
-ChromePhp::log($sUrl);
+    //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
+//ChromePhp::log($sUrl);
     return $html;
   }
 
