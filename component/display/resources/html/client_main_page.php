@@ -59,7 +59,7 @@
 
   <table style="width: 100%; margin-left: -10px;">
     <tr>
-      <td valign="middle" align="middle" class="half" style=" width: 50%;">
+      <td valign="middle" align="middle" class="half" >
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
