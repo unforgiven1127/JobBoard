@@ -57,7 +57,7 @@
 
   <body>
 
-  <table align="middle">
+  <table align="center">
     <tr>
       <td>
         <table class='leftSideTable'>
