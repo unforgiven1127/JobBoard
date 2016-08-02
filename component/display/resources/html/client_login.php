@@ -144,8 +144,8 @@ function openExtra(open)
          </div>
          <div style="width: 300px;">
             <?php if(isset($msg)){ ?>
-              <div style="width: 300px;" class="alert alert-danger" role="alert">
-                <strong style='font-size:20px;' >Username or password incorrect</strong>
+              <div style=" font-size:20px; width: 300px;" class="alert alert-danger" role="alert">
+                <strong>Username or password incorrect</strong>
               </div>
             <?php } ?>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
