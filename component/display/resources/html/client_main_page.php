@@ -73,14 +73,7 @@
         <table>
       </td>
       <td>
-        <table>
-          <tr>
-            <td>
-            adasd
-              
-            </td>
-          </tr>
-        <table>
+        asdasasd
       </td>
     </tr>
   </table>
