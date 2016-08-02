@@ -11,13 +11,6 @@
 
 <script type="text/javascript">
 
-var msg = <?php echo $msg; ?>
-alert(msg);
-if(msg != '')
-{
-  $('#msg').html($msg);
-  $('#msg').show();
-}
 
 //alert($('#bottomCandidateSection').height());
 
@@ -150,7 +143,9 @@ function openExtra(open)
            <input style='width: 300px;' type="password" name="password" class="form-control" placeholder="Password" id="Passwod">
          </div>
          <div style="width: 300px;">
-            <span id='msg' class="alert">Invalid Credentials</span>
+            <span <?php if($msg == ''){echo "style='display: none;'"}else{echo "style='display: block;'"} ?> id='msg' class="alert">Invalid Credentials
+              <div><?php echo $msg ?></div>
+            </span>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
             <button type="submit" class="log-btn" >Log in</button>
          </div>
