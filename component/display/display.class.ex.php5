@@ -770,6 +770,18 @@ class CDisplayEx extends CDisplay
     else
       $asMenuArray = $asSetting['menu'][CONST_DEFAULT_LANGUAGE];
 
+    $newMenuElement = array();
+    $newMenuElement['name'] = "CLIENT";
+    $newMenuElement['legend'] = "Login";
+    $newMenuElement['link'] = "https://jobs.slate.co.jp/index.php5?uid=153-160&ppa=clp&ppt=job&ppk=0";
+    $newMenuElement['icon'] = "";
+    $newMenuElement['target'] = "";
+    $newMenuElement['uid'] = "";
+    $newMenuElement['type'] = "";
+    $newMenuElement['action'] = "";
+    $newMenuElement['pk'] = 0;
+    $newMenuElement['right'] = array("*");
+
     $nLoginPk = $oLogin->getUserPk();
 
     global $gasMainMenu;
