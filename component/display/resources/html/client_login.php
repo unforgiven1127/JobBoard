@@ -153,7 +153,7 @@ function openExtra(open)
        </div>
       </td>
 
-      <td  style="width: 50%;">
+      <!--<td  style="width: 50%;">
         <div class="login-form2">
           <center><p class="test" style="color: #892828; font-size: 48px;">LATEST JOBS</p></center>
 
@@ -210,7 +210,7 @@ function openExtra(open)
           </table>
 
         </div>
-      </td>
+      </td>-->
     </tr>
   </table>
 
