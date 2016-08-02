@@ -62,8 +62,12 @@
       <td>
         <table>
           <tr>
-            <td>
-              ASDADADA
+            <td valign="top" class="leftSide">
+              <ul>
+                <li><a class="active" href="#home">My Candidates</a></li>
+                <li><a href="#news">My Positions</a></li>
+                <li><a href="#contact">My Meetings</a></li>
+              </ul>
             </td>
           </tr>
         </table>
