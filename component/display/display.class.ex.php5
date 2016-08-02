@@ -805,7 +805,7 @@ class CDisplayEx extends CDisplay
       $sHTML.= $this->getBlocStart('', array('class' => 'firstMenuContainer'.$newClass));
       $sHTML.= '<ul style="padding-left:-200px;" class="menuNavList1">';
 
-      var_dump($asMenuArray);
+      //var_dump($asMenuArray);
 
       if(!empty($asMenuArray))
       {
@@ -863,7 +863,7 @@ class CDisplayEx extends CDisplay
                 {
                   $sLink = "https://jobs.slate.co.jp/";
                 }
-                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass));
+                $sHTML.= $this->getLink($asMenuItems['name'], $sLink, array('class' => 'mainMenuPic test '.$newClass , 'style' => 'style="font-size:5px;"'));
               }
 
               if(isset($asMenuItems['legend']) && !empty($asMenuItems['legend']))
