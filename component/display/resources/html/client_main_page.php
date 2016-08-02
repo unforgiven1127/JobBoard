@@ -57,7 +57,7 @@
 
   <body>
 
-  <table style="width: 100%;">
+  <table border=1 style="width: 100%;">
     <tr>
       <td valign="middle" align="middle" class="half" >
         <table class='leftSideTable'>
