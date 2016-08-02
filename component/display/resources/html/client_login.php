@@ -11,6 +11,12 @@
 
 <script type="text/javascript">
 
+if($msg != '')
+{
+  $('#msg').html($msg);
+  $('#msg').show();
+}
+
 //alert($('#bottomCandidateSection').height());
 
 var loginHeight = $('#bottomCandidateSection').height();
@@ -142,7 +148,7 @@ function openExtra(open)
            <input style='width: 300px;' type="password" name="password" class="form-control" placeholder="Password" id="Passwod">
          </div>
          <div style="width: 300px;">
-            <span class="alert">Invalid Credentials</span>
+            <span id='msg' class="alert">Invalid Credentials</span>
             <!--<a class="link" href=<?php echo "'".$lost."'"; ?> >Lost your password?</a>-->
             <button type="submit" class="log-btn" >Log in</button>
          </div>

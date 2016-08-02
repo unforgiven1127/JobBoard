@@ -74,10 +74,6 @@ class CJobboardEx extends CJobboard
               return json_encode($this->_getAjaxJobSearchResult());
                 break;
 
-            case CLIENT_LOGIN:
-            return $this->clientLogin();
-            break;
-
              case CONST_ACTION_EMAIL:
                return json_encode($this->_getMailFriendForm());
                 break;
@@ -139,6 +135,10 @@ class CJobboardEx extends CJobboard
 
           case CLIENT_LOGIN_PAGE:
             return $this->clientLoginPage();
+            break;
+          case CLIENT_LOGIN:
+            return $this->clientLogin();
+            break;
 
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
@@ -1815,7 +1815,8 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      return array('error' => __LINE__.' -'.$this->casText['LOGIN_PASSWORD_INCORRECT']);
+      $msg = "Username or password incorrect";
+      $this->clientLoginPage($msg);
     }
   }
 
@@ -1825,9 +1826,13 @@ class CJobboardEx extends CJobboard
 
     if($msg != '')
     {
+      $data['msg'] = $msg;
+    }
+    else
+    {
       $data['msg'] = '';
     }
-    $html = $this->_oDisplay->render('client_login');
+    $html = $this->_oDisplay->render('client_login',$data);
     //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
 //ChromePhp::log($sUrl);
     return $html;
