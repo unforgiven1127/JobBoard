@@ -11,7 +11,9 @@
 
 <script type="text/javascript">
 
-if($msg != '')
+var msg = <?php echo $msg; ?>
+alert(msg);
+if(msg != '')
 {
   $('#msg').html($msg);
   $('#msg').show();
