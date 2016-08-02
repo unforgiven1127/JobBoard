@@ -497,7 +497,7 @@ form
 {
   float: left;
   height: 32px;
-  width: 100%;
+  width: 100% !important;
   z-index:100;
 }
 #menuNavContainerId ul li div
