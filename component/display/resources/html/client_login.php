@@ -117,7 +117,7 @@ function openExtra(open)
       td {
           padding: 8px;
           font-size: 12pt;
-          border-bottom: solid 1px #892828;
+          /*border-bottom: solid 1px #892828;*/
       }
 
       tr:nth-child(even){background-color: #f2f2f2}
