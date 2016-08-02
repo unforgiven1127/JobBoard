@@ -1813,15 +1813,25 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      return $this->clientLoginPage();
+      $msg = "Username or password incorrect";
+      return $this->clientLoginPage($msg);
     }
   }
 
-  public function clientLoginPage()
+  public function clientLoginPage($msg = '')
   {
     $oPage = CDependency::getComponentByName('page');
 
-    $html = $this->_oDisplay->render('client_login');
+    if($msg != '')
+    {
+      $data['msg'] = $msg;
+    }
+    else
+    {
+      $data['msg'] = '';
+    }
+
+    $html = $this->_oDisplay->render('client_login',$data);
     //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
 //ChromePhp::log($sUrl);
     return $html;
