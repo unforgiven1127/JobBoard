@@ -440,7 +440,8 @@ form
 #pageMainId
 {
   margin: 0 auto;
-  width: 1000px;
+  /*width: 1000px;*/
+  width:100% !important;
 }
 #componentContainerId
 {
