@@ -60,7 +60,7 @@
   <table>
     <tr>
       <td>
-        <table>
+        <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
               <ul>
