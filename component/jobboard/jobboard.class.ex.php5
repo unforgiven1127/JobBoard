@@ -1801,6 +1801,8 @@ class CJobboardEx extends CJobboard
   public function clientLoginPage()
   {
     //$html = $this->_oDisplay->render('client_login');
+    ChromePhp::log('ICERIDE');
+    echo "asdasd";
     $html = "TEST";
     $sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
 
