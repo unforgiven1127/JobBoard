@@ -14,7 +14,7 @@
 
 </script>
 <style>
-ul {
+.leftSide ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,19 +22,19 @@ ul {
     background-color: #f1f1f1;
 }
 
-li a {
+.leftSide li a {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-li a.active {
+.leftSide li a.active {
     background-color: #4CAF50;
     color: white;
 }
 
-li a:hover:not(.active) {
+.leftSide li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
@@ -50,7 +50,7 @@ li a:hover:not(.active) {
       <td valign="middle" align="middle" class="half" style=" width: 50%;">
         <table>
           <tr>
-            <td>
+            <td class="leftSide">
               <ul>
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#news">News</a></li>
