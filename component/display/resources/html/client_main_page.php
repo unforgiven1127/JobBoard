@@ -51,13 +51,13 @@
 }
 
 .box {
-    width:300px;
-    height:300px;
-    background-color:#d9d9d9;
+    width:1000px;
+    /*height:300px;*/
+    /*background-color:#d9d9d9;*/
     position:fixed;
     margin-left:-150px; /* half of width */
     margin-top:-150px;  /* half of height */
-    top:50%;
+    /*top:50%;*/
     left:50%;
 }
 
@@ -70,7 +70,7 @@
 
   <table class="box" align="center">
     <tr>
-      <td valign="top" style='padding-left: 20px;'>
+      <td valign="top">
         <table class='leftSideTable'>
           <tr>
             <td valign="top" class="leftSide">
