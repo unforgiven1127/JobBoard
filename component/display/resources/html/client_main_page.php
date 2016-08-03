@@ -50,6 +50,17 @@
     border: 1px solid #DADADA;
 }
 
+.box {
+    width:300px;
+    height:300px;
+    background-color:#d9d9d9;
+    position:fixed;
+    margin-left:-150px; /* half of width */
+    margin-top:-150px;  /* half of height */
+    top:50%;
+    left:50%;
+}
+
 </style>
 
   </head>
@@ -57,7 +68,7 @@
 
   <body>
 
-  <table align="center">
+  <table class="box" align="center">
     <tr>
       <td valign="top" style='padding-left: 20px;'>
         <table class='leftSideTable'>
