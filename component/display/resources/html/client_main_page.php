@@ -57,7 +57,7 @@
     position:fixed;
     margin-left:-150px; /* half of width */
     margin-top:-150px;  /* half of height */
-    /*top:50%;*/
+    top:50%;
     left:50%;
 }
 
