@@ -55,9 +55,10 @@
     /*height:300px;*/
     /*background-color:#d9d9d9;*/
     position:fixed;
-    margin-left:-150px; /* half of width */
-    margin-top:-150px;  /* half of height */
-    top:50%;
+    /*margin-left:-150px; /* half of width */
+    /*margin-top:-150px;  /* half of height */
+    /*top:50%;*/
+    margin-top: 200px;
     left:50%;
 }
 
