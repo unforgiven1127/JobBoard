@@ -71,7 +71,9 @@
     background-color:white;
     height:100px !important;
     width:150px !important;
-    border:1px solid black;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
     border-collapse: collapse;
 }
 .hero-last {
@@ -79,13 +81,14 @@
     background-color:white;
     height:100px !important;
     width:150px !important;
-    border:1px solid black;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
     border-collapse: collapse;
 }
 .hero:after {
     z-index: 999;
     position: absolute;
-    border-collapse: collapse;
     /*border:1px solid black;*/
     top: 40%;
     left: 100%;
