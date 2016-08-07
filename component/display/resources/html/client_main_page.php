@@ -131,7 +131,7 @@
         <table>
           <tr>
             <td valign="top">
-              <div class="hero"></div>
+              <div style='border-left:1px solid black;' class="hero"></div>
             </td>
             <td valign="top">
               <div class="hero"></div>
