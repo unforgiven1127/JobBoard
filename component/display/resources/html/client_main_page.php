@@ -59,7 +59,31 @@
     /*margin-top:-150px;  /* half of height */
     /*top:50%;*/
     margin-top: 100px;
-    left:20%;
+    left:30%;
+}
+
+/*body{
+    background-color:#eee;
+}*/
+
+.hero {
+    position:relative;
+    background-color:#659EC7;
+    height:100px !important;
+    width:100% !important;
+}
+.hero:after {
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    content:'';
+    width: 0;
+    height: 0;
+    border-top: solid 10px #659EC7;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
 }
 
 </style>
@@ -86,6 +110,11 @@
       </td>
       <td valign="top" style='padding-left: 20px;'>
         <table>
+          <tr>
+            <td valign="top">
+              <div class="hero"></div>
+            </td>
+          </tr>
           <tr>
             <td valign="top">
               <?php echo $innerPage; ?>
