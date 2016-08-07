@@ -90,7 +90,7 @@
     z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
-    top: 40px;
+    top: 30px;
     left: 100%;
     /*margin-left: -10px;*/
     content:'';
