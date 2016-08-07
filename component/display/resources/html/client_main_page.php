@@ -68,9 +68,10 @@
 
 .hero {
     position:relative;
-    background-color:#659EC7;
+    /*background-color:#659EC7;*/
     height:100px !important;
-    width:100% !important;
+    width:150px !important;
+    border: 1px grey;
 }
 .hero:after {
     z-index: -1;
@@ -115,6 +116,12 @@
       <td valign="top" style='padding-left: 20px;'>
         <table>
           <tr>
+            <td valign="top">
+              <div class="hero"></div>
+            </td>
+            <td valign="top">
+              <div class="hero"></div>
+            </td>
             <td valign="top">
               <div class="hero"></div>
             </td>
