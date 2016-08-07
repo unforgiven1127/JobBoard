@@ -74,7 +74,7 @@
     border:1px solid black;
 }
 .hero:after {
-    z-index: -1;
+    z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
     top: 40%;
