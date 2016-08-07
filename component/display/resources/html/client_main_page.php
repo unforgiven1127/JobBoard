@@ -75,8 +75,8 @@
 .hero:after {
     z-index: -1;
     position: absolute;
-    /*top: 100%;
-    left: 50%;*/
+    top: 100%;
+    /*left: 50%;*/
     margin-left: -10px;
     content:'TEST';
     width: 0;
