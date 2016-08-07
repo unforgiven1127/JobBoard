@@ -69,7 +69,7 @@
 .hero {
     position:relative;
     background-color:white;
-    height:115px !important;
+    height:114px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
@@ -79,7 +79,7 @@
 .hero-last {
     position:relative;
     background-color:white;
-    height:100px !important;
+    height:114px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
