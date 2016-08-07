@@ -78,12 +78,16 @@
     top: 50%;
     /*left: 50%;*/
     margin-left: -10px;
-    content:'TEST';
+    content:'';
     width: 0;
     height: 0;
-    border-top: solid 10px #659EC7;
+    /*border-top: solid 10px #659EC7;
     border-left: solid 10px transparent;
-    border-right: solid 10px transparent;
+    border-right: solid 10px transparent;*/
+
+    border-left: solid 10px #659EC7;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent;
 }
 
 </style>
