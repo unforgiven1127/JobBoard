@@ -71,11 +71,12 @@
     /*background-color:#659EC7;*/
     height:100px !important;
     width:150px !important;
-    border: 1px grey;
+    border:1px solid black;
 }
 .hero:after {
     z-index: -1;
     position: absolute;
+    border:1px solid black;
     top: 50%;
     left: 100%;
     /*margin-left: -10px;*/
