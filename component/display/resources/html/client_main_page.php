@@ -68,16 +68,16 @@
 
 .hero {
     position:relative;
-    /*background-color:#659EC7;*/
+    background-color:white;
     height:100px !important;
     width:150px !important;
-    border:1px solid black;
+    /*border:1px solid black;*/
 }
 .hero:after {
     z-index: -1;
     position: absolute;
-    border:1px solid black;
-    top: 50%;
+    /*border:1px solid black;*/
+    top: 40%;
     left: 100%;
     /*margin-left: -10px;*/
     content:'';
@@ -117,6 +117,12 @@
       <td valign="top" style='padding-left: 20px;'>
         <table>
           <tr>
+            <td valign="top">
+              <div class="hero"></div>
+            </td>
+            <td valign="top">
+              <div class="hero"></div>
+            </td>
             <td valign="top">
               <div class="hero"></div>
             </td>
