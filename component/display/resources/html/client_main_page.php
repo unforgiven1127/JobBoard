@@ -92,7 +92,7 @@
     /*border:1px solid black;*/
     /*top: 30%;*/
     left: 100%;
-    align:middle;
+    align:center;
     /*margin-left: -10px;*/
     content:'';
     width: 0;
