@@ -71,7 +71,7 @@
     background-color:white;
     height:100px !important;
     width:150px !important;
-    /*border:1px solid black;*/
+    border:1px solid black;
 }
 .hero:after {
     z-index: -1;
