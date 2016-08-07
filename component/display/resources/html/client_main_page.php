@@ -77,7 +77,7 @@
     position: absolute;
     top: 50%;
     left: 100%;
-    margin-left: -10px;
+    /*margin-left: -10px;*/
     content:'';
     width: 0;
     height: 0;
