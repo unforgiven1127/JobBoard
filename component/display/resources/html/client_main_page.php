@@ -85,6 +85,7 @@
 .hero:after {
     z-index: 999;
     position: absolute;
+    border-collapse: collapse;
     /*border:1px solid black;*/
     top: 40%;
     left: 100%;
