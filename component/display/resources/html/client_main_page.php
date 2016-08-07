@@ -90,9 +90,8 @@
     z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
-    /*top: 30%;*/
+    top: 40px;
     left: 100%;
-    align:center;
     /*margin-left: -10px;*/
     content:'';
     width: 0;
