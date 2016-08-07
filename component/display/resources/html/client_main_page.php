@@ -107,7 +107,7 @@
 .topMenu
 {
   font-size: 15px;
-  align:center;
+  text-align: center;
 }
 
 </style>
