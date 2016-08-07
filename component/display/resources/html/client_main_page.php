@@ -107,11 +107,13 @@
 
 .topMenu
 {
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 18px;
   text-align: center;
 }
 .topMenuBottom
 {
+  margin-top: -5px;
   font-size: 25px;
   text-align: center;
 }
