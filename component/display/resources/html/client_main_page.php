@@ -69,7 +69,7 @@
 .hero {
     position:relative;
     background-color:white;
-    height:100px !important;
+    height:110px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
@@ -107,14 +107,14 @@
 
 .topMenu
 {
-  margin-top: 5px;
+  margin-top: 7px;
   font-size: 18px;
   text-align: center;
 }
 .topMenuBottom
 {
   margin-top: -5px;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 
