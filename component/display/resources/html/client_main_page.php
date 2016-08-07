@@ -100,9 +100,9 @@
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;*/
 
-    border-left: solid 10px #659EC7;
-    border-top: solid 10px transparent;
-    border-bottom: solid 10px transparent;
+    border-left: solid 20px #659EC7;
+    border-top: solid 20px transparent;
+    border-bottom: solid 20px transparent;
 }
 
 </style>
