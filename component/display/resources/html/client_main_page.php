@@ -69,7 +69,7 @@
 .hero {
     position:relative;
     background-color:white;
-    height:110px !important;
+    height:115px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
