@@ -69,7 +69,7 @@
 .hero {
     position:relative;
     background-color:white;
-    height:114px !important;
+    height:113px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
@@ -79,7 +79,7 @@
 .hero-last {
     position:relative;
     background-color:white;
-    height:114px !important;
+    height:113px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
@@ -107,7 +107,7 @@
 
 .topMenu
 {
-  margin-top: 7px;
+  margin-top: 10px;
   font-size: 18px;
   text-align: center;
 }
