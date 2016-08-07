@@ -114,7 +114,7 @@
 .topMenuBottom
 {
   margin-top: -5px;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -145,8 +145,8 @@
           <tr>
             <td valign="top">
               <div style='border-left:1px solid #DADADA;' class="hero">
-                <p class="topMenu" >Candidate Send</p>
                 <p class="topMenuBottom">21</p>
+                <p class="topMenu" >Candidate Send</p>
               </div>
             </td>
             <td valign="top">
