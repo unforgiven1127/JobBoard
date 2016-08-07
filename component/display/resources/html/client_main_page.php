@@ -107,6 +107,7 @@
 .topMenu
 {
   font-size: 15px;
+  align:center;
 }
 
 </style>
@@ -136,7 +137,7 @@
           <tr>
             <td valign="top">
               <div style='border-left:1px solid #DADADA;' class="hero">
-                <p class="topMenu" ><center>Candidate Send</center></p>
+                <p class="topMenu" >Candidate Send</p>
                 <p>21</p>
               </div>
             </td>
