@@ -72,6 +72,15 @@
     height:100px !important;
     width:150px !important;
     border:1px solid black;
+    border-collapse: collapse;
+}
+.hero-last {
+    position:relative;
+    background-color:white;
+    height:100px !important;
+    width:150px !important;
+    border:1px solid black;
+    border-collapse: collapse;
 }
 .hero:after {
     z-index: 999;
@@ -130,7 +139,7 @@
               <div class="hero"></div>
             </td>
             <td valign="top">
-              <div class="hero"></div>
+              <div class="hero-last"></div>
             </td>
           </tr>
           <tr>
