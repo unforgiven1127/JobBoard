@@ -71,9 +71,9 @@
     background-color:white;
     height:100px !important;
     width:150px !important;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
-    border-right:1px solid black;
+    border-top:1px solid #DADADA;
+    border-bottom:1px solid #DADADA;
+    border-right:1px solid #DADADA;
     border-collapse: collapse;
 }
 .hero-last {
@@ -81,16 +81,16 @@
     background-color:white;
     height:100px !important;
     width:150px !important;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
-    border-right:1px solid black;
+    border-top:1px solid #DADADA;
+    border-bottom:1px solid #DADADA;
+    border-right:1px solid #DADADA;
     border-collapse: collapse;
 }
 .hero:after {
     z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
-    top: 40%;
+    top: 30%;
     left: 100%;
     /*margin-left: -10px;*/
     content:'';
@@ -100,7 +100,7 @@
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;*/
 
-    border-left: solid 20px #659EC7;
+    border-left: solid 20px #DADADA;
     border-top: solid 20px transparent;
     border-bottom: solid 20px transparent;
 }
