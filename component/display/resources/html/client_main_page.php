@@ -90,8 +90,9 @@
     z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
-    top: 30%;
+    /*top: 30%;*/
     left: 100%;
+    align:middle;
     /*margin-left: -10px;*/
     content:'';
     width: 0;
@@ -131,7 +132,7 @@
         <table>
           <tr>
             <td valign="top">
-              <div style='border-left:1px solid black;' class="hero"></div>
+              <div style='border-left:1px solid #DADADA;' class="hero"></div>
             </td>
             <td valign="top">
               <div class="hero"></div>
