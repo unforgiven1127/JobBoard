@@ -104,9 +104,15 @@
     border-top: solid 20px transparent;
     border-bottom: solid 20px transparent;
 }
+
 .topMenu
 {
-  font-size: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.topMenuBottom
+{
+  font-size: 25px;
   text-align: center;
 }
 
@@ -138,7 +144,7 @@
             <td valign="top">
               <div style='border-left:1px solid #DADADA;' class="hero">
                 <p class="topMenu" >Candidate Send</p>
-                <p>21</p>
+                <p class="topMenuBottom">21</p>
               </div>
             </td>
             <td valign="top">
