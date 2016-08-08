@@ -168,6 +168,7 @@ li{
   height: 178px;
   overflow-y: scroll;
   width:100%;
+  border:1px solid #DADADA;
 }
 
 .wsTable{
