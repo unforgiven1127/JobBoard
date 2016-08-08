@@ -104,7 +104,7 @@ html, body {
     position: absolute;
     /*border:1px solid black;*/
     top: 35px;
-    left: 100%;
+    left: 99%;
     /*margin-left: -10px;*/
     content:'';
     width: 0;
