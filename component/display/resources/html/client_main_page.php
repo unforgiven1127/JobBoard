@@ -230,13 +230,13 @@ li{
 
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
-        <table class="workSpace">
+        <table>
         <thead class='stayFixed'>
           <tr style='width:100%;'>
             <th style='width:100%; font-size: 18px;'>My Workspace</th>
           </tr>
         </thead>
-        <tbody class='stayFixed'>
+        <tbody class='stayFixed workSpace'>
           <?php for($i=0;$i<22;$i++){ ?>
             <tr style='width:100%;'>
               <td style='width:100%; border-bottom:1px solid #DADADA;'>
