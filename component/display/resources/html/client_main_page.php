@@ -226,8 +226,8 @@ li{
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
         <table class="workSpace">
-        <tr>
-          <th style='font-size: 18px;'>My Workspace</th>
+        <tr style='width:100%;'>
+          <th style='width:100%; font-size: 18px;'>My Workspace</th>
         </tr>
         <?php for($i=0;$i<22;$i++){ ?>
           <tr>
