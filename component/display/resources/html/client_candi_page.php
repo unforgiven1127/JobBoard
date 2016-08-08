@@ -38,6 +38,14 @@
             <th style='padding-left: 5px; font-size: 15px;'>Lastname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
           </tr>
+          <tr>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'></td>
+          </tr>
         </table>
       </td>
     </tr>
