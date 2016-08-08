@@ -132,6 +132,7 @@ html, body {
   height: 20px !important;
   width:190px !important;
   margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 </style>
@@ -159,22 +160,22 @@ html, body {
         <table class='leftSideTable'>
           <tr>
             <td style=''>
-              <input class='searchInput' id="inputsm" type="text">
+              <input placeholder="ID" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
           <tr>
             <td style=''>
-              <input class='searchInput' id="inputsm" type="text">
+              <input placeholder="lastname, firstname" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
           <tr>
             <td style=''>
-              <input class='searchInput' id="inputsm" type="text">
+              <input placeholder="Position" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
           <tr>
             <td style=''>
-              <input class='searchInput' id="inputsm" type="text">
+              <input placeholder="Keyword" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
         </table>
