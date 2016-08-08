@@ -31,7 +31,7 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th style='width:40px !important;'>
+            <th>
               <center><img src="/common/pictures/list_action.png" /></center>
             </th>
             <th style='padding-left: 5px; font-size: 15px;'>ID</th>
@@ -42,7 +42,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
           <tr>
-            <td style='padding-left: 5px; font-size: 13px; width:40px !important;'>
+            <td style='padding-left: 5px; font-size: 13px;'>
               <input type="checkbox" name="vehicle" value="Bike">
             </td>
             <td style='padding-left: 5px; font-size: 13px;'>123456</td>
