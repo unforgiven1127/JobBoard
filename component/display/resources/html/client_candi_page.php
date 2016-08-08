@@ -65,7 +65,7 @@
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Anameric</td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Munir</td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>XYZ</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Candidate Send</td>
           </tr>
 
           <?php } ?>
