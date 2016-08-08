@@ -31,7 +31,7 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th><img src="/common/pictures/list_action.png" /></th>
+            <th style='width:50px;'><center><img src="/common/pictures/list_action.png" /></center></th>
             <th>ID</th>
             <th>Grade</th>
             <th>Firsname</th>
