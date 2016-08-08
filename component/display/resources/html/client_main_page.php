@@ -184,9 +184,9 @@ li{
             </td>
           </tr>
         </table>
-        <table>
-          <tr><td style='padding-top: 10px;'></td></tr>
-        </table>
+
+        <table><tr><td style='padding-top: 10px;'></td></tr></table>
+
         <table  class='leftSideTable'>
           <tr>
             <td>
@@ -215,6 +215,17 @@ li{
             </td>
           </tr>
         </table>
+
+        <table><tr><td style='padding-top: 10px;'></td></tr></table>
+
+        <table>
+        <?php for($i=0;$i<12;$i++){ ?>
+          <tr>
+            <td><a>My test folder (8)</a></td>
+          </tr>
+        <?php } ?>
+        </table>
+
       </td>
       <td valign="top" style='padding-left: 20px;'>
         <table>
