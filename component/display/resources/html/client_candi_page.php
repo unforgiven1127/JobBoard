@@ -20,7 +20,7 @@
   display: block;
   height: 170px;
   overflow-y: scroll;
-  width:100%;
+  width:750px;
 }
 
 .innerTD
