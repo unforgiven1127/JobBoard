@@ -166,7 +166,8 @@ li{
 .workSpace {
   display: block;
   height: 170px;
-  overflow-y: scroll;;
+  overflow-y: scroll;
+  width:100%;
 }
 
 </style>
@@ -224,7 +225,7 @@ li{
 
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
-        <table class="workSpace" style='width:100%;'>
+        <table class="workSpace">
         <tr>
           <th style='font-size: 18px;'>My Workspace</th>
         </tr>
