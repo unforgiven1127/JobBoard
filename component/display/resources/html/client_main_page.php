@@ -82,6 +82,7 @@ html, body {
     border-bottom:1px solid #DADADA;
     border-right:1px solid #DADADA;
     border-collapse: collapse;
+    cursor:pointer;
 }
 .hero:after {
     z-index: 999;
@@ -93,7 +94,6 @@ html, body {
     content:'';
     width: 0;
     height: 0;
-    cursor:pointer;
     /*border-top: solid 10px #659EC7;
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;*/
