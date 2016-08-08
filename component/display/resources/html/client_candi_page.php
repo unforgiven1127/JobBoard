@@ -32,11 +32,11 @@
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
             <th style='width:40px;'><center><img src="/common/pictures/list_action.png" /></center></th>
-            <th style='margin-left: 5px;'>ID</th>
-            <th style='margin-left: 5px;'>Grade</th>
-            <th style='margin-left: 5px;'>Firsname</th>
-            <th style='margin-left: 5px;'>Lastname</th>
-            <th style='margin-left: 5px;'>Position</th>
+            <th><p style='margin-left: 5px;'>ID</p></th>
+            <th><p style='margin-left: 5px;'>Grade</p></th>
+            <th><p style='margin-left: 5px;'>Firsname</p></th>
+            <th><p style='margin-left: 5px;'>Lastname</p></th>
+            <th><p style='margin-left: 5px;'>Position</p></th>
           </tr>
         </table>
       </td>
