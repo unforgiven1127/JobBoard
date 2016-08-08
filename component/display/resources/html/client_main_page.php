@@ -170,6 +170,10 @@ li{
   width:100%;
 }
 
+.wsTable{
+  width:100%;
+}
+
 .stayFixed
 {
   display: block;
@@ -230,7 +234,7 @@ li{
 
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
-        <table>
+        <table class='wsTable'>
         <thead class='stayFixed'>
           <tr style='width:100%;'>
             <th style='width:100%; font-size: 18px;'>My Workspace</th>
