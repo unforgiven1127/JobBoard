@@ -131,6 +131,7 @@ html, body {
   margin-right: 5px;
   height: 20px !important;
   width:190px !important;
+  padding-top: 10px !important;
 }
 
 </style>
@@ -155,9 +156,24 @@ html, body {
           </tr>
         </table>
         <br>
-        <table class='leftSideTable' style='padding-top: 10px;'>
+        <table class='leftSideTable'>
           <tr>
-            <td style='padding-top: 10px;'>
+            <td style=''>
+              <input class='searchInput' id="inputsm" type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style=''>
+              <input class='searchInput' id="inputsm" type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style=''>
+              <input class='searchInput' id="inputsm" type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style=''>
               <input class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
