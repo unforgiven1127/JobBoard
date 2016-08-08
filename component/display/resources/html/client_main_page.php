@@ -27,7 +27,7 @@
     color: #000;
     padding: 8px 16px;
     /*text-decoration: none;*/
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     /*font-family: 'Merriweather', serif;*/
 }
