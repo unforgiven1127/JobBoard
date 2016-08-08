@@ -154,7 +154,7 @@ html, body {
         <table>
           <tr>
             <td style='margin-top: 10px;'>
-              <input style='line-height: 20px !important;' class="form-control input-sm" id="inputsm" type="text">
+              <input style='line-height: 20px !important;' class="form-control" id="inputsm" type="text">
             </td>
           </tr>
         </table>
