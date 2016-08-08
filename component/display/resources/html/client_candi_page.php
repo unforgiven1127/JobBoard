@@ -25,9 +25,9 @@
 
   <table >
     <tr>
-      <td valign="top" >
-        <table>
-          <tr style='background-color: yellow;'>
+      <td valign="top" style='width: 750px;' >
+        <table style='width: 750px;' >
+          <tr style='background-color: #EEEEEE;'>
             <th>-</th>
             <th>ID</th>
             <th>Grade</th>
