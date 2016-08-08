@@ -131,7 +131,7 @@ html, body {
   margin-right: 5px;
   height: 20px !important;
   width:190px !important;
-  padding-top: 10px !important;
+  margin-top: 10px !important;
 }
 
 </style>
