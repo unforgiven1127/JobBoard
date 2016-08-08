@@ -65,11 +65,11 @@ html, body {
 
 .hero:hover
 {
-  background-color: #F8F8F8 !important;
+  background-color: #EEEEEE !important;
 }
 .hero-last:hover
 {
-  background-color: #F8F8F8 !important;
+  background-color: #EEEEEE !important;
 }
 
 .hero {
