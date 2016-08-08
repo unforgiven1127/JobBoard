@@ -59,7 +59,8 @@
     /*margin-top:-150px;  /* half of height */
     /*top:50%;*/
     margin-top: 100px;
-    left:25%;
+    margin-left:auto; 
+    margin-right:auto;
 }
 
 /*body{
