@@ -17,6 +17,10 @@
 
 .innerTable{
   border:1px solid #DADADA;
+  display: block;
+  height: 170px;
+  overflow-y: scroll;
+  width:100%;
 }
 
 .innerTD
@@ -24,11 +28,7 @@
   padding-bottom: 5px;
   padding-top: 5px;
   cursor:pointer;
-  height: 170px;
-  overflow-y: scroll;
-  display: block;
 }
-
 
 </style>
 
