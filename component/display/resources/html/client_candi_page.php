@@ -47,6 +47,9 @@
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
+
+          <?php for($i=0;$i<5;$i++){ ?>
+
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
@@ -64,6 +67,9 @@
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>XYZ</td>
           </tr>
+
+          <?php } ?>
+
         </table>
       </td>
     </tr>
