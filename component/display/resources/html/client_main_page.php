@@ -147,11 +147,11 @@ html, body {
             </td>
           </tr>
         </table>
-
+        <br>
         <table class='leftSideTable' style='padding-top: 10px;'>
           <tr>
             <td style='padding-top: 10px;'>
-              <input style='line-height: 20px !important;' id="inputsm" type="text">
+              <input style='line-height: 20px !important; width:100px;' id="inputsm" type="text">
             </td>
           </tr>
         </table>
