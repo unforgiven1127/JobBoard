@@ -95,7 +95,7 @@ html, body {
     cursor:pointer;
 }
 .hero:after {
-    z-index: 999;
+    z-index: 1;
     position: absolute;
     /*border:1px solid black;*/
     top: 35px;
