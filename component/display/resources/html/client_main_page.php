@@ -231,7 +231,7 @@ li{
             <td>
               <select class='searchInput' style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt;" name="industry" id="industry">
 
-                <option value="volvo" style="background-image:url("http://jobs.slate.co.jp/component/jobboard_user/resources//pictures/_shade.png");"></option>
+                <option value="volvo" style="background-image:url('http://jobs.slate.co.jp/component/jobboard_user/resources/pictures/_shade.png');"></option>
 
               </select>
             </td>
