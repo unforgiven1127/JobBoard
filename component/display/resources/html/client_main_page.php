@@ -239,7 +239,7 @@ li{
         <table class='wsTable'>
         <thead class='stayFixed'>
           <tr style='width:100%;'>
-            <th style='width:100%; font-size: 18px;'>My Workspace</th>
+            <th style='width:100%; font-size: 16px;'>My Workspace</th>
           </tr>
         </thead>
         <tbody class='stayFixed workSpace'>
