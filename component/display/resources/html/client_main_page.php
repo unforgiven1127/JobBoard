@@ -135,6 +135,30 @@ html, body {
   margin-bottom: 10px !important;
 }
 
+::-webkit-input-placeholder
+{
+ padding-left:3px;
+ font-size: 11pt;
+}
+:-moz-placeholder { /* older Firefox*/
+ padding-left:3px;
+ font-size: 11pt;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ padding-left:3px;
+ font-size: 11pt;
+}
+:-ms-input-placeholder {
+ padding-left:3px;
+ font-size: 11pt;
+}
+li{
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
+  text-indent: -11px;
+}
+
 </style>
 
   </head>
