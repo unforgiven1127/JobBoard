@@ -37,9 +37,11 @@
             <th style='padding-left: 5px; font-size: 15px;'>Firsname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Lastname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
+            <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
           <tr>
-            <td style='padding-left: 5px; font-size: 13px;'><input type="checkbox" name="vehicle" value="Bike"></td>
+            <td style='padding-left: 5px; font-size: 13px; width:40px;'><input type="checkbox" name="vehicle" value="Bike"></td>
+            <td style='padding-left: 5px; font-size: 13px;'>123456</td>
             <td style='padding-left: 5px; font-size: 13px;'>
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
@@ -47,10 +49,10 @@
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star_grey.png" />
             </td>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'>Anameric</td>
+            <td style='padding-left: 5px; font-size: 13px;'>Munir</td>
+            <td style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
+            <td style='padding-left: 5px; font-size: 13px;'>XYZ</td>
           </tr>
         </table>
       </td>
