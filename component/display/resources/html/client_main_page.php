@@ -219,9 +219,9 @@ li{
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
         <table>
-        <?php for($i=0;$i<12;$i++){ ?>
+        <?php for($i=0;$i<22;$i++){ ?>
           <tr>
-            <td><a>My test folder (8)</a></td>
+            <td style='border-bottom:1px solid #DADADA; margin-bottom: 5px;'><a>My test folder (8)</a></td>
           </tr>
         <?php } ?>
         </table>
