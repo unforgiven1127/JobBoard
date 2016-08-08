@@ -72,6 +72,7 @@ html, body {
     border-bottom:1px solid #DADADA;
     border-right:1px solid #DADADA;
     border-collapse: collapse;
+    cursor:pointer;
 }
 .hero-last {
     position:relative;
