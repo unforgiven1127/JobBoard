@@ -52,7 +52,7 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
         <thead class='stayFixedClient'>
-          <tr style='background-color: #EEEEEE;'>
+          <tr style='background-color: #EEEEEE; width:100%;'>
             <th style='width:40px !important;'>
               <center><img src="/common/pictures/list_action.png" /></center>
             </th>
