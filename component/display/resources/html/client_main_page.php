@@ -8,6 +8,10 @@
   <!--<link rel="stylesheet" type="text/css" href="common/lib/verticalSlider/css/style.css">-->
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript">
 
@@ -149,8 +153,8 @@ html, body {
         </table>
         <table>
           <tr>
-            <td>
-              <input></input>
+            <td style='margin-top: 10px;'>
+              <input class="form-control input-sm" id="inputsm" type="text">
             </td>
           </tr>
         </table>
