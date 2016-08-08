@@ -49,19 +49,14 @@
     border-collapse: collapse;
     border: 1px solid #DADADA;
 }
-  body {text-align:center;}
-.box {
-    width:1000px;
-    /*height:300px;*/
-    /*background-color:#d9d9d9;*/
-    position:fixed;
-    /*margin-left:-150px; /* half of width */
-    /*margin-top:-150px;  /* half of height */
-    /*top:50%;*/
-    margin-top: 100px;
-    margin-left:auto; 
-    margin-right:auto;
+
+html, body {
+    width: 100%;
 }
+.box {
+    margin: 0 auto;
+}
+
 
 /*body{
     background-color:#eee;
