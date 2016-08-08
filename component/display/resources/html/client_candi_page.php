@@ -49,7 +49,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
 
-          <?php for($i=0;$i<6;$i++){ ?>
+          <?php for($i=0;$i<12;$i++){ ?>
 
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
