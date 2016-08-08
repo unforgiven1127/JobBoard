@@ -17,9 +17,15 @@
 
 .innerTable{
   border:1px solid #DADADA;
+
+}
+
+.outherTable
+{
   height: 170px;
   overflow-y: scroll;
   width:750px;
+  display: block;
 }
 
 .innerTD
@@ -36,7 +42,7 @@
 
   <body>
 
-  <table >
+  <table class='outherTable' >
     <tr>
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
@@ -52,7 +58,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
 
-          <?php for($i=0;$i<12;$i++){ ?>
+          <?php for($i=0;$i<22;$i++){ ?>
 
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
