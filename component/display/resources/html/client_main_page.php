@@ -245,7 +245,7 @@ li{
         <tbody class='stayFixed workSpace'>
           <?php for($i=0;$i<22;$i++){ ?>
             <tr style='width:100%;'>
-              <td style='width:180px; border-bottom:1px solid #DADADA; padding-bottom: 5px;'>
+              <td style='width:180px; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 3px;'>
                 <a style=' font-size: 12px;' href="#" >My test folder (8)</a>
               </td>
             </tr>
