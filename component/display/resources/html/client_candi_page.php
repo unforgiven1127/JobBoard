@@ -26,6 +26,18 @@
   cursor:pointer;
 }
 
+.candiListTable {
+  display: block;
+  height: 170px;
+  overflow-y: scroll;
+  width:100%;
+}
+
+.stayFixedClient
+{
+  display: block;
+}
+
 </style>
 
   </head>
@@ -52,7 +64,7 @@
           </thead>
 
           <tbody class='stayFixedClient candiListTable'>
-          <?php for($i=0;$i<12;$i++){ ?>
+          <?php for($i=0;$i<22;$i++){ ?>
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
