@@ -39,8 +39,14 @@
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
           </tr>
           <tr>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
-            <td style='padding-left: 5px; font-size: 13px;'></td>
+            <td style='padding-left: 5px; font-size: 13px;'><input type="checkbox" name="vehicle" value="Bike"></td>
+            <td style='padding-left: 5px; font-size: 13px;'>
+              <img src="/common/pictures/star.png" />
+              <img src="/common/pictures/star.png" />
+              <img src="/common/pictures/star.png" />
+              <img src="/common/pictures/star.png" />
+              <img src="/common/pictures/star_grey.png" />
+            </td>
             <td style='padding-left: 5px; font-size: 13px;'></td>
             <td style='padding-left: 5px; font-size: 13px;'></td>
             <td style='padding-left: 5px; font-size: 13px;'></td>
