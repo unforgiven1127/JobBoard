@@ -17,6 +17,7 @@
 
 .innerTable{
   border:1px solid #DADADA;
+  width:100%;
 }
 
 .innerTD
@@ -36,6 +37,7 @@
 .stayFixedClient
 {
   display: block;
+  width:100%;
 }
 
 </style>
