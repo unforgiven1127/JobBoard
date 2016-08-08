@@ -26,7 +26,16 @@
   <table >
     <tr>
       <td valign="top" >
-        MY CANDIDATES
+        <table>
+          <tr style='background-color: yellow;'>
+            <th>-</th>
+            <th>ID</th>
+            <th>Grade</th>
+            <th>Firsname</th>
+            <th>Lastname</th>
+            <th>Position</th>
+          </tr>
+        </table>
       </td>
     </tr>
     <tr>

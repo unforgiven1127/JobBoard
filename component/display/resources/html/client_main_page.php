@@ -204,8 +204,8 @@ li{
           </tr>
           <tr>
             <td style='text-align: right;'>
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="this will be displayed as a tooltip"/>
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="this will be displayed as a tooltip"/>
+              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/>
+              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="Search"/>
             </td>
           </tr>
         </table>
@@ -245,7 +245,7 @@ li{
             </td>
           </tr>
           <tr>
-            <td valign="top">
+            <td style='padding-top: 10px;' valign="top">
               <?php echo $innerPage; ?>
             </td>
           </tr>
