@@ -85,6 +85,7 @@ html, body {
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
     border-right:1px solid #DADADA;
+    border-left:1px solid #DADADA;
     border-collapse: collapse;
     cursor:pointer;
 }
