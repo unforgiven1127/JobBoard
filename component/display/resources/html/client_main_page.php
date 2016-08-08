@@ -230,20 +230,9 @@ li{
           <tr>
             <td>
               <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" name="industry" id="industry">
-                <option value='' >
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                </option>
-                <option value='' >
-                  <img src="/common/pictures/star.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                  <img src="/common/pictures/star_grey.png" />
-                </option>
+
+                <option value="volvo" style="background-image:url(/common/pictures/star_grey.png);">Volvo</option>
+
               </select>
             </td>
           </tr>
