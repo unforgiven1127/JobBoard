@@ -28,7 +28,7 @@
       <td valign="top" style='width: 750px;' >
         <table style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th>-</th>
+            <th><img src="/common/pictures/list_action.png" /></th>
             <th>ID</th>
             <th>Grade</th>
             <th>Firsname</th>
