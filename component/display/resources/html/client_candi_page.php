@@ -48,7 +48,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
 
-          <?php for($i=0;$i<5;$i++){ ?>
+          <?php for($i=0;$i<6;$i++){ ?>
 
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
