@@ -36,7 +36,8 @@
   <table >
     <tr>
       <td valign="top" style='width: 750px;' >
-        <table border="1" class='innerTable' style='width: 750px;' >
+        <table border="1" class='' style='width: 750px;' >
+        <thead class='stayFixed'>
           <tr style='background-color: #EEEEEE;'>
             <th style='width:40px !important;'>
               <center><img src="/common/pictures/list_action.png" /></center>
@@ -48,9 +49,10 @@
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
             <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
+          </thead>
 
+          <tbody class='stayFixed innerTable'>
           <?php for($i=0;$i<12;$i++){ ?>
-
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
@@ -70,7 +72,7 @@
           </tr>
 
           <?php } ?>
-
+          </tbody>
         </table>
       </td>
     </tr>
