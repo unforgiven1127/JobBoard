@@ -90,7 +90,7 @@
     z-index: 999;
     position: absolute;
     /*border:1px solid black;*/
-    top: 30px;
+    top: 40px;
     left: 100%;
     /*margin-left: -10px;*/
     content:'';
@@ -170,7 +170,7 @@
             <td valign="top">
               <div class="hero-last">
                 <p class="topMenuBottom">1</p>
-                <p class="topMenu" >PLaced</p>
+                <p class="topMenu" >Placed</p>
               </div>
             </td>
           </tr>
