@@ -163,6 +163,11 @@ li{
   text-indent: -11px;
 }
 
+.workSpace {
+  height: 200px;
+  overflow-y: scroll;
+}
+
 </style>
 
   </head>
@@ -218,9 +223,9 @@ li{
 
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
-        <table style='width:100%;'>
+        <table class="workSpace" style='width:100%;'>
         <tr>
-          <th style='font-size: 15px;'>My Workspace</th>
+          <th style='font-size: 18px;'>My Workspace</th>
         </tr>
         <?php for($i=0;$i<22;$i++){ ?>
           <tr>
