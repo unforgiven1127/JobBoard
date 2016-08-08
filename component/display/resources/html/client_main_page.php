@@ -71,7 +71,7 @@ html, body {
 
 .hero {
     position:relative;
-    background-color:white;
+    /*background-color:white;*/
     height:113px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
@@ -82,7 +82,7 @@ html, body {
 }
 .hero-last {
     position:relative;
-    background-color:white;
+    /*background-color:white;*/
     height:113px !important;
     width:150px !important;
     border-top:1px solid #DADADA;
