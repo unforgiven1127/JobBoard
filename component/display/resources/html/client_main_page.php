@@ -203,9 +203,9 @@ li{
             </td>
           </tr>
           <tr>
-            <td>
-              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/userSearch.png" />
+            <td style='text-align: right;'>
               <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/eraser.png" />
+              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/search.png" />
             </td>
           </tr>
         </table>
