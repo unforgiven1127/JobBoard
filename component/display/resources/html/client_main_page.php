@@ -165,7 +165,7 @@ li{
 
 .workSpace {
   display: block;
-  height: 150px;
+  height: 170px;
   overflow-y: scroll;;
 }
 
