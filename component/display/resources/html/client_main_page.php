@@ -221,7 +221,7 @@ li{
         <table>
         <?php for($i=0;$i<22;$i++){ ?>
           <tr>
-            <td style='border-bottom:1px solid #DADADA; margin-bottom: 5px;'><a>My test folder (8)</a></td>
+            <td style='border-bottom:1px solid #DADADA;'><a style='margin-bottom: 5px;' href="#" >My test folder (8)</a></td>
           </tr>
         <?php } ?>
         </table>
