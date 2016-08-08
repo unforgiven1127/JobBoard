@@ -84,13 +84,15 @@
     </tr>
     <tr>
       <td>
-        
+      <!-- kayan tablonun altina ekler -->
       </td>
     </tr>
   </table>
   <table>
     <tr>
-      <td>TEST</td>
+      <td>
+        <!-- kayan tablo sonrasi ekler -->
+      </td>
     </tr>
   </table>
 
