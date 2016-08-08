@@ -231,16 +231,20 @@ li{
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
         <table class="workSpace">
-        <tr style='width:100%;'>
-          <th class='stayFixed' style='width:100%; font-size: 18px;'>My Workspace</th>
-        </tr>
-        <?php for($i=0;$i<22;$i++){ ?>
+        <thead class='stayFixed'>
           <tr style='width:100%;'>
-            <td style='width:100%; border-bottom:1px solid #DADADA;'>
-              <a style='margin-bottom: 5px;' href="#" >My test folder (8)</a>
-            </td>
+            <th style='width:100%; font-size: 18px;'>My Workspace</th>
           </tr>
-        <?php } ?>
+        </thead>
+        <tbody class='stayFixed'>
+          <?php for($i=0;$i<22;$i++){ ?>
+            <tr style='width:100%;'>
+              <td style='width:100%; border-bottom:1px solid #DADADA;'>
+                <a style='margin-bottom: 5px;' href="#" >My test folder (8)</a>
+              </td>
+            </tr>
+          <?php } ?>
+        </tbody>
         </table>
 
       </td>
