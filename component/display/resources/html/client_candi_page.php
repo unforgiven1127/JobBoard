@@ -17,7 +17,6 @@
 
 .innerTable{
   border:1px solid #DADADA;
-  display: block;
   height: 170px;
   overflow-y: scroll;
   width:750px;
