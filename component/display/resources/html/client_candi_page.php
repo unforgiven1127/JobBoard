@@ -31,7 +31,9 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th style='width:40px;'><center><img src="/common/pictures/list_action.png" /></center></th>
+            <th style='width:40px !important;'>
+              <center><img src="/common/pictures/list_action.png" /></center>
+            </th>
             <th style='padding-left: 5px; font-size: 15px;'>ID</th>
             <th style='padding-left: 5px; font-size: 15px;'>Grade</th>
             <th style='padding-left: 5px; font-size: 15px;'>Firsname</th>
