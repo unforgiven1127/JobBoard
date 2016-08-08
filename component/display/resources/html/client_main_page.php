@@ -55,7 +55,7 @@ html, body {
 }
 .box {
     margin: 0 auto;
-    margin-top:100px;
+    margin-top:50px;
 }
 
 
@@ -93,6 +93,7 @@ html, body {
     content:'';
     width: 0;
     height: 0;
+    cursor:pointer;
     /*border-top: solid 10px #659EC7;
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;*/
