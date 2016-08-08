@@ -126,6 +126,13 @@ html, body {
   text-align: center;
 }
 
+.searchInput{
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 20px !important;
+  width:190px;
+}
+
 </style>
 
   </head>
@@ -151,7 +158,7 @@ html, body {
         <table class='leftSideTable' style='padding-top: 10px;'>
           <tr>
             <td style='padding-top: 10px;'>
-              <input style='line-height: 20px !important; width:100px;' id="inputsm" type="text">
+              <input class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
         </table>
