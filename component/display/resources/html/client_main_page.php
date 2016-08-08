@@ -151,9 +151,10 @@ html, body {
             </td>
           </tr>
         </table>
-        <table>
+
+        <table class='leftSideTable' style='padding-top: 10px;'>
           <tr>
-            <td style='margin-top: 10px;'>
+            <td style='padding-top: 10px;'>
               <input style='line-height: 20px !important;' class="form-control" id="inputsm" type="text">
             </td>
           </tr>
