@@ -130,7 +130,7 @@ html, body {
   margin-left: 5px;
   margin-right: 5px;
   line-height: 20px !important;
-  width:190px;
+  width:170px;
 }
 
 </style>
