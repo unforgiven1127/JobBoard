@@ -184,9 +184,9 @@ li{
             </td>
           </tr>
         </table>
-        <table style='padding-top: 10px;' class='leftSideTable'>
+        <table  class='leftSideTable'>
           <tr>
-            <td style=''>
+            <td style='padding-top: 10px;'>
               <input placeholder="ID" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
