@@ -55,7 +55,7 @@ html, body {
 }
 .box {
     margin: 0 auto;
-    margin-top:30px;
+    margin-top:20px;
 }
 
 

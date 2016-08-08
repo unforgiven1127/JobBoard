@@ -45,7 +45,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Firsname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Lastname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
-            <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
+            <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
 
           <?php for($i=0;$i<6;$i++){ ?>
