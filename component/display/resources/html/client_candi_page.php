@@ -31,12 +31,12 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th style='width:50px;'><center><img src="/common/pictures/list_action.png" /></center></th>
-            <th>ID</th>
-            <th>Grade</th>
-            <th>Firsname</th>
-            <th>Lastname</th>
-            <th>Position</th>
+            <th style='width:40px;'><center><img src="/common/pictures/list_action.png" /></center></th>
+            <th style='margin-left: 5px;'>ID</th>
+            <th style='margin-left: 5px;'>Grade</th>
+            <th style='margin-left: 5px;'>Firsname</th>
+            <th style='margin-left: 5px;'>Lastname</th>
+            <th style='margin-left: 5px;'>Position</th>
           </tr>
         </table>
       </td>
