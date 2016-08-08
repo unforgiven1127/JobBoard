@@ -246,7 +246,7 @@ li{
           <?php for($i=0;$i<22;$i++){ ?>
             <tr style='width:100%;'>
               <td style='width:180px; border-bottom:1px solid #DADADA;'>
-                <a style='margin-bottom: 5px; font-size: 12px;' href="#" >My test folder (8)</a>
+                <a style='margin-bottom: 10px;padding-bottom: 10px; font-size: 12px;' href="#" >My test folder (8)</a>
               </td>
             </tr>
           <?php } ?>
