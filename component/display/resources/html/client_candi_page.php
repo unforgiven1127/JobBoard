@@ -31,19 +31,19 @@
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
-            <th>
+            <th style='width:40px !important;'>
               <center><img src="/common/pictures/list_action.png" /></center>
             </th>
             <th style='padding-left: 5px; font-size: 15px;'>ID</th>
             <th style='padding-left: 5px; font-size: 15px;'>Grade</th>
-            <th style='padding-left: 5px; font-size: 15px; width:150px !important;'>Firsname</th>
+            <th style='padding-left: 5px; font-size: 15px;'>Firsname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Lastname</th>
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
           <tr>
-            <td style='padding-left: 5px; font-size: 13px;'>
-              <input type="checkbox" name="vehicle" value="Bike">
+            <td style='padding-left: 5px; font-size: 13px; width:40px !important;'>
+              <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
             </td>
             <td style='padding-left: 5px; font-size: 13px;'>123456</td>
             <td style='padding-left: 5px; font-size: 13px;'>
