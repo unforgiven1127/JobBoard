@@ -51,18 +51,18 @@
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
             </td>
-            <td style='padding-left: 5px; font-size: 13px;'>123456</td>
-            <td style='padding-left: 5px; font-size: 13px;'>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>123456</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star_grey.png" />
             </td>
-            <td style='padding-left: 5px; font-size: 13px;'>Anameric</td>
-            <td style='padding-left: 5px; font-size: 13px;'>Munir</td>
-            <td style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
-            <td style='padding-left: 5px; font-size: 13px;'>XYZ</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Anameric</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Munir</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>XYZ</td>
           </tr>
         </table>
       </td>
