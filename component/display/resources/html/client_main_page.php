@@ -170,6 +170,11 @@ li{
   width:100%;
 }
 
+.stayFixed
+{
+  display: block;
+}
+
 </style>
 
   </head>
@@ -227,7 +232,7 @@ li{
 
         <table class="workSpace">
         <tr style='width:100%;'>
-          <th style='width:100%; font-size: 18px;'>My Workspace</th>
+          <th class='stayFixed' style='width:100%; font-size: 18px;'>My Workspace</th>
         </tr>
         <?php for($i=0;$i<22;$i++){ ?>
           <tr style='width:100%;'>
