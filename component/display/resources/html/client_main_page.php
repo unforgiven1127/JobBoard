@@ -26,7 +26,7 @@
     display: block;
     color: #000;
     padding: 8px 16px;
-    text-decoration: none;
+    /*text-decoration: none;*/
     font-size: 15px;
     /*font-family: 'Merriweather', serif;*/
 }
