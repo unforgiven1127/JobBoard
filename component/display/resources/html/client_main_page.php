@@ -64,7 +64,6 @@ html, body {
 }*/
 
 .hero:hover
-.hero-last:hover
 {
   background-color: yellow !important;
 }
