@@ -228,6 +228,26 @@ li{
             </td>
           </tr>
           <tr>
+            <td>
+              <select style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;" class="form-control" name="industry" id="industry">
+                <option value='' >
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                </option>
+                <option value='' >
+                  <img src="/common/pictures/star.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                  <img src="/common/pictures/star_grey.png" />
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
             <td style='text-align: right;'>
               <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/>
               <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="Search"/>
