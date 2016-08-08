@@ -230,8 +230,10 @@ li{
           <th style='width:100%; font-size: 18px;'>My Workspace</th>
         </tr>
         <?php for($i=0;$i<22;$i++){ ?>
-          <tr>
-            <td style='border-bottom:1px solid #DADADA;'><a style='margin-bottom: 5px;' href="#" >My test folder (8)</a></td>
+          <tr style='width:100%;'>
+            <td style='width:100%; border-bottom:1px solid #DADADA;'>
+              <a style='margin-bottom: 5px;' href="#" >My test folder (8)</a>
+            </td>
           </tr>
         <?php } ?>
         </table>
