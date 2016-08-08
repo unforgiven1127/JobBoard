@@ -63,6 +63,10 @@ html, body {
     background-color:#eee;
 }*/
 
+#footerDiv{
+  position: absolute;
+}
+
 .hero:hover
 {
   background-color: #EEEEEE !important;
