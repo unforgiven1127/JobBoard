@@ -189,7 +189,7 @@ li{
           </tr>
           <tr>
             <td style=''>
-              <input placeholder="lastname, firstname" class='searchInput' id="inputsm" type="text">
+              <input placeholder="Lastname, firstname" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
           <tr>
@@ -200,6 +200,11 @@ li{
           <tr>
             <td style=''>
               <input placeholder="Keyword" class='searchInput' id="inputsm" type="text">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img style=" width: 50px;" src="/common/pictures/userSearch.png" />
             </td>
           </tr>
         </table>
