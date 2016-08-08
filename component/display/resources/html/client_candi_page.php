@@ -17,7 +17,6 @@
 
 .innerTable{
   border:1px solid #DADADA;
-  width:100%;
 }
 
 .innerTD
@@ -25,19 +24,6 @@
   padding-bottom: 5px;
   padding-top: 5px;
   cursor:pointer;
-}
-
-.candiListTable {
-  display: block;
-  height: 170px;
-  overflow-y: scroll;
-  width:100%;
-}
-
-.stayFixedClient
-{
-  display: block;
-  width:100%;
 }
 
 </style>
@@ -51,8 +37,7 @@
     <tr>
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
-        <thead class='stayFixedClient'>
-          <tr style='background-color: #EEEEEE; width:100%;'>
+          <tr style='background-color: #EEEEEE;'>
             <th style='width:40px !important;'>
               <center><img src="/common/pictures/list_action.png" /></center>
             </th>
@@ -63,10 +48,9 @@
             <th style='padding-left: 5px; font-size: 15px;'>Position</th>
             <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
-          </thead>
 
-          <tbody class='stayFixedClient candiListTable'>
-          <?php for($i=0;$i<22;$i++){ ?>
+          <?php for($i=0;$i<12;$i++){ ?>
+
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
@@ -86,7 +70,7 @@
           </tr>
 
           <?php } ?>
-          </tbody>
+
         </table>
       </td>
     </tr>
