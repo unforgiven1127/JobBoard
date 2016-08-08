@@ -184,9 +184,12 @@ li{
             </td>
           </tr>
         </table>
+        <table>
+          <tr><td style='padding-top: 10px;'></td></tr>
+        </table>
         <table  class='leftSideTable'>
           <tr>
-            <td style='padding-top: 10px;'>
+            <td>
               <input placeholder="ID" class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
