@@ -15,6 +15,9 @@
 </script>
 <style>
 
+.innerTable{
+  border:1px solid #DADADA;
+}
 
 </style>
 
@@ -26,7 +29,7 @@
   <table >
     <tr>
       <td valign="top" style='width: 750px;' >
-        <table style='width: 750px;' >
+        <table class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
             <th><img src="/common/pictures/list_action.png" /></th>
             <th>ID</th>
