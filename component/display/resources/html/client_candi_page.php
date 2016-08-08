@@ -36,8 +36,8 @@
   <table >
     <tr>
       <td valign="top" style='width: 750px;' >
-        <table border="1" class='' style='width: 750px;' >
-        <thead class='stayFixed'>
+        <table border="1" class='innerTable' style='width: 750px;' >
+        <thead class='stayFixedClient'>
           <tr style='background-color: #EEEEEE;'>
             <th style='width:40px !important;'>
               <center><img src="/common/pictures/list_action.png" /></center>
@@ -51,7 +51,7 @@
           </tr>
           </thead>
 
-          <tbody class='stayFixed innerTable'>
+          <tbody class='stayFixedClient candiListTable'>
           <?php for($i=0;$i<12;$i++){ ?>
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
