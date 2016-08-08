@@ -245,7 +245,7 @@ li{
             </td>
           </tr>
           <tr>
-            <td style='padding-top: 10px;' valign="top">
+            <td colspan="5" style='padding-top: 10px;' valign="top">
               <?php echo $innerPage; ?>
             </td>
           </tr>
