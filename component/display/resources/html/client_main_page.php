@@ -87,6 +87,7 @@ html, body {
     border-right:1px solid #DADADA;
     border-collapse: collapse;
     cursor:pointer;
+    margin-left: -4px;
 }
 .hero-last {
     position:relative;
@@ -98,7 +99,7 @@ html, body {
     border-right:1px solid #DADADA;
     border-collapse: collapse;
     cursor:pointer;
-    margin-left: -3px;
+    margin-left: -4px;
 }
 .hero:after {
     z-index: 1;
