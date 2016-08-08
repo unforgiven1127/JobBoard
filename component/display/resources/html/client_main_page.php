@@ -81,11 +81,10 @@ html, body {
     position:relative;
     /*background-color:white;*/
     height:113px !important;
-    width:152px !important;
+    width:153px !important;
     border-top:1px solid #DADADA;
     border-bottom:1px solid #DADADA;
     border-right:1px solid #DADADA;
-    border-left:1px solid #DADADA;
     border-collapse: collapse;
     cursor:pointer;
 }
