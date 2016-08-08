@@ -208,8 +208,8 @@ li{
           </tr>
           <tr>
             <td style='text-align: right;'>
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/>
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="Search"/>
+              <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/>
+              <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="Search"/>
             </td>
           </tr>
         </table>
