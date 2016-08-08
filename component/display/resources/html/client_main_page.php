@@ -204,8 +204,8 @@ li{
           </tr>
           <tr>
             <td style='text-align: right;'>
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" />
-              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" />
+              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="this will be displayed as a tooltip"/>
+              <img style="cursor:pointer;height:30px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="this will be displayed as a tooltip"/>
             </td>
           </tr>
         </table>
