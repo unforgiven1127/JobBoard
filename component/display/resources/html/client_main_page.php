@@ -143,19 +143,19 @@ html, body {
 ::-webkit-input-placeholder
 {
  padding-left:3px;
- font-size: 11pt;
+ font-size: 10pt;
 }
 :-moz-placeholder { /* older Firefox*/
  padding-left:3px;
- font-size: 11pt;
+ font-size: 10pt;
 }
 ::-moz-placeholder { /* Firefox 19+ */
  padding-left:3px;
- font-size: 11pt;
+ font-size: 10pt;
 }
 :-ms-input-placeholder {
  padding-left:3px;
- font-size: 11pt;
+ font-size: 10pt;
 }
 li{
   list-style-type: disc;
@@ -205,7 +205,7 @@ li{
 
         <table><tr><td style='padding-top: 10px;'></td></tr></table>
 
-        <table  class='leftSideTable'>
+        <table class='leftSideTable'>
           <tr>
             <td>
               <input placeholder="ID" class='searchInput' id="inputsm" type="text">
