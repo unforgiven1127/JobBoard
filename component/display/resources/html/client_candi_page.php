@@ -40,7 +40,9 @@
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
           <tr>
-            <td style='padding-left: 5px; font-size: 13px; width:40px;'><input type="checkbox" name="vehicle" value="Bike"></td>
+            <td style='padding-left: 5px; font-size: 13px; width:40px !important;'>
+              <input type="checkbox" name="vehicle" value="Bike">
+            </td>
             <td style='padding-left: 5px; font-size: 13px;'>123456</td>
             <td style='padding-left: 5px; font-size: 13px;'>
               <img src="/common/pictures/star.png" />
