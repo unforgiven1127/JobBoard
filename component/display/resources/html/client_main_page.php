@@ -129,8 +129,8 @@ html, body {
 .searchInput{
   margin-left: 5px;
   margin-right: 5px;
-  line-height: 20px !important;
-  width:170px;
+  height: 20px !important;
+  width:190px !important;
 }
 
 </style>
