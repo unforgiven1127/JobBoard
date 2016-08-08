@@ -108,7 +108,7 @@
 .topMenu
 {
   margin-top: -5px;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
 }
 .topMenuBottom
@@ -150,16 +150,28 @@
               </div>
             </td>
             <td valign="top">
-              <div class="hero"></div>
+              <div class="hero">
+                <p class="topMenuBottom">15</p>
+                <p class="topMenu" >Unseen</p>
+              </div>
             </td>
             <td valign="top">
-              <div class="hero"></div>
+              <div class="hero">
+                <p class="topMenuBottom">6</p>
+                <p class="topMenu" >Meeting scheduled</p>
+              </div>
             </td>
             <td valign="top">
-              <div class="hero"></div>
+              <div class="hero">
+                <p class="topMenuBottom">3</p>
+                <p class="topMenu" >Offer</p>
+              </div>
             </td>
             <td valign="top">
-              <div class="hero-last"></div>
+              <div class="hero-last">
+                <p class="topMenuBottom">1</p>
+                <p class="topMenu" >PLaced</p>
+              </div>
             </td>
           </tr>
           <tr>
