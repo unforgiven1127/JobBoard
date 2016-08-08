@@ -63,6 +63,12 @@ html, body {
     background-color:#eee;
 }*/
 
+.hero:hover
+.hero-last:hover
+{
+  background-color: yellow;
+}
+
 .hero {
     position:relative;
     background-color:white;
