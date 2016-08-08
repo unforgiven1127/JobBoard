@@ -19,6 +19,12 @@
   border:1px solid #DADADA;
 }
 
+.innerTD
+{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 </style>
 
   </head>
@@ -42,7 +48,7 @@
             <th style='padding-left: 5px; font-size: 15px;'>Last state</th>
           </tr>
           <tr>
-            <td style=' font-size: 13px; width:40px !important; padding-bottom: 5px;padding-top: 5px;'>
+            <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
             </td>
             <td style='padding-left: 5px; font-size: 13px;'>123456</td>
