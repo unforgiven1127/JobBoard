@@ -204,7 +204,8 @@ li{
           </tr>
           <tr>
             <td>
-              <img style=" width: 50px;" src="/common/pictures/userSearch.png" />
+              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/userSearch.png" />
+              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/eraser.png" />
             </td>
           </tr>
         </table>
