@@ -24,7 +24,11 @@
   padding-bottom: 5px;
   padding-top: 5px;
   cursor:pointer;
+  height: 170px;
+  overflow-y: scroll;
+  display: block;
 }
+
 
 </style>
 
