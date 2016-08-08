@@ -204,8 +204,8 @@ li{
           </tr>
           <tr>
             <td style='text-align: right;'>
-              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/eraser.png" />
-              <img style=" width: 30px; margin-bottom: 5px" src="/common/pictures/search.png" />
+              <img style=" width: 30px; margin-bottom: 5px; margin-right: 5px;" src="/common/pictures/eraser.png" />
+              <img style=" width: 30px; margin-bottom: 5px; margin-right: 5px;" src="/common/pictures/search.png" />
             </td>
           </tr>
         </table>
