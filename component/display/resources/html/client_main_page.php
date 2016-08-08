@@ -49,7 +49,7 @@
     border-collapse: collapse;
     border: 1px solid #DADADA;
 }
-
+  body {text-align:center;}
 .box {
     width:1000px;
     /*height:300px;*/
