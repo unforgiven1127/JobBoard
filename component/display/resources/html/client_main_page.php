@@ -184,7 +184,6 @@ li{
             </td>
           </tr>
         </table>
-        <br>
         <table class='leftSideTable'>
           <tr>
             <td style=''>
