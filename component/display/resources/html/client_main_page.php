@@ -244,22 +244,22 @@ li{
           <tr>
             <td>
               <select name="webmenu" id="webmenu">
-                <option value="calendar" data-image="/common/lib/selectImage/msdropdown/icons/icon_calendar.gif">
+                <option value="calendar" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   Calendar
                 </option>
-                <option value="shopping_cart" data-image="/common/lib/selectImage/msdropdown/icons/icon_cart.gif">
+                <option value="shopping_cart" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   Shopping Cart
                 </option>
-                <option value="cd" data-image="/common/lib/selectImage/msdropdown/icons/icon_cd.gif">
+                <option value="cd" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   CD
                 </option>
-                <option value="email"  selected="selected" title="/common/lib/selectImage/msdropdown/icons/icon_email.gif">
+                <option value="email"  selected="selected" title="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   Email
                 </option>
-                <option value="faq" data-image="/common/lib/selectImage/msdropdown/icons/icon_faq.gif">
+                <option value="faq" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   FAQ
                 </option>
-                <option value="games" data-image="/common/lib/selectImage/msdropdown/icons/icon_games.gif">
+                <option value="games" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   Games
                 </option>
               </select>
