@@ -183,6 +183,13 @@ li{
 
 </style>
 
+<script>
+$(document).ready(function(e) {
+  $("#payments").msDropdown({visibleRows:4});
+  $("#tech").msDropdown();
+});
+</script>
+
   </head>
 
 
