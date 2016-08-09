@@ -195,7 +195,7 @@ li{
     <script language="javascript">
     $(document).ready(function(e) {
     try {
-    $("body select").msDropDown();
+    $("#webmenu").msDropDown();
     } catch(e) {
     alert(e.message);
     }
