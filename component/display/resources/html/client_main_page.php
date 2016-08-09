@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/common/lib/selectImage/examples/css/sample.css">
   <script src="/common/lib/selectImage/js/jquery/jquery-1.9.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css">
-  <script src="/common/lib/selectImage/js/js/msdropdown/jquery.dd.min.js"></script>
+  <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js"></script>
 
 <script type="text/javascript">
 
