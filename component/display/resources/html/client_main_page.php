@@ -9,11 +9,6 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
 
-  <!--<link rel="stylesheet" href="/common/lib/selectImage/examples/css/sample.css">-->
-  <!--<script src="/common/lib/selectImage/js/jquery/jquery-1.9.0.min.js"></script>-->
-  <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css">
-  <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js"></script>
-
 <script type="text/javascript">
 
 
@@ -188,13 +183,6 @@ li{
 
 </style>
 
-<script>
-$(document).ready(function(e) {
-  $("#payments").msDropdown({visibleRows:4});
-  $("#tech").msDropdown();
-});
-</script>
-
   </head>
 
 
@@ -241,7 +229,15 @@ $(document).ready(function(e) {
           </tr>
           <tr>
             <td>
-              
+              <select class='searchInput' style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt;" name="industry" id="industry">
+
+                <option value="volvo">*</option>
+                <option value="volvo">**</option>
+                <option value="volvo">***</option>
+                <option value="volvo">****</option>
+                <option value="volvo">*****</option>
+
+              </select>
             </td>
           </tr>
           <tr>
@@ -270,216 +266,6 @@ $(document).ready(function(e) {
           <?php } ?>
         </tbody>
         </table>
-        <table width="100%" border="0" cellspacing="1" cellpadding="5" class="tblWhite">
-  <tbody>
-    <tr>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td valign="top">Created from HTML SELECT Element</td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <div class="ddOutOfVision" id="payments_msddHolder" style="height: 0px; overflow: hidden; position: absolute;">
-          <select id="payments" name="payments" style="width:250px;" tabindex="-1">
-            <option value="" data-description="Choos your payment gateway">Payment Gateway</option>
-            <option value="amex" data-image="/common/lib/selectImage/images/msdropdown/icons/Amex-56.png" data-description="My life. My card...">Amex</option>
-            <option value="Discover" data-image="/common/lib/selectImage/images/msdropdown/icons/Discover-56.png" data-description="It pays to Discover...">Discover</option>
-            <option value="Mastercard" data-image="/common/lib/selectImage/images/msdropdown/icons/Mastercard-56.png" data-title="For everything else..." data-description="For everything else...">Mastercard</option>
-            <option value="cash" data-image="/common/lib/selectImage/images/msdropdown/icons/Cash-56.png" data-description="Sorry not available..." disabled="true">Cash on devlivery</option>
-            <option value="Visa" data-image="/common/lib/selectImage/images/msdropdown/icons/Visa-56.png" data-description="All you need...">Visa</option>
-            <option value="Paypal" data-image="/common/lib/selectImage/images/msdropdown/icons/Paypal-56.png" data-description="Pay and get paid...">Paypal</option>
-          </select>
-        </div>
-        <div class="dd ddcommon borderRadius" id="payments_msdd" tabindex="0" style="width: 250px;">
-          <div class="ddTitle borderRadiusTp">
-            <span class="divider"></span>
-            <span class="ddArrow arrowoff"></span>
-            <span class="ddTitleText " id="payments_title">
-              <img src="/common/lib/selectImage/images/msdropdown/icons/Amex-56.png">
-                <span class="ddlabel">Amex</span>
-                <span class="description">My life. My card...</span>
-              </span>
-            </div>
-            <input id="payments_titleText" type="text" autocomplete="off" class="text shadow borderRadius" style="display: none;">
-              <div class="ddChild ddchild_ border shadow" id="payments_child" style="z-index: 1; position: absolute; visibility: visible; height: 171px; top: 45px; display: none;">
-                <ul>
-                  <li class="enabled _msddli_">
-                    <span class="ddlabel">Payment Gateway</span>
-                    <span class="description">Choos your payment gateway</span>
-                    <div class="clear"></div>
-                  </li>
-                  <li class="enabled _msddli_ selected">
-                    <img src="/common/lib/selectImage/images/msdropdown/icons/Amex-56.png">
-                      <span class="ddlabel">Amex</span>
-                      <span class="description">My life. My card...</span>
-                      <div class="clear"></div>
-                    </li>
-                    <li class="enabled _msddli_">
-                      <img src="/common/lib/selectImage/images/msdropdown/icons/Discover-56.png">
-                        <span class="ddlabel">Discover</span>
-                        <span class="description">It pays to Discover...</span>
-                        <div class="clear"></div>
-                      </li>
-                      <li class="enabled _msddli_" title="For everything else...">
-                        <img src="/common/lib/selectImage/images/msdropdown/icons/Mastercard-56.png">
-                          <span class="ddlabel">Mastercard</span>
-                          <span class="description">For everything else...</span>
-                          <div class="clear"></div>
-                        </li>
-                        <li class="disabled _msddli_">
-                          <img src="/common/lib/selectImage/images/msdropdown/icons/Cash-56.png">
-                            <span class="ddlabel">Cash on devlivery</span>
-                            <span class="description">Sorry not available...</span>
-                            <div class="clear"></div>
-                          </li>
-                          <li class="enabled _msddli_">
-                            <img src="/common/lib/selectImage/images/msdropdown/icons/Visa-56.png">
-                              <span class="ddlabel">Visa</span>
-                              <span class="description">All you need...</span>
-                              <div class="clear"></div>
-                            </li>
-                            <li class="enabled _msddli_">
-                              <img src="/common/lib/selectImage/images/msdropdown/icons/Paypal-56.png">
-                                <span class="ddlabel">Paypal</span>
-                                <span class="description">Pay and get paid...</span>
-                                <div class="clear"></div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div> &nbsp;
-    
-                        <div class="ddOutOfVision" id="tech_msddHolder" style="height: 0px; overflow: hidden; position: absolute;">
-                          <select name="tech" class="tech" id="tech" style="width:200px" tabindex="-1">
-                            <option value="calendar" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_calendar.gif">Calendar</option>
-                            <option value="shopping_cart" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_cart.gif">Shopping Cart</option>
-                            <option value="cd" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" name="cd">CD</option>
-                            <option value="email" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_email.gif">Email</option>
-                            <option value="faq" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_faq.gif">FAQ</option>
-                            <option value="games" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_games.gif">Games</option>
-                            <option value="music" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_music.gif">Music</option>
-                            <option value="phone" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_phone.gif">Phone</option>
-                            <option value="graph" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_sales.gif">Graph</option>
-                            <option value="secured" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_secure.gif">Secured</option>
-                            <option value="video" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_video.gif">Video</option>
-                            <option value="cd" data-image="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" name="cd">CD</option>
-                          </select>
-                        </div>
-                        <div class="dd ddcommon borderRadiusTp" id="tech_msdd" tabindex="0" style="width: 200px;">
-                          <div class="ddTitle borderRadiusTp">
-                            <span class="divider"></span>
-                            <span class="ddArrow arrowoff"></span>
-                            <span class="ddTitleText " id="tech_title">
-                              <img src="/common/lib/selectImage/images/msdropdown/icons/icon_calendar.gif" class="fnone">
-                                <span class="ddlabel">Calendar</span>
-                                <span class="description" style="display: none;"></span>
-                              </span>
-                            </div>
-                            <input id="tech_titleText" type="text" autocomplete="off" class="text shadow borderRadius" style="display: none;">
-                              <div class="ddChild ddchild_ border shadow" id="tech_child" style="z-index: 9999; position: absolute; visibility: visible; height: 185px; top: 27px; display: block;">
-                                <ul>
-                                  <li class="enabled _msddli_ selected">
-                                    <img src="/common/lib/selectImage/images/msdropdown/icons/icon_calendar.gif" class="fnone">
-                                      <span class="ddlabel">Calendar</span>
-                                      <div class="clear"></div>
-                                    </li>
-                                    <li class="enabled _msddli_">
-                                      <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cart.gif" class="fnone">
-                                        <span class="ddlabel">Shopping Cart</span>
-                                        <div class="clear"></div>
-                                      </li>
-                                      <li class="enabled _msddli_">
-                                        <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" class="fnone">
-                                          <span class="ddlabel">CD</span>
-                                          <div class="clear"></div>
-                                        </li>
-                                        <li class="enabled _msddli_">
-                                          <img src="/common/lib/selectImage/images/msdropdown/icons/icon_email.gif" class="fnone">
-                                            <span class="ddlabel">Email</span>
-                                            <div class="clear"></div>
-                                          </li>
-                                          <li class="enabled _msddli_">
-                                            <img src="/common/lib/selectImage/images/msdropdown/icons/icon_faq.gif" class="fnone">
-                                              <span class="ddlabel">FAQ</span>
-                                              <div class="clear"></div>
-                                            </li>
-                                            <li class="enabled _msddli_">
-                                              <img src="/common/lib/selectImage/images/msdropdown/icons/icon_games.gif" class="fnone">
-                                                <span class="ddlabel">Games</span>
-                                                <div class="clear"></div>
-                                              </li>
-                                              <li class="enabled _msddli_">
-                                                <img src="/common/lib/selectImage/images/msdropdown/icons/icon_music.gif" class="fnone">
-                                                  <span class="ddlabel">Music</span>
-                                                  <div class="clear"></div>
-                                                </li>
-                                                <li class="enabled _msddli_">
-                                                  <img src="/common/lib/selectImage/images/msdropdown/icons/icon_phone.gif" class="fnone">
-                                                    <span class="ddlabel">Phone</span>
-                                                    <div class="clear"></div>
-                                                  </li>
-                                                  <li class="enabled _msddli_">
-                                                    <img src="/common/lib/selectImage/images/msdropdown/icons/icon_sales.gif" class="fnone">
-                                                      <span class="ddlabel">Graph</span>
-                                                      <div class="clear"></div>
-                                                    </li>
-                                                    <li class="enabled _msddli_">
-                                                      <img src="/common/lib/selectImage/images/msdropdown/icons/icon_secure.gif" class="fnone">
-                                                        <span class="ddlabel">Secured</span>
-                                                        <div class="clear"></div>
-                                                      </li>
-                                                      <li class="enabled _msddli_">
-                                                        <img src="/common/lib/selectImage/images/msdropdown/icons/icon_video.gif" class="fnone">
-                                                          <span class="ddlabel">Video</span>
-                                                          <div class="clear"></div>
-                                                        </li>
-                                                        <li class="enabled _msddli_">
-                                                          <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" class="fnone">
-                                                            <span class="ddlabel">CD</span>
-                                                            <div class="clear"></div>
-                                                          </li>
-                                                        </ul>
-                                                      </div>
-                                                    </div>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td valign="bottom">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                  <td valign="bottom">
-                                                    <input type="submit" value="Submit">
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td valign="bottom">&nbsp;</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td valign="bottom">
-                                                      <strong>Source Code:</strong>
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td valign="top">
-                                                      <code>
-                                                        <pre><script>
-$(document).ready(function(e) {
-  $("#payments").msDropdown({visibleRows:4});
-  $("#tech").msDropdown();
-});
-</script>    
-</pre>
-                                                      </code>
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td valign="top">&nbsp;</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td valign="top">&nbsp;</td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
 
       </td>
       <td valign="top" style='padding-left: 20px;'>
