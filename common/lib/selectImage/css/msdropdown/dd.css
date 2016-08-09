@@ -18,14 +18,14 @@ filter:alpha(opacity=50); /* ie lt 7 */
 }
 .ddcommon .clear{clear:both}
 .ddcommon .shadow{-moz-box-shadow:5px 5px 5px -5px #888888;-webkit-box-shadow:5px 5px 5px -5px #888888;box-shadow: 5px 5px 5px -5px #888888;}
-.ddcommon input.text{color:#7e7e7e;padding:0 0 0 0; position:absolute; background:#fff; display:block; width:98%; height:98%; left:2px; top:0; border:none;}
+.ddcommon input.text{color:#7e7e7e;padding:0 0 0 0; position:absolute; background:#fff; display:block; width:98%; height:20px; left:2px; top:0; border:none;}
 .ddOutOfVision{position:relative; display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline;}
 .borderRadius .shadow{-moz-box-shadow:5px 5px 5px -5px #888888;-webkit-box-shadow:5px 5px 5px -5px #888888;box-shadow: 5px 5px 5px -5px #888888;}
 .borderRadiusBtm .shadow{-moz-box-shadow:-5px -5px 5px -5px #888888;-webkit-box-shadow:-5px -5px 5px -5px #888888;box-shadow: -5px -5px 5px -5px #888888}
 .borderRadiusTp .border, .borderRadius .border{-moz-border-radius:0 0 5px 5px ; border-radius:0 0 5px 5px;}
 .borderRadiusBtm .border{-moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
 img.fnone{float:none !important}
-.ddcommon .divider{width:0; height:100%; position:absolute;}
+.ddcommon .divider{width:0; height:20px; position:absolute;}
 .ddcommon .ddArrow{display:inline-block; position:absolute; top:50%; right:4px;}
 .ddcommon .ddArrow:hover{background-position:0 100%;}
 .ddcommon .ddTitle{padding:0; position:relative; display:inline-block; width:100%}
