@@ -243,7 +243,7 @@ li{
           </tr>
           <tr>
             <td>
-              <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 190px !important;' name="webmenu" id="webmenu">
+              <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 190px !important; border:1px solid grey;' name="webmenu" id="webmenu">
                 <option value="calendar" selected="selected" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
                 <option value="shopping_cart" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
                 <option value="cd" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
