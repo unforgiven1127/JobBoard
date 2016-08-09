@@ -243,7 +243,7 @@ li{
           </tr>
           <tr>
             <td>
-              <select class='searchInput' name="webmenu" id="webmenu">
+              <select style='margin-left: 5px !important;' class='searchInput' name="webmenu" id="webmenu">
                 <option value="calendar" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
                   Calendar
                 </option>
