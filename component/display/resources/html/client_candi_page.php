@@ -68,7 +68,7 @@
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
-              <img src="/common/pictures/star.png" />
+              <img src="/common/pictures/star_grey.png" />
               <img src="/common/pictures/star_grey.png" />
             </td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Anameric</td>
