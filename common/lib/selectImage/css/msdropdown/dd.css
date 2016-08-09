@@ -56,7 +56,7 @@ img.fnone{float:none !important}
 .dd .ddChild{border:1px solid #c3c3c3; background-color:#fff; left:-1px;}
 .dd .ddChild li{padding:5px; background-color:#fff; border-bottom:1px solid #c3c3c3;}
 .dd .ddChild li .description{color:#666;}
-.dd .ddChild li .ddlabel{color:#333; padding-top:3;}
+.dd .ddChild li .ddlabel{color:#333; margin-top:5;}
 .dd .ddChild li.hover{background-color:#f2f2f2}
 .dd .ddChild li img{padding:0 6px 0 0;}
 .dd .ddChild li.optgroup{padding:0;}
