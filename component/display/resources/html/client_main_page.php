@@ -246,7 +246,7 @@ $(document).ready(function(e) {
                   <span class="divider"></span>
                   <span class="ddArrow arrowoff"></span>
                   <span class="ddTitleText " id="tech_title">
-                    <img src="../images/msdropdown/icons/icon_calendar.gif" class="fnone">
+                    <img src="/common/lib/selectImage/images/msdropdown/icons/icon_calendar.gif" class="fnone">
                       <span class="ddlabel">Calendar</span>
                       <span class="description" style="display: none;"></span>
                     </span>
