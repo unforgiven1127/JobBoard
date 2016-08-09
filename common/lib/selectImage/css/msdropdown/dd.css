@@ -30,7 +30,7 @@ img.fnone{float:none !important}
 .ddcommon .ddArrow:hover{background-position:0 100%;}
 .ddcommon .ddTitle{padding:0; position:relative; display:inline-block; width:100%}
 .ddcommon .ddTitle .ddTitleText{display:block;}
-.ddcommon .ddTitle .ddTitleText .ddTitleText{padding:0;}
+.ddcommon .ddTitle .ddTitleText .ddTitleText{margin-top:-5px;}
 .ddcommon .ddTitle .description{display:block;}
 .ddcommon .ddTitle .ddTitleText img{position:relative; vertical-align:middle; float:left}
 .ddcommon .ddChild{position:absolute;display:none;width:100%;overflow-y:auto; overflow-x:hidden; zoom:1; z-index:9999}
