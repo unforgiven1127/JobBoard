@@ -136,8 +136,8 @@ html, body {
 }
 
 .searchInput{
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
   height: 20px !important;
   width:190px !important;
   margin-top: 10px !important;
