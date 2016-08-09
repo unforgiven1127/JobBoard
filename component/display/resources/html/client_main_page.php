@@ -37,7 +37,7 @@
 }
 
 .leftSide li a.active {
-    background-color: #892828;
+    background-color: #98321F;
     color: white;
 }
 
