@@ -241,7 +241,82 @@ $(document).ready(function(e) {
           </tr>
           <tr>
             <td>
-              <div class="dd ddcommon borderRadius" id="tech_msdd" tabindex="0" style="width: 200px;"><div class="ddTitle borderRadiusTp"><span class="divider"></span><span class="ddArrow arrowoff"></span><span class="ddTitleText " id="tech_title"><img src="../images/msdropdown/icons/icon_calendar.gif" class="fnone"><span class="ddlabel">Calendar</span><span class="description" style="display: none;"></span></span></div><input id="tech_titleText" type="text" autocomplete="off" class="text shadow borderRadius" style="display: none;"><div class="ddChild ddchild_ border shadow" id="tech_child" style="z-index: 1; position: absolute; visibility: visible; height: 185px; top: 27px; display: none;"><ul><li class="enabled _msddli_ selected"><img src="../images/msdropdown/icons/icon_calendar.gif" class="fnone"><span class="ddlabel">Calendar</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_cart.gif" class="fnone"><span class="ddlabel">Shopping Cart</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_cd.gif" class="fnone"><span class="ddlabel">CD</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_email.gif" class="fnone"><span class="ddlabel">Email</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_faq.gif" class="fnone"><span class="ddlabel">FAQ</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_games.gif" class="fnone"><span class="ddlabel">Games</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_music.gif" class="fnone"><span class="ddlabel">Music</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_phone.gif" class="fnone"><span class="ddlabel">Phone</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_sales.gif" class="fnone"><span class="ddlabel">Graph</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_secure.gif" class="fnone"><span class="ddlabel">Secured</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_video.gif" class="fnone"><span class="ddlabel">Video</span><div class="clear"></div></li><li class="enabled _msddli_"><img src="../images/msdropdown/icons/icon_cd.gif" class="fnone"><span class="ddlabel">CD</span><div class="clear"></div></li></ul></div></div>
+              <div class="dd ddcommon borderRadius" id="tech_msdd" tabindex="0" style="width: 200px;">
+                <div class="ddTitle borderRadiusTp">
+                  <span class="divider"></span>
+                  <span class="ddArrow arrowoff"></span>
+                  <span class="ddTitleText " id="tech_title">
+                    <img src="../images/msdropdown/icons/icon_calendar.gif" class="fnone">
+                      <span class="ddlabel">Calendar</span>
+                      <span class="description" style="display: none;"></span>
+                    </span>
+                  </div>
+                  <input id="tech_titleText" type="text" autocomplete="off" class="text shadow borderRadius" style="display: none;">
+                    <div class="ddChild ddchild_ border shadow" id="tech_child" style="z-index: 1; position: absolute; visibility: visible; height: 185px; top: 27px; display: none;">
+                      <ul>
+                        <li class="enabled _msddli_ selected">
+                          <img src="/common/lib/selectImage/images/msdropdown/icons/icon_calendar.gif" class="fnone">
+                            <span class="ddlabel">Calendar</span>
+                            <div class="clear"></div>
+                          </li>
+                          <li class="enabled _msddli_">
+                            <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cart.gif" class="fnone">
+                              <span class="ddlabel">Shopping Cart</span>
+                              <div class="clear"></div>
+                            </li>
+                            <li class="enabled _msddli_">
+                              <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" class="fnone">
+                                <span class="ddlabel">CD</span>
+                                <div class="clear"></div>
+                              </li>
+                              <li class="enabled _msddli_">
+                                <img src="/common/lib/selectImage/images/msdropdown/icons/icon_email.gif" class="fnone">
+                                  <span class="ddlabel">Email</span>
+                                  <div class="clear"></div>
+                                </li>
+                                <li class="enabled _msddli_">
+                                  <img src="/common/lib/selectImage/images/msdropdown/icons/icon_faq.gif" class="fnone">
+                                    <span class="ddlabel">FAQ</span>
+                                    <div class="clear"></div>
+                                  </li>
+                                  <li class="enabled _msddli_">
+                                    <img src="/common/lib/selectImage/images/msdropdown/icons/icon_games.gif" class="fnone">
+                                      <span class="ddlabel">Games</span>
+                                      <div class="clear"></div>
+                                    </li>
+                                    <li class="enabled _msddli_">
+                                      <img src="/common/lib/selectImage/images/msdropdown/icons/icon_music.gif" class="fnone">
+                                        <span class="ddlabel">Music</span>
+                                        <div class="clear"></div>
+                                      </li>
+                                      <li class="enabled _msddli_">
+                                        <img src="/common/lib/selectImage/images/msdropdown/icons/icon_phone.gif" class="fnone">
+                                          <span class="ddlabel">Phone</span>
+                                          <div class="clear"></div>
+                                        </li>
+                                        <li class="enabled _msddli_">
+                                          <img src="/common/lib/selectImage/images/msdropdown/icons/icon_sales.gif" class="fnone">
+                                            <span class="ddlabel">Graph</span>
+                                            <div class="clear"></div>
+                                          </li>
+                                          <li class="enabled _msddli_">
+                                            <img src="/common/lib/selectImage/images/msdropdown/icons/icon_secure.gif" class="fnone">
+                                              <span class="ddlabel">Secured</span>
+                                              <div class="clear"></div>
+                                            </li>
+                                            <li class="enabled _msddli_">
+                                              <img src="/common/lib/selectImage/images/msdropdown/icons/icon_video.gif" class="fnone">
+                                                <span class="ddlabel">Video</span>
+                                                <div class="clear"></div>
+                                              </li>
+                                              <li class="enabled _msddli_">
+                                                <img src="/common/lib/selectImage/images/msdropdown/icons/icon_cd.gif" class="fnone">
+                                                  <span class="ddlabel">CD</span>
+                                                  <div class="clear"></div>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
             </td>
           </tr>
           <tr>
