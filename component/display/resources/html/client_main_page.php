@@ -8,6 +8,10 @@
   <!--<link rel="stylesheet" type="text/css" href="common/lib/verticalSlider/css/style.css">-->
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
+  <script src="/common/lib/selectImage/js/msdropdown/jquery-1.3.2.min.js" type="text/javascript"></script>
+  <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css" />
+
 
 <script type="text/javascript">
 
@@ -188,6 +192,16 @@ li{
 
   <body>
 
+    <script language="javascript">
+    $(document).ready(function(e) {
+    try {
+    $("body select").msDropDown();
+    } catch(e) {
+    alert(e.message);
+    }
+    });
+    </script>
+
   <table class="box" align="center">
     <tr>
       <td valign="top">
@@ -229,14 +243,13 @@ li{
           </tr>
           <tr>
             <td>
-              <select class='searchInput' style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt;" name="industry" id="industry">
-
-                <option value="volvo">*</option>
-                <option value="volvo">**</option>
-                <option value="volvo">***</option>
-                <option value="volvo">****</option>
-                <option value="volvo">*****</option>
-
+              <select name="webmenu" id="webmenu">
+                <option value="calendar" data-image="/common/lib/selectImage/icons/icon_calendar.gif">Calendar</option>
+                <option value="shopping_cart" data-image="/common/lib/selectImage/icons/icon_cart.gif">Shopping Cart</option>
+                <option value="cd" data-image="/common/lib/selectImage/icons/icon_cd.gif">CD</option>
+                <option value="email"  selected="selected" title="/common/lib/selectImage/icons/icon_email.gif">Email</option>
+                <option value="faq" data-image="/common/lib/selectImage/icons/icon_faq.gif">FAQ</option>
+                <option value="games" data-image="/common/lib/selectImage/icons/icon_games.gif">Games</option>
               </select>
             </td>
           </tr>
