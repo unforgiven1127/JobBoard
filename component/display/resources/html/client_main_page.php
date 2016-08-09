@@ -244,24 +244,12 @@ li{
           <tr>
             <td>
               <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important;' class='searchInput' name="webmenu" id="webmenu">
-                <option value="calendar" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  Calendar
-                </option>
-                <option value="shopping_cart" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  Shopping Cart
-                </option>
-                <option value="cd" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  CD
-                </option>
-                <option value="email"  selected="selected" title="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  Email
-                </option>
-                <option value="faq" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  FAQ
-                </option>
-                <option value="games" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png">
-                  Games
-                </option>
+                <option value="calendar" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
+                <option value="shopping_cart" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
+                <option value="cd" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
+                <option value="email"  selected="selected" title="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
+                <option value="faq" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
+                <option value="games" data-image="https://jobs.slate.co.jp//component/jobboard_user/resources/pictures/star.png"></option>
               </select>
             </td>
           </tr>
