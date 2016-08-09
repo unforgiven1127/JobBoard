@@ -22,7 +22,7 @@
 
 .outherTable
 {
-  height: 460px;
+  height: 470px;
   overflow-y: scroll;
   display: block;
 }
