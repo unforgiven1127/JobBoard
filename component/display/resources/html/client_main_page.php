@@ -13,10 +13,7 @@
   <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css" />
 
 
-<script type="text/javascript">
 
-
-</script>
 <style>
 .leftSide ul {
     list-style-type: none;
@@ -186,6 +183,11 @@ li{
 }
 
 </style>
+
+<script type="text/javascript">
+
+
+</script>
 
   </head>
 
