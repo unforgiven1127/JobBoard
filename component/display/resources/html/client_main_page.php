@@ -246,12 +246,12 @@ alert(e.message);
           <tr>
             <td>
               <select name="webmenu" id="webmenu">
-                <option value="calendar" data-image="/common/lib/selectImage/images/icons/msdropdown/icon_calendar.gif">Calendar</option>
-                <option value="shopping_cart" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_cart.gif">Shopping Cart</option>
-                <option value="cd" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_cd.gif">CD</option>
-                <option value="email"  selected="selected" title="/common/lib/selectImage/images/icons/msdropdown/icons/icon_email.gif">Email</option>
-                <option value="faq" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_faq.gif">FAQ</option>
-                <option value="games" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_games.gif">Games</option>
+                <option value="calendar" data-image="/common/pictures/eraser.png">Calendar</option>
+                <option value="shopping_cart" data-image="/common/pictures/eraser.png">Shopping Cart</option>
+                <option value="cd" data-image="/common/pictures/eraser.png">CD</option>
+                <option value="email"  selected="selected" title="/common/pictures/eraser.png">Email</option>
+                <option value="faq" data-image="/common/pictures/eraser.png">FAQ</option>
+                <option value="games" data-image="/common/pictures/eraser.png">Games</option>
               </select>
             </td>
           </tr>
