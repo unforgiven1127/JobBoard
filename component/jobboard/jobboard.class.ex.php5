@@ -1849,6 +1849,11 @@ class CJobboardEx extends CJobboard
           {
             $suggestedCandidates[$key]['grade'] = '/common/pictures/5star.png';
           }
+
+          if($value['flag'] == 'u')
+          {
+            $suggestedCandidates[$key]['flag'] = 'Unseen';
+          }
         }
 
         ChromePhp::log($suggestedCandidates);
