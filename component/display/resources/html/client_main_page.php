@@ -195,12 +195,15 @@ li{
   <body>
 
    <script language="javascript">
-$(document).ready(function(e) {
-try {
-$("#webmenu").msDropDown();
-} catch(e) {
-alert(e.message);
-}
+$(document).ready(function(e)
+{
+  try
+  {
+    $("#webmenu").msDropDown();
+  } catch(e)
+  {
+    alert(e.message);
+  }
 });
 </script>
 
@@ -245,13 +248,13 @@ alert(e.message);
           </tr>
           <tr>
             <td>
-              <select name="webmenu" id="webmenu">
-                <option value="calendar" data-image="/common/pictures/eraser.png">Calendar</option>
-                <option value="shopping_cart" data-image="/common/pictures/eraser.png">Shopping Cart</option>
-                <option value="cd" data-image="/common/pictures/eraser.png">CD</option>
-                <option value="email"  selected="selected" title="/common/pictures/eraser.png">Email</option>
-                <option value="faq" data-image="/common/pictures/eraser.png">FAQ</option>
-                <option value="games" data-image="/common/pictures/eraser.png">Games</option>
+              <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 190px !important; border:1px solid #999999;' name="webmenu" id="webmenu">
+                <option value="0" selected="selected" data-image="/common/pictures/0star.png"></option>
+                <option value="1" data-image="/common/pictures/1star.png"></option>
+                <option value="2" data-image="/common/pictures/2star.png"></option>
+                <option value="3" data-image="/common/pictures/3star.png"></option>
+                <option value="4" data-image="/common/pictures/4star.png"></option>
+                <option value="5" data-image="/common/pictures/5star.png"></option>
               </select>
             </td>
           </tr>
