@@ -1822,6 +1822,35 @@ class CJobboardEx extends CJobboard
 
         ChromePhp::log($slistemQuery);
         $suggestedCandidates = $slistemDB->slistemGetAllData($slistemQuery);
+
+        foreach ($suggestedCandidates as $key => $value)
+        {
+          if($value['grade'] == 0)
+          {
+            $value['grade'] = '/common/pictures/0star.png';
+          }
+          else if($value['grade'] == 1)
+          {
+            $value['grade'] = '/common/pictures/1star.png';
+          }
+          else if($value['grade'] == 2)
+          {
+            $value['grade'] = '/common/pictures/2star.png';
+          }
+          else if($value['grade'] == 3)
+          {
+            $value['grade'] = '/common/pictures/3star.png';
+          }
+          else if($value['grade'] == 4)
+          {
+            $value['grade'] = '/common/pictures/4star.png';
+          }
+          else if($value['grade'] == 5)
+          {
+            $value['grade'] = '/common/pictures/5star.png';
+          }
+        }
+
         ChromePhp::log($suggestedCandidates);
         $data['suggestedCandidates'] = $suggestedCandidates;
 

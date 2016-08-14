@@ -65,11 +65,7 @@
             </td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['sl_candidatepk']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
-              <img src="/common/pictures/star.png" />
-              <img src="/common/pictures/star.png" />
-              <img src="/common/pictures/star.png" />
-              <img src="/common/pictures/star_grey.png" />
-              <img src="/common/pictures/star_grey.png" />
+              <img src='<?php echo $value['grade']; ?>' />
             </td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
