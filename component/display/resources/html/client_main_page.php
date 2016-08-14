@@ -8,10 +8,6 @@
   <!--<link rel="stylesheet" type="text/css" href="common/lib/verticalSlider/css/style.css">-->
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
-  <script src="/common/lib/selectImage/js/msdropdown/jquery-1.3.2.min.js" type="text/javascript"></script>
-  <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
-  <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css" />
-
 
 <script type="text/javascript">
 
@@ -41,7 +37,7 @@
 }
 
 .leftSide li a.active {
-    background-color: #98321F;
+    background-color: #892828;
     color: white;
 }
 
@@ -60,7 +56,7 @@ html, body {
 }
 .box {
     margin: 0 auto;
-    margin-top:15px;
+    margin-top:20px;
 }
 
 
@@ -136,8 +132,8 @@ html, body {
 }
 
 .searchInput{
-  margin-left: 5px !important;
-  margin-right: 5px !important;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 20px !important;
   width:190px !important;
   margin-top: 10px !important;
@@ -192,16 +188,6 @@ li{
 
   <body>
 
-    <script language="javascript">
-    $(document).ready(function(e) {
-    try {
-    $("#webmenu").msDropDown();
-    } catch(e) {
-    alert(e.message);
-    }
-    });
-    </script>
-
   <table class="box" align="center">
     <tr>
       <td valign="top">
@@ -243,14 +229,11 @@ li{
           </tr>
           <tr>
             <td>
-               <select name="webmenu" id="webmenu">
-    <option value="calendar" data-image="/common/lib/selectImage/msdropdown/icons/icon_calendar.gif">Calendar</option>
-    <option value="shopping_cart" data-image="icons/icon_cart.gif">Shopping Cart</option>
-    <option value="cd" data-image="icons/icon_cd.gif">CD</option>
-    <option value="email"  selected="selected" title="icons/icon_email.gif">Email</option>
-    <option value="faq" data-image="icons/icon_faq.gif">FAQ</option>
-    <option value="games" data-image="icons/icon_games.gif">Games</option>
-  </select>
+              <select class='searchInput' style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt;" name="industry" id="industry">
+
+                <option value="volvo" style="background-image:url('http://jobs.slate.co.jp/component/jobboard_user/resources/pictures/star.png');"></option>
+
+              </select>
             </td>
           </tr>
           <tr>
