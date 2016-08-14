@@ -57,13 +57,13 @@
             <th style='padding-left: 5px; font-size: 15px;'>Current status</th>
           </tr>
 
-          <?php for($i=0;$i<22;$i++){ ?>
-
+          <?php foreach ($suggestedCandidates as $key => $value)
+          { ?>
           <tr>
             <td class='innerTD' style=' font-size: 13px; width:40px !important;'>
               <input style='width:40px !important;' type="checkbox" name="vehicle" value="Bike">
             </td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>123456</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['sl_candidatepk']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
               <img src="/common/pictures/star.png" />
               <img src="/common/pictures/star.png" />
@@ -71,10 +71,10 @@
               <img src="/common/pictures/star_grey.png" />
               <img src="/common/pictures/star_grey.png" />
             </td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Anameric</td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Munir</td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Software Engineer</td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>Unseen</td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['title']; ?></td>
+            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['grade']; ?></td>
           </tr>
 
           <?php } ?>
