@@ -1808,6 +1808,19 @@ class CJobboardEx extends CJobboard
 
     if($username == 'munir' && $password == '123456')
     {
+      $slistemDB = CDependency::getComponentByName('database');
+      $slistemQuery = "SELECT slc.sl_candidatepk, slc.firstname, slc.lastname, sc.grade, sc.flag
+                       FROM suggested_candidates sc
+                       INNER JOIN sl_position_link spl on spl.sl_position_linkpk = sc.position_link_id
+                       INNER JOIN sl_position_detail spd on spd.positionfk = spl.positionfk
+                       INNER JOIN sl_candidate slc on slc.sl_candidatepk = spl.candidatefk
+                       WHERE sc.client_id = '2'";
+
+      ChromePhp::log($slistemQuery);
+      $suggestedCandidates = $slistemDB->slistemGetAllData($slistemQuery);
+      ChromePhp::log($suggestedCandidates);
+      $data['suggestedCandidates'] = $suggestedCandidates;
+
       $myCandidates = $this->_oDisplay->render('client_candi_page');
       $data['innerPage'] = $myCandidates;
       $html = $this->_oDisplay->render('client_main_page',$data);
