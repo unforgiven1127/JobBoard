@@ -245,14 +245,13 @@ li{
           </tr>
           <tr>
             <td>
-              <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 190px !important; border:1px solid #999999;'
-                name="webmenu" id="webmenu">
-                <option value="0" selected="selected" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/0star.png"></option>
-                <option value="1" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/1star.png"></option>
-                <option value="2" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/2star.png"></option>
-                <option value="3" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/3star.png"></option>
-                <option value="4" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/4star.png"></option>
-                <option value="5" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/5star.png"></option>
+              <select name="webmenu" id="webmenu">
+                <option value="calendar" data-image="/common/lib/selectImage/images/icons/msdropdown/icon_calendar.gif">Calendar</option>
+                <option value="shopping_cart" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_cart.gif">Shopping Cart</option>
+                <option value="cd" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_cd.gif">CD</option>
+                <option value="email"  selected="selected" title="/common/lib/selectImage/images/icons/msdropdown/icons/icon_email.gif">Email</option>
+                <option value="faq" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_faq.gif">FAQ</option>
+                <option value="games" data-image="/common/lib/selectImage/images/icons/msdropdown/icons/icon_games.gif">Games</option>
               </select>
             </td>
           </tr>
