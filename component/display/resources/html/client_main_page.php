@@ -8,6 +8,10 @@
   <!--<link rel="stylesheet" type="text/css" href="common/lib/verticalSlider/css/style.css">-->
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
+  <script src="/common/lib/selectImage/js/msdropdown/jquery-1.3.2.min.js" type="text/javascript"></script>
+  <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css" />
+
 
 <script type="text/javascript">
 
@@ -37,7 +41,7 @@
 }
 
 .leftSide li a.active {
-    background-color: #892828;
+    background-color: #98321F;
     color: white;
 }
 
@@ -56,7 +60,7 @@ html, body {
 }
 .box {
     margin: 0 auto;
-    margin-top:20px;
+    margin-top:15px;
 }
 
 
@@ -132,8 +136,8 @@ html, body {
 }
 
 .searchInput{
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
   height: 20px !important;
   width:190px !important;
   margin-top: 10px !important;
@@ -188,6 +192,16 @@ li{
 
   <body>
 
+    <script language="javascript">
+    $(document).ready(function(e) {
+    try {
+    $("#webmenu").msDropDown();
+    } catch(e) {
+    alert(e.message);
+    }
+    });
+    </script>
+
   <table class="box" align="center">
     <tr>
       <td valign="top">
@@ -229,10 +243,13 @@ li{
           </tr>
           <tr>
             <td>
-              <select class='searchInput' style="border: 1px solid grey; width:100%; height: 30px; font-size: 10pt;" name="industry" id="industry">
-
-                <option value="volvo" style="background-image:url('http://jobs.slate.co.jp/component/jobboard_user/resources/pictures/star.png');"></option>
-
+              <select style='height:20px !important; margin-left: 5px !important; margin-bottom: 5px !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 190px !important; border:1px solid #999999;' name="webmenu" id="webmenu">
+                <option value="0" selected="selected" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/0star.png"></option>
+                <option value="1" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/1star.png"></option>
+                <option value="2" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/2star.png"></option>
+                <option value="3" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/3star.png"></option>
+                <option value="4" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/4star.png"></option>
+                <option value="5" data-image="https:/jobs.slate.co.jp/component/jobboard_user/resources/pictures/5star.png"></option>
               </select>
             </td>
           </tr>
