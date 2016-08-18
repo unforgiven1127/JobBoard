@@ -4,9 +4,6 @@
 	{
 		color:#98321F;
 		font-size: 20px;
-		border-right: 1.5px solid black;
-		margin-top:5px;
-		margin-bottom:5px;
 	}
 	.divide
 	{
@@ -25,18 +22,22 @@
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
 		      	<a style='margin-right:10px;' >Home </a>
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
 		      	<a style='margin-right:10px;'>Add </a>
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
 		      	<a style='margin-right:10px;'>Reports </a>
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
 		      	<a style='margin-right:10px;'>Settings </a>
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		    </tr>
 		</table>
