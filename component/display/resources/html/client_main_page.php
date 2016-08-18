@@ -208,10 +208,10 @@ li{
     });
   </script>
 
-  <table class="box" align="center">
+  <table style='background-color: grey;' class="box" align="center">
     <tr>
       <td>
-        <div style="width: 300px;"><center><img style="text-align: center; width: 300px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
+        <div style="width: 300px;"><center><img style="text-align: center; width: 200px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
       </td>
     </tr>
   </table>
@@ -324,7 +324,7 @@ li{
             <td valign="top">
               <div class="hero-last">
                 <p class="topMenuBottom">1</p>
-                <p class="topMenu" >Placed</p>
+                <p class="topMenu" >Hired</p>
               </div>
             </td>
           </tr>
