@@ -17,7 +17,7 @@
 <script>
 function pop_up(url){
   alert(url);
-window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=1076,height=768,directories=no,location=no');
+  window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=1076,height=768,directories=no,location=no');
 }
 </script>
 
@@ -74,7 +74,7 @@ window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
               <img src='<?php echo $value['grade']; ?>' />
             </td>
-            <td class='innerTD' onclick="pop_up(<?php echo $value['candiPopup']; ?>);" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
+            <td class='innerTD' onclick="pop_up('<?php echo $value['candiPopup']; ?>');" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['title']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['flag']; ?></td>
