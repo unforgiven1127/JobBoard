@@ -4,9 +4,9 @@
 	{
 		color:#98321F;
 		font-size: 20px;
-		border-right: 2px solid black;
-		padding-top:2px;
-		padding-bottom:2px;
+		border-right: 1.5px solid black;
+		margin-top:5px;
+		margin-bottom:5px;
 	}
 	.divide
 	{
