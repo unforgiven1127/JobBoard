@@ -48,16 +48,6 @@ window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=
 
 
   <body>
-<table>
-<tr>
-<td>
-    <a href="#" onclick="pop_up(this);">EDIT</a>
-</td>
-<td>
-    <a href="#" onclick="pop_up(this);">DELETE</a>
-</td>
-</tr>
-</table>
   <table class='outherTable' >
     <tr>
       <td valign="top" style='width: 750px;' >
@@ -84,7 +74,7 @@ window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
               <img src='<?php echo $value['grade']; ?>' />
             </td>
-            <td class='innerTD' onclick="<?php echo $value['candiPopup']; ?>" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
+            <td class='innerTD' onclick="pop_up(<?php echo $value['candiPopup']; ?>);" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['title']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['flag']; ?></td>
