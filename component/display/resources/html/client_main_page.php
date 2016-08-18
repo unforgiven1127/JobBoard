@@ -195,17 +195,18 @@ li{
   <body>
 
    <script language="javascript">
-$(document).ready(function(e)
-{
-  try
-  {
-    $("#webmenu").msDropDown();
-  } catch(e)
-  {
-    alert(e.message);
-  }
-});
-</script>
+    $("#pageContainerId").remove();
+    $(document).ready(function(e)
+    {
+      try
+      {
+        $("#webmenu").msDropDown();
+      } catch(e)
+      {
+        alert(e.message);
+      }
+    });
+  </script>
 
   <table class="box" align="center">
     <tr>

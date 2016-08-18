@@ -1861,7 +1861,6 @@ class CJobboardEx extends CJobboard
 
       $data['innerPage'] = $myCandidates;
       $html = $this->_oDisplay->render('client_main_page',$data);
-      ChromePhp::log($html);
       return $html;
     }
     else
