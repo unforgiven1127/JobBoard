@@ -21,7 +21,7 @@
 		        <img style="text-align: center; height: 45px; margin-right:245px; " src="/common/pictures/slate_logo.png" />
 		      </td>
 		      <td class='topMenuText'>
-		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home_48.png" />
 		      	<a style='margin-right:10px;font-size: 15px;' >Home </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
