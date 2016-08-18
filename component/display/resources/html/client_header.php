@@ -36,7 +36,7 @@
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td  class='topMenuText'>
-		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
+		      	<img  style="text-align: center; height: 25px; margin-left:10px;" src="/common/pictures/home.png" />
 		      	<a style='margin-right:10px;font-size: 17px;'>Settings </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
