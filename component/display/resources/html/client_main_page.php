@@ -228,8 +228,8 @@ li{
 
         <table class='leftSideTable'>
           <tr>
-            <td style='margin-top: 20px !important;'>
-              <input placeholder="ID" class='searchInput' id="inputsm" type="text">
+            <td>
+              <input style='margin-top: 20px !important;'placeholder="ID"class='searchInput' id="inputsm" type="text">
             </td>
           </tr>
           <tr>
