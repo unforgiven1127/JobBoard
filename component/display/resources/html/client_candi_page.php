@@ -16,9 +16,33 @@
 
 <script>
 function pop_up(url){
-  alert(url);
+  //alert(url);
   window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=no,width=1076,height=768,directories=no,location=no');
 }
+
+$('.bootpopup').click(function(){
+    var frametarget = $(this).attr('href');
+  var targetmodal = $(this).attr('target');
+  if (targetmodal == undefined) {
+    targetmodal = '#popupModal';
+  } else { 
+    targetmodal = '#'+targetmodal;
+  }
+  if ($(this).attr('title') != undefined) {
+    $(targetmodal+ ' .modal-header h3').html($(this).attr('title'));
+    $(targetmodal+' .modal-header').show();
+  } else {
+     $(targetmodal+' .modal-header h3').html('');
+    $(targetmodal+' .modal-header').hide();
+  }  
+    $(targetmodal).on('show', function () {
+        $('iframe').attr("src", frametarget );   
+  });
+    $(targetmodal).modal({show:true});
+  return false;
+    
+});
+
 </script>
 
 <style>
@@ -48,6 +72,20 @@ function pop_up(url){
 
 
   <body>
+  <a href="http://twitter.github.io/bootstrap/" class="btn bootpopup" title="This is title" target="popupModal2">Open modal</a>
+
+<div id="popupModal2" class="modal hide fade" tabindex="-1" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+      <h3>Title</h3>
+  </div>
+  <div class="modal-body">
+      <iframe src="" style="zoom:0.60" frameborder="0" height="250" width="99.6%"></iframe>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">OK</button>
+  </div>
+</div>
   <table class='outherTable' >
     <tr>
       <td valign="top" style='width: 750px;' >
