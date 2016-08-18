@@ -260,7 +260,7 @@ li{
             </td>
           </tr>
           <tr>
-            <td style='text-align: right; padding-top: 10px !important;'>
+            <td style='text-align: right; padding-top: 8px !important;'>
               <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/>
               <img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 5px;" src="/common/pictures/search.png" title="Search"/>
             </td>
