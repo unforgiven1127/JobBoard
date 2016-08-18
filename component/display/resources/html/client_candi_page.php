@@ -67,7 +67,7 @@
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'>
               <img src='<?php echo $value['grade']; ?>' />
             </td>
-            <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
+            <td class='innerTD' onclick="alert('test');" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['title']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['flag']; ?></td>
