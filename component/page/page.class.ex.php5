@@ -269,6 +269,7 @@ class CPageEx extends CPage
 
     ChromePhp::log('getPage');
     ChromePhp::log(debug_backtrace());
+    var_dump(debug_backtrace());
     //--------------------------------------------------------------------
     //right management
     if(!$this->coRight->canAccess($this->csUid, $this->csAction, $this->csType, $this->cnPk))
