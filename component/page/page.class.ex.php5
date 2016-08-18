@@ -267,6 +267,8 @@ class CPageEx extends CPage
       $this->_AccessLog($oLogin);
     }
 
+    ChromePhp::log('getPage');
+    ChromePhp::log(debug_backtrace());
     //--------------------------------------------------------------------
     //right management
     if(!$this->coRight->canAccess($this->csUid, $this->csAction, $this->csType, $this->cnPk))
@@ -279,8 +281,6 @@ class CPageEx extends CPage
 
       $this->_getCustomUserFeature($bIsLogged);
       $sRestrictedPage = $oLogin->getRestrictedPage($bIsLogged);
-
-      ChromePhp::log(debug_backtrace());
 
       $sHTML = $oHTML->getHeader($bIsLogged, $this->casJsFile, $this->casCustomJs, $this->casCssFile, $asMeta, $asPageParam);
       $sHTML.= $oHTML->getMenu($bIsLogged, $psUid);
