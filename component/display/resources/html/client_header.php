@@ -18,7 +18,7 @@
         <table  align="center">
 		    <tr>
 		      <td >
-		        <img style="text-align: center; height: 45px; margin-right:240px; " src="/common/pictures/slate_logo.png" />
+		        <img style="text-align: center; height: 45px; margin-right:230px; " src="/common/pictures/slate_logo.png" />
 		      </td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 30px; margin-right:5px; " src="/common/pictures/home_48.png" />
@@ -38,7 +38,7 @@
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 30px; margin-left:10px;" src="/common/pictures/tool_48.png" />
 		      	<a style='margin-right:10px;font-size: 15px;'>Settings </a>
-		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
+		      	<img style="text-align: center; margin-left:10px;" src="/common/pictures/divider.png" />
 		      <td>
 		    </tr>
 		</table>
