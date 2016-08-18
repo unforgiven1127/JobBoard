@@ -660,6 +660,7 @@ class CDisplayEx extends CDisplay
     $sHTML.= '<script type="text/javascript" src="/component/form/resources/js/tiny_mce/tiny_mce.js"></script>';
     $sHTML.= '<script type="text/javascript" src="/component/form/resources/js/jquery.tokeninput.js"></script>';
     $sHTML.= '<script type="text/javascript" src="/common/js/common.js"></script>';
+    $sHTML.= '<script type="text/javascript" src="/common/js/popup.class.js"></script>';
 
     $asJsFile = array();
     foreach($pasJsFile as $sFileName)

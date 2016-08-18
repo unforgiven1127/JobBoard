@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/common/style/login_style.css">
   <!--<link rel="stylesheet" type="text/css" href="common/lib/verticalSlider/css/style.css">-->
   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-  <script type="text/javascript" src="/common/js/popup.class.js"></script>
+  
 
 
 <script type="text/javascript">
