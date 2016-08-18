@@ -23,15 +23,15 @@
 		      	<b class='topMenuText'>Home </b><a class='divide' >|<a>
 		      <td>
 		      <td>
-		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
 		      	<b class='topMenuText'>Add </b><a class='divide' >|<a>
 		      <td>
 		      <td>
-		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
 		      	<b class='topMenuText'>Reports </b><a class='divide' >|<a>
 		      <td>
 		      <td>
-		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
 		      	<b class='topMenuText'>Settings </b><a class='divide' >|<a>
 		      <td>
 		    </tr>
