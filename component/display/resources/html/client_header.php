@@ -3,7 +3,7 @@
 	.topMenuText
 	{
 		color:#98321F;
-		font-size: 20px;
+		font-size: 30px;
 		background-color: #EEEEEE;
 	}
 	.divide
