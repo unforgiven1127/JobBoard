@@ -208,6 +208,13 @@ li{
     });
   </script>
 
+  <table>
+    <tr>
+      <td>
+        <div style="width: 300px;"><center><img style="text-align: center; width: 300px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
+      </td>
+    </tr>
+  </table>
   <table class="box" align="center">
     <tr>
       <td valign="top">
