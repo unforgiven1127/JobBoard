@@ -73,17 +73,11 @@ $('.bootpopup').click(function(){
   </head>
 <div class="container">
   <h2>Button Styles</h2>
-  <button type="button" class="btn btn-default">Default</button>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-link">Link</button>
+  <button href="http://twitter.github.io/bootstrap/" type="button" class="btn btn-default bootpopup">Default</button>
 </div>
 
   <body>
-  <a href="http://twitter.github.io/bootstrap/" class="btn bootpopup" title="This is title" target="popupModal2">Open modal</a>
+
 
 <div id="popupModal2" class="modal hide fade" tabindex="-1" role="dialog">
   <div class="modal-header">
