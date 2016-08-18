@@ -20,9 +20,9 @@
 		      <td >
 		        <img style="text-align: center; height: 45px; margin-right:10px; " src="/common/pictures/slate_logo.png" />
 		      </td>
-		      <td>
+		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<a class='topMenuText'>Home </a>
+		      	<a >Home </a>
 		      <td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
