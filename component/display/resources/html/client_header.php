@@ -7,7 +7,7 @@
 		        <img style="text-align: center; height: 45px; margin-right:10px; " src="/common/pictures/slistem_large.gif" />
 		      </td>
 		      <td style="color:#98321F; font-size: 20px;  ">
-		      	<img style="text-align: center; height: 25px; margin-right:10px;" src="/common/pictures/home.png" /><b>Home |</b>
+		      	<img style="text-align: center; height: 25px; margin-right:10px;" src="/common/pictures/home.png" /><p>Home |</p>
 		      <td>
 		    </tr>
 		</table>
