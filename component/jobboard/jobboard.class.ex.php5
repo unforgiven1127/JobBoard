@@ -1860,6 +1860,7 @@ class CJobboardEx extends CJobboard
       }
 
       $data['innerPage'] = $myCandidates;
+      $data['header'] = $this->_oDisplay->render('client_header');
       $html = $this->_oDisplay->render('client_main_page',$data);
       return $html;
     }
