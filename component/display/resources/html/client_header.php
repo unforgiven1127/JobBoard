@@ -18,7 +18,7 @@
         <table  align="center">
 		    <tr>
 		      <td >
-		        <img style="text-align: center; height: 45px; margin-right:150px; " src="/common/pictures/slate_logo.png" />
+		        <img style="text-align: center; height: 45px; margin-right:200px; " src="/common/pictures/slate_logo.png" />
 		      </td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
