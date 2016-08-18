@@ -10,7 +10,7 @@
 	}
 </style>
 
-<table style='background-color: #F8F8F8; width: 100%;' align="center">
+<table style='background-color: #EEEEEE; width: 100%;' align="center">
     <tr>
       <td align="center">
         <table  align="center">
