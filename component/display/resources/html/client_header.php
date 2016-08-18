@@ -19,7 +19,7 @@
 		        <img style="text-align: center; height: 45px; margin-right:10px; " src="/common/pictures/slistem_large.gif" />
 		      </td>
 		      <td>
-		      	<img style="text-align: center; height: 25px; margin-right:10px;" src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-right:10px; margin-bottom: 10px;" src="/common/pictures/home.png" />
 		      	<b class='topMenuText'>Home </b><a class='divide' >|<a>
 		      <td>
 		    </tr>
