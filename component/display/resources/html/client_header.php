@@ -20,7 +20,7 @@
 		      </td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-right:10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenuText'>Home </b><b class='divide' >|</b>
+		      	<b class='topMenuText'>Home </b><a class='divide' >|<a>
 		      <td>
 		    </tr>
 		</table>
