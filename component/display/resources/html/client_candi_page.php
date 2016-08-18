@@ -51,10 +51,10 @@ window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=
 <table>
 <tr>
 <td>
-    <a href="www.google.com" onclick="pop_up(this);">EDIT</a>
+    <a href="#" onclick="pop_up(this);">EDIT</a>
 </td>
 <td>
-    <a href="www.google.com" onclick="pop_up(this);">DELETE</a>
+    <a href="#" onclick="pop_up(this);">DELETE</a>
 </td>
 </tr>
 </table>
