@@ -34,7 +34,7 @@ function pop_up(url, title, w, h) {
     var left = ((width / 2) - (w / 2)) + dualScreenLeft;
     var top = ((height / 2) - (h / 2)) + dualScreenTop;
     var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left,'toolbar=0,location=0, directories=0, status=0, menubar=0');
-
+    newWindow.document.title = 'test';
     // Puts focus on the newWindow
     if (window.focus) {
         newWindow.focus();
