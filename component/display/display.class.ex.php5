@@ -598,6 +598,13 @@ class CDisplayEx extends CDisplay
   {
     $oPage = CDependency::getComponentByName('page');
 
+    ChromePhp::log($pbIsLogged);
+    ChromePhp::log($pasJsFile);
+    ChromePhp::log($pasCustomJs);
+    ChromePhp::log($pasCssFile);
+    ChromePhp::log($pasMeta);
+    ChromePhp::log($pasPageParam);
+
     if($pasMeta['title'])
       $sCustomPageTitle = $pasMeta['title'];
     else

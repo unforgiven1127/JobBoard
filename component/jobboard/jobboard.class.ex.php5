@@ -1757,6 +1757,7 @@ class CJobboardEx extends CJobboard
       else
         $bSearchFormOpen = false;
 
+      ChromePhp::log('homepageContainer');
       $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
 
 
