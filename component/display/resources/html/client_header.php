@@ -1,8 +1,12 @@
 
 <style>
-	.topMenu
+	.topMenuText
 	{
 		color:#98321F; font-size: 20px;
+	}
+	.divide
+	{
+		color:#98321F; font-size: 30px;
 	}
 </style>
 
@@ -16,7 +20,7 @@
 		      </td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-right:10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenu'>Home </b><b>|</b>
+		      	<b class='topMenuText'>Home </b><b class='divide' >|</b>
 		      <td>
 		    </tr>
 		</table>
