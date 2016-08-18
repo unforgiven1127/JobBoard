@@ -280,6 +280,8 @@ class CPageEx extends CPage
       $this->_getCustomUserFeature($bIsLogged);
       $sRestrictedPage = $oLogin->getRestrictedPage($bIsLogged);
 
+      ChromePhp::log(debug_backtrace());
+
       $sHTML = $oHTML->getHeader($bIsLogged, $this->casJsFile, $this->casCustomJs, $this->casCssFile, $asMeta, $asPageParam);
       $sHTML.= $oHTML->getMenu($bIsLogged, $psUid);
       $sHTML.= $oHTML->getComponentStart($bIsLogged);
