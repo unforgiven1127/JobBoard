@@ -13,6 +13,13 @@
 
 
 </script>
+
+<script>
+function pop_up(url){
+window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=1076,height=768,directories=no,location=no');
+}
+</script>
+
 <style>
 
 .innerTable{
@@ -40,7 +47,16 @@
 
 
   <body>
-
+<table>
+<tr>
+<td>
+    <a href="update_users.php?person_id=<?php echo $row['person_id']; ?>" onclick="pop_up(this);">EDIT</a>
+</td>
+<td>
+    <a href="delete_users.php?person_id=<?php echo $row['person_id']; ?>" onclick="pop_up(this);">DELETE</a>
+</td>
+</tr>
+</table>
   <table class='outherTable' >
     <tr>
       <td valign="top" style='width: 750px;' >
