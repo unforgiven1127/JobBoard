@@ -22,9 +22,9 @@ function pop_up_(url){
 
 function pop_up(url, title, w, h) {
     // Fixes dual-screen position                         Most browsers      Firefox
-    w = 1076;
-    h = 768;
-    title = Munir;
+    w = '1076';
+    h = '768';
+    title = 'Munir';
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
     var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
 
