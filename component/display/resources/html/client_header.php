@@ -4,9 +4,9 @@
 	{
 		color:#98321F;
 		font-size: 20px;
-		border-right: 2px solid grey;
-		margin-top:1px;
-		margin-bottom:1px;
+		border-right: 2px solid black;
+		padding-top:2px;
+		padding-bottom:2px;
 	}
 	.divide
 	{
@@ -24,19 +24,19 @@
 		      </td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
-		      	<a >Home </a>
+		      	<a style='margin-right:10px;' >Home </a>
 		      <td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
-		      	<a>Add </a>
+		      	<a style='margin-right:10px;'>Add </a>
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
-		      	<a>Reports </a>
+		      	<a style='margin-right:10px;'>Reports </a>
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
-		      	<a>Settings </a>
+		      	<a style='margin-right:10px;'>Settings </a>
 		      <td>
 		    </tr>
 		</table>
