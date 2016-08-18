@@ -1855,7 +1855,7 @@ class CJobboardEx extends CJobboard
 
           $sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
 
-          $suggestedCandidates[$key]['candiPopup'] = 'oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
+          $suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
         }
 
         $data['suggestedCandidates'] = $suggestedCandidates;
