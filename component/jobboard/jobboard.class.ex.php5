@@ -1820,7 +1820,6 @@ class CJobboardEx extends CJobboard
                          WHERE sc.client_id = '2'
                          ORDER BY sc.id DESC";
 
-        ChromePhp::log($slistemQuery);
         $suggestedCandidates = $slistemDB->slistemGetAllData($slistemQuery);
 
         foreach($suggestedCandidates as $key => $value)
@@ -1856,7 +1855,6 @@ class CJobboardEx extends CJobboard
           }
         }
 
-        ChromePhp::log($suggestedCandidates);
         $data['suggestedCandidates'] = $suggestedCandidates;
 
         $myCandidates = $this->_oDisplay->render('client_candi_page',$data);
