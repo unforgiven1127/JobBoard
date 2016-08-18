@@ -4,7 +4,9 @@
 	{
 		color:#98321F;
 		font-size: 20px;
-		border-right: 1px solid #98321F;
+		border-right: 2px solid grey;
+		margin-top:1px;
+		margin-bottom:1px;
 	}
 	.divide
 	{
@@ -21,20 +23,20 @@
 		        <img style="text-align: center; height: 45px; margin-right:10px; " src="/common/pictures/slate_logo.png" />
 		      </td>
 		      <td class='topMenuText'>
-		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
+		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
 		      	<a >Home </a>
 		      <td>
+		      <td class='topMenuText'>
+		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
+		      	<a>Add </a>
 		      <td>
-		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<a class='topMenuText'>Add </a>
+		      <td  class='topMenuText'>
+		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
+		      	<a>Reports </a>
 		      <td>
-		      <td>
-		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<a class='topMenuText'>Reports </a>
-		      <td>
-		      <td>
-		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<a class='topMenuText'>Settings </a>
+		      <td  class='topMenuText'>
+		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
+		      	<a>Settings </a>
 		      <td>
 		    </tr>
 		</table>
