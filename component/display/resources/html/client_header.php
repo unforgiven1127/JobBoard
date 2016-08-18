@@ -22,22 +22,22 @@
 		      </td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; " src="/common/pictures/home.png" />
-		      	<a style='margin-right:10px;font-size: 17px;' >Home </a>
+		      	<a style='margin-right:10px;font-size: 15px;' >Home </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td class='topMenuText'>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
-		      	<a style='margin-right:10px;font-size: 17px;'>Add </a>
+		      	<a style='margin-right:10px;font-size: 15px;'>Add </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px; margin-right:5px;" src="/common/pictures/home.png" />
-		      	<a style='margin-right:10px;font-size: 17px;'>Reports </a>
+		      	<a style='margin-right:10px;font-size: 15px;'>Reports </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		      <td  class='topMenuText'>
 		      	<img  style="text-align: center; height: 25px; margin-left:10px;" src="/common/pictures/home.png" />
-		      	<a style='margin-right:10px;font-size: 17px;'>Settings </a>
+		      	<a style='margin-right:10px;font-size: 15px;'>Settings </a>
 		      	<img style="text-align: center; margin-left:10px; margin-right:5px;" src="/common/pictures/divider.png" />
 		      <td>
 		    </tr>
