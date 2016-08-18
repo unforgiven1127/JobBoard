@@ -12,11 +12,6 @@
   <script src="/common/lib/selectImage/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="/common/lib/selectImage/css/msdropdown/dd.css" />
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Latest compiled JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
 
 <style>
 .leftSide ul {
