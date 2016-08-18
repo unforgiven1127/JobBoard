@@ -6,8 +6,8 @@
 		      <td >
 		        <img style="text-align: center; height: 45px; " src="/common/pictures/slistem_large.gif" />
 		      </td>
-		      <td style="color:#98321F;">
-		      	<img style="text-align: center; height: 45px; " src="/common/pictures/home.png" />Home
+		      <td style="color:#98321F; font-size: 20px;">
+		      	<img style="text-align: center; height: 15px; margin-right:10px;" src="/common/pictures/home.png" />Home
 		      <td>
 		    </tr>
 		</table>
