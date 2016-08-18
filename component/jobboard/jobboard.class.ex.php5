@@ -714,7 +714,6 @@ class CJobboardEx extends CJobboard
     }
 
     //ChromePhp::log($sortSelect);
-    ChromePhp::log($slistemQuery);
 
     $noLimitSql = $slistemQuery;
     $noLimitPositionData = $slistemDB->slistemGetAllData($slistemQuery); // neden anlamadim ama bunu ekleyince result sayisi duzeldi....
@@ -1774,7 +1773,7 @@ class CJobboardEx extends CJobboard
           $positionCount = $avResult['positionData'][0]['count'];
 
           $test = $oPage->geturl('jobboard', CLIENT_LOGIN_PAGE, CONST_TA_TYPE_JOB);
-          ChromePhp::log($test);
+
           $sHTML.= $this->_getJobResultList($avResult, $sSearchId, $bSearchFormOpen,$positionCount);
 
 
@@ -2230,7 +2229,7 @@ class CJobboardEx extends CJobboard
 
     $sHTML = $oHTML->getBlocStart('',array('class'=>'homepageContainer'));
     $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetail'));
-ChromePhp::log('test');
+
       $sHTML.= $this->_getSideSectionJobList($pnPk);
 //$sHTML.= $this->_getJobDetailInformation($pnPk); // eski versiyon
       $sHTML.= $this->_getJobDetailInformationSlistemDB($pnPk);
@@ -2261,10 +2260,7 @@ ChromePhp::log('test');
     if($pnPk < 7000)
     {
       $newPk = $_GET['ppk'];
-      ChromePhp::log('test 2');
-      ChromePhp::log($newPk);
       $pnPk = $this->_getSlistemId($newPk);
-      ChromePhp::log($pnPk);
     }
 
     $langFlag = $_GET['setLang'];
@@ -2280,7 +2276,6 @@ ChromePhp::log('test');
     $sHTML = $oHTML->getBlocStart('',array('class'=>'jobCentreSection simpleRedBorderTop'));
 
     $positionData = $this->getPositionDetailSlistem($pnPk);
-ChromePhp::log($pnPk);
     /*$slistemDB = CDependency::getComponentByName('database');
 
     $slistemQuery = "SELECT FOUND_ROWS() as count, slp.sl_positionpk as positionpk, slp.sl_positionpk as jobfk,
@@ -2304,7 +2299,7 @@ ChromePhp::log($pnPk);
 
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);*/
-ChromePhp::log($positionData);
+
     if(isset($positionData) && $positionData != null)
     {
 
@@ -2682,10 +2677,8 @@ ChromePhp::log($positionData);
     $oDbResult = $oDB->ExecuteQuery($sQuery);
     $bRead = $oDbResult->readFirst();
 
-
-
 //var_dump($positionData);
-    ChromePhp::log($positionData);
+
 
     if($bRead)
     {

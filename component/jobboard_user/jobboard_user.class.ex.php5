@@ -224,8 +224,6 @@ class CJobboarduserEx extends CJobboarduser
       $searchString = " ";
     }
 
-ChromePhp::log($searchValue);
-
     $sSortField = TRIM(getValue('sortfield'));
     $sSortOrder = TRIM(getValue('sortorder'));
 //ChromePhp::log($sSortField);
@@ -734,7 +732,7 @@ ChromePhp::log($searchValue);
   {
     if(!assert('is_integer($pnPositionPk)'))
       return 'No position obtained.';
-ChromePhp::log($pnPositionPk);
+
     $oPage = CDependency::getComponentByName('page');
     $oDB = CDependency::getComponentByName('database');
 
@@ -777,13 +775,6 @@ ChromePhp::log($pnPositionPk);
     $metaKey_jp = $_POST['metaKey_jp'];
 
     //ChromePhp::log('jpnPositionTitle');
-    ChromePhp::log($title_jp);
-    ChromePhp::log($position_desc_jp);
-    ChromePhp::log($req_jp);
-    ChromePhp::log($career_jp);
-    ChromePhp::log($holidays_jp);
-    ChromePhp::log($station_jp);
-    ChromePhp::log($metaKey_jp);
 
     if(empty($nCompany) && empty($sCompany))
       return array('error' => 'You have to select a company or input a new company name');
@@ -924,7 +915,7 @@ ChromePhp::log($pnPositionPk);
       //$sQuery.= ' to_jobboard = '.$oDB->dbEscapeString($nToJobboard).','; // boyle birsey yok
       //$sQuery.= ' expiration_date = '.$oDB->dbEscapeString($sExpirationDate).''; // boyle birsey yok
       $sQuery.= ' WHERE positionfk  = '.$pnPositionPk ;
-ChromePhp::log($sQuery);
+
       $positionData = $slistemDB->slistemGetAllData($sQuery);
 
       $sQuery = 'UPDATE sl_position SET '; // visibility = '.$oDB->dbEscapeString($nVisibility).',' kaldirdik yok
@@ -1879,7 +1870,7 @@ $sHTML.= "</td>
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
     $positionData = $positionData[0];
-    ChromePhp::log($positionData);
+
 
     if($positionData['public_flag'] == 'a')
     {
