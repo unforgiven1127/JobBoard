@@ -16,7 +16,7 @@
         <table  align="center">
 		    <tr>
 		      <td >
-		        <img style="text-align: center; height: 45px; margin-right:10px; " src="/common/pictures/slistem_large.gif" />
+		        <img style="text-align: center; height: 40px; margin-right:10px; " src="/common/pictures/slistem_large.gif" />
 		      </td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
