@@ -2,7 +2,9 @@
 <style>
 	.topMenuText
 	{
-		color:#98321F; font-size: 20px;
+		color:#98321F;
+		font-size: 20px;
+		border-right: 1px solid #98321F;
 	}
 	.divide
 	{
@@ -20,19 +22,19 @@
 		      </td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenuText'>Home </b><a class='divide' >|<a>
+		      	<a class='topMenuText'>Home </a>
 		      <td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenuText'>Add </b><a class='divide' >|<a>
+		      	<a class='topMenuText'>Add </a>
 		      <td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenuText'>Reports </b><a class='divide' >|<a>
+		      	<a class='topMenuText'>Reports </a>
 		      <td>
 		      <td>
 		      	<img style="text-align: center; height: 25px; margin-left:10px; margin-right:5px; margin-bottom: 10px;" src="/common/pictures/home.png" />
-		      	<b class='topMenuText'>Settings </b><a class='divide' >|<a>
+		      	<a class='topMenuText'>Settings </a>
 		      <td>
 		    </tr>
 		</table>
