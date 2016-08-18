@@ -219,7 +219,6 @@ li{
                 <li><a class="active" href="#home">My Candidates</a></li>
                 <li><a href="#news">My Positions</a></li>
                 <li><a href="#contact">My Meetings</a></li>
-                <li><a href="#settings">Settings</a></li>
               </ul>
             </td>
           </tr>
