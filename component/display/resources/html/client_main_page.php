@@ -208,7 +208,7 @@ li{
     });
   </script>
 
-  <table style='background-color: grey;' align="center">
+  <table style='background-color: grey; width: 100%;' align="center">
     <tr>
       <td>
         <div style="width: 300px;"><center><img style="text-align: center; width: 200px; margin-bottom: 20px;" src="/common/pictures/slistem_large.gif" /></center></div>
