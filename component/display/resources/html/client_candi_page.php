@@ -24,7 +24,6 @@ function pop_up(url, title, w, h) {
     // Fixes dual-screen position                         Most browsers      Firefox
     w = '1076';
     h = '768';
-    title = 'Munir';
 
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
     var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
@@ -36,7 +35,8 @@ function pop_up(url, title, w, h) {
     var top = ((height / 2) - (h / 2)) + dualScreenTop;
     var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left,'toolbar=0,location=0, directories=0, status=0, menubar=0');
     // Puts focus on the newWindow
-    if (window.focus) {
+    if (window.focus)
+    {
         newWindow.focus();
     }
 }
@@ -72,6 +72,9 @@ function pop_up(url, title, w, h) {
   <body>
   <table class='outherTable' >
     <tr>
+      <td>
+      TEST
+      <td>
       <td valign="top" style='width: 750px;' >
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
