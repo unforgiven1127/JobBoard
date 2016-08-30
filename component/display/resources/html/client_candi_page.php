@@ -73,7 +73,7 @@ function pop_up(url, title, w, h) {
   <table class='outherTable' >
     <tr>
       <td valign="top">
-      TEST
+      <?php if(isset($selectedCandi)){echo $selectedCandi;} ?>
       <td>
     <tr>
     <tr>
