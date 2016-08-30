@@ -1862,7 +1862,9 @@ class CJobboardEx extends CJobboard
     $innerPage = $this->_oDisplay->render($innerPageName,$data);
     $data['innerPage'] = $innerPage;
 
-    return $data;
+    $html = $this->_oDisplay->render('client_main_page',$data);
+    return $html;
+
   }
 
   public function clientLogin()
@@ -1876,10 +1878,9 @@ class CJobboardEx extends CJobboard
       $data['suggestedCandidates'] = $this->getAllCandidates();
       $innerPage = 'client_candi_page';
 
-      $data = $this->_displayInner($innerPage, $data);
-
-      $html = $this->_oDisplay->render('client_main_page',$data);
+      $html = $this->_displayInner($innerPage, $data);
       return $html;
+
     }
     else
     {
