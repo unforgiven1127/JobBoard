@@ -1856,6 +1856,15 @@ class CJobboardEx extends CJobboard
     return $suggestedCandidates;
   }
 
+  private function _displayInner($innerPageName, $data)
+  {
+    $data['header'] = $this->_oDisplay->render('client_header');
+    $innerPage = $this->_oDisplay->render($innerPageName,$data);
+    $data['innerPage'] = $innerPage;
+
+    return $data;
+  }
+
   public function clientLogin()
   {
     $oPage = CDependency::getComponentByName('page');
@@ -1865,10 +1874,10 @@ class CJobboardEx extends CJobboard
     if($username == 'munir' && $password == '123456')
     {
       $data['suggestedCandidates'] = $this->getAllCandidates();
-      $myCandidates = $this->_oDisplay->render('client_candi_page',$data);
+      $innerPage = 'client_candi_page';
 
-      $data['innerPage'] = $myCandidates;
-      $data['header'] = $this->_oDisplay->render('client_header');
+      $data = $this->_displayInner($innerPage, $data);
+
       $html = $this->_oDisplay->render('client_main_page',$data);
       return $html;
     }
