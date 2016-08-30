@@ -1839,6 +1839,10 @@ class CJobboardEx extends CJobboard
       {
         $suggestedCandidates[$key]['grade'] = '/common/pictures/5star.png';
       }
+      else
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/0star.png';
+      }
 
       if($value['flag'] == 'u')
       {
@@ -1848,8 +1852,8 @@ class CJobboardEx extends CJobboard
       $sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $suggestedCandidates[$key]['candiPopup'] = $sUrl;
       //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
-      return $suggestedCandidates;
     }
+    return $suggestedCandidates;
   }
 
   public function clientLogin()
