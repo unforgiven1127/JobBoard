@@ -1801,6 +1801,7 @@ class CJobboardEx extends CJobboard
 
   public function getAllCandidates()
   {
+    $oPage = CDependency::getComponentByName('page');
     $slistemDB = CDependency::getComponentByName('database');
     $slistemQuery = "SELECT slc.sl_candidatepk, slc.firstname, slc.lastname, sc.grade, sc.flag, spd.title
                      FROM suggested_candidates sc
