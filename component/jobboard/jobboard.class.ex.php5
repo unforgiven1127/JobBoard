@@ -1799,6 +1799,57 @@ class CJobboardEx extends CJobboard
    * @return string
    */
 
+  public function getAllCandidates()
+  {
+    $slistemDB = CDependency::getComponentByName('database');
+    $slistemQuery = "SELECT slc.sl_candidatepk, slc.firstname, slc.lastname, sc.grade, sc.flag, spd.title
+                     FROM suggested_candidates sc
+                     INNER JOIN sl_position_link spl on spl.sl_position_linkpk = sc.position_link_id
+                     INNER JOIN sl_position_detail spd on spd.positionfk = spl.positionfk
+                     INNER JOIN sl_candidate slc on slc.sl_candidatepk = spl.candidatefk
+                     WHERE sc.client_id = '2'
+                     ORDER BY sc.id DESC";
+
+    $suggestedCandidates = $slistemDB->slistemGetAllData($slistemQuery);
+
+    foreach($suggestedCandidates as $key => $value)
+    {
+      if($value['grade'] == 0)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/0star.png';
+      }
+      else if($value['grade'] == 1)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/1star.png';
+      }
+      else if($value['grade'] == 2)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/2star.png';
+      }
+      else if($value['grade'] == 3)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/3star.png';
+      }
+      else if($value['grade'] == 4)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/4star.png';
+      }
+      else if($value['grade'] == 5)
+      {
+        $suggestedCandidates[$key]['grade'] = '/common/pictures/5star.png';
+      }
+
+      if($value['flag'] == 'u')
+      {
+        $suggestedCandidates[$key]['flag'] = 'Unseen';
+      }
+
+      $sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      $suggestedCandidates[$key]['candiPopup'] = $sUrl;
+      //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
+    }
+  }
+
   public function clientLogin()
   {
     $oPage = CDependency::getComponentByName('page');
@@ -1807,61 +1858,8 @@ class CJobboardEx extends CJobboard
 
     if($username == 'munir' && $password == '123456')
     {
-
-      if(true) // secilen section a gore degisecek
-      {
-        $slistemDB = CDependency::getComponentByName('database');
-        $slistemQuery = "SELECT slc.sl_candidatepk, slc.firstname, slc.lastname, sc.grade, sc.flag, spd.title
-                         FROM suggested_candidates sc
-                         INNER JOIN sl_position_link spl on spl.sl_position_linkpk = sc.position_link_id
-                         INNER JOIN sl_position_detail spd on spd.positionfk = spl.positionfk
-                         INNER JOIN sl_candidate slc on slc.sl_candidatepk = spl.candidatefk
-                         WHERE sc.client_id = '2'
-                         ORDER BY sc.id DESC";
-
-        $suggestedCandidates = $slistemDB->slistemGetAllData($slistemQuery);
-
-        foreach($suggestedCandidates as $key => $value)
-        {
-          if($value['grade'] == 0)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/0star.png';
-          }
-          else if($value['grade'] == 1)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/1star.png';
-          }
-          else if($value['grade'] == 2)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/2star.png';
-          }
-          else if($value['grade'] == 3)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/3star.png';
-          }
-          else if($value['grade'] == 4)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/4star.png';
-          }
-          else if($value['grade'] == 5)
-          {
-            $suggestedCandidates[$key]['grade'] = '/common/pictures/5star.png';
-          }
-
-          if($value['flag'] == 'u')
-          {
-            $suggestedCandidates[$key]['flag'] = 'Unseen';
-          }
-
-          $sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
-          $suggestedCandidates[$key]['candiPopup'] = $sUrl;
-          //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
-        }
-
-        $data['suggestedCandidates'] = $suggestedCandidates;
-
-        $myCandidates = $this->_oDisplay->render('client_candi_page',$data);
-      }
+      $data['suggestedCandidates'] = $this->getAllCandidates();
+      $myCandidates = $this->_oDisplay->render('client_candi_page',$data);
 
       $data['innerPage'] = $myCandidates;
       $data['header'] = $this->_oDisplay->render('client_header');
