@@ -4574,14 +4574,11 @@ class CJobboardEx extends CJobboard
 
   public function changeInnerDisplay()//select candidate
   {
-    ChromePhp::log('changeInnerDisplay');
     $candidate_id = $_GET['cid'];
     //$page = $_GET['page'];
     $page = 'selected_candidate_page';
-    ChromePhp::log($candidate_id);
 
     $candidateInformation = $this->_getCandidateInfo($candidate_id);
-    ChromePhp::log($candidateInformation);
 
     $data = array();
     $data['candidateInformation'] = $candidateInformation;
@@ -4642,6 +4639,7 @@ class CJobboardEx extends CJobboard
                LEFT JOIN sl_company sc on sc.sl_companypk = slcp.companyfk
                WHERE slc.sl_candidatepk = '".$candidate_id."'";
 
+    ChromePhp::log($slistemQuery);
     $candidateInformation = $slistemDB->slistemGetAllData($slistemQuery);
 
     return $candidateInformation;

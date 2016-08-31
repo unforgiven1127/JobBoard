@@ -267,8 +267,8 @@ class CPageEx extends CPage
       $this->_AccessLog($oLogin);
     }
 
-    ChromePhp::log('getPage');
-    ChromePhp::log(debug_backtrace());
+    //ChromePhp::log('getPage');
+    //ChromePhp::log(debug_backtrace());
     //var_dump(debug_backtrace());
     //--------------------------------------------------------------------
     //right management
