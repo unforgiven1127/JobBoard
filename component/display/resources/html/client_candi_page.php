@@ -18,7 +18,7 @@
 
 function openHref(url)
 {
-  alert(url);
+  //alert(url);
   window.location.href = url;
 }
 
