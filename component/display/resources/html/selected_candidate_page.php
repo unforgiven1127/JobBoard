@@ -143,6 +143,9 @@ function pop_up(url, title, w, h) {
           <tr>
             <td valign="top" style='padding-top: 10px;' >ASDF</td>
           </tr>
+          <tr>
+            <td valign="top" style='padding-top: 10px;' >ASDF</td>
+          </tr>
         </table>
       </td>
     </tr>
