@@ -86,7 +86,7 @@ function pop_up(url, title, w, h) {
 {
   height: 15px;
   width: 80px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #DADADA;
   vertical-align: bottom;
   text-align: right;
   margin-right: 5px;
@@ -100,7 +100,7 @@ function pop_up(url, title, w, h) {
   vertical-align: bottom;
   padding-top: 10px;
   padding-left: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #DADADA;
 }
 
 </style>
