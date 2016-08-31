@@ -144,10 +144,10 @@ function pop_up(url, title, w, h) {
             <td valign="top">
               <table>
                 <tr>
-                  <td valign="top" style='padding-top: 10px;' >ASDF</td>
+                  <td style='padding-top: 10px;' >ASDF</td>
                 </tr>
                 <tr>
-                  <td valign="top" >ASDF</td>
+                  <td >ASDF</td>
                 </tr>
               </table>
             </td>
