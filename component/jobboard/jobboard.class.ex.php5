@@ -4574,9 +4574,11 @@ class CJobboardEx extends CJobboard
 
   public function changeInnerDisplay()//select candidate
   {
+    ChromePhp::log('changeInnerDisplay');
     $candidate_id = $_GET['cid'];
     //$page = $_GET['page'];
     $page = 'selected_candidate_page';
+    ChromePhp::log($candidate_id);
 
     $candidateInformation = _getCandidateInfo($candidate_id);
     ChromePhp::log($candidateInformation);
