@@ -53,7 +53,10 @@ function pop_up(url, title, w, h) {
 <style>
 
 .innerTable{
-  border:1px solid #DADADA;
+  border-top:1px solid #DADADA;
+  border-left:1px solid #DADADA;
+  border-right:1px solid #DADADA;
+  border-bottom:1px solid #DADADA;
 
 }
 
@@ -80,12 +83,12 @@ function pop_up(url, title, w, h) {
   <table class='outherTable' >
     <tr>
       <td valign="top" style='width: 750px;' >
-        <table border="1" class='innerTable' style='width: 750px;' >
+        <table class='innerTable' style='width: 800px;' >
           <tr style='background-color: #EEEEEE;'>
             <td><p>#154310 Test User</p></td>
             <!--<td><img src='<?php echo $grade; ?>' /></td>-->
-            <td><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/></td>
-            <td><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/></td>
+            <td style='width: 50px;' ><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/edit_48.png" title="Clear"/></td>
+            <td style='width: 50px;' ><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/trash.png" title="Clear"/></td>
           </tr>
 
         </table>

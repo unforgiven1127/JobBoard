@@ -4581,7 +4581,7 @@ class CJobboardEx extends CJobboard
     $candidateInformation = $this->_getCandidateInfo($candidate_id);
 
     $data = array();
-    $data['candidateInformation'] = $candidateInformation;
+    $data['candidateInformation'] = $candidateInformation[0];
 
     return $this->_displayInner($page, $data);
   }
