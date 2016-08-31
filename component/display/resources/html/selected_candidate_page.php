@@ -81,6 +81,12 @@ function pop_up(url, title, w, h) {
   cursor:pointer;
 }
 
+.titles
+{
+  text-align: right;
+  margin-right: 5px;
+}
+
 </style>
 
   </head>
@@ -107,27 +113,27 @@ function pop_up(url, title, w, h) {
       <td valign="top" style='width: 385px;'>
         <table class='innerTableTopless' style='width: 385px; height: 420px;' >
           <tr>
-            <td valign="top" style='padding-top: 10px; width:80px; '><p style='text-align: right;'>Position</p></td>
+            <td valign="top" style='padding-top: 10px; width:80px; '><p class='titles'>Position :</p></td>
             <td valign="top" style='padding-top: 10px;'><p>#8853 - test new position</p</td>
           </tr>
           <tr>
-            <td><p>Status</p></td>
+            <td><p class='titles'>Status</p></td>
             <td><p>Meeting 1</p></td>
           </tr>
           <tr>
-            <td><p>Title</p></td>
+            <td><p class='titles'>Title</p></td>
             <td><p>Security Consultant</p></td>
           </tr>
           <tr>
-            <td><p>Occupation</p></td>
+            <td><p class='titles'>Occupation</p></td>
             <td><p>Consultant</p></td>
           </tr>
           <tr>
-            <td><p>Industry</p></td>
+            <td><p class='titles'>Industry</p></td>
             <td><p>IT-Other</p></td>
           </tr>
           <tr>
-            <td><p>Last meeting</p></td>
+            <td><p class='titles'>Last meeting</p></td>
             <td><p>2015-11-30</p></td>
           </tr>
         </table>
