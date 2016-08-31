@@ -117,24 +117,24 @@ function pop_up(url, title, w, h) {
             <td valign="top" style='padding-top: 10px;'><p>#8853 - test new position</p</td>
           </tr>
           <tr>
-            <td><p class='titles'>Status</p></td>
-            <td><p>Meeting 1</p></td>
+            <td valign="top"><p class='titles'>Status</p></td>
+            <td valign="top"><p>Meeting 1</p></td>
           </tr>
           <tr>
-            <td><p class='titles'>Title</p></td>
-            <td><p>Security Consultant</p></td>
+            <td valign="top"><p class='titles'>Title</p></td>
+            <td valign="top"><p>Security Consultant</p></td>
           </tr>
           <tr>
-            <td><p class='titles'>Occupation</p></td>
-            <td><p>Consultant</p></td>
+            <td valign="top"><p class='titles'>Occupation</p></td>
+            <td valign="top"><p>Consultant</p></td>
           </tr>
           <tr>
-            <td><p class='titles'>Industry</p></td>
-            <td><p>IT-Other</p></td>
+            <td valign="top"><p class='titles'>Industry</p></td>
+            <td valign="top"><p>IT-Other</p></td>
           </tr>
           <tr>
-            <td><p class='titles'>Last meeting</p></td>
-            <td><p>2015-11-30</p></td>
+            <td valign="top"><p class='titles'>Last meeting</p></td>
+            <td valign="top"><p>2015-11-30</p></td>
           </tr>
         </table>
       </td>
