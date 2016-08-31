@@ -4556,7 +4556,96 @@ class CJobboardEx extends CJobboard
 //***************CLIENT SIDE****************************
 //***************CLIENT SIDE****************************
 //***************CLIENT SIDE****************************
-    public function getAllCandidates()
+
+  private function _controlClientSession()// cache control
+  {
+
+  }
+
+  private function _displayInner($innerPageName, $data)
+  {
+    $data['header'] = $this->_oDisplay->render('client_header');
+    $innerPage = $this->_oDisplay->render($innerPageName,$data);
+    $data['innerPage'] = $innerPage;
+
+    $html = $this->_oDisplay->render('client_main_page',$data);
+    return $html;
+  }
+
+  public function changeInnerDisplay()//select candidate
+  {
+    $candidate_id = $_GET['cid'];
+    //$page = $_GET['page'];
+    $page = 'selected_candidate_page';
+
+    $candidateInformation = _getCandidateInfo($candidate_id);
+    ChromePhp::log($candidateInformation);
+
+    $data = array();
+    $data['candidateInformation'] = $candidateInformation;
+
+    return $this->_displayInner($page, $data);
+  }
+
+  public function clientLogin()
+  {
+    $oPage = CDependency::getComponentByName('page');
+    $username = $_POST['login'];
+    $password = $_POST['password'];
+
+    if($username == 'munir' && $password == '123456')// login control
+    {
+      //client id yi cache e at.
+      $data['suggestedCandidates'] = $this->_getAllCandidates();
+      $innerPage = 'client_candi_page';
+
+      $html = $this->_displayInner($innerPage, $data);
+      return $html;
+    }
+    else
+    {
+      $msg = "Username or password incorrect";
+      return $this->clientLoginPage($msg);
+    }
+  }
+
+  public function clientLoginPage($msg = '')
+  {
+    $oPage = CDependency::getComponentByName('page');
+
+    $data = array();
+    if($msg != '')
+    {
+      $data['msg'] = $msg;
+    }
+
+    $html = $this->_oDisplay->render('client_login',$data);
+    //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
+//ChromePhp::log($sUrl);
+    return $html;
+  }
+
+
+//*******************MODAL****************************
+
+  private function _getCandidateInfo($candidate_id)
+  {
+    $slistemDB = CDependency::getComponentByName('database');
+    $sNow = date('Y-m-d H:i:s');
+
+    $slistemQuery = "SELECT slc.*,slcp.*,sc.name as company_name,
+               IFNULL(TIMESTAMPDIFF(YEAR, slc.date_birth, '".$sNow."'), '-') AS age
+               FROM sl_candidate slc
+               LEFT JOIN sl_candidate_profile slcp on slcp.candidatefk = slc.sl_candidatepk
+               LEFT JOIN sl_company sc on sc.sl_companypk = slcp.companyfk
+               WHERE slc.sl_candidatepk = '".$candidate_id."'";
+
+    $candidateInformation = $slistemDB->slistemGetAllData($slistemQuery);
+
+    return $candidateInformation;
+  }
+
+  private function _getAllCandidates()
   {
     $oPage = CDependency::getComponentByName('page');
     $slistemDB = CDependency::getComponentByName('database');
@@ -4609,79 +4698,13 @@ class CJobboardEx extends CJobboard
       //$sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getUrl($this->_getUid(), CLIENT_CHANGE_INNER, CONST_TA_TYPE_JOB);
       $sUrl.= '&cid='.$value['sl_candidatepk'];
-      $sUrl.= '&page=selected_candidate_page';
+      //$sUrl.= '&page=selected_candidate_page';
 
       $suggestedCandidates[$key]['candiPopup'] = $sUrl;
       //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
     }
     return $suggestedCandidates;
   }
-
-  private function _controlClientSession()// cache control
-  {
-
-  }
-
-  private function _displayInner($innerPageName, $data)
-  {
-    $data['header'] = $this->_oDisplay->render('client_header');
-    $innerPage = $this->_oDisplay->render($innerPageName,$data);
-    $data['innerPage'] = $innerPage;
-
-    $html = $this->_oDisplay->render('client_main_page',$data);
-    return $html;
-  }
-
-  public function changeInnerDisplay()
-  {
-    $candidate_id = $_GET['cid'];
-    $page = $_GET['page'];
-
-    $data = array();
-
-    return $this->_displayInner($page, $data);
-  }
-
-  public function clientLogin()
-  {
-    $oPage = CDependency::getComponentByName('page');
-    $username = $_POST['login'];
-    $password = $_POST['password'];
-
-    if($username == 'munir' && $password == '123456')// login control
-    {
-      //client id yi cache e at.
-      $data['suggestedCandidates'] = $this->getAllCandidates();
-      $innerPage = 'client_candi_page';
-
-      $html = $this->_displayInner($innerPage, $data);
-      return $html;
-    }
-    else
-    {
-      $msg = "Username or password incorrect";
-      return $this->clientLoginPage($msg);
-    }
-  }
-
-  public function clientLoginPage($msg = '')
-  {
-    $oPage = CDependency::getComponentByName('page');
-
-    $data = array();
-    if($msg != '')
-    {
-      $data['msg'] = $msg;
-    }
-
-    $html = $this->_oDisplay->render('client_login',$data);
-    //$sUrl = $oPage->geturl('jobboard', CLIENT_LOGIN, CONST_TA_TYPE_JOB);
-//ChromePhp::log($sUrl);
-    return $html;
-  }
-
-
-
 
 
 //***************CLIENT SIDE****************************

@@ -83,7 +83,7 @@ function pop_up(url, title, w, h) {
         <table border="1" class='innerTable' style='width: 750px;' >
           <tr style='background-color: #EEEEEE;'>
             <td><p>#154310 Test User</p></td>
-            <td><img src='<?php echo $grade; ?>' /></td>
+            <!--<td><img src='<?php echo $grade; ?>' /></td>-->
             <td><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/></td>
             <td><img style="cursor:pointer;height:20px;margin-bottom:5px;margin-right: 10px;" src="/common/pictures/eraser.png" title="Clear"/></td>
           </tr>
