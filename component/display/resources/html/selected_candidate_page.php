@@ -81,21 +81,6 @@ function pop_up(url, title, w, h) {
   cursor:pointer;
 }
 
-.titles
-{
-  text-align: right;
-  margin-right: 5px;
-  font-weight: bold;
-  margin-top: 10px;
-
-  
-}
-
-.info
-{
-
-
-}
 
 .candidateInfoTitle
 {
@@ -103,6 +88,9 @@ function pop_up(url, title, w, h) {
   width: 80px;
   border-bottom: 1px solid grey;
   vertical-align: bottom;
+  text-align: right;
+  margin-right: 5px;
+  font-weight: bold;
 }
 
 .candidateInfo
@@ -141,27 +129,27 @@ function pop_up(url, title, w, h) {
               <table>
                 <tr>
                   <td class='candidateInfoTitle'>Position :</td>
-                  <td class='candidateInfo'><p class='info'>#8853 - test new position</p></td>
+                  <td class='candidateInfo'>#8853 - test new position</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Status</p></td>
-                  <td class='candidateInfo'><p class='info'>Meeting 1</p></td>
+                  <td class='candidateInfoTitle'>Status</td>
+                  <td class='candidateInfo'>Meeting 1</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Title</p></td>
-                  <td class='candidateInfo'><p class='info'>Security Consultant</p></td>
+                  <td class='candidateInfoTitle'>Title</td>
+                  <td class='candidateInfo'>Security Consultant</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Occupation</p></td>
-                  <td class='candidateInfo'><p class='info'>Consultant</p></td>
+                  <td class='candidateInfoTitle'>Occupation</td>
+                  <td class='candidateInfo'>Consultant</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Industry</p></td>
-                  <td class='candidateInfo'><p class='info'>IT-Other</p></td>
+                  <td class='candidateInfoTitle'>Industry</td>
+                  <td class='candidateInfo'>IT-Other</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Last meeting</p></td>
-                  <td class='candidateInfo'><p class='info'>2015-11-30</p></td>
+                  <td class='candidateInfoTitle'>Last meeting</td>
+                  <td class='candidateInfo'>2015-11-30</td>
                 </tr>
               </table>
             </td>
