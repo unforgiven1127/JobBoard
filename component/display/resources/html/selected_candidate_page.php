@@ -114,27 +114,27 @@ function pop_up(url, title, w, h) {
         <table class='innerTableTopless' style='width: 385px; height: 420px;' >
           <tr style='height: 20px !important;'>
             <td valign="top" style='padding-top: 10px; width:80px; height: 20px !important; '><p class='titles'>Position :</p></td>
-            <td valign="top" style='padding-top: 10px; height: 20px !important;'><p>#8853 - test new position</p</td>
+            <td valign="top" style='padding-top: 10px; height: 20px !important;'><p>#8853 - test new position</p></td>
           </tr>
           <tr>
-            <td valign="top" style='height: 20px;'><p class='titles'>Status</p></td>
-            <td valign="top" style='height: 20px;'><p>Meeting 1</p></td>
+            <td style='height: 20px;'><p class='titles'>Status</p></td>
+            <td style='height: 20px;'><p>Meeting 1</p></td>
           </tr>
           <tr>
-            <td valign="top" style='height: 20px;'><p class='titles'>Title</p></td>
-            <td valign="top" style='height: 20px;'><p>Security Consultant</p></td>
+            <td style='height: 20px;'><p class='titles'>Title</p></td>
+            <td style='height: 20px;'><p>Security Consultant</p></td>
           </tr>
           <tr>
-            <td valign="top" style='height: 20px;'><p class='titles'>Occupation</p></td>
-            <td valign="top" style='height: 20px;'><p>Consultant</p></td>
+            <td style='height: 20px;'><p class='titles'>Occupation</p></td>
+            <td style='height: 20px;'><p>Consultant</p></td>
           </tr>
           <tr>
-            <td valign="top" style='height: 20px;'><p class='titles'>Industry</p></td>
-            <td valign="top" style='height: 20px;'><p>IT-Other</p></td>
+            <td style='height: 20px;'><p class='titles'>Industry</p></td>
+            <td style='height: 20px;'><p>IT-Other</p></td>
           </tr>
           <tr>
-            <td valign="top" style='height: 20px;'><p class='titles'>Last meeting</p></td>
-            <td valign="top" style='height: 20px;'><p>2015-11-30</p></td>
+            <td style='height: 20px;'><p class='titles'>Last meeting</p></td>
+            <td style='height: 20px;'><p>2015-11-30</p></td>
           </tr>
         </table>
       </td>
