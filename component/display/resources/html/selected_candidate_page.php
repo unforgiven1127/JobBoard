@@ -107,7 +107,7 @@ function pop_up(url, title, w, h) {
       <td valign="top" style='width: 385px;'>
         <table class='innerTableTopless' style='width: 385px; height: 420px;' >
           <tr>
-            <td valign="top" style='padding-top: 10px; width:70px; '><p>Position</p></td>
+            <td valign="top" style='padding-top: 10px; width:80px; '><p style='text-align: right;'>Position</p></td>
             <td valign="top" style='padding-top: 10px;'><p>#8853 - test new position</p</td>
           </tr>
           <tr>
