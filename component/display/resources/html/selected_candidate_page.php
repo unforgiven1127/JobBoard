@@ -156,6 +156,10 @@ function pop_up(url, title, w, h) {
                   <td class='candidateInfoTitle'>Last meeting : </td>
                   <td class='candidateInfo'>2015-11-30</td>
                 </tr>
+                <tr>
+                  <td class='candidateInfoTitle'>Sent by : </td>
+                  <td class='candidateInfo'>Munir Anameric</td>
+                </tr>
               </table>
             </td>
           </tr>
