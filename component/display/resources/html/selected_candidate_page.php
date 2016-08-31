@@ -87,13 +87,13 @@ function pop_up(url, title, w, h) {
   margin-right: 5px;
   font-weight: bold;
 
-  vertical-align: text-bottom;
+  
 }
 
 .info
 {
 
-  vertical-align: text-bottom;
+
 }
 
 .candidateInfoTitle
@@ -101,11 +101,13 @@ function pop_up(url, title, w, h) {
   height: 15px;
   width: 80px;
   border-bottom: 1px solid grey;
+  vertical-align: bottom;
 }
 
 .candidateInfo
 {
   height: 15px;
+  vertical-align: bottom;
 }
 
 </style>
