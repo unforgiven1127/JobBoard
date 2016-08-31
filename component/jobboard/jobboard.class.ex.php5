@@ -4580,11 +4580,11 @@ class CJobboardEx extends CJobboard
     $page = 'selected_candidate_page';
     ChromePhp::log($candidate_id);
 
-    $candidateInformation = _getCandidateInfo($candidate_id);
-    ChromePhp::log($candidateInformation);
+    //$candidateInformation = _getCandidateInfo($candidate_id);
+    //ChromePhp::log($candidateInformation);
 
     $data = array();
-    $data['candidateInformation'] = $candidateInformation;
+    //$data['candidateInformation'] = $candidateInformation;
 
     return $this->_displayInner($page, $data);
   }
