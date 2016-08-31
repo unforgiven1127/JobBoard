@@ -126,7 +126,7 @@ function pop_up(url, title, w, h) {
       <td valign="top" style='width: 385px;'>
         <table class='innerTableTopless' style='width: 385px; height: 400px;' >
           <tr>
-            <td>ASDF</td>
+            <td valign="top" >ASDF</td>
           </tr>
         </table>
       </td>
