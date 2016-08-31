@@ -100,7 +100,7 @@ function pop_up(url, title, w, h) {
   height: 15px;
   vertical-align: bottom;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 7px;
   border-bottom: 1px solid #DADADA;
 }
 
