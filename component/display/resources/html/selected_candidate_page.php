@@ -91,12 +91,14 @@ function pop_up(url, title, w, h) {
   text-align: right;
   margin-right: 5px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .candidateInfo
 {
   height: 15px;
   vertical-align: bottom;
+  margin-top: 10px;
 }
 
 </style>
