@@ -92,7 +92,7 @@ function pop_up(url, title, w, h) {
   margin-right: 5px;
   font-weight: bold;
   padding-top: 10px;
-  background-color: #f4f4f4
+  background-color: #EEEEEE
 }
 
 .candidateInfo
