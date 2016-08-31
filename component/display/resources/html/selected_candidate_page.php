@@ -141,10 +141,16 @@ function pop_up(url, title, w, h) {
       <td valign="top" style='width: 385px;'>
         <table class='innerTableTopless' style='width: 385px; height: 420px;' >
           <tr>
-            <td valign="top" style='padding-top: 10px;' >ASDF</td>
-          </tr>
-          <tr>
-            <td valign="top" style='padding-top: 10px;' >ASDF</td>
+            <td>
+              <table>
+                <tr>
+                  <td valign="top" style='padding-top: 10px;' >ASDF</td>
+                </tr>
+                <tr>
+                  <td valign="top" >ASDF</td>
+                </tr>
+              </table>
+            </td>
           </tr>
         </table>
       </td>
