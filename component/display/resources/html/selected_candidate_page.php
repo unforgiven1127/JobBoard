@@ -158,7 +158,7 @@ function pop_up(url, title, w, h) {
                 </tr>
                 <tr>
                   <td class='candidateInfoTitle'>Sent by : </td>
-                  <td class='candidateInfo'>Munir Anameric</td>
+                  <td class='candidateInfo'>Munir Anameric | 2015-11-25</td>
                 </tr>
               </table>
             </td>
