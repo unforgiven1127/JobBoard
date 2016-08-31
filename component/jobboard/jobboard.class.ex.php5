@@ -137,6 +137,8 @@ class CJobboardEx extends CJobboard
             return $this->clientLoginPage();
           case CLIENT_LOGIN:
             return $this->clientLogin();
+          case CLIENT_CHANGE_INNER:
+            return $this->changeInnerDisplay();
 
           case CONST_ACTION_VIEW:
             return $this->getJobDetail($this->cnPk);
@@ -1849,11 +1851,20 @@ class CJobboardEx extends CJobboard
         $suggestedCandidates[$key]['flag'] = 'Unseen';
       }
 
-      $sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      //$sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
+      $sUrl = $oPage->getUrl($this->_getUid(), CLIENT_CHANGE_INNER, CONST_TA_TYPE_JOB);
+      $sUrl.= '&cid='.$value['sl_candidatepk'];
+      $sUrl.= '&page=selected_candidate';
+
       $suggestedCandidates[$key]['candiPopup'] = $sUrl;
       //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
     }
     return $suggestedCandidates;
+  }
+
+  private function _controlClientSession()// cache control
+  {
+
   }
 
   private function _displayInner($innerPageName, $data)
@@ -1864,7 +1875,16 @@ class CJobboardEx extends CJobboard
 
     $html = $this->_oDisplay->render('client_main_page',$data);
     return $html;
+  }
 
+  public function changeInnerDisplay()
+  {
+    $candidate_id = $_GET['cid'];
+    $page = $_GET['page'];
+
+    $return = $candidate_id." ".$page;
+
+    return 'changeInnerDisplay '.$return;
   }
 
   public function clientLogin()
@@ -1873,14 +1893,14 @@ class CJobboardEx extends CJobboard
     $username = $_POST['login'];
     $password = $_POST['password'];
 
-    if($username == 'munir' && $password == '123456')
+    if($username == 'munir' && $password == '123456')// login control
     {
+      //client id yi cache e at.
       $data['suggestedCandidates'] = $this->getAllCandidates();
       $innerPage = 'client_candi_page';
 
       $html = $this->_displayInner($innerPage, $data);
       return $html;
-
     }
     else
     {

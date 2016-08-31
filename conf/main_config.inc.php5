@@ -284,6 +284,7 @@ define('CONST_URL_PARAM_PAGE_CRON', 'cron');
 
 define('CLIENT_LOGIN_PAGE', 'clp');
 define('CLIENT_LOGIN', 'cla');
+define('CLIENT_CHANGE_INNER', 'cci');
 
 define('CONST_TALENT_HOME_PAGE','ppah');
 define('CONST_TA_TYPE_LIST_JOB','ppaj');
