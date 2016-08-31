@@ -98,14 +98,14 @@ function pop_up(url, title, w, h) {
 
 .candidateInfoTitle
 {
-  height: 20px;
+  height: 15px;
   width: 80px;
   border-bottom: 1px solid grey;
 }
 
 .candidateInfo
 {
-  height: 20px;
+  height: 15px;
 }
 
 </style>
