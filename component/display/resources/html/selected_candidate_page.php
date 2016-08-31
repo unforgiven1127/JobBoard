@@ -86,6 +86,7 @@ function pop_up(url, title, w, h) {
   text-align: right;
   margin-right: 5px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .candidateInfoTitle
@@ -129,8 +130,8 @@ function pop_up(url, title, w, h) {
             <td valign="top">
               <table>
                 <tr>
-                  <td class='candidateInfoTitle' style='padding-top: 10px; '><p class='titles'>Position :</p></td>
-                  <td class='candidateInfo' style='padding-top: 10px;'><p class='info'>#8853 - test new position</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Position :</p></td>
+                  <td class='candidateInfo'><p class='info'>#8853 - test new position</p></td>
                 </tr>
                 <tr>
                   <td class='candidateInfoTitle'><p class='titles'>Status</p></td>
