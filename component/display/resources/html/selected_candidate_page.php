@@ -85,11 +85,11 @@ function pop_up(url, title, w, h) {
 .candidateInfoTitle
 {
   height: 15px;
-  width: 80px;
+  width: 85px;
   border-bottom: 1px solid #DADADA;
   vertical-align: bottom;
   text-align: right;
-  padding-right: 5px;
+  padding-right: 3px;
   font-weight: bold;
   padding-top: 10px;
   background-color: #EEEEEE
