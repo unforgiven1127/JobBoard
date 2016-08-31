@@ -87,6 +87,17 @@ function pop_up(url, title, w, h) {
   margin-right: 5px;
 }
 
+.candidateInfoTitle
+{
+  height: 20px;
+  width: 80px;
+}
+
+.candidateInfo
+{
+  height: 20px;
+}
+
 </style>
 
   </head>
@@ -115,29 +126,29 @@ function pop_up(url, title, w, h) {
           <tr>
             <td valign="top">
               <table>
-                <tr style='height: 20px !important;'>
-                  <td style='padding-top: 10px; width:80px; height: 20px !important; '><p class='titles'>Position :</p></td>
-                  <td valign="top" style='padding-top: 10px; height: 20px !important;'><p>#8853 - test new position</p></td>
+                <tr>
+                  <td class='candidateInfoTitle' style='padding-top: 10px; '><p class='titles'>Position :</p></td>
+                  <td class='candidateInfo' style='padding-top: 10px;'><p class='info'>#8853 - test new position</p></td>
                 </tr>
                 <tr>
-                  <td style='height: 20px;'><p class='titles'>Status</p></td>
-                  <td style='height: 20px;'><p>Meeting 1</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Status</p></td>
+                  <td class='candidateInfo'><p class='info'>Meeting 1</p></td>
                 </tr>
                 <tr>
-                  <td style='height: 20px;'><p class='titles'>Title</p></td>
-                  <td style='height: 20px;'><p>Security Consultant</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Title</p></td>
+                  <td class='candidateInfo'><p class='info'>Security Consultant</p></td>
                 </tr>
                 <tr>
-                  <td style='height: 20px;'><p class='titles'>Occupation</p></td>
-                  <td style='height: 20px;'><p>Consultant</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Occupation</p></td>
+                  <td class='candidateInfo'><p class='info'>Consultant</p></td>
                 </tr>
                 <tr>
-                  <td style='height: 20px;'><p class='titles'>Industry</p></td>
-                  <td style='height: 20px;'><p>IT-Other</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Industry</p></td>
+                  <td class='candidateInfo'><p class='info'>IT-Other</p></td>
                 </tr>
                 <tr>
-                  <td style='height: 20px;'><p class='titles'>Last meeting</p></td>
-                  <td style='height: 20px;'><p>2015-11-30</p></td>
+                  <td class='candidateInfoTitle'><p class='titles'>Last meeting</p></td>
+                  <td class='candidateInfo'><p class='info'>2015-11-30</p></td>
                 </tr>
               </table>
             </td>
