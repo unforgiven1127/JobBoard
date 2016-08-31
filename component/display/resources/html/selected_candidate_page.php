@@ -60,6 +60,13 @@ function pop_up(url, title, w, h) {
 
 }
 
+.innerTableTopless
+{
+  border-left:1px solid #DADADA;
+  border-right:1px solid #DADADA;
+  border-bottom:1px solid #DADADA;
+}
+
 .outherTable
 {
   height: 458px;
@@ -98,14 +105,14 @@ function pop_up(url, title, w, h) {
     </tr>
     <tr>
       <td valign="top" style='width: 385px;'>
-        <table class='innerTable' style='width: 385px;' >
+        <table class='innerTableTopless' style='width: 385px;' >
           <tr>
             <td>TEST</td>
           </tr>
         </table>
       </td>
       <td valign="top" style='width: 385px;'>
-        <table class='innerTable' style='width: 385px;' >
+        <table class='innerTableTopless' style='width: 385px;' >
           <tr>
             <td>ASDF</td>
           </tr>
