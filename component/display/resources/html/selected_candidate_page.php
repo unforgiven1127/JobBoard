@@ -85,12 +85,14 @@ function pop_up(url, title, w, h) {
 {
   text-align: right;
   margin-right: 5px;
+  font-weight: bold;
 }
 
 .candidateInfoTitle
 {
   height: 20px;
   width: 80px;
+  border-bottom: 1px solid grey;
 }
 
 .candidateInfo
