@@ -1854,7 +1854,7 @@ class CJobboardEx extends CJobboard
       //$sUrl = $oPage->getUrl($this->_getUid(), CONST_ACTION_LIST, CONST_TA_TYPE_JOB);
       $sUrl = $oPage->getUrl($this->_getUid(), CLIENT_CHANGE_INNER, CONST_TA_TYPE_JOB);
       $sUrl.= '&cid='.$value['sl_candidatepk'];
-      $sUrl.= '&page=selected_candidate';
+      $sUrl.= '&page=selected_candidate_page';
 
       $suggestedCandidates[$key]['candiPopup'] = $sUrl;
       //$suggestedCandidates[$key]['candiPopup'] = 'var oConf = goPopup.getConfig(); oConf.width = 950; oConf.height = 750; goPopup.setLayerFromAjax(oConf, \''.$sUrl.'\'); ';
@@ -1882,9 +1882,9 @@ class CJobboardEx extends CJobboard
     $candidate_id = $_GET['cid'];
     $page = $_GET['page'];
 
-    $return = $candidate_id." ".$page;
+    $data = array();
 
-    return 'changeInnerDisplay '.$return;
+    return $this->_displayInner($page, $data);
   }
 
   public function clientLogin()
