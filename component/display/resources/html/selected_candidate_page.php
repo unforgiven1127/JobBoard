@@ -140,7 +140,7 @@ function pop_up(url, title, w, h) {
             <td valign="top">
               <table>
                 <tr>
-                  <td class='candidateInfoTitle'><p class='titles'>Position :</p></td>
+                  <td class='candidateInfoTitle'>Position :</td>
                   <td class='candidateInfo'><p class='info'>#8853 - test new position</p></td>
                 </tr>
                 <tr>
