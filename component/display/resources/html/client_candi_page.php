@@ -15,6 +15,13 @@
 </script>
 
 <script>
+
+function openHref(url)
+{
+  alert(url);
+  window.location.href = url;
+}
+
 function pop_up_(url){
   //alert(url);
   window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=1076,height=768,directories=no,location=no');
@@ -102,7 +109,7 @@ function pop_up(url, title, w, h) {
               <img src='<?php echo $value['grade']; ?>' />
             </td>
             <!--<td class='innerTD' onclick="pop_up('<?php echo $value['candiPopup']; ?>');" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>-->
-            <td class='innerTD' onclick="'<?php echo $value['candiPopup']; ?>'" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
+            <td class='innerTD' onclick="openHref('<?php echo $value['candiPopup']; ?>');" style='padding-left: 5px; font-size: 13px;'><?php echo $value['firstname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['lastname']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['title']; ?></td>
             <td class='innerTD' style='padding-left: 5px; font-size: 13px;'><?php echo $value['flag']; ?></td>
