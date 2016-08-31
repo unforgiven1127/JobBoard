@@ -96,6 +96,22 @@ function pop_up(url, title, w, h) {
         </table>
       </td>
     </tr>
+    <tr>
+      <td valign="top" style='width: 770px;'>
+        <table class='innerTable' style='width: 770px;' >
+          <tr>
+            <td>TEST</td>
+          </tr>
+        </table>
+      </td>
+      <td valign="top" style='width: 770px;'>
+        <table class='innerTable' style='width: 770px;' >
+          <tr>
+            <td>ASDF</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
 
   </table>
   <table>
