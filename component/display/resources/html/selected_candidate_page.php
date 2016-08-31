@@ -99,6 +99,7 @@ function pop_up(url, title, w, h) {
   height: 15px;
   vertical-align: bottom;
   padding-top: 10px;
+  padding-left: 10px;
 }
 
 </style>
@@ -134,23 +135,23 @@ function pop_up(url, title, w, h) {
                   <td class='candidateInfo'>#8853 - test new position</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'>Status</td>
+                  <td class='candidateInfoTitle'>Status :</td>
                   <td class='candidateInfo'>Meeting 1</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'>Title</td>
+                  <td class='candidateInfoTitle'>Title :</td>
                   <td class='candidateInfo'>Security Consultant</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'>Occupation</td>
+                  <td class='candidateInfoTitle'>Occupation :</td>
                   <td class='candidateInfo'>Consultant</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'>Industry</td>
+                  <td class='candidateInfoTitle'>Industry :</td>
                   <td class='candidateInfo'>IT-Other</td>
                 </tr>
                 <tr>
-                  <td class='candidateInfoTitle'>Last meeting</td>
+                  <td class='candidateInfoTitle'>Last meeting :</td>
                   <td class='candidateInfo'>2015-11-30</td>
                 </tr>
               </table>
