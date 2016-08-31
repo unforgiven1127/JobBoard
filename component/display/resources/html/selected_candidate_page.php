@@ -85,12 +85,12 @@ function pop_up(url, title, w, h) {
       <td valign="top" style='width: 750px;' >
         <table class='innerTable' style='width: 790px;' >
           <tr style='background-color: #EEEEEE;'>
-            <td><p style="font-size: 12pt; color: black; font-weight: bold; margin-top: 5px; margin-left: 10px;">
+            <td><p style="font-size: 10pt; color: black; font-weight: bold; margin-top: 10px; margin-left: 10px;">
               #154310 Test User
             </p></td>
             <!--<td><img src='<?php echo $grade; ?>' /></td>-->
-            <td style='width: 40px;' ><img style="cursor:pointer;height:20px;margin-right: 10px;" src="/common/pictures/edit_48.png" title="Clear"/></td>
-            <td style='width: 40px;' ><img style="cursor:pointer;height:20px;margin-right: 10px;" src="/common/pictures/trash.png" title="Clear"/></td>
+            <td style='width: 40px;' ><img style="cursor:pointer;height:15px;margin-right: 10px;" src="/common/pictures/edit_48.png" title="Clear"/></td>
+            <td style='width: 40px;' ><img style="cursor:pointer;height:15px;margin-right: 10px;" src="/common/pictures/trash.png" title="Clear"/></td>
           </tr>
 
         </table>
