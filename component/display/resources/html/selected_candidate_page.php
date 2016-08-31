@@ -82,8 +82,8 @@ function pop_up(url, title, w, h) {
   <body>
   <table class='outherTable' >
     <tr>
-      <td valign="top" style='width: 750px;' >
-        <table class='innerTable' style='width: 775px;' >
+      <td valign="top" style='width: 770px;' >
+        <table class='innerTable' style='width: 770px;' >
           <tr style='background-color: #EEEEEE;'>
             <td><p style="font-size: 11pt; color: black; font-weight: bold; margin-top: 10px; margin-left: 10px;">
               #154310 Test User
