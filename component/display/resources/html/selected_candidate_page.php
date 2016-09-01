@@ -193,7 +193,7 @@ function pop_up(url, title, w, h) {
                       <tbody class='stayFixed workSpace'>
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
-                            <td style='width:100%; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 3px;'>
+                            <td style='width:100%; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 5px;padding-right: 5px;'>
                               PERSONALITY: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                               CAREER: asdasd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                               EDUCATION: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
