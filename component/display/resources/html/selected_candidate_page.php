@@ -170,7 +170,7 @@ function pop_up(url, title, w, h) {
           <tr>
             <td valign="top">
               <table>
-                <tr>
+                <tr style='width:100% !important;'>
                   <td class='candidateInfoTitle' style='width:100% !important; padding-top: 10px;text-align:center !important;' >NOTES</td>
                 </tr>
                 <tr>
