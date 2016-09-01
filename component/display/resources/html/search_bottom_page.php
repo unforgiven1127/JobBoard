@@ -41,8 +41,8 @@
               <td>
             <tr>
             <tr>
-              <td valign="top" style='width: 950px;' >
-                <table border="1" class='innerTableSearch' style='width: 950px;' >
+              <td valign="top" style='width: 980px;' >
+                <table border="1" class='innerTableSearch' style='width: 980px;' >
                   <tr style='background-color: #EEEEEE;'>
                     <th style='width:40px !important;'>
                       <center><img src="/common/pictures/list_action.png" /></center>
