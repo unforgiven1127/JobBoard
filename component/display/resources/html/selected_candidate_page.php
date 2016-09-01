@@ -158,7 +158,8 @@ function pop_up(url, title, w, h) {
 }
 
 .log-btn_ {
-  background: #892828;
+  /*background: #892828;*/
+  background: #EEEEEE;
   display: block;
   margin: auto;
   width: 150px;
@@ -167,9 +168,9 @@ function pop_up(url, title, w, h) {
   color: #fff;
   text-decoration: none;
   border: none;
-  -moz-border-radius: 4px;
+  /*-moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px;*/
 }
 
 </style>
