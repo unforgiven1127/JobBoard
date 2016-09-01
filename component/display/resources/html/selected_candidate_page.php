@@ -159,7 +159,7 @@ function pop_up(url, title, w, h) {
 
 .log-btn_ {
   background: #892828;
-  dispaly: block;
+  display: block;
   margin: auto;
   width: 200px;
   font-size: 16px;
