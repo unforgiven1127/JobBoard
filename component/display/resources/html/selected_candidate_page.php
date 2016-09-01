@@ -141,7 +141,7 @@ function pop_up(url, title, w, h) {
 
 .outherTableSearch
 {
-  height: 458px;
+  height: 200px;
   overflow-y: scroll;
   display: block;
 }
