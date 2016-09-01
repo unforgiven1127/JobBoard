@@ -194,7 +194,7 @@ function pop_up(url, title, w, h) {
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
                             <td style='width:100%; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 5px;padding-right: 5px;'>
-                              <p style='border-bottom:1px #DADADA dashed; color:#c8d5ed;' >Munir Anameric | 2015-11-25 10:30</p>
+                              <p style='border-bottom:1px #DADADA dashed; color:#8ea9da;' >Munir Anameric | 2015-11-25 10:30</p>
                               PERSONALITY: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                               CAREER: asdasd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                               EDUCATION: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
