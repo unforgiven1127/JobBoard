@@ -157,6 +157,20 @@ function pop_up(url, title, w, h) {
   cursor:pointer;
 }
 
+.log-btn {
+  background: #892828;
+  dispaly: inline-block;
+  width: 100%;
+  font-size: 16px;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
 </style>
 
   </head>
@@ -256,7 +270,7 @@ function pop_up(url, title, w, h) {
           </tr>
           <tr>
             <td>
-              asdasd
+              <button type="button" class="log-btn" >Add new note</button>
             </td>
           </tr>
         </table>
