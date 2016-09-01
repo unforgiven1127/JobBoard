@@ -185,11 +185,11 @@ function pop_up(url, title, w, h) {
                 <tr>
                   <td >
                     <table class='wsTable'>
-                      <thead class='stayFixed'>
+                      <!--<thead class='stayFixed'>
                         <tr style='width:100%;'>
                           <th style='width:100%; font-size: 16px;'>My Workspace</th>
                         </tr>
-                      </thead>
+                      </thead>-->
                       <tbody class='stayFixed workSpace'>
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
