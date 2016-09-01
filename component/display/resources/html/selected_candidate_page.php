@@ -106,6 +106,9 @@ function pop_up(url, title, w, h) {
 
 .wsTableCD{
   width:100%;
+  border-left:0px;
+  border-right:0px;
+  border-top:0px;
 }
 
 .stayFixedCD
