@@ -33,7 +33,7 @@
 <body>
   <table>
     <tr>
-      <td colspan="2" style='padding-top: 10px;'>
+      <td colspan="2">
           <table class='outherTableSearch' >
             <tr>
               <td valign="top">
@@ -41,8 +41,8 @@
               <td>
             <tr>
             <tr>
-              <td valign="top" style='width: 1000px;' >
-                <table border="1" class='innerTableSearch' style='width: 1000px;' >
+              <td valign="top" style='width: 950px;' >
+                <table border="1" class='innerTableSearch' style='width: 950px;' >
                   <tr style='background-color: #EEEEEE;'>
                     <th style='width:40px !important;'>
                       <center><img src="/common/pictures/list_action.png" /></center>
