@@ -166,7 +166,7 @@ li{
 
 .workSpace {
   display: block;
-  height: 184px;
+  height: 180px;
   overflow-y: scroll;
   width:100%;
   border:1px solid #DADADA;
@@ -174,6 +174,7 @@ li{
 
 .wsTable{
   width:100%;
+  height:206px;
 }
 
 .stayFixed
