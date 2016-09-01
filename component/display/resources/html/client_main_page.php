@@ -174,14 +174,11 @@ li{
 
 .wsTable{
   width:100%;
-  height:206px;
-
 }
 
 .stayFixed
 {
   display: block;
-  height: 184px;
 }
 
 </style>
