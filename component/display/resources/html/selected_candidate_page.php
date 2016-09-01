@@ -118,9 +118,9 @@ function pop_up(url, title, w, h) {
   height: 300px;
   border-left:0px;
   border-right:0px;
-  /*overflow-y: scroll;
+  overflow-y: scroll;
   width:100%;
-  border:1px solid #DADADA;*/
+  border:1px solid #DADADA;
 }
 
 .noteTD
