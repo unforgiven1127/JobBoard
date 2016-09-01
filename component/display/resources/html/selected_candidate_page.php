@@ -175,7 +175,7 @@ function pop_up(url, title, w, h) {
         </table>
       </td>
       <td valign="top" style='width: 385px;'>
-        <table class='innerTableTopless' style='width: 385px; height: 420px; border-left: 0px;' >
+        <table class='innerTableTopless' style='width: 385px; height: 420px; border-left: 0px !important;' >
           <tr style='width:100% !important;'>
             <td style='width:100% !important;' valign="top">
               <table style='width:100% !important;'>
