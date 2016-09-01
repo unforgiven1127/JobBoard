@@ -116,6 +116,8 @@ function pop_up(url, title, w, h) {
 .workSpace {
   display: block;
   height: 300px;
+  border-left:0px;
+  border-right:0px;
   /*overflow-y: scroll;
   width:100%;
   border:1px solid #DADADA;*/
