@@ -4582,6 +4582,7 @@ class CJobboardEx extends CJobboard
 
     $data = array();
     $data['candidateInformation'] = $candidateInformation[0];
+    $data['suggestedCandidates'] = $this->_getAllCandidates();//burada onceki select neyse o calisacak
 
     return $this->_displayInner($page, $data);
   }
