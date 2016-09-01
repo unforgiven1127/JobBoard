@@ -160,9 +160,10 @@ function pop_up(url, title, w, h) {
 .log-btn_ {
   background: #892828;
   dispaly: inline-block;
-  width: 100px;
+  margin: auto;
+  width: 200px;
   font-size: 16px;
-  height: 20px;
+  height: 30px;
   color: #fff;
   text-decoration: none;
   border: none;
