@@ -329,6 +329,13 @@ li{
       </td>
     </tr>
   </table>
+  <table>
+    <tr>
+      <td>
+        <?php if(isset($searchBottom)) echo $searchBottom; ?>
+      </td>
+    </tr>
+  </table>
 
   </body>
 
