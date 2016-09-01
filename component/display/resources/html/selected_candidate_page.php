@@ -104,16 +104,16 @@ function pop_up(url, title, w, h) {
   border-bottom: 1px solid #DADADA;
 }
 
-.wsTable{
+.wsTableCD{
   width:100%;
 }
 
-.stayFixed
+.stayFixedCD
 {
   display: block;
 }
 
-.workSpace {
+.workSpaceCD {
   display: block;
   height: 300px;
   border-left:0px;
@@ -205,13 +205,13 @@ function pop_up(url, title, w, h) {
                 </tr>
                 <tr>
                   <td >
-                    <table class='wsTable'>
+                    <table class='wsTableCD'>
                       <!--<thead class='stayFixed'>
                         <tr style='width:100%;'>
                           <th style='width:100%; font-size: 16px;'>My Workspace</th>
                         </tr>
                       </thead>-->
-                      <tbody class='stayFixed workSpace'>
+                      <tbody class='stayFixedCD workSpaceCD'>
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
                             <td class="noteTD">
