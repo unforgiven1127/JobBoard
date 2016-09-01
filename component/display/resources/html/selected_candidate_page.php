@@ -194,7 +194,11 @@ function pop_up(url, title, w, h) {
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
                             <td style='width:100%; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 3px;'>
-                              <a style=' font-size: 12px;' href="#" >My test folder (8)</a>
+                              PERSONALITY: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
+                              CAREER: asdasd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
+                              EDUCATION: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
+                              MOVE: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
+                              COMPENSATIONS: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                             </td>
                           </tr>
                         <?php } ?>
