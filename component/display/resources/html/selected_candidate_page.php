@@ -118,7 +118,7 @@ function pop_up(url, title, w, h) {
 
 .workSpaceCD {
   display: block;
-  height: 350px;
+  height: 360px;
   border-left:0px;
   border-right:0px;
   border-top:0px;
