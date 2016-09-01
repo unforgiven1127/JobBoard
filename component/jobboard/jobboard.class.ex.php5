@@ -4583,6 +4583,7 @@ class CJobboardEx extends CJobboard
     $data = array();
     $data['candidateInformation'] = $candidateInformation[0];
     $data['suggestedCandidates'] = $this->_getAllCandidates();//burada onceki select neyse o calisacak
+    $data['searchBottom'] = $this->_oDisplay->render('search_bottom_page',$data);
 
     return $this->_displayInner($page, $data);
   }
