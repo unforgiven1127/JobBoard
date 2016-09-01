@@ -113,6 +113,14 @@ function pop_up(url, title, w, h) {
   display: block;
 }
 
+.workSpace {
+  display: block;
+  height: 180px;
+  /*overflow-y: scroll;
+  width:100%;
+  border:1px solid #DADADA;*/
+}
+
 </style>
 
   </head>
