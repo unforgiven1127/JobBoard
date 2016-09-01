@@ -254,14 +254,15 @@ function pop_up(url, title, w, h) {
               </table>
             </td>
           </tr>
+          <tr>
+            <td>
+              asdasd
+            </td>
+          </tr>
         </table>
       </td>
     </tr>
-    <tr>
-      <td>
-        asdasd
-      </td>
-    </tr>
+
 
   </table>
 
