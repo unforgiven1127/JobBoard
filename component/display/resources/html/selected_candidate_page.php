@@ -157,7 +157,7 @@ function pop_up(url, title, w, h) {
   cursor:pointer;
 }
 
-.log-btn {
+.log-btn_ {
   background: #892828;
   dispaly: inline-block;
   width: 100px;
@@ -270,7 +270,7 @@ function pop_up(url, title, w, h) {
           </tr>
           <tr>
             <td>
-              <button type="button" class="log-btn" >Add new note</button>
+              <button type="button" class="log-btn_" >Add new note</button>
             </td>
           </tr>
         </table>
