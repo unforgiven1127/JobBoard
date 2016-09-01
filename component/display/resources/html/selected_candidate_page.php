@@ -162,7 +162,7 @@ function pop_up(url, title, w, h) {
   display: block;
   margin: auto;
   width: 150px;
-  font-size: 12px;
+  font-size: 13px;
   height: 20px;
   color: #fff;
   text-decoration: none;
