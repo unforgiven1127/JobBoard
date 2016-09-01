@@ -123,6 +123,17 @@ function pop_up(url, title, w, h) {
   border:1px solid #DADADA;*/
 }
 
+.noteTD
+{
+  width:100%;
+  border-bottom:1px solid #DADADA;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 11px;
+}
+
 </style>
 
   </head>
@@ -203,7 +214,7 @@ function pop_up(url, title, w, h) {
                       <tbody class='stayFixed workSpace'>
                         <?php for($i=0;$i<22;$i++){ ?>
                           <tr style='width:100%;'>
-                            <td style='width:100%; border-bottom:1px solid #DADADA; padding-bottom: 3px;padding-top: 3px;padding-left: 5px;padding-right: 5px;'>
+                            <td class="noteTD">
                               <p style='border-bottom:1px #DADADA dashed; color:#4f96e7;' >Munir Anameric | 2015-11-25 10:30</p>
                               PERSONALITY: asd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
                               CAREER: asdasd asd adsasd dasa sdasa ads asdasdasdada sdasdasdasd asd asd asd
