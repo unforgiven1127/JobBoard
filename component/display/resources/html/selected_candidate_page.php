@@ -166,7 +166,7 @@ function pop_up(url, title, w, h) {
   width: 150px;
   font-size: 14px;
   height: 20px;
-  color: #fff;
+  /*color: #fff;*/
   text-decoration: none;
   border: none;
   /*-moz-border-radius: 4px;
