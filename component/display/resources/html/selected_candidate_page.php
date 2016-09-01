@@ -69,7 +69,7 @@ function pop_up(url, title, w, h) {
 
 .outherTable
 {
-  height: 456px;
+  height: 458px;
   /*overflow-y: scroll;*/
   display: block;
 }
@@ -118,7 +118,7 @@ function pop_up(url, title, w, h) {
 
 .workSpaceCD {
   display: block;
-  height: 360px;
+  height: 355px;
   border-left:0px;
   border-right:0px;
   border-top:0px;
