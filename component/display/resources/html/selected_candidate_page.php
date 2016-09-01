@@ -69,7 +69,7 @@ function pop_up(url, title, w, h) {
 
 .outherTable
 {
-  height: 458px;
+  height: 456px;
   /*overflow-y: scroll;*/
   display: block;
 }
