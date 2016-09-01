@@ -257,7 +257,7 @@ function pop_up(url, title, w, h) {
   </table>
   <table>
     <tr>
-      <td style='padding-top: 10px;'>
+      <td colspan="2" style='padding-top: 10px;'>
           <table class='outherTableSearch' >
             <tr>
               <td valign="top">
