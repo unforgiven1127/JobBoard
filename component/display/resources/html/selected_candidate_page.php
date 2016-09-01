@@ -257,7 +257,7 @@ function pop_up(url, title, w, h) {
   </table>
   <table>
     <tr>
-      <td>
+      <td style='padding-top: 10px;'>
           <table class='outherTableSearch' >
             <tr>
               <td valign="top">
@@ -265,8 +265,8 @@ function pop_up(url, title, w, h) {
               <td>
             <tr>
             <tr>
-              <td valign="top" style='width: 750px;' >
-                <table border="1" class='innerTableSearch' style='width: 750px;' >
+              <td valign="top" style='width: 1000px;' >
+                <table border="1" class='innerTableSearch' style='width: 1000px;' >
                   <tr style='background-color: #EEEEEE;'>
                     <th style='width:40px !important;'>
                       <center><img src="/common/pictures/list_action.png" /></center>
