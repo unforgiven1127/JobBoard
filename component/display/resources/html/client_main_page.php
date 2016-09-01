@@ -329,7 +329,7 @@ li{
       </td>
     </tr>
   </table>
-  <table>
+  <table class="box" align="center">
     <tr>
       <td>
         <?php if(isset($searchBottom)) echo $searchBottom; ?>
