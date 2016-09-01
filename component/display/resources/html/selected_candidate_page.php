@@ -115,9 +115,10 @@ function pop_up(url, title, w, h) {
 
 .workSpaceCD {
   display: block;
-  height: 300px;
+  height: 400px;
   border-left:0px;
   border-right:0px;
+  border-top:0px;
   overflow-y: scroll;
   width:100%;
   border:1px solid #DADADA;
