@@ -4,6 +4,7 @@
 	require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
 	require_once('common/lib/phpExcel/Classes/PHPExcel.php');
 
+$echo "TEST";
 $fileName = "oldKeys.xlsx";
 $excelReader = PHPExcel_IOFactory::createReaderForFile($fileName);
 
