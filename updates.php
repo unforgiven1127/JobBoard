@@ -1,14 +1,14 @@
 <?php
 
-	require_once('component/jobboard/jobboard.class.php5');
-	require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
-	require_once('common/lib/phpExcel/Classes/PHPExcel.php');
+	//require_once('component/jobboard/jobboard.class.php5');
+	//require_once('component/taaggregator/resources/lib/encoding_converter.class.php5');
+	//require_once('common/lib/phpExcel/Classes/PHPExcel.php');
 
 echo "TEST";
-$fileName = "oldKeys.xlsx";
-$excelReader = PHPExcel_IOFactory::createReaderForFile($fileName);
+//$fileName = "oldKeys.xlsx";
+//$excelReader = PHPExcel_IOFactory::createReaderForFile($fileName);
 
-$excelReader->setReadDataOnly();
+//$excelReader->setReadDataOnly();
 
 //load only certain sheets from the file
 //$loadSheets = array('keywords');
@@ -88,10 +88,10 @@ foreach($array as $key => $value)
     JOBBOARD CONNECTION INFO*/
 
     //SLISTEM CONNECTION INFO
-	define('DB_NAME_SLISTEM','slistem');
-    define('DB_SERVER_SLISTEM', '127.0.0.1');
-    define('DB_USER_SLISTEM', 'slistem');
-    define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
+	//define('DB_NAME_SLISTEM','slistem');
+    //define('DB_SERVER_SLISTEM', '127.0.0.1');
+    //define('DB_USER_SLISTEM', 'slistem');
+    //define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
     //SLISTEM CONNECTION INFO
 
 
@@ -128,7 +128,7 @@ foreach($array as $key => $value)
     	$positionData = mysql_fetch_assoc($slistemQuery);
     }*/
 
-	define('DB_NAME_SLISTEM','slistem');
+	/*define('DB_NAME_SLISTEM','slistem');
     define('DB_SERVER_SLISTEM', '127.0.0.1');
     define('DB_USER_SLISTEM', 'slistem');
     define('DB_PASSWORD_SLISTEM', 'smwXN2RTDm6Zz3hR');
