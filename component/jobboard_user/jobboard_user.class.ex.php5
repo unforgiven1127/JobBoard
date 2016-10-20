@@ -823,7 +823,7 @@ class CJobboarduserEx extends CJobboarduser
       return array('error' => 'Not enough keywords.');
 
     //For each keyword found in the description, we add a strong tag to improve SEO
-    if(!isJapanese($sPositionDesc))
+    /*if(!isJapanese($sPositionDesc))
     {
       foreach($asMetaKeywords as $sKeyword)
       {
@@ -867,7 +867,7 @@ class CJobboarduserEx extends CJobboarduser
 
         }
       }
-    }
+    }*/
 
 
     //Get the meta description
