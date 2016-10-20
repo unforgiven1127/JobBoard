@@ -856,7 +856,7 @@ class CJobboarduserEx extends CJobboarduser
                   $sSeoOptimized = @preg_replace('/'.trim($sMatch).'/i', '<strong class="seo_keyword">'.trim($sMatch).'</strong>', $sPositionDesc);
                   if($sSeoOptimized === null)
                   {
-                    assert('false; /* error preg_replace for ['.$sMatch.']*/');
+                    assert('false; /* error preg_replace for ['.$sMatch.']*//*');
                   }
                   else
                     $sPositionDesc = $sSeoOptimized;
