@@ -446,7 +446,6 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
     $sortSelect = getValue('sortfield');
 
-    $id_search = getValue('id_search');
     //ChromePhp::log($id_search);
 
     /*if(isset($sortSelect))
@@ -633,7 +632,7 @@ class CJobboardEx extends CJobboard
 
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
-ChromePhp::log($sQuery);
+//ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
     //$nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
@@ -1262,6 +1261,9 @@ ChromePhp::log($sQuery);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
+
+    $id_search = getValue('id_search');
+
 //ChromePhp::log('_getSqlJobSearch GELMEMESI GEREKIYOR');
     //----------------------------------------------------
     //Control fields and build the sql from it
@@ -1293,6 +1295,11 @@ ChromePhp::log($sQuery);
       }
 
       $asWhereSql[] = implode(' OR ', $asKeywordSql);
+    }
+
+    if(isset($id_search) && !empty($id_search))
+    {
+      $asWhereSql[] = " pos.positionpk = '".$id_search."' ";
     }
 
     //if not a global search (compact form) control the fields from the full form
