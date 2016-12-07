@@ -447,7 +447,7 @@ class CJobboardEx extends CJobboard
     $sortSelect = getValue('sortfield');
 
     $id_search = getValue('id_search');
-    //ChromePhp::log($id_search);
+    ChromePhp::log($sKeyWord);
 
     /*if(isset($sortSelect))
     {
