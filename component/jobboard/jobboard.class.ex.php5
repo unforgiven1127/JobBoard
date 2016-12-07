@@ -684,7 +684,7 @@ class CJobboardEx extends CJobboard
       default:
         $sQuery.= ' ORDER BY '.$sPriorityOrder.' pos.visibility DESC, pos.positionpk DESC ';
     }
-//ChromePhp::log($leventOrderFlag);
+ChromePhp::log($sortSelect);
 
     if(isset($sortSelect))
     {
