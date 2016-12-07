@@ -1104,6 +1104,8 @@ ChromePhp::log($slistemQuery);
 
     $sKeyWord = strtolower(getValue('keyword'));
     $bGlobalSearch = (bool)(getValue('global_search', 0));
+
+    $id_search = getValue('id_search');
 //ChromePhp::log($bGlobalSearch);
     //----------------------------------------------------
     //Control fields and build the sql from it
@@ -1138,6 +1140,12 @@ ChromePhp::log($slistemQuery);
       }
 
       $asWhereSql[] = implode(' OR ', $asKeywordSql);
+    }
+
+    if(isset($id_search) && !empty($id_search))
+    {
+      ChromePhp::log('HERE');
+      $asWhereSql[] = " pos.positionpk = '".$id_search."' ";
     }
 
     //if not a global search (compact form) control the fields from the full form
