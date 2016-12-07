@@ -519,7 +519,7 @@ class CJobboardEx extends CJobboard
                        ind.label as name,
                        sll.location as location,
                        slpd.meta_keywords as meta_keywords,
-                       IF(slpd.title LIKE '%".$id_search."%',true,false) as titleFlag,";
+                       IF(slpd.title LIKE '%".$sKeyWord."%',true,false) as titleFlag,";
 
       $newSlpdWhere = " AND slpd.language='en' ";
     }
@@ -535,7 +535,7 @@ class CJobboardEx extends CJobboard
                        IFNULL(ind.label_jp,ind.label) as name,
                        IFNULL(sll.location_jp,sll.location) as location,
                        IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,
-                       IF(slpd.title LIKE '%".$id_search."%',true,false) as titleFlag,";
+                       IF(slpd.title LIKE '%".$sKeyWord."%',true,false) as titleFlag,";
 
       $newSlpdWhere = " AND (slpd.title_jp <> '' OR slpd.language = 'jp' )";
     }
