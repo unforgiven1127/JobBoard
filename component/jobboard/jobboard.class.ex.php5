@@ -446,6 +446,7 @@ class CJobboardEx extends CJobboard
     $sKeyWord = strtolower(getValue('keyword'));
     $sortSelect = getValue('sortfield');
 
+    $id_search = getValue('id_search');
     //ChromePhp::log($id_search);
 
     /*if(isset($sortSelect))
@@ -517,7 +518,8 @@ class CJobboardEx extends CJobboard
                        slpd.work_hours as work_hours,
                        ind.label as name,
                        sll.location as location,
-                       slpd.meta_keywords as meta_keywords,";
+                       slpd.meta_keywords as meta_keywords,
+                       IF(slpd.title LIKE '%".$id_search."%',true,false) as titleFlag,";
 
       $newSlpdWhere = " AND slpd.language='en' ";
     }
@@ -532,7 +534,8 @@ class CJobboardEx extends CJobboard
                        IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
                        IFNULL(ind.label_jp,ind.label) as name,
                        IFNULL(sll.location_jp,sll.location) as location,
-                       IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,";
+                       IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,
+                       IF(slpd.title LIKE '%".$id_search."%',true,false) as titleFlag,";
 
       $newSlpdWhere = " AND (slpd.title_jp <> '' OR slpd.language = 'jp' )";
     }
@@ -713,11 +716,11 @@ class CJobboardEx extends CJobboard
     {
       if($leventOrderFlag)
       {
-        $slistemQuery .= " order by ratio DESC, slp.sl_positionpk DESC ";
+        $slistemQuery .= " order by titleFlag DESC, ratio DESC, slp.sl_positionpk DESC ";
       }
       else
       {
-        $slistemQuery .= " order by slp.sl_positionpk DESC ";
+        $slistemQuery .= " order by titleFlag DESC, slp.sl_positionpk DESC ";
       }
     }
 
