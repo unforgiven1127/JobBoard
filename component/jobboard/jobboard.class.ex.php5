@@ -1607,7 +1607,7 @@ class CJobboardEx extends CJobboard
     $oForm->setFieldDisplayParams('career', array('fieldid' => 'careerId', 'class' => 'clickable activable'));
     */
 
-    $oForm->addField('input', 'id_search', array('label' => 'id'));
+    $oForm->addField('input', 'id_search', array('label' => 'Id'));
 
     $asSliderLegend = array(1 => '1m', 2 => '4m', 3 => '7m', 4 => '10m', 6 => '+12m');
 
