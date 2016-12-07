@@ -447,7 +447,7 @@ class CJobboardEx extends CJobboard
     $sortSelect = getValue('sortfield');
 
     $id_search = getValue('id_search');
-    ChromePhp::log($id_search);
+    //ChromePhp::log($id_search);
 
     /*if(isset($sortSelect))
     {
@@ -615,6 +615,11 @@ class CJobboardEx extends CJobboard
 
     $slistemQuery.=" WHERE slpd.public_flag = 'a' ";
 
+    /*if(isset($id_search) && !empty($id_search))
+    {
+      $sQuery.= ' AND '.
+    }*/
+
     if(!empty($asFilter['where']))
     {
       //$exploded = explode('AND',$asFilter['where']);
@@ -628,7 +633,7 @@ class CJobboardEx extends CJobboard
 
 //ChromePhp::log($exploded);
 //ChromePhp::log($filterSlistem['where']);
-//ChromePhp::log($sQuery);
+ChromePhp::log($sQuery);
     $oDbResult = $oDb->ExecuteQuery($sQuery);
     $bRead = $oDbResult->ReadFirst();
     //$nNbResult = $oDbResult->getFieldValue('nCount', CONST_PHP_VARTYPE_INT);
