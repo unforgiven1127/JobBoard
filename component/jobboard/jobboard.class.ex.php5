@@ -688,7 +688,7 @@ class CJobboardEx extends CJobboard
 
     if(isset($sortSelect) && !empty($sortSelect))
     {
-      ChromePhp::log('HERE');
+      //ChromePhp::log('HERE');
       if($sortSelect == 'date_asc')
       {
         $slistemQuery .= " order by slp.sl_positionpk ASC ";
@@ -715,7 +715,7 @@ class CJobboardEx extends CJobboard
     }
     else
     {
-      ChromePhp::log('HERE 2');
+      //ChromePhp::log('HERE 2');
       if($leventOrderFlag)
       {
         $slistemQuery .= " order by titleFlag DESC, ratio DESC, slp.sl_positionpk DESC ";
