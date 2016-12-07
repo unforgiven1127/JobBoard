@@ -1145,7 +1145,7 @@ ChromePhp::log($slistemQuery);
     if(isset($id_search) && !empty($id_search))
     {
       ChromePhp::log('HERE');
-      $asWhereSql[] = " pos.positionpk = '".$id_search."' ";
+      $asWhereSql[] = " slp.sl_positionpk = '".$id_search."' ";
     }
 
     //if not a global search (compact form) control the fields from the full form
