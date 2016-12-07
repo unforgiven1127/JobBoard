@@ -1299,6 +1299,7 @@ class CJobboardEx extends CJobboard
 
     if(isset($id_search) && !empty($id_search))
     {
+      ChromePhp::log('HERE');
       $asWhereSql[] = " pos.positionpk = '".$id_search."' ";
     }
 
