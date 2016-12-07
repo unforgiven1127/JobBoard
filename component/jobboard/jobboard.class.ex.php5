@@ -686,7 +686,7 @@ class CJobboardEx extends CJobboard
     }
 
 
-    if(isset($sortSelect))
+    if(isset($sortSelect) && !empty($sortSelect))
     {
       ChromePhp::log('HERE');
       if($sortSelect == 'date_asc')
