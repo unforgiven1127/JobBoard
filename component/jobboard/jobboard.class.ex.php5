@@ -755,7 +755,7 @@ class CJobboardEx extends CJobboard
     $slistemQuery.= ' LIMIT '.$oPager->getSqlOffset().','.$oPager->getLimit();
     //echo $sQuery;
 
-ChromePhp::log($slistemQuery);
+//ChromePhp::log($slistemQuery);
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 //ChromePhp::log($mobileFlag);
     if($mobileFlag == 'mobile')
@@ -3010,6 +3010,7 @@ ChromePhp::log($slistemQuery);
 
       $oMail->addRecipient($to, $cons_name);
       $oMail->addBCCRecipient($bcc, 'Munir ANAMERIC');
+      $oMail->addBCCRecipient('rkiyamu@slate.co.jp', 'Rossana Kiyamu');
       //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
       //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
 
