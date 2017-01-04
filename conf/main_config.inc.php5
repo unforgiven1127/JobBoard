@@ -251,7 +251,8 @@ switch(trim($_SERVER['SERVER_NAME']))
     define('CONST_PHPMAILER_EMAIL', 'no_reply@slate.co.jp');
     define('CONST_PHPMAILER_DEFAULT_FROM', 'Slate Consulting');
     define('CONST_PHPMAILER_ATTACHMENT_SIZE', 10485760);
-    define('CONST_PHPMAILER_SMTP_HOST', 'zmail.aineo.net');
+    //define('CONST_PHPMAILER_SMTP_HOST', 'zmail.aineo.net');
+    define('CONST_PHPMAILER_SMTP_HOST', 'slatemail.slate.co.jp');
     define('CONST_PHPMAILER_SMTP_PORT', 465);
     define('CONST_PHPMAILER_SMTP_LOGIN', 'dba_request@slate.co.jp');
     define('CONST_PHPMAILER_SMTP_PASSWORD', 'RT!7000ics');
