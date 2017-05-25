@@ -1248,7 +1248,6 @@ class CJobboarduserEx extends CJobboarduser
                  INNER JOIN login l on l.loginpk = slp.created_by
                  WHERE slp.sl_positionpk = ".$pnPk;
 
-ChromePhp::log($slistemQuery);
 
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 

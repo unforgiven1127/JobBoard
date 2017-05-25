@@ -523,9 +523,9 @@ class CJobboardEx extends CJobboard
 
       $newSlpdWhere = " AND slpd.language='en' ";
     }
-    else
+    else//IFNULL(slpd.title_jp,slpd.title) as position_title,
     { // IFNULL(slpd.title_jp,slpd.title) as position_title calisiyor hepsini degistirelim
-      $selectCommon = "IFNULL(slpd.title_jp,slpd.title) as position_title,
+      $selectCommon = "IF(slpd.title_jp IS NULL or slpd.title_jp = '',slpd.title,slpd.title_jp) as position_title,
                        IFNULL(slpd.position_desc_jp,slpd.description) as position_desc,
                        IFNULL(slpd.req_jp,slpd.requirements) as requirements,
                        IFNULL(slpd.career_jp,slpd.career_level) as career_level,
