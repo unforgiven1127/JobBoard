@@ -570,7 +570,7 @@ class CJobboardEx extends CJobboard
                      FROM sl_position slp
                      INNER JOIN sl_position_detail slpd on slpd.positionfk = slp.sl_positionpk AND slpd.is_public = '1' AND slpd.public_flag = 'a'".$newSlpdWhere;
 
-//ChromePhp::log($slistemQuery);
+ChromePhp::log($slistemQuery);
     $oDb = CDependency::getComponentByName('database');
     $sToday = date('Y-m-d');
     $nCompanyPk = (int)getValue('companypk', 0);
