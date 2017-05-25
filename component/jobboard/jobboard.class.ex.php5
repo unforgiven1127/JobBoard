@@ -3139,8 +3139,8 @@ ChromePhp::log($slistemQuery);
     }
     else
     {
-      $selectCommon = "IFNULL(slpd.title_jp,slpd.title) as position_title,
-                       IFNULL(slpd.position_desc_jp,slpd.description) as position_desc,
+      $selectCommon = "IF(slpd.title_jp IS NULL or slpd.title_jp = '',slpd.title,slpd.title_jp) as position_title,
+        IF(slpd.position_desc_jp IS NULL or slpd.position_desc_jp = '',slpd.description,slpd.position_desc_jp) as position_desc,
                        IFNULL(slpd.req_jp,slpd.requirements) as requirements,
                        IFNULL(slpd.career_jp,slpd.career_level) as career_level,
                        IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
