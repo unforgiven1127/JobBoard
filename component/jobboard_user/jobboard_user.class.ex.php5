@@ -1248,6 +1248,8 @@ class CJobboarduserEx extends CJobboarduser
                  INNER JOIN login l on l.loginpk = slp.created_by
                  WHERE slp.sl_positionpk = ".$pnPk;
 
+ChromePhp::log($slistemQuery);
+
     $positionData = $slistemDB->slistemGetAllData($slistemQuery);
 
     if(isset($positionData))
@@ -1635,6 +1637,7 @@ $sHTML.= "
       $jobType = "<option value='1'>Full time</option>
                   <option selected='selected' value='0'>Part time</option>";
     }
+
 
 
 $sHTML.= "</td>
