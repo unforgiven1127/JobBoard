@@ -526,17 +526,25 @@ class CJobboardEx extends CJobboard
     else//IFNULL(slpd.title_jp,slpd.title) as position_title,
     { // IFNULL(slpd.title_jp,slpd.title) as position_title calisiyor hepsini degistirelim
       //IFNULL(slpd.position_desc_jp,slpd.description) as position_desc,
+      /*IFNULL(slpd.req_jp,slpd.requirements) as requirements,
+         IFNULL(slpd.career_jp,slpd.career_level) as career_level,
+         IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
+         IFNULL(slpd.station_jp,slpd.station) as station,
+         IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
+         IFNULL(ind.label_jp,ind.label) as name,
+         IFNULL(sll.location_jp,sll.location) as location,
+         IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,*/
       $selectCommon = "IF(slpd.title_jp IS NULL or slpd.title_jp = '',slpd.title,slpd.title_jp) as position_title,
         IF(slpd.position_desc_jp IS NULL or slpd.position_desc_jp = '',slpd.description,slpd.position_desc_jp) as position_desc,
-                       IFNULL(slpd.req_jp,slpd.requirements) as requirements,
-                       IFNULL(slpd.career_jp,slpd.career_level) as career_level,
-                       IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
-                       IFNULL(slpd.station_jp,slpd.station) as station,
-                       IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
-                       IFNULL(ind.label_jp,ind.label) as name,
-                       IFNULL(sll.location_jp,sll.location) as location,
-                       IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,
-                       IF(slpd.title LIKE '%".$sKeyWord."%',true,false) as titleFlag,";
+        IF(slpd.req_jp IS NULL or slpd.req_jp = '',slpd.requirements,slpd.req_jp) as requirements,
+        IF(slpd.career_jp IS NULL or slpd.career_jp = '',slpd.career_level,slpd.career_jp) as career_level,
+        IF(slpd.holidays_jp IS NULL or slpd.holidays_jp = '',slpd.holidays,slpd.holidays_jp) as holidays,
+        IF(slpd.station_jp IS NULL or slpd.station_jp = '',slpd.station,slpd.station_jp) as station,
+        IF(slpd.workHours_jp IS NULL or slpd.workHours_jp = '',slpd.work_hours,slpd.workHours_jp) as work_hours,
+        IF(ind.label_jp IS NULL or ind.label_jp = '',ind.label,ind.label_jp) as name,
+        IF(sll.location_jp IS NULL or sll.location_jp = '',sll.location,sll.location_jp) as location,
+        IF(slpd.metaKey_jp IS NULL or slpd.metaKey_jp = '',slpd.meta_keywords,slpd.metaKey_jp) as meta_keywords,
+        IF(slpd.title LIKE '%".$sKeyWord."%',true,false) as titleFlag,";
 
       $newSlpdWhere = " AND (slpd.title_jp <> '' OR slpd.language = 'jp' )";
     }
@@ -3139,16 +3147,24 @@ ChromePhp::log($slistemQuery);
     }
     else
     {
+      //IFNULL(slpd.req_jp,slpd.requirements) as requirements,
+      //IFNULL(slpd.career_jp,slpd.career_level) as career_level,
+      //IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
+      //IFNULL(slpd.station_jp,slpd.station) as station,
+      //IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
+      //IFNULL(ind.label_jp,ind.label) as name,
+      //IFNULL(sll.location_jp,sll.location) as location,
+      //IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,
       $selectCommon = "IF(slpd.title_jp IS NULL or slpd.title_jp = '',slpd.title,slpd.title_jp) as position_title,
         IF(slpd.position_desc_jp IS NULL or slpd.position_desc_jp = '',slpd.description,slpd.position_desc_jp) as position_desc,
-                       IFNULL(slpd.req_jp,slpd.requirements) as requirements,
-                       IFNULL(slpd.career_jp,slpd.career_level) as career_level,
-                       IFNULL(slpd.holidays_jp,slpd.holidays) as holidays,
-                       IFNULL(slpd.station_jp,slpd.station) as station,
-                       IFNULL(slpd.workHours_jp,slpd.work_hours) as work_hours,
-                       IFNULL(ind.label_jp,ind.label) as name,
-                       IFNULL(sll.location_jp,sll.location) as location,
-                       IFNULL(slpd.metaKey_jp,slpd.meta_keywords) as meta_keywords,";
+        IF(slpd.req_jp IS NULL or slpd.req_jp = '',slpd.requirements,slpd.req_jp) as requirements,
+        IF(slpd.career_jp IS NULL or slpd.career_jp = '',slpd.career_level,slpd.career_jp) as career_level,
+        IF(slpd.holidays_jp IS NULL or slpd.holidays_jp = '',slpd.holidays,slpd.holidays_jp) as holidays,
+        IF(slpd.station_jp IS NULL or slpd.station_jp = '',slpd.station,slpd.station_jp) as station,
+        IF(slpd.workHours_jp IS NULL or slpd.workHours_jp = '',slpd.work_hours,slpd.workHours_jp) as work_hours,
+        IF(ind.label_jp IS NULL or ind.label_jp = '',ind.label,ind.label_jp) as name,
+        IF(sll.location_jp IS NULL or sll.location_jp = '',sll.location,sll.location_jp) as location,
+        IF(slpd.metaKey_jp IS NULL or slpd.metaKey_jp = '',slpd.meta_keywords,slpd.metaKey_jp) as meta_keywords,";
 
       //$newSlpdWhere = " AND slpd.title_jp <> '' ";
     }
