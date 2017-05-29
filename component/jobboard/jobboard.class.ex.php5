@@ -1740,6 +1740,13 @@ ChromePhp::log($slistemQuery);
                               Success! Your application has been sent successfully.
                           </div>";
         }
+        else
+        {
+          $data['msg'] = "<div class='alert alert-warning fade in'>
+                              <a href='#' class='close' data-dismiss='alert'>&times;</a>
+                              Please fill name and contact information.
+                          </div>";
+        }
       }
 
       if(isset($_POST['keyword']))
@@ -2994,47 +3001,55 @@ ChromePhp::log($slistemQuery);
 
       $date = date('Y-m-d H:i:s');
 
-      $slistemDB = CDependency::getComponentByName('database');
-      $slistemQuery = "INSERT INTO mobile_applications (position_id,  name, contact,notes, application_date)
-                       VALUES( '".$position_id."','".$name."','".$contact."','".$note."','".$date."' )";
+      if(!empty($name) && !empty($contact))
+      {
+        $slistemDB = CDependency::getComponentByName('database');
+        $slistemQuery = "INSERT INTO mobile_applications (position_id,  name, contact,notes, application_date)
+                         VALUES( '".$position_id."','".$name."','".$contact."','".$note."','".$date."' )";
 
 
-      $insert = $slistemDB->slistemGetAllData($slistemQuery);
+        $insert = $slistemDB->slistemGetAllData($slistemQuery);
 
-      $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
-      $cons_email = $positionDetails['cons_email'];
-      $cons_name = $positionDetails['cons_name'];
-      $position_title = $positionDetails['position_title'];
+        $positionDetails = $this->getPositionDetailSlistem($position_id,$postLang = 'en');
+        $cons_email = $positionDetails['cons_email'];
+        $cons_name = $positionDetails['cons_name'];
+        $position_title = $positionDetails['position_title'];
 
-      $oMail = CDependency::getComponentByName('mail');
-      //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
-      //mail("munir_anameric@hotmail.com","New Application",$msg);
+        $oMail = CDependency::getComponentByName('mail');
+        //$msg = "<br>Mr/Mrs ".$name." has applied the position #".$position_id."<br>Contact Information: ".$contact;
+        //mail("munir_anameric@hotmail.com","New Application",$msg);
 
-      $to = $cons_email;//$cons_email olacak
-      $bcc = "munir@slate-ghc.com";
-      $subject = "New Mobile Application";
+        $to = $cons_email;//$cons_email olacak
+        $bcc = "munir@slate-ghc.com";
+        $subject = "New Mobile Application";
 
-      $oMail->creatNewEmail();
-      $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Mobile Application');
+        $oMail->creatNewEmail();
+        $oMail->setFrom(CONST_CRM_MAIL_SENDER, 'New Mobile Application');
 
-      $oMail->addRecipient($to, $cons_name);
-      $oMail->addBCCRecipient($bcc, 'Munir ANAMERIC');
-      $oMail->addBCCRecipient('rkiyamu@slate.co.jp', 'Rossana Kiyamu');
-      //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
-      //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
+        $oMail->addRecipient($to, $cons_name);
+        $oMail->addBCCRecipient($bcc, 'Munir ANAMERIC');
+        $oMail->addBCCRecipient('rkiyamu@slate.co.jp', 'Rossana Kiyamu');
+        //echo 'supposely sent to oMail->addRecipient('.$sEmail.', '.$asJobData['name'].')<br />';
+        //$oMail->addRecipient('sboudoux@bulbouscell.com', 'stef');
 
 
-      $sContent = "Dear ".$cons_name.", <br>";
-      $sContent.= "<br>Mr/Mrs ".$name." has applied the position ".$position_title." (#".$position_id.")".
-      "<br><br>Contact Information: ".$contact.
-      "<br><br>Notes: ".$note;
-      $sContent.= "<br><br>Best regards,";
-      $sContent.= "<br>Job Board Mobile";
+        $sContent = "Dear ".$cons_name.", <br>";
+        $sContent.= "<br>Mr/Mrs ".$name." has applied the position ".$position_title." (#".$position_id.")".
+        "<br><br>Contact Information: ".$contact.
+        "<br><br>Notes: ".$note;
+        $sContent.= "<br><br>Best regards,";
+        $sContent.= "<br>Job Board Mobile";
 
-      $oMail->send('New Mobile Application', $sContent);
+        $oMail->send('New Mobile Application', $sContent);
 
-      header("Location:https://jobs.slate.co.jp/?application=ok");
-      exit();
+        header("Location:https://jobs.slate.co.jp/?application=ok");
+        exit();
+      }
+      else
+      {
+        header("Location:https://jobs.slate.co.jp/?application=no");
+        exit();
+      }
 
     }
     else
