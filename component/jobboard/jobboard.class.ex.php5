@@ -1798,7 +1798,7 @@ ChromePhp::log($slistemQuery);
           $sSearchId = manageSearchHistory($this->csUid, CONST_TA_TYPE_JOB);
         else
           $sSearchId = reloadLastSearch($this->csUid, CONST_TA_TYPE_JOB);
-       }
+      }
 
       if(empty($_POST))
         $bSearchFormOpen = true;
