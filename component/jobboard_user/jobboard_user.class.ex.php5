@@ -1386,11 +1386,11 @@ $sHTML.= "
     $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sCompanyHelp));*/
 
     $oForm->addField('input', 'position_title', array('label'=>'Position Title', 'class' => '', 'value' => $asRecord['position_title']));
-    $oForm->setFieldControl('position_title', array('jsFieldMinSize' => 500, 'jsFieldMaxSize' => 700, 'jsFieldNotEmpty' => ''));
+    $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 500, 'jsFieldNotEmpty' => ''));
 
     $sText = str_replace('\n', "\n", strip_tags($asRecord['position_desc']))."\n"."\n".str_replace('\n', "\n", strip_tags($asRecord['requirements']));
     $oForm->addField('textarea', 'position_desc', array('label'=>'Position Description', 'class' => 'description', 'value' => $sText));
-    $oForm->setFieldControl('position_desc', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => ''));
+    $oForm->setFieldControl('position_desc', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => '','style'=>'min-width:800px;'));
 
     /*$sText = str_replace('\n', "\n", strip_tags($asRecord['requirements']));
     $oForm->addField('textarea', 'requirements', array('label'=>'Requirements', 'class' => 'description', 'value' => $sText));
