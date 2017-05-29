@@ -2548,7 +2548,7 @@ ChromePhp::log($slistemQuery);
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
           //$sHTML.= $oHTML->getText(nl2br($sDescription),array("style"=>$fontStyle));
-          $sHTML.= $oHTML->getText(nl2br($combinedDesc),array("style"=>$fontStyle));
+          $sHTML.= $oHTML->getText($combinedDesc,array("style"=>$fontStyle));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
