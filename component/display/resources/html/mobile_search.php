@@ -232,14 +232,14 @@
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='".$i."_fullName' id='".$i."_fullName'>
+                              <input required style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Full Name' type='text' class='form-control' name='".$i."_fullName' id='".$i."_fullName'>
                             </center>
                           </td>
                         </tr>
                         <tr>
                           <td style='padding-top:5px;' class='width'>
                             <center>
-                              <input style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='".$i."_contactInfo' id='".$i."_contactInfo'>
+                              <input required style='width:100%; height: 25px; font-size: 10pt; font-weight: bold; background-color:rgba(0,0,0,0) !important;' placeholder='Contact Information' type='text' class='form-control' name='".$i."_contactInfo' id='".$i."_contactInfo'>
                             </center>
                           </td>
                         </tr>
