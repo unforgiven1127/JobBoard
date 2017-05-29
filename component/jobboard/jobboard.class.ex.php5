@@ -2533,8 +2533,11 @@ ChromePhp::log($slistemQuery);
 
       //Description
       $sDescription = $positionData['position_desc'];
-      if(!empty($sDescription))
+      $sRequirements = $positionData['requirements'];
+
+      if(!empty($sDescription) || !empty($sRequirements))
       {
+        $combinedDesc = nl2br($sDescription)."\n"."\n".nl2br($sRequirements);
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
           $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;".$fontStyle));
@@ -2544,14 +2547,15 @@ ChromePhp::log($slistemQuery);
 
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'right_section jodDetailDescription'));
-          $sHTML.= $oHTML->getText(nl2br($sDescription),array("style"=>$fontStyle));
+          //$sHTML.= $oHTML->getText(nl2br($sDescription),array("style"=>$fontStyle));
+          $sHTML.= $oHTML->getText(nl2br($combinedDesc),array("style"=>$fontStyle));
           $sHTML.= $oHTML->getBlocEnd();
         $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
       }
 
        //Requirements
-      $sRequirements = $positionData['requirements'];
+      /*$sRequirements = $positionData['requirements'];
       if(!empty($sRequirements))
       {
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
@@ -2567,7 +2571,7 @@ ChromePhp::log($slistemQuery);
             $sHTML.= $oHTML->getBlocEnd();
           $sHTML.= $oHTML->getFloatHack();
         $sHTML.= $oHTML->getBlocEnd();
-      }
+      }*/
 
 
       $backURL = "'".$oPage->getURL('jobboard', CONST_ACTION_LIST, CONST_TA_TYPE_JOB, 0)."'";
