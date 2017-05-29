@@ -1386,7 +1386,7 @@ $sHTML.= "
     $oForm->addField('misc', '', array('type' => 'text', 'text'=> $sCompanyHelp));*/
 
     $oForm->addField('input', 'position_title', array('label'=>'Position Title', 'class' => '', 'value' => $asRecord['position_title']));
-    $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '2', 'jsFieldMaxSize' => 500, 'jsFieldNotEmpty' => ''));
+    $oForm->setFieldControl('position_title', array('jsFieldMinSize' => '3', 'jsFieldMaxSize' => 500, 'jsFieldNotEmpty' => ''));
 
     $sText = str_replace('\n', "\n", strip_tags($asRecord['position_desc']))."\n"."\n".str_replace('\n', "\n", strip_tags($asRecord['requirements']));
     $oForm->addField('textarea', 'position_desc', array('label'=>'Position Description', 'class' => 'description', 'value' => $sText));
