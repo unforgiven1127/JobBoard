@@ -1390,7 +1390,7 @@ $sHTML.= "
 
     $sText = str_replace('\n', "\n", strip_tags($asRecord['position_desc']))."\n"."\n".str_replace('\n', "\n", strip_tags($asRecord['requirements']));
     $oForm->addField('textarea', 'position_desc', array('label'=>'Position Description', 'class' => 'description', 'value' => $sText));
-    $oForm->setFieldControl('position_desc', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => '','style'=>'min-width:800px;'));
+    $oForm->setFieldControl('position_desc', array('jsFieldMinSize' => '2', 'jsFieldNotEmpty' => '','style'=>'min-height:400px;'));
 
     /*$sText = str_replace('\n', "\n", strip_tags($asRecord['requirements']));
     $oForm->addField('textarea', 'requirements', array('label'=>'Requirements', 'class' => 'description', 'value' => $sText));
