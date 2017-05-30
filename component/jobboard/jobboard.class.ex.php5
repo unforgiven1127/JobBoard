@@ -2537,7 +2537,7 @@ ChromePhp::log($slistemQuery);
 
       if(!empty($sDescription) || !empty($sRequirements))
       {
-        $combinedDesc = nl2br($sDescription)."\n"."\n".nl2br($sRequirements);
+        $combinedDesc = nl2br($sDescription)."<br><br>".nl2br($sRequirements);
         $sHTML.= $oHTML->getBlocStart('',array('class'=>'jobDetailRow'));
           $sHTML.= $oHTML->getBlocStart('',array('class'=>'left_section'));
           $sHTML.= $oHTML->getText($this->casText['TALENT_DESCRIPTION'],array("style"=>"font-weight:bold;".$fontStyle));
