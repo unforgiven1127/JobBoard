@@ -5,7 +5,7 @@
 
   define('CONST_WEBSITE_MAIN_CSS', '/common/style/jobboard.css');
   define('CONST_WEBSITE_GOOGLE_ANALYTICS', "<script>var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9596545-5']);
+  _gaq.push(['_setAccount', 'UA-101899295-1']);
   _gaq.push(['_setDomainName', 'slate.co.jp']);
   _gaq.push(['_trackPageview']);
 
