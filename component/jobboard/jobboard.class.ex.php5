@@ -1701,7 +1701,6 @@ ChromePhp::log($slistemQuery);
   {
     $myIP = $_SERVER['REMOTE_ADDR'];
     ChromePhp::log($myIP);
-
     $oPage = CDependency::getComponentByName('page');
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
