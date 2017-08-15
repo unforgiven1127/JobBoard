@@ -128,7 +128,7 @@
 
   <body>
 
-    <form action='https://jobs.slate.co.jp//' method='post'>
+    <form action='https://jobs.slate.co.jp//' method='post' novalidate>
        <center><table bgcolor="white" style='width:90%; '>
         <tr>
           <td >
