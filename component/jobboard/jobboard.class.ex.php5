@@ -1700,7 +1700,7 @@ ChromePhp::log($slistemQuery);
   public function getJobList($psQueryFilter = '')
   {
     $myIP = $_SERVER['REMOTE_ADDR'];
-    ChromePhp::log($myIP);
+    //ChromePhp::log($myIP);
     $oPage = CDependency::getComponentByName('page');
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
@@ -1754,6 +1754,7 @@ ChromePhp::log($slistemQuery);
       if(isset($_POST['keyword']))
       {
         $key = $_POST['keyword'];
+        ChromePhp::log($key);
         if(!empty($key) && $key != "Keywords")
         {
           $data['keywords'] = $_POST['keyword'];
